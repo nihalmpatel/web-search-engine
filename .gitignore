@@ -1,2 +1,13 @@
 react-searchkit/node_modules/
 react-searchkit/package-lock.json
+
+search-engine-backend/target/
+search-engine-backend/pom.xml.tag
+search-engine-backend/pom.xml.releaseBackup
+search-engine-backend/pom.xml.versionsBackup
+search-engine-backend/pom.xml.next
+search-engine-backend/release.properties
+search-engine-backend/dependency-reduced-pom.xml
+search-engine-backend/buildNumber.properties
+search-engine-backend/.mvn/timing.properties
+search-engine-backend/.mvn/wrapper/maven-wrapper.jar
