@@ -1,0 +1,19 @@
+jobTitle - schema.org Property schema.org Documentation Schemas Home jobTitle This term is proposed for full integration into Schema.org, pending implementation feedback and adoption from applications and websites. Thing > Property > jobTitle The job title of the person (for example, Financial Manager). [more...] Canonical URL: http://schema.org/jobTitle Leave public feedback on this term 💬 Check for open issues. 'jobTitle' is mentioned in the pending extention. Values expected to be one of these types DefinedTerm Text Used on these types Person Source https://github.com/schemaorg/schemaorg/issues/2192 Examples Example 1 Without Markup Microdata RDFa JSON-LD <!-- jobTitle utilising DefinedTerm -->
+<!-- JSONLD only example -->
+ <!-- JSONLD only example -->
+ <!-- JSONLD only example -->
+ <!-- jobTitle utilising DefinedTerm -->
+<script type="application/ld+json">
+{
+    "@context": "http://schema.org/",
+    "@type": "Person",
+    "name": "A. N. Other",
+    "jobTitle": {
+        "@type": "DefinedTerm",
+        "inDefinedTermSet": "https://targetjobs.co.uk/careers-advice/job-descriptions",
+        "termCode": "277133-aid-workerhumanitarian-worker-job-description",
+        "name": "Aid worker/humanitarian worker",
+        "url": "https://targetjobs.co.uk/careers-advice/job-descriptions/277133-aid-workerhumanitarian-worker-job-description"
+    }
+}
+</script>

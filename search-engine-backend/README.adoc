@@ -1,0 +1,76 @@
+:spring_version: current
+:toc:
+:project_id: search-engine-backend
+:spring_version: current
+:spring_boot_version: 2.1.6.RELEASE
+:icons: font
+:source-highlighter: prettify
+
+This guide walks you through the process of creating a simple search engine link:/understanding/REST[RESTful web service] with Spring.
+
+== What you'll build
+
+You'll build a service that will accept HTTP GET requests at:
+
+----
+localhost:8080/search?q=test&size=10&page=1
+
+q: search keywords
+size: the number of results to be displayed
+page: the current page of the results list
+----
+
+and respond with a link:/understanding/JSON[JSON] representation of a greeting:
+
+[source,json]
+----
+{
+    "total": 27,
+    "suggestedSearch": "test",
+    "hits": [
+        {
+            "metadata": {
+                "title": "All Standards and Drafts - W3C.htm",
+                "description": "19"
+            }
+        },
+        {
+            "metadata": {
+                "title": "The ILU Requestor for HTTP servers.htm",
+                "description": "16"
+            }
+        },
+        ...
+    ]
+}
+----
+
+== What you'll need
+Go through this tutorial https://spring.io/guides/gs/rest-service/ to build a simple spring boot REST service
+
+Install mvn
+----
+sudo apt install maven
+----
+Run the service by using
+----
+./mvnw spring-boot:run
+----
+Alternatively, build the JAR file and then run it
+----
+./mvnw clean package
+java -jar target/search-engine-backend-0.1.0.jar
+----
+
+== Summary
+
+Congratulations! You've just developed a RESTful web search engine service with Spring.
+
+== See Also
+
+The following guides may also be helpful:
+
+* https://spring.io/guides/tutorials/bookmarks/[Building REST services with Spring]
+* https://spring.io/guides/gs/spring-boot/[Building an Application with Spring Boot]
+* https://spring.io/guides/gs/rest-service-cors/[Enabling Cross Origin Requests for a RESTful Web Service]
+

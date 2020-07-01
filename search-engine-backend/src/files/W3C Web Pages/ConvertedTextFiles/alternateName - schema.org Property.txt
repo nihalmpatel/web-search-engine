@@ -1,0 +1,1 @@
+alternateName - schema.org Property schema.org Documentation Schemas Home alternateName Thing > Property > alternateName An alias for the item. [more...] Canonical URL: http://schema.org/alternateName Leave public feedback on this term 💬 Check for open issues. Values expected to be one of these types Text Used on these types Thing

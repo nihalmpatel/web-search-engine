@@ -1,0 +1,61 @@
+ListItem - schema.org Type schema.org Documentation Schemas Home ListItem Thing > Intangible > ListItem An list item, e.g. a step in a checklist or how-to description. [more...] Canonical URL: http://schema.org/ListItem Leave public feedback on this term 💬 Check for open issues. Property Expected Type Description Properties from ListItem item Thing  An entity represented by an entry in a list or data feed (e.g. an 'artist' in a list of 'artists')’. nextItem ListItem  A link to the ListItem that follows the current one. position Integer  or Text  The position of an item in a series or sequence of items. previousItem ListItem  A link to the ListItem that preceeds the current one. Properties from Thing additionalType URL  An additional type for the item, typically used for adding more specific types from external vocabularies in microdata syntax. This is a relationship between something and a class that the thing is in. In RDFa syntax, it is better to use the native RDFa syntax - the 'typeof' attribute - for multiple types. Schema.org tools may have only weaker understanding of extra types, in particular those defined externally. alternateName Text  An alias for the item. description Text  A description of the item. disambiguatingDescription Text  A sub property of description. A short description of the item used to disambiguate from other, similar items. Information from other properties (in particular, name) may be necessary for the description to be useful for disambiguation. identifier PropertyValue  or Text  or URL  The identifier property represents any kind of identifier for any kind of Thing, such as ISBNs, GTIN codes, UUIDs etc. Schema.org provides dedicated properties for representing many of these, either as textual strings or as URL (URI) links. See background notes for more details. image ImageObject  or URL  An image of the item. This can be a URL or a fully described ImageObject. mainEntityOfPage CreativeWork  or URL  Indicates a page (or other CreativeWork) for which this thing is the main entity being described. See background notes for details. Inverse property: mainEntity. name Text  The name of the item. potentialAction Action  Indicates a potential Action, which describes an idealized action in which this thing would play an 'object' role. sameAs URL  URL of a reference Web page that unambiguously indicates the item's identity. E.g. the URL of the item's Wikipedia page, Wikidata entry, or official website. subjectOf CreativeWork  or Event  A CreativeWork or Event about this Thing. Inverse property: about. url URL  URL of the item. Instances of ListItem may appear as values for the following properties Property On Types Description itemListElement ItemList  For itemListElement values, you can use simple strings (e.g. "Peter", "Paul", "Mary"), existing entities, or use ListItem. Text values are best if the elements in the list are plain strings. Existing entities are best for a simple, unordered list of existing things in your data. ListItem is used with ordered lists when you want to provide additional context about the element in that list or when the same item might be in different places in different lists. Note: The order of elements in your mark-up is not sufficient for indicating the order or elements. Use ListItem with a 'position' property in such cases. nextItem ListItem  A link to the ListItem that follows the current one. previousItem ListItem  A link to the ListItem that preceeds the current one. More specific Types HowToDirection HowToItem HowToSection HowToStep HowToTip Examples Example 1 Without Markup Microdata RDFa JSON-LD <ol>
+  <li>
+    <a href="https://example.com/dresses">Dresses</a>
+  </li>
+  <li>
+    <a href="https://example.com/dresses/real">Real Dresses</a>
+  </li>
+</ol>
+ <ol itemscope itemtype="http://schema.org/BreadcrumbList">
+  <li itemprop="itemListElement" itemscope
+      itemtype="http://schema.org/ListItem">
+    <a itemprop="item" href="https://example.com/dresses">
+    <span itemprop="name">Dresses</span></a>
+    <meta itemprop="position" content="1" />
+  </li>
+  <li itemprop="itemListElement" itemscope
+      itemtype="http://schema.org/ListItem">
+    <a itemprop="item" href="https://example.com/dresses/real">
+    <span itemprop="name">Real Dresses</span></a>
+    <meta itemprop="position" content="2" />
+  </li>
+</ol>
+ <ol vocab="http://schema.org/" typeof="BreadcrumbList">
+  <li property="itemListElement" typeof="ListItem">
+    <a property="item" typeof="WebPage" href="https://example.com/dresses">
+     <span property="name">Dresses</span></a>
+     <meta property="position" content="1">
+  </li>
+  <li property="itemListElement" typeof="ListItem">
+    <a property="item" typeof="WebPage" href="https://example.com/dresses/real">
+    <span property="name">Real Dresses</span></a>
+    <meta property="position" content="2">
+  </li>
+</ol>
+ <script type="application/ld+json">
+{
+ "@context": "http://schema.org",
+ "@type": "BreadcrumbList",
+ "itemListElement":
+ [
+  {
+   "@type": "ListItem",
+   "position": 1,
+   "item":
+   {
+    "@id": "https://example.com/dresses",
+    "name": "Dresses"
+    }
+  },
+  {
+   "@type": "ListItem",
+  "position": 2,
+  "item":
+   {
+     "@id": "https://example.com/dresses/real",
+     "name": "Real Dresses"
+   }
+  }
+ ]
+}
+</script>

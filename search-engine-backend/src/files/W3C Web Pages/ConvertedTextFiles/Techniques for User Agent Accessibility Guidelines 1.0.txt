@@ -1,0 +1,1 @@
+Techniques for User Agent Accessibility Guidelines 1.0 [next chapter]   [contents]   Techniques for User Agent Accessibility Guidelines 1.0 W3C Note 17 December 2002 This version: http://www.w3.org/TR/2002/NOTE-UAAG10-TECHS-20021217/ Latest version: http://www.w3.org/TR/UAAG10-TECHS/ Previous version: http://www.w3.org/TR/2002/WD-UAAG10-TECHS-20021016/ E

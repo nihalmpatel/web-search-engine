@@ -1,0 +1,33 @@
+Frequently Asked Questions | REST API Handbook | WordPress Developer Resources WordPress.org Search WordPress.org for: Submit Toggle Menu Showcase Themes Plugins Mobile Support Documentation Forums Get Involved Five for the Future About Blog Hosting Get WordPress REST API Handbook Skip to content Search for: Search plugins Chapters REST API Handbook Using the REST API Global Parameters Pagination Linking and Embedding Discovery Authentication Frequently Asked Questions Backbone.js Client Client Libraries Extending the REST API Modifying Responses Adding Custom Endpoints Custom Content Types Schema Glossary Routes and Endpoints Controller Classes Reference Posts Post Revisions Blocks Block Revisions Block Renderer Categories Tags Pages Comments Taxonomies Media Users Types Statuses Settings Themes Search Results Changelog Browse: Home / REST API Handbook / Using the REST API / Frequently Asked Questions Frequently Asked Questions Edit Topics Can I disable the REST API? Require Authentication for All Reque​sts Can I make API requests from PHP within a plugin? How do I use the _embed parameter on internal requests? What happened to the ?filter= query parameter? Query parameters are not working Why is Authentication not working? Why is the REST API not verifying the incoming Origin header? Does this expose my site to CSRF attacks? This page provides solutions to some common questions and problems that may arise while using the API. If your question is not explained here it may have been answered in the WordPress support forums. Can I disable the REST API? #Can I disable the REST API? You should not disable the REST API, because doing so will break WordPress Admin functionality that depends on the API being active. However, you may use a filter to require that API consumers be authenticated, which effectively prevents anonymous external access. See below for more information. Top ↑ Require Authentication for All Reque​sts #Require Authentication for All Reque​sts You can require authentication for all REST API requests by adding an is_user_logged_in check to the rest_authentication_errors filter: 
+add_filter( 'rest_authentication_errors', function( $result ) {
+    if ( ! empty( $result ) ) {
+        return $result;
+    }
+    if ( ! is_user_logged_in() ) {
+        return new WP_Error( 'rest_not_logged_in', 'You are not currently logged in.', array( 'status' => 401 ) );
+    }
+    return $result;
+});
+ Top ↑ Can I make API requests from PHP within a plugin? #Can I make API requests from PHP within a plugin? Yes, you can! Use rest_do_request to make API requests internally within other WordPress code: 
+$request = new WP_REST_Request( 'GET', '/wp/v2/posts' );
+// Set one or more request query parameters
+$request->set_param( 'per_page', 20 );
+$response = rest_do_request( $request );
+ Top ↑ How do I use the _embed parameter on internal requests? #How do I use the _embed parameter on internal requests? Setting the _embed param on the request object won’t work. 
+$request = new WP_REST_Request( 'GET', '/wp/v2/posts' );
+$request->set_param( '_embed', 1 );
+$response = rest_do_request( $request );
+ Instead, manually call the WP_REST_Server::response_to_data function. 
+$request = new WP_REST_Request( 'GET', '/wp/v2/posts' );
+$response = rest_do_request( $req );
+$data = rest_get_server()->response_to_data( $response, true );
+var_dump( $data['_embedded'] );
+ Top ↑ What happened to the ?filter= query parameter? #What happened to the ?filter= query parameter? When the REST API was merged into WordPress core the ?filter query parameter was removed to prevent future compatibility and maintenance issues. The ability to pass arbitrary WP_Query arguments to the API using a ?filter query parameter was necessary at the genesis of the REST API project, but most API response filtering functionality has been superseded by more robust query parameters like ?categories=, ?slug= and ?per_page=. First-party query parameters should be used whenever possible. However, the rest-filter plugin restores the ability to pass arbitrary ?filter values in API request if needed. Top ↑ Query parameters are not working #Query parameters are not working If you find that query parameters such as ?page=2 or ?_embed are not having any effect, your server may not be properly configured to detect them. If you are using Nginx to serve your website, look for a try_files line in your site configuration. If it looks like this: 
+try_files $uri $uri/ /index.php$args;
+ change it to this: 
+try_files $uri $uri/ /index.php$is_args$args;
+ Adding $is_args (which will print a ? character if query arguments are found) will allow WordPress to properly receive and interpret the query parameters. Top ↑ Why is Authentication not working? #Why is Authentication not working? If you’re finding that you are sending Authentication headers but the request is not being accepted, and you’re using Apache in a CGI environment, Apache may be stripping the headers. Try adding this to a configuration file or .htaccess: 
+<IfModule mod_setenvif>
+  SetEnvIf Authorization "(.*)" HTTP_AUTHORIZATION=$1
+</IfModule>
+ Top ↑ Why is the REST API not verifying the incoming Origin header? Does this expose my site to CSRF attacks? #Why is the REST API not verifying the incoming Origin header? Does this expose my site to CSRF attacks? Cross-Origin Resource Sharing (CORS) is a mechanism which allows a website to control which Origins (originating external sites) are allowed to access your site’s data. CORS prevents against a particular type of attack known as Cross-Site Request Forgery, or CSRF. However, WordPress has an existing CSRF protection mechanism which uses nonces. Tightening CORS restrictions would prevent some authentication methods, so the WordPress REST API uses nonces for CSRF protection instead of CORS. Because the WordPress REST API does not verify the Origin header of incoming requests, public REST API endpoints may therefore be accessed from any site. This is an intentional design decision, but if you wish to prevent your site from being accessed from unknown origins you may unhook the default rest_send_cors_headers function from the rest_pre_serve_request filter hook, then hook in your own function to that same filter to specify stricter CORS headers.   Handbook navigation ← Authentication Backbone.js Client → About Blog Hosting Donate Support Developers Get Involved Showcase Plugins Themes WordCamp WordPress.TV BuddyPress bbPress WordPress.com Matt Privacy Public Code @WordPress WordPress Code is Poetry. Skip to toolbar About WordPress About WordPress WordPress.org Documentation Support Feedback Search Log In Register

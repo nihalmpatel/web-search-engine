@@ -1,0 +1,1 @@
+nextItem - schema.org Property schema.org Documentation Schemas Home nextItem Thing > Property > nextItem A link to the ListItem that follows the current one. [more...] Canonical URL: http://schema.org/nextItem Leave public feedback on this term 💬 Check for open issues. Values expected to be one of these types ListItem Used on these types ListItem

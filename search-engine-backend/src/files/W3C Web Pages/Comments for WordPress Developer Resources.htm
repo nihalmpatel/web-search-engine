@@ -1,0 +1,229 @@
+<!--?xml version="1.0" encoding="UTF-8"?-->
+<html>
+ <head></head>
+ <body>
+  <rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"> 
+   <channel> 
+    <title>
+	Comments for WordPress Developer Resources	</title> 
+    <atom:link href="https://developer.wordpress.org/comments/feed/" rel="self" type="application/rss+xml" /> 
+    <link>https://developer.wordpress.org 
+    <description>
+     Official WordPress Developer Resources
+    </description> 
+    <lastbuilddate>
+     Sun, 01 Dec 2019 12:03:56 +0000
+    </lastbuilddate> 
+    <sy:updateperiod>
+      hourly 
+    </sy:updateperiod> 
+    <sy:updatefrequency>
+      1 
+    </sy:updatefrequency> 
+    <generator>
+     https://wordpress.org/?v=5.4-alpha-46799
+    </generator> 
+    <item> 
+     <title>
+				Comment on WP_REST_Request::set_query_params() by Keramot UL Islam				</title> 
+     <link>https://developer.wordpress.org/reference/classes/wp_rest_request/set_query_params/#comment-3501 
+     <dc:creator>
+      Keramot UL Islam
+     </dc:creator> 
+     <pubdate>
+      Sun, 01 Dec 2019 12:03:56 +0000
+     </pubdate> 
+     <guid ispermalink="false">
+      https://developer.wordpress.org/reference/classes/wp_rest_request/set_query_params/#comment-3501
+     </guid> 
+     <description>
+      [php]$request = new WP_REST_Request( &amp;#039;GET&amp;#039;, &amp;#039;/wp/v2/posts&amp;#039; ); $request-&amp;#062;set_query_params( array( &amp;#039;per_page&amp;#039; =&amp;#062; 5, &amp;#039;status&amp;#039; =&amp;#062; &amp;#039;publish&amp;#039;, &amp;#039;order&amp;#039; =&amp;#062; &amp;#039;desc&amp;#039;, &amp;#039;orderby&amp;#039; =&amp;#062; &amp;#039;title&amp;#039;, ) ); [/php]
+     </description> 
+     <content:encoded>
+      &lt;pre class="brush: php; title: ; notranslate"&gt;$request = new WP_REST_Request( 'GET', '/wp/v2/posts' ); $request-&amp;gt;set_query_params( array( 'per_page' =&amp;gt; 5, 'status' =&amp;gt; 'publish', 'order' =&amp;gt; 'desc', 'orderby' =&amp;gt; 'title', ) ); &lt;/pre&gt; 
+     </content:encoded> 
+    </item> 
+    <item> 
+     <title>
+				Comment on get_the_author_meta() by aThemeArt				</title> 
+     <link>https://developer.wordpress.org/reference/functions/get_the_author_meta/#comment-3500 
+     <dc:creator>
+      aThemeArt
+     </dc:creator> 
+     <pubdate>
+      Sun, 01 Dec 2019 10:24:20 +0000
+     </pubdate> 
+     <guid ispermalink="false">
+      http://developer.wordpress.org/reference/functions/get_the_author_meta/#comment-3500
+     </guid> 
+     <description>
+      Get the author ID Outside loop: [php]global $post; $author_id = $post-&amp;#062;post_author;[/php] Get the author ID inside a loop : [php] $author_id = get_the_author_meta( &amp;#039;ID&amp;#039; ); [/php] bellow is a few examples of author value : [php] // to get nicename get_the_author_meta( &amp;#039;nicename&amp;#039;, $author_id ); // to get email get_the_author_meta( &amp;#039;email&amp;#039;, $author_id ); // to get url get_the_author_meta( &amp;#039;url&amp;#039;, $author_id ); // to get status get_the_author_meta( &amp;#039;status&amp;#039;, $author_id ); [/php]
+     </description> 
+     <content:encoded>
+      &lt;p&gt;Get the author ID Outside loop: &lt;/p&gt; &lt;pre class="brush: php; title: ; notranslate"&gt;global $post; $author_id = $post-&amp;gt;post_author;&lt;/pre&gt; &lt;p&gt;Get the author ID inside a loop : &lt;/p&gt; &lt;pre class="brush: php; title: ; notranslate"&gt; $author_id = get_the_author_meta( 'ID' ); &lt;/pre&gt; &lt;p&gt;bellow is a few examples of author value :&lt;/p&gt; &lt;pre class="brush: php; title: ; notranslate"&gt; // to get nicename get_the_author_meta( 'nicename', $author_id ); // to get email get_the_author_meta( 'email', $author_id ); // to get url get_the_author_meta( 'url', $author_id ); // to get status get_the_author_meta( 'status', $author_id ); &lt;/pre&gt; 
+     </content:encoded> 
+    </item> 
+    <item> 
+     <title>
+				Comment on get_option() by A WP Life				</title> 
+     <link>https://developer.wordpress.org/reference/functions/get_option/#comment-3499 
+     <dc:creator>
+      A WP Life
+     </dc:creator> 
+     <pubdate>
+      Fri, 29 Nov 2019 09:45:08 +0000
+     </pubdate> 
+     <guid ispermalink="false">
+      http://developer.wordpress.org/reference/functions/get_option/#comment-3499
+     </guid> 
+     <description>
+      Simply way to check the option value set or not. For Example, I have a plugin version 1.0 that is installed on the user site. The plugin version is set on the plugin activation. If I released a new plugin version 2.0 and need to check the installed plugin version and new apply changes on the new version update. For it, you need to set default value in function: [php]get_option( &amp;#039;key_name&amp;#039;, &amp;#039;default_value&amp;#039; )[/php] So, if option value not set or avaiable than default value assigned to variable. Sample code: [php] $my_plugin_version = get_option(&amp;#039;plugin_name_version&amp;#039;, &amp;#039;2.0&amp;#039;); if($my_plugin_version == &amp;#039;1.0&amp;#039;) { // do something or apply changes and update the plugin version into option value } else { // do nothing } [/php]
+     </description> 
+     <content:encoded>
+      &lt;p&gt;Simply way to check the option value set or not.&lt;/p&gt; &lt;p&gt;For Example, I have a plugin version 1.0 that is installed on the user site. The plugin version is set on the plugin activation. If I released a new plugin version 2.0 and need to check the installed plugin version and new apply changes on the new version update.&lt;/p&gt; &lt;p&gt;For it, you need to set default value in function: &lt;/p&gt; &lt;pre class="brush: php; title: ; notranslate"&gt;get_option( 'key_name', 'default_value' )&lt;/pre&gt; &lt;p&gt;So, if option value not set or avaiable than default value assigned to variable.&lt;/p&gt; &lt;p&gt;Sample code:&lt;/p&gt; &lt;pre class="brush: php; title: ; notranslate"&gt; $my_plugin_version = get_option('plugin_name_version', '2.0'); if($my_plugin_version == '1.0') { // do something or apply changes and update the plugin version into option value } else { // do nothing } &lt;/pre&gt; 
+     </content:encoded> 
+    </item> 
+    <item> 
+     <title>
+				Comment on add_meta_box() by Vincent Dubroeucq				</title> 
+     <link>https://developer.wordpress.org/reference/functions/add_meta_box/#comment-3496 
+     <dc:creator>
+      Vincent Dubroeucq
+     </dc:creator> 
+     <pubdate>
+      Thu, 28 Nov 2019 09:56:45 +0000
+     </pubdate> 
+     <guid ispermalink="false">
+      http://developer.wordpress.org/reference/functions/add_meta_box/#comment-3496
+     </guid> 
+     <description>
+      &amp;lt;strong&amp;gt;Slight gotcha for comments metabox&amp;lt;/strong&amp;gt; If you need to add a metabox to the comment edit screen, &amp;lt;strong&amp;gt;you have to pass in the value &amp;#039;&amp;lt;code&amp;gt;normal&amp;lt;/code&amp;gt;&amp;#039; for the &amp;lt;code&amp;gt;$context&amp;lt;/code&amp;gt; parameter.&amp;lt;/strong&amp;gt; [php] // This will NOT work add_meta_box( &amp;#039;my_comment_metabox_1&amp;#039;, // ID __(&amp;#039;My comment metabox 1&amp;#039; ), // Title &amp;#039;prefix_comment_metabox&amp;#039;, // Callback &amp;#039;comment&amp;#039; // Screen ); // This WILL work. Same call, but with &amp;#039;normal&amp;#039; for context instead of default &amp;#039;advanced&amp;#039; add_meta_box( &amp;#039;my_comment_metabox_2&amp;#039;, // ID __(&amp;#039;My comment metabox 2&amp;#039; ), // Title &amp;#039;prefix_comment_metabox&amp;#039;, // Callback &amp;#039;comment&amp;#039;, // Screen &amp;#039;normal&amp;#039; // Context ); [/php]
+     </description> 
+     <content:encoded>
+      &lt;p&gt;&lt;strong&gt;Slight gotcha for comments metabox&lt;/strong&gt;&lt;/p&gt; &lt;p&gt;If you need to add a metabox to the comment edit screen, &lt;strong&gt;you have to pass in the value &amp;#8216;&lt;code&gt;normal&lt;/code&gt;&amp;#8216; for the &lt;code&gt;$context&lt;/code&gt; parameter.&lt;/strong&gt;&lt;/p&gt; &lt;section class="source-content"&gt; &lt;div class="source-code-container"&gt; &lt;pre class="brush: php; title: ; notranslate"&gt; // This will NOT work add_meta_box( 'my_comment_metabox_1', // ID __('My comment metabox 1' ), // Title 'prefix_comment_metabox', // Callback 'comment' // Screen ); // This WILL work. Same call, but with 'normal' for context instead of default 'advanced' add_meta_box( 'my_comment_metabox_2', // ID __('My comment metabox 2' ), // Title 'prefix_comment_metabox', // Callback 'comment', // Screen 'normal' // Context ); &lt;/pre&gt; &lt;/div&gt; &lt;p class="source-code-links"&gt;&lt;span&gt;&lt;a href="#" class="show-complete-source"&gt;Expand full source code&lt;/a&gt;&lt;a href="#" class="less-complete-source"&gt;Collapse full source code&lt;/a&gt;&lt;/span&gt;&lt;/p&gt; &lt;/section&gt; 
+     </content:encoded> 
+    </item> 
+    <item> 
+     <title>
+				Comment on wp_remote_post() by Pixelbart				</title> 
+     <link>https://developer.wordpress.org/reference/functions/wp_remote_post/#comment-3495 
+     <dc:creator>
+      Pixelbart
+     </dc:creator> 
+     <pubdate>
+      Wed, 27 Nov 2019 13:33:03 +0000
+     </pubdate> 
+     <guid ispermalink="false">
+      http://developer.wordpress.org/reference/functions/wp_remote_post/#comment-3495
+     </guid> 
+     <description>
+      An example of a JSON body: [php] $endpoint = &amp;#039;api.example.com&amp;#039;; $body = [ &amp;#039;name&amp;#039; =&amp;#062; &amp;#039;Pixelbart&amp;#039;, &amp;#039;email&amp;#039; =&amp;#062; &amp;#039;pixelbart@example.com&amp;#039;, ]; $body = wp_json_encode( $body ); $options = [ &amp;#039;body&amp;#039; =&amp;#062; $body, &amp;#039;headers&amp;#039; =&amp;#062; [ &amp;#039;Content-Type&amp;#039; =&amp;#062; &amp;#039;application/json&amp;#039;, ], &amp;#039;timeout&amp;#039; =&amp;#062; 60, &amp;#039;redirection&amp;#039; =&amp;#062; 5, &amp;#039;blocking&amp;#039; =&amp;#062; true, &amp;#039;httpversion&amp;#039; =&amp;#062; &amp;#039;1.0&amp;#039;, &amp;#039;sslverify&amp;#039; =&amp;#062; false, &amp;#039;data_format&amp;#039; =&amp;#062; &amp;#039;body&amp;#039;, ]; wp_remote_post( $endpoint, $options ); [/php]
+     </description> 
+     <content:encoded>
+      &lt;p&gt;An example of a JSON body:&lt;/p&gt; &lt;section class="source-content"&gt; &lt;div class="source-code-container"&gt; &lt;pre class="brush: php; title: ; notranslate"&gt; $endpoint = 'api.example.com'; $body = [ 'name' =&amp;gt; 'Pixelbart', 'email' =&amp;gt; 'pixelbart@example.com', ]; $body = wp_json_encode( $body ); $options = [ 'body' =&amp;gt; $body, 'headers' =&amp;gt; [ 'Content-Type' =&amp;gt; 'application/json', ], 'timeout' =&amp;gt; 60, 'redirection' =&amp;gt; 5, 'blocking' =&amp;gt; true, 'httpversion' =&amp;gt; '1.0', 'sslverify' =&amp;gt; false, 'data_format' =&amp;gt; 'body', ]; wp_remote_post( $endpoint, $options ); &lt;/pre&gt; &lt;/div&gt; &lt;p class="source-code-links"&gt;&lt;span&gt;&lt;a href="#" class="show-complete-source"&gt;Expand full source code&lt;/a&gt;&lt;a href="#" class="less-complete-source"&gt;Collapse full source code&lt;/a&gt;&lt;/span&gt;&lt;/p&gt; &lt;/section&gt; 
+     </content:encoded> 
+    </item> 
+    <item> 
+     <title>
+				Comment on WP_Tax_Query by Aurovrata Venet				</title> 
+     <link>https://developer.wordpress.org/reference/classes/wp_tax_query/#comment-3493 
+     <dc:creator>
+      Aurovrata Venet
+     </dc:creator> 
+     <pubdate>
+      Tue, 26 Nov 2019 16:58:50 +0000
+     </pubdate> 
+     <guid ispermalink="false">
+      http://developer.wordpress.org/reference/classes/wp_tax_query/#comment-3493
+     </guid> 
+     <description>
+      [php] $args = array( &amp;#039;post_type&amp;#039; =&amp;#062; &amp;#039;album&amp;#039;, &amp;#039;post_status&amp;#039; =&amp;#062; &amp;#039;publish&amp;#039;, &amp;#039;tax_query&amp;#039; =&amp;#062; array( array( &amp;#039;taxonomy&amp;#039; =&amp;#062; &amp;#039;genre&amp;#039;, &amp;#039;field&amp;#039; =&amp;#062; &amp;#039;slug&amp;#039;, &amp;#039;terms&amp;#039; =&amp;#062; array( &amp;#039;jazz&amp;#039;, &amp;#039;improv&amp;#039; ) ) ) ); $query = new WP_Query( $args ); [/php]
+     </description> 
+     <content:encoded>
+      &lt;pre class="brush: php; title: ; notranslate"&gt; $args = array( 'post_type' =&amp;gt; 'album', 'post_status' =&amp;gt; 'publish', 'tax_query' =&amp;gt; array( array( 'taxonomy' =&amp;gt; 'genre', 'field' =&amp;gt; 'slug', 'terms' =&amp;gt; array( 'jazz', 'improv' ) ) ) ); $query = new WP_Query( $args ); &lt;/pre&gt; 
+     </content:encoded> 
+    </item> 
+    <item> 
+     <title>
+				Comment on add_menu_page() by Vincent Dubroeucq				</title> 
+     <link>https://developer.wordpress.org/reference/functions/add_menu_page/#comment-3492 
+     <dc:creator>
+      Vincent Dubroeucq
+     </dc:creator> 
+     <pubdate>
+      Tue, 26 Nov 2019 09:31:58 +0000
+     </pubdate> 
+     <guid ispermalink="false">
+      http://developer.wordpress.org/reference/functions/add_menu_page/#comment-3492
+     </guid> 
+     <description>
+      The callback function used to display the contents of the page &amp;lt;strong&amp;gt;isn&amp;#039;t necessarily required to check current user&amp;#039;s capabilities&amp;lt;/strong&amp;gt;, since the callback is not even hooked in if the user doesn&amp;#039;t have the right capabilities. If you try to directly access a page for which you don&amp;#039;t have required capabilities, you&amp;#039;ll get an error page.
+     </description> 
+     <content:encoded>
+      &lt;p&gt;The callback function used to display the contents of the page &lt;strong&gt;isn&amp;#8217;t necessarily required to check current user&amp;#8217;s capabilities&lt;/strong&gt;, since the callback is not even hooked in if the user doesn&amp;#8217;t have the right capabilities.&lt;/p&gt; &lt;p&gt;If you try to directly access a page for which you don&amp;#8217;t have required capabilities, you&amp;#8217;ll get an error page.&lt;/p&gt; 
+     </content:encoded> 
+    </item> 
+    <item> 
+     <title>
+				Comment on timer_stop() by ashour				</title> 
+     <link>https://developer.wordpress.org/reference/functions/timer_stop/#comment-3484 
+     <dc:creator>
+      ashour
+     </dc:creator> 
+     <pubdate>
+      Wed, 20 Nov 2019 19:38:57 +0000
+     </pubdate> 
+     <guid ispermalink="false">
+      http://developer.wordpress.org/reference/functions/timer_stop/#comment-3484
+     </guid> 
+     <description>
+      Check the Pages load Time in seconds [php] add_action( &amp;#039;wp_footer&amp;#039;, function() { echo &amp;#039;&amp;#060;br/&amp;#062;&amp;#039; . &amp;#039;The page is loaded in &amp;#039; . timer_stop() . &amp;#039; seconds &amp;#060;br/&amp;#062;&amp;#039;; }, PHP_INT_MAX );[/php]
+     </description> 
+     <content:encoded>
+      &lt;p&gt;Check the Pages load Time in seconds&lt;/p&gt; &lt;pre class="brush: php; title: ; notranslate"&gt; add_action( 'wp_footer', function() { echo '&amp;lt;br/&amp;gt;' . 'The page is loaded in ' . timer_stop() . ' seconds &amp;lt;br/&amp;gt;'; }, PHP_INT_MAX );&lt;/pre&gt; 
+     </content:encoded> 
+    </item> 
+    <item> 
+     <title>
+				Comment on get_current_screen() by Jb Audras				</title> 
+     <link>https://developer.wordpress.org/reference/functions/get_current_screen/#comment-3477 
+     <dc:creator>
+      Jb Audras
+     </dc:creator> 
+     <pubdate>
+      Sat, 16 Nov 2019 10:33:33 +0000
+     </pubdate> 
+     <guid ispermalink="false">
+      http://developer.wordpress.org/reference/functions/get_current_screen/#comment-3477
+     </guid> 
+     <description>
+      The fields returned are: &amp;lt;code&amp;gt;id&amp;lt;/code&amp;gt; (string) The unique ID of the screen &amp;lt;code&amp;gt;action&amp;lt;/code&amp;gt; (string) Any action associated with the screen. &amp;#039;add&amp;#039; for *-new.php screens. Empty otherwise. &amp;lt;code&amp;gt;base&amp;lt;/code&amp;gt; (string) The base type of the screen. For example, for a page &amp;#039;post-new.php&amp;#039; the base is &amp;#039;post&amp;#039;. &amp;lt;code&amp;gt;parent_base&amp;lt;/code&amp;gt; (string) The base menu parent. This is derived from $parent_file by removing the query string and any .php extension. For example, parent_file values of &amp;#039;edit.php?post_type=page&amp;#039; and &amp;#039;edit.php?post_type=post&amp;#039; have a parent_base of &amp;#039;edit&amp;#039; &amp;lt;code&amp;gt;parent_file&amp;lt;/code&amp;gt; (string) The parent_file for the screen per the admin menu system. Some parent_file values are &amp;#039;edit.php?post_type=page&amp;#039;, &amp;#039;edit.php&amp;#039;, and &amp;#039;options-general.php&amp;#039; &amp;lt;code&amp;gt;post_type&amp;lt;/code&amp;gt; (string) The post type associated with the screen, if any. For example, the &amp;#039;edit.php?post_type=page&amp;#039; screen has a post type of &amp;#039;page&amp;#039; &amp;lt;code&amp;gt;taxonomy&amp;lt;/code&amp;gt; (string) The taxonomy associated with the screen, if any. For example, the &amp;#039;edit-tags.php?taxonomy=category&amp;#039; screen has a taxonomy of &amp;#039;category&amp;#039; Returned object: [php] WP_Screen Object ( [action] =&amp;#062; [base] =&amp;#062; post [id] =&amp;#062; post [is_network] =&amp;#062; [is_user] =&amp;#062; [parent_base] =&amp;#062; edit [parent_file] =&amp;#062; edit.php [post_type] =&amp;#062; post [taxonomy] =&amp;#062; ... (private fields) ) [/php]
+     </description> 
+     <content:encoded>
+      &lt;p&gt;The fields returned are:&lt;/p&gt; &lt;p&gt;&lt;code&gt;id&lt;/code&gt; (string) The unique ID of the screen&lt;br /&gt; &lt;code&gt;action&lt;/code&gt; (string) Any action associated with the screen. &amp;#8216;add&amp;#8217; for *-new.php screens. Empty otherwise.&lt;br /&gt; &lt;code&gt;base&lt;/code&gt; (string) The base type of the screen. For example, for a page &amp;#8216;post-new.php&amp;#8217; the base is &amp;#8216;post&amp;#8217;.&lt;br /&gt; &lt;code&gt;parent_base&lt;/code&gt; (string) The base menu parent. This is derived from $parent_file by removing the query string and any .php extension. For example, parent_file values of &amp;#8216;edit.php?post_type=page&amp;#8217; and &amp;#8216;edit.php?post_type=post&amp;#8217; have a parent_base of &amp;#8216;edit&amp;#8217;&lt;br /&gt; &lt;code&gt;parent_file&lt;/code&gt; (string) The parent_file for the screen per the admin menu system. Some parent_file values are &amp;#8216;edit.php?post_type=page&amp;#8217;, &amp;#8216;edit.php&amp;#8217;, and &amp;#8216;options-general.php&amp;#8217;&lt;br /&gt; &lt;code&gt;post_type&lt;/code&gt; (string) The post type associated with the screen, if any. For example, the &amp;#8216;edit.php?post_type=page&amp;#8217; screen has a post type of &amp;#8216;page&amp;#8217;&lt;br /&gt; &lt;code&gt;taxonomy&lt;/code&gt; (string) The taxonomy associated with the screen, if any. For example, the &amp;#8216;edit-tags.php?taxonomy=category&amp;#8217; screen has a taxonomy of &amp;#8216;category&amp;#8217;&lt;/p&gt; &lt;p&gt;Returned object:&lt;/p&gt; &lt;section class="source-content"&gt; &lt;div class="source-code-container"&gt; &lt;pre class="brush: php; title: ; notranslate"&gt; WP_Screen Object ( [action] =&amp;gt; [base] =&amp;gt; post [id] =&amp;gt; post [is_network] =&amp;gt; [is_user] =&amp;gt; [parent_base] =&amp;gt; edit [parent_file] =&amp;gt; edit.php [post_type] =&amp;gt; post [taxonomy] =&amp;gt; ... (private fields) ) &lt;/pre&gt; &lt;/div&gt; &lt;p class="source-code-links"&gt;&lt;span&gt;&lt;a href="#" class="show-complete-source"&gt;Expand full source code&lt;/a&gt;&lt;a href="#" class="less-complete-source"&gt;Collapse full source code&lt;/a&gt;&lt;/span&gt;&lt;/p&gt; &lt;/section&gt; 
+     </content:encoded> 
+    </item> 
+    <item> 
+     <title>
+				Comment on add_shortcode() by dingo-d				</title> 
+     <link>https://developer.wordpress.org/reference/functions/add_shortcode/#comment-3473 
+     <dc:creator>
+      dingo-d
+     </dc:creator> 
+     <pubdate>
+      Thu, 14 Nov 2019 12:14:06 +0000
+     </pubdate> 
+     <guid ispermalink="false">
+      http://developer.wordpress.org/reference/functions/add_shortcode/#comment-3473
+     </guid> 
+     <description>
+      When adding `add_shortcode()` function in a plugin, it&amp;#039;s good to add it in a function that is hooked to `init` hook. So that WordPress has time to initialize properly. [php] add_action( &amp;#039;init&amp;#039;, &amp;#039;wpdocs_add_custom_shortcode&amp;#039; ); function wpdocs_add_custom_shortcode() { add_shortcode( &amp;#039;footag&amp;#039;, &amp;#039;wpdocs_footag_func&amp;#039; ); } [/php] As described in the &amp;lt;a href=&amp;quot;https://developer.wordpress.org/plugins/shortcodes/basic-shortcodes/#add-a-shortcode&amp;quot;&amp;gt;plugins handbook&amp;lt;/a&amp;gt;.
+     </description> 
+     <content:encoded>
+      &lt;p&gt;When adding `add_shortcode()` function in a plugin, it&amp;#8217;s good to add it in a function that is hooked to `init` hook. So that WordPress has time to initialize properly.&lt;/p&gt; &lt;pre class="brush: php; title: ; notranslate"&gt; add_action( 'init', 'wpdocs_add_custom_shortcode' ); function wpdocs_add_custom_shortcode() { add_shortcode( 'footag', 'wpdocs_footag_func' ); } &lt;/pre&gt; &lt;p&gt;As described in the &lt;a href="https://developer.wordpress.org/plugins/shortcodes/basic-shortcodes/#add-a-shortcode"&gt;plugins handbook&lt;/a&gt;.&lt;/p&gt; 
+     </content:encoded> 
+    </item> 
+   </channel> 
+  </rss> 
+ </body>
+</html>

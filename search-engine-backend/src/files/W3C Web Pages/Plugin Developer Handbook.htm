@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
+ <head profile="http://gmpg.org/xfn/11"> 
+  <meta charset="utf-8"> 
+  <!--
+<meta property="fb:page_id" content="6427302910" />
+--> 
+  <meta name="google-site-verification" content="7VWES_-rcHBcmaQis9mSYamPfNwE03f4vyTj4pfuAw0"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1"> 
+  <title>Plugin Developer Handbook | WordPress Developer Resources</title> 
+  <meta name="referrer" content="always"> 
+  <link href="//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,400,300,600&amp;subset=latin,cyrillic-ext,greek-ext,greek,vietnamese,latin-ext,cyrillic" rel="stylesheet" type="text/css"> 
+  <link rel="stylesheet" href="//s.w.org/style/wp4.css?82"> 
+  <link rel="shortcut icon" href="//s.w.org/favicon.ico?2" type="image/x-icon"> 
+  <link rel="pingback" href="https://developer.wordpress.org/xmlrpc.php">
+  <link rel="dns-prefetch" href="//fonts.googleapis.com"> 
+  <link rel="dns-prefetch" href="//s.w.org"> 
+  <link rel="dns-prefetch" href="//www.googletagmanager.com"> 
+  <link rel="dns-prefetch" href="//fonts.gstatic.com"> 
+  <link rel="alternate" type="application/rss+xml" title="WordPress Developer Resources » Feed" href="https://developer.wordpress.org/feed/"> 
+  <link rel="alternate" type="application/rss+xml" title="WordPress Developer Resources » Comments Feed" href="https://developer.wordpress.org/comments/feed/"> 
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-P24PF4B');</script> 
+  <script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/12.0.0-1\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/12.0.0-1\/svg\/","svgExt":".svg","source":{"concatemoji":"https:\/\/developer.wordpress.org\/wp-includes\/js\/wp-emoji-release.min.js?ver=5.4-alpha-46799"}};
+			/*! This file is auto-generated */
+			!function(e,a,t){var r,n,o,i,p=a.createElement("canvas"),s=p.getContext&&p.getContext("2d");function c(e,t){var a=String.fromCharCode;s.clearRect(0,0,p.width,p.height),s.fillText(a.apply(this,e),0,0);var r=p.toDataURL();return s.clearRect(0,0,p.width,p.height),s.fillText(a.apply(this,t),0,0),r===p.toDataURL()}function l(e){if(!s||!s.fillText)return!1;switch(s.textBaseline="top",s.font="600 32px Arial",e){case"flag":return!c([127987,65039,8205,9895,65039],[127987,65039,8203,9895,65039])&&(!c([55356,56826,55356,56819],[55356,56826,8203,55356,56819])&&!c([55356,57332,56128,56423,56128,56418,56128,56421,56128,56430,56128,56423,56128,56447],[55356,57332,8203,56128,56423,8203,56128,56418,8203,56128,56421,8203,56128,56430,8203,56128,56423,8203,56128,56447]));case"emoji":return!c([55357,56424,55356,57342,8205,55358,56605,8205,55357,56424,55356,57340],[55357,56424,55356,57342,8203,55358,56605,8203,55357,56424,55356,57340])}return!1}function d(e){var t=a.createElement("script");t.src=e,t.defer=t.type="text/javascript",a.getElementsByTagName("head")[0].appendChild(t)}for(i=Array("flag","emoji"),t.supports={everything:!0,everythingExceptFlag:!0},o=0;o<i.length;o++)t.supports[i[o]]=l(i[o]),t.supports.everything=t.supports.everything&&t.supports[i[o]],"flag"!==i[o]&&(t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&t.supports[i[o]]);t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&!t.supports.flag,t.DOMReady=!1,t.readyCallback=function(){t.DOMReady=!0},t.supports.everything||(n=function(){t.readyCallback()},a.addEventListener?(a.addEventListener("DOMContentLoaded",n,!1),e.addEventListener("load",n,!1)):(e.attachEvent("onload",n),a.attachEvent("onreadystatechange",function(){"complete"===a.readyState&&t.readyCallback()})),(r=t.source||{}).concatemoji?d(r.concatemoji):r.wpemoji&&r.twemoji&&(d(r.twemoji),d(r.wpemoji)))}(window,document,window._wpemojiSettings);
+		</script> 
+  <style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style> 
+  <link rel="stylesheet" id="dashicons-css" href="https://developer.wordpress.org/wp-includes/css/dashicons.min.css?ver=5.4-alpha-46799" type="text/css" media="all"> 
+  <link rel="stylesheet" id="admin-bar-css" href="https://developer.wordpress.org/wp-includes/css/admin-bar.min.css?ver=5.4-alpha-46799" type="text/css" media="all"> 
+  <link rel="stylesheet" id="wp-block-library-css" href="https://developer.wordpress.org/wp-includes/css/dist/block-library/style.min.css?ver=5.4-alpha-46799" type="text/css" media="all"> 
+  <link rel="stylesheet" id="wporg-handbook-css-css" href="https://developer.wordpress.org/wp-content/plugins/handbook/stylesheets/callout-boxes.css?ver=20180111" type="text/css" media="all"> 
+  <link rel="stylesheet" id="open-sans-css" href="https://fonts.googleapis.com/css?family=Open+Sans%3A300italic%2C400italic%2C600italic%2C300%2C400%2C600&amp;subset=latin%2Clatin-ext&amp;display=fallback&amp;ver=5.4-alpha-46799" type="text/css" media="all"> 
+  <link rel="stylesheet" id="wporg-developer-style-css" href="https://developer.wordpress.org/wp-content/themes/pub/wporg-developer/style.css?ver=2" type="text/css" media="all"> 
+  <link rel="stylesheet" id="wp-dev-sass-compiled-css" href="https://developer.wordpress.org/wp-content/themes/pub/wporg-developer/stylesheets/main.css?ver=20190729" type="text/css" media="all"> 
+  <link rel="stylesheet" id="awesomplete-css-css" href="https://developer.wordpress.org/wp-content/themes/pub/wporg-developer/stylesheets/awesomplete.css?ver=20160114" type="text/css" media="all"> 
+  <link rel="stylesheet" id="autocomplete-css-css" href="https://developer.wordpress.org/wp-content/themes/pub/wporg-developer/stylesheets/autocomplete.css?ver=20171220" type="text/css" media="all"> 
+  <link rel="stylesheet" id="syntaxhighlighter-core-css" href="https://developer.wordpress.org/wp-content/plugins/syntaxhighlighter/syntaxhighlighter3/styles/shCore.css?ver=3.0.9b" type="text/css" media="all"> 
+  <link rel="stylesheet" id="syntaxhighlighter-theme-default-css" href="https://developer.wordpress.org/wp-content/plugins/syntaxhighlighter/syntaxhighlighter3/styles/shThemeDefault.css?ver=3.0.9b" type="text/css" media="all"> 
+  <script type="text/javascript" src="https://developer.wordpress.org/wp-includes/js/jquery/jquery.js?ver=1.12.4-wp"></script> 
+  <script type="text/javascript" src="https://developer.wordpress.org/wp-includes/js/jquery/jquery-migrate.min.js?ver=1.4.1"></script> 
+  <script type="text/javascript" src="https://developer.wordpress.org/wp-content/plugins/handbook/scripts/handbook.js?ver=20150930"></script> 
+  <script type="text/javascript" src="https://developer.wordpress.org/wp-content/themes/pub/wporg-developer/js/chapters.js?ver=20190603"></script> 
+  <script type="text/javascript" src="https://developer.wordpress.org/wp-content/plugins/syntaxhighlighter/syntaxhighlighter3/scripts/shCore.js?ver=3.0.9b"></script> 
+  <script type="text/javascript" src="https://developer.wordpress.org/wp-content/plugins/syntaxhighlighter/syntaxhighlighter3/scripts/shBrushPhp.js?ver=3.0.9b"></script> 
+  <link rel="https://api.w.org/" href="https://developer.wordpress.org/wp-json/"> 
+  <link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://developer.wordpress.org/xmlrpc.php?rsd"> 
+  <link rel="wlwmanifest" type="application/wlwmanifest+xml" href="https://developer.wordpress.org/wp-includes/wlwmanifest.xml"> 
+  <link rel="next" title="Introduction to Plugin Development" href="https://developer.wordpress.org/plugins/intro/"> 
+  <meta name="generator" content="WordPress 5.4-alpha-46799"> 
+  <link rel="canonical" href="https://developer.wordpress.org/plugins/"> 
+  <link rel="shortlink" href="https://developer.wordpress.org/?p=5783"> 
+  <link rel="alternate" type="application/json+oembed" href="https://developer.wordpress.org/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fdeveloper.wordpress.org%2Fplugins%2F"> 
+  <link rel="alternate" type="text/xml+oembed" href="https://developer.wordpress.org/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fdeveloper.wordpress.org%2Fplugins%2F&amp;format=xml"> 
+  <style>
+		@media screen and (max-width: 782px) {
+			#wpadminbar li#wp-admin-bar-log-in,
+			#wpadminbar li#wp-admin-bar-register {
+				display: block;
+			}
+
+			#wpadminbar li#wp-admin-bar-log-in a,
+			#wpadminbar li#wp-admin-bar-register a {
+				padding: 0 8px;
+			}
+		}
+	</style> 
+  <style>
+			a.github-edit {
+				margin-left: .5em;
+				font-size: .5em;
+				vertical-align: top;
+				display: inline-block;
+				border: 1px solid #eeeeee;
+				border-radius: 2px;
+				background: #eeeeee;
+				padding: .5em .6em .4em;
+				color: black;
+				margin-top: 0.1em;
+			}
+			a.github-edit > * {
+				opacity: 0.6;
+			}
+			a.github-edit:hover > * {
+				opacity: 1;
+				color: black;
+			}
+			a.github-edit img {
+				height: .8em;
+			}
+		</style> 
+  <script type="text/javascript">
+		jQuery( '<style>.hide-if-js { display: none; }</style>' ).appendTo( 'head' );
+		jQuery( function($) {
+			$( 'body' ).addClass('js');
+		} );
+	</script> 
+  <style type="text/css" media="print">#wpadminbar { display:none; }</style> 
+  <style type="text/css" media="screen">
+	html { margin-top: 32px !important; }
+	* html body { margin-top: 32px !important; }
+	@media screen and ( max-width: 782px ) {
+		html { margin-top: 46px !important; }
+		* html body { margin-top: 46px !important; }
+	}
+</style> 
+  <script>document.cookie='devicePixelRatio='+((window.devicePixelRatio === undefined) ? 1 : window.devicePixelRatio)+'; path=/';</script> 
+ </head> 
+ <body id="wordpress-org" class="plugin-handbook-template-default single single-plugin-handbook postid-5783 admin-bar no-customize-support handbook-landing-page single-handbook"> 
+  <noscript>
+   <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-P24PF4B" height="0" width="0" style="display:none;visibility:hidden"></iframe>
+  </noscript> 
+  <div id="wporg-header"> 
+   <div class="wrapper"> 
+    <h1><a href="//wordpress.org">WordPress.org</a></h1> 
+    <div id="head-search"> 
+     <form action="//wordpress.org/search/do-search.php" method="get"> 
+      <label for="global-search" class="screen-reader-text">Search WordPress.org for:</label> 
+      <input id="global-search" class="text" name="search" type="text" value="" maxlength="150" placeholder="Search WordPress.org"> 
+      <button type="submit" class="button"><span class="screen-reader-text">Submit</span></button> 
+     </form> 
+    </div> 
+    <div style="clear:both"></div> 
+    <button id="mobile-menu-button" aria-expanded="false"><span class="screen-reader-text">Toggle Menu</span></button> 
+    <nav aria-label="Main Menu"> 
+     <ul id="wporg-header-menu"> 
+      <li class="menu-item"><a href="//wordpress.org/showcase/" data-title="See some of the sites built on WordPress.">Showcase</a></li> 
+      <li class="menu-item"><a href="//wordpress.org/themes/" data-title="Find just the right look for your website.">Themes</a></li> 
+      <li class="menu-item"><a href="//wordpress.org/plugins/" data-title="Plugins can extend WordPress to do almost anything you can imagine.">Plugins</a></li> 
+      <li class="menu-item"><a href="//wordpress.org/mobile/" data-title="Take your website on the go!">Mobile</a></li> 
+      <li class="menu-item"><a href="//wordpress.org/support/" data-title="Forums, documentation, help.">Support</a>
+       <ul class="nav-submenu">
+        <li><a href="//wordpress.org/support/" title="Documentation, tutorials, best practices.">Documentation</a></li>
+        <li><a href="//wordpress.org/support/forums/" title="Support and discussion forums.">Forums</a></li>
+       </ul>
+       <div class="uparrow"></div></li> 
+      <li class="menu-item"><a href="//make.wordpress.org/" data-title="Contribute your knowledge.">Get Involved</a>
+       <ul class="nav-submenu">
+        <li><a href="//wordpress.org/five-for-the-future/" title="How five percent is powering the next generation of the web">Five for the Future</a></li>
+       </ul>
+       <div class="uparrow"></div></li> 
+      <li class="menu-item"><a href="//wordpress.org/about/" data-title="About the WordPress Organization, and where we're going.">About</a></li> 
+      <li class="menu-item"><a href="//wordpress.org/news/" data-title="Come here for the latest scoop.">Blog</a></li> 
+      <li class="menu-item"><a href="//wordpress.org/hosting/" data-title="Find a home for your blog.">Hosting</a></li> 
+      <li id="download" class="button download-button menu-item"><a href="//wordpress.org/download/" data-title="Get it. Got it? Good.">Get WordPress</a></li> 
+     </ul> 
+    </nav> 
+    <div style="clear:both"></div> 
+   </div> 
+  </div> 
+  <header id="masthead" class="site-header" role="banner"> 
+   <div class="site-branding"> 
+    <h1 class="site-title"> <a href="https://developer.wordpress.org/plugins/" rel="home">Plugin Handbook</a> </h1> 
+    <nav id="site-navigation" class="main-navigation" role="navigation"> 
+     <button class="menu-toggle dashicons dashicons-arrow-down-alt2" aria-controls="primary-menu" aria-expanded="false" aria-label="Primary Menu"></button> 
+    </nav> 
+   </div> 
+  </header>
+  <!-- #masthead --> 
+  <div id="page" class="hfeed site devhub-wrap"> 
+   <a href="#main" class="screen-reader-text">Skip to content</a> 
+   <div id="content" class="site-content"> 
+    <div id="secondary" class="widget-area" role="complementary"> 
+     <a href="#" id="secondary-toggle"></a> 
+     <div id="secondary-content"> 
+      <aside id="search-4" class="widget widget_search">
+       <div class="search-section section clear hide-if-js"> 
+        <form role="search" method="get" class="searchform searchform-handbook" action="https://developer.wordpress.org/plugins/"> 
+         <label for="search-field" class="screen-reader-text">Search for:</label> 
+         <input type="text" id="search-field" class="search-field" placeholder="Search …" value="" name="s"> 
+         <button class="button button-primary button-search"><i class="dashicons dashicons-search"></i><span class="screen-reader-text">Search plugins</span></button> 
+        </form> 
+       </div>
+       <!-- /search-guide --> 
+      </aside>
+      <aside id="nav_menu-3" class="widget widget_nav_menu">
+       <h2 class="widget-title">Chapters</h2>
+       <div class="menu-plugin-table-of-contents-container">
+        <ul id="menu-plugin-table-of-contents" class="menu">
+         <li id="menu-item-5791" class="menu-item menu-item-type-post_type menu-item-object-plugin-handbook menu-item-has-children menu-item-5791"><a href="https://developer.wordpress.org/plugins/intro/">Introduction to Plugin Development</a> 
+          <ul class="sub-menu"> 
+           <li id="menu-item-5792" class="menu-item menu-item-type-post_type menu-item-object-plugin-handbook menu-item-5792"><a href="https://developer.wordpress.org/plugins/intro/what-is-a-plugin/">What is a Plugin?</a></li> 
+          </ul> </li> 
+         <li id="menu-item-10905" class="menu-item menu-item-type-post_type menu-item-object-plugin-handbook menu-item-has-children menu-item-10905"><a href="https://developer.wordpress.org/plugins/plugin-basics/">Plugin Basics</a> 
+          <ul class="sub-menu"> 
+           <li id="menu-item-10916" class="menu-item menu-item-type-post_type menu-item-object-plugin-handbook menu-item-10916"><a href="https://developer.wordpress.org/plugins/plugin-basics/header-requirements/">Header Requirements</a></li> 
+           <li id="menu-item-10915" class="menu-item menu-item-type-post_type menu-item-object-plugin-handbook menu-item-10915"><a href="https://developer.wordpress.org/plugins/plugin-basics/including-a-software-license/">Including a Software License</a></li> 
+           <li id="menu-item-10927" class="menu-item menu-item-type-post_type menu-item-object-plugin-handbook menu-item-10927"><a href="https://developer.wordpress.org/plugins/plugin-basics/activation-deactivation-hooks/">Activation / Deactivation Hooks</a></li> 
+           <li id="menu-item-10926" class="menu-item menu-item-type-post_type menu-item-object-plugin-handbook menu-item-10926"><a href="https://developer.wordpress.org/plugins/plugin-basics/uninstall-methods/">Uninstall Methods</a></li> 
+           <li id="menu-item-10925" class="menu-item menu-item-type-post_type menu-item-object-plugin-handbook menu-item-10925"><a href="https://developer.wordpress.org/plugins/plugin-basics/best-practices/">Best Practices</a></li> 
+           <li id="menu-item-41303" class="menu-item menu-item-type-post_type menu-item-object-plugin-handbook menu-item-41303"><a href="https://developer.wordpress.org/plugins/plugin-basics/determining-plugin-and-content-directories/">Determining Plugin and Content Directories</a></li> 
+          </ul> </li> 
+         <li id="menu-item-10935" class="menu-item menu-item-type-post_type menu-item-object-plugin-handbook menu-item-has-children menu-item-10935"><a href="https://developer.wordpress.org/plugins/security/">Plugin Security</a> 
+          <ul class="sub-menu"> 
+           <li id="menu-item-11232" class="menu-item menu-item-type-post_type menu-item-object-plugin-handbook menu-item-11232"><a href="https://developer.wordpress.org/plugins/security/checking-user-capabilities/">Checking User Capabilities</a></li> 
+           <li id="menu-item-11231" class="menu-item menu-item-type-post_type menu-item-object-plugin-handbook menu-item-11231"><a href="https://developer.wordpress.org/plugins/security/data-validation/">Data Validation</a></li> 
+           <li id="menu-item-11230" class="menu-item menu-item-type-post_type menu-item-object-plugin-handbook menu-item-11230"><a href="https://developer.wordpress.org/plugins/security/securing-input/">Securing Input</a></li> 
+           <li id="menu-item-11572" class="menu-item menu-item-type-post_type menu-item-object-plugin-handbook menu-item-11572"><a href="https://developer.wordpress.org/plugins/security/securing-output/">Securing Output</a></li> 
+           <li id="menu-item-11229" class="menu-item menu-item-type-post_type menu-item-object-plugin-handbook menu-item-11229"><a href="https://developer.wordpress.org/plugins/security/nonces/">Nonces</a></li> 
+          </ul> </li> 
+         <li id="menu-item-10939" class="menu-item menu-item-type-post_type menu-item-object-plugin-handbook menu-item-has-children menu-item-10939"><a href="https://developer.wordpress.org/plugins/hooks/">Hooks</a> 
+          <ul class="sub-menu"> 
+           <li id="menu-item-10951" class="menu-item menu-item-type-post_type menu-item-object-plugin-handbook menu-item-10951"><a href="https://developer.wordpress.org/plugins/hooks/actions/">Actions</a></li> 
+           <li id="menu-item-10950" class="menu-item menu-item-type-post_type menu-item-object-plugin-handbook menu-item-10950"><a href="https://developer.wordpress.org/plugins/hooks/filters/">Filters</a></li> 
+           <li id="menu-item-10949" class="menu-item menu-item-type-post_type menu-item-object-plugin-handbook menu-item-10949"><a href="https://developer.wordpress.org/plugins/hooks/custom-hooks/">Custom Hooks</a></li> 
+           <li id="menu-item-10948" class="menu-item menu-item-type-post_type menu-item-object-plugin-handbook menu-item-10948"><a href="https://developer.wordpress.org/plugins/hooks/advanced-topics/">Advanced Topics</a></li> 
+          </ul> </li> 
+         <li id="menu-item-37669" class="menu-item menu-item-type-post_type menu-item-object-plugin-handbook menu-item-has-children menu-item-37669"><a href="https://developer.wordpress.org/plugins/privacy/">Privacy</a> 
+          <ul class="sub-menu"> 
+           <li id="menu-item-37670" class="menu-item menu-item-type-post_type menu-item-object-plugin-handbook menu-item-37670"><a href="https://developer.wordpress.org/plugins/privacy/suggesting-text-for-the-site-privacy-policy/">Policy Content</a></li> 
+           <li id="menu-item-37671" class="menu-item menu-item-type-post_type menu-item-object-plugin-handbook menu-item-37671"><a href="https://developer.wordpress.org/plugins/privacy/adding-the-personal-data-exporter-to-your-plugin/">Personal Data Export</a></li> 
+           <li id="menu-item-37672" class="menu-item menu-item-type-post_type menu-item-object-plugin-handbook menu-item-37672"><a href="https://developer.wordpress.org/plugins/privacy/adding-the-personal-data-eraser-to-your-plugin/">Personal Data Erasure</a></li> 
+           <li id="menu-item-37673" class="menu-item menu-item-type-post_type menu-item-object-plugin-handbook menu-item-37673"><a href="https://developer.wordpress.org/plugins/privacy/privacy-related-options-hooks-and-capabilities/">Advanced Topics</a></li> 
+          </ul> </li> 
+         <li id="menu-item-10963" class="menu-item menu-item-type-post_type menu-item-object-plugin-handbook menu-item-has-children menu-item-10963"><a href="https://developer.wordpress.org/plugins/administration-menus/">Administration Menus</a> 
+          <ul class="sub-menu"> 
+           <li id="menu-item-10965" class="menu-item menu-item-type-post_type menu-item-object-plugin-handbook menu-item-10965"><a href="https://developer.wordpress.org/plugins/administration-menus/top-level-menus/">Top-Level Menus</a></li> 
+           <li id="menu-item-10964" class="menu-item menu-item-type-post_type menu-item-object-plugin-handbook menu-item-10964"><a href="https://developer.wordpress.org/plugins/administration-menus/sub-menus/">Sub-Menus</a></li> 
+          </ul> </li> 
+         <li id="menu-item-10995" class="menu-item menu-item-type-post_type menu-item-object-plugin-handbook menu-item-has-children menu-item-10995"><a href="https://developer.wordpress.org/plugins/shortcodes/">Shortcodes</a> 
+          <ul class="sub-menu"> 
+           <li id="menu-item-10999" class="menu-item menu-item-type-post_type menu-item-object-plugin-handbook menu-item-10999"><a href="https://developer.wordpress.org/plugins/shortcodes/basic-shortcodes/">Basic Shortcodes</a></li> 
+           <li id="menu-item-10998" class="menu-item menu-item-type-post_type menu-item-object-plugin-handbook menu-item-10998"><a href="https://developer.wordpress.org/plugins/shortcodes/enclosing-shortcodes/">Enclosing Shortcodes</a></li> 
+           <li id="menu-item-10997" class="menu-item menu-item-type-post_type menu-item-object-plugin-handbook menu-item-10997"><a href="https://developer.wordpress.org/plugins/shortcodes/shortcodes-with-parameters/">Shortcodes with Parameters</a></li> 
+           <li id="menu-item-10996" class="menu-item menu-item-type-post_type menu-item-object-plugin-handbook menu-item-10996"><a href="https://developer.wordpress.org/plugins/shortcodes/tinymce-enhanced-shortcodes/">TinyMCE Enhanced Shortcodes</a></li> 
+          </ul> </li> 
+         <li id="menu-item-11038" class="menu-item menu-item-type-post_type menu-item-object-plugin-handbook menu-item-has-children menu-item-11038"><a href="https://developer.wordpress.org/plugins/settings/">Settings</a> 
+          <ul class="sub-menu"> 
+           <li id="menu-item-11041" class="menu-item menu-item-type-post_type menu-item-object-plugin-handbook menu-item-11041"><a href="https://developer.wordpress.org/plugins/settings/settings-api/">Settings API</a></li> 
+           <li id="menu-item-11043" class="menu-item menu-item-type-post_type menu-item-object-plugin-handbook menu-item-11043"><a href="https://developer.wordpress.org/plugins/settings/using-settings-api/">Using Settings API</a></li> 
+           <li id="menu-item-11042" class="menu-item menu-item-type-post_type menu-item-object-plugin-handbook menu-item-11042"><a href="https://developer.wordpress.org/plugins/settings/options-api/">Options API</a></li> 
+           <li id="menu-item-11040" class="menu-item menu-item-type-post_type menu-item-object-plugin-handbook menu-item-11040"><a href="https://developer.wordpress.org/plugins/settings/custom-settings-page/">Custom Settings Page</a></li> 
+          </ul> </li> 
+         <li id="menu-item-11054" class="menu-item menu-item-type-post_type menu-item-object-plugin-handbook menu-item-has-children menu-item-11054"><a href="https://developer.wordpress.org/plugins/metadata/">Metadata</a> 
+          <ul class="sub-menu"> 
+           <li id="menu-item-11057" class="menu-item menu-item-type-post_type menu-item-object-plugin-handbook menu-item-11057"><a href="https://developer.wordpress.org/plugins/metadata/managing-post-metadata/">Managing Post Metadata</a></li> 
+           <li id="menu-item-11056" class="menu-item menu-item-type-post_type menu-item-object-plugin-handbook menu-item-11056"><a href="https://developer.wordpress.org/plugins/metadata/custom-meta-boxes/">Custom Meta Boxes</a></li> 
+           <li id="menu-item-11055" class="menu-item menu-item-type-post_type menu-item-object-plugin-handbook menu-item-11055"><a href="https://developer.wordpress.org/plugins/metadata/rendering-post-metadata/">Rendering Post Metadata</a></li> 
+          </ul> </li> 
+         <li id="menu-item-11075" class="menu-item menu-item-type-post_type menu-item-object-plugin-handbook menu-item-has-children menu-item-11075"><a href="https://developer.wordpress.org/plugins/post-types/">Custom Post Types</a> 
+          <ul class="sub-menu"> 
+           <li id="menu-item-11078" class="menu-item menu-item-type-post_type menu-item-object-plugin-handbook menu-item-11078"><a href="https://developer.wordpress.org/plugins/post-types/registering-custom-post-types/">Registering Custom Post Types</a></li> 
+           <li id="menu-item-11077" class="menu-item menu-item-type-post_type menu-item-object-plugin-handbook menu-item-11077"><a href="https://developer.wordpress.org/plugins/post-types/working-with-custom-post-types/">Working with Custom Post Types</a></li> 
+          </ul> </li> 
+         <li id="menu-item-15127" class="menu-item menu-item-type-post_type menu-item-object-plugin-handbook menu-item-has-children menu-item-15127"><a href="https://developer.wordpress.org/plugins/taxonomies/">Taxonomies</a> 
+          <ul class="sub-menu"> 
+           <li id="menu-item-11076" class="menu-item menu-item-type-post_type menu-item-object-plugin-handbook menu-item-11076"><a href="https://developer.wordpress.org/plugins/taxonomies/working-with-custom-taxonomies/">Working with Custom Taxonomies</a></li> 
+           <li id="menu-item-15128" class="menu-item menu-item-type-post_type menu-item-object-plugin-handbook menu-item-15128"><a href="https://developer.wordpress.org/plugins/taxonomies/split-terms-wp-4-2/">Split Terms (WP 4.2+)</a></li> 
+          </ul> </li> 
+         <li id="menu-item-11095" class="menu-item menu-item-type-post_type menu-item-object-plugin-handbook menu-item-has-children menu-item-11095"><a href="https://developer.wordpress.org/plugins/users/">Users</a> 
+          <ul class="sub-menu"> 
+           <li id="menu-item-11098" class="menu-item menu-item-type-post_type menu-item-object-plugin-handbook menu-item-11098"><a href="https://developer.wordpress.org/plugins/users/working-with-users/">Working with Users</a></li> 
+           <li id="menu-item-11097" class="menu-item menu-item-type-post_type menu-item-object-plugin-handbook menu-item-11097"><a href="https://developer.wordpress.org/plugins/users/working-with-user-metadata/">Working with User Metadata</a></li> 
+           <li id="menu-item-11096" class="menu-item menu-item-type-post_type menu-item-object-plugin-handbook menu-item-11096"><a href="https://developer.wordpress.org/plugins/users/roles-and-capabilities/">Roles and Capabilities</a></li> 
+          </ul> </li> 
+         <li id="menu-item-11094" class="menu-item menu-item-type-post_type menu-item-object-plugin-handbook menu-item-11094"><a href="https://developer.wordpress.org/plugins/http-api/">HTTP API</a></li> 
+         <li id="menu-item-11155" class="menu-item menu-item-type-post_type menu-item-object-plugin-handbook menu-item-has-children menu-item-11155"><a href="https://developer.wordpress.org/plugins/javascript/">JavaScript, Ajax, &amp; jQuery</a> 
+          <ul class="sub-menu"> 
+           <li id="menu-item-11662" class="menu-item menu-item-type-post_type menu-item-object-plugin-handbook menu-item-11662"><a href="https://developer.wordpress.org/plugins/javascript/jquery/">jQuery</a></li> 
+           <li id="menu-item-11661" class="menu-item menu-item-type-post_type menu-item-object-plugin-handbook menu-item-11661"><a href="https://developer.wordpress.org/plugins/javascript/ajax/">Ajax</a></li> 
+           <li id="menu-item-11156" class="menu-item menu-item-type-post_type menu-item-object-plugin-handbook menu-item-11156"><a href="https://developer.wordpress.org/plugins/javascript/enqueuing/">Server Side PHP and Enqueuing</a></li> 
+           <li id="menu-item-25267" class="menu-item menu-item-type-post_type menu-item-object-plugin-handbook menu-item-25267"><a href="https://developer.wordpress.org/plugins/javascript/heartbeat-api/">Heartbeat API</a></li> 
+           <li id="menu-item-11663" class="menu-item menu-item-type-post_type menu-item-object-plugin-handbook menu-item-11663"><a href="https://developer.wordpress.org/plugins/javascript/summary/">Summary</a></li> 
+          </ul> </li> 
+         <li id="menu-item-11168" class="menu-item menu-item-type-post_type menu-item-object-plugin-handbook menu-item-has-children menu-item-11168"><a href="https://developer.wordpress.org/plugins/cron/">Cron</a> 
+          <ul class="sub-menu"> 
+           <li id="menu-item-11172" class="menu-item menu-item-type-post_type menu-item-object-plugin-handbook menu-item-11172"><a href="https://developer.wordpress.org/plugins/cron/understanding-wp-cron-scheduling/">Understanding WP-Cron Scheduling</a></li> 
+           <li id="menu-item-11171" class="menu-item menu-item-type-post_type menu-item-object-plugin-handbook menu-item-11171"><a href="https://developer.wordpress.org/plugins/cron/scheduling-wp-cron-events/">Scheduling WP Cron Events</a></li> 
+           <li id="menu-item-11170" class="menu-item menu-item-type-post_type menu-item-object-plugin-handbook menu-item-11170"><a href="https://developer.wordpress.org/plugins/cron/hooking-wp-cron-into-the-system-task-scheduler/">Hooking WP-Cron Into the System Task Scheduler</a></li> 
+           <li id="menu-item-11169" class="menu-item menu-item-type-post_type menu-item-object-plugin-handbook menu-item-11169"><a href="https://developer.wordpress.org/plugins/cron/simple-testing/">Simple Testing of WP-Cron</a></li> 
+          </ul> </li> 
+         <li id="menu-item-11182" class="menu-item menu-item-type-post_type menu-item-object-plugin-handbook menu-item-has-children menu-item-11182"><a href="https://developer.wordpress.org/plugins/internationalization/">Internationalization</a> 
+          <ul class="sub-menu"> 
+           <li id="menu-item-11183" class="menu-item menu-item-type-post_type menu-item-object-plugin-handbook menu-item-11183"><a href="https://developer.wordpress.org/plugins/internationalization/localization/">Localization</a></li> 
+           <li id="menu-item-11184" class="menu-item menu-item-type-post_type menu-item-object-plugin-handbook menu-item-11184"><a href="https://developer.wordpress.org/plugins/internationalization/how-to-internationalize-your-plugin/">How to Internationalize Your Plugin</a></li> 
+           <li id="menu-item-15321" class="menu-item menu-item-type-post_type menu-item-object-plugin-handbook menu-item-15321"><a href="https://developer.wordpress.org/plugins/internationalization/security/">Internationalization Security</a></li> 
+          </ul> </li> 
+         <li id="menu-item-11194" class="menu-item menu-item-type-post_type menu-item-object-plugin-handbook menu-item-has-children menu-item-11194"><a href="https://developer.wordpress.org/plugins/wordpress-org/">The Plugin Directory</a> 
+          <ul class="sub-menu"> 
+           <li id="menu-item-15320" class="menu-item menu-item-type-post_type menu-item-object-plugin-handbook menu-item-15320"><a href="https://developer.wordpress.org/plugins/wordpress-org/detailed-plugin-guidelines/">Detailed Plugin Guidelines</a></li> 
+           <li id="menu-item-11197" class="menu-item menu-item-type-post_type menu-item-object-plugin-handbook menu-item-11197"><a href="https://developer.wordpress.org/plugins/wordpress-org/planning-your-plugin/">Planning Plugins</a></li> 
+           <li id="menu-item-15317" class="menu-item menu-item-type-post_type menu-item-object-plugin-handbook menu-item-15317"><a href="https://developer.wordpress.org/plugins/wordpress-org/how-to-use-subversion/">Using Subversion</a></li> 
+           <li id="menu-item-37546" class="menu-item menu-item-type-post_type menu-item-object-plugin-handbook menu-item-37546"><a href="https://developer.wordpress.org/plugins/wordpress-org/alerts-and-warnings/">Alerts and Warnings</a></li> 
+           <li id="menu-item-15319" class="menu-item menu-item-type-post_type menu-item-object-plugin-handbook menu-item-15319"><a href="https://developer.wordpress.org/plugins/wordpress-org/plugin-developer-faq/">Developer FAQ</a></li> 
+          </ul> </li> 
+         <li id="menu-item-11204" class="menu-item menu-item-type-post_type menu-item-object-plugin-handbook menu-item-has-children menu-item-11204"><a href="https://developer.wordpress.org/plugins/developer-tools/">Developer Tools</a> 
+          <ul class="sub-menu"> 
+           <li id="menu-item-11206" class="menu-item menu-item-type-post_type menu-item-object-plugin-handbook menu-item-11206"><a href="https://developer.wordpress.org/plugins/developer-tools/debug-bar-and-add-ons/">Debug Bar and Add-Ons</a></li> 
+           <li id="menu-item-11205" class="menu-item menu-item-type-post_type menu-item-object-plugin-handbook menu-item-11205"><a href="https://developer.wordpress.org/plugins/developer-tools/helper-plugins/">Helper Plugins</a></li> 
+          </ul> </li> 
+         <li id="menu-item-10906" class="menu-item menu-item-type-post_type menu-item-object-plugin-handbook menu-item-10906"><a href="https://developer.wordpress.org/plugins/credits/">Credits</a></li> 
+        </ul>
+       </div>
+      </aside> 
+     </div> 
+    </div>
+    <!-- #secondary --> 
+    <main id="primary" class="site-main post-5783 plugin-handbook type-plugin-handbook status-publish hentry type-handbook" role="main"> 
+     <div class="breadcrumb-trail breadcrumbs" itemprop="breadcrumb"> 
+      <span class="trail-browse">Browse:</span> 
+      <span class="trail-begin"><a href="https://developer.wordpress.org" title="WordPress Developer Resources" rel="home">Home</a></span> 
+      <span class="sep">/</span> 
+      <span class="trail-end">Plugin Handbook</span> 
+     </div> 
+     <h1>Plugin Handbook</h1> 
+     <p><em>Welcome to the WordPress Plugin Developer Handbook; are you ready to jump right in to the world of WordPress plugins?</em></p> 
+     <p>The Plugin Developer Handbook is a resource for all things WordPress plugins. Whether you’re new to WordPress plugin development, or you’re an experienced plugin developer, you should be able to find the answer to many of your plugin-related questions right here.</p> 
+     <ol>
+      <li>If you’re new to plugin development, start by reading the <a href="https://developer.wordpress.org/plugin/intro/">introduction</a> and then move on to <a href="https://developer.wordpress.org/plugins/plugin-basics/">the basics</a>.</li>
+      <li>Section 3 will introduce you to <a href="https://developer.wordpress.org/plugin/security/">plugin security</a>.</li>
+      <li><a href="https://developer.wordpress.org/plugin/hooks/">Hooks</a> are what make your plugin interact with WordPress. Learn all about them in section 4.</li>
+      <li>To find out more about WordPress’ built-in functionality that you can use in your plugin, check out sections 5 – 11: <a href="https://developer.wordpress.org/plugin/administration-menus/">administration menus</a>, <a href="https://developer.wordpress.org/plugin/shortcodes/">shortcodes</a>, <a href="https://developer.wordpress.org/plugin/settings/">settings</a>, <a href="https://developer.wordpress.org/plugin/metadata/">metadata</a>, <a href="https://developer.wordpress.org/plugins/post-types/">custom post types</a>, <a href="https://developer.wordpress.org/plugins/taxonomy/">taxonomies</a>, and <a href="https://developer.wordpress.org/plugin/users/">users</a>.</li>
+      <li>Learn about getting data using the <a href="https://developer.wordpress.org/plugin/http-api/">HTTP API</a> in section 12.</li>
+      <li>If you’re using <a href="https://developer.wordpress.org/plugin/javascript/">JavaScript, jQuery or Ajax</a> in your plugin, you’ll find the information you need in section 13.</li>
+      <li>To learn about time-based WordPress tasks using <a href="https://developer.wordpress.org/plugin/cron/">Cron</a>, check out section 14.</li>
+      <li>Sections 15-17 will introduce you to <a href="https://developer.wordpress.org/plugin/internationalization/">internationalizing</a> your plugin, preparing it for <a href="https://developer.wordpress.org/plugin/wordpress-org/">release on WordPress.org</a>, and some <a href="https://developer.wordpress.org/plugin/developer-tools/">developer tools</a> you might find useful.</li>
+     </ol> 
+     <p>The WordPress Plugin Developer Handbook is created by the WordPress community, for the WordPress community. We are always looking for more contributors; if you’re interested, stop by the <a href="https://make.wordpress.org/docs">docs team blog</a> to find out more about getting involved.</p> 
+     <div class="bottom-of-entry">
+      &nbsp;
+     </div> 
+    </main>
+    <!-- #main --> 
+   </div>
+   <!-- #content --> 
+  </div>
+  <!-- #page --> 
+  <div id="wporg-footer"> 
+   <div class="wrapper"> 
+    <ul> 
+     <li><a href="//wordpress.org/about/" title="An introduction to the WordPress project">About</a></li> 
+     <li><a href="//wordpress.org/news/" title="News and Updates">Blog</a></li> 
+     <li><a href="//wordpress.org/hosting/" title="Recommended web hosting providers">Hosting</a></li> 
+     <li><a href="https://wordpressfoundation.org/donate/" title="Donate to the WordPress Foundation">Donate</a></li> 
+    </ul> 
+    <ul> 
+     <li><a href="//wordpress.org/support/" title="Forums, documentation, and other resources">Support</a></li> 
+     <li><a href="//developer.wordpress.org" title="Resources for WordPress developers">Developers</a></li> 
+     <li><a href="//make.wordpress.org/" title="Give back to WordPress through code, support, translation and more">Get Involved</a></li> 
+    </ul> 
+    <ul> 
+     <li><a href="//wordpress.org/showcase/" title="Some of the best WordPress sites on the Web">Showcase</a></li> 
+     <li><a href="//wordpress.org/plugins/" title="Add extra functionality to WordPress">Plugins</a></li> 
+     <li><a href="//wordpress.org/themes/" title="Make your WordPress pretty">Themes</a></li> 
+    </ul> 
+    <ul> 
+     <li><a href="//central.wordcamp.org/" title="Find a WordPress event near you">WordCamp</a></li> 
+     <li><a href="//wordpress.tv/" title="Videos, tutorials, and WordCamp sessions">WordPress.TV</a></li> 
+     <li><a href="//buddypress.org/" title="A set of plugins to transform your WordPress into a social network">BuddyPress</a></li> 
+     <li><a href="//bbpress.org/" title="Fast, slick forums built on WordPress">bbPress</a></li> 
+    </ul> 
+    <ul> 
+     <li><a href="//wordpress.com/?ref=wporg-footer" title="Hassle-free WordPress hosting">WordPress.com</a></li> 
+     <li><a href="//ma.tt/" title="Co-founder of WordPress, an example of what WordPress can do">Matt</a></li> 
+     <li><a href="//wordpress.org/about/privacy/" title="WordPress.org Privacy Policy">Privacy</a></li> 
+     <li><a href="https://publiccode.eu/" target="_blank">Public Code</a></li> 
+    </ul> 
+    <ul> 
+     <li><span class="dashicons dashicons-twitter"></span><a href="https://twitter.com/WordPress" title="Follow @WordPress on Twitter">@WordPress</a></li> 
+     <li><span class="dashicons dashicons-facebook"></span><a href="https://www.facebook.com/WordPress/" title="Like WordPress on Facebook">WordPress</a></li> 
+    </ul> 
+   </div> 
+   <p class="cip cip-image">Code is Poetry.</p> 
+  </div> 
+  <script src="https://s.w.org/style/js/navigation.min.js?20190128"></script> 
+  <script type="text/javascript" src="https://gravatar.com/js/gprofiles.js"></script> 
+  <script type="text/javascript" src="https://developer.wordpress.org/wp-includes/js/admin-bar.min.js?ver=5.4-alpha-46799"></script> 
+  <script type="text/javascript" src="https://developer.wordpress.org/wp-content/themes/pub/wporg-developer/js/navigation.js?ver=20181209"></script> 
+  <script type="text/javascript" src="https://developer.wordpress.org/wp-content/themes/pub/wporg-developer/js/skip-link-focus-fix.js?ver=20130115"></script> 
+  <script type="text/javascript" src="https://developer.wordpress.org/wp-content/themes/pub/wporg-developer/js/search.js?ver=20150430"></script> 
+  <script type="text/javascript" src="https://developer.wordpress.org/wp-content/themes/pub/wporg-developer/js/menu.js?ver=20180201"></script> 
+  <script type="text/javascript" src="https://developer.wordpress.org/wp-content/themes/pub/wporg-developer/js/awesomplete.min.js?ver=20160322"></script> 
+  <script type="text/javascript">
+/* <![CDATA[ */
+var autocomplete = {"ajaxurl":"https:\/\/developer.wordpress.org\/wp-admin\/admin-ajax.php","nonce":"97b505d027"};
+/* ]]> */
+</script> 
+  <script type="text/javascript" src="https://developer.wordpress.org/wp-content/themes/pub/wporg-developer/js/autocomplete.js?ver=20160524"></script> 
+  <script type="text/javascript" src="https://developer.wordpress.org/wp-content/themes/pub/wporg-developer/js/function-reference.js?ver=20180724"></script> 
+  <script type="text/javascript">
+/* <![CDATA[ */
+var quicktagsL10n = {"closeAllOpenTags":"Close all open tags","closeTags":"close tags","enterURL":"Enter the URL","enterImageURL":"Enter the URL of the image","enterImageDescription":"Enter a description of the image","textdirection":"text direction","toggleTextdirection":"Toggle Editor Text Direction","dfw":"Distraction-free writing mode","strong":"Bold","strongClose":"Close bold tag","em":"Italic","emClose":"Close italic tag","link":"Insert link","blockquote":"Blockquote","blockquoteClose":"Close blockquote tag","del":"Deleted text (strikethrough)","delClose":"Close deleted text tag","ins":"Inserted text","insClose":"Close inserted text tag","image":"Insert image","ul":"Bulleted list","ulClose":"Close bulleted list tag","ol":"Numbered list","olClose":"Close numbered list tag","li":"List item","liClose":"Close list item tag","code":"Code","codeClose":"Close code tag","more":"Insert Read More tag"};
+/* ]]> */
+</script> 
+  <script type="text/javascript" src="https://developer.wordpress.org/wp-includes/js/quicktags.min.js?ver=5.4-alpha-46799"></script> 
+  <script type="text/javascript" src="https://developer.wordpress.org/wp-content/themes/pub/wporg-developer/js/user-notes.js?ver=20181019"></script> 
+  <script type="text/javascript">
+/* <![CDATA[ */
+var wporg_note_feedback = {"show":"Show Feedback","hide":"Hide Feedback"};
+/* ]]> */
+</script> 
+  <script type="text/javascript" src="https://developer.wordpress.org/wp-content/themes/pub/wporg-developer/js/user-notes-feedback.js?ver=20181023"></script> 
+  <script type="text/javascript" src="https://developer.wordpress.org/wp-content/themes/pub/wporg-developer/js/tabs.js?ver=20160824"></script> 
+  <script type="text/javascript">
+/* <![CDATA[ */
+var wporg_note_preview = {"ajaxurl":"https:\/\/developer.wordpress.org\/wp-admin\/admin-ajax.php","nonce":"8ece0519d3","preview":"preview note","preview_empty":"Nothing to preview","is_admin":""};
+/* ]]> */
+</script> 
+  <script type="text/javascript" src="https://developer.wordpress.org/wp-content/themes/pub/wporg-developer/js/user-notes-preview.js?ver=20181019"></script> 
+  <script type="text/javascript" src="https://developer.wordpress.org/wp-includes/js/wp-embed.min.js?ver=5.4-alpha-46799"></script> 
+  <div id="wpadminbar" class="nojq nojs"> 
+   <a class="screen-reader-shortcut" href="#wp-toolbar" tabindex="1">Skip to toolbar</a> 
+   <div class="quicklinks" id="wp-toolbar" role="navigation" aria-label="Toolbar"> 
+    <ul id="wp-admin-bar-root-default" class="ab-top-menu">
+     <li id="wp-admin-bar-wp-logo" class="menupop"><a class="ab-item" aria-haspopup="true" href="https://wordpress.org/about/"><span class="ab-icon"></span><span class="screen-reader-text">About WordPress</span></a>
+      <div class="ab-sub-wrapper">
+       <ul id="wp-admin-bar-wp-logo-default" class="ab-submenu">
+        <li id="wp-admin-bar-about"><a class="ab-item" href="https://wordpress.org/about/">About WordPress</a></li>
+       </ul>
+       <ul id="wp-admin-bar-wp-logo-external" class="ab-sub-secondary ab-submenu">
+        <li id="wp-admin-bar-wporg"><a class="ab-item" href="https://wordpress.org/">WordPress.org</a></li>
+        <li id="wp-admin-bar-documentation"><a class="ab-item" href="https://codex.wordpress.org/">Documentation</a></li>
+        <li id="wp-admin-bar-support-forums"><a class="ab-item" href="https://wordpress.org/support/">Support</a></li>
+        <li id="wp-admin-bar-feedback"><a class="ab-item" href="https://wordpress.org/support/forum/requests-and-feedback">Feedback</a></li>
+       </ul>
+      </div></li>
+    </ul>
+    <ul id="wp-admin-bar-top-secondary" class="ab-top-secondary ab-top-menu">
+     <li id="wp-admin-bar-search" class="admin-bar-search">
+      <div class="ab-item ab-empty-item" tabindex="-1">
+       <form action="https://developer.wordpress.org/" method="get" id="adminbarsearch">
+        <input class="adminbar-input" name="s" id="adminbar-search" type="text" value="" maxlength="150">
+        <label for="adminbar-search" class="screen-reader-text">Search</label>
+        <input type="submit" class="adminbar-button" value="Search">
+       </form>
+      </div></li>
+     <li id="wp-admin-bar-log-in"><a class="ab-item" href="https://login.wordpress.org/?locale=en_US">Log In</a></li>
+     <li id="wp-admin-bar-register"><a class="ab-item" href="https://login.wordpress.org/register?locale=en_US">Register</a></li>
+    </ul> 
+   </div> 
+  </div>   
+ </body>
+</html>

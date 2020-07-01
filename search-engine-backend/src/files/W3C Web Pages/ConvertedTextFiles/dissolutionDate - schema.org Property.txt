@@ -1,0 +1,1 @@
+dissolutionDate - schema.org Property schema.org Documentation Schemas Home dissolutionDate Thing > Property > dissolutionDate The date that this organization was dissolved. [more...] Canonical URL: http://schema.org/dissolutionDate Leave public feedback on this term 💬 Check for open issues. Values expected to be one of these types Date Used on these types Organization

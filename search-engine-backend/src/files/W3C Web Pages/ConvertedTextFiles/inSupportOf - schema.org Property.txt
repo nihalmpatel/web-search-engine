@@ -1,0 +1,42 @@
+inSupportOf - schema.org Property schema.org Documentation Schemas Home inSupportOf Defined in the bib section. Thing > Property > inSupportOf Qualification, candidature, degree, application that Thesis supports. [more...] Canonical URL: http://schema.org/inSupportOf Leave public feedback on this term 💬 Check for open issues. 'inSupportOf' is mentioned in the bib extention. Values expected to be one of these types Text Used on these types Thesis Examples Example 1 Without Markup Microdata RDFa JSON-LD A Thesis.
+<div>
+  <h1>Asian elephants are essential as seed dispersers in a disturbed tropical forest</h1>
+  <h2> A Thesis</h2>
+  <div>Author: Sekar, Nitin, Ph.D.</div>
+  <div>Course: Conservation Biology</div>
+  <div>School: Princeton University</div>
+</div>
+ <div itemscope itemtype="http://schema.org/Thesis">
+  <h1 itemprop="name">Asian elephants are essential as seed dispersers in a disturbed tropical forest</h1>
+  <h2> A Thesis</h2>
+  <div>Author: <span itemprop="author">Sekar, Nitin, Ph.D.</span></div>
+  <div>Course: <span itemprop="inSupportOf">Conservation Biology</span></div>
+  <div>School: <span itemprop="sourceOrganization">Princeton University</span></div>
+</div>
+ <div vocab="http://schema.org/" typeof="Thesis">
+  <h1 property="name">Asian elephants are essential as seed dispersers in a disturbed tropical forest</h1>
+  <h2> A Thesis</h2>
+  <div>Author: <span property="author">Sekar, Nitin, Ph.D.</span></div>
+  <div>Course: <span property="inSupportOf">Conservation Biology</span></div>
+  <div>School: <span property="sourceOrganization">Princeton University</span></div>
+</div>
+ <script type="application/ld+json">
+{
+  "@context": {
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "rdfa": "http://www.w3.org/ns/rdfa#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "schema": "http://schema.org/",
+    "xsd": "http://www.w3.org/2001/XMLSchema#"
+  },
+  "@id": "",
+  "rdfa:usesVocabulary": {
+    "@id": "schema:"
+  },
+  "@type": "schema:Thesis",
+  "schema:author": "Sekar, Nitin, Ph.D.",
+  "schema:inSupportOf": "Conservation Biology",
+  "schema:name": "Asian elephants are essential as seed dispersers in a disturbed tropical forest",
+  "schema:sourceOrganization": "Princeton University"
+}
+</script>

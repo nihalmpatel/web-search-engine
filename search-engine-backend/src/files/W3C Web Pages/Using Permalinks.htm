@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
+ <head profile="http://gmpg.org/xfn/11"> 
+  <meta charset="utf-8"> 
+  <!--
+<meta property="fb:page_id" content="6427302910" />
+--> 
+  <meta name="google-site-verification" content="7VWES_-rcHBcmaQis9mSYamPfNwE03f4vyTj4pfuAw0"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1"> 
+  <title>Using Permalinks | WordPress.org</title> 
+  <meta name="referrer" content="always"> 
+  <link href="//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,400,300,600&amp;subset=latin,cyrillic-ext,greek-ext,greek,vietnamese,latin-ext,cyrillic" rel="stylesheet" type="text/css"> 
+  <link rel="stylesheet" href="//s.w.org/style/wp4.css?82"> 
+  <link rel="shortcut icon" href="//s.w.org/favicon.ico?2" type="image/x-icon"> 
+  <link rel="pingback" href="https://wordpress.org/support/xmlrpc.php">
+  <link rel="dns-prefetch" href="//s0.wp.com"> 
+  <link rel="dns-prefetch" href="//s.w.org"> 
+  <link rel="dns-prefetch" href="//www.googletagmanager.com"> 
+  <link rel="dns-prefetch" href="//fonts.googleapis.com"> 
+  <link rel="dns-prefetch" href="//fonts.gstatic.com"> 
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-P24PF4B');</script> 
+  <script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/12.0.0-1\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/12.0.0-1\/svg\/","svgExt":".svg","source":{"concatemoji":"https:\/\/wordpress.org\/support\/wp-includes\/js\/wp-emoji-release.min.js?ver=5.4-alpha-46799"}};
+			/*! This file is auto-generated */
+			!function(e,a,t){var r,n,o,i,p=a.createElement("canvas"),s=p.getContext&&p.getContext("2d");function c(e,t){var a=String.fromCharCode;s.clearRect(0,0,p.width,p.height),s.fillText(a.apply(this,e),0,0);var r=p.toDataURL();return s.clearRect(0,0,p.width,p.height),s.fillText(a.apply(this,t),0,0),r===p.toDataURL()}function l(e){if(!s||!s.fillText)return!1;switch(s.textBaseline="top",s.font="600 32px Arial",e){case"flag":return!c([127987,65039,8205,9895,65039],[127987,65039,8203,9895,65039])&&(!c([55356,56826,55356,56819],[55356,56826,8203,55356,56819])&&!c([55356,57332,56128,56423,56128,56418,56128,56421,56128,56430,56128,56423,56128,56447],[55356,57332,8203,56128,56423,8203,56128,56418,8203,56128,56421,8203,56128,56430,8203,56128,56423,8203,56128,56447]));case"emoji":return!c([55357,56424,55356,57342,8205,55358,56605,8205,55357,56424,55356,57340],[55357,56424,55356,57342,8203,55358,56605,8203,55357,56424,55356,57340])}return!1}function d(e){var t=a.createElement("script");t.src=e,t.defer=t.type="text/javascript",a.getElementsByTagName("head")[0].appendChild(t)}for(i=Array("flag","emoji"),t.supports={everything:!0,everythingExceptFlag:!0},o=0;o<i.length;o++)t.supports[i[o]]=l(i[o]),t.supports.everything=t.supports.everything&&t.supports[i[o]],"flag"!==i[o]&&(t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&t.supports[i[o]]);t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&!t.supports.flag,t.DOMReady=!1,t.readyCallback=function(){t.DOMReady=!0},t.supports.everything||(n=function(){t.readyCallback()},a.addEventListener?(a.addEventListener("DOMContentLoaded",n,!1),e.addEventListener("load",n,!1)):(e.attachEvent("onload",n),a.attachEvent("onreadystatechange",function(){"complete"===a.readyState&&t.readyCallback()})),(r=t.source||{}).concatemoji?d(r.concatemoji):r.wpemoji&&r.twemoji&&(d(r.twemoji),d(r.wpemoji)))}(window,document,window._wpemojiSettings);
+		</script> 
+  <style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style> 
+  <link rel="stylesheet" id="dashicons-css" href="https://wordpress.org/support/wp-includes/css/dashicons.min.css?ver=5.4-alpha-46799" type="text/css" media="all"> 
+  <link rel="stylesheet" id="admin-bar-css" href="https://wordpress.org/support/wp-includes/css/admin-bar.min.css?ver=5.4-alpha-46799" type="text/css" media="all"> 
+  <link rel="stylesheet" id="wp-block-library-css" href="https://wordpress.org/support/wp-includes/css/dist/block-library/style.min.css?ver=5.4-alpha-46799" type="text/css" media="all"> 
+  <link rel="stylesheet" id="bbp-default-css" href="https://wordpress.org/support/wp-content/plugins/bbpress/templates/default/css/bbpress.min.css?ver=2.6.3-alpha-3" type="text/css" media="all"> 
+  <link rel="stylesheet" id="helphub-contributors-css" href="https://wordpress.org/support/wp-content/plugins/support-helphub/inc/helphub-contributors/public/css/helphub-contributors-public.css?ver=1.0.0" type="text/css" media="all"> 
+  <link rel="stylesheet" id="forum-wp4-style-css" href="https://wordpress.org/support/wp-content/themes/pub/wporg-support/style.css?ver=20191114" type="text/css" media="all"> 
+  <link rel="stylesheet" id="table-of-contents-css" href="https://wordpress.org/support/wp-content/plugins/support-helphub/inc/table-of-contents-lite/assets/css/style.css?ver=1.0.1" type="text/css" media="all"> 
+  <link rel="stylesheet" id="jetpack_css-css" href="https://wordpress.org/support/wp-content/plugins/jetpack/css/jetpack.css?ver=7.9.1" type="text/css" media="all"> 
+  <script type="text/javascript" src="https://wordpress.org/support/wp-includes/js/jquery/jquery.js?ver=1.12.4-wp"></script> 
+  <script type="text/javascript" src="https://wordpress.org/support/wp-includes/js/jquery/jquery-migrate.min.js?ver=1.4.1"></script> 
+  <link rel="https://api.w.org/" href="https://wordpress.org/support/wp-json/"> 
+  <link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://wordpress.org/support/xmlrpc.php?rsd"> 
+  <link rel="wlwmanifest" type="application/wlwmanifest+xml" href="https://wordpress.org/support/wp-includes/wlwmanifest.xml"> 
+  <meta name="generator" content="WordPress 5.4-alpha-46799"> 
+  <link rel="canonical" href="https://wordpress.org/support/article/using-permalinks/"> 
+  <link rel="shortlink" href="https://wordpress.org/support/?p=10867570"> 
+  <link rel="alternate" type="application/json+oembed" href="https://wordpress.org/support/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwordpress.org%2Fsupport%2Farticle%2Fusing-permalinks%2F"> 
+  <link rel="alternate" type="text/xml+oembed" href="https://wordpress.org/support/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwordpress.org%2Fsupport%2Farticle%2Fusing-permalinks%2F&amp;format=xml"> 
+  <style>
+		@media screen and (max-width: 782px) {
+			#wpadminbar li#wp-admin-bar-log-in,
+			#wpadminbar li#wp-admin-bar-register {
+				display: block;
+			}
+
+			#wpadminbar li#wp-admin-bar-log-in a,
+			#wpadminbar li#wp-admin-bar-register a {
+				padding: 0 8px;
+			}
+		}
+	</style> 
+  <link rel="dns-prefetch" href="//i0.wp.com"> 
+  <link rel="dns-prefetch" href="//i1.wp.com"> 
+  <link rel="dns-prefetch" href="//i2.wp.com"> 
+  <style type="text/css" media="print">#wpadminbar { display:none; }</style> 
+  <style type="text/css" media="screen">
+	html { margin-top: 32px !important; }
+	* html body { margin-top: 32px !important; }
+	@media screen and ( max-width: 782px ) {
+		html { margin-top: 46px !important; }
+		* html body { margin-top: 46px !important; }
+	}
+</style> 
+  <style type="text/css" id="wp-custom-css">
+				/* Style image captions */
+.wp-block-image figcaption {
+	font-size: .8em;
+	color: #606A73;
+	text-align: center;
+}			</style> 
+  <script>document.cookie='devicePixelRatio='+((window.devicePixelRatio === undefined) ? 1 : window.devicePixelRatio)+'; path=/';</script> 
+ </head> 
+ <body id="wordpress-org" class="helphub_article-template-default single single-helphub_article postid-10867570 admin-bar no-customize-support wporg-responsive wporg-support helphub-page helphub-with-sidebar"> 
+  <noscript>
+   <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-P24PF4B" height="0" width="0" style="display:none;visibility:hidden"></iframe>
+  </noscript> 
+  <div id="wporg-header"> 
+   <div class="wrapper"> 
+    <style type="text/css">
+                @media screen and (max-width:768px) { .survey-wrapper { margin-bottom:20px; } #wporg-header { height: 160px; } #mobile-menu-button { top: 95px; } }
+                .survey-wrapper { width: 100%; height: 0; }
+	.survey-div { font-family: 'Open Sans', Helvetica, Arial, 'Liberation Sans', sans-serif;  font-weight: 600;display: block; margin: 0 auto;  font-size: 13px; color: #fff;height: 22px;width: 300px;text-align:center !important;background-color: #d54e21;border-radius: 0 0 4px 4px; }
+                .survey-div a { color: #fff; font-weight: 500; text-shadow: 1px 1px 3px #666; }
+                @media screen and (max-width:360px) { .survey-div { width: 100%; } }
+        </style> 
+    <div class="survey-wrapper"> 
+     <div class="survey-div"> 
+      <a href="https://wordpressdotorg.survey.fm/wordpress-2019-survey-english">Have you taken the WordPress 2019 Survey yet?</a> 
+     </div> 
+    </div> 
+    <a class="skip-link screen-reader-text" href="#content">Skip to content</a> 
+    <h1><a href="//wordpress.org">WordPress.org</a></h1> 
+    <div id="head-search"> 
+     <form action="//wordpress.org/search/do-search.php" method="get"> 
+      <label for="global-search" class="screen-reader-text">Search WordPress.org for:</label> 
+      <input id="global-search" class="text" name="search" type="text" value="" maxlength="150" placeholder="Search WordPress.org"> 
+      <button type="submit" class="button"><span class="screen-reader-text">Submit</span></button> 
+     </form> 
+    </div> 
+    <div style="clear:both"></div> 
+    <button id="mobile-menu-button" aria-expanded="false"><span class="screen-reader-text">Toggle Menu</span></button> 
+    <nav aria-label="Main Menu"> 
+     <ul id="wporg-header-menu"> 
+      <li class="menu-item"><a href="//wordpress.org/showcase/" data-title="See some of the sites built on WordPress.">Showcase</a></li> 
+      <li class="menu-item"><a href="//wordpress.org/themes/" data-title="Find just the right look for your website.">Themes</a></li> 
+      <li class="menu-item"><a href="//wordpress.org/plugins/" data-title="Plugins can extend WordPress to do almost anything you can imagine.">Plugins</a></li> 
+      <li class="menu-item"><a href="//wordpress.org/mobile/" data-title="Take your website on the go!">Mobile</a></li> 
+      <li class="menu-item"><a href="//wordpress.org/support/" data-title="Forums, documentation, help." aria-current="true" class="current">Support</a>
+       <ul class="nav-submenu">
+        <li><a href="//wordpress.org/support/" title="Documentation, tutorials, best practices.">Documentation</a></li>
+        <li><a href="//wordpress.org/support/forums/" title="Support and discussion forums.">Forums</a></li>
+       </ul>
+       <div class="uparrow"></div></li> 
+      <li class="menu-item"><a href="//make.wordpress.org/" data-title="Contribute your knowledge.">Get Involved</a>
+       <ul class="nav-submenu">
+        <li><a href="//wordpress.org/five-for-the-future/" title="How five percent is powering the next generation of the web">Five for the Future</a></li>
+       </ul>
+       <div class="uparrow"></div></li> 
+      <li class="menu-item"><a href="//wordpress.org/about/" data-title="About the WordPress Organization, and where we're going.">About</a></li> 
+      <li class="menu-item"><a href="//wordpress.org/news/" data-title="Come here for the latest scoop.">Blog</a></li> 
+      <li class="menu-item"><a href="//wordpress.org/hosting/" data-title="Find a home for your blog.">Hosting</a></li> 
+      <li id="download" class="button download-button menu-item"><a href="//wordpress.org/download/" data-title="Get it. Got it? Good.">Get WordPress</a></li> 
+     </ul> 
+    </nav> 
+    <div style="clear:both"></div> 
+   </div> 
+  </div> 
+  <div id="page" class="site"> 
+   <a class="skip-link screen-reader-text" href="#main">Skip to content</a> 
+   <div id="content" class="site-content"> 
+    <header id="masthead" class="site-header " role="banner"> 
+     <div class="site-branding"> 
+      <p class="site-title"><a href="https://wordpress.org/support/" rel="home">Support</a></p> 
+      <nav id="site-navigation" class="main-navigation" role="navigation"> 
+       <button class="menu-toggle dashicons dashicons-arrow-down-alt2" aria-controls="primary-menu" aria-expanded="false" aria-label="Primary Menu"></button> 
+       <div id="primary-menu" class="menu"> 
+        <ul> 
+         <li class="page_item"><a href="https://wordpress.org/support/forums/">Forums</a></li> 
+         <li class="page_item"><a href="https://codex.wordpress.org/Main_Page">Documentation</a></li> 
+         <li class="page_item"><a href="https://make.wordpress.org/support/handbook/">Get Involved</a></li> 
+         <li> 
+          <form role="search" method="get" class="search-form" action="https://wordpress.org/support/"> 
+           <label for="s" class="screen-reader-text">Search for:</label> 
+           <input type="search" id="s" class="search-field" placeholder="Search forums" value="" name="s"> 
+           <button class="button button-primary button-search"><i class="dashicons dashicons-search"></i><span class="screen-reader-text">Search forums</span></button> 
+          </form> </li> 
+        </ul> 
+       </div> 
+      </nav>
+      <!-- #site-navigation --> 
+     </div>
+     <!-- .site-branding --> 
+    </header>
+    <!-- #masthead --> 
+    <main id="main" class="site-main" role="main"> 
+     <div class="left-sidebar"> 
+      <div id="nav_menu-2" class="widget widget_nav_menu">
+       <h2 class="widgettitle">Categories</h2> 
+       <div class="menu-categories-helphub-container">
+        <ul id="menu-categories-helphub" class="menu">
+         <li id="menu-item-10936850" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-10936850"><a href="https://wordpress.org/support/category/getting-started/">Getting Started</a></li> 
+         <li id="menu-item-10936852" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-10936852"><a href="https://wordpress.org/support/category/installation/">Installing WordPress</a></li> 
+         <li id="menu-item-10936853" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-10936853"><a href="https://wordpress.org/support/category/basic-usage/">Basic Usage</a></li> 
+         <li id="menu-item-10936856" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-10936856"><a href="https://wordpress.org/support/category/basic-administration/">Basic Administration</a></li> 
+         <li id="menu-item-10936857" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-10936857"><a href="https://wordpress.org/support/category/customizing/">Customizing</a></li> 
+         <li id="menu-item-10936858" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-10936858"><a href="https://wordpress.org/support/category/maintenance/">Maintenance</a></li> 
+         <li id="menu-item-10936860" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-10936860"><a href="https://wordpress.org/support/category/security/">Security</a></li> 
+         <li id="menu-item-10936862" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-10936862"><a href="https://wordpress.org/support/category/advanced-topics/">Advanced Topics</a></li> 
+         <li id="menu-item-10936865" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-10936865"><a href="https://wordpress.org/support/category/troubleshooting/">Troubleshooting</a></li> 
+        </ul>
+       </div>
+      </div> 
+     </div> 
+     <div id="main-content"> 
+      <article id="post-10867570" class="post-10867570 helphub_article type-helphub_article status-publish hentry category-basic-usage helphub_persona-maintainers helphub_persona-publishers helphub_experience-beginner"> 
+       <header class="entry-header"> 
+        <h1 class="entry-title">Using Permalinks</h1> 
+       </header>
+       <!-- .entry-header --> 
+       <div class="entry-content"> 
+        <section> 
+         <div class="container"> 
+          <div class="table-of-contents">
+           <h2 class="toc-title">Topics</h2>
+           <ul class="items">
+            <li><a href="#permalink-types">Permalink Types</a></li>
+            <li><a href="#default-ugly">Default: “Ugly”</a></li>
+            <li><a href="#mod_rewrite-pretty-permalinks">mod_rewrite: “Pretty Permalinks”</a></li>
+            <li><a href="#pathinfo-almost-pretty">PATHINFO: “Almost Pretty”</a></li>
+            <li><a href="#choosing-your-permalink-structure">Choosing your permalink structure</a></li>
+            <li><a href="#structure-tags">Structure Tags</a></li>
+            <li><a href="#category-base-and-tag-base">Category base and Tag base</a></li>
+            <li><a href="#using-%category-with-multiple-categories-on-a-post">Using %category% with multiple categories on a post</a></li>
+            <li><a href="#using-pretty-permalinks">Using “Pretty” permalinks</a></li>
+            <li><a href="#wheres-my-htaccess-file">Where’s my .htaccess file?</a></li>
+            <li><a href="#creating-and-editing-htaccess">Creating and editing .htaccess</a></li>
+            <li><a href="#automatically-updating-htaccess">Automatically updating .htaccess</a></li>
+            <li><a href="#fixing-permalink-problems">Fixing Permalink Problems</a></li>
+            <li><a href="#fixing-htaccess-generation-issues">Fixing .htaccess Generation Issues</a></li>
+            <li><a href="#tips-and-tricks">Tips and Tricks</a></li>
+            <li><a href="#avoiding-interpretation-as-an-archive-link">Avoiding interpretation as an archive link</a></li>
+            <li><a href="#check-for-permalink-structure">Check for permalink structure</a></li>
+            <li><a href="#see-also">See Also</a></li>
+           </ul>
+          </div> 
+          <p>Permalinks are the permanent URLs to your individual weblog posts, as well as categories and other lists of weblog postings. A permalink is what another weblogger will use to link to your article (or section), or how you might send a link to your story in an e-mail message. The URL to each post should be permanent, and never change — hence <em>perma</em>link.</p> 
+          <h2 class="toc-heading" id="permalink-types" tabindex="-1">Permalink Types <a href="#permalink-types" class="anchor"><span aria-hidden="true">#</span> <span class="screen-reader-text">Permalink Types</span></a></h2> 
+          <p>There are three basic types of WordPress permalinks:</p> 
+          <h3 class="toc-heading" id="default-ugly" tabindex="-1">Default: “Ugly” <a href="#default-ugly" class="anchor"><span aria-hidden="true">#</span> <span class="screen-reader-text">Default: “Ugly”</span></a></h3> 
+          <p>The default looks like</p> 
+          <pre class="wp-block-preformatted">http://example.com/?p=N</pre> 
+          <p>where N is the Post ID number. It works on all server environments, but it doesn’t look as nice as some of the other options.</p> 
+          <p class="toc-jump"><a href="#top">Top ↑</a></p>
+          <h3 class="toc-heading" id="mod_rewrite-pretty-permalinks" tabindex="-1">mod_rewrite: “Pretty Permalinks” <a href="#mod_rewrite-pretty-permalinks" class="anchor"><span aria-hidden="true">#</span> <span class="screen-reader-text">mod_rewrite: “Pretty Permalinks”</span></a></h3> 
+          <p>Using mod_rewrite or lighttpd you can produce much nicer permalinks (see <a href="/support/article/introduction-to-blogging/#pretty permalinks">Pretty Permalinks</a>). There are many different formats, but the most common, and most versatile looks like</p> 
+          <pre class="wp-block-preformatted">http://example.com/2012/post-name/</pre> 
+          <p>or</p> 
+          <pre class="wp-block-preformatted">http://example.com/2012/12/30/post-name</pre> 
+          <p>Pretty permalinks are available under:</p> 
+          <ul>
+           <li>Apache web server with the mod_rewrite module</li>
+           <li>Nginx using try-files,&nbsp;e.g. according to this&nbsp;<a href="http://nginxlibrary.com/wordpress-permalinks/">tutorial</a></li>
+           <li><a href="https://www.hiawatha-webserver.org/">Hiawatha web server</a> with UrlToolkit support enabled.</li>
+           <li>Lighttpd using <a href="http://chrisjohnston.org/2009/setting-up-a-wordpress-blog-on-lighttpd">a 404 handler</a> or mod_rewrite</li>
+           <li>Caddy using rewrite, e.g. according to this&nbsp;<a href="https://denbeke.be/blog/servers/caddy-server-and-wordpress-php-fpm/">tutorial</a></li>
+          </ul> 
+          <p class="toc-jump"><a href="#top">Top ↑</a></p>
+          <h3 class="toc-heading" id="pathinfo-almost-pretty" tabindex="-1">PATHINFO: “Almost Pretty” <a href="#pathinfo-almost-pretty" class="anchor"><span aria-hidden="true">#</span> <span class="screen-reader-text">PATHINFO: “Almost Pretty”</span></a></h3> 
+          <p>PATHINFO permalinks look very much like mod_rewrite permalinks but for one exception: they have /index.php inserted before them, like so:</p> 
+          <pre class="wp-block-preformatted">http://example.com/index.php/yyyy/mm/dd/post-name/</pre> 
+          <p>Otherwise, they are the same as the “pretty” mod_rewrite permalinks, and are similarly flexible. Anything that mod_rewritepermalinks can do, PATHINFO permalinks can do, with the help of that /index.php part.</p> 
+          <p class="toc-jump"><a href="#top">Top ↑</a></p>
+          <h2 class="toc-heading" id="choosing-your-permalink-structure" tabindex="-1">Choosing your permalink structure <a href="#choosing-your-permalink-structure" class="anchor"><span aria-hidden="true">#</span> <span class="screen-reader-text">Choosing your permalink structure</span></a></h2> 
+          <p>In the Settings → Permalinks Screen, you can choose one of the more common permalink structures or enter your own in the “Custom structure” field using the <em>structure tags</em>.</p> 
+          <p><strong>Please note:</strong> You do not put your site url in the permalinks fields. You only use one of the structure tags, or a combination of tags.</p> 
+          <p>To activate PATHINFO permalinks, start your permalink structure with index.php/.</p> 
+          <p class="toc-jump"><a href="#top">Top ↑</a></p>
+          <h3 class="toc-heading" id="structure-tags" tabindex="-1">Structure Tags <a href="#structure-tags" class="anchor"><span aria-hidden="true">#</span> <span class="screen-reader-text">Structure Tags</span></a></h3> 
+          <p>You can use these tags to customize your “Pretty” or “Almost Pretty” permalinks. A few hints:</p> 
+          <ul>
+           <li>You do not put your site url in the permalinks fields. You only use one of the structure tags, or a combination of tags.</li>
+           <li>Make sure to end your structure with either %post_id% or %postname% (e.g. /%year%/%monthnum%/%day%/%postname%/) so that each permalink points to an individual post.</li>
+          </ul> 
+          <p><strong>%year%</strong><br>The year of the post, four digits, for example 2018<br></p> 
+          <p><strong>%monthnum%<br></strong>Month of the year, for example 05</p> 
+          <p><strong>%day%<br></strong>Day of the month, for example 28</p> 
+          <p><strong>%hour%<br></strong>Hour of the day, for example 15</p> 
+          <p><strong>%minute%<br></strong>Minute of the hour, for example 43</p> 
+          <p><strong>%second%<br></strong>Second of the minute, for example 33</p> 
+          <p><strong>%post_id%<br></strong>The unique ID # of the post, for example 423</p> 
+          <p><strong>%postname%<br></strong>A sanitized version of the title of the post (<em>post slug</em> field on Edit Post/Page panel). So “This Is A Great Post!” becomes this-is-a-great-post in the URI.</p> 
+          <p><strong>%category%<br></strong>A sanitized version of the category name (<em>category slug</em> field on New/Edit Category panel). Nested sub-categories appear as nested directories in the URI.</p> 
+          <p><strong>%author%<br></strong>A sanitized version of the author name.</p> 
+          <p class="toc-jump"><a href="#top">Top ↑</a></p>
+          <h3 class="toc-heading" id="category-base-and-tag-base" tabindex="-1">Category base and Tag base <a href="#category-base-and-tag-base" class="anchor"><span aria-hidden="true">#</span> <span class="screen-reader-text">Category base and Tag base</span></a></h3> 
+          <p>The <em>Category base</em> and <em>Tag base</em> are prefixes used in URLs for category and tag archives, which look like this:</p> 
+          <pre class="wp-block-preformatted"> example.net/wp/category_base/category_name
+ example.net/wp/tag_base/tag_name
+</pre> 
+          <p>The default values for these are category and tag. You can change them, but you can’t remove them from the URLs altogether.</p> 
+          <p>Custom permalinks work on most systems without any problems, but there are still some conditions where problems occur.</p> 
+          <p class="toc-jump"><a href="#top">Top ↑</a></p>
+          <h3 class="toc-heading" id="using-%category-with-multiple-categories-on-a-post" tabindex="-1">Using %category% with multiple categories on a post <a href="#using-%category-with-multiple-categories-on-a-post" class="anchor"><span aria-hidden="true">#</span> <span class="screen-reader-text">Using %category% with multiple categories on a post</span></a></h3> 
+          <p>When you assign multiple categories to a post, only one can show up in the permalink. The categories are ordered alphabetically. In each group of sub-categories the order will also be alphabetical. (see <a href="https://codex.wordpress.org/Manage_Categories_SubPanel">Manage Categories</a>). The post will still be accessible through all the categories as normal.</p> 
+          <p>Try the <a href="https://wordpress.org/plugins/wp-category-permalink/">WP Category Permalink</a> plugin if you want to choose which category shows up in the permalink.</p> 
+          <p class="toc-jump"><a href="#top">Top ↑</a></p>
+          <h2 class="toc-heading" id="using-pretty-permalinks" tabindex="-1">Using “Pretty” permalinks <a href="#using-pretty-permalinks" class="anchor"><span aria-hidden="true">#</span> <span class="screen-reader-text">Using “Pretty” permalinks</span></a></h2> 
+          <p>Requirements:</p> 
+          <ul>
+           <li>Apache web server with the mod_rewrite module installed</li>
+           <li>In WordPress’s home directory, 
+            <ul>
+             <li>The <a href="http://httpd.apache.org/docs/current/mod/core.html#options">FollowSymLinks option</a> enabled</li>
+             <li><a href="http://httpd.apache.org/docs/current/mod/core.html#allowoverride">FileInfo directives</a> allowed (e.g. <code>AllowOverride FileInfo</code> or <code>AllowOverride All</code>)</li>
+             <li>An .htaccess file (if this file is missing, WordPress will try to create it when you activate “pretty” permalinks)</li>
+             <li>If you want WordPress to update the .htaccess file automatically, WordPress will need write access to the file.</li>
+            </ul> </li>
+          </ul> 
+          <ul>
+           <li>For&nbsp;<a href="http://nginx.org/">nginx</a>, a web server aimed at high concurrency, high performance and low memory usage, add the following location block within the server block:</li>
+          </ul> 
+          <pre class="wp-block-preformatted">location / {<br>            try_files $uri $uri/ /index.php?$args;<br>}</pre> 
+          <ul>
+           <li>For <a href="https://www.hiawatha-webserver.org/">Hiawatha</a>, a web server with a strong focus on security, use the following UrlToolkit rule:</li>
+          </ul> 
+          <pre class="wp-block-preformatted">UrlToolkit {<br>    ToolkitID = wordpress<br>    RequestURI exists Return<br>    Match .*\?(.*) Rewrite /index.php?$1<br>    Match .* Rewrite /index.php<br>}</pre> 
+          <ul>
+           <li>Mac Users running WordPress locally must edit their httpd.conf file editing the AllowOverride line to read <em>AllowOverride All</em> in the<em>Directory “/Library/WebServer/Documents”</em> host instructions. For Mac OS X 10.5.x and up this file is located in/private/etc/apache2/users/[your-username].conf, otherwise it is located at /etc/httpd/httpd.conf.</li>
+          </ul> 
+          <p>When you create or update a “pretty” permalink structure, WordPress will generate rewrite rules and attempt to insert them into the proper .htaccess file. If it can’t, it will say something like You should update your .htaccess now and print out the rules for you to copy and paste into the file (put them at the end).</p> 
+          <p>You’ll probably need to do this only once, because WordPress does the rewriting internally. If you ever move your WordPress home directory (<em>Site address</em>), you’ll need to repeat this step.</p> 
+          <p>WordPress will play nice with an existing .htaccess and will not delete any existing RewriteRules or other directives. If you have other mod_rewrite rules, put yours before WordPress’s.</p> 
+          <p class="toc-jump"><a href="#top">Top ↑</a></p>
+          <h3 class="toc-heading" id="wheres-my-htaccess-file" tabindex="-1">Where’s my .htaccess file? <a href="#wheres-my-htaccess-file" class="anchor"><span aria-hidden="true">#</span> <span class="screen-reader-text">Where’s my .htaccess file?</span></a></h3> 
+          <p>WordPress’s index.php and .htaccess files should be together in the directory indicated by the <em>Site address (URL)</em> setting on your General Options page. Since the name of the file begins with a dot, the file may not be visible through an FTP client unless you change the preferences of the FTP tool to show all files, including the hidden files. Some hosts (e.g. Godaddy) may not show or allow you to edit .htaccess if you install WordPress through the Godaddy Hosting Connection installation.</p> 
+          <p class="toc-jump"><a href="#top">Top ↑</a></p>
+          <h3 class="toc-heading" id="creating-and-editing-htaccess" tabindex="-1">Creating and editing .htaccess <a href="#creating-and-editing-htaccess" class="anchor"><span aria-hidden="true">#</span> <span class="screen-reader-text">Creating and editing .htaccess</span></a></h3> 
+          <p>If you do not already have a .htaccess file, create one. If you have shell or ssh access to the server, a simple <code>touch .htaccess</code>command will create the file. If you are using FTP to transfer files, create a file on your local computer, call it 1.htaccess, upload it to the root of your WordPress folder, and then rename it to .htaccess.</p> 
+          <p>You can edit the .htaccess file by FTP, shell, or (possibly) your host’s <a href="/support/article/using-cpanel/">control panel</a>.</p> 
+          <p>The following permalink rewrite code should be included in your .htaccess file:</p> 
+          <pre class="wp-block-preformatted"># BEGIN WordPress<br>&lt;IfModule mod_rewrite.c&gt;<br>RewriteEngine On<br>RewriteBase /<br>RewriteRule ^index\.php$ - [L]<br>RewriteCond&nbsp;%{REQUEST_FILENAME}&nbsp;!-f<br>RewriteCond&nbsp;%{REQUEST_FILENAME}&nbsp;!-d<br>RewriteRule . /index.php [L]<br>&lt;/IfModule&gt;<br># END WordPress</pre> 
+          <p>If your .htaccess file contains errors that bring down your site (“Internal Server Error (500)”), you will need to use FTP or your host’s <a href="/getting-started/using-cpanel/">control panel</a> to delete the rogue .htaccess file.</p> 
+          <p class="toc-jump"><a href="#top">Top ↑</a></p>
+          <h3 class="toc-heading" id="automatically-updating-htaccess" tabindex="-1">Automatically updating .htaccess <a href="#automatically-updating-htaccess" class="anchor"><span aria-hidden="true">#</span> <span class="screen-reader-text">Automatically updating .htaccess</span></a></h3> 
+          <p>If WordPress can’t update your .htaccess file automatically, it will tell you something like If your .htaccess file were writable, we could do this automatically, but it isn’t… near the bottom of the Settings → Permalinks Screen.</p> 
+          <p>If you want to let WordPress do this, you’ll need to <a href="https://codex.wordpress.org/Changing_File_Permissions">give WordPress write access to the .htaccess file</a>. The exact permissions necessary depend on your server setup. Try adding write permissions for the owner, then group, then world, testing after each change; once WordPress has edited the file successfully, don’t add any further write permissions.</p> 
+          <p>After applying the permalinks, you should change the permissions to something stronger like 660 or 644 to prevent others on the server from potentially having access to it.</p> 
+          <p class="toc-jump"><a href="#top">Top ↑</a></p>
+          <h2 class="toc-heading" id="fixing-permalink-problems" tabindex="-1">Fixing Permalink Problems <a href="#fixing-permalink-problems" class="anchor"><span aria-hidden="true">#</span> <span class="screen-reader-text">Fixing Permalink Problems</span></a></h2> 
+          <p class="toc-jump"><a href="#top">Top ↑</a></p>
+          <h3 class="toc-heading" id="fixing-htaccess-generation-issues" tabindex="-1">Fixing .htaccess Generation Issues <a href="#fixing-htaccess-generation-issues" class="anchor"><span aria-hidden="true">#</span> <span class="screen-reader-text">Fixing .htaccess Generation Issues</span></a></h3> 
+          <p>If your installation of WordPress does not generate a .htaccess file or if it does not write the new rules onto your existing .htaccess file then there are a couple reasons that could be causing this. Work step by step and continue to the next step only if the previous step does not work.</p> 
+          <ol>
+           <li><strong>Change File Permissions:</strong> You must <a href="https://codex.wordpress.org/Changing_File_Permissions">chmod</a> the .htaccess file to 666 to edit it with the WordPress <a href="https://codex.wordpress.org/Editing_Files#Using_the_Built-in_Editor">template editor</a>, but this is not recommended, since if you do that, any user of your blog, who can edit templates will be able to edit it. You can change the permissions to 660 to make it server-writable, which again will have the same limitation.</li>
+           <li><strong>Server Blockage:</strong> Your host might have blocked the SERVER_SOFTWARE variable and this will cause WordPress’ .htaccess generation to fail. If you are sure that your server is running Apache, you can force WordPress to believe that your server is running Apache by changing your wp-includes/vars.php file. Follow the steps below to implement these changes.
+            <ul>
+             <li>Open the wp-includes/vars.php file using the built in file editor in your WordPress Admin panel. To navigate to this panel, login to WordPress, click on “Manage”, then on “Files”, scroll to the bottom and type in wp-includes/vars.php into the text box under the “Other Files” title. Look for <br>$is_apache = strstr($_SERVER[‘SERVER_SOFTWARE’], ‘Apache’)&nbsp;? 1&nbsp;: 0;<br>and replace it with<br>// $is_apache = strstr($_SERVER[‘SERVER_SOFTWARE’], ‘Apache’)&nbsp;? 1&nbsp;: 0;</li>
+             <li>Add a new line under<br>// $is_apache = strstr($_SERVER[‘SERVER_SOFTWARE’], ‘Apache’)&nbsp;? 1&nbsp;: 0;<br>and type in<br>$is_apache = 1;</li>
+            </ul></li>
+           <li><strong>Users of XAMPP (Windows):</strong> Some versions of <a href="http://www.apachefriends.org/en/xampp.html">XAMPP</a> do not enable mod_rewrite by default (though it <em>is</em> compiled in Apache). To enable it — and thus enable WordPress to write the .htaccess file needed to create pretty permalinks — you must open apache/conf/httpd.conf and uncomment the line LoadModule rewrite_module modules/mod_rewrite.so(i.e., delete the hash/pound sign at the front of the line).</li>
+           <li><strong>Users of WAMP (Windows):</strong> Some versions of WAMP (all versions?) do not enable mod_rewrite or permit following SymLinks by default. To enable the required functionality navigate to the apache/conf/httpd.conf file, open with a text editor and uncomment the line LoadModule rewrite_module modules/mod_rewrite.so (i.e., delete the hash/pound sign at the front of the line). Then further down in the same file there is a section that starts with the line “Options FollowSymlinks”. Change the second line in that section from “AllowOverride none” to AllowOverride all. Save edited httpd.conf and restart all WAMP modules. Your permalinks should now work.</li>
+          </ol> 
+          <p class="toc-jump"><a href="#top">Top ↑</a></p>
+          <h2 class="toc-heading" id="tips-and-tricks" tabindex="-1">Tips and Tricks <a href="#tips-and-tricks" class="anchor"><span aria-hidden="true">#</span> <span class="screen-reader-text">Tips and Tricks</span></a></h2> 
+          <p class="toc-jump"><a href="#top">Top ↑</a></p>
+          <h3 class="toc-heading" id="avoiding-interpretation-as-an-archive-link" tabindex="-1">Avoiding interpretation as an archive link <a href="#avoiding-interpretation-as-an-archive-link" class="anchor"><span aria-hidden="true">#</span> <span class="screen-reader-text">Avoiding interpretation as an archive link</span></a></h3> 
+          <p>Note that even though one might never make more than one posting a day, and thus wishes to use e.g.,&nbsp;%year%%monthnum%%day%, links so generated will however be interpreted as the archive of all posts for that day. One needs at least&nbsp;%year%%monthnum%%day%%hour% to target an individual post.</p> 
+          <p class="toc-jump"><a href="#top">Top ↑</a></p>
+          <h3 class="toc-heading" id="check-for-permalink-structure" tabindex="-1">Check for permalink structure <a href="#check-for-permalink-structure" class="anchor"><span aria-hidden="true">#</span> <span class="screen-reader-text">Check for permalink structure</span></a></h3> 
+          <p>A way to check if the blog has a permalink structure is:</p> 
+          <pre class="wp-block-preformatted">&lt;?php if ( get_option('permalink_structure') ) { echo 'permalinks enabled'; }&nbsp;?&gt;</pre> 
+          <p class="toc-jump"><a href="#top">Top ↑</a></p>
+          <h2 class="toc-heading" id="see-also" tabindex="-1">See Also <a href="#see-also" class="anchor"><span aria-hidden="true">#</span> <span class="screen-reader-text">See Also</span></a></h2> 
+          <ul>
+           <li><a href="https://codex.wordpress.org/User:Lazyking/Using_Permalinks_(Saetta_Web_Server)">User:Lazyking/Using Permalinks (Saetta Web Server)</a></li>
+           <li><a href="https://codex.wordpress.org/Linking_Posts_Pages_and_Categories">Linking Posts Pages and Categories</a> for how to link from one article to another</li>
+          </ul> 
+          <p></p> 
+         </div> 
+        </section> 
+       </div>
+       <!-- .entry-content --> 
+       <footer class="entry-footer"> 
+       </footer>
+       <!-- .entry-footer --> 
+      </article>
+      <!-- #post-## --> 
+     </div> 
+    </main>
+    <!-- #main --> 
+   </div>
+   <!-- #content --> 
+  </div>
+  <!-- #page --> 
+  <div id="wporg-footer"> 
+   <div class="wrapper"> 
+    <ul> 
+     <li><a href="//wordpress.org/about/" title="An introduction to the WordPress project">About</a></li> 
+     <li><a href="//wordpress.org/news/" title="News and Updates">Blog</a></li> 
+     <li><a href="//wordpress.org/hosting/" title="Recommended web hosting providers">Hosting</a></li> 
+     <li><a href="https://wordpressfoundation.org/donate/" title="Donate to the WordPress Foundation">Donate</a></li> 
+    </ul> 
+    <ul> 
+     <li><a href="//wordpress.org/support/" title="Forums, documentation, and other resources">Support</a></li> 
+     <li><a href="//developer.wordpress.org" title="Resources for WordPress developers">Developers</a></li> 
+     <li><a href="//make.wordpress.org/" title="Give back to WordPress through code, support, translation and more">Get Involved</a></li> 
+    </ul> 
+    <ul> 
+     <li><a href="//wordpress.org/showcase/" title="Some of the best WordPress sites on the Web">Showcase</a></li> 
+     <li><a href="//wordpress.org/plugins/" title="Add extra functionality to WordPress">Plugins</a></li> 
+     <li><a href="//wordpress.org/themes/" title="Make your WordPress pretty">Themes</a></li> 
+    </ul> 
+    <ul> 
+     <li><a href="//central.wordcamp.org/" title="Find a WordPress event near you">WordCamp</a></li> 
+     <li><a href="//wordpress.tv/" title="Videos, tutorials, and WordCamp sessions">WordPress.TV</a></li> 
+     <li><a href="//buddypress.org/" title="A set of plugins to transform your WordPress into a social network">BuddyPress</a></li> 
+     <li><a href="//bbpress.org/" title="Fast, slick forums built on WordPress">bbPress</a></li> 
+    </ul> 
+    <ul> 
+     <li><a href="//wordpress.com/?ref=wporg-footer" title="Hassle-free WordPress hosting">WordPress.com</a></li> 
+     <li><a href="//ma.tt/" title="Co-founder of WordPress, an example of what WordPress can do">Matt</a></li> 
+     <li><a href="//wordpress.org/about/privacy/" title="WordPress.org Privacy Policy">Privacy</a></li> 
+     <li><a href="https://publiccode.eu/" target="_blank">Public Code</a></li> 
+    </ul> 
+    <ul> 
+     <li><span class="dashicons dashicons-twitter"></span><a href="https://twitter.com/WordPress" title="Follow @WordPress on Twitter">@WordPress</a></li> 
+     <li><span class="dashicons dashicons-facebook"></span><a href="https://www.facebook.com/WordPress/" title="Like WordPress on Facebook">WordPress</a></li> 
+    </ul> 
+   </div> 
+   <p class="cip cip-image">Code is Poetry.</p> 
+  </div> 
+  <script src="https://s.w.org/style/js/navigation.min.js?20190128"></script> 
+  <script type="text/javascript" src="https://gravatar.com/js/gprofiles.js"></script> 
+  <script type="text/javascript" src="https://wordpress.org/support/wp-includes/js/admin-bar.min.js?ver=5.4-alpha-46799"></script> 
+  <script type="text/javascript" src="https://wordpress.org/support/wp-content/plugins/jetpack/_inc/build/photon/photon.min.js?ver=20191001"></script> 
+  <script type="text/javascript" src="https://s0.wp.com/wp-content/js/devicepx-jetpack.js?ver=201949"></script> 
+  <script type="text/javascript" src="https://wordpress.org/support/wp-content/themes/pub/wporg-support/js/navigation.js?ver=20181209"></script> 
+  <script type="text/javascript" src="https://wordpress.org/support/wp-content/themes/pub/wporg-support/js/forums.js?ver=20180801"></script> 
+  <script type="text/javascript" src="https://wordpress.org/support/wp-includes/js/wp-embed.min.js?ver=5.4-alpha-46799"></script> 
+  <div id="wpadminbar" class="nojq nojs"> 
+   <a class="screen-reader-shortcut" href="#wp-toolbar" tabindex="1">Skip to toolbar</a> 
+   <div class="quicklinks" id="wp-toolbar" role="navigation" aria-label="Toolbar"> 
+    <ul id="wp-admin-bar-root-default" class="ab-top-menu">
+     <li id="wp-admin-bar-wp-logo" class="menupop"><a class="ab-item" aria-haspopup="true" href="https://wordpress.org/about/"><span class="ab-icon"></span><span class="screen-reader-text">About WordPress</span></a>
+      <div class="ab-sub-wrapper">
+       <ul id="wp-admin-bar-wp-logo-default" class="ab-submenu">
+        <li id="wp-admin-bar-about"><a class="ab-item" href="https://wordpress.org/about/">About WordPress</a></li>
+       </ul>
+       <ul id="wp-admin-bar-wp-logo-external" class="ab-sub-secondary ab-submenu">
+        <li id="wp-admin-bar-wporg"><a class="ab-item" href="https://wordpress.org/">WordPress.org</a></li>
+        <li id="wp-admin-bar-documentation"><a class="ab-item" href="https://codex.wordpress.org/">Documentation</a></li>
+        <li id="wp-admin-bar-support-forums"><a class="ab-item" href="https://wordpress.org/support/">Support</a></li>
+        <li id="wp-admin-bar-feedback"><a class="ab-item" href="https://wordpress.org/support/forum/requests-and-feedback">Feedback</a></li>
+       </ul>
+      </div></li>
+    </ul>
+    <ul id="wp-admin-bar-top-secondary" class="ab-top-secondary ab-top-menu">
+     <li id="wp-admin-bar-search" class="admin-bar-search">
+      <div class="ab-item ab-empty-item" tabindex="-1">
+       <form action="https://wordpress.org/support/" method="get" id="adminbarsearch">
+        <input class="adminbar-input" name="s" id="adminbar-search" type="text" value="" maxlength="150">
+        <label for="adminbar-search" class="screen-reader-text">Search</label>
+        <input type="submit" class="adminbar-button" value="Search">
+       </form>
+      </div></li>
+     <li id="wp-admin-bar-log-in"><a class="ab-item" href="https://login.wordpress.org/?locale=en_US">Log In</a></li>
+     <li id="wp-admin-bar-register"><a class="ab-item" href="https://login.wordpress.org/register?locale=en_US">Register</a></li>
+    </ul> 
+   </div> 
+  </div>   
+ </body>
+</html>

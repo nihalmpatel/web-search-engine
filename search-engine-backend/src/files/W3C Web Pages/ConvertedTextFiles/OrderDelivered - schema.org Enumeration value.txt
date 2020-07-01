@@ -1,0 +1,1 @@
+OrderDelivered - schema.org Enumeration value schema.org Documentation Schemas Home OrderDelivered Thing > Intangible > Enumeration > OrderStatus :: OrderDelivered OrderStatus representing successful delivery of an order. [more...] Canonical URL: http://schema.org/OrderDelivered Leave public feedback on this term 💬 Check for open issues.

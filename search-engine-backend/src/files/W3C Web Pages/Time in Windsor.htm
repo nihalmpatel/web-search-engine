@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <title>Time in Windsor</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <script type="text/javascript">
+et=1575486310;function f0(d){return ((d.getUTCHours()+11)%12+1)+':'+p2(d.getUTCMinutes())+':'+p2(d.getUTCSeconds())+' '+_ap(d);}
+cks={t1:{t:[{"a":"EST"}],f:f0,d:1593264600,cr:900,tpt:"Time since Event started in"}};
+function _ap(d){var t=Math.floor(d.getTime()/1E3+8640000000)%86400;if(t===0){return 'midnight';}if(t==43200){return 'noon';}if(t<43200){return 'am';}return 'pm';}
+//Copyright timeanddate.com 2016, do not use without permission
+var ltn=0,lt0,ltj=0,tj=0,tf=1E3;flO=null;function dt(){return(new Date).getTime()}function gf(a){var c=document;return c.getElementById?c.getElementById(a):c.all?c.all[a]:null}function ih(a,c){a&&(a.innerHTML=c)}function ihf(a,c){ih(a,Math.floor(c))}function rf(a,c){setTimeout("location.reload()",Math.floor(1E3*(a+Math.random()*c)))}function pf(a,c){for(;(a="0000"+a)&&a.length<c;);return a.substring(a.length-c)}function p2(a){return 10>a?"0"+a:a}
+function ac(a,c){a&&(a.className+=" p","string"===typeof c&&(a.innerHTML=c))}
+function upd(){var a,c=dt()+sa;if(ltn>c)rf(7,0);else{ltn=c;var c=c/1E3,h=Math.floor(c);if(h>et)rf(10,0);else{if(h!=lt0||1E3>tf){var k=function(a,c){var b="00"+Math.floor(c);e.innerHTML=b.slice(b.length-a)};lt0=h;for(a in cks){for(var f=cks[a],b=f.t,d=0;d<b.length;d++){var g=b[d];tj=g.j?g.j:0;if(g.t>h)break}var b=f.e,e,d=f.d-c+tj;0>d?(d=f.cs?0:-d,f.cu||(f.cu=1,ac(b.r1,f.tpt),ac(b.r2,f.mpt),ac(gf("t")))):f.cr&&(d+=.001*f.cr);(e=b.ci)&&k(3,1E3*d%1E3);(e=b.cs)&&k(2,d%60);(e=b.cm)&&k(2,d/60%60);(e=b.ch)&&
+k(2,d/3600%24);(e=b.cd)&&ihf(e,d/86400);(e=b.ai)&&ihf(e,1E3*d);(e=b.as)&&ihf(e,d);(e=b.am)&&ihf(e,d/60);(e=b.ah)&&ihf(e,d/3600);(e=b.ad)&&ihf(e,d/86400)}}c=dt()+sa;a=tf-c%tf;25>a&&(a=25);setTimeout(upd,a)}}}
+function sync(a){function c(a,b,d){sa=a;sae=b;if(flO)try{flO.setSync(a+1E3*tj,b)}catch(p){2E3>d&&(d+=100,setTimeout(function(){c(sa,sae,d)},d))}}function h(a){try{if(e.ActiveXObject)return new ActiveXObject(a)}catch(n){}}var k=document.cookie,f;if(k){var b=k.match(/tads\=(\d+)_(\d+)_(\d+)/);if(b){var d=dt();if(-1E4<b[1]-d){c(b[2]-0,b[3]-0,0);upd();return}}if(1E3>a&&0<=k.indexOf("tads=c")){a=2*a+10;setTimeout("sync("+a+")",a);return}}document.cookie="tads=c; path=/";var g=null,e=window;try{e.XMLHttpRequest&&
+(g=new XMLHttpRequest)}catch(m){}g||(g=h("Msxml2.XMLHTTP"));g||(g=h("Microsoft.XMLHTTP"));if(g)try{f=dt();var l=document.URL.replace(/countdown.*/,"ts.php?t="+f);g.open("GET",l,!0);g.onreadystatechange=function(){var a=dt();if(g&&4==g.readyState&&200==g.status){var b=(f+a)/2,d=1E3*parseFloat(g.responseText),d=Math.floor(d-b),b=a-b;document.cookie="tads="+(a+"_"+d+"_"+b)+"; path=/";c(d,b,0);g=null;upd()}};f=dt();g.send("")}catch(m){}}
+function init(){lt0=0;var a;flO=document.count;if("undefined"!==typeof cks)for(a in cks){var c=cks[a],h={},k="r1,r2,cd,ch,cm,cs,ci,ad,ah,am,as,ai".split(/,/),f;for(f=0;12>f;f++){var b=k[f],d=gf(b);d&&(h[b]=d)}c.e=h}sync(0)}function gtad(){window.open("https://www.timeanddate.com/clocks/freecountdown.html","_top")};
+function gtad2(){window.open("https:\/\/www.timeanddate.com\/countdown\/generic?iso=20200627T0930&p0=1206&msg=Days%20To%20Woofa%7eRoo%202020","_top")};
+</script>
+  <style>#c1 {display:block;margin:0px auto;padding:0;border:none;}
+body {border:none;margin:0;padding:0;overflow:hidden;background-color:transparent;}
+#t td,#r1,#r2{font-weight:bold;white-space:nowrap;cursor:pointer;font-family:Arial,Helvetica,serif;font-size:20.8px;}#r1{color:#000;}#r1.p{color:#000;}#t td {color:#000;}#t.p td {color:#000;}#t .ct td{text-align:center;}#t .cr td{text-align:center;}#t .cl td{text-align:center;font-size:10.4px;}svg .c2{fill:##000}#bg {position:absolute;top:0;left:0;width:320px;height:135px;z-index:-1;}#bg {background: transparent;}#bg .sc{fill:#000;}.fc {fill:#000;}.sc {stop-color:#000;}.stc {stroke:#000;}#c1 {display:block;margin:0px auto;position:relative;}tr.cl {vertical-align:top;}#c1 > div {height:100%;}#r1, #r2 {overflow:hidden;display:-ms-flex;display:flex;justify-content:center;align-items:center;}#t .cr td {text-align:center;padding:0 3px;}#r1 {position:absolute;top:15%;width:320px}#r2 {position:absolute;top:35%;width:320px}#t {position:absolute;top:52%;width:320px}</style>
+ </head>
+ <body onload="init()" allowtransparency="true" style="background:transparent">
+  <table border="0" cellpadding="0" cellspacing="0" id="c2">
+   <tbody>
+    <tr>
+     <td id="c1">
+      <div style="width:320px;height:135px;text-align:center;" title="Countdown timer provided by timeanddate.com" onclick="gtad()">
+       <div id="r1">
+        Days To Woofa~Roo 2020
+       </div>
+       <div id="t">
+        <table border="0" cellpadding="0" cellspacing="0" style="margin:0 auto;">
+         <tbody>
+          <tr class="cr">
+           <td id="cd">207</td>
+           <td>:</td>
+           <td id="ch">18</td>
+           <td>:</td>
+           <td id="cm">08</td>
+           <td>:</td>
+           <td id="cs">10</td>
+          </tr>
+          <tr class="cl">
+           <td id="ld">Days</td>
+           <td></td>
+           <td id="lh">Hrs</td>
+           <td></td>
+           <td id="lm">Mins</td>
+           <td></td>
+           <td id="ls">Secs</td>
+          </tr>
+         </tbody>
+        </table>
+       </div>
+      </div>
+      <svg id="bg" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" preserveaspectratio="none" viewbox="0 0 320 135">
+       <defs>
+        <lineargradient id="a" x1="254.93" x2="255.07" y1="250" y2="110" gradientunits="userSpaceOnUse">
+         <stop offset="0%" stop-color="#66C" stop-opacity="0" class="sc"></stop>
+         <stop offset="34.9%" stop-color="#FFF" stop-opacity="0"></stop>
+         <stop offset="65.1%" stop-color="#FFF" stop-opacity=".5"></stop>
+         <stop offset="100%" stop-color="#FFF" stop-opacity=".5"></stop>
+        </lineargradient>
+        <filter id="b" width="140%" height="140%" x="-20%" y="-20%" color-interpolation-filters="sRGB">
+         <feflood flood-color="#000" flood-opacity="1" result="result1"></feflood>
+         <fecomposite in2="SourceGraphic" in="result1" operator="in" result="result2"></fecomposite>
+         <fegaussianblur in="result2" stddeviation="2.3333333333333335,2.3333333333333335" result="result3"></fegaussianblur>
+         <feoffset in="result3" result="result4"></feoffset>
+         <fecomposite in2="result4" in="SourceGraphic" result="result5"></fecomposite>
+         <feflood flood-color="#66C" flood-opacity="1" result="result6"></feflood>
+         <fegaussianblur in="result5" stddeviation="0,0" result="result7"></fegaussianblur>
+         <fecomposite in2="result7" in="result6" operator="in" result="result8"></fecomposite>
+         <fecomposite in2="result8" in="result5" result="result9"></fecomposite>
+        </filter>
+        <path id="c" class="sc" fill="#66C" d="M420 112q0-2-2-2H92q-2 0-2 2v136q0 2 2 2h326q2 0 2-2V112z"></path>
+        <path id="e" fill="url(#a)" d="M420 112q0-2-2-2H92q-2 0-2 2v136q0 2 2 2h326q2 0 2-2V112z"></path>
+        <path id="d" fill="none" class="stc" stroke="#66C" d="M418 110H92q-2 0-2 2v136q0 2 2 2h326q2 0 2-2V112q0-2-2-2z" stroke-linejoin="round" stroke-linecap="round"></path>
+       </defs>
+       <g transform="matrix(.9394 0 0 .85714 -80.007 -88.243)" filter="url(#b)">
+        <use xlink:href="#c"></use>
+        <use xlink:href="#d"></use>
+       </g>
+       <use xlink:href="#e" transform="matrix(.9394 0 0 .85715 -80.045 -88.286)"></use>
+      </svg>
+      <svg onclick="gtad2()" title="See this countdown on timeanddate.com" id="Layer_1" style="enable-background:new 0 0 512 512;" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewbox="0 0 512 512" xml:space="preserve">
+       <path d="M438.6,393.4L365.2,320L320,365.2l73.4,73.4L320,512h192V320L438.6,393.4z M192,0H0v192l73.4-73.4l72.7,72.6l45.2-45.2 l-72.7-72.6L192,0z M192,365.2L146.8,320l-73.4,73.4L0,320v192h192l-73.4-73.4L192,365.2z M512,0H320l73.4,73.4L320.7,146l45.2,45.2 l72.7-72.6L512,192L512,0z"></path>
+      </svg></td>
+    </tr>
+   </tbody>
+  </table> 
+ </body>
+</html>

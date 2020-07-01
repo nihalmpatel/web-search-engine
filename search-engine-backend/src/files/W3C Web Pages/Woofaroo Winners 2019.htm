@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie11 lt-ie10 lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie11 lt-ie10 lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie11 lt-ie10 lt-ie9"> <![endif]-->
+<!--[if IE 9]>         <html class="no-js lt-ie11 lt-ie10"> <![endif]-->
+<!--[if IE 10]>        <html class="no-js lt-ie11"> <![endif]-->
+<!--[if IE 11]>        <html class="no-js ie11"> <![endif]-->
+<html>
+ <head> 
+  <meta charset="utf-8"> 
+  <meta http-equiv="cleartype" content="on"> 
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <script type="text/javascript">(window.NREUM||(NREUM={})).loader_config={xpid:"XAIDWFFWGwICVFFbDwkB",licenseKey:"dfd35c7377",applicationID:"12009886"};window.NREUM||(NREUM={}),__nr_require=function(t,n,e){function r(e){if(!n[e]){var o=n[e]={exports:{}};t[e][0].call(o.exports,function(n){var o=t[e][1][n];return r(o||n)},o,o.exports)}return n[e].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<e.length;o++)r(e[o]);return r}({1:[function(t,n,e){function r(t){try{s.console&&console.log(t)}catch(n){}}var o,i=t("ee"),a=t(20),s={};try{o=localStorage.getItem("__nr_flags").split(","),console&&"function"==typeof console.log&&(s.console=!0,o.indexOf("dev")!==-1&&(s.dev=!0),o.indexOf("nr_dev")!==-1&&(s.nrDev=!0))}catch(c){}s.nrDev&&i.on("internal-error",function(t){r(t.stack)}),s.dev&&i.on("fn-err",function(t,n,e){r(e.stack)}),s.dev&&(r("NR AGENT IN DEVELOPMENT MODE"),r("flags: "+a(s,function(t,n){return t}).join(", ")))},{}],2:[function(t,n,e){function r(t,n,e,r,s){try{p?p-=1:o(s||new UncaughtException(t,n,e),!0)}catch(f){try{i("ierr",[f,c.now(),!0])}catch(d){}}return"function"==typeof u&&u.apply(this,a(arguments))}function UncaughtException(t,n,e){this.message=t||"Uncaught error with no additional information",this.sourceURL=n,this.line=e}function o(t,n){var e=n?null:c.now();i("err",[t,e])}var i=t("handle"),a=t(21),s=t("ee"),c=t("loader"),f=t("gos"),u=window.onerror,d=!1,l="nr@seenError",p=0;c.features.err=!0,t(1),window.onerror=r;try{throw new Error}catch(h){"stack"in h&&(t(9),t(8),"addEventListener"in window&&t(5),c.xhrWrappable&&t(10),d=!0)}s.on("fn-start",function(t,n,e){d&&(p+=1)}),s.on("fn-err",function(t,n,e){d&&!e[l]&&(f(e,l,function(){return!0}),this.thrown=!0,o(e))}),s.on("fn-end",function(){d&&!this.thrown&&p>0&&(p-=1)}),s.on("internal-error",function(t){i("ierr",[t,c.now(),!0])})},{}],3:[function(t,n,e){t("loader").features.ins=!0},{}],4:[function(t,n,e){function r(t){}if(window.performance&&window.performance.timing&&window.performance.getEntriesByType){var o=t("ee"),i=t("handle"),a=t(9),s=t(8),c="learResourceTimings",f="addEventListener",u="resourcetimingbufferfull",d="bstResource",l="resource",p="-start",h="-end",m="fn"+p,w="fn"+h,v="bstTimer",g="pushState",y=t("loader");y.features.stn=!0,t(7),"addEventListener"in window&&t(5);var x=NREUM.o.EV;o.on(m,function(t,n){var e=t[0];e instanceof x&&(this.bstStart=y.now())}),o.on(w,function(t,n){var e=t[0];e instanceof x&&i("bst",[e,n,this.bstStart,y.now()])}),a.on(m,function(t,n,e){this.bstStart=y.now(),this.bstType=e}),a.on(w,function(t,n){i(v,[n,this.bstStart,y.now(),this.bstType])}),s.on(m,function(){this.bstStart=y.now()}),s.on(w,function(t,n){i(v,[n,this.bstStart,y.now(),"requestAnimationFrame"])}),o.on(g+p,function(t){this.time=y.now(),this.startPath=location.pathname+location.hash}),o.on(g+h,function(t){i("bstHist",[location.pathname+location.hash,this.startPath,this.time])}),f in window.performance&&(window.performance["c"+c]?window.performance[f](u,function(t){i(d,[window.performance.getEntriesByType(l)]),window.performance["c"+c]()},!1):window.performance[f]("webkit"+u,function(t){i(d,[window.performance.getEntriesByType(l)]),window.performance["webkitC"+c]()},!1)),document[f]("scroll",r,{passive:!0}),document[f]("keypress",r,!1),document[f]("click",r,!1)}},{}],5:[function(t,n,e){function r(t){for(var n=t;n&&!n.hasOwnProperty(u);)n=Object.getPrototypeOf(n);n&&o(n)}function o(t){s.inPlace(t,[u,d],"-",i)}function i(t,n){return t[1]}var a=t("ee").get("events"),s=t("wrap-function")(a,!0),c=t("gos"),f=XMLHttpRequest,u="addEventListener",d="removeEventListener";n.exports=a,"getPrototypeOf"in Object?(r(document),r(window),r(f.prototype)):f.prototype.hasOwnProperty(u)&&(o(window),o(f.prototype)),a.on(u+"-start",function(t,n){var e=t[1],r=c(e,"nr@wrapped",function(){function t(){if("function"==typeof e.handleEvent)return e.handleEvent.apply(e,arguments)}var n={object:t,"function":e}[typeof e];return n?s(n,"fn-",null,n.name||"anonymous"):e});this.wrapped=t[1]=r}),a.on(d+"-start",function(t){t[1]=this.wrapped||t[1]})},{}],6:[function(t,n,e){function r(t,n,e){var r=t[n];"function"==typeof r&&(t[n]=function(){var t=i(arguments),n={};o.emit(e+"before-start",[t],n);var a;n[m]&&n[m].dt&&(a=n[m].dt);var s=r.apply(this,t);return o.emit(e+"start",[t,a],s),s.then(function(t){return o.emit(e+"end",[null,t],s),t},function(t){throw o.emit(e+"end",[t],s),t})})}var o=t("ee").get("fetch"),i=t(21),a=t(20);n.exports=o;var s=window,c="fetch-",f=c+"body-",u=["arrayBuffer","blob","json","text","formData"],d=s.Request,l=s.Response,p=s.fetch,h="prototype",m="nr@context";d&&l&&p&&(a(u,function(t,n){r(d[h],n,f),r(l[h],n,f)}),r(s,"fetch",c),o.on(c+"end",function(t,n){var e=this;if(n){var r=n.headers.get("content-length");null!==r&&(e.rxSize=r),o.emit(c+"done",[null,n],e)}else o.emit(c+"done",[t],e)}))},{}],7:[function(t,n,e){var r=t("ee").get("history"),o=t("wrap-function")(r);n.exports=r;var i=window.history&&window.history.constructor&&window.history.constructor.prototype,a=window.history;i&&i.pushState&&i.replaceState&&(a=i),o.inPlace(a,["pushState","replaceState"],"-")},{}],8:[function(t,n,e){var r=t("ee").get("raf"),o=t("wrap-function")(r),i="equestAnimationFrame";n.exports=r,o.inPlace(window,["r"+i,"mozR"+i,"webkitR"+i,"msR"+i],"raf-"),r.on("raf-start",function(t){t[0]=o(t[0],"fn-")})},{}],9:[function(t,n,e){function r(t,n,e){t[0]=a(t[0],"fn-",null,e)}function o(t,n,e){this.method=e,this.timerDuration=isNaN(t[1])?0:+t[1],t[0]=a(t[0],"fn-",this,e)}var i=t("ee").get("timer"),a=t("wrap-function")(i),s="setTimeout",c="setInterval",f="clearTimeout",u="-start",d="-";n.exports=i,a.inPlace(window,[s,"setImmediate"],s+d),a.inPlace(window,[c],c+d),a.inPlace(window,[f,"clearImmediate"],f+d),i.on(c+u,r),i.on(s+u,o)},{}],10:[function(t,n,e){function r(t,n){d.inPlace(n,["onreadystatechange"],"fn-",s)}function o(){var t=this,n=u.context(t);t.readyState>3&&!n.resolved&&(n.resolved=!0,u.emit("xhr-resolved",[],t)),d.inPlace(t,g,"fn-",s)}function i(t){y.push(t),h&&(b?b.then(a):w?w(a):(E=-E,R.data=E))}function a(){for(var t=0;t<y.length;t++)r([],y[t]);y.length&&(y=[])}function s(t,n){return n}function c(t,n){for(var e in t)n[e]=t[e];return n}t(5);var f=t("ee"),u=f.get("xhr"),d=t("wrap-function")(u),l=NREUM.o,p=l.XHR,h=l.MO,m=l.PR,w=l.SI,v="readystatechange",g=["onload","onerror","onabort","onloadstart","onloadend","onprogress","ontimeout"],y=[];n.exports=u;var x=window.XMLHttpRequest=function(t){var n=new p(t);try{u.emit("new-xhr",[n],n),n.addEventListener(v,o,!1)}catch(e){try{u.emit("internal-error",[e])}catch(r){}}return n};if(c(p,x),x.prototype=p.prototype,d.inPlace(x.prototype,["open","send"],"-xhr-",s),u.on("send-xhr-start",function(t,n){r(t,n),i(n)}),u.on("open-xhr-start",r),h){var b=m&&m.resolve();if(!w&&!m){var E=1,R=document.createTextNode(E);new h(a).observe(R,{characterData:!0})}}else f.on("fn-end",function(t){t[0]&&t[0].type===v||a()})},{}],11:[function(t,n,e){function r(){var t=window.NREUM;if(!t.loader_config)return null;var n=(t.loader_config.accountID||"").toString()||null,e=(t.loader_config.agentID||"").toString()||null,r=(t.loader_config.trustKey||"").toString()||null;if(!n||!e)return null;var a=i.generateCatId(),s=i.generateCatId(),c=Date.now(),f=o(a,s,c,n,e,r);return{header:f,guid:a,traceId:s,timestamp:c}}function o(t,n,e,r,o,i){var a="btoa"in window&&"function"==typeof window.btoa;if(!a)return null;var s={v:[0,1],d:{ty:"Browser",ac:r,ap:o,id:t,tr:n,ti:e}};return i&&r!==i&&(s.d.tk=i),btoa(JSON.stringify(s))}var i=t(18);n.exports={generateTracePayload:r,generateTraceHeader:o}},{}],12:[function(t,n,e){function r(t){var n=this.params,e=this.metrics;if(!this.ended){this.ended=!0;for(var r=0;r<p;r++)t.removeEventListener(l[r],this.listener,!1);n.aborted||(e.duration=s.now()-this.startTime,this.loadCaptureCalled||4!==t.readyState?null==n.status&&(n.status=0):a(this,t),e.cbTime=this.cbTime,d.emit("xhr-done",[t],t),c("xhr",[n,e,this.startTime]))}}function o(t,n){var e=t.responseType;if("json"===e&&null!==n)return n;var r="arraybuffer"===e||"blob"===e||"json"===e?t.response:t.responseText;return w(r)}function i(t,n){var e=f(n),r=t.params;r.host=e.hostname+":"+e.port,r.pathname=e.pathname,t.sameOrigin=e.sameOrigin}function a(t,n){t.params.status=n.status;var e=o(n,t.lastSize);if(e&&(t.metrics.rxSize=e),t.sameOrigin){var r=n.getResponseHeader("X-NewRelic-App-Data");r&&(t.params.cat=r.split(", ").pop())}t.loadCaptureCalled=!0}var s=t("loader");if(s.xhrWrappable){var c=t("handle"),f=t(13),u=t(11).generateTracePayload,d=t("ee"),l=["load","error","abort","timeout"],p=l.length,h=t("id"),m=t(16),w=t(15),v=window.XMLHttpRequest;s.features.xhr=!0,t(10),t(6),d.on("new-xhr",function(t){var n=this;n.totalCbs=0,n.called=0,n.cbTime=0,n.end=r,n.ended=!1,n.xhrGuids={},n.lastSize=null,n.loadCaptureCalled=!1,t.addEventListener("load",function(e){a(n,t)},!1),m&&(m>34||m<10)||window.opera||t.addEventListener("progress",function(t){n.lastSize=t.loaded},!1)}),d.on("open-xhr-start",function(t){this.params={method:t[0]},i(this,t[1]),this.metrics={}}),d.on("open-xhr-end",function(t,n){"loader_config"in NREUM&&"xpid"in NREUM.loader_config&&this.sameOrigin&&n.setRequestHeader("X-NewRelic-ID",NREUM.loader_config.xpid);var e=!1;if("init"in NREUM&&"distributed_tracing"in NREUM.init&&(e=!!NREUM.init.distributed_tracing.enabled),e&&this.sameOrigin){var r=u();r&&r.header&&(n.setRequestHeader("newrelic",r.header),this.dt=r)}}),d.on("send-xhr-start",function(t,n){var e=this.metrics,r=t[0],o=this;if(e&&r){var i=w(r);i&&(e.txSize=i)}this.startTime=s.now(),this.listener=function(t){try{"abort"!==t.type||o.loadCaptureCalled||(o.params.aborted=!0),("load"!==t.type||o.called===o.totalCbs&&(o.onloadCalled||"function"!=typeof n.onload))&&o.end(n)}catch(e){try{d.emit("internal-error",[e])}catch(r){}}};for(var a=0;a<p;a++)n.addEventListener(l[a],this.listener,!1)}),d.on("xhr-cb-time",function(t,n,e){this.cbTime+=t,n?this.onloadCalled=!0:this.called+=1,this.called!==this.totalCbs||!this.onloadCalled&&"function"==typeof e.onload||this.end(e)}),d.on("xhr-load-added",function(t,n){var e=""+h(t)+!!n;this.xhrGuids&&!this.xhrGuids[e]&&(this.xhrGuids[e]=!0,this.totalCbs+=1)}),d.on("xhr-load-removed",function(t,n){var e=""+h(t)+!!n;this.xhrGuids&&this.xhrGuids[e]&&(delete this.xhrGuids[e],this.totalCbs-=1)}),d.on("addEventListener-end",function(t,n){n instanceof v&&"load"===t[0]&&d.emit("xhr-load-added",[t[1],t[2]],n)}),d.on("removeEventListener-end",function(t,n){n instanceof v&&"load"===t[0]&&d.emit("xhr-load-removed",[t[1],t[2]],n)}),d.on("fn-start",function(t,n,e){n instanceof v&&("onload"===e&&(this.onload=!0),("load"===(t[0]&&t[0].type)||this.onload)&&(this.xhrCbStart=s.now()))}),d.on("fn-end",function(t,n){this.xhrCbStart&&d.emit("xhr-cb-time",[s.now()-this.xhrCbStart,this.onload,n],n)}),d.on("fetch-before-start",function(t){var n,e=t[1]||{};"string"==typeof t[0]?n=t[0]:t[0]&&t[0].url&&(n=t[0].url),n&&(this.sameOrigin=f(n).sameOrigin);var r=!1;if("init"in NREUM&&"distributed_tracing"in NREUM.init&&(r=!!NREUM.init.distributed_tracing.enabled),r&&this.sameOrigin){var o=u();if(!o||!o.header)return;var i=o.header;if("string"==typeof t[0]){var a={};for(var s in e)a[s]=e[s];a.headers=new Headers(e.headers||{}),a.headers.set("newrelic",i),this.dt=o,t.length>1?t[1]=a:t.push(a)}else t[0]&&t[0].headers&&(t[0].headers.append("newrelic",i),this.dt=o)}})}},{}],13:[function(t,n,e){n.exports=function(t){var n=document.createElement("a"),e=window.location,r={};n.href=t,r.port=n.port;var o=n.href.split("://");!r.port&&o[1]&&(r.port=o[1].split("/")[0].split("@").pop().split(":")[1]),r.port&&"0"!==r.port||(r.port="https"===o[0]?"443":"80"),r.hostname=n.hostname||e.hostname,r.pathname=n.pathname,r.protocol=o[0],"/"!==r.pathname.charAt(0)&&(r.pathname="/"+r.pathname);var i=!n.protocol||":"===n.protocol||n.protocol===e.protocol,a=n.hostname===document.domain&&n.port===e.port;return r.sameOrigin=i&&(!n.hostname||a),r}},{}],14:[function(t,n,e){function r(){}function o(t,n,e){return function(){return i(t,[f.now()].concat(s(arguments)),n?null:this,e),n?void 0:this}}var i=t("handle"),a=t(20),s=t(21),c=t("ee").get("tracer"),f=t("loader"),u=NREUM;"undefined"==typeof window.newrelic&&(newrelic=u);var d=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],l="api-",p=l+"ixn-";a(d,function(t,n){u[n]=o(l+n,!0,"api")}),u.addPageAction=o(l+"addPageAction",!0),u.setCurrentRouteName=o(l+"routeName",!0),n.exports=newrelic,u.interaction=function(){return(new r).get()};var h=r.prototype={createTracer:function(t,n){var e={},r=this,o="function"==typeof n;return i(p+"tracer",[f.now(),t,e],r),function(){if(c.emit((o?"":"no-")+"fn-start",[f.now(),r,o],e),o)try{return n.apply(this,arguments)}catch(t){throw c.emit("fn-err",[arguments,this,t],e),t}finally{c.emit("fn-end",[f.now()],e)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(t,n){h[n]=o(p+n)}),newrelic.noticeError=function(t,n){"string"==typeof t&&(t=new Error(t)),i("err",[t,f.now(),!1,n])}},{}],15:[function(t,n,e){n.exports=function(t){if("string"==typeof t&&t.length)return t.length;if("object"==typeof t){if("undefined"!=typeof ArrayBuffer&&t instanceof ArrayBuffer&&t.byteLength)return t.byteLength;if("undefined"!=typeof Blob&&t instanceof Blob&&t.size)return t.size;if(!("undefined"!=typeof FormData&&t instanceof FormData))try{return JSON.stringify(t).length}catch(n){return}}}},{}],16:[function(t,n,e){var r=0,o=navigator.userAgent.match(/Firefox[\/\s](\d+\.\d+)/);o&&(r=+o[1]),n.exports=r},{}],17:[function(t,n,e){function r(t,n){var e=t.getEntries();e.forEach(function(t){"first-paint"===t.name?a("timing",["fp",Math.floor(t.startTime)]):"first-contentful-paint"===t.name&&a("timing",["fcp",Math.floor(t.startTime)])})}function o(t){if(t instanceof c&&!u){var n,e=Math.round(t.timeStamp);n=e>1e12?Date.now()-e:s.now()-e,u=!0,a("timing",["fi",e,{type:t.type,fid:n}])}}if(!("init"in NREUM&&"page_view_timing"in NREUM.init&&"enabled"in NREUM.init.page_view_timing&&NREUM.init.page_view_timing.enabled===!1)){var i,a=t("handle"),s=t("loader"),c=NREUM.o.EV;if("PerformanceObserver"in window&&"function"==typeof window.PerformanceObserver){i=new PerformanceObserver(r);try{i.observe({entryTypes:["paint"]})}catch(f){}}if("addEventListener"in document){var u=!1,d=["click","keydown","mousedown","pointerdown","touchstart"];d.forEach(function(t){document.addEventListener(t,o,!1)})}}},{}],18:[function(t,n,e){function r(){function t(){return n?15&n[e++]:16*Math.random()|0}var n=null,e=0,r=window.crypto||window.msCrypto;r&&r.getRandomValues&&(n=r.getRandomValues(new Uint8Array(31)));for(var o,i="xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx",a="",s=0;s<i.length;s++)o=i[s],"x"===o?a+=t().toString(16):"y"===o?(o=3&t()|8,a+=o.toString(16)):a+=o;return a}function o(){function t(){return n?15&n[e++]:16*Math.random()|0}var n=null,e=0,r=window.crypto||window.msCrypto;r&&r.getRandomValues&&Uint8Array&&(n=r.getRandomValues(new Uint8Array(31)));for(var o=[],i=0;i<16;i++)o.push(t().toString(16));return o.join("")}n.exports={generateUuid:r,generateCatId:o}},{}],19:[function(t,n,e){function r(t,n){if(!o)return!1;if(t!==o)return!1;if(!n)return!0;if(!i)return!1;for(var e=i.split("."),r=n.split("."),a=0;a<r.length;a++)if(r[a]!==e[a])return!1;return!0}var o=null,i=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var s=navigator.userAgent,c=s.match(a);c&&s.indexOf("Chrome")===-1&&s.indexOf("Chromium")===-1&&(o="Safari",i=c[1])}n.exports={agent:o,version:i,match:r}},{}],20:[function(t,n,e){function r(t,n){var e=[],r="",i=0;for(r in t)o.call(t,r)&&(e[i]=n(r,t[r]),i+=1);return e}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],21:[function(t,n,e){function r(t,n,e){n||(n=0),"undefined"==typeof e&&(e=t?t.length:0);for(var r=-1,o=e-n||0,i=Array(o<0?0:o);++r<o;)i[r]=t[n+r];return i}n.exports=r},{}],22:[function(t,n,e){n.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(t,n,e){function r(){}function o(t){function n(t){return t&&t instanceof r?t:t?c(t,s,i):i()}function e(e,r,o,i){if(!l.aborted||i){t&&t(e,r,o);for(var a=n(o),s=m(e),c=s.length,f=0;f<c;f++)s[f].apply(a,r);var d=u[y[e]];return d&&d.push([x,e,r,a]),a}}function p(t,n){g[t]=m(t).concat(n)}function h(t,n){var e=g[t];if(e)for(var r=0;r<e.length;r++)e[r]===n&&e.splice(r,1)}function m(t){return g[t]||[]}function w(t){return d[t]=d[t]||o(e)}function v(t,n){f(t,function(t,e){n=n||"feature",y[e]=n,n in u||(u[n]=[])})}var g={},y={},x={on:p,addEventListener:p,removeEventListener:h,emit:e,get:w,listeners:m,context:n,buffer:v,abort:a,aborted:!1};return x}function i(){return new r}function a(){(u.api||u.feature)&&(l.aborted=!0,u=l.backlog={})}var s="nr@context",c=t("gos"),f=t(20),u={},d={},l=n.exports=o();l.backlog=u},{}],gos:[function(t,n,e){function r(t,n,e){if(o.call(t,n))return t[n];var r=e();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(t,n,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return t[n]=r,r}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],handle:[function(t,n,e){function r(t,n,e,r){o.buffer([t],r),o.emit(t,n,e)}var o=t("ee").get("handle");n.exports=r,r.ee=o},{}],id:[function(t,n,e){function r(t){var n=typeof t;return!t||"object"!==n&&"function"!==n?-1:t===window?0:a(t,i,function(){return o++})}var o=1,i="nr@id",a=t("gos");n.exports=r},{}],loader:[function(t,n,e){function r(){if(!E++){var t=b.info=NREUM.info,n=p.getElementsByTagName("script")[0];if(setTimeout(u.abort,3e4),!(t&&t.licenseKey&&t.applicationID&&n))return u.abort();f(y,function(n,e){t[n]||(t[n]=e)}),c("mark",["onload",a()+b.offset],null,"api");var e=p.createElement("script");e.src="https://"+t.agent,n.parentNode.insertBefore(e,n)}}function o(){"complete"===p.readyState&&i()}function i(){c("mark",["domContent",a()+b.offset],null,"api")}function a(){return R.exists&&performance.now?Math.round(performance.now()):(s=Math.max((new Date).getTime(),s))-b.offset}var s=(new Date).getTime(),c=t("handle"),f=t(20),u=t("ee"),d=t(19),l=window,p=l.document,h="addEventListener",m="attachEvent",w=l.XMLHttpRequest,v=w&&w.prototype;NREUM.o={ST:setTimeout,SI:l.setImmediate,CT:clearTimeout,XHR:w,REQ:l.Request,EV:l.Event,PR:l.Promise,MO:l.MutationObserver};var g=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1153.min.js"},x=w&&v&&v[h]&&!/CriOS/.test(navigator.userAgent),b=n.exports={offset:s,now:a,origin:g,features:{},xhrWrappable:x,userAgent:d};t(14),t(17),p[h]?(p[h]("DOMContentLoaded",i,!1),l[h]("load",r,!1)):(p[m]("onreadystatechange",o),l[m]("onload",r)),c("mark",["firstbyte",s],null,"api");var E=0,R=t(22)},{}],"wrap-function":[function(t,n,e){function r(t){return!(t&&t instanceof Function&&t.apply&&!t[a])}var o=t("ee"),i=t(21),a="nr@original",s=Object.prototype.hasOwnProperty,c=!1;n.exports=function(t,n){function e(t,n,e,o){function nrWrapper(){var r,a,s,c;try{a=this,r=i(arguments),s="function"==typeof e?e(r,a):e||{}}catch(f){l([f,"",[r,a,o],s])}u(n+"start",[r,a,o],s);try{return c=t.apply(a,r)}catch(d){throw u(n+"err",[r,a,d],s),d}finally{u(n+"end",[r,a,c],s)}}return r(t)?t:(n||(n=""),nrWrapper[a]=t,d(t,nrWrapper),nrWrapper)}function f(t,n,o,i){o||(o="");var a,s,c,f="-"===o.charAt(0);for(c=0;c<n.length;c++)s=n[c],a=t[s],r(a)||(t[s]=e(a,f?s+o:o,i,s))}function u(e,r,o){if(!c||n){var i=c;c=!0;try{t.emit(e,r,o,n)}catch(a){l([a,e,r,o])}c=i}}function d(t,n){if(Object.defineProperty&&Object.keys)try{var e=Object.keys(t);return e.forEach(function(e){Object.defineProperty(n,e,{get:function(){return t[e]},set:function(n){return t[e]=n,n}})}),n}catch(r){l([r])}for(var o in t)s.call(t,o)&&(n[o]=t[o]);return n}function l(n){try{t.emit("internal-error",n)}catch(e){}}return t||(t=o),e.inPlace=f,e.flag=a,e}},{}]},{},["loader",2,12,4,3]);</script> 
+  <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0"> 
+  <meta name="detectify-verification" content="3ea8ebbea4fc438888f03a0f9fc733ee"> 
+  <meta name="twitter:widgets:csp" content="on"> 
+  <link rel="shortcut icon" href="https://brightkit-contests-live.s3-us-west-2.amazonaws.com/sweepstakes/contest-63104/asset/theme_favicon_media_id_1563465855.jpg"> 
+  <meta name="ROBOTS" content="NOINDEX, NOFOLLOW"> 
+  <meta property="og:title" content="Woofaroo Winners 2019"> 
+  <meta property="og:url" content="http://woofaroo2019final.hscampaigns.com"> 
+  <meta property="og:type" content="website"> 
+  <meta property="og:image" content="https://brightkit-contests-live.s3-us-west-2.amazonaws.com/sweepstakes/contest-63104/asset/theme_style_header_image_media_id_1563463638.jpg"> 
+  <meta property="fb:app_id" content="782845158439498"> 
+  <!-- Twitter --> 
+  <!-- <meta name="twitter:card" content="summary">
+<meta name="twitter:site" content="@hscampaign">
+
+    <meta name="twitter:title" content="Woofaroo Winners 2019">
+
+
+  <meta name="twitter:image" content="https://brightkit-contests-live.s3-us-west-2.amazonaws.com/sweepstakes/contest-63104/asset/theme_style_header_image_media_id_1563463638.jpg">
+ --> 
+  <title>Woofaroo Winners 2019</title> 
+  <link media="all" type="text/css" rel="stylesheet" href="https://view-assets.hscampaigns.com/assets/templates/sweepstakes-v2/css/app.min.css?cb=4.17.15-0119a1ae408600554e90d22f33d691b6ad754f7e"> 
+  <link media="all" type="text/css" rel="stylesheet" href="https://view-assets.hscampaigns.com/assets/templates/sweepstakes-v2/libs/icheck/skins/flat/_all.min.css?cb=4.17.15-0119a1ae408600554e90d22f33d691b6ad754f7e"> 
+  <style type="text/css">
+    body {
+                    background-repeat: no-repeat !important;
+        
+        
+                    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif !important;
+        
+            }
+
+    .tab-content p,
+    .tab-content small,
+    .tab-content ul,
+    .tab-content ol,
+    .tab-content label,
+    .tab-content .page,
+    #footer .social-widget a i
+    {
+            }
+    #footer .social-widget a
+    {
+            }
+
+    .btn,
+    .form-submit {
+        
+                    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif !important;
+            }
+
+    .btn:hover,
+    .form-submit:hover {
+            }
+
+    #header,
+    #footer,
+    .loading-more,
+    #navigation-mobile {
+            }
+
+    .desktop-tabs a {
+            }
+
+    .desktop-tabs a:hover,
+    .desktop-tabs .active {
+            }
+
+    .no-touch .dropmenu-active ul li a:hover {
+            }
+
+    #footer .social-widget a {
+            }
+
+    #footer .social-widget a i {
+            }
+
+            body,
+        input,
+        button,
+        select,
+        textarea,
+        .gallery-caption,
+        #header #logo a,
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            font-family: Arial, "Helvetica Neue", Helvetica, sans-serif !important;
+        }
+    
+    
+</style> 
+  <!--[if IE 8]>
+    <link media="all" type="text/css" rel="stylesheet" href="https://view-assets.hscampaigns.com/assets/templates/sweepstakes-v2/css/ie8.css?cb=4.17.15-0119a1ae408600554e90d22f33d691b6ad754f7e">
+
+<![endif]--> 
+  <!--[if IE 9]>
+    <link media="all" type="text/css" rel="stylesheet" href="https://view-assets.hscampaigns.com/assets/templates/sweepstakes-v2/css/ie9.css?cb=4.17.15-0119a1ae408600554e90d22f33d691b6ad754f7e">
+
+<![endif]--> 
+  <script type="text/javascript">
+            window.isInFB = null;
+            window.fbPageInfo = null;
+
+            window.fbAsyncInit = function() {
+                FB.init({
+                    appId: '782845158439498',
+                    channelUrl: 'http://woofaroo2019final.hscampaigns.com/channel.html',
+                    status: true,
+                    xfbml: true,
+                    version: 'v2.3'
+                });
+
+                FB.Canvas.setAutoGrow();
+
+                FB.Canvas.getPageInfo(function(info) {
+                    window.isInFB = true;
+                    window.fbPageInfo = info;
+                });
+            };
+
+            // Load the SDK Asynchronously
+            (function(d, s, id) {
+                var js, fjs = d.getElementsByTagName(s)[0];
+                if (d.getElementById(id)) return;
+                js = d.createElement(s); js.id = id; js.async = true;
+                js.src = "//connect.facebook.net/en_US/sdk.js";
+                fjs.parentNode.insertBefore(js, fjs);
+            }(document, 'script', 'facebook-jssdk'));
+
+            // Include Twitter library
+            window.twttr = (function (d,s,id) {
+                var t, js, fjs = d.getElementsByTagName(s)[0];
+                if (d.getElementById(id)) return; js=d.createElement(s); js.id=id;
+                js.src="//platform.twitter.com/widgets.js"; fjs.parentNode.insertBefore(js, fjs);
+                return window.twttr || (t = { _e: [], ready: function(f){ t._e.push(f) } });
+            } (document, "script", "twitter-wjs"));
+
+            var Brightkit = {"url":"http:\/\/woofaroo2019final.hscampaigns.com","contestapi":"http:\/\/{subdomain}.hscampaigns.com\/brightkit\/","language":"en","version":"v1","oauth":{"url":"\/\/oauth.hscampaigns.com\/"},"builder_domain":"https:\/\/campaigns.hootsuite.com","view_domain_ga":"hscampaigns.com","contest_id":"63104","is_preview":0,"share_url":"http:\/\/woofaroo2019final.hscampaigns.com","parent_frame_url":null,"subdomain":"woofaroo2019final","s3bucket":"brightkit-contests-live","s3folder":"sweepstakes\/contest-63104","s3url":"http:\/\/brightkit-contests-live.s3-us-west-2.amazonaws.com\/","title":"Woofaroo Winners 2019","type":"sweepstakes","comments":0,"voting":0,"hide_num_votes":0,"show_percentage":0,"google_analytics_key":null,"internal_google_analytics_key":null,"share_option_facebook":0,"share_option_twitter":0,"share_option_pinterest":0,"share_option_google":0,"share_option_linkedin":0,"share_option_hootlet":0,"share_option_facebook_text":null,"share_option_twitter_text":null,"share_option_pinterest_text":null,"share_option_google_text":null,"share_option_linkedin_text":null,"share_option_hootlet_text":null,"share_contest_option_facebook":1,"share_contest_option_twitter":1,"share_contest_option_pinterest":1,"share_contest_option_google":1,"share_contest_option_linkedin":0,"share_contest_option_hootlet":0,"share_contest_option_facebook_text":null,"share_contest_option_twitter_text":null,"share_contest_option_pinterest_text":null,"share_contest_option_google_text":null,"share_contest_option_linkedin_text":null,"share_contest_option_hootlet_text":null,"enable_incentivized_sharing":0,"oauth_facebook":0,"oauth_facebook_entry":0,"oauth_twitter":0,"oauth_linkedin":0,"oauth_google":0,"oauth_instagram":0,"email_verification_required":0,"messages":{"incorrect_file_type":"Incorrect file type, please try again","incorrect_file_size":"Your file must be less than :size, please try again","thank_you_submission":"Thank you for your entry","back_to_top":"Back to top","votes_max":"You have reached the maximum number of votes","voting_not_allowed":"Voting is not allowed at this moment","back_to_gallery":"&#171; Back to gallery","upgrade_browser":"It looks like you're using Internet Explorer 9 or below. Please upgrade your browser in order to participate in this campaign.","install":"Install","upgrade":"Upgrade","install_chrome":"Google Chrome for free","install_firefox":"Firefox for free","install_ie":"Internet Explorer for free","voting_success":"Thanks for voting!","poll_not_started":"Poll will start on :date. Please come back to enter.","generic_error":"An error has occurred. Please refresh and try again momentarily.","oauth_retry":"There was an error verifying your login. Please refresh and try again momentarily.","quiz_not_started":"This quiz hasn't started yet.","quiz_finished":"Sorry! This quiz has finished.","spam_request_rate":"You can submit a vote every 5 seconds. Please refresh and try again momentarily."},"submissions":1,"timezone":"EST","timeline_finish":"2019-07-19 15:03:00","timeline_start":"2019-07-18 12:05:00","submissions_timeline_finish":"2019-07-19 15:03:00","submissions_timeline_start":"2019-07-18 12:05:00","commentsAllowed":true,"display_countdown":0,"mustRegisterForQuizResults":0,"allow_multi_media_upload":0,"verify_data":"1","header_image":"https:\/\/brightkit-contests-live.s3-us-west-2.amazonaws.com\/sweepstakes\/contest-63104\/asset\/theme_style_header_image_media_id_1563463638.jpg"};
+            Brightkit.language = 'en';
+                    </script> 
+  <script>
+            
+        </script> 
+ </head> 
+ <body class="mobile-nav"> 
+  <div id="resizediv"> 
+   <div id="fb-root"></div> 
+   <iframe id="comm" src="" height="0" width="0" frameborder="0" class="hide"></iframe> 
+   <div id="header" class="header-menu"> 
+    <div class="container header"> 
+     <div class="row"> 
+      <div class="col-md-3"> 
+       <div id="logo">
+        Woofaroo Winners 2019
+       </div> 
+      </div> 
+      <div class="col-md-9"> 
+       <div class="clearfix"> 
+        <a id="mobile-nav" class="menu-nav" href="#menu-nav"><span class="menu-icon"></span></a> 
+        <span class="label">Menu</span> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+   <div class="template-message" data-sel="global_errors_container"> 
+    <div class="container clearfix"> 
+     <ul class="pull-left" data-sel="global_errors_message"></ul> 
+     <span class="pull-right close-errors"><i class="font-icon-cross"></i></span> 
+    </div> 
+   </div> 
+   <div id="navigation-mobile" data-sel="mobile_navigation"> 
+    <div class="container"> 
+     <div class="row"> 
+      <div class="col-md-12"> 
+       <ul id="menu-nav-mobile"> 
+        <li><a href="#winnerwillbeannouncejuly20" id="custom-tab_tab" name="custom-tab" data-toggle="tab" data-sel="custom-tab_mobile_link">WINNER WILL BE ANNOUNCE JULY 20</a></li> 
+        <li><a href="#winnerofthefaceofwoofaroo2020" id="custom-tab_tab" name="custom-tab" data-toggle="tab" data-sel="custom-tab_mobile_link">WINNER OF THE FACE OF WOOFA-ROO 2020</a></li> 
+        <li><a href="#terms" name="terms-and-conditions" id="terms" data-sel="terms_mobile_link">Terms &amp; Conditions</a></li> 
+       </ul> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+   <span class="back-to-top">Back to top</span> 
+   <div class="main container no-padding"> 
+    <section id="title-page" data-sel="header"> 
+     <span class="overlay-bg-fill" data-sel="overlay"></span> 
+     <div class="pagize"> 
+      <img src="https://brightkit-contests-live.s3-us-west-2.amazonaws.com/sweepstakes/contest-63104/asset/theme_style_header_image_media_id_1563463638.jpg" class="desktop-header-img hide-mobile" data-sel="desktop_header_img"> 
+      <img src="https://brightkit-contests-live.s3-us-west-2.amazonaws.com/sweepstakes/contest-63104/asset/theme_style_mobile_header_image_media_id_1563462615.jpg" class="mobile-header-img" data-sel="mobile_header_img"> 
+     </div> 
+    </section> 
+    <div class="btn-group btn-group-justified desktop-tabs" role="navigation"> 
+     <a href="#winnerwillbeannouncejuly20" class="btn btn-default " id="winner-will-be-announce-july-20_tab" name="custom-tab" data-toggle="tab" data-sel="winner-will-be-announce-july-20_tab">WINNER WILL BE ANNOUNCE JULY 20</a> 
+     <a href="#winnerofthefaceofwoofaroo2020" class="btn btn-default active" id="winner-of-the-face-of-woofa-roo-2020_tab" name="custom-tab" data-toggle="tab" data-sel="winner-of-the-face-of-woofa-roo-2020_tab">WINNER OF THE FACE OF WOOFA-ROO 2020</a> 
+     <a href="#rules" id="tos_tab" class="btn btn-default " name="terms-conditions" data-toggle="tab" data-sel="tos_tab">Terms &amp; Conditions</a> 
+    </div> 
+    <div id="content"> 
+     <div class="tab-content clearfix"> 
+      <div class="tab-pane page " id="winnerwillbeannouncejuly20" data-sel="winner-will-be-announce-july-20_container"> 
+       <div class="container"> 
+        <div class="row"> 
+         <div class="col-md-12" data-sel="winner-will-be-announce-july-20_body"> 
+          <h3 style="text-align: center;"><strong>THE WINNER WILL BE ANNOUNCED AT THE WOORA-ROO PET FEST ON SATURDAY, JULY 20&nbsp;AT 12:00 P.M.&nbsp;</strong></h3> 
+          <p style="text-align: center;">Visit&nbsp;<a href="http://woofaroo.com">woofaroo.com</a></p> 
+         </div> 
+        </div> 
+       </div> 
+      </div> 
+      <div class="tab-pane page active" id="winnerofthefaceofwoofaroo2020" data-sel="winner-of-the-face-of-woofa-roo-2020_container"> 
+       <div class="container"> 
+        <div class="row"> 
+         <div class="col-md-12" data-sel="winner-of-the-face-of-woofa-roo-2020_body"> 
+          <p style="text-align: center;"><img height="455" src="https://brightkit-contests-live.s3-us-west-2.amazonaws.com/pages/15638175535d35f651907f67.55394349.jpg" width="480"></p> 
+         </div> 
+        </div> 
+       </div> 
+      </div> 
+      <div class="tab-pane " id="rules" data-sel="rules_container"> 
+       <div class="container"> 
+        <div class="row"> 
+         <div class="col-md-12" data-sel="rules_body"> 
+          <h2 style="text-align: center;">&nbsp;</h2> 
+          <h2 style="text-align: center;"><strong>FACE OF WOOFAROO 2020&nbsp;CONTEST</strong></h2> 
+          <p>THE FACE OF WOOFAROO 2020 CONTEST (THE “CONTEST”) IS INTENDED TO BE CONDUCTED IN CANADA ONLY AND SHALL BE CONSTRUED AND EVALUATED ACCORDING TO APPLICABLE CANADIAN LAW. NO PURCHASE IS NECESSARY. THE CONTEST IS OPEN TO CANADIAN RESIDENTS ONLY AND PARTICIPANTS MUST BE THE AGE OF MAJORITY OR OLDER IN THEIR PROVINCE OR TERRITORY OF RESIDENCE AT THE TIME OF ENTRY. WHERE THE CONTEST IS OPEN TO ENTRANTS UNDER THE AGE OF MAJORITY, A PARENT OR LEGAL GUARDIAN MUST PROVIDE CONSENT IN ORDER FOR THE ENTRANT TO ENTER OR WIN. VOID IN WHOLE OR IN PART WHERE PROHIBITED BY LAW. ENTRY IN THIS CONTEST CONSTITUTES ACCEPTANCE OF THESE CONTEST RULES (THE “CONTEST RULES”).</p> 
+          <p><strong>1. ELIGIBILITY.&nbsp;</strong>To be eligible for this Contest, an individual must:</p> 
+          <p>(a) be a legal resident of the region indicated below (only checked boxes apply):</p> 
+          <p><img src="https://brightkit-contests-live.s3-us-west-2.amazonaws.com/pages/150170794259823ea6add643.44386833.jpg" style="width: 12px; height: 13px;">&nbsp;<strong>Provincial.</strong><strong>&nbsp;</strong>Province of Ontario<br> <img src="https://brightkit-contests-live.s3-us-west-2.amazonaws.com/pages/150170783859823e3e193371.47241515.jpg" style="width: 12px; height: 13px;">&nbsp;<strong>Canada (excluding Quebec).</strong>&nbsp;Not applicable.<br> <img src="https://brightkit-contests-live.s3-us-west-2.amazonaws.com/pages/150170783859823e3e193371.47241515.jpg" style="width: 12px; height: 13px;">&nbsp;<strong>Canada (national).</strong>&nbsp;Not applicable.</p> 
+          <p>(b) be of the age of majority or older in his/her province or territory of residence at the time of entry. Where the Contest is open to entrants under the age of majority, a parent or legal guardian must provide consent and sign on their behalf all necessary documentation in respect of this Contest, including entry forms and releases.</p> 
+          <p>(c) where the Contest is running on a social media website (“Social Media”), be a registered member of the applicable Social Media website and have a valid account which is in good standing. If you are not a registered member of the applicable Social Media website, visit the Social Media website and register for an account.</p> 
+          <p>(d) be the sole owner of all right, title and interest (including copyright) in and to the Work (as defined below) submitted in connection with the Contest (where an entrant is required to submit Work.</p> 
+          <p>(e) comply with the following (only checked boxes apply):</p> 
+          <p><img src="https://brightkit-contests-live.s3-us-west-2.amazonaws.com/pages/150170783859823e3e193371.47241515.jpg" style="width: 12px; height: 13px;">&nbsp;<strong>Subscription.</strong>&nbsp;Not applicable.<br> <img src="https://brightkit-contests-live.s3-us-west-2.amazonaws.com/pages/150170794259823ea6add643.44386833.jpg" style="width: 12px; height: 13px;">&nbsp;<strong>Previous Winner.</strong>&nbsp;Pets which have been selected as a winner of the Face of Woofaroo Contest in any previous year are not eligible to be entered into the Contest.<br> <img src="https://brightkit-contests-live.s3-us-west-2.amazonaws.com/pages/150170783859823e3e193371.47241515.jpg" style="width: 12px; height: 13px;">&nbsp;<strong>Travel.</strong>&nbsp;Not applicable.</p> 
+          <p>Employees of The Windsor Star, a division of Postmedia Network Inc. (“<strong>Postmedia</strong>”) and Woof-a-Roo Pet Fest (the parties collectively, the "<strong>Contest Providers</strong>"), their respective affiliates, subsidiaries, related companies, advertising and promotional agencies, judges of the Contest (where applicable) and the household members of any of the above, are not eligible to participate in the Contest.</p> 
+          <p>The Contest Providers shall have the right at any time to require proof of identity and/or eligibility, in a form acceptable to the Contest Providers, including without limitation, government issued photo identification, to participate in the Contest. Failure to provide such proof, or meet all of the eligibility requirements may result in disqualification. All personal and other information requested by and supplied to the Contest Providers for the purpose of the Contest must be truthful, complete, accurate and in no way misleading. The Contest Providers reserve the right, in their sole discretion, to disqualify any entrant should such an entrant fail to meet all of the eligibility requirements or, at any stage, supply untruthful, incomplete, inaccurate or misleading personal details</p> 
+          <p><strong>2. CONTEST PERIOD</strong>. The Contest begins at 12:00 p.m. Eastern Time ("<strong>ET</strong>") on June 24, 2019 and ends at 12:00 p.m. ET on July 19, 2019 (the "<strong>Contest Period</strong>") after which time the Contest will be closed and no further entries shall be accepted. The Contest Providers’ designated server’s clock will be the official time keeper for the Contest Period. The Contest will be run in two (2) periods: the entry period from 12:00 p.m. ET on June 24, 2019 to 12:00 p.m. ET on July 5, 2019 (the “<strong>Entry Period</strong>”) and the voting period from 12:00 p.m. ET on July 12, 2019 to 3:00 p.m ET on July 19, 2019 (the “<strong>Voting Period</strong>”). The Contest will also be divided into the following voting sub-periods (the “<strong>Voting Sub-Periods</strong>”, each a “<strong>Voting Sub-Period</strong>”):</p> 
+          <table border="1" cellpadding="2" cellspacing="0" style="width: 694px;" width="693"> 
+           <colgroup> 
+            <col> 
+            <col> 
+            <col span="2"> 
+           </colgroup> 
+           <tbody> 
+            <tr height="19"> 
+             <td height="38" rowspan="2" style="height: 38px; width: 79px;"><strong>Voting<br> Sub-Period</strong></td> 
+             <td rowspan="2" style="width: 282px;"><strong>Details</strong></td> 
+             <td rowspan="2" style="width: 167px;"><strong>Voting Commences<br> (all times ET)</strong></td> 
+             <td rowspan="2" style="width: 167px;"><strong>Voting Ends<br> (all times ET)</strong></td> 
+            </tr> 
+            <tr height="19"> 
+            </tr> 
+            <tr height="60"> 
+             <td height="60" style="height: 61px;">One</td> 
+             <td style="width: 282px;">32 Qualifying Photos posted for public voting. 16 Qualifying Photos with the highest number of public votes advance to the next sub-period.</td> 
+             <td>12:00 p.m.. July 12, 2019</td> 
+             <td>10:00 p.m. July 14, 2019</td> 
+            </tr> 
+            <tr height="60"> 
+             <td height="60" style="height: 60px;">Two</td> 
+             <td style="width: 282px;">16 Qualifying Photos posted for public voting. 8 Qualifying Photos with the highest number of public votes advance to the next sub-period.</td> 
+             <td>12:00 p.m. July 15, 2019</td> 
+             <td>10:00 p.m. July 15, 2019</td> 
+            </tr> 
+            <tr height="58"> 
+             <td height="58" style="height: 58px;">Three</td> 
+             <td style="width: 282px;">8 Qualifying Photos posted for public voting. 4 Qualifying Photos with the highest number of public votes advance to the next sub-period.</td> 
+             <td>12:00 p.m. July 16, 2019</td> 
+             <td>10:00 p.m. July 16, 2019</td> 
+            </tr> 
+            <tr height="59"> 
+             <td height="59" style="height: 60px;">Four</td> 
+             <td style="width: 282px;">4 Semi-Finalist Photos posted for public voting. 2 Semi-Finalist Photos with the highest number of public votes advance to the next sub-period.</td> 
+             <td>12:00 p.m. July 17, 2019</td> 
+             <td>10:00 p.m. July 17, 2019</td> 
+            </tr> 
+            <tr height="58"> 
+             <td height="58" style="height: 58px;">Five</td> 
+             <td style="width: 282px;">2 Finalist Photos posted for public voting. 1 Finalist Photo with the highest number of public votes deemed Grand Prize Winner.</td> 
+             <td>12:00 p.m. July 18, 2019</td> 
+             <td>3:00 p.m. July 19, 2019</td> 
+            </tr> 
+           </tbody> 
+          </table> 
+          <p>&nbsp;</p> 
+          <p><strong>3. HOW THE CONTEST WORKS.</strong><br> (a) Entrants may enter the Contest during the Entry Period. To enter the Contest, entrants will be required to complete the form at the Contest Website (as defined below) and submit a photo which must feature a pet of any species of no more than 2MB in size in .jpg or .png format (the “<strong>Photos</strong>”, each, a “<strong>Photo</strong>”). In the “Title” field next to the space where the Photo is selected for uploading on the entry form, entrants will be required to include the pet’s name and a brief description of the breed of the pet, of no more than fifty (50) characters in total length.&nbsp;<u><strong>Duplicate Photos will result in the disqualification of any and all Photos featuring the pet in the duplicates.</strong></u></p> 
+          <p>(b) At the end of the Entry Period, all eligible entries will be evaluated by a panel of judges, who will then select the thirty-two (32) Photos (the “<strong>Qualifying Photos</strong>”), which best meet the judging criteria detailed below, to be posted to the Voting Website (defined below) for public voting. Members of the public shall be permitted to cast only one (1) vote per person during each Voting Sub-Period.</p> 
+          <p>(c) At the start of Voting Sub-Period One, the Contest Providers will post the Qualifying Photos as selected by the judges at&nbsp;<u>www.windsorstar.com/woofaroo</u>&nbsp;(the “<strong>Voting Website</strong>”). The Qualifying Photos will be displayed at the Voting Website in pairs determined at random. Members of the public will be allowed to vote for their favourite Qualifying Photo in each pair by using the drop down box to select the Qualifying Photo they like from each of the pairs and clicking the “Submit” button to register their vote. At the end of Voting Sub-Period One, the sixteen (16) Qualifying Photos with the highest number of general public votes will advance to next sub-period.</p> 
+          <p>(d) At the start of Voting Sub-Period Two, the Contest Providers will post the sixteen (16) Qualifying Photos which received the most votes from the general public during Voting Sub-Period One at the Voting Website. The sixteen (16) Qualifying Photos will be displayed at the Voting Website in pairs determined at random. Members of the public will be allowed to vote for their favourite Qualifying Photo in each pair by using the drop down box to select the Qualifying Photo they like from each of the pairs and clicking the “Submit” button to register their vote. At the end of Voting Sub-Period Two, the eight (8) Qualifying Photos with the highest number of general public votes will advance to next sub-period.</p> 
+          <p>(e) At the start of Voting Sub-Period Three, the Contest Providers will post the eight (8) Qualifying Photos which received the most votes from the general public during Voting Sub-Period Two at the Voting Website. The eight (8) Qualifying Photos will be displayed at the Voting Website in pairs determined at random. Members of the public will be allowed to vote for their favourite Qualifying Photo by using the drop down box to select the Qualifying Photo they like from each of the pairs and clicking the “Submit” button to register their vote. At the end of Voting Sub-Period Three, the four (4) Qualifying Photos with the highest number of general public votes will advance to next sub-period.</p> 
+          <p>(f) At the start of Voting Sub-Period Four, the Contest Providers will post the four (4) Qualifying Photos which received the most votes from the general public during Voting Sub-Period Three (the “<strong>Semi-Finalist Photos</strong>”, each, a “<strong>Semi-Finalist Photo</strong>”) at the Voting Website. The four (4) Semi-Finalist Photos will be displayed at the Voting Website in pairs, determined at random. Members of the public will be allowed to vote for their favourite Semi-Finalist Photo by using the drop down box to select the Qualifying Photo they like from each of the pairs and clicking the “Submit” button to register their vote. At the end of Voting Sub-Period Four, the two (2) Semi-Finalist Photos with the highest number of general public votes (the “<strong>Finalist Photos</strong>”, each, a “<strong>Finalist Photo</strong>”) will advance to next sub-period.</p> 
+          <p>(g) At the start of Voting Sub-Period Five, the Contest Providers will post the two (2) Finalist Photos which received the most votes from the general public during Voting Sub-Period Four at the Voting Website. The two (2) Finalist Photos will be displayed at the Voting Website. Members of the public will be allowed to vote for their favourite Finalist Photo by using the drop down box to select the Qualifying Photo they like from each of the pairs and clicking the “Submit” button to register their vote. At the end of Voting Sub-Period Five, the one (1) Finalist Photo with the highest number of general public votes will be deemed the Grand Prize Winner (defined below).</p> 
+          <p>(h) The two (2) entrants who submitted the two (2) Finalist Photos being voted on during Voting Sub-Period Five shall be invited to attend WoofaRoo, taking place at the Libro Sports Complex at 3295 Meloche Road in Amherstburg, Ontario on July 20, 2019 at 12:00 p.m. ET at the Main Stage at WoofaRoo. The Contest Providers will announce the Grand Prize Winner and the Secondary Prize Winner.&nbsp;<u><strong>FINALISTS MUST BE PRESENT TO CLAIM THE GRAND PRIZE.</strong></u>&nbsp;&nbsp;&nbsp;</p> 
+          <p><strong>4. HOW TO ENTER.</strong>&nbsp;There is no purchase necessary to enter the Contest. Enter using any of the methods of entry outlined below. No entries will be accepted by any other means:</p> 
+          <p>(a) The following methods of entry are acceptable (only methods of entry that checked are permitted):</p> 
+          <p><img src="https://brightkit-contests-live.s3-us-west-2.amazonaws.com/pages/150169891159821b5fde0df7.12455717.jpg" style="width: 12px; height: 13px;">&nbsp;<strong>Online Entries.</strong>&nbsp;To enter online, complete and submit the entry form located at www.windsorstar.com/woofaroo (the “<strong>Contest Website</strong>”).</p> 
+          <p><img src="https://brightkit-contests-live.s3-us-west-2.amazonaws.com/pages/150170783859823e3e193371.47241515.jpg" style="width: 12px; height: 13px;">&nbsp;<strong>In-Person Entries (trade show or other event).</strong>&nbsp;Not applicable.</p> 
+          <p><img src="https://brightkit-contests-live.s3-us-west-2.amazonaws.com/pages/150170783859823e3e193371.47241515.jpg" style="width: 12px; height: 13px;">&nbsp;<strong>Social Media Entries.</strong>&nbsp;Not applicable.</p> 
+          <p><img src="https://brightkit-contests-live.s3-us-west-2.amazonaws.com/pages/150169891159821b5fde0df7.12455717.jpg" style="width: 12px; height: 13px;">&nbsp;<strong>No Purchase Entries:</strong>&nbsp;For no purchase entries, clearly print your full name, complete mailing address, daytime telephone number, email address and age at time of entry on a plain piece of paper and submit it to the attention of Face of Woofa-Roo 2020 Contest c/o Postmedia Network at 300 Ouellette Avenue, Windsor, Ontario N9A 7B4.</p> 
+          <p>(b) The full Contest Rules and other information relating to the Contest can be found at www.windsorstar.com/woofaroo (the “<strong>Contest Website</strong>”).</p> 
+          <p>(c) Where required, each entrants must submit the following items (the “<strong>Work</strong>”) together with their entry (only checked boxes apply):</p> 
+          <p><img src="https://brightkit-contests-live.s3-us-west-2.amazonaws.com/pages/150170783859823e3e193371.47241515.jpg" style="width: 12px; height: 13px;">&nbsp;<strong>Drawing</strong>.&nbsp; Not applicable.</p> 
+          <p><img src="https://brightkit-contests-live.s3-us-west-2.amazonaws.com/pages/150169891159821b5fde0df7.12455717.jpg" style="width: 12px; height: 13px;">&nbsp;<strong>Photograph.</strong>&nbsp;Entrants must submit one (1) photo featuring a pet of any species, in .jpg or .png format, of no more than 2MB in size. In the “Title” field next to the space where the Photo is selected for uploading on the entry form, entrants will be required to include the pet’s name along with a brief description, such as the breed of the pet, its species, and any other defining characteristics of the pet, of no more than fifty (50) characters in total length.&nbsp;<u><strong>Duplicate photos will result in the disqualification of any and all photos featuring the pet in the duplicates.</strong></u></p> 
+          <p><img src="https://brightkit-contests-live.s3-us-west-2.amazonaws.com/pages/150170783859823e3e193371.47241515.jpg" style="width: 12px; height: 13px;">&nbsp;<strong>Other</strong>. Not applicable.</p> 
+          <p>(d) Where the entrants are required to submit a Work, the entrants represent and warrant that the Work:</p> 
+          <p>(i) is original to him/her and all right, title, and interest (including copyright) therein and thereto is owned and/or controlled by the entrant to the full extent necessary to enable the Contest Providers to use the Work as contemplated by these Contest Rules;</p> 
+          <p>(ii) does not violate any law, statute, ordinance or regulation;</p> 
+          <p>(iii) does not contain any reference to or likeness of any identifiable third parties, unless consent has been obtained from all such individuals and their parent/legal guardian if they are under the age of majority in their jurisdiction of residence;</p> 
+          <p>(iv) does not infringe upon the intellectual property or other statutory or common law rights of any third party; and</p> 
+          <p>(v) is not defamatory, trade libelous, pornographic or obscene, and further that it will not contain, depict, include, discuss or involve, without limitation, any of the following: nudity, alcohol/drug consumption or smoking, explicit or graphic sexual activity, or sexual innuendo, crude, vulgar or offensive language and/or symbols, derogatory characterizations of any ethnic, racial, sexual or religious groups, content that endorses, condones and/or discusses any illegal, inappropriate or risky behaviour or conduct, personal information of individuals, including, without limitation, names, telephone numbers and addresses (physical or electronic), commercial messages, comparisons or solicitations for products or services other than products of the Contest Providers; any identifiable third party products, trademarks, brands and/or logos, other than those of the Contest Providers, conduct or other activities in violation of these rules and/or any other content that is or could be considered inappropriate, unsuitable or offensive, all as determined by the Contest Providers in their sole discretion.</p> 
+          <p>(e) There is a limit of one (1) entry per pet per household during the Contest Period. Entries in excess of the permitted amount by the same entrant will not be accepted. Entrants may only use one (1) email address to enter, or otherwise participate in the Contest. If it is discovered that you attempted to: (i) obtain more than the permitted number of entries in the Contest; (ii) use more than one (1) email address to enter, or otherwise participate in the Contest; and/or (iii) use a script, macro, robotic, programmed, or any other automated means to participate in the Contest; the Contest Providers, in their sole discretion, may disqualify you and all of your entries may be subject to disqualification. In the case of multiple entries, only the first eligible entry will be considered.</p> 
+          <p>(f) All entries including the Work (where applicable) become the sole property of the Contest Providers and none will be returned for any reason. Entries must be received no later than the end of the Contest Period. Entries will be declared invalid if they are late, illegible, incomplete, damaged, irregular, mutilated, forged, garbled or mechanically or electronically reproduced. No communication or correspondence will be exchanged with entrants except with those selected for a Prize (defined below).</p> 
+          <p>(g) Entries submitted by mail must be&nbsp;<u>received</u>&nbsp;by the Contest Providers no later than the end of the Contest Period. Entries received after the end of the Contest Period will not qualify.</p> 
+          <p>(h) Where entries are received online, entries shall be deemed to be submitted by the authorized account holder of the e-mail address associated with the entry. For the purpose of the Contest Rules, “authorized account holder" of an e-mail address is defined as the natural person who is assigned to an e-mail address by an Internet access provider, online service provider, or other organization responsible for assigning e-mail addresses for the domain associated with the submitted e-mail address. Each selected entrant may be required to provide the Contest Providers with proof that the selected entrant is the authorized account holder of the e-mail address associated with the winning entry.</p> 
+          <p><strong>5. SOCIAL MEDIA RULES (IF APPLICABLE).</strong>&nbsp;If any portion of the Contest is running on Social Media, the following Social Media rules apply:</p> 
+          <p>(a) There is no charge to become a member of the Social Media website or like a page or become a follower or a fan.</p> 
+          <p>(b) Entrants will be required to visit the Social Media website and log into their account using their user name and password. Once logged in, entrants will be required find the Contest webpage on the Social Media website (as indicated above). Entrants will be required to follow the onscreen instructions required to enter the Contest and complete their personal information on the Contest entry page.</p> 
+          <p>(c) The Contest is in no way sponsored, endorsed or administered by, or associated with the Social Media website and the entrants are providing their information directly to the Contest Providers and not to the Social Media website.</p> 
+          <p>(d) By participating in the Contest, each entrant agrees to be bound by the terms and conditions, guidelines and privacy policies governing use of the Social Media website (the “Social Media Terms of Use”) which are posted on the Social Media website. The entrant further agrees to be bound by the decisions of the Social Media website in the event that the Social Media website blocks or shuts down a user account due to failure to abide by the Social Media Terms of Use, such decision to be final and binding in all respects. The Social Media website reserves the right, in its sole discretion, to suspend any user account found to be in breach of the Social Media Terms of Use.</p> 
+          <p>(e) By participating in the Contest, each entrant agrees to release the Social Media website from any and all liability for any loss, harm, damages, cost or expense arising out of participation in the Contest, participation in any Contest-related activity or the acceptance, use, or misuse of any Prize, including but not limited to costs, injuries, losses related to personal injuries, death, damage to, loss or destruction of property, rights of publicity or privacy, defamation, or portrayal in a false light, or from any and all claims of third parties arising therefrom.</p> 
+          <p>(f) Entrants may not create and/or use multiple Social Media website accounts in an attempt to gain more than the permitted number of entries and/or votes in connection with this Contest. Any entrant found to be using multiple accounts will be ineligible for this Contest.</p> 
+          <p>(g) All entries must be submitted in the name of an individual person and the Prize (as defined below) will only be awarded to the person whose name is associated with the winning Social Media website account.</p> 
+          <p>(h) Where required, entrants must be active holders of a non-private Social Media website account throughout the Contest Period and for a period of two (2) weeks thereafter. Due to the way that certain Social Media websites work, the Contest Providers may not receive entries from users with “protected” accounts (i.e. an entrant has set his/her account so that only pre-approved people can view their account activity).</p> 
+          <p>(i) Where a post is required to be posted by an entrant, the entrant will ensure that the post is accurately posted and includes the required text, links, photos, videos, hashtags exactly as required by the Contest Providers.</p> 
+          <p>(j) Where Work is submitted, entrants may encourage their friends and other eligible individuals to vote for the Work if there is a voting element, however, they are not allowed to offer any individual any form of incentive, inducement, prize or chance of receiving any incentive, inducement, or prize in furtherance of receiving such individual’s vote. Any entrant determined by the Contest Providers to be engaging in such behaviour will be disqualified.</p> 
+          <p>(k) The posting or re-posting of duplicate, or near duplicate, messages, photos, videos, boards or other similar posts is prohibited. An entrant found to be posting duplicate or near duplicate messages, photos, videos, boards or other similar posts will be ineligible for this Contest.</p> 
+          <p>(l) Use of any automated system to register for, or otherwise participate in the Contest is prohibited and is grounds for disqualification.</p> 
+          <p>(m) By participating in the Contest, entrants consent to the Contest Providers contacting them via the Social Media website only for the purposes of administering the Contest.</p> 
+          <p>(n) Charges may be applied, by a wireless service provider, for the use of the Social Media website through wireless internet use or application use from your wireless device. The wireless service provider is solely responsible for the service it provides to you. Postmedia is in no way responsible for the accuracy, timeliness, delivery or receipt of any messages, uploads or votes transmitted through the wireless service provider and disclaims any responsibility in respect thereof. Message and data rates may apply. Please consult your wireless service provider regarding such charges. You are solely responsible for such charges and Postmedia disclaims any responsibility for the payment of any charges in respect of your wireless service provider.</p> 
+          <p><strong>6. PRIZING.</strong></p> 
+          <p>(a) Prizing for this Contest includes:</p> 
+          <p><img src="https://brightkit-contests-live.s3-us-west-2.amazonaws.com/pages/150169891159821b5fde0df7.12455717.jpg" style="width: 12px; height: 13px;">&nbsp;<strong>Grand Prize.</strong>&nbsp;There is one (1) grand prize (the “<strong>Grand Prize</strong>”) available to be won by the Grand Prize winner (the “<strong>Grand Prize Winner</strong>”) consisting of the following:</p> 
+          <p style="margin-left: 0.5in;">(i) the distinction of being the Face of WoofaRoo 2020 which shall include a photo session for the Grand Prize Winner's pet (in the winning photo) from Curt Clayton Photography, from which an image will be selected and displayed on posters, brochures, social media, the WoofaRoo website and other websites to promote WoofaRoo 2020; and</p> 
+          <p style="margin-left: 0.5in;">(ii) one (1) gift basket from Crump's Naturals dog treats.</p> 
+          <p style="margin-left: 0.5in;">The Grand Prize has an approximate value of One Thousand Five Hundred Dollars (CDN $1,500.00).</p> 
+          <p><img src="https://brightkit-contests-live.s3-us-west-2.amazonaws.com/pages/150169891159821b5fde0df7.12455717.jpg" style="width: 12px; height: 13px;">&nbsp;<strong>Secondary Prize.</strong>&nbsp;There is one (1) secondary prize (the “<strong>Secondary Prize</strong>”) available to be won by the Secondary Prize winner (the “<strong>Secondary Prize Winner</strong>”) consisting of one (1) gift basket from Crump's Naturals dog treats. The Secondary Prize has an approximate value of One Hundred and Fifty Dollars (CDN $150.00).&nbsp;</p> 
+          <p><img src="https://brightkit-contests-live.s3-us-west-2.amazonaws.com/pages/150169891159821b5fde0df7.12455717.jpg" style="width: 12px; height: 13px;">&nbsp;<strong>Semi-Finalist Prize.&nbsp;</strong>There are two (2) semi-finalist prizes (the “<strong>Semi-Finalist Prize</strong>”) available to be won by the Contest semi-finalists (the two (2) semi-finalists that do not advance to the final period) (the “<strong>Semi-Finalist</strong>”) each consisting of one (1) gift basket of Crump's Naturals dog treats. Each Semi-Finalist Prize has an approximate value of One Hundred Dollars (CDN $100.00).</p> 
+          <p><img src="https://brightkit-contests-live.s3-us-west-2.amazonaws.com/pages/150169891159821b5fde0df7.12455717.jpg" style="width: 12px; height: 13px;">&nbsp;<strong>Finalist Prize.&nbsp;</strong>There are two (2) Finalist prizes (the “<strong>Finalist Prizes</strong>”) available to be won by the Contest finalists (the two (2) semi-finalists that advance to the final period) (the “<strong>Finalists</strong>”) each consisting of one (1) admission ticket to WoofaRoo taking place on July 18, 2019 at the Libro Sports Complex in Amherstburg, Ontario. Each Finalist must arrive at WoofaRoo prior to 12:00 p.m. ET on July 18, 2019 and must bring the pet that is the subject of their Finalist photo in order to claim the Finalist prize. Each Finalist Prize has an approximate value of Five Dollars (CDN $5.00).&nbsp;</p> 
+          <p>(b)&nbsp;The Grand Prize(s), the Secondary Prize(s), the Finalist Prize(s) and the Consolation Prize(s) (as applicable) are hereafter collectively referred to as the “<strong>Prize</strong>” or the “<strong>Prizes</strong>” and the Grand Prize Winner(s), the Secondary Prize Winner(s), the Finalist(s) and the Consolation Prize Winner(s) (as applicable) are hereafter collectively referred to as the “<strong>Winner</strong>” or the “<strong>Winners</strong>”.</p> 
+          <p>(c)&nbsp;The Winner is not entitled to monetary difference between actual Prize value and stated approximate Prize value, if any.</p> 
+          <p>(d)&nbsp;The Prize will be distributed within two (2) business days after a Winner has been successfully contacted and notified of his/her Prize and fulfilled the requirements set out herein. The Prize must be claimed within two (2) business days of notification of being selected as a Winner. Failure to claim the Prize within the allotted time period may result in your disqualification and forfeiture of all rights to the Prize (in the Contest Provider’s sole discretion).</p> 
+          <p>(e)&nbsp;Where the Prize, or a portion of the Prize includes access to an event or a festival that takes place for more than one (1) day, or includes travel, the Winner and his/her guest(s) (where applicable) must be available to attend or travel, as applicable, from not applicable through not applicable. Should the Winner and his/her guest(s) (where applicable) be unable to attend or travel on the dates and times designated by the Contest Providers, the Prize may be forfeited and awarded to an alternate winner. The Winner and his/her guest(s) will be responsible for (without limitation) transportation to and from any location, venue, airport and/or bus terminal and/or train station (including originating and departing airport), any local transportation costs, travel and medical insurance, travel documentation, airport improvement fees, taxes, gratuities, accommodations, telephone calls, in-room charges, meals and alcoholic and non-alcoholic beverages and any other expense not explicitly included in the Prize.</p> 
+          <p>(f)&nbsp;Where the Winner may have a guest accompany them, guests must comply with the Contest Rules and sign and return the Release (described below). The Prize is awarded solely to the Winner and guests do&nbsp;not have any rights to the Prize independent of the Winner, and may not travel without the Winner.</p> 
+          <p>(g)&nbsp;Prizes must be accepted as awarded and cannot be transferred, assigned, substituted or redeemed for cash, except at the sole discretion of the Contest Providers. Any unused portion of a Prize will be forfeited and have no cash value. The Contest Providers reserve the right, in its and their sole discretion, to substitute a prize of equal or greater value if a Prize (or any portion thereof) cannot be awarded for any reason.</p> 
+          <p>(h)&nbsp;Where a Prize, or a portion of the Prize, is mailed or shipped, it shall not be insured and the Contest Providers shall not assume any liability for lost, damaged or misdirected Prizes.</p> 
+          <p><strong>7. SEMI-FINALIST SELECTION.&nbsp;</strong>Four (4) Semi-Finalists shall be selected as follows:</p> 
+          <p>(a)&nbsp;Between 12:01 p.m. ET on July 5, 2019 and 12:00 p.m. ET on July 12, 2019 in Windsor, Ontario, all eligible entries received during the Entry Period will be evaluated by a panel of judges, who will then select the thirty-two (32) Qualifying Photos which best meet the judges’ criteria listed below. The judges, in their absolute discretion, shall select the Qualifying Photos based upon the Judging Criteria. The decisions of the judges shall be final and binding and may not be challenged in any way.</p> 
+          <p><strong>Judging Criteria</strong>. originality, overall appeal, and composition.</p> 
+          <p>(b)&nbsp;During the Voting Period, Photos will be posted to the Voting Website as outlined in Section 3 above. At the end of Voting Sub-Period Three, the four (4) Qualifying Photos that have received the most votes shall be declared as the Semi-Finalists.</p> 
+          <p>(c)&nbsp;If, as a result of an error relating to the entry process or any other aspect of the Contest, there are more selected entrants than contemplated in these Contest Rules, there will be a random draw amongst all eligible Prize claimants after the Contest’s closing date to award the correct number of Prizes.&nbsp;</p> 
+          <p><strong>8. FINALIST SELECTION.&nbsp;</strong>Two (2) Finalists shall be selected as follows:</p> 
+          <p>(a)&nbsp;On July 18, 2019 at approximately 12:00 pm ET in Windsor, Ontario, the two (2) runner-up Semi-Finalists (the two (2) Semi-Finalists that do not advance to the final period) will be deemed the winners of the Semi-Finalist Prize.</p> 
+          <p>(b)&nbsp;The two (2) remaining Semi-Finalists whose Photos have received the most votes shall advance to the final Voting Period (Voting Sub-Period Five) as outlined in Section 3 above and will be deemed the Finalists in the Contest.</p> 
+          <p>(c)&nbsp;The Finalists will then be contacted and asked to attend WoofaRoo taking place at the Libro Sports Complex in Amherstburg, Ontario on July 20, 2019.&nbsp;<strong>Finalists must arrive at WoofaRoo prior to 12:00 p.m. ET on July 20, 2019. Finalists must be present to claim the Grand Prize.​ ​</strong></p> 
+          <p>(d)&nbsp;If the selected Semi-Finalist does not respond in accordance with the Contest Rules, he/she will be disqualified and will not receive a Prize and another entrant may be selected as a Semi-Finalist in the Contest Providers’ sole discretion until such time as an entrant satisfies the terms set out herein. The Contest Providers are not responsible for the failure for any reason whatsoever of a selected Semi-Finalist to receive notification or for the Contest Providers to receive a selected entrant’s response.</p> 
+          <p>(e)&nbsp;If, as a result of an error relating to the entry process or any other aspect of the Contest, there are more selected entrants than contemplated in these Contest Rules, there will be a random draw amongst all eligible Prize claimants after the Contest’s closing date to award the correct number of Prizes.</p> 
+          <p><strong>9. WINNER SELECTION.</strong>&nbsp;One (1) Grand Prize Winner and one (1) Secondary Prize Winner shall be selected as follows:</p> 
+          <p>(a)&nbsp;On or about July 19, 2019 in Windsor, Ontario, the Finalist Photo that received the most votes during Voting Sub-Period Five shall be declared as the winning Photo and the Grand Prize Winner. The runner-up Finalist will be declared as the Secondary Prize Winner. Each entrant shall meet all of the eligibility requirements and be eligible to win only one (1) Prize.</p> 
+          <p>(b)&nbsp;Before being declared a Winner, the Grand Prize Winner and the Secondary Prize Winner shall be required to comply with the Contest Rules and sign and return the Release (described below).</p> 
+          <p>(c)&nbsp;SELECTED ENTRANTS WILL BE ANNOUNCED LIVE AT WOOFAROO ON JULY 20, 2019 BY NO LATER THAN 3:00 P.M. ET AND MUST RESPOND IMMEDIATELY. Upon notification, the selected entrant must respond in person to the Contest Providers by 3:00 p.m. ET on July 20, 2019. If the selected Finalist does not respond in accordance with the Contest Rules, he/she will be disqualified and will not receive a Prize and another entrant may be selected in the Contest Providers’ sole discretion until such time as an entrant satisfies the terms set out herein. The Contest Providers are not responsible for the failure for any reason whatsoever of a selected entrant to receive notification or for the Contest Providers to receive a selected entrant’s response.</p> 
+          <p>(d)&nbsp;If, as a result of an error relating to the entry process, drawing or any other aspect of the Contest, there are more selected entrants than contemplated in these Contest Rules, there will be a random draw amongst all eligible Prize claimants after the Contest’s closing date to award the correct number of Prizes.</p> 
+          <p><strong>10. RELEASE.</strong>&nbsp;Before being declared as a Winner, the selected entrant, and where applicable, the Winner’s guest will be required to execute a legal agreement and release (the “<strong>Release</strong>”) that confirms his/her: (i) eligibility for the Contest and compliance with these Contest Rules; (ii) acceptance of the Prize as offered; (iii) release of each of the Contest Providers, other parties related to the Contest and their respective parent companies, subsidiaries, affiliates and/or related companies and each of their employees, directors, officers, suppliers, agents, sponsors, administrators, licensees, representatives, advertising, media buying and promotional agencies (collectively, the “<strong>Releasees</strong>”) from any and all liability for any loss, harm, damages, cost or expense arising out of participation in the Contest, participation in any Contest-related activity or the acceptance, use, or misuse of any Prize, including but not limited to costs, injuries, losses related to personal injuries, death, damage to, loss or destruction of property, rights of publicity or privacy, defamation, or portrayal in a false light, or from any and all claims of third parties arising therefrom; and (iv) grant to the Contest Providers of the unrestricted right, in the Contest Providers’ collective or individual discretion, to produce, reproduce, publish, convert, broadcast, communicate by telecommunication, exhibit, distribute, translate, adapt and otherwise use and re-use the Winner’s and his/her Guest’s (where applicable) name, photograph, likeness, voice and biography and where an entrant is providing Work to the Contest Providers in connection with the Contest, the Work (where applicable) in any and all media now known or hereafter devised, in connection with the Contest and the promotion and exploitation thereof. The executed Release must be returned within two (2) business days of an entrant receiving verification that he/she has been selected as a Winner or the selected entrant will be disqualified and the Prize forfeited.</p> 
+          <p><strong>11. INDEMNIFICATION BY ENTRANT.&nbsp;</strong>By entering the Contest, entrant releases and holds Releasees harmless from any and all liability for any injuries, loss or damage of any kind to the entrant or any other person, including personal injury, death, or property damage, resulting in whole or in part, directly or indirectly, from acceptance, possession, use or misuse of any Prize, participation in the Contest, any breach of the Contest Rules, or in any Prize-related activity. The entrant agrees to fully indemnify Releasees from any and all claims by third parties relating to the Contest, without limitation.</p> 
+          <p><strong>12. RIGHTS CLEARANCE.&nbsp;</strong>Where an entrant is providing the Work to the Contest Providers in connection with the Contest, each entrant shall retain all right, title and interest (including copyright) in and to the Work, and shall grant to the Contest Providers a worldwide, gratuitous and irrevocable license to copy, use, modify, edit,&nbsp;reproduce, display, adapt and transmit the Work in whole or in part, for use in all media now known or hereafter devised in perpetuity beginning on the date of entry, including, but not limited to, in connection with the administration, promotion and exploitation of the Contest or for any other reason. The entrant hereby confirms that the Work is an original work, solely created by the entrant, and that no third party participated as an author, co-author, photographer, videographer or otherwise in the creation of the Work or any part thereof and the entrant waives all moral rights in and to the Work in favour of the Contest Providers. The Contest Providers assume no responsibility for any claims of infringement of rights to copyright, privacy and/or personality, and all such liability shall remain with the entrant. In addition, each entrant represents to Contest Providers that the Work do not infringe any copyright interest of any third party and that the Work is not defamatory or obscene and does not violate any laws relating to hate speech or otherwise. The Contest Providers reserve the right to exclude any Work on the basis of concerns relating to the rights of third parties, including but not limited to privacy, copyright, defamation, rights of personality, obscenity or hate speech, as determined by the Contest Providers in their sole discretion.</p> 
+          <p><strong>13. LIMITATION OF LIABILITY.&nbsp;</strong>The Contest Providers assume no responsibility or liability for lost, late, unintelligible/illegible, falsified, damaged, misdirected or incomplete entries, notifications, responses, replies or any Release, or, as applicable, for any computer, online, software, telephone, hardware or technical malfunctions that may occur, including but not limited to malfunctions that may affect the transmission or non-transmission of an entry. The Contest Providers are not responsible for any incorrect or inaccurate information, whether caused by, as applicable, website users or by any of the equipment or programming associated with or utilized in the Contest or by any technical or human error which may occur in the administration of the Contest. The Contest Providers assume no responsibility for any error, omission, interruption, deletion, defect, delay in operation or transmission, communications line failure, theft or destruction or unauthorized access to, or alteration of, entries. The Contest Providers are not responsible for any problems, failures or technical malfunction of, as applicable, any telephone network or lines, computer online systems, servers, providers, computer equipment, software, e-mail, players, or browsers, on account of technical problems or traffic congestion on the Internet, at any website, or on account of any combination of the foregoing. The Contest Providers are not responsible for any injury or damage to entrant or, as applicable, to any computer related to or resulting from participating or downloading materials in this Contest. Entrant assumes liability for injuries caused or claimed to be caused by participating in the Contest, or by the acceptance, possession, use of, or failure to receive any Prize. The Contest Providers assume no responsibility or liability in the event that the Contest cannot be conducted as planned for any reason, including those reasons beyond the control of the Contest Providers, such as, as applicable, infection by computer virus, bugs, tampering, unauthorized intervention, fraud, technical failures, or corruption of the administration, security, fairness, integrity or proper conduct of this Contest, the Contest Website and, where applicable, any Social Media website.</p> 
+          <p><strong>14. CONDUCT.&nbsp;</strong>By participating in the Contest, each entrant agrees to be bound by the Contest Rules, which will be posted at the Contest Website or made available upon request by self-addressed, stamped envelope to the Contest Providers throughout the Contest Period. Entrant further agrees to be bound by the decisions of the Contest Providers and, the judges (where applicable), which shall be final and binding in all respects. The Contest Providers reserve the right, in their sole discretion, to disqualify any entrant found to be: (a) violating the Contest Rules; (b) tampering or attempting to tamper with the entry process or the operation of the Contest or the Contest Website (where applicable); (c) violating the terms of service, conditions of use and/or general rules or guidelines of any canada.com property or service; and/or (d) acting in an unsportsmanlike or disruptive manner, or with intent to annoy, abuse, threaten or harass any other person. CAUTION: ANY ATTEMPT TO DELIBERATELY DAMAGE THE CONTEST WEBSITE (WHERE APPLICABLE) OR UNDERMINE THE LEGITIMATE OPERATION OF THE CONTEST MAY BE A VIOLATION OF CRIMINAL AND CIVIL LAWS. SHOULD SUCH AN ATTEMPT BE MADE, THE CONTEST PROVIDERS RESERVE THE RIGHT TO SEEK REMEDIES AND DAMAGES TO THE FULLEST EXTENT PERMITTED BY LAW, INCLUDING BUT NOT LIMITED TO CRIMINAL PROSECUTION. If a portion of the Contest Prize includes admission to an event and/or venue, the Winner and his/her guest must at all times behave appropriately and observe the Contest Rules and any other rules or regulations in force at the event and venue. The Contest Providers reserve the right to remove from the location/venue any Winner and/or guest who breaks such rules and/or fails to behave appropriately and to disqualify such Winner and/or guest.</p> 
+          <p><strong>15. PRIVACY/USE OF PERSONAL INFORMATION.</strong></p> 
+          <p>(a)&nbsp;By participating in the Contest, entrant: (i) grants to the Contest Providers the right to use his/her full name, age, mailing address, telephone number and/or e-mail address and/or any other personal information provided (the “<strong>Personal Information</strong>”) for the purpose of administering the Contest, including but not limited to contacting and announcing the Winners; (ii) grants to the Contest Providers the right to use his/her Personal Information for publicity and promotional purposes relating to the Contest, in any and all media now known or hereafter devised, without further compensation unless prohibited by law; and (iii) acknowledges that the Contest Providers may disclose his/her Personal Information to third party agents and service providers of any of the Contest Providers in connection with any of the activities listed in (i) and (ii) above.</p> 
+          <p>(b)&nbsp;Where an entrant opts-in online or on a ballot, they consent to Postmedia’s and any of its corporate affiliate’s use of his/her Personal Information to be contacted to (i) promote draws, interactive features and contests similar to the Contest; (ii) promote opportunities to subscribe to Postmedia newsletters or promotional clubs; (iii) be notified about programs, special events and related products or services; and (iv) be entered into other Postmedia-sponsored draws and/or contests.</p> 
+          <p>(c)&nbsp;Where an entrant opts-in online or on a ballot, they consent to Postmedia’s disclosure of his/her Personal Information to third parties, as indicated on the entry form to be contacted to (i) promote draws, interactive features and contests similar to the Contest; (ii) promote opportunities to subscribe to newsletters or promotional clubs; (iii) be notified about programs, special events and related products or services; and (iv) be entered into other draws and/or contests.</p> 
+          <p>(d)&nbsp;The Contest Providers will use the entrant’s Personal Information only for identified purposes, and protect the entrant’s Personal Information in a manner that is consistent with the Postmedia Network Privacy Policy located at&nbsp;<u>https://pages.postmedia.com/privacy-statement/</u>&nbsp;and applicable privacy laws.</p> 
+          <p><strong>16. INTELLECTUAL PROPERTY.&nbsp;</strong>All intellectual property, including but not limited to trademarks, trade names, logos, designs, promotional materials, web pages, source code, drawings, illustrations, slogans and representations are owned by Postmedia, the Contest Providers, any prize provider and/or their affiliates as applicable. All rights are reserved. Unauthorized copying or use of any copyrighted material or intellectual property without the express written consent of its owner is strictly prohibited.</p> 
+          <p><strong>17. TERMINATION.&nbsp;</strong>The Contest Providers reserve the right, in their sole discretion, to terminate the Contest, in whole or in part, and/or modify, amend or suspend the Contest, and/or the Contest Rules in any way, at any time, for any reason without prior notice, subject to the jurisdiction of the Régie des alcools, des courses et des jeux if the Contest is open to residents of the province of Quebec.</p> 
+          <p><strong>18. LAW.</strong>&nbsp;These are the official Contest Rules. The Contest is subject to applicable federal, provincial and municipal laws and regulations. The Contest Rules are subject to change without notice in order to comply with any applicable federal, provincial and municipal laws or the policy of any other entity having jurisdiction over the Contest Providers. All issues and questions concerning the construction, validity, interpretation and enforceability of the Contest Rules or the rights and obligations as between the entrant and the Contest Providers in connection with the Contest shall be governed by and construed in accordance with the laws of the province of Ontario including procedural provisions without giving effect to any choice of law or conflict of law rules or provisions that would cause the application of any other jurisdiction’s laws.</p> 
+          <p><strong>19. LANGUAGE DISCREPANCY.&nbsp;</strong>In the event of any discrepancy or inconsistency between the terms and conditions of the Contest Rules and disclosures or other statements contained in any Contest-related materials, including but not limited to the Contest entry form, or point of sale, television, print or online advertising, the terms and conditions of the Contest Rules shall prevail, govern and control. If the Contest is open to residents of&nbsp;the province of Quebec and there is any discrepancy or inconsistency between the English language version and the French language version of the Contest Rules, the English version shall prevail, govern and control.</p> 
+          <p><strong>20. FOR RESIDENTS OF QUEBEC.&nbsp;</strong>Where the Contest is open to residents of the province of Quebec, any litigation respecting the conduct or organization of a publicity contest may be submitted to the Régie des alcools, des courses et des jeux for a ruling. Any litigation respecting the awarding of a prize may be submitted to the Régie only for the purpose of helping the parties reach a settlement.</p> 
+          <p><strong>21. NO ASSOCIATION.&nbsp;</strong>None of the parties listed above, including any Social Media websites, are in any way associated with the programs owned or operated by Postmedia. Where the Contest is running on any Social Media website, the Contest Providers represent that the Contest is in no way sponsored, endorsed or administered by, or associated with any Social Media website. Each entrant is providing his/her Personal Information to the Contest Providers and not to any Social Media companies.</p> 
+         </div> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+    <div id="footer" data-sel="footer"> 
+     <div class="container"> 
+      <div class="row"> 
+       <div class="textaligncenter"> 
+        <div class="page-content" data-sel="footer_content"> 
+         <p style="text-align: center;"><em>No purchase necessary. Contest open to the legal residents of Ontario. Entrants must be over the age of majority in their province or territory. Odds of winning depend on the number of entries received. Entries must include a Photo of a pet of no more than 2MB in size along with the name of the pet and a brief description of the breed of the pet (maximum 50 characters) in the Title field below the Photo. One entry per person per email address during the Contest Period. Contest starts June 24, 2019 and ends July 19, 2019. Winners will be determined by public voting and announced on July 20, 2019 in Amherstburg, Ontario. There are 2 Semi-Finalist Prizes each consisting of a gift basket from Crump’s Naturals valued at CDN $100.00, 1 Secondary Prize consisting of a gift basket from Crump’s Naturals valued at CDN $150.00 and 1 Grand Prize consisting of a pet photo session from Curt Clayton Photography and a gift basket from Crump’s Naturals and the title of the Face of Woofaroo 2020, valued at CDN $1500.00 available to be won.&nbsp; Full Contest Rules can be found at the Contest Website.</em></p> 
+         <p>&nbsp;</p> 
+        </div> 
+        <div class="social-widget clearfix"> 
+         <a href="#" class="facebook _contestShare" data-type="facebook" data-source="footer" data-sel="footer_share_facebook"><i class="font-icon-social-facebook"></i></a> 
+         <a href="#" class="twitter _contestShare" data-type="twitter" data-source="footer" data-sel="footer_share_twitter"><i class="font-icon-social-twitter"></i></a> 
+         <a href="#" class="google _contestShare" data-type="google" data-source="footer" data-sel="footer_share_google"><i class="font-icon-social-google-plus"></i></a> 
+         <a href="#" class="pinterest _contestShare" data-type="pinterest" data-source="footer" data-sel="footer_share_pinterest"><i class="font-icon-social-pinterest"></i></a> 
+        </div> 
+        <ul> 
+        </ul> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+   <div id="oauth-vote" style="display:none;"> 
+    <div class="row"> 
+     <div class="col-md-12"> 
+      <h3 style="font-size: 22px;">Step 2 - Register using your social media account to upload your entry.</h3> 
+     </div> 
+     <div class="col-md-12 clearfix" style="padding-left:49px;padding-top:15px;"> 
+     </div> 
+    </div> 
+   </div> 
+   <script type="text/javascript">
+    function darklaunch() {
+        var languageSettings = 1;
+        var iframeInfiniteScrollFix = 1;
+
+        // Rather than doing the above, you can now add lines to the dlCodes object below, these can then be
+        // accessed via window.dl.isEnabled('YOUR_DL_CODE')
+        var dlCodes = {
+            'PUB_4968_JPLAYER_ANALYTICS_NOT_UPDATING': true,
+            'PUB_6733_JDANG_VIDEO_SIZE_LIMIT': true,
+            'PUB_7968_JDANG_BUTTON_CLICK_EVENT_FIX': true,
+            'PUB_8574_NSANTRY_QUIZ_ANSWER_SKIP_FIX': true,
+            'PUB_8700_NSANTRY_UGC_DUPLICATE_SUBMISSION_FIX': true,
+        };
+
+        return {
+            getLanguageSettings: function() {
+                return languageSettings;
+            },
+            getIframeInfiniteScrollFix: function() {
+                return iframeInfiniteScrollFix;
+            },
+            isEnabled: function(dlCode) {
+                return dlCodes[dlCode];
+            }
+        }
+    }
+    window.dl = darklaunch();
+</script> 
+   <script>
+    var Memelabs = {},
+        Invoke = {},
+        formValues = {},
+        _gaq = _gaq || [];
+
+    
+</script> 
+   <script src="https://view-assets.hscampaigns.com/assets/templates/sweepstakes-v2/js/app.min.js?cb=4.17.15-0119a1ae408600554e90d22f33d691b6ad754f7e"></script> 
+   <!--[if IE 8]>
+    <script src="https://view-assets.hscampaigns.com/assets/ugc/libs/selectivizr/selectivizr-min.js?cb=4.17.15-0119a1ae408600554e90d22f33d691b6ad754f7e"></script>
+
+    <script src="https://view-assets.hscampaigns.com/assets/ugc/libs/placeholder/placeholder.min.js?cb=4.17.15-0119a1ae408600554e90d22f33d691b6ad754f7e"></script>
+
+<![endif]--> 
+   <script>
+    // Change Enter Now to Vote Now
+$('a#enternow_tab').text('Voting Final');
+    Brightkit.langFiles = {"loading":"Loading more entries...","load_more":"Scroll down to load more entries","click_for_comments":"Click for comments","modal":{"close":"Close","register":"Register","search":"Search","share":"Share","facebook":"Facebook","twitter":"Twitter","google":"Google+","pinterest":"Pinterest","linkedin":"LinkedIn","instagram":"Instagram","pin_it":"Pin It","no_comments":"No comments","comment":"Comment","comments":"Comments","add_comment":"Add Comment","please_add_comment":"Please add your comment","email_placeholder":"Your email","name_placeholder":"Your name","comment_placeholder":"Your comment","submit":"Submit","cancel":"Cancel","of":"of","about":"about","vote_authorize":"Please authorize below to vote","comment_authorize":"Please authorize below to comment","validation":{"email":"The email field is required.","invalid_email":"The email format is invalid.","name":"The name field is required.","comment":"The comment field is required.","alpha":"The name may only contain letters."}},"errors":{"submit":"There was an error submitting your entry. Please refresh your browser and try again.","campaign_down":"We're experiencing a problem loading this campaign and will have things back to normal shortly.","max_uploads":"You can only upload 2 photos. Try again."},"validation":{"file_type":"Incorrect file type, please try again","video_file_size":"The video file size must be less than 300MB"},"votes":{"max_votes":"You have already entered and only one entry per day is allowed.","max_entries":"You have reached the maximum number of submissions.","facebook_to_vote":"Connect to Facebook to vote","email_to_vote":"Enter your email to vote","thank_you":"Thank you for your vote!","incentivized_share":"Share to your social networks","vote":"Vote","votes":"Votes","tooltip":"Vote for this Entry","error":"An error has occurred. Please refresh and try again momentarily."},"freemium_sweeps":{"validation":{"email":"Email is required","invalid_email":"Email format is invalid","first_name":"First name is required","last_name":"Last name is required","phone_number":"Enter only numbers","file_type":"Incorrect file type, please try again","tos":"You must agree to the Terms & Conditions","image":"A photo is required","video":"A video is required","required":"This field is required"},"counter":{"entry":"entry","entries":"entries","less_than_a_day":"Less than a day","day":"day","days":"days","daysleft_signup":"You have <span class=\"days-left-display\">:day day<\/span> left to sign up|You have <span class=\"days-left-display\">:day days<\/span> left to sign up","daysleft_less_than":"You have less than a day left to enter","daysleft_less_than_signup":"You have less than a day left to sign up","daysleft":"You have <span class=\"days-left-display\">:day day<\/span> left to enter|You have <span class=\"days-left-display\">:day days<\/span> left to enter","sweepstakes_ends":"Sweepstakes ends at :date ","signup_ends":"Sign up ends at :date","photo_ends":"Photo contest ends at :date","video_ends":"Video contest ends at :date"}}};
+</script> 
+   <script>
+                var gaAccounts = [
+                    { 'label': 'brightkit', 'ua': 'UA-44377439-5' }
+                ];
+
+                
+                
+                Analyticskit.install(gaAccounts);
+            </script> 
+  </div> 
+  <script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"dfd35c7377","applicationID":"12009886","transactionName":"Z1cBZhNXDERZBkZYWF4dIlEVXw1ZFzFaVFpVcQxcFUQNW1QAQHFTWUETXgBPIVhWEVdCQw==","queueTime":0,"applicationTime":363,"atts":"SxACEFtNH0o=","errorBeacon":"bam.nr-data.net","agent":""}</script> 
+ </body>
+</html>

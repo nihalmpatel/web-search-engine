@@ -1,0 +1,311 @@
+PriceSpecification - schema.org Type schema.org Documentation Schemas Home PriceSpecification Thing > Intangible > StructuredValue > PriceSpecification A structured value representing a price or price range. Typically, only the subclasses of this type are used for markup. It is recommended to use MonetaryAmount to describe independent amounts of money such as a salary, credit card limits, etc. [more...] Canonical URL: http://schema.org/PriceSpecification Leave public feedback on this term 💬 Check for open issues. Property Expected Type Description Properties from PriceSpecification eligibleQuantity QuantitativeValue  The interval and unit of measurement of ordering quantities for which the offer or price specification is valid. This allows e.g. specifying that a certain freight charge is valid only for a certain quantity. eligibleTransactionVolume PriceSpecification  The transaction volume, in a monetary unit, for which the offer or price specification is valid, e.g. for indicating a minimal purchasing volume, to express free shipping above a certain order volume, or to limit the acceptance of credit cards to purchases to a certain minimal amount. maxPrice Number  The highest price if the price is a range. minPrice Number  The lowest price if the price is a range. price Number  or Text  The offer price of a product, or of a price component when attached to PriceSpecification and its subtypes. Usage guidelines: Use the priceCurrency property (with standard formats: ISO 4217 currency format e.g. "USD"; Ticker symbol for cryptocurrencies e.g. "BTC"; well known names for Local Exchange Tradings Systems (LETS) and other currency types e.g. "Ithaca HOUR") instead of including ambiguous symbols such as '$' in the value. Use '.' (Unicode 'FULL STOP' (U+002E)) rather than ',' to indicate a decimal point. Avoid using these symbols as a readability separator. Note that both RDFa and Microdata syntax allow the use of a "content=" attribute for publishing simple machine-readable values alongside more human-friendly formatting. Use values from 0123456789 (Unicode 'DIGIT ZERO' (U+0030) to 'DIGIT NINE' (U+0039)) rather than superficially similiar Unicode symbols. priceCurrency Text  The currency of the price, or a price component when attached to PriceSpecification and its subtypes. Use standard formats: ISO 4217 currency format e.g. "USD"; Ticker symbol for cryptocurrencies e.g. "BTC"; well known names for Local Exchange Tradings Systems (LETS) and other currency types e.g. "Ithaca HOUR". validFrom Date  or DateTime  The date when the item becomes valid. validThrough Date  or DateTime  The date after when the item is not valid. For example the end of an offer, salary period, or a period of opening hours. valueAddedTaxIncluded Boolean  Specifies whether the applicable value-added tax (VAT) is included in the price specification or not. Properties from Thing additionalType URL  An additional type for the item, typically used for adding more specific types from external vocabularies in microdata syntax. This is a relationship between something and a class that the thing is in. In RDFa syntax, it is better to use the native RDFa syntax - the 'typeof' attribute - for multiple types. Schema.org tools may have only weaker understanding of extra types, in particular those defined externally. alternateName Text  An alias for the item. description Text  A description of the item. disambiguatingDescription Text  A sub property of description. A short description of the item used to disambiguate from other, similar items. Information from other properties (in particular, name) may be necessary for the description to be useful for disambiguation. identifier PropertyValue  or Text  or URL  The identifier property represents any kind of identifier for any kind of Thing, such as ISBNs, GTIN codes, UUIDs etc. Schema.org provides dedicated properties for representing many of these, either as textual strings or as URL (URI) links. See background notes for more details. image ImageObject  or URL  An image of the item. This can be a URL or a fully described ImageObject. mainEntityOfPage CreativeWork  or URL  Indicates a page (or other CreativeWork) for which this thing is the main entity being described. See background notes for details. Inverse property: mainEntity. name Text  The name of the item. potentialAction Action  Indicates a potential Action, which describes an idealized action in which this thing would play an 'object' role. sameAs URL  URL of a reference Web page that unambiguously indicates the item's identity. E.g. the URL of the item's Wikipedia page, Wikidata entry, or official website. subjectOf CreativeWork  or Event  A CreativeWork or Event about this Thing. Inverse property: about. url URL  URL of the item. Instances of PriceSpecification may appear as values for the following properties Property On Types Description baseSalary EmployeeRole  or JobPosting  The base salary of the job or of an employee in an EmployeeRole. eligibleTransactionVolume Demand  or Offer  or PriceSpecification  The transaction volume, in a monetary unit, for which the offer or price specification is valid, e.g. for indicating a minimal purchasing volume, to express free shipping above a certain order volume, or to limit the acceptance of credit cards to purchases to a certain minimal amount. healthPlanCopay HealthPlanCostSharingSpecification  Whether The copay amount. minimumPaymentDue Invoice  The minimum payment required at this time. netWorth Person  The total financial value of the person as calculated by subtracting assets from liabilities. priceSpecification Demand  or Offer  or TradeAction  One or more detailed price specifications, indicating the unit price and delivery or payment charges. totalPaymentDue Invoice  The total amount due. totalPrice Reservation  or Ticket  The total price for the reservation or ticket, including applicable taxes, shipping, etc. Usage guidelines: Use values from 0123456789 (Unicode 'DIGIT ZERO' (U+0030) to 'DIGIT NINE' (U+0039)) rather than superficially similiar Unicode symbols. Use '.' (Unicode 'FULL STOP' (U+002E)) rather than ',' to indicate a decimal point. Avoid using these symbols as a readability separator. More specific Types CompoundPriceSpecification DeliveryChargeSpecification PaymentChargeSpecification UnitPriceSpecification Acknowledgement This class is derived from the GoodRelations Vocabulary for E-Commerce, created by Martin Hepp. GoodRelations is a data model for sharing e-commerce data on the Web that can be expressed in a variety of syntaxes, including RDFa and HTML5 Microdata. More information about GoodRelations can be found at http://purl.org/goodrelations/. Examples Example 1 Without Markup Microdata RDFa JSON-LD An example of a invoice for a purchase and installation.
+ACME Home Heating
+Bill for: New furnace and installation
+Customer: Jane Doe
+payment due: 2015-01-30
+minimum payment: $0.00
+total due: $0.00
+payment status: paid
+order: furnace model ABC123
+order: installation labor
+ <div itemscope itemtype="http://schema.org/Invoice">
+  <h1 itemprop="description">New furnace and installation</h1>
+  <div itemprop="broker" itemscope itemtype="http://schema.org/LocalBusiness">
+    <b itemprop="name">ACME Home Heating</b>
+  </div>
+  <div itemprop="customer" itemscope itemtype="http://schema.org/Person">
+    <b itemprop="name">Jane Doe</b>
+  </div>
+  <time itemprop="paymentDueDate">2015-01-30</time>
+  <div itemprop="minimumPaymentDue" itemscope itemtype="http://schema.org/PriceSpecification">
+    <span itemprop="price">0.00</span>
+    <span itemprop="priceCurrency">USD</span>
+  </div>
+  <div itemprop="totalPaymentDue" itemscope itemtype="http://schema.org/PriceSpecification">
+    <span itemprop="price">0.00</span>
+    <span itemprop="priceCurrency">USD</span>
+  </div>
+  <link itemprop="paymentStatus" href="http://schema.org/PaymentComplete" />
+  <div itemprop="referencesOrder" itemscope itemtype="http://schema.org/Order">
+    <span itemprop="description">furnace</span>
+    <time itemprop="orderDate">2014-12-01</time>
+    <span itemprop="orderNumber">123ABC</span>
+    <div itemprop="orderedItem" itemscope itemtype="http://schema.org/Product">
+      <span itemprop="name">ACME Furnace 3000</span>
+      <meta itemprop="productID" content="ABC123" />
+    </div>
+  </div>
+  <div itemprop="referencesOrder" itemscope itemtype="http://schema.org/Order">
+    <span itemprop="description">furnace installation</span>
+    <time itemprop="orderDate">2014-12-02</time>
+    <div itemprop="orderedItem" itemscope itemtype="http://schema.org/Service">
+      <span itemprop="description">furnace installation</span>
+    </div>
+  </div>
+</div>
+ <div vocab="http://schema.org/" typeof="Invoice">
+  <h1 property="description">New furnace and installation</h1>
+  <div property="broker" typeof="/LocalBusiness">
+    <b property="name">ACME Home Heating</b>
+  </div>
+  <div property="customer" typeof="Person">
+    <b property="name">Jane Doe</b>
+  </div>
+  <time property="paymentDueDate">2015-01-30</time>
+  <div property="minimumPaymentDue" typeof="PriceSpecification">
+    <span property="price">0.00</span>
+    <span property="priceCurrency">USD</span>
+  </div>
+  <div property="totalPaymentDue" typeof="PriceSpecification">
+    <span property="price">0.00</span>
+    <span property="priceCurrency">USD</span>
+  </div>
+  <meta itemprop="paymentStatus" content="PaymentComplete" />
+  <div property="referencesOrder" typeof="Order">
+    <span property="description">furnace</span>
+    <time property="orderDate">2014-12-01</time>
+    <span property="orderNumber">123ABC</span>
+    <div property="orderedItem" typeof="Product">
+      <span property="name">ACME Furnace 3000</span>
+      <meta property="productID" content="ABC123" />
+    </div>
+  </div>
+  <div property="referencesOrder" typeof="Order">
+    <span property="description">furnace installation</span>
+    <time property="orderDate">2014-12-02</time>
+    <div property="orderedItem" typeof="Service">
+      <span property="description">furnace installation</span>
+    </div>
+  </div>
+</div>
+ <script type="application/ld+json">
+{
+    "@context": "http://schema.org/",
+    "@type": "Invoice",
+    "broker": {
+      "@type": "LocalBusiness",
+      "name": "ACME Home Heating"
+    },
+    "accountId": "xxxx-xxxx-xxxx-1234",
+    "customer": {
+      "@type": "Person",
+      "name": "Jane Doe"
+    },
+    "paymentDueDate": "2015-01-30",
+    "minimumPaymentDue": {
+      "@type": "PriceSpecification",
+      "price": 0.00,
+      "priceCurrency": "USD"
+    },
+    "totalPaymentDue": {
+      "@type": "PriceSpecification",
+      "price": 0.00,
+      "priceCurrency": "USD"
+    },
+    "paymentStatus": "http://schema.org/PaymentComplete",
+    "referencesOrder": [
+      {
+        "@type": "Order",
+        "description": "furnace",
+        "orderDate": "2014-12-01",
+        "orderNumber": "123ABC",
+        "paymentMethod": "http://purl.org/goodrelations/v1#ByInvoice",
+        "orderedItem": {
+          "@type": "Product",
+          "name": "ACME Furnace 3000",
+          "productID": "ABC123"
+        }
+      },
+      {
+        "@type": "Order",
+        "description": "furnace installation",
+        "orderDate": "2014-12-02",
+        "paymentMethod": "http://purl.org/goodrelations/v1#ByInvoice",
+        "orderedItem": {
+          "@type": "Service",
+          "description": "furnace installation"
+        }
+      }
+    ]
+}
+</script>
+ Example 2 Without Markup Microdata RDFa JSON-LD An example of a credit card bill (invoice).
+ACME Bank
+Bill for: January 2015 Visa
+invoice link: http://www.acmebank.com/invoice.pdf
+Customer: Jane Doe
+account ID: xxxx-xxxx-xxxx-1234
+payment due: 2015-01-30
+minimum payment: $15.00
+total due: $200.00
+billing period: 2014-12-21 to 2015-01-20
+payment due
+ <div itemscope itemtype="http://schema.org/Invoice">
+  <h1 itemprop="description">January 2015 Visa</h1>
+  <a itemprop="url" href="http://acmebank.com/invoice.pdf">Invoice PDF</a>
+  <div itemprop="broker" itemscope itemtype="http://schema.org/BankOrCreditUnion">
+    <b itemprop="name">ACME Bank</b>
+  </div>
+  <span itemprop="accountId">xxxx-xxxx-xxxx-1234</span>
+  <div itemprop="customer" itemscope itemtype="http://schema.org/Person">
+    <b itemprop="name">Jane Doe</b>
+  </div>
+  <time itemprop="paymentDueDate">2015-01-30</time>
+  <div itemprop="minimumPaymentDue" itemscope itemtype="http://schema.org/PriceSpecification">
+    <span itemprop="price">15.00</span>
+    <span itemprop="priceCurrency">USD</span>
+  </div>
+  <div itemprop="totalPaymentDue" itemscope itemtype="http://schema.org/PriceSpecification">
+    <span itemprop="price">200.00</span>
+    <span itemprop="priceCurrency">USD</span>
+  </div>
+  <meta itemprop="billingPeriod" content="P30D" />starts:2014-12-21 30 days
+  <link itemprop="paymentStatus" href="http://schema.org/PaymentDue" />
+</div>
+ <div vocab="http://schema.org/" typeof="Invoice">
+  <h1 property="description">January 2015 Visa</h1>
+  <a property="url" href="http://acmebank.com/invoice.pdf">Invoice PDF</a>
+  <div property="broker" typeof="BankOrCreditUnion">
+    <b property="name">ACME Bank</b>
+  </div>
+  <span property="accountId">xxxx-xxxx-xxxx-1234</span>
+  <div property="customer" typeof="Person">
+    <b property="name">Jane Doe</b>
+  </div>
+  <time property="paymentDueDate">2015-01-30T12:00:00</time>
+  <div property="minimumPaymentDue" typeof="PriceSpecification">
+    <span property="price">15.00</span>
+    <span property="priceCurrency">USD</span>
+  </div>
+  <div property="totalPaymentDue" typeof="PriceSpecification">
+    <span property="price">200.00</span>
+    <span property="priceCurrency">USD</span>
+  </div>
+  <meta property="billingPeriod" content="P30D" />starts:2014-12-21 30 days
+  <link property="paymentStatus" href="PaymentDue" />
+</div>
+ <script type="application/ld+json">
+{
+    "@context": "http://schema.org/",
+    "@type": "Invoice",
+    "description": "January 2015 Visa bill.",
+    "url": "http://acmebank.com/invoice.pdf",
+    "broker": {
+      "@type": "BankOrCreditUnion",
+      "name": "ACME Bank"
+    },
+    "accountId": "xxxx-xxxx-xxxx-1234",
+    "customer": {
+      "@type": "Person",
+      "name": "Jane Doe"
+    },
+    "paymentDueDate": "2015-01-30T12:00:00",
+    "minimumPaymentDue": {
+      "@type": "PriceSpecification",
+      "price": 15.00,
+      "priceCurrency": "USD"
+    },
+    "totalPaymentDue": {
+      "@type": "PriceSpecification",
+      "price": 200.00,
+      "priceCurrency": "USD"
+    },
+    "billingPeriod": "P30D",
+    "paymentStatus": "http://schema.org/PaymentDue"
+}
+</script>
+ Example 3 Without Markup Microdata RDFa JSON-LD Joes' Pizza
+123 Main Street
+Cambridge, MA 02142
+delivers within 5 km of its store with a minimum order of $20.
+ <div itemscope itemtype="http://schema.org/FoodEstablishment">
+  <span itemprop="name">Joe's Pizza</span>
+  <div itemprop="location" itemscope itemtype="http://schema.org/PostalAddress">
+    <span itemprop="streetAddress">123 Main Street</span>
+    <span itemprop="addressLocality">Cambridge</span>
+    <span itemprop="addressRegion">MA</span>
+    <span itemprop="postalCode">02142</span>
+  </div>
+  delivers within 5 km of its store
+  <div itemprop="makesOffer" itemscope itemtype="http://schema.org/Offer">
+    <div itemprop="eligibleRegion" itemscope itemtype="http://schema.org/GeoCircle">
+      <div itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
+        <meta itemprop="streetAddress" content="123 Main Street" />
+        <meta itemprop="addressLocality" content="Cambridge" />
+        <meta itemprop="addressRegion" content="MA" />
+        <meta itemprop="postalCode" content="02142" />
+      </div>
+      <meta itemprop="geoRadius" content="5000" />
+    </div>
+    with a minium order of $20.
+    <div itemprop="priceSpecification" itemscope itemtype="http://schema.org/DeliveryChargeSpecification">
+      <meta itemprop="appliesToDeliveryMethod" link="http://purl.org/goodrelations/v1#DeliveryModeOwnFleet">
+      <div itemprop="eligibleTransactionVolume" itemscope itemtype="http://schema.org/PriceSpecification">
+        <meta itemprop="price" content="20.00" />
+        <meta itemprop="priceCurrency" content="USD" />
+      </div>
+    </div>
+  </div>
+</div>
+ <div vocab="http://schema.org/" typeof="FoodEstablishment">
+  <span property="name">Joe's Pizza</span>
+  <div property="location" typeof="PostalAddress">
+    <span property="streetAddress">123 Main Street</span>
+    <span property="addressLocality">Cambridge</span>
+    <span property="addressRegion">MA</span>
+    <span property="postalCode">02142</span>
+  </div>
+  delivers within 5 km of its store with a minium order of $20.
+  <div property="makesOffer" typeof="Offer">
+    <div property="priceSpecification" typeof="DeliveryChargeSpecification">
+      <meta property="appliesToDeliveryMethod" link="http://purl.org/goodrelations/v1#DeliveryModeOwnFleet">
+      <div property="eligibleTransactionVolume" typeof="PriceSpecification">
+        <meta property="price" content="20.00" />
+        <meta property="priceCurrency" content="USD" />
+      </div>
+      <div property="eligibleRegion" typeof="GeoCircle">
+        <div property="address" typeof="PostalAddress">
+          <meta property="streetAddress" content="123 Main Street" />
+          <meta property="addressLocality" content="Cambridge" />
+          <meta property="addressRegion" content="MA" />
+          <meta property="postalCode" content="02142" />
+        </div>
+        <meta property="geoRadius" content="5000" />
+      </div>
+    </div>
+  </div>
+</div>
+ <script type="application/ld+json">
+  {
+    "@context": "http://schema.org/",
+    "@type": "FoodEstablishment",
+    "name": "Joe's Pizza",
+    "location": {
+      "@type": "PostalAddress",
+      "@id": "http://example.com/address",
+      "streetAddress": "123 Main Street",
+      "addressLocality": "Cambridge",
+      "addressRegion": "MA",
+      "postalCode": "02142"
+    },
+    "makesOffer": {
+      "@type": "Offer",
+      "priceSpecification": {
+        "@type": "DeliveryChargeSpecification",
+        "appliesToDeliveryMethod": "http://purl.org/goodrelations/v1#DeliveryModeOwnFleet",
+        "eligibleTransactionVolume": {
+          "@type": "PriceSpecification",
+          "price": "20.00",
+          "priceCurrency": "USD"
+        },
+        "eligibleRegion": {
+          "@type": "GeoCircle",
+          "address": {
+            "@id": "http://www.example.com/address"
+          },
+          "geoRadius": "5000"
+        }
+      }
+    }
+  }
+</script>

@@ -1,0 +1,309 @@
+Product - schema.org Type schema.org Documentation Schemas Home Product Thing > Product Any offered product or service. For example: a pair of shoes; a concert ticket; the rental of a car; a haircut; or an episode of a TV show streamed online. [more...] Canonical URL: http://schema.org/Product Leave public feedback on this term 💬 Check for open issues. Property Expected Type Description Properties from Product additionalProperty PropertyValue  A property-value pair representing an additional characteristics of the entitity, e.g. a product feature or another characteristic for which there is no matching property in schema.org. Note: Publishers should be aware that applications designed to use specific schema.org properties (e.g. http://schema.org/width, http://schema.org/color, http://schema.org/gtin13, ...) will typically expect such data to be provided using those properties, rather than using the generic property/value mechanism. aggregateRating AggregateRating  The overall rating, based on a collection of reviews or ratings, of the item. audience Audience  An intended audience, i.e. a group for whom something was created. Supersedes serviceAudience. award Text  An award won by or for this item. Supersedes awards. brand Brand  or Organization  The brand(s) associated with a product or service, or the brand(s) maintained by an organization or business person. category PhysicalActivityCategory  or Text  or Thing  A category for the item. Greater signs or slashes can be used to informally indicate a category hierarchy. color Text  The color of the product. depth Distance  or QuantitativeValue  The depth of the item. gtin Text  A Global Trade Item Number (GTIN). GTINs identify trade items, including products and services, using numeric identification codes. The gtin property generalizes the earlier gtin8, gtin12, gtin13, and gtin14 properties. The GS1 digital link specifications express GTINs as URLs. A correct gtin value should be a valid GTIN, which means that it should be an all-numeric string of either 8, 12, 13 or 14 digits, or a "GS1 Digital Link" URL based on such a string. The numeric component should also have a valid GS1 check digit and meet the other rules for valid GTINs. See also GS1's GTIN Summary and Wikipedia for more details. Left-padding of the gtin values is not required or encouraged. gtin12 Text  The GTIN-12 code of the product, or the product to which the offer refers. The GTIN-12 is the 12-digit GS1 Identification Key composed of a U.P.C. Company Prefix, Item Reference, and Check Digit used to identify trade items. See GS1 GTIN Summary for more details. gtin13 Text  The GTIN-13 code of the product, or the product to which the offer refers. This is equivalent to 13-digit ISBN codes and EAN UCC-13. Former 12-digit UPC codes can be converted into a GTIN-13 code by simply adding a preceeding zero. See GS1 GTIN Summary for more details. gtin14 Text  The GTIN-14 code of the product, or the product to which the offer refers. See GS1 GTIN Summary for more details. gtin8 Text  The GTIN-8 code of the product, or the product to which the offer refers. This code is also known as EAN/UCC-8 or 8-digit EAN. See GS1 GTIN Summary for more details. hasProductReturnPolicy ProductReturnPolicy  Indicates a ProductReturnPolicy that may be applicable. height Distance  or QuantitativeValue  The height of the item. isAccessoryOrSparePartFor Product  A pointer to another product (or multiple products) for which this product is an accessory or spare part. isConsumableFor Product  A pointer to another product (or multiple products) for which this product is a consumable. isRelatedTo Product  or Service  A pointer to another, somehow related product (or multiple products). isSimilarTo Product  or Service  A pointer to another, functionally similar product (or multiple products). itemCondition OfferItemCondition  A predefined value from OfferItemCondition or a textual description of the condition of the product or service, or the products or services included in the offer. logo ImageObject  or URL  An associated logo. manufacturer Organization  The manufacturer of the product. material Product  or Text  or URL  A material that something is made from, e.g. leather, wool, cotton, paper. model ProductModel  or Text  The model of the product. Use with the URL of a ProductModel or a textual representation of the model identifier. The URL of the ProductModel can be from an external source. It is recommended to additionally provide strong product identifiers via the gtin8/gtin13/gtin14 and mpn properties. mpn Text  The Manufacturer Part Number (MPN) of the product, or the product to which the offer refers. nsn Text  Indicates the NATO stock number (nsn) of a Product. offers Offer  An offer to provide this item—for example, an offer to sell a product, rent the DVD of a movie, perform a service, or give away tickets to an event. productID Text  The product identifier, such as ISBN. For example: meta itemprop="productID" content="isbn:123-456-789". productionDate Date  The date of production of the item, e.g. vehicle. purchaseDate Date  The date the item e.g. vehicle was purchased by the current owner. releaseDate Date  The release date of a product or product model. This can be used to distinguish the exact variant of a product. review Review  A review of the item. Supersedes reviews. sku Text  The Stock Keeping Unit (SKU), i.e. a merchant-specific identifier for a product or service, or the product to which the offer refers. slogan Text  A slogan or motto associated with the item. weight QuantitativeValue  The weight of the product or person. width Distance  or QuantitativeValue  The width of the item. Properties from Thing additionalType URL  An additional type for the item, typically used for adding more specific types from external vocabularies in microdata syntax. This is a relationship between something and a class that the thing is in. In RDFa syntax, it is better to use the native RDFa syntax - the 'typeof' attribute - for multiple types. Schema.org tools may have only weaker understanding of extra types, in particular those defined externally. alternateName Text  An alias for the item. description Text  A description of the item. disambiguatingDescription Text  A sub property of description. A short description of the item used to disambiguate from other, similar items. Information from other properties (in particular, name) may be necessary for the description to be useful for disambiguation. identifier PropertyValue  or Text  or URL  The identifier property represents any kind of identifier for any kind of Thing, such as ISBNs, GTIN codes, UUIDs etc. Schema.org provides dedicated properties for representing many of these, either as textual strings or as URL (URI) links. See background notes for more details. image ImageObject  or URL  An image of the item. This can be a URL or a fully described ImageObject. mainEntityOfPage CreativeWork  or URL  Indicates a page (or other CreativeWork) for which this thing is the main entity being described. See background notes for details. Inverse property: mainEntity. name Text  The name of the item. potentialAction Action  Indicates a potential Action, which describes an idealized action in which this thing would play an 'object' role. sameAs URL  URL of a reference Web page that unambiguously indicates the item's identity. E.g. the URL of the item's Wikipedia page, Wikidata entry, or official website. subjectOf CreativeWork  or Event  A CreativeWork or Event about this Thing. Inverse property: about. url URL  URL of the item. Instances of Product may appear as values for the following properties Property On Types Description isAccessoryOrSparePartFor Product  A pointer to another product (or multiple products) for which this product is an accessory or spare part. isBasedOn CreativeWork  A resource from which this work is derived or from which it is a modification or adaption. Supersedes, isBasedOnUrl. isConsumableFor Product  A pointer to another product (or multiple products) for which this product is a consumable. isRelatedTo Product  or Service  A pointer to another, somehow related product (or multiple products). isSimilarTo Product  or Service  A pointer to another, functionally similar product (or multiple products). itemOffered Demand  or Offer  The item being offered. itemShipped ParcelDelivery  Item(s) being shipped. material CreativeWork  or Product  A material that something is made from, e.g. leather, wool, cotton, paper. orderedItem Order  or OrderItem  The item ordered. owns Organization  or Person  Products owned by the organization or person. productSupported ContactPoint  The product or service this support contact point is related to (such as product support for a particular product line). This can be a specific product or product line (e.g. "iPhone") or a general category of products or services (e.g. "smartphones"). typeOfGood OwnershipInfo  or TypeAndQuantityNode  The product that this structured value is referring to. More specific Types IndividualProduct ProductModel SomeProducts Vehicle Acknowledgement This term uses terminology from the GoodRelations Vocabulary for E-Commerce, created by Martin Hepp. GoodRelations is a data model for sharing e-commerce data on the Web. More information about GoodRelations can be found at http://purl.org/goodrelations/. Examples Example 1 Without Markup Microdata RDFa JSON-LD <div>
+  <!-- http://multivarki.ru?filters%5Bprice%5D%5BLTE%5D=39600 -->
+  <span>315</span>
+  <div>
+    <img alt="Photo of product" src="http://img01.multivarki.ru.ru/c9/f1/a5fe6642-18d0-47ad-b038-6fca20f1c923.jpeg" />
+    <a href="http://multivarki.ru/brand_502/">
+      <span>BRAND 502</span>
+    </a>
+    <div>
+      <span>4399 р.</span>
+    </div>...
+    <div>
+    ...
+    </div>
+  </div>
+</div>
+ <div itemscope itemtype="http://schema.org/ItemList">
+    <link itemprop="url" href="http://multivarki.ru?filters%5Bprice%5D%5BLTE%5D=39600"><span itemprop="numberOfItems">315</span>
+    <div itemprop="itemListElement" itemscope itemtype="http://schema.org/Product">
+        <img alt="Photo of product" itemprop="image" src="http://img01.multivarki.ru.ru/c9/f1/a5fe6642-18d0-47ad-b038-6fca20f1c923.jpeg"> <a itemprop="url" href="http://multivarki.ru/brand_502/"><span itemprop="name">BRAND 502</span></a>
+        <div itemprop="offers" itemscope itemtype="http://schema.org/Offer">
+            <span itemprop="price">4399 р.</span>
+        </div>...
+    </div>
+    <div itemprop="itemListElement" itemtype="http://schema.org/Product">
+        ...
+    </div>
+</div>
+ <div vocab="http://schema.org/" typeof="ItemList">
+    <link property="url" href="http://multivarki.ru?filters%5Bprice%5D%5BLTE%5D=39600"><span property="numberOfItems">315</span>
+    <div property="itemListElement" typeof="Product">
+        <img property="image" alt="Photo of product" src="http://img01.multivarki.ru.ru/c9/f1/a5fe6642-18d0-47ad-b038-6fca20f1c923.jpeg"> <a property="url" href="http://multivarki.ru/brand_502/"><span property="name">BRAND 502</span></a>
+        <div property="offers" typeof="Offer">
+            <meta property="schema:priceCurrency" content="RUB">руб
+            <meta property="schema:price" content="4399.00">4 399,00
+            <link property="schema:itemCondition" href="http://schema.org/NewCondition">
+        </div>...
+    </div>
+    <div property="itemListElement" typeof="Product">
+        ...
+    </div>
+</div>
+ <script type="application/ld+json">
+{
+    "@context": "http://schema.org",
+    "@type": "ItemList",
+    "url": "http://multivarki.ru?filters%5Bprice%5D%5BLTE%5D=39600",
+    "numberOfItems": "315",
+    "itemListElement": [
+        {
+            "@type": "Product",
+            "image": "http://img01.multivarki.ru.ru/c9/f1/a5fe6642-18d0-47ad-b038-6fca20f1c923.jpeg",
+            "url": "http://multivarki.ru/brand_502/",
+            "name": "Brand 502",
+            "offers": {
+                "@type": "Offer",
+                "price": "4399 p."
+            }
+        },
+        {
+            "@type": "Product",
+            "name": "..."
+        }
+    ]
+}
+</script>
+ Example 2 Without Markup Microdata RDFa JSON-LD Kenmore White 17" Microwave
+<img src="kenmore-microwave-17in.jpg" alt='Kenmore 17" Microwave' />
+Rated 3.5/5 based on 11 customer reviews
+$55.00
+In stock
+Product description:
+0.7 cubic feet countertop microwave. Has six preset cooking categories and
+ convenience features like Add-A-Minute and Child Lock.
+Customer reviews:
+Not a happy camper - by Ellie, April 1, 2011
+1/5 stars
+The lamp burned out and now I have to replace it.
+ Value purchase - by Lucas, March 25, 2011
+4/5 stars
+Great microwave for the price. It is small and fits in my apartment.
+...
+ <div itemscope itemtype="http://schema.org/Product">
+  <span itemprop="name">Kenmore White 17" Microwave</span>
+  <img itemprop="image" src="kenmore-microwave-17in.jpg" alt='Kenmore 17" Microwave' />
+  <div itemprop="aggregateRating"
+    itemscope itemtype="http://schema.org/AggregateRating">
+   Rated <span itemprop="ratingValue">3.5</span>/5
+   based on <span itemprop="reviewCount">11</span> customer reviews
+  </div>
+  <div itemprop="offers" itemscope itemtype="http://schema.org/Offer">
+    <!--price is 1000, a number, with locale-specific thousands separator
+    and decimal mark, and the $ character is marked up with the
+    machine-readable code "USD" -->
+    <span itemprop="priceCurrency" content="USD">$</span><span
+          itemprop="price" content="1000.00">1,000.00</span>
+    <link itemprop="availability" href="http://schema.org/InStock" />In stock
+  </div>
+  Product description:
+  <span itemprop="description">0.7 cubic feet countertop microwave.
+  Has six preset cooking categories and convenience features like
+  Add-A-Minute and Child Lock.</span>
+  Customer reviews:
+  <div itemprop="review" itemscope itemtype="http://schema.org/Review">
+    <span itemprop="name">Not a happy camper</span> -
+    by <span itemprop="author">Ellie</span>,
+    <meta itemprop="datePublished" content="2011-04-01">April 1, 2011
+    <div itemprop="reviewRating" itemscope itemtype="http://schema.org/Rating">
+      <meta itemprop="worstRating" content = "1">
+      <span itemprop="ratingValue">1</span>/
+      <span itemprop="bestRating">5</span>stars
+    </div>
+    <span itemprop="description">The lamp burned out and now I have to replace
+    it. </span>
+  </div>
+  <div itemprop="review" itemscope itemtype="http://schema.org/Review">
+    <span itemprop="name">Value purchase</span> -
+    by <span itemprop="author">Lucas</span>,
+    <meta itemprop="datePublished" content="2011-03-25">March 25, 2011
+    <div itemprop="reviewRating" itemscope itemtype="http://schema.org/Rating">
+      <meta itemprop="worstRating" content = "1"/>
+      <span itemprop="ratingValue">4</span>/
+      <span itemprop="bestRating">5</span>stars
+    </div>
+    <span itemprop="description">Great microwave for the price. It is small and
+    fits in my apartment.</span>
+  </div>
+  ...
+</div>
+ <div vocab="http://schema.org/" typeof="Product">
+  <span property="name">Kenmore White 17" Microwave</span>
+  <img property="image" src="kenmore-microwave-17in.jpg" alt='Kenmore 17" Microwave' />
+  <div property="aggregateRating"
+     typeof="AggregateRating">
+   Rated <span property="ratingValue">3.5</span>/5
+   based on <span property="reviewCount">11</span> customer reviews
+  </div>
+  <div property="offers" typeof="Offer">
+    <!--price is 1000, a number, with locale-specific thousands separator
+        and decimal mark, and the $ character is marked up with the
+        machine-readable code "USD" -->
+    <span property="priceCurrency" content="USD">$</span><span
+      property="price" content="1000.00">1,000.00</span>
+    <link property="availability" href="http://schema.org/InStock" />In stock
+  </div>
+  Product description:
+  <span property="description">0.7 cubic feet countertop microwave.
+  Has six preset cooking categories and convenience features like
+  Add-A-Minute and Child Lock.</span>
+  Customer reviews:
+  <div property="review" typeof="Review">
+    <span property="name">Not a happy camper</span> -
+    by <span property="author">Ellie</span>,
+    <meta property="datePublished" content="2011-04-01">April 1, 2011
+    <div property="reviewRating" typeof="Rating">
+      <meta property="worstRating" content = "1">
+      <span property="ratingValue">1</span>/
+      <span property="bestRating">5</span>stars
+    </div>
+    <span property="description">The lamp burned out and now I have to replace
+    it. </span>
+  </div>
+  <div property="review" typeof="Review">
+    <span property="name">Value purchase</span> -
+    by <span property="author">Lucas</span>,
+    <meta property="datePublished" content="2011-03-25">March 25, 2011
+    <div property="reviewRating" typeof="Rating">
+      <meta property="worstRating" content = "1"/>
+      <span property="ratingValue">4</span>/
+      <span property="bestRating">5</span>stars
+    </div>
+    <span property="description">Great microwave for the price. It is small and
+    fits in my apartment.</span>
+  </div>
+  ...
+</div>
+ <script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "Product",
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "3.5",
+    "reviewCount": "11"
+  },
+  "description": "0.7 cubic feet countertop microwave. Has six preset cooking categories and convenience features like Add-A-Minute and Child Lock.",
+  "name": "Kenmore White 17\" Microwave",
+  "image": "kenmore-microwave-17in.jpg",
+  "offers": {
+    "@type": "Offer",
+    "availability": "http://schema.org/InStock",
+    "price": "55.00",
+    "priceCurrency": "USD"
+  },
+  "review": [
+    {
+      "@type": "Review",
+      "author": "Ellie",
+      "datePublished": "2011-04-01",
+      "description": "The lamp burned out and now I have to replace it.",
+      "name": "Not a happy camper",
+      "reviewRating": {
+        "@type": "Rating",
+        "bestRating": "5",
+        "ratingValue": "1",
+        "worstRating": "1"
+      }
+    },
+    {
+      "@type": "Review",
+      "author": "Lucas",
+      "datePublished": "2011-03-25",
+      "description": "Great microwave for the price. It is small and fits in my apartment.",
+      "name": "Value purchase",
+      "reviewRating": {
+        "@type": "Rating",
+        "bestRating": "5",
+        "ratingValue": "4",
+        "worstRating": "1"
+      }
+    }
+  ]
+}
+</script>
+ Example 3 Without Markup Microdata RDFa JSON-LD <img src="dell-30in-lcd.jpg" alt="A Dell UltraSharp monitor" />
+Dell UltraSharp 30" LCD Monitor
+87 out of 100 based on 24 user ratings
+$1250 to $1495 from 8 sellers
+Sellers:
+<a href="save-a-lot-monitors.com/dell-30.html">
+  Save A Lot Monitors - $1250</a>
+<a href="jondoe-gadgets.com/dell-30.html">
+  Jon Doe's Gadgets - $1350</a>
+...
+ <div itemscope itemtype="http://schema.org/Product">
+  <img itemprop="image" src="dell-30in-lcd.jpg" alt="A Dell UltraSharp monitor"/>
+  <span itemprop="name">Dell UltraSharp 30" LCD Monitor</span>
+  <div itemprop="aggregateRating"
+    itemscope itemtype="http://schema.org/AggregateRating">
+    <span itemprop="ratingValue">87</span>
+    out of <span itemprop="bestRating">100</span>
+    based on <span itemprop="ratingCount">24</span> user ratings
+  </div>
+  <div itemprop="offers" itemscope itemtype="http://schema.org/AggregateOffer">
+    <span itemprop="lowPrice">$1250</span>
+    to <span itemprop="highPrice">$1495</span>
+    from <span itemprop="offerCount">8</span> sellers
+    Sellers:
+    <div itemprop="offers" itemscope itemtype="http://schema.org/Offer">
+        <a itemprop="url" href="save-a-lot-monitors.com/dell-30.html">
+        Save A Lot Monitors - $1250</a>
+    </div>
+    <div itemprop="offers" itemscope itemtype="http://schema.org/Offer">
+        <a itemprop="url" href="jondoe-gadgets.com/dell-30.html">
+        Jon Doe's Gadgets - $1350</a>
+    </div>
+  </div>
+  ...
+</div>
+ <div vocab="http://schema.org/" typeof="Product">
+    <img property="image" src="dell-30in-lcd.jpg" alt="A Dell UltraSharp monitor"> <span property="name">Dell UltraSharp 30" LCD Monitor</span>
+    <div property="aggregateRating" typeof="AggregateRating">
+        <span property="ratingValue">87</span> out of
+        <span property="bestRating">100</span> based on
+        <span property="ratingCount">24</span> user ratings
+    </div>
+    <div property="offers" typeof="AggregateOffer">
+        <span property="lowPrice">$1250</span> to
+        <span property="highPrice">$1495</span> from
+        <span property="offerCount">8</span> sellers Sellers:
+        <div property="offers" typeof="Offer">
+            <a property="url" href="save-a-lot-monitors.com/dell-30.html">Save A Lot Monitors - $1250</a>
+        </div>
+        <div property="offers" typeof="Offer">
+            <a property="url" href="jondoe-gadgets.com/dell-30.html">Jon Doe's Gadgets - $1350</a>
+        </div>
+        ...
+    </div>
+</div>
+ <script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "Product",
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "bestRating": "100",
+    "ratingCount": "24",
+    "ratingValue": "87"
+  },
+  "image": "dell-30in-lcd.jpg",
+  "name": "Dell UltraSharp 30\" LCD Monitor",
+  "offers": {
+    "@type": "AggregateOffer",
+    "highPrice": "$1495",
+    "lowPrice": "$1250",
+    "offerCount": "8",
+    "offers": [
+      {
+        "@type": "Offer",
+        "url": "save-a-lot-monitors.com/dell-30.html"
+      },
+      {
+        "@type": "Offer",
+        "url": "jondoe-gadgets.com/dell-30.html"
+      }
+    ]
+  }
+}
+</script>

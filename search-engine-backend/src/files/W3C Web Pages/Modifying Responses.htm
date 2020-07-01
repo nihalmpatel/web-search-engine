@@ -1,0 +1,690 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
+ <head profile="http://gmpg.org/xfn/11"> 
+  <meta charset="utf-8"> 
+  <!--
+<meta property="fb:page_id" content="6427302910" />
+--> 
+  <meta name="google-site-verification" content="7VWES_-rcHBcmaQis9mSYamPfNwE03f4vyTj4pfuAw0"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1"> 
+  <title>Modifying Responses | REST API Handbook | WordPress Developer Resources</title> 
+  <meta name="referrer" content="always"> 
+  <link href="//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,400,300,600&amp;subset=latin,cyrillic-ext,greek-ext,greek,vietnamese,latin-ext,cyrillic" rel="stylesheet" type="text/css"> 
+  <link rel="stylesheet" href="//s.w.org/style/wp4.css?82"> 
+  <link rel="shortcut icon" href="//s.w.org/favicon.ico?2" type="image/x-icon"> 
+  <link rel="pingback" href="https://developer.wordpress.org/xmlrpc.php">
+  <link rel="dns-prefetch" href="//fonts.googleapis.com"> 
+  <link rel="dns-prefetch" href="//s.w.org"> 
+  <link rel="dns-prefetch" href="//www.googletagmanager.com"> 
+  <link rel="dns-prefetch" href="//fonts.gstatic.com"> 
+  <link rel="alternate" type="application/rss+xml" title="WordPress Developer Resources » Feed" href="https://developer.wordpress.org/feed/"> 
+  <link rel="alternate" type="application/rss+xml" title="WordPress Developer Resources » Comments Feed" href="https://developer.wordpress.org/comments/feed/"> 
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-P24PF4B');</script> 
+  <script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/12.0.0-1\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/12.0.0-1\/svg\/","svgExt":".svg","source":{"concatemoji":"https:\/\/developer.wordpress.org\/wp-includes\/js\/wp-emoji-release.min.js?ver=5.4-alpha-46799"}};
+			/*! This file is auto-generated */
+			!function(e,a,t){var r,n,o,i,p=a.createElement("canvas"),s=p.getContext&&p.getContext("2d");function c(e,t){var a=String.fromCharCode;s.clearRect(0,0,p.width,p.height),s.fillText(a.apply(this,e),0,0);var r=p.toDataURL();return s.clearRect(0,0,p.width,p.height),s.fillText(a.apply(this,t),0,0),r===p.toDataURL()}function l(e){if(!s||!s.fillText)return!1;switch(s.textBaseline="top",s.font="600 32px Arial",e){case"flag":return!c([127987,65039,8205,9895,65039],[127987,65039,8203,9895,65039])&&(!c([55356,56826,55356,56819],[55356,56826,8203,55356,56819])&&!c([55356,57332,56128,56423,56128,56418,56128,56421,56128,56430,56128,56423,56128,56447],[55356,57332,8203,56128,56423,8203,56128,56418,8203,56128,56421,8203,56128,56430,8203,56128,56423,8203,56128,56447]));case"emoji":return!c([55357,56424,55356,57342,8205,55358,56605,8205,55357,56424,55356,57340],[55357,56424,55356,57342,8203,55358,56605,8203,55357,56424,55356,57340])}return!1}function d(e){var t=a.createElement("script");t.src=e,t.defer=t.type="text/javascript",a.getElementsByTagName("head")[0].appendChild(t)}for(i=Array("flag","emoji"),t.supports={everything:!0,everythingExceptFlag:!0},o=0;o<i.length;o++)t.supports[i[o]]=l(i[o]),t.supports.everything=t.supports.everything&&t.supports[i[o]],"flag"!==i[o]&&(t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&t.supports[i[o]]);t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&!t.supports.flag,t.DOMReady=!1,t.readyCallback=function(){t.DOMReady=!0},t.supports.everything||(n=function(){t.readyCallback()},a.addEventListener?(a.addEventListener("DOMContentLoaded",n,!1),e.addEventListener("load",n,!1)):(e.attachEvent("onload",n),a.attachEvent("onreadystatechange",function(){"complete"===a.readyState&&t.readyCallback()})),(r=t.source||{}).concatemoji?d(r.concatemoji):r.wpemoji&&r.twemoji&&(d(r.twemoji),d(r.wpemoji)))}(window,document,window._wpemojiSettings);
+		</script> 
+  <style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style> 
+  <link rel="stylesheet" id="dashicons-css" href="https://developer.wordpress.org/wp-includes/css/dashicons.min.css?ver=5.4-alpha-46799" type="text/css" media="all"> 
+  <link rel="stylesheet" id="admin-bar-css" href="https://developer.wordpress.org/wp-includes/css/admin-bar.min.css?ver=5.4-alpha-46799" type="text/css" media="all"> 
+  <link rel="stylesheet" id="wp-block-library-css" href="https://developer.wordpress.org/wp-includes/css/dist/block-library/style.min.css?ver=5.4-alpha-46799" type="text/css" media="all"> 
+  <link rel="stylesheet" id="wporg-handbook-css-css" href="https://developer.wordpress.org/wp-content/plugins/handbook/stylesheets/callout-boxes.css?ver=20180111" type="text/css" media="all"> 
+  <link rel="stylesheet" id="open-sans-css" href="https://fonts.googleapis.com/css?family=Open+Sans%3A300italic%2C400italic%2C600italic%2C300%2C400%2C600&amp;subset=latin%2Clatin-ext&amp;display=fallback&amp;ver=5.4-alpha-46799" type="text/css" media="all"> 
+  <link rel="stylesheet" id="wporg-developer-style-css" href="https://developer.wordpress.org/wp-content/themes/pub/wporg-developer/style.css?ver=2" type="text/css" media="all"> 
+  <link rel="stylesheet" id="wp-dev-sass-compiled-css" href="https://developer.wordpress.org/wp-content/themes/pub/wporg-developer/stylesheets/main.css?ver=20190729" type="text/css" media="all"> 
+  <link rel="stylesheet" id="awesomplete-css-css" href="https://developer.wordpress.org/wp-content/themes/pub/wporg-developer/stylesheets/awesomplete.css?ver=20160114" type="text/css" media="all"> 
+  <link rel="stylesheet" id="autocomplete-css-css" href="https://developer.wordpress.org/wp-content/themes/pub/wporg-developer/stylesheets/autocomplete.css?ver=20171220" type="text/css" media="all"> 
+  <link rel="stylesheet" id="syntaxhighlighter-core-css" href="https://developer.wordpress.org/wp-content/plugins/syntaxhighlighter/syntaxhighlighter3/styles/shCore.css?ver=3.0.9b" type="text/css" media="all"> 
+  <link rel="stylesheet" id="syntaxhighlighter-theme-default-css" href="https://developer.wordpress.org/wp-content/plugins/syntaxhighlighter/syntaxhighlighter3/styles/shThemeDefault.css?ver=3.0.9b" type="text/css" media="all"> 
+  <script type="text/javascript" src="https://developer.wordpress.org/wp-includes/js/jquery/jquery.js?ver=1.12.4-wp"></script> 
+  <script type="text/javascript" src="https://developer.wordpress.org/wp-includes/js/jquery/jquery-migrate.min.js?ver=1.4.1"></script> 
+  <script type="text/javascript" src="https://developer.wordpress.org/wp-content/plugins/handbook/scripts/handbook.js?ver=20150930"></script> 
+  <script type="text/javascript" src="https://developer.wordpress.org/wp-content/themes/pub/wporg-developer/js/chapters.js?ver=20190603"></script> 
+  <script type="text/javascript" src="https://developer.wordpress.org/wp-content/plugins/syntaxhighlighter/syntaxhighlighter3/scripts/shCore.js?ver=3.0.9b"></script> 
+  <script type="text/javascript" src="https://developer.wordpress.org/wp-content/plugins/syntaxhighlighter/syntaxhighlighter3/scripts/shBrushPhp.js?ver=3.0.9b"></script> 
+  <link rel="https://api.w.org/" href="https://developer.wordpress.org/wp-json/"> 
+  <link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://developer.wordpress.org/xmlrpc.php?rsd"> 
+  <link rel="wlwmanifest" type="application/wlwmanifest+xml" href="https://developer.wordpress.org/wp-includes/wlwmanifest.xml"> 
+  <link rel="prev" title="Extending the REST API" href="https://developer.wordpress.org/rest-api/extending-the-rest-api/"> 
+  <link rel="next" title="Frequently Asked Questions" href="https://developer.wordpress.org/rest-api/using-the-rest-api/frequently-asked-questions/"> 
+  <meta name="generator" content="WordPress 5.4-alpha-46799"> 
+  <link rel="canonical" href="https://developer.wordpress.org/rest-api/extending-the-rest-api/modifying-responses/"> 
+  <link rel="shortlink" href="https://developer.wordpress.org/?p=25288"> 
+  <link rel="alternate" type="application/json+oembed" href="https://developer.wordpress.org/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fdeveloper.wordpress.org%2Frest-api%2Fextending-the-rest-api%2Fmodifying-responses%2F"> 
+  <link rel="alternate" type="text/xml+oembed" href="https://developer.wordpress.org/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fdeveloper.wordpress.org%2Frest-api%2Fextending-the-rest-api%2Fmodifying-responses%2F&amp;format=xml"> 
+  <style>
+		@media screen and (max-width: 782px) {
+			#wpadminbar li#wp-admin-bar-log-in,
+			#wpadminbar li#wp-admin-bar-register {
+				display: block;
+			}
+
+			#wpadminbar li#wp-admin-bar-log-in a,
+			#wpadminbar li#wp-admin-bar-register a {
+				padding: 0 8px;
+			}
+		}
+	</style> 
+  <style>
+			a.github-edit {
+				margin-left: .5em;
+				font-size: .5em;
+				vertical-align: top;
+				display: inline-block;
+				border: 1px solid #eeeeee;
+				border-radius: 2px;
+				background: #eeeeee;
+				padding: .5em .6em .4em;
+				color: black;
+				margin-top: 0.1em;
+			}
+			a.github-edit > * {
+				opacity: 0.6;
+			}
+			a.github-edit:hover > * {
+				opacity: 1;
+				color: black;
+			}
+			a.github-edit img {
+				height: .8em;
+			}
+		</style> 
+  <script type="text/javascript">
+		jQuery( '<style>.hide-if-js { display: none; }</style>' ).appendTo( 'head' );
+		jQuery( function($) {
+			$( 'body' ).addClass('js');
+		} );
+	</script> 
+  <style type="text/css" media="print">#wpadminbar { display:none; }</style> 
+  <style type="text/css" media="screen">
+	html { margin-top: 32px !important; }
+	* html body { margin-top: 32px !important; }
+	@media screen and ( max-width: 782px ) {
+		html { margin-top: 46px !important; }
+		* html body { margin-top: 46px !important; }
+	}
+</style> 
+  <script>document.cookie='devicePixelRatio='+((window.devicePixelRatio === undefined) ? 1 : window.devicePixelRatio)+'; path=/';</script> 
+ </head> 
+ <body id="wordpress-org" class="rest-api-handbook-template-default single single-rest-api-handbook postid-25288 admin-bar no-customize-support single-handbook"> 
+  <noscript>
+   <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-P24PF4B" height="0" width="0" style="display:none;visibility:hidden"></iframe>
+  </noscript> 
+  <div id="wporg-header"> 
+   <div class="wrapper"> 
+    <h1><a href="//wordpress.org">WordPress.org</a></h1> 
+    <div id="head-search"> 
+     <form action="//wordpress.org/search/do-search.php" method="get"> 
+      <label for="global-search" class="screen-reader-text">Search WordPress.org for:</label> 
+      <input id="global-search" class="text" name="search" type="text" value="" maxlength="150" placeholder="Search WordPress.org"> 
+      <button type="submit" class="button"><span class="screen-reader-text">Submit</span></button> 
+     </form> 
+    </div> 
+    <div style="clear:both"></div> 
+    <button id="mobile-menu-button" aria-expanded="false"><span class="screen-reader-text">Toggle Menu</span></button> 
+    <nav aria-label="Main Menu"> 
+     <ul id="wporg-header-menu"> 
+      <li class="menu-item"><a href="//wordpress.org/showcase/" data-title="See some of the sites built on WordPress.">Showcase</a></li> 
+      <li class="menu-item"><a href="//wordpress.org/themes/" data-title="Find just the right look for your website.">Themes</a></li> 
+      <li class="menu-item"><a href="//wordpress.org/plugins/" data-title="Plugins can extend WordPress to do almost anything you can imagine.">Plugins</a></li> 
+      <li class="menu-item"><a href="//wordpress.org/mobile/" data-title="Take your website on the go!">Mobile</a></li> 
+      <li class="menu-item"><a href="//wordpress.org/support/" data-title="Forums, documentation, help.">Support</a>
+       <ul class="nav-submenu">
+        <li><a href="//wordpress.org/support/" title="Documentation, tutorials, best practices.">Documentation</a></li>
+        <li><a href="//wordpress.org/support/forums/" title="Support and discussion forums.">Forums</a></li>
+       </ul>
+       <div class="uparrow"></div></li> 
+      <li class="menu-item"><a href="//make.wordpress.org/" data-title="Contribute your knowledge.">Get Involved</a>
+       <ul class="nav-submenu">
+        <li><a href="//wordpress.org/five-for-the-future/" title="How five percent is powering the next generation of the web">Five for the Future</a></li>
+       </ul>
+       <div class="uparrow"></div></li> 
+      <li class="menu-item"><a href="//wordpress.org/about/" data-title="About the WordPress Organization, and where we're going.">About</a></li> 
+      <li class="menu-item"><a href="//wordpress.org/news/" data-title="Come here for the latest scoop.">Blog</a></li> 
+      <li class="menu-item"><a href="//wordpress.org/hosting/" data-title="Find a home for your blog.">Hosting</a></li> 
+      <li id="download" class="button download-button menu-item"><a href="//wordpress.org/download/" data-title="Get it. Got it? Good.">Get WordPress</a></li> 
+     </ul> 
+    </nav> 
+    <div style="clear:both"></div> 
+   </div> 
+  </div> 
+  <header id="masthead" class="site-header" role="banner"> 
+   <div class="site-branding"> 
+    <h1 class="site-title"> <a href="https://developer.wordpress.org/" rel="home">REST API Handbook</a> </h1> 
+    <nav id="site-navigation" class="main-navigation" role="navigation"> 
+     <button class="menu-toggle dashicons dashicons-arrow-down-alt2" aria-controls="primary-menu" aria-expanded="false" aria-label="Primary Menu"></button> 
+    </nav> 
+   </div> 
+  </header>
+  <!-- #masthead --> 
+  <div id="page" class="hfeed site devhub-wrap"> 
+   <a href="#main" class="screen-reader-text">Skip to content</a> 
+   <div id="content" class="site-content"> 
+    <div id="secondary" class="widget-area" role="complementary"> 
+     <a href="#" id="secondary-toggle"></a> 
+     <div id="secondary-content"> 
+      <aside id="search-5" class="widget widget_search">
+       <div class="search-section section clear hide-if-js"> 
+        <form role="search" method="get" class="searchform searchform-handbook" action="https://developer.wordpress.org/rest-api/"> 
+         <label for="search-field" class="screen-reader-text">Search for:</label> 
+         <input type="text" id="search-field" class="search-field" placeholder="Search …" value="" name="s"> 
+         <button class="button button-primary button-search"><i class="dashicons dashicons-search"></i><span class="screen-reader-text">Search plugins</span></button> 
+        </form> 
+       </div>
+       <!-- /search-guide --> 
+      </aside>
+      <aside id="nav_menu-4" class="widget widget_nav_menu">
+       <h2 class="widget-title">Chapters</h2>
+       <div class="menu-rest-api-table-of-contents-container">
+        <ul id="menu-rest-api-table-of-contents" class="menu">
+         <li id="menu-item-22855" class="menu-item menu-item-type-post_type menu-item-object-rest-api-handbook menu-item-22855"><a href="https://developer.wordpress.org/rest-api/">REST API Handbook</a></li> 
+         <li id="menu-item-25309" class="menu-item menu-item-type-post_type menu-item-object-rest-api-handbook menu-item-has-children menu-item-25309"><a href="https://developer.wordpress.org/rest-api/using-the-rest-api/">Using the REST API</a> 
+          <ul class="sub-menu"> 
+           <li id="menu-item-23174" class="menu-item menu-item-type-post_type menu-item-object-rest-api-handbook menu-item-23174"><a href="https://developer.wordpress.org/rest-api/using-the-rest-api/global-parameters/">Global Parameters</a></li> 
+           <li id="menu-item-23084" class="menu-item menu-item-type-post_type menu-item-object-rest-api-handbook menu-item-23084"><a href="https://developer.wordpress.org/rest-api/using-the-rest-api/pagination/">Pagination</a></li> 
+           <li id="menu-item-23182" class="menu-item menu-item-type-post_type menu-item-object-rest-api-handbook menu-item-23182"><a href="https://developer.wordpress.org/rest-api/using-the-rest-api/linking-and-embedding/">Linking and Embedding</a></li> 
+           <li id="menu-item-23087" class="menu-item menu-item-type-post_type menu-item-object-rest-api-handbook menu-item-23087"><a href="https://developer.wordpress.org/rest-api/using-the-rest-api/discovery/">Discovery</a></li> 
+           <li id="menu-item-22864" class="menu-item menu-item-type-post_type menu-item-object-rest-api-handbook menu-item-22864"><a href="https://developer.wordpress.org/rest-api/using-the-rest-api/authentication/">Authentication</a></li> 
+           <li id="menu-item-25345" class="menu-item menu-item-type-post_type menu-item-object-rest-api-handbook menu-item-25345"><a href="https://developer.wordpress.org/rest-api/using-the-rest-api/frequently-asked-questions/">Frequently Asked Questions</a></li> 
+           <li id="menu-item-24929" class="menu-item menu-item-type-post_type menu-item-object-rest-api-handbook menu-item-24929"><a href="https://developer.wordpress.org/rest-api/using-the-rest-api/backbone-javascript-client/">Backbone.js Client</a></li> 
+           <li id="menu-item-25310" class="menu-item menu-item-type-post_type menu-item-object-rest-api-handbook menu-item-25310"><a href="https://developer.wordpress.org/rest-api/using-the-rest-api/client-libraries/">Client Libraries</a></li> 
+          </ul> </li> 
+         <li id="menu-item-25319" class="menu-item menu-item-type-post_type menu-item-object-rest-api-handbook current-rest-api-handbook-ancestor current-menu-ancestor current-menu-parent current-rest-api-handbook-parent menu-item-has-children menu-item-25319"><a href="https://developer.wordpress.org/rest-api/extending-the-rest-api/">Extending the REST API</a> 
+          <ul class="sub-menu"> 
+           <li id="menu-item-25323" class="menu-item menu-item-type-post_type menu-item-object-rest-api-handbook current-menu-item menu-item-25323"><a href="https://developer.wordpress.org/rest-api/extending-the-rest-api/modifying-responses/" aria-current="page">Modifying Responses</a></li> 
+           <li id="menu-item-25397" class="menu-item menu-item-type-post_type menu-item-object-rest-api-handbook menu-item-25397"><a href="https://developer.wordpress.org/rest-api/extending-the-rest-api/adding-custom-endpoints/">Adding Custom Endpoints</a></li> 
+           <li id="menu-item-23096" class="menu-item menu-item-type-post_type menu-item-object-rest-api-handbook menu-item-23096"><a href="https://developer.wordpress.org/rest-api/extending-the-rest-api/adding-rest-api-support-for-custom-content-types/">Custom Content Types</a></li> 
+           <li id="menu-item-22859" class="menu-item menu-item-type-post_type menu-item-object-rest-api-handbook menu-item-22859"><a href="https://developer.wordpress.org/rest-api/extending-the-rest-api/schema/">Schema</a></li> 
+           <li id="menu-item-23187" class="menu-item menu-item-type-post_type menu-item-object-rest-api-handbook menu-item-23187"><a href="https://developer.wordpress.org/rest-api/extending-the-rest-api/glossary/">Glossary</a></li> 
+           <li id="menu-item-22862" class="menu-item menu-item-type-post_type menu-item-object-rest-api-handbook menu-item-22862"><a href="https://developer.wordpress.org/rest-api/extending-the-rest-api/routes-and-endpoints/">Routes and Endpoints</a></li> 
+           <li id="menu-item-22861" class="menu-item menu-item-type-post_type menu-item-object-rest-api-handbook menu-item-22861"><a href="https://developer.wordpress.org/rest-api/extending-the-rest-api/controller-classes/">Controller Classes</a></li> 
+          </ul> </li> 
+         <li id="menu-item-23109" class="menu-item menu-item-type-post_type menu-item-object-rest-api-handbook menu-item-has-children menu-item-23109"><a href="https://developer.wordpress.org/rest-api/reference/">Reference</a> 
+          <ul class="sub-menu"> 
+           <li id="menu-item-23136" class="menu-item menu-item-type-post_type menu-item-object-rest-api-handbook menu-item-23136"><a href="https://developer.wordpress.org/rest-api/reference/posts/">Posts</a></li> 
+           <li id="menu-item-23139" class="menu-item menu-item-type-post_type menu-item-object-rest-api-handbook menu-item-23139"><a href="https://developer.wordpress.org/rest-api/reference/post-revisions/">Post Revisions</a></li> 
+           <li id="menu-item-125550" class="menu-item menu-item-type-post_type menu-item-object-rest-api-handbook menu-item-125550"><a href="https://developer.wordpress.org/rest-api/reference/wp_blocks/">Blocks</a></li> 
+           <li id="menu-item-125551" class="menu-item menu-item-type-post_type menu-item-object-rest-api-handbook menu-item-125551"><a href="https://developer.wordpress.org/rest-api/reference/wp_block-revisions/">Block Revisions</a></li> 
+           <li id="menu-item-125554" class="menu-item menu-item-type-post_type menu-item-object-rest-api-handbook menu-item-125554"><a href="https://developer.wordpress.org/rest-api/reference/rendered-blocks/">Block Renderer</a></li> 
+           <li id="menu-item-23132" class="menu-item menu-item-type-post_type menu-item-object-rest-api-handbook menu-item-23132"><a href="https://developer.wordpress.org/rest-api/reference/categories/">Categories</a></li> 
+           <li id="menu-item-23142" class="menu-item menu-item-type-post_type menu-item-object-rest-api-handbook menu-item-23142"><a href="https://developer.wordpress.org/rest-api/reference/tags/">Tags</a></li> 
+           <li id="menu-item-23135" class="menu-item menu-item-type-post_type menu-item-object-rest-api-handbook menu-item-23135"><a href="https://developer.wordpress.org/rest-api/reference/pages/">Pages</a></li> 
+           <li id="menu-item-23137" class="menu-item menu-item-type-post_type menu-item-object-rest-api-handbook menu-item-23137"><a href="https://developer.wordpress.org/rest-api/reference/comments/">Comments</a></li> 
+           <li id="menu-item-23147" class="menu-item menu-item-type-post_type menu-item-object-rest-api-handbook menu-item-23147"><a href="https://developer.wordpress.org/rest-api/reference/taxonomies/">Taxonomies</a></li> 
+           <li id="menu-item-23134" class="menu-item menu-item-type-post_type menu-item-object-rest-api-handbook menu-item-23134"><a href="https://developer.wordpress.org/rest-api/reference/media/">Media</a></li> 
+           <li id="menu-item-23130" class="menu-item menu-item-type-post_type menu-item-object-rest-api-handbook menu-item-23130"><a href="https://developer.wordpress.org/rest-api/reference/users/">Users</a></li> 
+           <li id="menu-item-23133" class="menu-item menu-item-type-post_type menu-item-object-rest-api-handbook menu-item-23133"><a href="https://developer.wordpress.org/rest-api/reference/post-types/">Types</a></li> 
+           <li id="menu-item-23138" class="menu-item menu-item-type-post_type menu-item-object-rest-api-handbook menu-item-23138"><a href="https://developer.wordpress.org/rest-api/reference/post-statuses/">Statuses</a></li> 
+           <li id="menu-item-23131" class="menu-item menu-item-type-post_type menu-item-object-rest-api-handbook menu-item-23131"><a href="https://developer.wordpress.org/rest-api/reference/settings/">Settings</a></li> 
+           <li id="menu-item-125552" class="menu-item menu-item-type-post_type menu-item-object-rest-api-handbook menu-item-125552"><a href="https://developer.wordpress.org/rest-api/reference/themes/">Themes</a></li> 
+           <li id="menu-item-125553" class="menu-item menu-item-type-post_type menu-item-object-rest-api-handbook menu-item-125553"><a href="https://developer.wordpress.org/rest-api/reference/search-results/">Search Results</a></li> 
+          </ul> </li> 
+         <li id="menu-item-25439" class="menu-item menu-item-type-post_type menu-item-object-rest-api-handbook menu-item-25439"><a href="https://developer.wordpress.org/rest-api/changelog/">Changelog</a></li> 
+        </ul>
+       </div>
+      </aside> 
+     </div> 
+    </div>
+    <!-- #secondary --> 
+    <main id="primary" class="site-main post-25288 rest-api-handbook type-rest-api-handbook status-publish hentry type-handbook" role="main"> 
+     <div class="breadcrumb-trail breadcrumbs" itemprop="breadcrumb"> 
+      <span class="trail-browse">Browse:</span> 
+      <span class="trail-begin"><a href="https://developer.wordpress.org" title="WordPress Developer Resources" rel="home">Home</a></span> 
+      <span class="sep">/</span> 
+      <span class="trail-inner"><a href="https://developer.wordpress.org/rest-api/">REST API Handbook</a></span> 
+      <span class="sep">/</span> 
+      <span class="trail-inner"><a href="https://developer.wordpress.org/rest-api/extending-the-rest-api/" title="Extending the REST API">Extending the REST API</a></span> 
+      <span class="sep">/</span> 
+      <span class="trail-end">Modifying Responses</span> 
+     </div> 
+     <h1>Modifying Responses <a class="github-edit" href="https://github.com/WP-API/docs/edit/master/extending-the-rest-api/modifying-responses.md"><img src="https://developer.wordpress.org/wp-content/plugins/wporg-cli/assets/images/github-mark.svg"> <span>Edit</span></a></h1> 
+     <style> .toc-jump { text-align: right; font-size: 12px; } .page .toc-heading { margin-top: -50px; padding-top: 50px !important; }</style>
+     <div class="table-of-contents">
+      <h2>Topics</h2>
+      <ul class="items">
+       <li><a href="#important-note-about-changing-responses">Important Note about Changing Responses</a></li> 
+       <li><a href="#using-register_rest_field-vs-register_meta">Using <code>register_rest_field</code> vs <code>register_meta</code></a></li> 
+       <li><a href="#adding-custom-fields-to-api-responses">Adding Custom Fields to API Responses</a> 
+        <ul> 
+         <li><a href="#using-register_rest_field">Using <code>register_rest_field</code></a></li> 
+         <li><a href="#examples">Examples</a> 
+          <ul> 
+           <li><a href="#read-and-write-an-extra-field%c2%a0in-comment%c2%a0responses">Read and write an extra field&nbsp;in comment&nbsp;responses</a> </li>
+          </ul></li> 
+         <li><a href="#how-register_rest_field-works">How <code>register_rest_field</code> Works</a> </li>
+        </ul></li> 
+       <li><a href="#working-with-registered-meta-in-the-rest-api">Working with registered meta in the REST API</a> 
+        <ul> 
+         <li><a href="#read-and-write-a-post-meta-field-in-post-responses">Read and write a post meta field in post responses</a></li> 
+         <li><a href="#post-type-specific-meta">Post Type Specific Meta</a> </li>
+        </ul></li> 
+       <li><a href="#adding-links-to-the-api-response">Adding Links to the API Response</a> 
+        <ul> 
+         <li><a href="#registering-a-curie">Registering a CURIE</a></li>
+        </ul> </li>
+      </ul>
+     </div> 
+     <p>The default endpoints of the WordPress REST API are designed to return data by default that provides for the majority of sites and use cases, but there are often situations where you will need to access or expose additional data in the responses for various object types.</p> 
+     <p>As with the rest of WordPress, the REST API is designed to be highly extensible to fit these needs. This guide details how to add additional data to the responses of default endpoints using the <code>register_rest_field</code>&nbsp;and <code>register_meta</code>&nbsp;functions.&nbsp;You can use these functions to add fields to any of the object types supported by the REST API. These custom fields can support both get and update operations.</p> 
+     <h2 class="toc-heading" id="important-note-about-changing-responses" tabindex="-1">Important Note about Changing Responses <a href="#important-note-about-changing-responses" class="anchor"><span aria-hidden="true">#</span><span class="screen-reader-text">Important Note about Changing Responses</span></a></h2> 
+     <div class="callout callout-alert">
+      <p><span class="screen-reader-text">Alert:</span> <br> Changing or removing data from core REST API endpoint responses can break plugins or WordPress core behavior, and should be avoided wherever possible.</p> 
+     </div> 
+     <p>The API exposes many fields on API responses, including things you might not need, or which might not fit into how your site works. While it’s tempting to modify or remove fields from REST API responses, this <strong>will</strong> cause problems with API clients that expect standard responses. This includes mobile clients, third party tools to help you manage your site, or wp-admin itself.</p> 
+     <p>You may only need a small amount of data, but it’s important to keep in mind that the API is about exposing an interface to all clients, not just the feature you’re working on. Changing responses is dangerous.</p> 
+     <p>Adding fields is not dangerous, so if you need to modify data, it’s much better to duplicate the field instead with your modified data. Removing fields is never encouraged; if you need to get back a smaller subset of data, work with contexts instead, and consider making your own context.</p> 
+     <p>If you must remove fields from an existing context you should ensure that the behavior is <strong>opt-in</strong>, for example by providing a custom query parameter to trigger the field removal.</p> 
+     <p>The API cannot prevent you from changing responses, but the code is structured to strongly discourage doing so. Internally, field registration is powered by filters, and these can be used if you absolutely have no other choice.</p> 
+     <p class="toc-jump"><a href="#top">Top ↑</a></p>
+     <h2 class="toc-heading" id="using-register_rest_field-vs-register_meta" tabindex="-1">Using <code>register_rest_field</code> vs <code>register_meta</code> <a href="#using-register_rest_field-vs-register_meta" class="anchor"><span aria-hidden="true">#</span><span class="screen-reader-text">Using <code>register_rest_field</code> vs <code>register_meta</code></span></a></h2> 
+     <p>There are two methods which can be used to add data to WordPress REST API responses, <code>register_rest_field</code> and <code>register_meta</code>.</p> 
+     <p><code>register_rest_field</code> may be used to add arbitrary fields to any REST API response, and can be used to both read and write data using the API. To register a new REST field you must provide your own callback functions to get or set the field’s value, as well as manually specify your own schema definition for the field.</p> 
+     <p><code>register_meta</code> is used to whitelist an existing custom meta value for access through the REST API. By setting a meta field’s <code>show_in_rest</code> parameter to <code>true</code>, that field’s value will be exposed on a <code>.meta</code> key in the endpoint response, and WordPress will handle setting up the callbacks for reading and writing to that meta key. This is much simpler than <code>register_rest_field</code>, with one caveat:</p> 
+     <div class="callout callout-alert">
+      <p><span class="screen-reader-text">Alert:</span> <br> Prior WordPress 4.9.8, meta fields set to <code>show_in_rest</code> using <code>register_meta</code> are registered for all objects of a given type. If one custom post type shows a meta field, all custom post types will show that meta field. As of WordPress 4.9.8 it’s possible to use <code>register_meta</code> with the <code>object_subtype</code> argument that allows one to reduce the usage of the meta key to a particular post type.</p> 
+     </div> 
+     <p>The disadvantage of <code>register_meta</code> is that it can only handle scalar values whereas <code>register_rest_field</code> can handle other object types as well.</p> 
+     <p class="toc-jump"><a href="#top">Top ↑</a></p>
+     <h2 class="toc-heading" id="adding-custom-fields-to-api-responses" tabindex="-1">Adding Custom Fields to API Responses <a href="#adding-custom-fields-to-api-responses" class="anchor"><span aria-hidden="true">#</span><span class="screen-reader-text">Adding Custom Fields to API Responses</span></a></h2> 
+     <h3 class="toc-heading" id="using-register_rest_field" tabindex="-1">Using <code>register_rest_field</code> <a href="#using-register_rest_field" class="anchor"><span aria-hidden="true">#</span><span class="screen-reader-text">Using <code>register_rest_field</code></span></a></h3> 
+     <p>The <a href="https://developer.wordpress.org/reference/functions/register_rest_field/"><code>register_rest_field</code></a>&nbsp;function is the most flexible way to add fields to REST API response objects. It accepts three parameters:</p> 
+     <ol> 
+      <li><code>$object_type</code>: The name of the object, as a string, or an array of the names of objects for which the field is being registered. This may be a core type like “post”, “terms”, “meta”, “user” or “comment”, but can also be the string name of a custom post type.</li> 
+      <li><code>$attribute</code>: The name of the field. This name will be used to define the key in the response object.</li> 
+      <li><code>$args</code>: An array with keys that define the callback functions used to retrieve the value of the field (‘get_callback’), to update the value of the field (‘update_callback’), and to define its schema (‘schema’).</li> 
+     </ol> 
+     <p>Each of the keys of the $args array is optional, but if not used, that capability will not be added. This means that you may specify a callback function for reading the value and omit the update callback to make that field read-only if desired.</p> 
+     <p>Fields should be registered at the <code>rest_api_init</code> action. Using this action rather than <code>init</code> will prevent the field registration from happening during requests to WordPress that do not use the REST API.</p> 
+     <p class="toc-jump"><a href="#top">Top ↑</a></p>
+     <h3 class="toc-heading" id="examples" tabindex="-1">Examples <a href="#examples" class="anchor"><span aria-hidden="true">#</span><span class="screen-reader-text">Examples</span></a></h3> 
+     <h4 class="toc-heading" id="read-and-write-an-extra-field%c2%a0in-comment%c2%a0responses" tabindex="-1">Read and write an extra field&nbsp;in comment&nbsp;responses <a href="#read-and-write-an-extra-field%c2%a0in-comment%c2%a0responses" class="anchor"><span aria-hidden="true">#</span><span class="screen-reader-text">Read and write an extra field&nbsp;in comment&nbsp;responses</span></a></h4> 
+     <section class="source-content"> 
+      <div class="source-code-container"> 
+       <pre class="brush: php; title: ; notranslate" title="">
+&lt;?php
+add_action( 'rest_api_init', function () {
+    register_rest_field( 'comment', 'karma', array(
+        'get_callback' =&gt; function( $comment_arr ) {
+            $comment_obj = get_comment( $comment_arr['id'] );
+            return (int) $comment_obj-&gt;comment_karma;
+        },
+        'update_callback' =&gt; function( $karma, $comment_obj ) {
+            $ret = wp_update_comment( array(
+                'comment_ID'    =&gt; $comment_obj-&gt;comment_ID,
+                'comment_karma' =&gt; $karma
+            ) );
+            if ( false === $ret ) {
+                return new WP_Error(
+                  'rest_comment_karma_failed',
+                  __( 'Failed to update comment karma.' ),
+                  array( 'status' =&gt; 500 )
+                );
+            }
+            return true;
+        },
+        'schema' =&gt; array(
+            'description' =&gt; __( 'Comment karma.' ),
+            'type'        =&gt; 'integer'
+        ),
+    ) );
+} );
+</pre> 
+      </div> 
+      <p class="source-code-links"><span><a href="#" class="show-complete-source">Expand full source code</a><a href="#" class="less-complete-source">Collapse full source code</a></span></p> 
+     </section> 
+     <p>This example illustrates adding a field called <code>karma</code>&nbsp;to the response for posts. It&nbsp;works because the <code>comment_karma</code>&nbsp;field exists, but is unused by core.&nbsp;Note that an actual implementation of comment karma would need to use a separate endpoint.</p> 
+     <p>This is a basic example; carefully consider what permissions checks or error handling may be required for your specific field.</p> 
+     <p class="toc-jump"><a href="#top">Top ↑</a></p>
+     <h3 class="toc-heading" id="how-register_rest_field-works" tabindex="-1">How <code>register_rest_field</code> Works <a href="#how-register_rest_field-works" class="anchor"><span aria-hidden="true">#</span><span class="screen-reader-text">How <code>register_rest_field</code> Works</span></a></h3> 
+     <p>The global variable <code>$wp_rest_additional_fields</code>&nbsp;is used internally by the REST API infrastructure to hold the response fields&nbsp;to be added to each object type. The REST API provides <code>register_rest_field</code> as a utility function for adding to this global variable. Adding to the global variable&nbsp;directly should be avoided to ensure forward-compatibility.</p> 
+     <p>For each object type — posts, or users, terms, comments, etc. — <code>$wp_rest_additional_fields</code> contains an array of field definitions containing the callbacks used to retrieve or update the field’s value.</p> 
+     <p class="toc-jump"><a href="#top">Top ↑</a></p>
+     <h2 class="toc-heading" id="working-with-registered-meta-in-the-rest-api" tabindex="-1">Working with registered meta in the REST API <a href="#working-with-registered-meta-in-the-rest-api" class="anchor"><span aria-hidden="true">#</span><span class="screen-reader-text">Working with registered meta in the REST API</span></a></h2> 
+     <p>The <a href="https://developer.wordpress.org/reference/functions/register_meta/"><code>register_meta</code></a> function simplifies the process of defining a meta field for a particular object type. By setting <code>'show_in_rest' =&gt; true</code> when registering a new meta key, that key will be accessible through the REST API.</p> 
+     <p class="toc-jump"><a href="#top">Top ↑</a></p>
+     <h3 class="toc-heading" id="read-and-write-a-post-meta-field-in-post-responses" tabindex="-1">Read and write a post meta field in post responses <a href="#read-and-write-a-post-meta-field-in-post-responses" class="anchor"><span aria-hidden="true">#</span><span class="screen-reader-text">Read and write a post meta field in post responses</span></a></h3> 
+     <section class="source-content"> 
+      <div class="source-code-container"> 
+       <pre class="brush: php; title: ; notranslate" title="">
+&lt;?php
+// The object type. For custom post types, this is 'post';
+// for custom comment types, this is 'comment'. For user meta,
+// this is 'user'.
+$object_type = 'post';
+$meta_args = array( // Validate and sanitize the meta value.
+    // Note: currently (4.7) one of 'string', 'boolean', 'integer',
+    // 'number' must be used as 'type'. The default is 'string'.
+    'type'         =&gt; 'string',
+    // Shown in the schema for the meta key.
+    'description'  =&gt; 'A meta key associated with a string meta value.',
+    // Return a single value of the type.
+    'single'       =&gt; true,
+    // Show in the WP REST API response. Default: false.
+    'show_in_rest' =&gt; true,
+);
+register_meta( $object_type, 'my_meta_key', $meta_args );
+</pre> 
+      </div> 
+      <p class="source-code-links"><span><a href="#" class="show-complete-source">Expand full source code</a><a href="#" class="less-complete-source">Collapse full source code</a></span></p> 
+     </section> 
+     <p>This example shows how to allow reading and writing of a post meta field. This will allow that field to be updated via a POST request to <code>wp-json/wp/v2/posts/&lt;post-id&gt;</code> or created along with a post via a POST request to <code>wp-json/wp/v2/posts/</code>.</p> 
+     <p>Note that for meta fields registered on custom post types, the post type must have <code>custom-fields</code>&nbsp;support. Otherwise the meta fields will not appear in the REST API.</p> 
+     <p class="toc-jump"><a href="#top">Top ↑</a></p>
+     <h3 class="toc-heading" id="post-type-specific-meta" tabindex="-1">Post Type Specific Meta <a href="#post-type-specific-meta" class="anchor"><span aria-hidden="true">#</span><span class="screen-reader-text">Post Type Specific Meta</span></a></h3> 
+     <p>WordPress 4.9.8 adds support for registering meta for a specific post type or taxonomy by using the <code>register_post_meta</code> and <code>register_term_meta</code> functions. They follow the same rules as <code>register_meta</code> but accept a post type or taxonomy as their first parameter instead of an object type. The following code would register the <code>my_meta_key</code> example above, but only for the <code>page</code> custom post type.</p> 
+     <pre class="brush: php; title: ; notranslate" title="">
+$meta_args = array(
+    'type'         =&gt; 'string',
+    'description'  =&gt; 'A meta key associated with a string meta value.',
+    'single'       =&gt; true,
+    'show_in_rest' =&gt; true,
+);
+register_post_meta( 'page', 'my_meta_key', $meta_args );
+</pre> 
+     <p class="toc-jump"><a href="#top">Top ↑</a></p>
+     <h2 class="toc-heading" id="adding-links-to-the-api-response" tabindex="-1">Adding Links to the API Response <a href="#adding-links-to-the-api-response" class="anchor"><span aria-hidden="true">#</span><span class="screen-reader-text">Adding Links to the API Response</span></a></h2> 
+     <p>WordPress generates a list of links associated with the queried resource to make it easier to navigate to related resources.</p> 
+     <section class="source-content"> 
+      <div class="source-code-container"> 
+       <pre class="brush: php; title: ; notranslate" title="">
+{
+ "_links": {
+    "self": [
+      {
+        "href": "https://make.wordpress.org/core/wp-json/wp/v2/posts/28312"
+      }
+    ],
+    "collection": [
+      {
+        "href": "https://make.wordpress.org/core/wp-json/wp/v2/posts"
+      }
+    ],
+    "author": [
+      {
+        "embeddable": true,
+        "href": "https://make.wordpress.org/core/wp-json/wp/v2/users/8670591"
+      }
+    ],
+    "replies": [
+      {
+        "embeddable": true,
+        "href": "https://make.wordpress.org/core/wp-json/wp/v2/comments?post=28312"
+      }
+    ],
+    "wp:term": [
+      {
+        "taxonomy": "category",
+        "embeddable": true,
+        "href": "https://make.wordpress.org/core/wp-json/wp/v2/categories?post=28312"
+      },
+      {
+        "taxonomy": "post_tag",
+        "embeddable": true,
+        "href": "https://make.wordpress.org/core/wp-json/wp/v2/tags?post=28312"
+      }
+    ]
+  }
+}
+</pre> 
+      </div> 
+      <p class="source-code-links"><span><a href="#" class="show-complete-source">Expand full source code</a><a href="#" class="less-complete-source">Collapse full source code</a></span></p> 
+     </section> 
+     <p><em>A sample of links from a Make.WordPress.org post</em></p> 
+     <p>While these links will appear under the <code>_links</code> property in the JSON response object, it is not stored in <code>WP_REST_Response::$data</code> or accessible via <code>WP_REST_Response::get_data()</code>. Instead, the server will append the link data to the response right before echoing the response data.</p> 
+     <p>Custom links can be added to the response by using the <code>WP_REST_Response::add_link()</code> method. This method accepts three parameters, the link relation, the URL and optionally a list of link attributes. For example, to add the <code>author</code> and <code>wp:term</code> link.</p> 
+     <pre class="brush: php; title: ; notranslate" title="">
+&lt;?php
+$response-&gt;add_link( 'author', rest_url( "/wp/v2/users/{$post-&gt;post_author}" ) );
+
+$response-&gt;add_link( 'https://api.w.org/term', add_query_arg( 'post', $post-&gt;ID, rest_url( "/wp/v2/{$tax_base}" ) ) );
+</pre> 
+     <p>The link relation MUST be either a <a href="https://www.iana.org/assignments/link-relations/link-relations.xhtml">registered link relation from the IANA</a> or a URI that is under your control.</p> 
+     <p><code>author</code> is a registered link relation described as “the context’s author”, we use that to point to the WordPress user who wrote the post. No link relation exists that describes the terms associated with a post, so WordPress uses the <code>https://api.w.org/term</code> URL. This is transformed to <code>wp:term</code> when generating the response by using a CURIE.</p> 
+     <p>The third parameter of <code>add_link()</code> is a list of custom attributes. The <code>embeddable</code> attribute can be used to include the linked resource appears in the <code>_embedded</code> section of the repsonse when using the <code>_embed</code> query parameter. If multiple links are added with the same relation, the embedded responses will be in the same order the links were added in.</p> 
+     <pre class="brush: php; title: ; notranslate" title="">
+&lt;?php
+$response-&gt;add_link( 'author', rest_url( "/wp/v2/users/{$post-&gt;post_author}" ), array(
+    'embeddable' =&gt; true,
+) );
+$response-&gt;add_link( 'author', rest_url( "/wp/v2/users/{$additional_author}" ), array(
+    'embeddable' =&gt; true,
+) );
+</pre> 
+     <p><em>A sample implementation of linking to multi-author posts.</em></p> 
+     <section class="source-content"> 
+      <div class="source-code-container"> 
+       <pre class="brush: php; title: ; notranslate" title="">
+{
+  "_links": {
+    "author": [
+      {
+        "embeddable": true,
+        "href": "https://yourwebsite.com/wp-json/wp/v2/users/1"
+      },
+      {
+        "embeddable": true,
+        "href": "https://yourwebsite.com/wp-json/wp/v2/users/2"
+      }
+    ]
+  },
+  "_embedded": {
+    "author": [
+      {
+        "id": 1,
+        "name": "Primary Author"
+      },
+      {
+        "id": 2,
+        "name": "Secondary Author"
+      }
+    ]
+  }
+}
+</pre> 
+      </div> 
+      <p class="source-code-links"><span><a href="#" class="show-complete-source">Expand full source code</a><a href="#" class="less-complete-source">Collapse full source code</a></span></p> 
+     </section> 
+     <p><em>The order links are added is maintained.</em></p> 
+     <p class="toc-jump"><a href="#top">Top ↑</a></p>
+     <h3 class="toc-heading" id="registering-a-curie" tabindex="-1">Registering a CURIE <a href="#registering-a-curie" class="anchor"><span aria-hidden="true">#</span><span class="screen-reader-text">Registering a CURIE</span></a></h3> 
+     <p>WordPress version 4.5 introduced support for Compact URIs, or CURIEs. This makes it possible to reference links by a much simpler identifier than the full URL which could easily be quite lengthy.</p> 
+     <p>A CURIE is registered using the <code>rest_response_link_curies</code> filter. For example.</p> 
+     <pre class="brush: php; title: ; notranslate" title="">
+&lt;?php
+function my_plugin_prefix_register_curie( $curies ) {
+
+    $curies[] = array(
+        'name'      =&gt; 'my_plugin',
+        'href'      =&gt; 'https://api.mypluginurl.com/{rel}',
+        'templated' =&gt; true,
+    );
+
+    return $curies;
+}
+</pre> 
+     <p>This will convert link URLs from <code>https://api.mypluginurl.com/my_link</code> to <code>my_plugin:my_link</code> in the API response. The full URL must still be used when adding links using <code>WP_REST_Response::add_link</code>.</p> 
+     <div class="bottom-of-entry">
+      &nbsp;
+     </div> 
+     <nav class="handbook-navigation" role="navigation"> 
+      <h1 class="screen-reader-text">Handbook navigation</h1> 
+      <div class="nav-links"> 
+       <a href="https://developer.wordpress.org/rest-api/extending-the-rest-api/" rel="previous"><span class="meta-nav">←</span> Extending the REST API</a>
+       <a href="https://developer.wordpress.org/rest-api/extending-the-rest-api/adding-custom-endpoints/" rel="next">Adding Custom Endpoints <span class="meta-nav">→</span></a> 
+      </div> 
+      <!-- .nav-links --> 
+     </nav>
+     <!-- .navigation --> 
+    </main>
+    <!-- #main --> 
+   </div>
+   <!-- #content --> 
+  </div>
+  <!-- #page --> 
+  <div id="wporg-footer"> 
+   <div class="wrapper"> 
+    <ul> 
+     <li><a href="//wordpress.org/about/" title="An introduction to the WordPress project">About</a></li> 
+     <li><a href="//wordpress.org/news/" title="News and Updates">Blog</a></li> 
+     <li><a href="//wordpress.org/hosting/" title="Recommended web hosting providers">Hosting</a></li> 
+     <li><a href="https://wordpressfoundation.org/donate/" title="Donate to the WordPress Foundation">Donate</a></li> 
+    </ul> 
+    <ul> 
+     <li><a href="//wordpress.org/support/" title="Forums, documentation, and other resources">Support</a></li> 
+     <li><a href="//developer.wordpress.org" title="Resources for WordPress developers">Developers</a></li> 
+     <li><a href="//make.wordpress.org/" title="Give back to WordPress through code, support, translation and more">Get Involved</a></li> 
+    </ul> 
+    <ul> 
+     <li><a href="//wordpress.org/showcase/" title="Some of the best WordPress sites on the Web">Showcase</a></li> 
+     <li><a href="//wordpress.org/plugins/" title="Add extra functionality to WordPress">Plugins</a></li> 
+     <li><a href="//wordpress.org/themes/" title="Make your WordPress pretty">Themes</a></li> 
+    </ul> 
+    <ul> 
+     <li><a href="//central.wordcamp.org/" title="Find a WordPress event near you">WordCamp</a></li> 
+     <li><a href="//wordpress.tv/" title="Videos, tutorials, and WordCamp sessions">WordPress.TV</a></li> 
+     <li><a href="//buddypress.org/" title="A set of plugins to transform your WordPress into a social network">BuddyPress</a></li> 
+     <li><a href="//bbpress.org/" title="Fast, slick forums built on WordPress">bbPress</a></li> 
+    </ul> 
+    <ul> 
+     <li><a href="//wordpress.com/?ref=wporg-footer" title="Hassle-free WordPress hosting">WordPress.com</a></li> 
+     <li><a href="//ma.tt/" title="Co-founder of WordPress, an example of what WordPress can do">Matt</a></li> 
+     <li><a href="//wordpress.org/about/privacy/" title="WordPress.org Privacy Policy">Privacy</a></li> 
+     <li><a href="https://publiccode.eu/" target="_blank">Public Code</a></li> 
+    </ul> 
+    <ul> 
+     <li><span class="dashicons dashicons-twitter"></span><a href="https://twitter.com/WordPress" title="Follow @WordPress on Twitter">@WordPress</a></li> 
+     <li><span class="dashicons dashicons-facebook"></span><a href="https://www.facebook.com/WordPress/" title="Like WordPress on Facebook">WordPress</a></li> 
+    </ul> 
+   </div> 
+   <p class="cip cip-image">Code is Poetry.</p> 
+  </div> 
+  <script src="https://s.w.org/style/js/navigation.min.js?20190128"></script> 
+  <script type="text/javascript" src="https://gravatar.com/js/gprofiles.js"></script> 
+  <script type="text/javascript">
+	(function(){
+		var corecss = document.createElement('link');
+		var themecss = document.createElement('link');
+		var corecssurl = "https://developer.wordpress.org/wp-content/plugins/syntaxhighlighter/syntaxhighlighter3/styles/shCore.css?ver=3.0.9b";
+		if ( corecss.setAttribute ) {
+				corecss.setAttribute( "rel", "stylesheet" );
+				corecss.setAttribute( "type", "text/css" );
+				corecss.setAttribute( "href", corecssurl );
+		} else {
+				corecss.rel = "stylesheet";
+				corecss.href = corecssurl;
+		}
+		document.head.appendChild( corecss );
+		var themecssurl = "https://developer.wordpress.org/wp-content/plugins/syntaxhighlighter/syntaxhighlighter3/styles/shThemeDefault.css?ver=3.0.9b";
+		if ( themecss.setAttribute ) {
+				themecss.setAttribute( "rel", "stylesheet" );
+				themecss.setAttribute( "type", "text/css" );
+				themecss.setAttribute( "href", themecssurl );
+		} else {
+				themecss.rel = "stylesheet";
+				themecss.href = themecssurl;
+		}
+		document.head.appendChild( themecss );
+	})();
+	SyntaxHighlighter.config.strings.expandSource = '+ expand source';
+	SyntaxHighlighter.config.strings.help = '?';
+	SyntaxHighlighter.config.strings.alert = 'SyntaxHighlighter\n\n';
+	SyntaxHighlighter.config.strings.noBrush = 'Can\'t find brush for: ';
+	SyntaxHighlighter.config.strings.brushNotHtmlScript = 'Brush wasn\'t configured for html-script option: ';
+	SyntaxHighlighter.defaults['pad-line-numbers'] = false;
+	SyntaxHighlighter.defaults['toolbar'] = false;
+	SyntaxHighlighter.all();
+
+	// Infinite scroll support
+	if ( typeof( jQuery ) !== 'undefined' ) {
+		jQuery( function( $ ) {
+			$( document.body ).on( 'post-load', function() {
+				SyntaxHighlighter.highlight();
+			} );
+		} );
+	}
+</script> 
+  <script type="text/javascript" src="https://developer.wordpress.org/wp-includes/js/admin-bar.min.js?ver=5.4-alpha-46799"></script> 
+  <script type="text/javascript" src="https://developer.wordpress.org/wp-content/themes/pub/wporg-developer/js/navigation.js?ver=20181209"></script> 
+  <script type="text/javascript" src="https://developer.wordpress.org/wp-content/themes/pub/wporg-developer/js/skip-link-focus-fix.js?ver=20130115"></script> 
+  <script type="text/javascript" src="https://developer.wordpress.org/wp-content/themes/pub/wporg-developer/js/search.js?ver=20150430"></script> 
+  <script type="text/javascript" src="https://developer.wordpress.org/wp-content/themes/pub/wporg-developer/js/menu.js?ver=20180201"></script> 
+  <script type="text/javascript" src="https://developer.wordpress.org/wp-content/themes/pub/wporg-developer/js/awesomplete.min.js?ver=20160322"></script> 
+  <script type="text/javascript">
+/* <![CDATA[ */
+var autocomplete = {"ajaxurl":"https:\/\/developer.wordpress.org\/wp-admin\/admin-ajax.php","nonce":"97b505d027"};
+/* ]]> */
+</script> 
+  <script type="text/javascript" src="https://developer.wordpress.org/wp-content/themes/pub/wporg-developer/js/autocomplete.js?ver=20160524"></script> 
+  <script type="text/javascript" src="https://developer.wordpress.org/wp-content/themes/pub/wporg-developer/js/function-reference.js?ver=20180724"></script> 
+  <script type="text/javascript">
+/* <![CDATA[ */
+var quicktagsL10n = {"closeAllOpenTags":"Close all open tags","closeTags":"close tags","enterURL":"Enter the URL","enterImageURL":"Enter the URL of the image","enterImageDescription":"Enter a description of the image","textdirection":"text direction","toggleTextdirection":"Toggle Editor Text Direction","dfw":"Distraction-free writing mode","strong":"Bold","strongClose":"Close bold tag","em":"Italic","emClose":"Close italic tag","link":"Insert link","blockquote":"Blockquote","blockquoteClose":"Close blockquote tag","del":"Deleted text (strikethrough)","delClose":"Close deleted text tag","ins":"Inserted text","insClose":"Close inserted text tag","image":"Insert image","ul":"Bulleted list","ulClose":"Close bulleted list tag","ol":"Numbered list","olClose":"Close numbered list tag","li":"List item","liClose":"Close list item tag","code":"Code","codeClose":"Close code tag","more":"Insert Read More tag"};
+/* ]]> */
+</script> 
+  <script type="text/javascript" src="https://developer.wordpress.org/wp-includes/js/quicktags.min.js?ver=5.4-alpha-46799"></script> 
+  <script type="text/javascript" src="https://developer.wordpress.org/wp-content/themes/pub/wporg-developer/js/user-notes.js?ver=20181019"></script> 
+  <script type="text/javascript">
+/* <![CDATA[ */
+var wporg_note_feedback = {"show":"Show Feedback","hide":"Hide Feedback"};
+/* ]]> */
+</script> 
+  <script type="text/javascript" src="https://developer.wordpress.org/wp-content/themes/pub/wporg-developer/js/user-notes-feedback.js?ver=20181023"></script> 
+  <script type="text/javascript" src="https://developer.wordpress.org/wp-content/themes/pub/wporg-developer/js/tabs.js?ver=20160824"></script> 
+  <script type="text/javascript">
+/* <![CDATA[ */
+var wporg_note_preview = {"ajaxurl":"https:\/\/developer.wordpress.org\/wp-admin\/admin-ajax.php","nonce":"8ece0519d3","preview":"preview note","preview_empty":"Nothing to preview","is_admin":""};
+/* ]]> */
+</script> 
+  <script type="text/javascript" src="https://developer.wordpress.org/wp-content/themes/pub/wporg-developer/js/user-notes-preview.js?ver=20181019"></script> 
+  <script type="text/javascript" src="https://developer.wordpress.org/wp-includes/js/wp-embed.min.js?ver=5.4-alpha-46799"></script> 
+  <div id="wpadminbar" class="nojq nojs"> 
+   <a class="screen-reader-shortcut" href="#wp-toolbar" tabindex="1">Skip to toolbar</a> 
+   <div class="quicklinks" id="wp-toolbar" role="navigation" aria-label="Toolbar"> 
+    <ul id="wp-admin-bar-root-default" class="ab-top-menu">
+     <li id="wp-admin-bar-wp-logo" class="menupop"><a class="ab-item" aria-haspopup="true" href="https://wordpress.org/about/"><span class="ab-icon"></span><span class="screen-reader-text">About WordPress</span></a>
+      <div class="ab-sub-wrapper">
+       <ul id="wp-admin-bar-wp-logo-default" class="ab-submenu">
+        <li id="wp-admin-bar-about"><a class="ab-item" href="https://wordpress.org/about/">About WordPress</a></li>
+       </ul>
+       <ul id="wp-admin-bar-wp-logo-external" class="ab-sub-secondary ab-submenu">
+        <li id="wp-admin-bar-wporg"><a class="ab-item" href="https://wordpress.org/">WordPress.org</a></li>
+        <li id="wp-admin-bar-documentation"><a class="ab-item" href="https://codex.wordpress.org/">Documentation</a></li>
+        <li id="wp-admin-bar-support-forums"><a class="ab-item" href="https://wordpress.org/support/">Support</a></li>
+        <li id="wp-admin-bar-feedback"><a class="ab-item" href="https://wordpress.org/support/forum/requests-and-feedback">Feedback</a></li>
+       </ul>
+      </div></li>
+    </ul>
+    <ul id="wp-admin-bar-top-secondary" class="ab-top-secondary ab-top-menu">
+     <li id="wp-admin-bar-search" class="admin-bar-search">
+      <div class="ab-item ab-empty-item" tabindex="-1">
+       <form action="https://developer.wordpress.org/" method="get" id="adminbarsearch">
+        <input class="adminbar-input" name="s" id="adminbar-search" type="text" value="" maxlength="150">
+        <label for="adminbar-search" class="screen-reader-text">Search</label>
+        <input type="submit" class="adminbar-button" value="Search">
+       </form>
+      </div></li>
+     <li id="wp-admin-bar-log-in"><a class="ab-item" href="https://login.wordpress.org/?locale=en_US">Log In</a></li>
+     <li id="wp-admin-bar-register"><a class="ab-item" href="https://login.wordpress.org/register?locale=en_US">Register</a></li>
+    </ul> 
+   </div> 
+  </div>   
+ </body>
+</html>

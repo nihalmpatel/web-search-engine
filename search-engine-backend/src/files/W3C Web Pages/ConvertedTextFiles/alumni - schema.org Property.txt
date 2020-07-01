@@ -1,0 +1,1 @@
+alumni - schema.org Property schema.org Documentation Schemas Home alumni Thing > Property > alumni Alumni of an organization. [more...] Canonical URL: http://schema.org/alumni Leave public feedback on this term 💬 Check for open issues. Inverse-property: alumniOf. Values expected to be one of these types Person Used on these types EducationalOrganization Organization

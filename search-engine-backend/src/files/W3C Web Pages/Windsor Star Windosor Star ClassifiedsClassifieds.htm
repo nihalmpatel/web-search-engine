@@ -1,0 +1,597 @@
+<!DOCTYPE html>
+<!--[if lte IE 9]><html lang="en" class="old-ie"><![endif]-->
+<!--[if (gt IE 9)|!(IE)]><html lang="en"><![endif]-->
+<html>
+ <head> 
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"> 
+  <meta http-equiv="X-UA-Compatible" content="IE=edge"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"> 
+  <title>Windsor Star Windosor Star ClassifiedsClassifieds | Place an ad</title> 
+  <link rel="icon" type="image/x-icon" href="//d2zfowlldib7se.cloudfront.net/assets/windsorstar/images/WS-favicon.ico"> 
+  <link rel="stylesheet" type="text/css" href="//d2zfowlldib7se.cloudfront.net/assets/bootstrap/css/bootstrap.css"> 
+  <link rel="stylesheet" type="text/css" href="//d2zfowlldib7se.cloudfront.net/assets/fonts/css/font-awesome.min.css"> 
+  <link rel="stylesheet" href="//cdn-assets.prfct.cc/assets/obits/fonts/fontawesome-pro-5.7.2-web/css/all.min.css"> 
+  <link rel="stylesheet" type="text/css" href="//d2zfowlldib7se.cloudfront.net/assets/bootstrap/css/bootstrap-select.css"> 
+  <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries --> 
+  <!--[if lte IE 9]>
+			<script type="text/javascript" src="/js/respondmore.min.js"></script>
+			<link href="//d2zfowlldib7se.cloudfront.net/assets/bootstrap/html/respond-proxy.html" id="respond-proxy" rel="respond-proxy" />
+			<link href="/images/respond.proxy.gif" id="respond-redirect" rel="respond-redirect" />
+			<script type="text/javascript" src="/js/respond.proxy.js"></script>
+			<script type="text/javascript" src="//d2zfowlldib7se.cloudfront.net/assets/responsive/js/html5.js"></script>
+			<script type="text/javascript" src="//d2zfowlldib7se.cloudfront.net/assets/responsive/js/css3-mediaqueries.js"></script>
+		<![endif]--> 
+  <link rel="stylesheet" type="text/css" href="//d2zfowlldib7se.cloudfront.net/assets/demo/css/jquery-ui/1.10.3/themes/smoothness/jquery-ui.min.css"> 
+  <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Lato:400,100,100italic,300,300italic,400italic,700,700italic,900,900italic"> 
+  <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700"> 
+  <link href="//fonts.googleapis.com/css?family=Source+Sans+Pro:200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,900,900i" rel="stylesheet" type="text/css"> 
+  <script type="text/javascript" src="//d2zfowlldib7se.cloudfront.net/assets/marketplace/libs/jquery/v-1.10.2/jquery.min.js"></script> 
+  <script type="text/javascript" src="//d2zfowlldib7se.cloudfront.net/assets/marketplace/libs/media-match/media.match.min.js"></script> 
+  <script>
+
+ (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+ 
+  var ga_category_name = '';
+  var ga_classification_name = '';
+  var ga_package_name = '';
+  var ga_channel_name = 'Postmedia Network';
+  var ga_publication_name ='Windsor Star';
+
+  ga('create', 'UA-63922237-2', 'auto', {'name': 'AP'});
+
+  ga('AP.set', 'dimension1', ga_category_name);
+  ga('AP.set', 'dimension2', ga_classification_name);
+  ga('AP.set', 'dimension3', ga_package_name);
+  ga('AP.set', 'dimension4', ga_channel_name);
+  ga('AP.set', 'dimension5', ga_publication_name);
+
+$(document).ready(function () {
+    if ($('#steps').length) {
+        var ga_step_pages = {
+            '#create': window.location+ '/create',
+            '#enhance': window.location+ '/enhance',
+            '#schedule': window.location+ '/schedule',
+            '#payment': window.location+ '/payment',
+            '#contract': window.location+ '/payment'
+        };
+
+        var ga_step_title = {
+            '#create': 'Windsor Star ' + mod_i18n.T_('SUB_TITLE_CREATE_STEP'),
+            '#enhance': 'Windsor Star ' + mod_i18n.T_('SUB_TITLE_ENHANCE_STEP'),
+            '#schedule': 'Windsor Star ' + mod_i18n.T_('SUB_TITLE_SCHEDULE_STEP'),
+            '#payment': 'Windsor Star ' + mod_i18n.T_('SUB_TITLE_PAYMENT_STEP'),
+            '#contract': 'Windsor Star ' + mod_i18n.T_('SUB_TITLE_CONTRACT_STEP')
+        };
+        var step_count = 0;
+
+        if (step_count === 0) {
+            	var current_step = $('#NavWizard li.active').attr('data-target');
+            	// send ga tracking here
+		ga('AP.set', {
+  			page: ga_step_pages[current_step],
+  			title: ga_step_title[current_step]
+		});
+		ga('AP.send', 'pageview');
+        }
+        $(document).ajaxStop(function () {
+            	var new_step = $('#NavWizard li.active').attr('data-target');
+            	if (new_step !== current_step) {
+                	step_count++;
+                	current_step = new_step;
+                	// send ga tracking here
+			ga('AP.set', {
+  				page: ga_step_pages[current_step],
+  				title: ga_step_title[current_step]
+			});
+			ga('AP.send', 'pageview');               		
+            	}
+        });
+    	} else {
+   		ga('AP.send', 'pageview');
+    	}
+
+	var pathArray = window.location.pathname.split( '/' );
+	if (pathArray[3] == 'ad') {
+		ga('AP.require', 'ecommerce');
+		var transaction = {
+ 	 		'id': '',                    // Transaction ID.
+ 	 		'affiliation': ga_publication_name,  // Affiliation or store name.
+ 	 		'revenue': ''             // Grand Total.
+  			//'shipping': '5' ,                // Shipping.
+  			//'tax': '1.29'                    // Tax.
+		};
+		ga('AP.ecommerce:addTransaction', transaction);
+		ga('AP.ecommerce:send');
+	}
+});
+		</script> 
+  <style type="text/css">
+
+.categories-hero {
+    background-image: url("//cdn-assets.adperfect.com/assets/windsorstar/images/windsor-hero.jpg") !important;
+}
+</style> 
+  <!-- Begin comScore Tag --> 
+  <script>
+var _comscore = _comscore || [];
+_comscore.push({ 
+c1: "2", c2: "10276888" });
+(function() {
+var s = document.createElement("script"), el =
+document.getElementsByTagName("script")[0]; s.async = true;
+s.src = (document.location.protocol == "https:" ? "https://sb" :
+"http://b") + ".scorecardresearch.com/beacon.js";
+el.parentNode.insertBefore(s, el);
+})();
+</script> 
+  <noscript> 
+  </noscript>
+ </head>
+ <body>
+  <img src="//sb.scorecardresearch.com/p?c1=2&amp;c2=10276888&amp;cv=2.0&amp;cj=1">  
+  <!-- End comScore Tag --> 
+  <link type="text/css" rel="stylesheet" href="//cdn-resources.prfct.cc/assets/marketplace/libs/res/r201911260/css/custom-select.css"> 
+  <link type="text/css" rel="stylesheet" href="//windsorstar.adperfect.com/adplacement-resource/stylesheet/f65d8fcf3809de20d04c5e39f960ba75/60ea6d22925a2a5f7b243a29eb7ffd92.css"> 
+  <link type="text/css" rel="stylesheet" href="//windsorstar.adperfect.com/adplacement-resource/stylesheet/eca34a61a7d0d21a6d096d7c67479964/1fce85c7c53841176a2fbb59c67f6780.css"> 
+  <script type="text/javascript" src="//cdn-resources.prfct.cc/assets/marketplace/libs/res/r201911260/js/global.js"></script>   
+  <header class="navbar navbar-static-top custom-header category"> 
+   <div class="container"> 
+    <div class="navbar-header"> 
+     <button aria-expanded="false" aria-controls="ap-navbar" data-target="#ap-navbar" data-toggle="collapse" type="button" class="navbar-toggle collapsed"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button> 
+     <a class="navbar-brand" title="Windsor Star" href="http://www.windsorstar.com" target="_blank"> <img id="logo" alt="Logo" class="img-responsive" src="//d2zfowlldib7se.cloudfront.net/assets/windsorstar/images/windsor-star-logo.png"> </a> 
+    </div> 
+    <nav class="navbar-collapse collapse" id="ap-navbar" aria-expanded="false"> 
+     <ul class="nav navbar-nav navbar-right user-auth-wrap"> 
+      <li><a href="https://classifieds.windsorstar.com">Classifieds</a></li> 
+      <li class="nav-button account-place-ad">
+       <div class="btn-group btn-input clearfix"> 
+        <a class="btn btn-primary" href="/account?create=new"> <span>Place New Ad</span> </a> 
+       </div></li> 
+      <li> 
+       <div id="ap_user_auth"> 
+        <div id="ap_user_auth_login"> 
+         <a id="ap_link_signin" href="/account">Sign In</a>
+         <span class="separator"></span>
+         <a href="/sign-up">Sign Up</a> 
+        </div> 
+       </div></li> 
+     </ul> 
+    </nav> 
+   </div> 
+  </header> 
+  <div id="content"> 
+   <div class="categories-hero"> 
+    <div class="categories-hero-cover"> 
+     <div class="container"> 
+      <div class="row"> 
+       <div class="categories-hero-title">
+         What are you posting?
+       </div> 
+       <div class="categories-hero-text">
+        The best place to reach customers in your local community.
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+   <div class="container"> 
+    <div id="category"> 
+     <div id="adplacement_catgory_list">
+      <ul class="list-inline">
+       <li class="col-xs-12 col-sm-6 col-md-4 category_item">
+        <div class="category-tile"> 
+         <h4 class="category-name">Agriculture</h4> 
+         <div class="category-url"></div> 
+         <div class="data"> 
+          <div class="ap_clspopuplist"> 
+           <div class="popcatclass_data" style="display:none">
+            <ul>
+             <li><a href="/channel/C0A801FC116f619BC2hmK3833077/publication/7F000001144ae1FFD3NmE112357A/category/7F000001144ae2034EWs17FDA83A/classification/7F000001144ae2034FpY15FE7CDA">Farm Machinery &amp; Equipment</a></li>
+             <li><a href="/channel/C0A801FC116f619BC2hmK3833077/publication/7F000001144ae1FFD3NmE112357A/category/7F000001144ae2034EWs17FDA83A/classification/7F000001144ae2034Fkw15FE7CDA">Farm Services</a></li>
+             <li><a href="/channel/C0A801FC116f619BC2hmK3833077/publication/7F000001144ae1FFD3NmE112357A/category/7F000001144ae2034EWs17FDA83A/classification/7F000001144ae2034FpH15FE7CDA">Fertilizer</a></li>
+             <li><a href="/channel/C0A801FC116f619BC2hmK3833077/publication/7F000001144ae1FFD3NmE112357A/category/7F000001144ae2034EWs17FDA83A/classification/7F000001144ae2034FsI15FE7CDA">Grain</a></li>
+             <li><a href="/channel/C0A801FC116f619BC2hmK3833077/publication/7F000001144ae1FFD3NmE112357A/category/7F000001144ae2034EWs17FDA83A/classification/7F000001144ae2034FlG15FE7CDA">Hay &amp; Straw</a></li>
+             <li><a href="/channel/C0A801FC116f619BC2hmK3833077/publication/7F000001144ae1FFD3NmE112357A/category/7F000001144ae2034EWs17FDA83A/classification/7F000001144ae2034FtT15FE7CDA">Livestock</a></li>
+             <li><a href="/channel/C0A801FC116f619BC2hmK3833077/publication/7F000001144ae1FFD3NmE112357A/category/7F000001144ae2034EWs17FDA83A/classification/7F000001144ae2034FlN15FE7CDA">Other</a></li>
+             <li><a href="/channel/C0A801FC116f619BC2hmK3833077/publication/7F000001144ae1FFD3NmE112357A/category/7F000001144ae2034EWs17FDA83A/classification/7F000001144ae2034Fsu15FE7CDA">Seed</a></li>
+             <li><a href="/channel/C0A801FC116f619BC2hmK3833077/publication/7F000001144ae1FFD3NmE112357A/category/7F000001144ae2034EWs17FDA83A/classification/7F000001144ae2034Fpj15FE7CDA">Wanted</a></li>
+            </ul>
+           </div> 
+          </div> 
+         </div> 
+        </div> </li>
+       <li class="col-xs-12 col-sm-6 col-md-4 category_item">
+        <div class="category-tile"> 
+         <h4 class="category-name">Business &amp; Financial</h4> 
+         <div class="category-url"></div> 
+         <div class="data"> 
+          <div class="ap_clspopuplist"> 
+           <div class="popcatclass_data" style="display:none">
+            <ul>
+             <li><a href="/channel/C0A801FC116f619BC2hmK3833077/publication/7F000001144ae1FFD3NmE112357A/category/7F000001144ae2034EXM17FDA83A/classification/7F000001144ae2034FQH15FE3BC0">Accounting &amp; Taxes</a></li>
+             <li><a href="/channel/C0A801FC116f619BC2hmK3833077/publication/7F000001144ae1FFD3NmE112357A/category/7F000001144ae2034EXM17FDA83A/classification/7F000001144ae2034Fso15FE3BC0">Business for Sale</a></li>
+             <li><a href="/channel/C0A801FC116f619BC2hmK3833077/publication/7F000001144ae1FFD3NmE112357A/category/7F000001144ae2034EXM17FDA83A/classification/7F000001144ae2034FHN15FE3BC0">Business Opportunities</a></li>
+             <li><a href="/channel/C0A801FC116f619BC2hmK3833077/publication/7F000001144ae1FFD3NmE112357A/category/7F000001144ae2034EXM17FDA83A/classification/7F000001144ae2034Fpp15FE3BC0">Business Services</a></li>
+             <li><a href="/channel/C0A801FC116f619BC2hmK3833077/publication/7F000001144ae1FFD3NmE112357A/category/7F000001144ae2034EXM17FDA83A/classification/7F000001144ae2034Fty15FE3BC0">Commercial &amp; Industrial Properties for Rent</a></li>
+             <li><a href="/channel/C0A801FC116f619BC2hmK3833077/publication/7F000001144ae1FFD3NmE112357A/category/7F000001144ae2034EXM17FDA83A/classification/7F000001144ae2034FYT15FE3BC0">Commercial &amp; Industrial Properties for Sale</a></li>
+             <li><a href="/channel/C0A801FC116f619BC2hmK3833077/publication/7F000001144ae1FFD3NmE112357A/category/7F000001144ae2034EXM17FDA83A/classification/7F000001144ae2034FTL15FE3BC0">Franchises</a></li>
+             <li><a href="/channel/C0A801FC116f619BC2hmK3833077/publication/7F000001144ae1FFD3NmE112357A/category/7F000001144ae2034EXM17FDA83A/classification/7F000001144ae2034FQr15FE3BC0">Investors &amp; Investments</a></li>
+             <li><a href="/channel/C0A801FC116f619BC2hmK3833077/publication/7F000001144ae1FFD3NmE112357A/category/7F000001144ae2034EXM17FDA83A/classification/7F000001144ae2034FPV15FE3BC0">Mortgages &amp; Loans</a></li>
+             <li><a href="/channel/C0A801FC116f619BC2hmK3833077/publication/7F000001144ae1FFD3NmE112357A/category/7F000001144ae2034EXM17FDA83A/classification/7F000001144ae2034FGp15FE3BC0">Other</a></li>
+            </ul>
+           </div> 
+          </div> 
+         </div> 
+        </div> </li>
+       <li class="col-xs-12 col-sm-6 col-md-4 category_item">
+        <div class="category-tile"> 
+         <h4 class="category-name">Buy &amp; Sell</h4> 
+         <div class="category-url"></div> 
+         <div class="data"> 
+          <div class="ap_clspopuplist"> 
+           <div class="popcatclass_data" style="display:none">
+            <ul>
+             <li><a href="/channel/C0A801FC116f619BC2hmK3833077/publication/7F000001144ae1FFD3NmE112357A/category/7F000001144ae2034ExL17FDA83A/classification/7F000001144ae2034Fxu15FE7CDA">Appliances</a></li>
+             <li><a href="/channel/C0A801FC116f619BC2hmK3833077/publication/7F000001144ae1FFD3NmE112357A/category/7F000001144ae2034ExL17FDA83A/classification/7F000001144ae2034FLT15FE7CDA">Art, Crafts &amp; Collectibles</a></li>
+             <li><a href="/channel/C0A801FC116f619BC2hmK3833077/publication/7F000001144ae1FFD3NmE112357A/category/7F000001144ae2034ExL17FDA83A/classification/7F000001144ae2034FUp15FE7CDA">Auctions</a></li>
+             <li><a href="/channel/C0A801FC116f619BC2hmK3833077/publication/7F000001144ae1FFD3NmE112357A/category/7F000001144ae2034ExL17FDA83A/classification/7F000001144ae2034FQN15FE7CDA">Books</a></li>
+             <li><a href="/channel/C0A801FC116f619BC2hmK3833077/publication/7F000001144ae1FFD3NmE112357A/category/7F000001144ae2034ExL17FDA83A/classification/7F000001144ae2034FtY15FE7CDA">Building &amp; Renovation Supplies</a></li>
+             <li><a href="/channel/C0A801FC116f619BC2hmK3833077/publication/7F000001144ae1FFD3NmE112357A/category/7F000001144ae2034ExL17FDA83A/classification/7F000001144ae2034FwN15FE7CDA">Clothing</a></li>
+             <li><a href="/channel/C0A801FC116f619BC2hmK3833077/publication/7F000001144ae1FFD3NmE112357A/category/7F000001144ae2034ExL17FDA83A/classification/7F000001144ae2034FVM15FE7CDA">Electronics &amp; Entertainment</a></li>
+             <li><a href="/channel/C0A801FC116f619BC2hmK3833077/publication/7F000001144ae1FFD3NmE112357A/category/7F000001144ae2034ExL17FDA83A/classification/7F000001144ae2034FRg15FE7CDA">Firewood</a></li>
+             <li><a href="/channel/C0A801FC116f619BC2hmK3833077/publication/7F000001144ae1FFD3NmE112357A/category/7F000001144ae2034ExL17FDA83A/classification/7F000001144ae2034FGP15FE7CDA">Food &amp; Markets</a></li>
+             <li><a href="/channel/C0A801FC116f619BC2hmK3833077/publication/7F000001144ae1FFD3NmE112357A/category/7F000001144ae2034ExL17FDA83A/classification/7F000001144ae2034FlI15FE7CDA">Furniture</a></li>
+             <li><a href="/channel/C0A801FC116f619BC2hmK3833077/publication/7F000001144ae1FFD3NmE112357A/category/7F000001144ae2034ExL17FDA83A/classification/7F000001144ae2034FjS15FE7CDA">Garage Sales</a></li>
+             <li><a href="/channel/C0A801FC116f619BC2hmK3833077/publication/7F000001144ae1FFD3NmE112357A/category/7F000001144ae2034ExL17FDA83A/classification/7F000001144ae2034FpP15FE7CDA">Health &amp; Beauty</a></li>
+             <li><a href="/channel/C0A801FC116f619BC2hmK3833077/publication/7F000001144ae1FFD3NmE112357A/category/7F000001144ae2034ExL17FDA83A/classification/7F000001144ae2034FXp15FE7CDA">Home - Indoor</a></li>
+             <li><a href="/channel/C0A801FC116f619BC2hmK3833077/publication/7F000001144ae1FFD3NmE112357A/category/7F000001144ae2034ExL17FDA83A/classification/7F000001144ae2034FKt15FE7CDA">Home - Outdoor</a></li>
+             <li><a href="/channel/C0A801FC116f619BC2hmK3833077/publication/7F000001144ae1FFD3NmE112357A/category/7F000001144ae2034ExL17FDA83A/classification/7F000001144ae2034FSY15FE7CDA">Jewellery &amp; Watches</a></li>
+             <li><a href="/channel/C0A801FC116f619BC2hmK3833077/publication/7F000001144ae1FFD3NmE112357A/category/7F000001144ae2034ExL17FDA83A/classification/7F000001144ae2034Fio15FE7CDA">Musical Equipment &amp; Instruments</a></li>
+             <li><a href="/channel/C0A801FC116f619BC2hmK3833077/publication/7F000001144ae1FFD3NmE112357A/category/7F000001144ae2034ExL17FDA83A/classification/7F000001144ae2034FuQ15FE7CDA">Other</a></li>
+             <li><a href="/channel/C0A801FC116f619BC2hmK3833077/publication/7F000001144ae1FFD3NmE112357A/category/7F000001144ae2034ExL17FDA83A/classification/7F000001144ae2034FGi15FE7CDA">Seasonal</a></li>
+             <li><a href="/channel/C0A801FC116f619BC2hmK3833077/publication/7F000001144ae1FFD3NmE112357A/category/7F000001144ae2034ExL17FDA83A/classification/7F000001144ae2034FsV15FE7CDA">Sports Equipment</a></li>
+             <li><a href="/channel/C0A801FC116f619BC2hmK3833077/publication/7F000001144ae1FFD3NmE112357A/category/7F000001144ae2034ExL17FDA83A/classification/7F000001144ae2034FLm15FE7CDA">Tickets &amp; Memberships</a></li>
+             <li><a href="/channel/C0A801FC116f619BC2hmK3833077/publication/7F000001144ae1FFD3NmE112357A/category/7F000001144ae2034ExL17FDA83A/classification/7F000001144ae2034Fuw15FE7CDA">Wanted</a></li>
+            </ul>
+           </div> 
+          </div> 
+         </div> 
+        </div> </li>
+       <li class="col-xs-12 col-sm-6 col-md-4 category_item">
+        <div class="category-tile"> 
+         <h4 class="category-name">Cars &amp; Vehicles</h4> 
+         <div class="category-url"></div> 
+         <div class="data"> 
+          <div class="ap_clspopuplist"> 
+           <div class="popcatclass_data" style="display:none">
+            <ul>
+             <li><a href="/channel/C0A801FC116f619BC2hmK3833077/publication/7F000001144ae1FFD3NmE112357A/category/7F000001144ae2034EyV17FDA83A/classification/7F000001144ae2034FwG15FE3BC0">Aircraft</a></li>
+             <li><a href="/channel/C0A801FC116f619BC2hmK3833077/publication/7F000001144ae1FFD3NmE112357A/category/7F000001144ae2034EyV17FDA83A/classification/7F000001144ae2034Fqu15FE3BC0">ATVs &amp; Snowmobiles</a></li>
+             <li><a href="/channel/C0A801FC116f619BC2hmK3833077/publication/7F000001144ae1FFD3NmE112357A/category/7F000001144ae2034EyV17FDA83A/classification/7F000001144ae2034FoI15FE3BC0">Auto Parts &amp; Accessories</a></li>
+             <li><a href="/channel/C0A801FC116f619BC2hmK3833077/publication/7F000001144ae1FFD3NmE112357A/category/7F000001144ae2034EyV17FDA83A/classification/7F000001144ae2034FXh15FE3BC0">Automotive Services</a></li>
+             <li><a href="/channel/C0A801FC116f619BC2hmK3833077/publication/7F000001144ae1FFD3NmE112357A/category/7F000001144ae2034EyV17FDA83A/classification/7F000001144ae2034FWs15FE3BC0">Boats &amp; Watercraft</a></li>
+             <li><a href="/channel/C0A801FC116f619BC2hmK3833077/publication/7F000001144ae1FFD3NmE112357A/category/7F000001144ae2034EyV17FDA83A/classification/7F000001144ae2034Fii15FE3BC0">Cars</a></li>
+             <li><a href="/channel/C0A801FC116f619BC2hmK3833077/publication/7F000001144ae1FFD3NmE112357A/category/7F000001144ae2034EyV17FDA83A/classification/7F000001144ae2034Fky15FE3BC0">Collector Vehicles</a></li>
+             <li><a href="/channel/C0A801FC116f619BC2hmK3833077/publication/7F000001144ae1FFD3NmE112357A/category/7F000001144ae2034EyV17FDA83A/classification/7F000001144ae2034FQL15FE3BC0">Commercial &amp; Heavy Duty Vehicles</a></li>
+             <li><a href="/channel/C0A801FC116f619BC2hmK3833077/publication/7F000001144ae1FFD3NmE112357A/category/7F000001144ae2034EyV17FDA83A/classification/AC1E00AC1d78e249F2xS49B7CF80">Feature</a></li>
+             <li><a href="/channel/C0A801FC116f619BC2hmK3833077/publication/7F000001144ae1FFD3NmE112357A/category/7F000001144ae2034EyV17FDA83A/classification/7F000001144ae2034Fhu15FE3BC0">For Lease</a></li>
+             <li><a href="/channel/C0A801FC116f619BC2hmK3833077/publication/7F000001144ae1FFD3NmE112357A/category/7F000001144ae2034EyV17FDA83A/classification/7F000001144ae2034Fgu15FE3BC0">Minivans &amp; Vans</a></li>
+             <li><a href="/channel/C0A801FC116f619BC2hmK3833077/publication/7F000001144ae1FFD3NmE112357A/category/7F000001144ae2034EyV17FDA83A/classification/7F000001144ae2034FNT15FE3BC0">Motorcycles &amp; Scooters</a></li>
+             <li><a href="/channel/C0A801FC116f619BC2hmK3833077/publication/7F000001144ae1FFD3NmE112357A/category/7F000001144ae2034EyV17FDA83A/classification/7F000001144ae2034FRM15FE3BC0">Motorhomes &amp; RV's</a></li>
+             <li><a href="/channel/C0A801FC116f619BC2hmK3833077/publication/7F000001144ae1FFD3NmE112357A/category/7F000001144ae2034EyV17FDA83A/classification/7F000001144ae2034FWJ15FE3BC0">Other</a></li>
+             <li><a href="/channel/C0A801FC116f619BC2hmK3833077/publication/7F000001144ae1FFD3NmE112357A/category/7F000001144ae2034EyV17FDA83A/classification/AC1E00AC1d78e249F2Lr49B7CF80">Placed Position</a></li>
+             <li><a href="/channel/C0A801FC116f619BC2hmK3833077/publication/7F000001144ae1FFD3NmE112357A/category/7F000001144ae2034EyV17FDA83A/classification/7F000001144ae2034FsN15FE3BC0">Trucks &amp; SUV's</a></li>
+             <li><a href="/channel/C0A801FC116f619BC2hmK3833077/publication/7F000001144ae1FFD3NmE112357A/category/7F000001144ae2034EyV17FDA83A/classification/7F000001144ae2034FuV15FE3BC0">Utility Trailers</a></li>
+             <li><a href="/channel/C0A801FC116f619BC2hmK3833077/publication/7F000001144ae1FFD3NmE112357A/category/7F000001144ae2034EyV17FDA83A/classification/7F000001144ae2034Fsi15FE3BC0">Wanted</a></li>
+            </ul>
+           </div> 
+          </div> 
+         </div> 
+        </div> </li>
+       <li class="col-xs-12 col-sm-6 col-md-4 category_item">
+        <div class="category-tile"> 
+         <h4 class="category-name">Celebrating</h4> 
+         <div class="category-url"></div> 
+         <div class="data"> 
+          <div class="ap_clspopuplist"> 
+           <div class="popcatclass_data" style="display:none">
+            <ul>
+             <li><a href="/channel/C0A801FC116f619BC2hmK3833077/publication/7F000001144ae1FFD3NmE112357A/category/7F000001144ae2034EHN17FDA83A/classification/7F000001144ae2034Fiu15FE3BC0">Anniversaries</a></li>
+             <li><a href="/channel/C0A801FC116f619BC2hmK3833077/publication/7F000001144ae1FFD3NmE112357A/category/7F000001144ae2034EHN17FDA83A/classification/7F000001144ae2034FOU15FE3BC0">Birthdays</a></li>
+             <li><a href="/channel/C0A801FC116f619BC2hmK3833077/publication/7F000001144ae1FFD3NmE112357A/category/7F000001144ae2034EHN17FDA83A/classification/7F000001144ae2034FNj15FE3BC0">Births &amp; Adoptions</a></li>
+             <li><a href="/channel/C0A801FC116f619BC2hmK3833077/publication/7F000001144ae1FFD3NmE112357A/category/7F000001144ae2034EHN17FDA83A/classification/7F000001144ae2034FRU15FE3BC0">Engagements</a></li>
+             <li><a href="/channel/C0A801FC116f619BC2hmK3833077/publication/7F000001144ae1FFD3NmE112357A/category/7F000001144ae2034EHN17FDA83A/classification/7F000001144ae2034FnU15FE3BC0">Graduations</a></li>
+             <li><a href="/channel/C0A801FC116f619BC2hmK3833077/publication/7F000001144ae1FFD3NmE112357A/category/7F000001144ae2034EHN17FDA83A/classification/7F000001144ae2034FJk15FE3BC0">Other</a></li>
+             <li><a href="/channel/C0A801FC116f619BC2hmK3833077/publication/7F000001144ae1FFD3NmE112357A/category/7F000001144ae2034EHN17FDA83A/classification/7F000001144ae2034Fix15FE3BC0">Retirements</a></li>
+             <li><a href="/channel/C0A801FC116f619BC2hmK3833077/publication/7F000001144ae1FFD3NmE112357A/category/7F000001144ae2034EHN17FDA83A/classification/7F000001144ae2034FjO15FE3BC0">Thank You</a></li>
+             <li><a href="/channel/C0A801FC116f619BC2hmK3833077/publication/7F000001144ae1FFD3NmE112357A/category/7F000001144ae2034EHN17FDA83A/classification/7F000001144ae2034FmR15FE3BC0">Weddings</a></li>
+            </ul>
+           </div> 
+          </div> 
+         </div> 
+        </div> </li>
+       <li class="col-xs-12 col-sm-6 col-md-4 category_item">
+        <div class="category-tile"> 
+         <h4 class="category-name">Community</h4> 
+         <div class="category-url"></div> 
+         <div class="data"> 
+          <div class="ap_clspopuplist"> 
+           <div class="popcatclass_data" style="display:none">
+            <ul>
+             <li><a href="/channel/C0A801FC116f619BC2hmK3833077/publication/7F000001144ae1FFD3NmE112357A/category/7F000001144ae2034ErS17FDA83A/classification/7F000001144ae2034Fim15FE7CDA">Activities</a></li>
+             <li><a href="/channel/C0A801FC116f619BC2hmK3833077/publication/7F000001144ae1FFD3NmE112357A/category/7F000001144ae2034ErS17FDA83A/classification/7F000001144ae2034Fms15FE7CDA">Classes &amp; Lessons</a></li>
+             <li><a href="/channel/C0A801FC116f619BC2hmK3833077/publication/7F000001144ae1FFD3NmE112357A/category/7F000001144ae2034ErS17FDA83A/classification/7F000001144ae2034Fxq15FE7CDA">Community Worship</a></li>
+             <li><a href="/channel/C0A801FC116f619BC2hmK3833077/publication/7F000001144ae1FFD3NmE112357A/category/7F000001144ae2034ErS17FDA83A/classification/7F000001144ae2034FJV15FE7CDA">Events</a></li>
+             <li><a href="/channel/C0A801FC116f619BC2hmK3833077/publication/7F000001144ae1FFD3NmE112357A/category/7F000001144ae2034ErS17FDA83A/classification/7F000001144ae2034Fut15FE7CDA">For Kids</a></li>
+             <li><a href="/channel/C0A801FC116f619BC2hmK3833077/publication/7F000001144ae1FFD3NmE112357A/category/7F000001144ae2034ErS17FDA83A/classification/7F000001144ae2034FOX15FE7CDA">Lost &amp; Found</a></li>
+             <li><a href="/channel/C0A801FC116f619BC2hmK3833077/publication/7F000001144ae1FFD3NmE112357A/category/7F000001144ae2034ErS17FDA83A/classification/7F000001144ae2034FGY15FE7CDA">Other</a></li>
+             <li><a href="/channel/C0A801FC116f619BC2hmK3833077/publication/7F000001144ae1FFD3NmE112357A/category/7F000001144ae2034ErS17FDA83A/classification/7F000001144ae2034FHX15FE7CDA">Seniors</a></li>
+            </ul>
+           </div> 
+          </div> 
+         </div> 
+        </div> </li>
+       <li class="col-xs-12 col-sm-6 col-md-4 category_item">
+        <div class="category-tile"> 
+         <h4 class="category-name">Education &amp; Career Services</h4> 
+         <div class="category-url"></div> 
+         <div class="data"> 
+          <div class="ap_clspopuplist"> 
+           <div class="popcatclass_data" style="display:none">
+            <ul>
+             <li><a href="/channel/C0A801FC116f619BC2hmK3833077/publication/7F000001144ae1FFD3NmE112357A/category/7F000001144ae2034ErH17FDA83A/classification/7F000001144ae2034FRs15FE7CDA">Career Development &amp; Education</a></li>
+             <li><a href="/channel/C0A801FC116f619BC2hmK3833077/publication/7F000001144ae1FFD3NmE112357A/category/7F000001144ae2034ErH17FDA83A/classification/7F000001144ae2034FWk15FE7CDA">Colleges, Schools &amp; Universities</a></li>
+             <li><a href="/channel/C0A801FC116f619BC2hmK3833077/publication/7F000001144ae1FFD3NmE112357A/category/7F000001144ae2034ErH17FDA83A/classification/7F000001144ae2034FtR15FE7CDA">Courses, Seminars &amp; Workshops</a></li>
+             <li><a href="/channel/C0A801FC116f619BC2hmK3833077/publication/7F000001144ae1FFD3NmE112357A/category/7F000001144ae2034ErH17FDA83A/classification/7F000001144ae2034FrL15FE7CDA">Employment Services</a></li>
+             <li><a href="/channel/C0A801FC116f619BC2hmK3833077/publication/7F000001144ae1FFD3NmE112357A/category/7F000001144ae2034ErH17FDA83A/classification/7F000001144ae2034Fur15FE7CDA">Other</a></li>
+             <li><a href="/channel/C0A801FC116f619BC2hmK3833077/publication/7F000001144ae1FFD3NmE112357A/category/7F000001144ae2034ErH17FDA83A/classification/7F000001144ae2034Fun15FE7CDA">Tutoring</a></li>
+            </ul>
+           </div> 
+          </div> 
+         </div> 
+        </div> </li>
+       <li class="col-xs-12 col-sm-6 col-md-4 category_item">
+        <div class="category-tile"> 
+         <h4 class="category-name">Employment</h4> 
+         <div class="category-url"></div> 
+         <div class="data"> 
+          <div class="ap_clspopuplist"> 
+           <div class="popcatclass_data" style="display:none">
+            <ul>
+             <li><a href="/channel/C0A801FC116f619BC2hmK3833077/publication/7F000001144ae1FFD3NmE112357A/category/7F000001144ae2034Eor17FDA83A/classification/7F000001144ae2034FIi15FE7CDA">Accounting &amp; Financial</a></li>
+             <li><a href="/channel/C0A801FC116f619BC2hmK3833077/publication/7F000001144ae1FFD3NmE112357A/category/7F000001144ae2034Eor17FDA83A/classification/7F000001144ae2034FTu15FE7CDA">Administrative &amp; Clerical</a></li>
+             <li><a href="/channel/C0A801FC116f619BC2hmK3833077/publication/7F000001144ae1FFD3NmE112357A/category/7F000001144ae2034Eor17FDA83A/classification/7F000001144ae2034Fsm15FE3BC0">Agriculture</a></li>
+             <li><a href="/channel/C0A801FC116f619BC2hmK3833077/publication/7F000001144ae1FFD3NmE112357A/category/7F000001144ae2034Eor17FDA83A/classification/7F000001144ae2034FIj15FE3BC0">Architecture</a></li>
+             <li><a href="/channel/C0A801FC116f619BC2hmK3833077/publication/7F000001144ae1FFD3NmE112357A/category/7F000001144ae2034Eor17FDA83A/classification/7F000001144ae2034FmQ15FE7CDA">Arts &amp; Entertainment</a></li>
+             <li><a href="/channel/C0A801FC116f619BC2hmK3833077/publication/7F000001144ae1FFD3NmE112357A/category/7F000001144ae2034Eor17FDA83A/classification/7F000001144ae2034FRI15FE7CDA">Careers</a></li>
+             <li><a href="/channel/C0A801FC116f619BC2hmK3833077/publication/7F000001144ae1FFD3NmE112357A/category/7F000001144ae2034Eor17FDA83A/classification/7F000001144ae2034FiO15FE3BC0">Construction &amp; Trades</a></li>
+             <li><a href="/channel/C0A801FC116f619BC2hmK3833077/publication/7F000001144ae1FFD3NmE112357A/category/7F000001144ae2034Eor17FDA83A/classification/7F000001144ae2034FKn15FE7CDA">Customer Service</a></li>
+             <li><a href="/channel/C0A801FC116f619BC2hmK3833077/publication/7F000001144ae1FFD3NmE112357A/category/7F000001144ae2034Eor17FDA83A/classification/7F000001144ae2034FLu15FE3BC0">Drivers</a></li>
+             <li><a href="/channel/C0A801FC116f619BC2hmK3833077/publication/7F000001144ae1FFD3NmE112357A/category/7F000001144ae2034Eor17FDA83A/classification/7F000001144ae2034Fvn15FE3BC0">Education &amp; Training</a></li>
+             <li><a href="/channel/C0A801FC116f619BC2hmK3833077/publication/7F000001144ae1FFD3NmE112357A/category/7F000001144ae2034Eor17FDA83A/classification/7F000001144ae2034FJh15FE3BC0">Employment Wanted</a></li>
+             <li><a href="/channel/C0A801FC116f619BC2hmK3833077/publication/7F000001144ae1FFD3NmE112357A/category/7F000001144ae2034Eor17FDA83A/classification/7F000001144ae2034Fgv15FE7CDA">Energy</a></li>
+             <li><a href="/channel/C0A801FC116f619BC2hmK3833077/publication/7F000001144ae1FFD3NmE112357A/category/7F000001144ae2034Eor17FDA83A/classification/7F000001144ae2034FOl15FE7CDA">Engineering</a></li>
+             <li><a href="/channel/C0A801FC116f619BC2hmK3833077/publication/7F000001144ae1FFD3NmE112357A/category/7F000001144ae2034Eor17FDA83A/classification/7F000001144ae2034Fvj15FE7CDA">General_Help</a></li>
+             <li><a href="/channel/C0A801FC116f619BC2hmK3833077/publication/7F000001144ae1FFD3NmE112357A/category/7F000001144ae2034Eor17FDA83A/classification/7F000001144ae2034FnR15FE7CDA">Healthcare &amp; Pharma</a></li>
+             <li><a href="/channel/C0A801FC116f619BC2hmK3833077/publication/7F000001144ae1FFD3NmE112357A/category/7F000001144ae2034Eor17FDA83A/classification/7F000001144ae2034FLO15FE7CDA">Hospitality &amp; Food Services</a></li>
+             <li><a href="/channel/C0A801FC116f619BC2hmK3833077/publication/7F000001144ae1FFD3NmE112357A/category/7F000001144ae2034Eor17FDA83A/classification/7F000001144ae2034Fwm15FE7CDA">Human Resources &amp; Recruitment</a></li>
+             <li><a href="/channel/C0A801FC116f619BC2hmK3833077/publication/7F000001144ae1FFD3NmE112357A/category/7F000001144ae2034Eor17FDA83A/classification/7F000001144ae2034FtX15FE7CDA">Insurance &amp; FInancial</a></li>
+             <li><a href="/channel/C0A801FC116f619BC2hmK3833077/publication/7F000001144ae1FFD3NmE112357A/category/7F000001144ae2034Eor17FDA83A/classification/7F000001144ae2034FoO15FE3BC0">Law Enforcement &amp; Surveillance</a></li>
+             <li><a href="/channel/C0A801FC116f619BC2hmK3833077/publication/7F000001144ae1FFD3NmE112357A/category/7F000001144ae2034Eor17FDA83A/classification/7F000001144ae2034FGu15FE7CDA">Legal</a></li>
+             <li><a href="/channel/C0A801FC116f619BC2hmK3833077/publication/7F000001144ae1FFD3NmE112357A/category/7F000001144ae2034Eor17FDA83A/classification/7F000001144ae2034FSG15FE3BC0">Media_Publishing</a></li>
+             <li><a href="/channel/C0A801FC116f619BC2hmK3833077/publication/7F000001144ae1FFD3NmE112357A/category/7F000001144ae2034Eor17FDA83A/classification/7F000001144ae2034Frv15FE7CDA">PR &amp; Advertising</a></li>
+             <li><a href="/channel/C0A801FC116f619BC2hmK3833077/publication/7F000001144ae1FFD3NmE112357A/category/7F000001144ae2034Eor17FDA83A/classification/7F000001144ae2034Fhp15FE7CDA">Real Estate</a></li>
+             <li><a href="/channel/C0A801FC116f619BC2hmK3833077/publication/7F000001144ae1FFD3NmE112357A/category/7F000001144ae2034Eor17FDA83A/classification/7F000001144ae2034For15FE7CDA">Retail</a></li>
+             <li><a href="/channel/C0A801FC116f619BC2hmK3833077/publication/7F000001144ae1FFD3NmE112357A/category/7F000001144ae2034Eor17FDA83A/classification/7F000001144ae2034FLP15FE7CDA">Sales</a></li>
+             <li><a href="/channel/C0A801FC116f619BC2hmK3833077/publication/7F000001144ae1FFD3NmE112357A/category/7F000001144ae2034Eor17FDA83A/classification/7F000001144ae2034FIk15FE7CDA">Scientific</a></li>
+             <li><a href="/channel/C0A801FC116f619BC2hmK3833077/publication/7F000001144ae1FFD3NmE112357A/category/7F000001144ae2034Eor17FDA83A/classification/7F000001144ae2034FMM15FE3BC0">Social Care</a></li>
+             <li><a href="/channel/C0A801FC116f619BC2hmK3833077/publication/7F000001144ae1FFD3NmE112357A/category/7F000001144ae2034Eor17FDA83A/classification/7F000001144ae2034FRJ15FE3BC0">Technology &amp; Telecomm</a></li>
+             <li><a href="/channel/C0A801FC116f619BC2hmK3833077/publication/7F000001144ae1FFD3NmE112357A/category/7F000001144ae2034Eor17FDA83A/classification/7F000001144ae2034FQL15FE7CDA">Travel &amp; Tourism</a></li>
+             <li><a href="/channel/C0A801FC116f619BC2hmK3833077/publication/7F000001144ae1FFD3NmE112357A/category/7F000001144ae2034Eor17FDA83A/classification/7F000001144ae2034FPi15FE3BC0">Volunteers</a></li>
+            </ul>
+           </div> 
+          </div> 
+         </div> 
+        </div> </li>
+       <li class="col-xs-12 col-sm-6 col-md-4 category_item">
+        <div class="category-tile"> 
+         <h4 class="category-name">Pets</h4> 
+         <div class="category-url"></div> 
+         <div class="data"> 
+          <div class="ap_clspopuplist"> 
+           <div class="popcatclass_data" style="display:none">
+            <ul>
+             <li><a href="/channel/C0A801FC116f619BC2hmK3833077/publication/7F000001144ae1FFD3NmE112357A/category/7F000001144ae2034ETR17FDA83A/classification/7F000001144ae2034FXN15FE3BC0">Cats</a></li>
+             <li><a href="/channel/C0A801FC116f619BC2hmK3833077/publication/7F000001144ae1FFD3NmE112357A/category/7F000001144ae2034ETR17FDA83A/classification/7F000001144ae2034FPx15FE3BC0">Dogs</a></li>
+             <li><a href="/channel/C0A801FC116f619BC2hmK3833077/publication/7F000001144ae1FFD3NmE112357A/category/7F000001144ae2034ETR17FDA83A/classification/7F000001144ae2034FSl15FE3BC0">Lost &amp; Found</a></li>
+             <li><a href="/channel/C0A801FC116f619BC2hmK3833077/publication/7F000001144ae1FFD3NmE112357A/category/7F000001144ae2034ETR17FDA83A/classification/7F000001144ae2034Fvg15FE3BC0">Other</a></li>
+             <li><a href="/channel/C0A801FC116f619BC2hmK3833077/publication/7F000001144ae1FFD3NmE112357A/category/7F000001144ae2034ETR17FDA83A/classification/7F000001144ae2034FHi15FE3BC0">Pet Announcements</a></li>
+             <li><a href="/channel/C0A801FC116f619BC2hmK3833077/publication/7F000001144ae1FFD3NmE112357A/category/7F000001144ae2034ETR17FDA83A/classification/7F000001144ae2034FWX15FE3BC0">Pet Obituaries &amp; In Memoriams</a></li>
+             <li><a href="/channel/C0A801FC116f619BC2hmK3833077/publication/7F000001144ae1FFD3NmE112357A/category/7F000001144ae2034ETR17FDA83A/classification/7F000001144ae2034FSx15FE3BC0">Pet Supplies &amp; Services</a></li>
+            </ul>
+           </div> 
+          </div> 
+         </div> 
+        </div> </li>
+       <li class="col-xs-12 col-sm-6 col-md-4 category_item">
+        <div class="category-tile"> 
+         <h4 class="category-name">Real Estate/Other</h4> 
+         <div class="category-url"></div> 
+         <div class="data"> 
+          <div class="ap_clspopuplist"> 
+           <div class="popcatclass_data" style="display:none">
+            <ul>
+             <li><a href="/channel/C0A801FC116f619BC2hmK3833077/publication/7F000001144ae1FFD3NmE112357A/category/7F000001144ae2034EuI17FDA83A/classification/7F000001144ae2034FWU15FE3BC0">RE Marketplace</a></li>
+             <li><a href="/channel/C0A801FC116f619BC2hmK3833077/publication/7F000001144ae1FFD3NmE112357A/category/7F000001144ae2034EuI17FDA83A/classification/7F000001144ae2034Fom15FE3BC0">Real Estate Services</a></li>
+             <li><a href="/channel/C0A801FC116f619BC2hmK3833077/publication/7F000001144ae1FFD3NmE112357A/category/7F000001144ae2034EuI17FDA83A/classification/7F000001144ae2034Fhv15FE3BC0">Wanted</a></li>
+            </ul>
+           </div> 
+          </div> 
+         </div> 
+        </div> </li>
+       <li class="col-xs-12 col-sm-6 col-md-4 category_item">
+        <div class="category-tile"> 
+         <h4 class="category-name">Real Estate/For Rent</h4> 
+         <div class="category-url"></div> 
+         <div class="data"> 
+          <div class="ap_clspopuplist"> 
+           <div class="popcatclass_data" style="display:none">
+            <ul>
+             <li><a href="/channel/C0A801FC116f619BC2hmK3833077/publication/7F000001144ae1FFD3NmE112357A/category/7F000001144ae2034EQW17FDA83A/classification/7F000001144ae2034FMJ15FE3BC0">Acreages, Lots &amp; Land</a></li>
+             <li><a href="/channel/C0A801FC116f619BC2hmK3833077/publication/7F000001144ae1FFD3NmE112357A/category/7F000001144ae2034EQW17FDA83A/classification/7F000001144ae2034FtV15FE3BC0">Condos &amp; Apartments</a></li>
+             <li><a href="/channel/C0A801FC116f619BC2hmK3833077/publication/7F000001144ae1FFD3NmE112357A/category/7F000001144ae2034EQW17FDA83A/classification/7F000001144ae2034FWP15FE3BC0">Executive</a></li>
+             <li><a href="/channel/C0A801FC116f619BC2hmK3833077/publication/7F000001144ae1FFD3NmE112357A/category/7F000001144ae2034EQW17FDA83A/classification/7F000001144ae2034FLV15FE3BC0">Houses</a></li>
+             <li><a href="/channel/C0A801FC116f619BC2hmK3833077/publication/7F000001144ae1FFD3NmE112357A/category/7F000001144ae2034EQW17FDA83A/classification/7F000001144ae2034FKN15FE3BC0">Mobile Homes</a></li>
+             <li><a href="/channel/C0A801FC116f619BC2hmK3833077/publication/7F000001144ae1FFD3NmE112357A/category/7F000001144ae2034EQW17FDA83A/classification/7F000001144ae2034FGM15FE3BC0">Other</a></li>
+             <li><a href="/channel/C0A801FC116f619BC2hmK3833077/publication/7F000001144ae1FFD3NmE112357A/category/7F000001144ae2034EQW17FDA83A/classification/7F000001144ae2034Fgy15FE3BC0">Retirement/Seniors</a></li>
+             <li><a href="/channel/C0A801FC116f619BC2hmK3833077/publication/7F000001144ae1FFD3NmE112357A/category/7F000001144ae2034EQW17FDA83A/classification/7F000001144ae2034FRI15FE3BC0">Rooms &amp; Roommates</a></li>
+             <li><a href="/channel/C0A801FC116f619BC2hmK3833077/publication/7F000001144ae1FFD3NmE112357A/category/7F000001144ae2034EQW17FDA83A/classification/7F000001144ae2034Flw15FE3BC0">Storage &amp; Parking</a></li>
+             <li><a href="/channel/C0A801FC116f619BC2hmK3833077/publication/7F000001144ae1FFD3NmE112357A/category/7F000001144ae2034EQW17FDA83A/classification/7F000001144ae2034FMx15FE3BC0">Vacation Properties</a></li>
+             <li><a href="/channel/C0A801FC116f619BC2hmK3833077/publication/7F000001144ae1FFD3NmE112357A/category/7F000001144ae2034EQW17FDA83A/classification/7F000001144ae2034FjQ15FE3BC0">Wanted</a></li>
+            </ul>
+           </div> 
+          </div> 
+         </div> 
+        </div> </li>
+       <li class="col-xs-12 col-sm-6 col-md-4 category_item">
+        <div class="category-tile"> 
+         <h4 class="category-name">Real Estate/For Sale</h4> 
+         <div class="category-url"></div> 
+         <div class="data"> 
+          <div class="ap_clspopuplist"> 
+           <div class="popcatclass_data" style="display:none">
+            <ul>
+             <li><a href="/channel/C0A801FC116f619BC2hmK3833077/publication/7F000001144ae1FFD3NmE112357A/category/7F000001144ae2034Eij17FDA83A/classification/7F000001144ae2034FwY15FE3BC0">Acreages, Lots &amp; Land</a></li>
+             <li><a href="/channel/C0A801FC116f619BC2hmK3833077/publication/7F000001144ae1FFD3NmE112357A/category/7F000001144ae2034Eij17FDA83A/classification/7F000001144ae2034FmH15FE3BC0">Adult Communities</a></li>
+             <li><a href="/channel/C0A801FC116f619BC2hmK3833077/publication/7F000001144ae1FFD3NmE112357A/category/7F000001144ae2034Eij17FDA83A/classification/7F000001144ae2034FSP15FE3BC0">Condos &amp; Apartments</a></li>
+             <li><a href="/channel/C0A801FC116f619BC2hmK3833077/publication/7F000001144ae1FFD3NmE112357A/category/7F000001144ae2034Eij17FDA83A/classification/7F000001144ae2034FkH15FE3BC0">Houses</a></li>
+             <li><a href="/channel/C0A801FC116f619BC2hmK3833077/publication/7F000001144ae1FFD3NmE112357A/category/7F000001144ae2034Eij17FDA83A/classification/7F000001144ae2034FQs15FE3BC0">Mobile Homes</a></li>
+             <li><a href="/channel/C0A801FC116f619BC2hmK3833077/publication/7F000001144ae1FFD3NmE112357A/category/7F000001144ae2034Eij17FDA83A/classification/7F000001144ae2034Fip15FE3BC0">New Developments</a></li>
+             <li><a href="/channel/C0A801FC116f619BC2hmK3833077/publication/7F000001144ae1FFD3NmE112357A/category/7F000001144ae2034Eij17FDA83A/classification/7F000001144ae2034FxL15FE3BC0">Open Houses</a></li>
+             <li><a href="/channel/C0A801FC116f619BC2hmK3833077/publication/7F000001144ae1FFD3NmE112357A/category/7F000001144ae2034Eij17FDA83A/classification/7F000001144ae2034FyL15FE3BC0">Other</a></li>
+             <li><a href="/channel/C0A801FC116f619BC2hmK3833077/publication/7F000001144ae1FFD3NmE112357A/category/7F000001144ae2034Eij17FDA83A/classification/7F000001144ae2034FQm15FE3BC0">Vacation Properties</a></li>
+             <li><a href="/channel/C0A801FC116f619BC2hmK3833077/publication/7F000001144ae1FFD3NmE112357A/category/7F000001144ae2034Eij17FDA83A/classification/7F000001144ae2034FQW15FE3BC0">Wanted</a></li>
+            </ul>
+           </div> 
+          </div> 
+         </div> 
+        </div> </li>
+       <li class="col-xs-12 col-sm-6 col-md-4 category_item">
+        <div class="category-tile"> 
+         <h4 class="category-name">Remembering</h4> 
+         <div class="category-url"></div> 
+         <div class="data"> 
+          <div class="ap_clspopuplist"> 
+           <div class="popcatclass_data" style="display:none">
+            <ul>
+             <li><a href="http://windsorstar.remembering.ca/select-notice-type">Cards of Thanks</a></li>
+             <li><a href="http://windsorstar.remembering.ca/select-notice-type">In Memoriams</a></li>
+             <li><a href="http://windsorstar.remembering.ca/select-notice-type">Obituaries</a></li>
+             <li><a href="http://windsorstar.remembering.ca/select-notice-type">Sympathy Announcements</a></li>
+             <li><a href="http://windsorstar.remembering.ca/select-notice-type">Unveilings</a></li>
+             <li><a href="http://windsorstar.remembering.ca/select-notice-type">Upcoming Services</a></li>
+            </ul>
+           </div> 
+          </div> 
+         </div> 
+        </div> </li>
+       <li class="col-xs-12 col-sm-6 col-md-4 category_item">
+        <div class="category-tile"> 
+         <h4 class="category-name">Services</h4> 
+         <div class="category-url"></div> 
+         <div class="data"> 
+          <div class="ap_clspopuplist"> 
+           <div class="popcatclass_data" style="display:none">
+            <ul>
+             <li><a href="/channel/C0A801FC116f619BC2hmK3833077/publication/7F000001144ae1FFD3NmE112357A/category/7F000001144ae2034Ewo17FDA83A/classification/7F000001144ae2034FXI15FE3BC0">Air Conditioning &amp; Heating</a></li>
+             <li><a href="/channel/C0A801FC116f619BC2hmK3833077/publication/7F000001144ae1FFD3NmE112357A/category/7F000001144ae2034Ewo17FDA83A/classification/7F000001144ae2034FJv15FE3BC0">Astrology, Mediums &amp; Psychics</a></li>
+             <li><a href="/channel/C0A801FC116f619BC2hmK3833077/publication/7F000001144ae1FFD3NmE112357A/category/7F000001144ae2034Ewo17FDA83A/classification/7F000001144ae2034FLX15FE3BC0">Carpet &amp; Flooring</a></li>
+             <li><a href="/channel/C0A801FC116f619BC2hmK3833077/publication/7F000001144ae1FFD3NmE112357A/category/7F000001144ae2034Ewo17FDA83A/classification/7F000001144ae2034FoN15FE3BC0">Childcare</a></li>
+             <li><a href="/channel/C0A801FC116f619BC2hmK3833077/publication/7F000001144ae1FFD3NmE112357A/category/7F000001144ae2034Ewo17FDA83A/classification/7F000001144ae2034FTN15FE3BC0">Cleaning</a></li>
+             <li><a href="/channel/C0A801FC116f619BC2hmK3833077/publication/7F000001144ae1FFD3NmE112357A/category/7F000001144ae2034Ewo17FDA83A/classification/7F000001144ae2034FUu15FE3BC0">Computer &amp; Tech</a></li>
+             <li><a href="/channel/C0A801FC116f619BC2hmK3833077/publication/7F000001144ae1FFD3NmE112357A/category/7F000001144ae2034Ewo17FDA83A/classification/7F000001144ae2034FPL15FE3BC0">Contractors &amp; Skilled Trades</a></li>
+             <li><a href="/channel/C0A801FC116f619BC2hmK3833077/publication/7F000001144ae1FFD3NmE112357A/category/7F000001144ae2034Ewo17FDA83A/classification/7F000001144ae2034Fqx15FE3BC0">Dating Services</a></li>
+             <li><a href="/channel/C0A801FC116f619BC2hmK3833077/publication/7F000001144ae1FFD3NmE112357A/category/7F000001144ae2034Ewo17FDA83A/classification/7F000001144ae2034Ful15FE3BC0">Decks, Fences &amp; Siding</a></li>
+             <li><a href="/channel/C0A801FC116f619BC2hmK3833077/publication/7F000001144ae1FFD3NmE112357A/category/7F000001144ae2034Ewo17FDA83A/classification/7F000001144ae2034Fxy15FE3BC0">Disposal &amp; Hauling</a></li>
+             <li><a href="/channel/C0A801FC116f619BC2hmK3833077/publication/7F000001144ae1FFD3NmE112357A/category/7F000001144ae2034Ewo17FDA83A/classification/7F000001144ae2034FPS15FE3BC0">Eavestroughing &amp; Roofing</a></li>
+             <li><a href="/channel/C0A801FC116f619BC2hmK3833077/publication/7F000001144ae1FFD3NmE112357A/category/7F000001144ae2034Ewo17FDA83A/classification/7F000001144ae2034FxV15FE3BC0">Electrical</a></li>
+             <li><a href="/channel/C0A801FC116f619BC2hmK3833077/publication/7F000001144ae1FFD3NmE112357A/category/7F000001144ae2034Ewo17FDA83A/classification/7F000001144ae2034FyG15FE3BC0">Entertainment &amp; Weddings</a></li>
+             <li><a href="/channel/C0A801FC116f619BC2hmK3833077/publication/7F000001144ae1FFD3NmE112357A/category/7F000001144ae2034Ewo17FDA83A/classification/7F000001144ae2034FXU15FE3BC0">Health &amp; Beauty</a></li>
+             <li><a href="/channel/C0A801FC116f619BC2hmK3833077/publication/7F000001144ae1FFD3NmE112357A/category/7F000001144ae2034Ewo17FDA83A/classification/7F000001144ae2034FTg15FE3BC0">Home Renovations</a></li>
+             <li><a href="/channel/C0A801FC116f619BC2hmK3833077/publication/7F000001144ae1FFD3NmE112357A/category/7F000001144ae2034Ewo17FDA83A/classification/7F000001144ae2034FSv15FE3BC0">Moving &amp; Storage</a></li>
+             <li><a href="/channel/C0A801FC116f619BC2hmK3833077/publication/7F000001144ae1FFD3NmE112357A/category/7F000001144ae2034Ewo17FDA83A/classification/7F000001144ae2034FVK15FE3BC0">Other</a></li>
+             <li><a href="/channel/C0A801FC116f619BC2hmK3833077/publication/7F000001144ae1FFD3NmE112357A/category/7F000001144ae2034Ewo17FDA83A/classification/7F000001144ae2034Fxx15FE3BC0">Painters &amp; Decorators</a></li>
+             <li><a href="/channel/C0A801FC116f619BC2hmK3833077/publication/7F000001144ae1FFD3NmE112357A/category/7F000001144ae2034Ewo17FDA83A/classification/7F000001144ae2034FhH15FE3BC0">Yard Care &amp; Seasonal</a></li>
+            </ul>
+           </div> 
+          </div> 
+         </div> 
+        </div> </li>
+       <li class="col-xs-12 col-sm-6 col-md-4 category_item">
+        <div class="category-tile"> 
+         <h4 class="category-name">Travel</h4> 
+         <div class="category-url"></div> 
+         <div class="data"> 
+          <div class="ap_clspopuplist"> 
+           <div class="popcatclass_data" style="display:none">
+            <ul>
+             <li><a href="/channel/C0A801FC116f619BC2hmK3833077/publication/7F000001144ae1FFD3NmE112357A/category/7F000001144ae2034EXH17FDA83A/classification/7F000001144ae2034Fko15FE3BC0">Other</a></li>
+             <li><a href="/channel/C0A801FC116f619BC2hmK3833077/publication/7F000001144ae1FFD3NmE112357A/category/7F000001144ae2034EXH17FDA83A/classification/7F000001144ae2034Fvt15FE3BC0">Tours &amp; Vacations</a></li>
+            </ul>
+           </div> 
+          </div> 
+         </div> 
+        </div> </li>
+      </ul>
+     </div> 
+    </div> 
+   </div> 
+  </div> 
+  <footer> 
+   <div id="footer-wrapper"> 
+    <div class="footer-container"> 
+     <ul class="footer-links"> 
+      <li><a href="http://www.postmediaadvertising.com/general-terms-conditions/" target="_blank">Terms and Conditions</a></li> 
+      <li><a href="http://www.postmediaadvertising.com/privacy-statement/" target="_blank">Privacy Policy</a></li> 
+      <li><a href="http://www.postmediasolutions.com/about-us/" target="_blank">About</a></li> 
+      <li><a href="http://www.postmediasolutions.com/contact/" target="_blank">Contact Us</a></li> 
+     </ul> 
+     <ul class="copyright"> 
+      <li>PLEASE NOTE: AdBlocker software may interfere with the expected performance of this page and may generate unexpected errors. </li> 
+      <li>Please add an exemption for adperfect.com or disable your AdBlocker software.</li> 
+      <li>Copyright © 2019 by <a title="Windsor Star" href="http://www.windsorstar.com">Windsor Star</a>. All Rights Reserved.</li> 
+     </ul> 
+    </div> 
+   </div> 
+   <div class="powered-by-wrap"> 
+    <span>Powered by </span> 
+    <img src="//d2zfowlldib7se.cloudfront.net/assets/brand/logos/powered-by-adperfect-darker.png" class="img-responsive" alt="Powered by AdPerfect"> 
+   </div> 
+  </footer> 
+  <script type="text/javascript" src="//d2zfowlldib7se.cloudfront.net/assets/demo/js/fuelux/2.4.1/loader.min.js"></script> 
+  <script type="text/javascript" src="//d2zfowlldib7se.cloudfront.net/assets/demo/js/jquery-ui/1.10.3/jquery-ui.min.js"></script> 
+  <script type="text/javascript" src="//d2zfowlldib7se.cloudfront.net/assets/demo/js/bootstrap/3.0.1/bootstrap.min.js"></script> 
+  <script type="text/javascript" src="//d2zfowlldib7se.cloudfront.net/assets/brand/js/bootstrap-select.js"></script> 
+  <script type="text/javascript" src="//d2zfowlldib7se.cloudfront.net/assets/demo/js/swipe.js"></script> 
+  <script type="text/javascript" src="//d2zfowlldib7se.cloudfront.net/assets/demo/js/enquire.min.js"></script> 
+  <script type="text/javascript" src="//d2zfowlldib7se.cloudfront.net/assets/demo/js/jquery.touchSwipe.min.js"></script> 
+  <script type="text/javascript" src="//d2zfowlldib7se.cloudfront.net/assets/demo/js/hammer/1.0.5/jquery.hammer.min.js"></script> 
+  <script type="text/javascript" src="//d2zfowlldib7se.cloudfront.net/assets/bootstrap/js/bootstrap-checkbox.js"></script> 
+  <script type="text/javascript">
+			window.onload=function(){
+				   $('input[type="checkbox"]').checkbox();
+			};
+	 	</script> 
+  <script type="text/javascript">
+var wp = {"login_host":"windsorstar.adperfect.com","signin_href":"\/sign-in\/","signout_href":"\/sign-out\/","logout_href":false,"login_href":false,"ctrlm":null,"clp":false,"storage_hosts":["cdn-resources.prfct.cc"],"storage_hosts_assets":["cdn-assets.prfct.cc"],"storage_host":"\/\/cdn-resources.prfct.cc","storage_host_asset":"\/\/cdn-assets.prfct.cc","i18n":"en,en_postmedia"};var mod = {"i18n":{"language_arr":{"ADD":"Add","ADDITIONAL_PHOTOS":"<strong>%s<\/strong> for each added","ADD_DAYS":"Add more days","ADD_WEEKS":"add weeks","ALREADY_PAID":"Already Paid","APRIL":"April","AUGUST":"August","BALANCE_OWING":"Balance Owing","BILLING_EXPIRY_MONTH_01":"01 - January","BILLING_EXPIRY_MONTH_02":"02 - February","BILLING_EXPIRY_MONTH_03":"03 - March","BILLING_EXPIRY_MONTH_04":"04 - April","BILLING_EXPIRY_MONTH_05":"05 - May","BILLING_EXPIRY_MONTH_06":"06 - June","BILLING_EXPIRY_MONTH_07":"07 - July","BILLING_EXPIRY_MONTH_08":"08 - August","BILLING_EXPIRY_MONTH_09":"09 - September","BILLING_EXPIRY_MONTH_10":"10 - October","BILLING_EXPIRY_MONTH_11":"11 - November","BILLING_EXPIRY_MONTH_12":"12 - December","BODY_FONT_TITLE":"Body","CALENDAR_AVAILABLE_TEXT":"Available Start Day","CALENDAR_PRINTAD_HELP_TEXT":"<span class=\"glyphicon glyphicon-calendar\"><\/span><br\/>%s","CALENDAR_SELECTED_TEXT":"Selected","CALENDAR_UNAVAILABLE_TEXT":"Unavailable Start Day","CALENDAR_WEBAD_HELP_TEXT":"<span class=\"glyphicon glyphicon-calendar\"><\/span><br\/>%s","CANCEL_AD_CONFIRM":"Are you sure you want to cancel this ad?","CANCEL_AD_FAILED":"Failed to cancel ad!","CANCEL_AD_SUCCESS":"Ad Successfully Cancelled.","CANCEL_BUTTON":"Cancel","CHANGE_PASSWORD":"Change Password","CHOOSE_CATEGORY":"Choose a Category","CHOOSE_CLASSIFICATION":"Choose a Classification","CHOOSE_JOB_CATEGORY":" - Choose Job Category - ","CHOOSE_JOB_OCCUPATION":" - Choose Job Occupation - ","CHOOSE_MAKE":"- Choose Make -","CHOOSE_MODEL":"- Choose Model -","CHOOSE_TRIM":" - Choose Trim - ","CHOOSE_YEAR":"- Choose Year -","CONTRACT_STEP":"Contract Information","COST_PER_DAY":"Cost\/Day","COST_TYPE":"Cost Type","CREATE_STEP":"Create","CURRENCY":"$","CURRENT_PASSWORD_MISSING":"Please enter your current password.","DAY":"Day","DAYS":"Days","DECEMBER":"December","DELETE_AD_CONFIRM":"Are you sure you want to delete this ad?","DELETE_AD_FAILED":"Failed to delete ad!","DELETE_AD_SUCCESS":"Ad Successfully Deleted.","DISPLAY_CLASSIFICATION":"Click to display classifications","DRAFT_AD_DELETE":"Delete Draft","DRAFT_AD_EDIT":"Continue","EDIT_BUTTON":"Edit","END_DATE":"Ends","ENHANCE_STEP":"Enhance","EXTRA_CHARGES":"Extra Charges","FEBRUARY":"February","HEADLINE_FONT_TITLE":"Headline","HIDE_MAP":"Do not display my location on the map ","INCLUDED":"included","INCLUDED_LINES":"Includes %s lines","INCOMPLETED_AD_INFORMATION":"Please complete all required fields.","INVALID_AD_ID":"Invalid Ad ID!","INVALID_API":"There was an error creating your ad. Please try again later. [%s].","INVALID_CAL_DATE":"Invalid Calendar Date!","INVALID_IMAGE_FILE":"Choose an image in jpeg, png or gif format that matches the file size requirement.","INVALID_PASSWORD":"Password must be at least 7 characters  Include: -  1 letter - 1 number - 1 non-alphanumeric character","INVALID_PASSWORD_HISTORY":"Please enter a new password that is different from your last 4 passwords.","INVALID_PASSWORD_MATCH":"Passwords must match.","INVALID_REQUEST":"Please submit the form again.","INVALID_USER":"Invalid User!","IS_REQUIRED":"A valid %s is required.","JANUARY":"January","JULY":"July","JUNE":"June","LINERAD_START_DATE":"Print Ad start date","LINK_TO_WEBSITE":"Link to your website","LOADING":"Loading","MARCH":"March","MAXIMUM_PHOTO_RESTRICTION":"Please upload a maximum of %s photos.","MAX_PHOTOS":"Upload up to <strong>%s<\/strong>","MAY":"May","MINIMUM_PHOTO":"<strong>%s<\/strong> photo required","MINIMUM_PHOTOS":"<strong>%s<\/strong> photo required","MINIMUM_PHOTO_REQUIREMENT":"Please upload at least %s photo(s).","MONTH":"Month","MY_ACCOUNT":"Account","NEXT":"Next","NOVEMBER":"November","NO_TRIM\/UNKNOWN":"No Trim\/Unknown","OCTOBER":"October","ORDER_TOTAL":"Order Total","PACKAGE":"Package","PACKAGE_PRICE":"Package Price","PACKAGE_PRICE_FREE":"Free","PAYMENT_STEP":"Confirm & Pay","PHOTO_DELETE_ERROR":"This photo cannot be deleted.","PLACE_AD":"Place Ad","PLACE_NEW_AD":"Place New Ad","PLACE_YOUR_AD":"Place Your Ad","PREVIEW_EDIT":"Edit","PREVIEW_RESET":"Discard Changes","PREVIEW_SAVE":"Save","PREVIEW_SERVER_ERROR":"Preview server error.","PRICESUMMARY_LABEL_PRINTAD":"Enhancements","PRICESUMMARY_LABEL_WEBAD":"Online Enhancements","PRICE_BREAKDOWN":"Price Breakdown","PRINT_AD_TITLE":"Print Ad","PURCHASE_ADDITIONAL_RUN_DAYS":"Purchase additional run days ","RERUN_BUTTON":"Rerun","RESETCODE_MISSING":"Please enter the password reset code, or follow the password reset link that was sent to you.","RESETPASSWORD_EMAIL_SENT":"Reset password email has been sent to you.","RESETPASSWORD_SUCCESSED":"Password successfully changed.","SAVE_AD":"Save","SCHEDULE_STEP":"Schedule","SELECT":" - Select - ","SEPTEMBER":"September","SIGN_IN_LINK_TEXT":"Sign In","SIGN_OUT_LINK_TEXT":"Sign Out","START_DATE":"Starts","SUBMIT":"Submit","SUB_TOTAL":"Subtotal","TAGLINE_FONT_TITLE":"Tagline","TAX":"Tax","TAX_TOTAL":"Tax Total","TOTAL":"Total","TRANSACTION_NOT_APPROVED":"Your transaction was not approved.","VALID_ADDRESS":"Please enter a valid address.","VALID_ALPHA":"Please use only letters and spaces.","VALID_ALPHANUMERIC":"Please use only letters and numbers.","VALID_ALPHASPECIAL":"Please use only letters and special characters.","VALID_AUSPOSTAL":"Please enter a valid Australian postal code.","VALID_CREDITCARD":"Please enter a valid credit card number.","VALID_DECIMAL":"Please enter a value using only numbers and decimals.","VALID_EMAIL":"Please enter a valid email address.","VALID_INTEGER":"Please use numbers only.","VALID_PHONE":"Please enter a valid phone number.","VALID_POSTAL":"Please enter a valid postal code.","VALID_POSTALZIP":" must contain a valid postal\/zip code.","VALID_REGEXP":"Please complete this field in the correct format.","VALID_SINGLELINE":"Please enter a single line of text.","VALID_TIME":"Please enter the time in a valid format.","VALID_UKPOSTAL":"Please enter a valid UK postal code.","VALID_VIN":"Please enter a valid VIN.","VALID_ZIP":"Please enter a valid zip code.","VARIES":"varies","WEBAD_START_DATE":"Online Ad start date","WEB_AD_TITLE":"Online Ad","WEEK":"Week","WEEKS":"Weeks","YEAR":"Year","EXTRA_LINES":"Extra Lines","NOT_FOUND":"Page Not Found","NOT_FOUND_CHANNEL":"Could not get any channel.","NOT_FOUND_CHANNEL_MATCH_HOST":"The channel ID you provided does not belong to this host!","NOT_FOUND_CONTEXT_HOST":"Something went wrong when trying to set hostname_int_id to context","NOT_FOUND_HOSTNAME_ON_AP":"Host %s is not configured on Adplacement.","NOT_FOUND_HOSTNAME_ON_CAS":"Host %s is not a channel host nor a publication host on CAS.","NOT_FOUND_PATH_IMPLEMENTATION":"Path Name Not Implemented","SUB_TITLE_ACCOUNT":"Classifieds | Account","SUB_TITLE_CATEGORY":"Classifieds | Place an ad","SUB_TITLE_CHANGE_PASSWORD":"Classifieds | Change Password","SUB_TITLE_CLASSIFICATION":"Classifieds | Select a classification","SUB_TITLE_LOGIN":"Classifieds | Log in","SUB_TITLE_PACKAGE":"Classifieds | Select a package","SUB_TITLE_PUBLICATION":"Classifieds | Select a publication","SUB_TITLE_RESET_PASSWORD":"Classifieds | Reset password","SUB_TITLE_STEPS":"Classifieds | Create","SUB_TITLE_THANKYOU":"Classifieds | Thank you","MODAL_CROP_ROTATE_LEFT":"Rotate Left","MODAL_CROP_ROTATE_RIGHT":"Rotate Right","MODAL_CROP_TITLE":"Edit Photo","MODAL_CROP_CLOSE":"Close","MODAL_CROP_SAVE":"Save Changes","GST":"GST","QST":"QST","GCT":"GCT","GRT":"GRT","HST":"HST","SALES TAX":"Sales Tax","SUB_TITLE_SIGNUP":"AP User Sign up","SIGN_UP_EMAIL":"Email","SIGN_UP_LINK_TEXT":"Sign Up","SIGN_UP_FAILED":"Sign up failed.","PAY_BY_CREDIT":"Pay by Credit","PAY_BY_ACCOUNT":"Bill to Account","PAYMENT_METHOD":"Contract Payment Method","AD_STATUS_NEW":"New","AD_STATUS_UPCOMING":"Upcoming","AD_STATUS_RUNNING":"Running","AD_STATUS_COMPLETE":"Complete","AD_STATUS_ARCHIVED":"Archived","AD_STATUS_CANCELLED":"Cancelled","AD_STATUS_REJECTED":"Rejected","AD_STATUS_FRAUDULENT":"Fraudulent","INVALID_USER_LOGIN":"Invalid username and password combination.","MY_DRAFT_ADS":"Drafts","ADS_COUNT":"Ads (%s)","DRAFT_AD_SAVED_MSG":"Your ad has been saved.","DRAFT_AD_SAVED_FAIL_MSG":"Draft ad save failed.","DRAFT_AD_REQUIRE_LOGIN_MSG":"You need to login to save ads!","PLACE_NEW_AD_MY_ACCOUNT":"Account","APIERR_USERAUTH_EMAIL_HOSTNAME_REQUIRED":"User email and hostname are required.","APIERR_USERAUTH_UNKNOWN_USER":"The user you're looking for doesn't exist. Please check the spelling of the account and try again.","APIERR_USERAUTH_UPDATE_USERS_TABLE":"Failed to update the users table.","APIERR_USERAUTH_RRSET_LINK":"Failed to create reset password link.","APIERR_USERAUTH_SEND_RESET_EMAIL":"Failed to send password reset email.","APIERR_USERAUTH_RESET_EMAIL_NOT_FOUND":"Failed to get reset email.","APIERR_USERAUTH_PARAM_UPDATE_PASSWORD":"Wrong parameters to update user password","APIERR_USERAUTH_WEBPRES_USER":"Failed to update webpres user password.","APIERR_USERAUTH_USER_BT_RESET":"This link has expired.","APIERR_USERAUTH_USER_BY_EMAIL":"Failed to get user by user email.","APIERR_USERAUTH_UPDATE_PASSWORD":"Failed to update user password.","APIERR_USERAUTH_PASSWORD_HISTORY_MATCH":"New password must differ from your previous 4 passwords","APIERR_USERAUTH_PASSWORD_HISTORY_ERROR":"failed to check user password history.","APIERR_USERAUTH_PASSWORD_HISTORY_INSERT":"Failed to insert password history.","APIERR_USERAUTH_PARAMS":"Wrong parameters","APIERR_USERAUTH_USER_EXISTS":"This email is already linked to an account.","APIERR_USERAUTH_USER_INSERT":"Failed to insert into users table.","APIERR_USERAUTH_NO_PUBLICATION":"Failed to get publication.","APIERR_USERAUTH_SEND_ACCOUNT_EMAIL":"Failed to send new account email.","APIERR_ADCOMPILERSTATUS_INSERT":"Failed to insert\/update adcompilerstatus table.","APIERR_BASE_EMPTY_GATEWAY_URL":"Gateway URL is empty","APIERR_BASE_INIT_CURL":"Error initializing curl to call payment gateway.","APIERR_BASE_INIT_CURL_SERVER_IP":"Error initializing curl to get server IP.","APIERR_DRAFTAD_CLEANUP_DRAFTADCONTENT":"Failed to clean up rows from draftadcontent table.","APIERR_DRAFTAD_INSERT_DRAFTADCONTENT":"Failed to insert rows into adcontent table.","APIERR_DRAFTAD_INSERT_DRAFTADS":"Failed to insert\/update draftads table.","APIERR_DRAFTAD_DELETE_DRAFTADCONTENT":"Failed to clean up rows from draftadcontent table.","APIERR_DRAFTAD_UPDATE_DRAFTADCONTENT":"Failed to updata rows from draftadcontent table.","APIERR_EMAIL_LOG_EMAIL":"Failed to log email.","APIERR_EXPORT_QUERY_EXPORTDATA":"Failed to query exportdata","APIERR_EXPORT_INSERT_EXPORTCHECKPOINT":"Failed to insert\/update exportcheckpoint table","APIERR_EXPORT_INSERT_SCHEDULER":"Failed to insert\/update scheduler table","APIERR_PAYMENT_INSERT_ADTRANSACTIONS":"Failed to initialize transaction in PaymentModel->initAdTransaction","APIERR_PAYMENT_UPDATE_ADTRANSACTIONS":"Failed to close transaction in PaymentModel->markTransactionComplete","APIERR_PAYMENT_ACCOUNT_PAYMENT":"Failed to insert account payment data into transaction in PaymentModel","APIERR_PHOTO_REPLACE_PHOTOUPLOADS":"Failed to set photo metadata in PhotoModel->setPhotoMetadata","APIERR_PHOTO_AD_REVISION":"ads3photos requires ad revision.","APIERR_PHOTO_INSERT_ADS3PHOTOS":"Failed to set ads3photos.","APIERR_PHOTO_DELETE_PHOTOUPLOADS":"Failed to delete photo","APIERR_PHOTO_INVALID_DATA":"Wrong photo data.","APIERR_SYSTEM_EMPTY_USERDATA":"Somehow.....setUserData sets userData as empty array.","APIERR_SYSTEM_INSERT_USER_TABLE":"Failed to insert into users table.","APIERR_SYSTEM_UPDATE_USER_TABLE":"Failed to update users table.","APIERR_SYSTEM_NO_PAYMENT_EMAIL":"Ad JSON does not contain E-mailAddress data under payment object.","APIERR_SYSTEM_INSERT_USERCHANNELS_TABLE":"Failed to insert into userchannels table.","APIERR_SYSTEM_INSERT_USERPUBLICATIONS_TABLE":"Failed to insert into userpublications table.","APIERR_SYSTEM_UPDATE_USERPUBLICATIONS_TABLE":"Failed to update LastPlacedAd in userpublication table.","APIERR_SYSTEM_INVALID_GATEWAY":"Invalid gateway data","APIERR_SYSTEM_UPDATE_ADS_TABLE":"Failed to update ad!","APIERR_SYSTEM_INSERT_ADS_TABLE":"Failed to insert ads table.","APIERR_SYSTEM_APPROVE_STATUS":"Failed to update auto approve status in ads table.","APIERR_SYSTEM_ADCONTENT_CLEANUP":"Failed to clean up rows from adcontent table.","APIERR_SYSTEM_INSERT_ADCONTENT":"Failed to insert rows into adcontent table.","APIERR_SYSTEM_INSERT_ADLOG":"Failed to insert into adlog table.","APIERR_SYSTEM_INSERT_ADREVISIONS":"Failed to insert into adrevisions table.","APIERR_SYSTEM_CLEANUP_ADUPSELLS":"Failed to clean up rows from adupsells table.","APIERR_SYSTEM_INSERT_ADUPSELLS":"Failed to insert rows into adupsells table.","APIERR_SYSTEM_CLEANUP_ADRUNDATES":"Failed to clean up rows from adrundates table.","APIERR_SYSTEM_INSERT_ADRUNDATES":"Failed to insert rows into adrundates table.","APIERR_SYSTEM_CLEANUP_ADUPSELLSPERDIEM":"Failed to clean up rows from adupsellsperdiem table.","APIERR_SYSTEM_INSERT_ADUPSELLSPERDIEM":"Failed to insert rows into adupsellsperdiem table.","APIERR_SYSTEM_INSERT_ADTRANSACTIONSPRETAX":"Failed to store adtransaxtionspretax","APIERR_SYSTEM_INSERT_ADFINANCE":"Failed to insert adfinance table","APIERR_SYSTEM_ADSEQUENCE_DATA":"Wrong adsequence data.","APIERR_SYSTEM_INSERT_ADSEQUENCE":"Failed to insert into adsequence table.","APIERR_SYSTEM_UPDATE_PHOTOS":"Wrong parameters for update photos.","APIERR_SYSTEM_UPDATE_ADS3QUEUE":"Failed to update the ads3queue table.","APIERR_UPSELLS_INSERT_QRCODES":"Failed to insert data into qrcodes table.","APIERR_UPSELLS_REQUEST_DATA":"Wrong request data","APIERR_TAX_INSERT_ADTAX":"Failed to store ad tax","APIERR_SYSTEMTAG_REQUEST_DATA":"Wrong request data.","TAX_RATE_LABEL":"&nbsp;","TAX_AMOUNT_LABEL":"&nbsp;","APIERR_SYSTEM_USER_PROFILE":"Failed to create user profile","CHOOSE_APN_JOBSSECTOR2":"- Choose a APN JobsSector2 -","CHOOSE_APN_JOBSSECTOR":"- Choose a APN JobsSector -","CHOOSE_WORKOPOLIS_CATEGORY":"- Choose a Workopolis Category -","CHOOSE_WORKOPOLIS_SUBCATEGORY":"- Choose a Workopolis Sub-Category -","VALID_NUMBERIC":" must contain numbers or decimal digits only.","LIST_UPSELL_ITEMS_ERROR":"Please select at least one item.","LIST_UPSELL_INCLUDED":"%s item(s) included","VALID_MAX_SIZE":"The maximum number of characters allowed is %s.","VALID_MIN_SIZE":"The minumum number of characters required is %s.","APIERR_SYSTEM_THUMBNAIL_SIZE":"Failed to get thumbnail size.","APIERR_SYSTEM_PHOTO_SIZE":"Failed to get photo size.","APIERR_SYSTEM_NO_ACCOUNT":"No account information for account payment","CHOOSE_BILLING_COUNTRY":"- Choose Country -","EXPERIAN_NO_RESULT":"Nothing was found. Please make sure the registration number is correct or try again later.","EXPERIAN_SUBMIT_BUTTON_TEXT":"Search","APIERR_SYSTEM_INSERT_ADCOUPONS_TABLE":"Failed to insert data into adcoupons table.","INVALID_COUPON":"This is not a valid coupon.","PRICESUMMARY_LABEL_COUPON":"Coupon","COUPON_REMOVAL_SUBMIT_BUTTON":"Remove the coupon","COUPON_APPLY_SUBMIT_BUTTON":"Apply the coupon","COUPON_INPUT_NAME":"Code","APIERR_SHIELDMYNUMBER_INSERT":"Failed to insert data into phoneshield table.","APIERR_SHIELDMYNUMBER_INVALID_DATA":"Wrong phoneshield data","APIERR_SHIELDMYNUMBER_SERVICE":"Error initializing curl for phoneshield service.","ACCOUNT_SHIELDMYNUMBER_TEMPLATE_FAILURE":"Failed to load the template. Please try again.","ACCOUNT_SHIELDMYNUMBER_DETAILS_NO_RECORDS":"This number does not have any records.","ACCOUNT_SHIELDMYNUMBER_DETAILS_GO_BACK":"Go back","ACCOUNT_SHIELDMYNUMBER_DETAILS_TIME_USED":"%d  minutes  %d  seconds of  %d  minutes","SHIELDMYNUMBER_SUBMIT_BUTTON":"Get Private Phone Number","SHIELDMYNUMBER_FAIL_MSG":"Failed to get Private Phone Number","SHIELDMYNUMBER_MAX_TRY_MSG":"Please note:  You have reached limit of %s times to get phone numbers. The last available phone number will be used.","SHIELDMYNUMBER_PRIVATE_NUMBER_TEXT":"This is your private phone number:","SHIELDMYNUMBER_DETAIL_BUTTON":"View ShieldMyNumber Detail","PRICE_FREE":"Free","PLACE_ONE_PAGE_ORDER":"Place Your Order","WEB_DAY":"Day","WEB_DAYS":"Days","PRINT_DAY":"Day","PRINT_DAYS":"Days","WORDS":"Words (%s)","TITLE_RECENT_STORIES":"","FILE_UPLOAD_ERROR":"Failed in file upload","FILE_UPLOAD_BUTTON":"Select a file","FILE_REMOVE_BUTTON":"Remove the file","FILE_DISPLAY_LABEL":"View the file","FILE_UPLOAD_MAX_SIZE":"Maximum file size is %d","FILE_UPLOAD_MIN_SIZE":"Minimum file size is %d","APIERR_LOG_ABANDONMENT":"Failed to log abandonment data.","APIERR_DELETE_ABANDONMENT":"Failed to delete abandonment data.","PRICING_RATINGTITLE":"Pricing Rating","PRICING_RATINGLABELFIRST":"First","PRICING_RATINGLABELNEXT":"Next","PRICING_RATINGLABEL":"Every","PRICING_RATINGWORDS":"Words","PRICING_RATINGMINWORDS":"Min Words","PRICING_RATINGMAXWORDS":"Max Words","PRICING_RATINGPERWORD":"Per Word","PRICING_RATINGEACH":"Each","PRICING_RATINGUNLIMITED":"Unlimited","PRINT_WEEK":"week","PRINT_WEEKS":"weeks","CALENDAR_NOT_ENOUGH_SCHEDULED_PUBLISH_DATES":"There is not enough publish dates after your selected start date.","SUB_TITLE_CREATE_STEP":"Classifieds | Create","SUB_TITLE_ENHANCE_STEP":"Classifieds | Enhance","SUB_TITLE_SCHEDULE_STEP":"Classifieds | Schedule","SUB_TITLE_PAYMENT_STEP":"Classifieds | Confirm & Pay","SUB_TITLE_CONTRACT":"Classifieds | Contract","AD_CANCEL":"Cancel","AD_EDIT":"Edit","AD_PRICE":"Price","AD_STATUS":"Status","AD_TITLE":"Title","POWERED_BY":"Powered by","PRICING_AD_DISCOUNTS_TITLE":"Discounts","SSOAUTH_ERROR_MESSAGE":"Error occured during sso authentication.","CUSTOM_AD_NOT_FOUND":"The ad that you are looking for is no longer available. Similar ads are shown below, or you may start a new search above.","CUSTOM_CONTACT_SELLER_TITLE":"Contact the seller","CUSTOM_CONTACT_SELLER_SEND_COPY":"Send a copy to yourself","AD_CREATE_FAILED":"Failed in ad creation.","DECEASED_DATE_GREATER_THAN_CURRENT":"Date of the deceased cannot be greater than the current date.","BIRTH_DATE_GREATER_THAN_CURRENT":"Date of birth cannot be greater than the current date.","BIRTH_DATE_GREATER_THAN_DECEASED_DATE":"Date of birth cannot be greater than the date of the deceased","MISSING_AD_DATA_ON_HIDDEN_STEP":"Required information is missing. Before proceeding, return to the first step and complete all required fields.","MISSING_BISHOP_DATA":"Required information is missing. Before proceeding, please review and complete all required fields.","MISSING_AD_DATA":"Required information is missing. Before proceeding, return to the first step and complete all required fields.","CLONE_BUTTON":"Clone","INVALID_UPLOADED_FILE_NAME":"File name should not contain apostrophe.","RESETPASSWORD_INVALID_EMAIL":"Please enter a valid email address.","MY_PROFILE":"Edit Profile","PROFILE_UPDATE_SUCCESS":"Successfully saved your profile.","PROFILE_UPDATE_FAIL":"Failed to saved your profile.","PROFILE_REQUIRED_ERROR":"Please provide a %s.","PROFILE_MAX_LIMIT_ERROR":"%s should only have %s characters.","PREVIEW_PROOF":"<span aria-hidden=\"true\" class=\"glyphicon glyphicon-download-alt\"><\/span> Download proof","APIERR_ACCOUNTUSERS_INSERT":"Failed to set user contract.","APIERR_ADPUBLICATIONMULTI_INSERT":"Failed to insert Ad Publication Multi","QUOTE_AD_STATUS_PUBLICATION":"Pending Review","QUOTE_AD_STATUS_EXPIRED":"Quote Expired","QUOTE_AD_STATUS_QUOTEREJECTED":"Quote Rejected","QUOTE_AD_STATUS_QUOTEAPPROVED":"Quote Approved","QUOTE_AD_STATUS_NEW":"Pending Review","QUOTE_AD_STATUS_ADVERTISER":"Pending Approval","QUOTE_AD_FAILED_TO_UPDATE":"Failed to update quote ad","QUOTE_AD_REVISION_PENDING_ERROR":"Cannot approve\/cancel the quote ad with pending revision.","INVALID_QUOTE_AD":"Invalid quote ad","QUOTE_AD_APPROVAL_CHECKBOX_MISSING":"Please check %s checkbox.","QUOTE_AD_REVISION_PENDING":"This quote ad has pending revision","QUOTE_APPROVAL_CONFIRM_TITLE":"Quote Approval Confirm","QUOTE_APPROVAL_TITLE":"Quote Approval","QUOTES_COUNT":"Quote (%s)","QUOTE_PHOTO_COUNT_DESC":"Photo (%s)","MULTIPUB_MAP_CONTENT_LISTING_PAGER_LABEL":"%s - %s of %s","MULTIPUB_MAP_CONTENT_EMPTY_RESULT":"Empty","GOOGLEMAPSV3JS_NO_DATA_AVAIL":"No Data Available to Map","GOOGLEMAPSV3JS_CTL_RESET_TXT":"Reset Map","GOOGLEMAPSV3JS_CTL_RESET_TITLE":"Click to reset the map","GOOGLEMAPSV3JS_CTL_CENTER_TXT":"Centre Map","GOOGLEMAPSV3JS_CTL_CENTER_TITLE":"Click to centre the map","GOOGLEMAPSV3JS_CTL_PRINT_TXT":"Print Map","GOOGLEMAPSV3JS_CTL_PRINT_TITLE":"Click to print the map","GOOGLEMAPSV3JS_CTL_DIRECTIONS_TXT":"Directions","GOOGLEMAPSV3JS_CTL_DIRECTIONS_TITLE":"Directions","GOOGLEMAPSV3JS_PREVIOUS":"Previous","GOOGLEMAPSV3JS_NEXT":"Next","GOOGLEMAPSV3JS_MORE_INFO":"More Info","GOOGLEMAPSV3JS_CLOSE":"Close","PHOTO_FILE_TOO_BIG":"File is too big (%sMB). Max filesize: %sMB.","PHOTO_RESPONSE_ERROR":"Server responded with code %s.","MULTIPUB_PACKAGE_TITLE":"Multi pub packages","MULTIPUB_MAP_TITLE":"Multi pub map","UPSELL_PRICE_ERROR":"Price of %s is not correct","STEP_IS_NOT_VALIDATED":"Not all steps are validated! (%s)","AD_PREVIEW_INCREASE_ONLY":"The price can only be increased.","AD_PREVIEW_NO_VALUE_CHANGE":"The price can not be changed.","AD_PREVIEW_NO_EDIT":"The ad is not allowed to edit.","FREE_PHOTOS":"<strong>%s<\/strong> included","FREE_PHOTO":"<strong>%s<\/strong> included","CREDICARD_ERROR_MESSAGE":"The transaction could not be completed.<br>Reason: %s <br>Your card has not been charged for this transaction.","PLACE_ANOTHER_AD":"Place Another Ad","PLACE_SAME_AD":"Place the same ad","PACKAGE_BUNDLE_STARTING_FROM":"%s","PRICE_SUMMARY_WORD_TOTAL_SING":"%s word","PRICE_SUMMARY_WORD_TOTAL_PLURAL":"%s words","SUB_TITLE_CUSTOM_ENTRY":"Publishing Selection","PRICE_SUMMARY_WORD_PRICE":"%s\/word","PRICE_SUMMARY_WORD_COUNT_PLURAL":"%s words","PRICE_SUMMARY_WORD_COUNT_SINGULAR":"%s word","PRICE_SUMMARY_WORDS_RANGE":"%s - %s words","PACKAGE_BREAKDOWN_TOGGLE_OFF":"Hide pricing breakdown","PACKAGE_BREAKDOWN_TOGGLE_ON":"Show pricing breakdown","PACKAGE_RATE_ITEM_WORDS_FROM":"%s or more words","PACKAGE_RATE_ITEM_PRICE_FLAT":"%s","PACKAGE_RATE_ITEM_PRICE_WORD":"%s per word","PACKAGE_RATE_ITEM_WORDS_FROM_TO":"%s - %s words","PACKAGE_RATE_FROM_WORD":"Starting from %s per word","PACKAGE_RATE_FROM_FLAT":"Starting from %s","PREVIEW_ACKNOWLEDGEMENT_LABEL":"I approve the print proof and understand that the contents in the proof will be published <span class=\"required-label\">*<\/span>","PREVIEW_ACKNOWLEDGEMENT_VALUE":"I approve the print proof and understand that the contents in the proof will be published","PREVIEW_ACKNOWLEDGEMENT_REQUIRED":"Please acknowledge the print proof before proceeding","MINIMUM_INSERTION_DAYS":"Minimum insertion days is %s.","MAXIMUM_INSERTION_DAYS":"Maximum insertion days is %s.","QUOTE_AD_VIEW":"View Quote","LOW_RES_IMAGE_VALUE":"I accept","LOW_RES_IMAGE_ERROR":"Please accept the low-resolution photo upload before proceeding.","LOW_RES_IMAGE_INFO":"The image you uploaded is low resolution and may be distorted in print.","LOW_RES_IMAGE_CONFIRM":"I accept","MASTER_ACCESS_EXIT":"Back to original account","MASTER_ACCESS_CHANGE":"Switch user view","MASTER_ACCESS_ERROR":"Failed to get master access information","APIERR_MASTERACCESS_DENIED":"This account does not have permission to change user view.","MASTER_ACCESS_PLACEHOLDER":"User Email","MASTER_ACCESS_SUBMIT":"Go","RETRY_TRANSACTION":"The server encountered an error. Please retry the transaction.","PAST_DEADLINE":"One or more selected dates may be past deadline. Please revise your calendar selections.","BTN_CREATE_STORY":"Create a Story","CREATE_OBITUARY":"Create an Obituary","PAG_NEXT_PAGE":"Next Page","PAG_PREV_PAGE":"Prev Page","PAG_FIRST_PAGE":"First","PAG_LAST_PAGE":"Last","PAG_DROPDOWN_LABEL":"%s of %s","PAG_JUMP_TO_PAGE":"Jump to page","CONTRACT_ACCOUNT_TOOLTIP_STATUS_GOOD":"Status: Good","CONTRACT_ACCOUNT_TOOLTIP_STATUS_PAY":"Status: Pay","CONTRACT_ACCOUNT_TOOLTIP_STATUS_FROZEN":"Status: Frozen","CONTRACT_ACCOUNT_NAVIGATION_DEFAULT_OPTION_DISPLAY_TITLE":"Contract Ads","PRICINGSUMMARY_BASEINSERTIONS_SING":"%s day included","PRICINGSUMMARY_BASEINSERTIONS_MULT":"%s days included","PRICINGSUMMARY_SCHEDULE_PRINTAD":"Print Schedule","PRICINGSUMMARY_SCHEDULE_WEBAD":"Online Schedule","PRICINGSUMMARY_ADDWEBADDAYS2_SING":"Additional %s day","PRICINGSUMMARY_ADDWEBADDAYS1_SING":"Additional %s day","PRICINGSUMMARY_ADDLINERADDAYS2_SING":"Additional %s day","PRICINGSUMMARY_ADDLINERADDAYS1_SING":"Additional %s day","PRICINGSUMMARY_ADDWEBADDAYS2_MULT":"Additional %s days","PRICINGSUMMARY_ADDWEBADDAYS1_MULT":"Additional %s days","PRICINGSUMMARY_ADDLINERADDAYS2_MULT":"Additional %s days","PRICINGSUMMARY_ADDLINERADDAYS1_MULT":"Additional %s days","CLASSIFIEDS":"Classifieds","PLACE_AN_AD":"Place an Ad","DOWNLOAD_PROOF":"Download proof","ACCOUNT_SETTINGS":"Account Settings","CATEGORY":"Category","STATUS":"Status","CREATED":"Created","ORDER_NUMBER":"Order Number","PRICE":"Price","START":"Start","END":"End","YOU_HAVE_NO_ADS_YET":"You have no ads yet.","ACCOUNT_ADS":"Account Ads","DRAFT_ADS":"Draft Ads","DRAFT_ADS_PROMO":"These are ads that you saved for later.  You can continue creating these ads, or remove them.","ACCOUNT_ADS_PROMO":"Ads placed on this account.","AD_DETAILS":"Ad Details","PREVIEW":"Preview","ADS":"Ads","AD_SEARCH":"","CREATE_STORY_SAVE_FOR_LATER_ONBEFOREUNLOAD":"You have unsaved changes, to save cancel and click save.","PRICING_SUMMARY_TITLE":"Your Order","PRICING_SUMMARY_ENHANCEMENTS_TITLE":"Enhancements","USER_ACCOUNT_DRAFT_AD_TYPE":"Draft Ads","USER_ACCOUNT_AD_TYPE":"Account Ads","USER_ACCOUNT_CONTRACT_AD_TYPE":"%s Ads","PRINT_START":"Ad start","EMPTY_SEARCH_RESULTS_TITLE":"No search results","PUBLICATION":"Publication","EMPTY_SEARCH_RESULTS_TEXT":"No matching results","ACCOUNT_WARNING_ACTION_COMLETED":"The action was completed.","ACCOUNT_WARNING_ACTION_NOT_COMLETED":"The action could not be completed.","ACCOUNT_WARNING_CANCEL_TITLE":"Are you sure you want cancel the ad?","ACCOUNT_WARNING_DELETE_TITLE":"Are you sure you want delete the draft ad?","PACKAGE_ITEM_PROCEED":"Proceed","PACKAGE_ITEM_PHOTO_IN_PRINT":"Photo in print","PACKAGE_STARTING_AT":"Starting at","PREMIUM_GUESTBOOK":"Premium Guestbook","PREMIUM_GUESTBOOK_PROMO":"An interactive memorial that connects family and friends.","PREMIUM_GUESTBOOK_LINE1":"Create a lasting memorial for your loved one.","GUESTBOOK":"Guestbook","GUESTBOOK_PROMO":"Pay your respects to those you have loved and lost. Express condolences to the people who miss them too.","MEMORIES":"Memories","MEMORIES_PROMO":"Share photos, share stories and remind loved ones of special times spent together.","MILESTONES":"Milestones","MILESTONES_PROMO":"Build a timeline of your loved one's life that celebrates their achievements.","CHOOSE":"Choose","YOUR_AD_WILL_BE_POSTED_IN":"Your ad will be posted in ","PRINT_AD_INSERTIONS_PLURAL":" days in print","PRINT_AD_INSERTIONS_SINGULAR":" day in print","WEB_AD_INSERTIONS_SINGULAR":" day online","WEB_AD_INSERTIONS_PLURAL":" days online","PACKAGE_UPSELL_PHOTO":"Photo in print","PACKAGE_UPSELL_BORDER":"Border in print","PACKAGE_UPSELL_FEATURED":"Featured ad online","PACKAGE_CTA":"Get Started","PACKAGE_UPSELL_GRAPHIC":"Graphic in print","PACKAGE_UPSELL_BOLD":"Bold headline in print","PACKAGE_UPSELL_SPONSORED":"Sponsored online","PACKAGE_UPSELL_HIGHLIGHT":"Highlight online","PACKAGE_UPSELL_CLICKABLE":"Clickable URL online","INVALID_CHARACTERS_CONFIRM":"I accept","INVALID_CHARACTERS_VALUE":"I accept","INVALID_CHARACTERS_ERROR":"Please accept the modified characters or change invalid characters before proceeding.","INVALID_CHARACTERS_WARNING":"Invalid characters: ","INVALID_CHARACTERS_REPLACE":"%s replaced with %s","CALENDAR":"","FEATURED_ONLINE_OBIT":"Feature Online Obituary","FEATURED_OBIT_TEXT":"Online obituary notice will be featured on main pages of the website","ARRANGEMENTS_BY":"Arrangements by","VALID_RANGE":"Please enter a number between %s and %s.","DISPLAYAD_START_DATE":"Display Ad start date","PRICINGSUMMARY_SCHEDULE_DISPLAYAD":"Display Ad Schedule","PRICINGSUMMARY_ADDDISPLAYADDAYS2_SING":"Additional %s day","PRICINGSUMMARY_ADDDISPLAYADDAYS1_SING":"Additional %s day","PRICINGSUMMARY_ADDDISPLAYADDAYS2_MULT":"Additional %s days","PRICINGSUMMARY_ADDDISPLAYADDAYS1_MULT":"Additional %s days","AD_STYLES":"Ad Styles","OTHER_STYLE_GROUP":"Other Styles","DISPLAYAD_NO_IMAGE":"No Image","SELECT_ANOTHER_STYLE":"Select a different ad style","PROCEED_SWITCH_STYLE_BUTTON":"Proceed to Style Selection","SWITCH_STYLE_WARNING_MESSAGE":"You may lose your current ad content. Would you like to proceed anyway?","LINER_TOO_MANY_LINES_ERROR":"Your notice cannot exceed %s lines and it is currently %s lines. Please reduce the content by %s lines to meet this limit.","LINER_TOO_FEW_LINES_ERROR":"Your notice must contain at least %s lines, it is currently %s lines. Please add %s lines of content to meet this requirement.","LINER_TOO_MANY_WORDS_ERROR":"Your notice cannot exceed  %s words, it is currently %s words. Please reduce the text by %s words to meet  this limit.","LINER_TOO_FEW_WORDS_ERROR":"Your notice must contain at least %s words, it is currently %s words. Please add %s words to meet this requirement.","TRUNCATION_TEXT_WARNING":"The text field below has been truncated. Please modify your text or choose another ad style."}},"custom_select":{"custom_select_template":"<div class=\"ap_custom_select {Element::ExtraSelectClass}\">\n                                            {Element::SelectHTML}\n                                            <button>\n                                                <div class=\"title_span\">{Element::TitleHTML}<\/div>\n                                                <div class=\"ap_caret\"><\/div>\n                                            <\/button>\n                                            <dd>\n                                                <ul class=\"ap_dd_list {Element::ExtraListClass}\">\n                                                    {Element::ListHTML}\n                                                <\/ul>\n                                            <\/dd>\n                                            {Element::ExtraHTML}\n                                        <\/div>","custom_list_template":"<li data-value=\"{Element::ListValue}\">{Element::ListName}<\/li>"}};var cfg = {};
+</script>
+  <script type="text/javascript" src="//cdn-resources.prfct.cc/assets/marketplace/libs/res/r201911260/js/adplacement/sprintf.js"></script> 
+  <script type="text/javascript" src="//cdn-resources.prfct.cc/assets/marketplace/libs/res/r201911260/js/adplacement/i18n.js"></script> 
+  <script type="text/javascript" src="//cdn-resources.prfct.cc/assets/marketplace/libs/res/r201911260/js/custom-select.js"></script> 
+  <script type="text/javascript" src="//windsorstar.adperfect.com/adplacement-resource/javascript/b28d14bb5cc712aed43430547ebf01d4/1e9ea1b9d9747036a7de5e2be5eda770.js"></script> 
+  <script type="text/javascript" src="//windsorstar.adperfect.com/adplacement-resource/javascript/7a39f2b2f8f52bc79ce4bf59da7a03d0/70d49572741e35dcf782b651842e013c.js"></script>  
+ </body>
+</html>

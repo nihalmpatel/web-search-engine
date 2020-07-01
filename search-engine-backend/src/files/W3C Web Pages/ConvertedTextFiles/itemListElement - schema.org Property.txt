@@ -1,0 +1,61 @@
+itemListElement - schema.org Property schema.org Documentation Schemas Home itemListElement Thing > Property > itemListElement For itemListElement values, you can use simple strings (e.g. "Peter", "Paul", "Mary"), existing entities, or use ListItem. Text values are best if the elements in the list are plain strings. Existing entities are best for a simple, unordered list of existing things in your data. ListItem is used with ordered lists when you want to provide additional context about the element in that list or when the same item might be in different places in different lists. Note: The order of elements in your mark-up is not sufficient for indicating the order or elements. Use ListItem with a 'position' property in such cases. [more...] Canonical URL: http://schema.org/itemListElement Leave public feedback on this term 💬 Check for open issues. Values expected to be one of these types ListItem Text Thing Used on these types ItemList Examples Example 1 Without Markup Microdata RDFa JSON-LD <ol>
+  <li>
+    <a href="https://example.com/dresses">Dresses</a>
+  </li>
+  <li>
+    <a href="https://example.com/dresses/real">Real Dresses</a>
+  </li>
+</ol>
+ <ol itemscope itemtype="http://schema.org/BreadcrumbList">
+  <li itemprop="itemListElement" itemscope
+      itemtype="http://schema.org/ListItem">
+    <a itemprop="item" href="https://example.com/dresses">
+    <span itemprop="name">Dresses</span></a>
+    <meta itemprop="position" content="1" />
+  </li>
+  <li itemprop="itemListElement" itemscope
+      itemtype="http://schema.org/ListItem">
+    <a itemprop="item" href="https://example.com/dresses/real">
+    <span itemprop="name">Real Dresses</span></a>
+    <meta itemprop="position" content="2" />
+  </li>
+</ol>
+ <ol vocab="http://schema.org/" typeof="BreadcrumbList">
+  <li property="itemListElement" typeof="ListItem">
+    <a property="item" typeof="WebPage" href="https://example.com/dresses">
+     <span property="name">Dresses</span></a>
+     <meta property="position" content="1">
+  </li>
+  <li property="itemListElement" typeof="ListItem">
+    <a property="item" typeof="WebPage" href="https://example.com/dresses/real">
+    <span property="name">Real Dresses</span></a>
+    <meta property="position" content="2">
+  </li>
+</ol>
+ <script type="application/ld+json">
+{
+ "@context": "http://schema.org",
+ "@type": "BreadcrumbList",
+ "itemListElement":
+ [
+  {
+   "@type": "ListItem",
+   "position": 1,
+   "item":
+   {
+    "@id": "https://example.com/dresses",
+    "name": "Dresses"
+    }
+  },
+  {
+   "@type": "ListItem",
+  "position": 2,
+  "item":
+   {
+     "@id": "https://example.com/dresses/real",
+     "name": "Real Dresses"
+   }
+  }
+ ]
+}
+</script>

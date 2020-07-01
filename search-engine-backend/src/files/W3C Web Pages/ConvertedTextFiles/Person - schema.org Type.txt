@@ -1,0 +1,992 @@
+Person - schema.org Type schema.org Documentation Schemas Home Person Thing > Person A person (alive, dead, undead, or fictional). [more...] Canonical URL: http://schema.org/Person Equivalent Class: foaf:Person Leave public feedback on this term 💬 Check for open issues. Property Expected Type Description Properties from Person additionalName Text  An additional name for a Person, can be used for a middle name. address PostalAddress  or Text  Physical address of the item. affiliation Organization  An organization that this person is affiliated with. For example, a school/university, a club, or a team. alumniOf EducationalOrganization  or Organization  An organization that the person is an alumni of. Inverse property: alumni. award Text  An award won by or for this item. Supersedes awards. birthDate Date  Date of birth. birthPlace Place  The place where the person was born. brand Brand  or Organization  The brand(s) associated with a product or service, or the brand(s) maintained by an organization or business person. callSign Text  A callsign, as used in broadcasting and radio communications to identify people, radio and TV stations, or vehicles. children Person  A child of the person. colleague Person  or URL  A colleague of the person. Supersedes colleagues. contactPoint ContactPoint  A contact point for a person or organization. Supersedes contactPoints. deathDate Date  Date of death. deathPlace Place  The place where the person died. duns Text  The Dun & Bradstreet DUNS number for identifying an organization or business person. email Text  Email address. familyName Text  Family name. In the U.S., the last name of an Person. This can be used along with givenName instead of the name property. faxNumber Text  The fax number. follows Person  The most generic uni-directional social relation. funder Organization  or Person  A person or organization that supports (sponsors) something through some kind of financial contribution. gender GenderType  or Text  Gender of something, typically a Person, but possibly also fictional characters, animals, etc. While http://schema.org/Male and http://schema.org/Female may be used, text strings are also acceptable for people who do not identify as a binary gender. The gender property can also be used in an extended sense to cover e.g. the gender of sports teams. As with the gender of individuals, we do not try to enumerate all possibilities. A mixed-gender SportsTeam can be indicated with a text value of "Mixed". givenName Text  Given name. In the U.S., the first name of a Person. This can be used along with familyName instead of the name property. globalLocationNumber Text  The Global Location Number (GLN, sometimes also referred to as International Location Number or ILN) of the respective organization, person, or place. The GLN is a 13-digit number used to identify parties and physical locations. hasCredential EducationalOccupationalCredential  A credential awarded to the Person or Organization. hasOccupation Occupation  The Person's occupation. For past professions, use Role for expressing dates. hasOfferCatalog OfferCatalog  Indicates an OfferCatalog listing for this Organization, Person, or Service. hasPOS Place  Points-of-Sales operated by the organization or person. height Distance  or QuantitativeValue  The height of the item. homeLocation ContactPoint  or Place  A contact location for a person's residence. honorificPrefix Text  An honorific prefix preceding a Person's name such as Dr/Mrs/Mr. honorificSuffix Text  An honorific suffix preceding a Person's name such as M.D. /PhD/MSCSW. isicV4 Text  The International Standard of Industrial Classification of All Economic Activities (ISIC), Revision 4 code for a particular organization, business person, or place. jobTitle DefinedTerm  or Text  The job title of the person (for example, Financial Manager). knows Person  The most generic bi-directional social/work relation. knowsAbout Text  or Thing  or URL  Of a Person, and less typically of an Organization, to indicate a topic that is known about - suggesting possible expertise but not implying it. We do not distinguish skill levels here, or relate this to educational content, events, objectives or JobPosting descriptions. knowsLanguage Language  or Text  Of a Person, and less typically of an Organization, to indicate a known language. We do not distinguish skill levels or reading/writing/speaking/signing here. Use language codes from the IETF BCP 47 standard. makesOffer Offer  A pointer to products or services offered by the organization or person. Inverse property: offeredBy. memberOf Organization  or ProgramMembership  An Organization (or ProgramMembership) to which this Person or Organization belongs. Inverse property: member. naics Text  The North American Industry Classification System (NAICS) code for a particular organization or business person. nationality Country  Nationality of the person. netWorth MonetaryAmount  or PriceSpecification  The total financial value of the person as calculated by subtracting assets from liabilities. owns OwnershipInfo  or Product  Products owned by the organization or person. parent Person  A parent of this person. Supersedes parents. performerIn Event  Event that this person is a performer or participant in. publishingPrinciples CreativeWork  or URL  The publishingPrinciples property indicates (typically via URL) a document describing the editorial principles of an Organization (or individual e.g. a Person writing a blog) that relate to their activities as a publisher, e.g. ethics or diversity policies. When applied to a CreativeWork (e.g. NewsArticle) the principles are those of the party primarily responsible for the creation of the CreativeWork. While such policies are most typically expressed in natural language, sometimes related information (e.g. indicating a funder) can be expressed using schema.org terminology. relatedTo Person  The most generic familial relation. seeks Demand  A pointer to products or services sought by the organization or person (demand). sibling Person  A sibling of the person. Supersedes siblings. sponsor Organization  or Person  A person or organization that supports a thing through a pledge, promise, or financial contribution. e.g. a sponsor of a Medical Study or a corporate sponsor of an event. spouse Person  The person's spouse. taxID Text  The Tax / Fiscal ID of the organization or person, e.g. the TIN in the US or the CIF/NIF in Spain. telephone Text  The telephone number. vatID Text  The Value-added Tax ID of the organization or person. weight QuantitativeValue  The weight of the product or person. workLocation ContactPoint  or Place  A contact location for a person's place of work. worksFor Organization  Organizations that the person works for. Properties from Thing additionalType URL  An additional type for the item, typically used for adding more specific types from external vocabularies in microdata syntax. This is a relationship between something and a class that the thing is in. In RDFa syntax, it is better to use the native RDFa syntax - the 'typeof' attribute - for multiple types. Schema.org tools may have only weaker understanding of extra types, in particular those defined externally. alternateName Text  An alias for the item. description Text  A description of the item. disambiguatingDescription Text  A sub property of description. A short description of the item used to disambiguate from other, similar items. Information from other properties (in particular, name) may be necessary for the description to be useful for disambiguation. identifier PropertyValue  or Text  or URL  The identifier property represents any kind of identifier for any kind of Thing, such as ISBNs, GTIN codes, UUIDs etc. Schema.org provides dedicated properties for representing many of these, either as textual strings or as URL (URI) links. See background notes for more details. image ImageObject  or URL  An image of the item. This can be a URL or a fully described ImageObject. mainEntityOfPage CreativeWork  or URL  Indicates a page (or other CreativeWork) for which this thing is the main entity being described. See background notes for details. Inverse property: mainEntity. name Text  The name of the item. potentialAction Action  Indicates a potential Action, which describes an idealized action in which this thing would play an 'object' role. sameAs URL  URL of a reference Web page that unambiguously indicates the item's identity. E.g. the URL of the item's Wikipedia page, Wikidata entry, or official website. subjectOf CreativeWork  or Event  A CreativeWork or Event about this Thing. Inverse property: about. url URL  URL of the item. Instances of Person may appear as values for the following properties Property On Types Description accountablePerson CreativeWork  Specifies the Person that is legally accountable for the CreativeWork. acquiredFrom OwnershipInfo  The organization or person from which the product was acquired. actor Clip  or CreativeWorkSeason  or Episode  or Event  or Movie  or MovieSeries  or RadioSeries  or TVSeries  or VideoGame  or VideoGameSeries  or VideoObject  An actor, e.g. in tv, radio, movie, video games etc., or in an event. Actors can be associated with individual items or with a series, episode, clip. Supersedes, actors. agent Action  The direct performer or driver of the action (animate or inanimate). e.g. John wrote a book. alumni EducationalOrganization  or Organization  Alumni of an organization. inverse property: alumniOf. artist ComicIssue  or ComicStory  or VisualArtwork  The primary artist for a work in a medium other than pencils or digital line art--for example, if the primary artwork is done in watercolors or digital paints. athlete SportsTeam  A person that acts as performing member of a sports team; a player as opposed to a coach. attendee Event  A person or organization attending the event. Supersedes, attendees. author CreativeWork  or Rating  The author of this content or rating. Please note that author is special in that HTML 5 provides a special mechanism for indicating authorship via the rel tag. That is equivalent to this and may be used interchangeably. awayTeam SportsEvent  The away team in a sports event. bccRecipient Message  A sub property of recipient. The recipient blind copied on a message. borrower LendAction  A sub property of participant. The person that borrows the object being lent. broker Invoice  or Order  or Reservation  or Service  An entity that arranges for an exchange between a buyer and a seller. In most cases a broker never acquires or releases ownership of a product or service involved in an exchange. If it is not clear whether an entity is a broker, seller, or buyer, the latter two terms are preferred. Supersedes, bookingAgent. buyer SellAction  A sub property of participant. The participant/person/organization that bought the object. byArtist MusicAlbum  or MusicRecording  The artist that performed this album or recording. candidate VoteAction  A sub property of object. The candidate subject of this action. ccRecipient Message  A sub property of recipient. The recipient copied on a message. character CreativeWork  Fictional person connected with a creative work. children Person  A child of the person. coach SportsTeam  A person that acts in a coaching role for a sports team. colleague Person  A colleague of the person. Supersedes, colleagues. colorist ComicIssue  or ComicStory  or VisualArtwork  The individual who adds color to inked drawings. competitor SportsEvent  A competitor in a sports event. composer Event  or MusicComposition  The person or organization who wrote a composition, or who is the composer of a work performed at some event. contributor CreativeWork  or Event  A secondary contributor to the CreativeWork or Event. copyrightHolder CreativeWork  The party holding the legal copyright to the CreativeWork. creator CreativeWork  or UserComments  The creator/author of this CreativeWork. This is the same as the Author property for CreativeWork. creditedTo MusicRelease  The group the release is credited to if different than the byArtist. For example, Red and Blue is credited to "Stefani Germanotta Band", but by Lady Gaga. customer Invoice  or Order  Party placing the order or paying the invoice. director Clip  or CreativeWorkSeason  or Episode  or Event  or Movie  or MovieSeries  or RadioSeries  or TVSeries  or VideoGame  or VideoGameSeries  or VideoObject  A director of e.g. tv, radio, movie, video gaming etc. content, or of an event. Directors can be associated with individual items or with a series, episode, clip. Supersedes, directors. editor CreativeWork  Specifies the Person who edited the CreativeWork. employee Organization  Someone working for this organization. Supersedes, employees. endorsee EndorseAction  A sub property of participant. The person/organization being supported. endorsers Diet  People or organizations that endorse the plan. followee FollowAction  A sub property of object. The person or organization being followed. follows Person  The most generic uni-directional social relation. founder Organization  A person who founded this organization. Supersedes, founders. funder CreativeWork  or Event  or MonetaryGrant  or Organization  or Person  A person or organization that supports (sponsors) something through some kind of financial contribution. grantee DigitalDocumentPermission  The person, organization, contact point, or audience that has been granted this permission. homeTeam SportsEvent  The home team in a sports event. illustrator Book  The illustrator of the book. inker ComicIssue  or ComicStory  or VisualArtwork  The individual who traces over the pencil drawings in ink after pencils are complete. instructor CourseInstance  A person assigned to instruct or provide instructional assistance for the CourseInstance. knows Person  The most generic bi-directional social/work relation. landlord RentAction  A sub property of participant. The owner of the real estate property. legislationPassedBy Legislation  The person or organization that originally passed or made the law : typically parliament (for primary legislation) or government (for secondary legislation). This indicates the "legal author" of the law, as opposed to its physical author. legislationResponsible Legislation  An individual or organization that has some kind of responsibility for the legislation. Typically the ministry who is/was in charge of elaborating the legislation, or the adressee for potential questions about the legislation once it is published. lender BorrowAction  A sub property of participant. The person that lends the object being borrowed. letterer ComicIssue  or ComicStory  or VisualArtwork  The individual who adds lettering, including speech balloons and sound effects, to artwork. loser WinAction  A sub property of participant. The loser of the action. lyricist MusicComposition  The person who wrote the words. member Organization  or ProgramMembership  A member of an Organization or a ProgramMembership. Organizations can be members of organizations; ProgramMembership is typically for individuals. Supersedes, members musicGroupMember. inverse property: memberOf. musicBy Clip  or Episode  or Movie  or MovieSeries  or RadioSeries  or TVSeries  or VideoGame  or VideoGameSeries  or VideoObject  The composer of the soundtrack. offeredBy Offer  A pointer to the organization or person making the offer. inverse property: makesOffer. opponent ExerciseAction  A sub property of participant. The opponent on this action. organizer Event  An organizer of an Event. parent Person  A parent of this person. Supersedes, parents. participant Action  Other co-agents that participated in the action indirectly. e.g. John wrote a book with Steve. penciler ComicIssue  or ComicStory  or VisualArtwork  The individual who draws the primary narrative artwork. performer Event  A performer at the event—for example, a presenter, musician, musical group or actor. Supersedes, performers. producer CreativeWork  The person or organization who produced the work (e.g. music album, movie, tv/radio series etc.). provider CreativeWork  or EducationalOccupationalProgram  or Invoice  or ParcelDelivery  or Reservation  or Service  or Trip  The service provider, service operator, or service performer; the goods producer. Another party (a seller) may offer those services or goods on behalf of the provider. A provider may also serve as the seller. Supersedes, carrier. publishedBy PublicationEvent  An agent associated with the publication event. publisher CreativeWork  The publisher of the creative work. readBy Audiobook  A person who reads (performs) the audiobook. recipient AuthorizeAction  or CommunicateAction  or DonateAction  or GiveAction  or Message  or PayAction  or ReturnAction  or SendAction  or TipAction  A sub property of participant. The participant who is at the receiving end of the action. relatedTo Person  The most generic familial relation. reviewedBy WebPage  People or organizations that have reviewed the content on this web page for accuracy and/or completeness. sdPublisher CreativeWork  Indicates the party responsible for generating and publishing the current structured data markup, typically in cases where the structured data is derived automatically from existing published content but published on a different site. For example, student projects and open data initiatives often re-publish existing content with more explicitly structured metadata. The sdPublisher property helps make such practices more explicit. seller BuyAction  or Demand  or Flight  or Offer  or Order  An entity which offers (sells / leases / lends / loans) the services / goods. A seller may also be a provider. Supersedes, merchant vendor. sender Message  or ReceiveAction  A sub property of participant. The participant who is at the sending end of the action. sibling Person  A sibling of the person. Supersedes, siblings. spokenByCharacter Quotation  The (e.g. fictional) character, Person or Organization to whom the quotation is attributed within the containing CreativeWork. sponsor CreativeWork  or Event  or Grant  or MedicalStudy  or Organization  or Person  A person or organization that supports a thing through a pledge, promise, or financial contribution. e.g. a sponsor of a Medical Study or a corporate sponsor of an event. spouse Person  The person's spouse. toRecipient Message  A sub property of recipient. The recipient who was directly sent the message. translator CreativeWork  or Event  Organization or person who adapts a creative work to different languages, regional differences and technical requirements of a target market, or that translates during some event. underName Reservation  or Ticket  The person or organization the reservation or ticket is for. winner LoseAction  A sub property of participant. The winner of the action. More specific Types Patient Acknowledgement This class contains derivatives of IPTC rNews properties. rNews is a data model of publishing metadata with serializations currently available for RDFa as well as HTML5 Microdata. More information about the IPTC and rNews can be found at rnews.org. Examples Example 1 Without Markup Microdata RDFa JSON-LD An example of a invoice for a purchase and installation.
+ACME Home Heating
+Bill for: New furnace and installation
+Customer: Jane Doe
+payment due: 2015-01-30
+minimum payment: $0.00
+total due: $0.00
+payment status: paid
+order: furnace model ABC123
+order: installation labor
+ <div itemscope itemtype="http://schema.org/Invoice">
+  <h1 itemprop="description">New furnace and installation</h1>
+  <div itemprop="broker" itemscope itemtype="http://schema.org/LocalBusiness">
+    <b itemprop="name">ACME Home Heating</b>
+  </div>
+  <div itemprop="customer" itemscope itemtype="http://schema.org/Person">
+    <b itemprop="name">Jane Doe</b>
+  </div>
+  <time itemprop="paymentDueDate">2015-01-30</time>
+  <div itemprop="minimumPaymentDue" itemscope itemtype="http://schema.org/PriceSpecification">
+    <span itemprop="price">0.00</span>
+    <span itemprop="priceCurrency">USD</span>
+  </div>
+  <div itemprop="totalPaymentDue" itemscope itemtype="http://schema.org/PriceSpecification">
+    <span itemprop="price">0.00</span>
+    <span itemprop="priceCurrency">USD</span>
+  </div>
+  <link itemprop="paymentStatus" href="http://schema.org/PaymentComplete" />
+  <div itemprop="referencesOrder" itemscope itemtype="http://schema.org/Order">
+    <span itemprop="description">furnace</span>
+    <time itemprop="orderDate">2014-12-01</time>
+    <span itemprop="orderNumber">123ABC</span>
+    <div itemprop="orderedItem" itemscope itemtype="http://schema.org/Product">
+      <span itemprop="name">ACME Furnace 3000</span>
+      <meta itemprop="productID" content="ABC123" />
+    </div>
+  </div>
+  <div itemprop="referencesOrder" itemscope itemtype="http://schema.org/Order">
+    <span itemprop="description">furnace installation</span>
+    <time itemprop="orderDate">2014-12-02</time>
+    <div itemprop="orderedItem" itemscope itemtype="http://schema.org/Service">
+      <span itemprop="description">furnace installation</span>
+    </div>
+  </div>
+</div>
+ <div vocab="http://schema.org/" typeof="Invoice">
+  <h1 property="description">New furnace and installation</h1>
+  <div property="broker" typeof="/LocalBusiness">
+    <b property="name">ACME Home Heating</b>
+  </div>
+  <div property="customer" typeof="Person">
+    <b property="name">Jane Doe</b>
+  </div>
+  <time property="paymentDueDate">2015-01-30</time>
+  <div property="minimumPaymentDue" typeof="PriceSpecification">
+    <span property="price">0.00</span>
+    <span property="priceCurrency">USD</span>
+  </div>
+  <div property="totalPaymentDue" typeof="PriceSpecification">
+    <span property="price">0.00</span>
+    <span property="priceCurrency">USD</span>
+  </div>
+  <meta itemprop="paymentStatus" content="PaymentComplete" />
+  <div property="referencesOrder" typeof="Order">
+    <span property="description">furnace</span>
+    <time property="orderDate">2014-12-01</time>
+    <span property="orderNumber">123ABC</span>
+    <div property="orderedItem" typeof="Product">
+      <span property="name">ACME Furnace 3000</span>
+      <meta property="productID" content="ABC123" />
+    </div>
+  </div>
+  <div property="referencesOrder" typeof="Order">
+    <span property="description">furnace installation</span>
+    <time property="orderDate">2014-12-02</time>
+    <div property="orderedItem" typeof="Service">
+      <span property="description">furnace installation</span>
+    </div>
+  </div>
+</div>
+ <script type="application/ld+json">
+{
+    "@context": "http://schema.org/",
+    "@type": "Invoice",
+    "broker": {
+      "@type": "LocalBusiness",
+      "name": "ACME Home Heating"
+    },
+    "accountId": "xxxx-xxxx-xxxx-1234",
+    "customer": {
+      "@type": "Person",
+      "name": "Jane Doe"
+    },
+    "paymentDueDate": "2015-01-30",
+    "minimumPaymentDue": {
+      "@type": "PriceSpecification",
+      "price": 0.00,
+      "priceCurrency": "USD"
+    },
+    "totalPaymentDue": {
+      "@type": "PriceSpecification",
+      "price": 0.00,
+      "priceCurrency": "USD"
+    },
+    "paymentStatus": "http://schema.org/PaymentComplete",
+    "referencesOrder": [
+      {
+        "@type": "Order",
+        "description": "furnace",
+        "orderDate": "2014-12-01",
+        "orderNumber": "123ABC",
+        "paymentMethod": "http://purl.org/goodrelations/v1#ByInvoice",
+        "orderedItem": {
+          "@type": "Product",
+          "name": "ACME Furnace 3000",
+          "productID": "ABC123"
+        }
+      },
+      {
+        "@type": "Order",
+        "description": "furnace installation",
+        "orderDate": "2014-12-02",
+        "paymentMethod": "http://purl.org/goodrelations/v1#ByInvoice",
+        "orderedItem": {
+          "@type": "Service",
+          "description": "furnace installation"
+        }
+      }
+    ]
+}
+</script>
+ Example 2 Without Markup Microdata RDFa JSON-LD <div>
+  <h2>Shostakovich Leningrad</h2>
+  <div>
+    <div>May<span>23</span></div>
+    <div>8:00 PM</div>
+    <div>
+      <strong>Britten, Shostakovich</strong>
+    </div>
+  </div>
+  <div>
+    <p>Jaap van Zweden conducts two World War II-era pieces showcasing the glorious sound of the CSO.</p>
+  </div>
+  <div>
+    <h3>Program</h3>
+    <ul>
+      <li>
+        <link href="http://en.wikipedia.org/wiki/Peter_Grimes" />
+        <span><strong>Britten</strong> Four Sea Interludes and Passacaglia from <em>Peter Grimes</em></span>
+  </li>
+      <li>
+      <link href="http://en.wikipedia.org/wiki/Symphony_No._7_(Shostakovich)" />
+      <span><strong>Shostakovich</strong> Symphony No. 7 <em>(Leningrad)</em></span>
+  </li>
+    </ul>
+  </div>
+  <div>
+    <h3>Performers</h3>
+    <div>
+      <img src="/examples/cso_c_logo_s.jpg" alt="Chicago Symphony Orchestra" />
+      <link href="http://cso.org/" />
+      <link href="http://en.wikipedia.org/wiki/Chicago_Symphony_Orchestra" />
+      <div>
+        <a href="examples/Performer?id=4434">Chicago Symphony Orchestra</a>
+      </div>
+    </div>
+    <div>
+      <link href="http://www.jaapvanzweden.com/" />
+      <img src="/examples/jvanzweden_s.jpg" alt="Jaap van Zweden"/>
+      <div>
+        <a href="/examples/Performer.aspx?id=11324">Jaap van Zweden</a>
+      </div>
+      <div>conductor</div>
+    </div>
+  </div>
+</div>
+ <div itemscope="" itemtype="http://schema.org/MusicEvent">
+  <div itemprop="location" itemscope="" itemtype="http://schema.org/MusicVenue">
+    <meta itemprop="name" content="Chicago Symphony Center"/>
+    <link itemprop="sameAs" href="http://en.wikipedia.org/wiki/Symphony_Center"/>
+    <meta itemprop="address" content="220 S. Michigan Ave, Chicago, Illinois, USA"/>
+  </div>
+  <div itemprop="offers" itemscope="" itemtype="http://schema.org/Offer">
+    <link itemprop="url" href="/examples/ticket/12341234" />
+    <meta itemprop="price" content="40"/>
+    <meta itemprop="priceCurrency" content="USD" />
+    <link itemprop="availability" href="http://schema.org/InStock"/>
+  </div>
+  <h2 itemprop="name">Shostakovich Leningrad</h2>
+  <div>
+    <div itemprop="startDate" content="2014-05-23T20:00">May<span>23</span></div>
+    <div>8:00 PM</div>
+    <div>
+      <strong>Britten, Shostakovich</strong>
+    </div>
+  </div>
+  <div>
+    <p>Jaap van Zweden conducts two World War II-era pieces showcasing the glorious sound of the CSO.</p>
+  </div>
+  <div>
+    <h3>Program</h3>
+    <ul>
+      <li itemprop="workPerformed" itemscope="" itemtype="http://schema.org/CreativeWork">
+        <link itemprop="sameAs" href="http://en.wikipedia.org/wiki/Peter_Grimes" />
+        <span itemprop="name"><strong>Britten</strong> Four Sea Interludes and Passacaglia from <em itemprop="name">Peter Grimes</em></span>
+  </li>
+      <li itemprop="workPerformed" itemscope="" itemtype="http://schema.org/CreativeWork">
+      <link itemprop="sameAs" href="http://en.wikipedia.org/wiki/Symphony_No._7_(Shostakovich)" />
+      <span itemprop="name"><strong>Shostakovich</strong> Symphony No. 7 <em>(Leningrad)</em></span>
+  </li>
+    </ul>
+  </div>
+  <div>
+    <h3>Performers</h3>
+    <div itemprop="performer" itemscope="" itemtype="http://schema.org/MusicGroup">
+      <img src="/examples/cso_c_logo_s.jpg" alt="Chicago Symphony Orchestra" />
+      <link itemprop="sameAs" href="http://cso.org/" />
+      <link itemprop="sameAs" href="http://en.wikipedia.org/wiki/Chicago_Symphony_Orchestra" />
+      <div>
+        <a href="examples/Performer?id=4434"><span itemprop="name">Chicago Symphony Orchestra</span></a>
+      </div>
+    </div>
+    <div itemprop="performer" itemscope="" itemtype="http://schema.org/Person">
+      <link itemprop="sameAs" href="http://www.jaapvanzweden.com/" />
+      <img itemprop="image" src="/examples/jvanzweden_s.jpg" alt="Jaap van Zweden"/>
+      <div>
+        <a href="/examples/Performer.aspx?id=11324"><span itemprop="name">Jaap van Zweden</span></a>
+      </div>
+      <div>conductor</div>
+    </div>
+  </div>
+</div>
+ <div vocab="http://schema.org/" typeof="MusicEvent">
+  <div property="location" typeof="MusicVenue">
+    <meta property="name" content="Chicago Symphony Center"/>
+    <link property="sameAs" href="http://en.wikipedia.org/wiki/Symphony_Center"/>
+    <meta property="address" content="220 S. Michigan Ave, Chicago, Illinois, USA"/>
+  </div>
+  <div property="offers" typeof="Offer">
+    <link property="url" href="/examples/ticket/12341234"/>
+    <meta property="priceCurrency" content="USD" />$
+    <meta property="price" content="40"/>40.00
+    <link property="availability" href="http://schema.org/InStock"/>
+  </div>
+  <h2 property="name">Shostakovich Leningrad</h2>
+  <div>
+    <div property="startDate" content="2014-05-23T20:00">May<span>23</span></div>
+    <div>8:00 PM</div>
+    <div>
+      <strong>Britten, Shostakovich</strong>
+    </div>
+  </div>
+  <div>
+    <p>Jaap van Zweden conducts two World War II-era pieces showcasing the glorious sound of the CSO.</p>
+  </div>
+  <div>
+    <h3>Program</h3>
+    <ul>
+      <li property="workPerformed" typeof="CreativeWork">
+        <link href="http://en.wikipedia.org/wiki/Peter_Grimes" property="sameAs"/>
+        <span property="name"><strong>Britten</strong> Four Sea Interludes and Passacaglia from <em property="name">Peter Grimes</em></span>
+  </li>
+      <li property="workPerformed" typeof="CreativeWork">
+      <link href="http://en.wikipedia.org/wiki/Symphony_No._7_(Shostakovich)" property="sameAs"/>
+      <span property="name"><strong>Shostakovich</strong> Symphony No. 7 <em>(Leningrad)</em></span>
+  </li>
+    </ul>
+  </div>
+  <div>
+    <h3>Performers</h3>
+    <div property="performer" typeof="MusicGroup">
+      <img src="/examples/cso_c_logo_s.jpg" alt="Chicago Symphony Orchestra"/>
+      <link href="http://cso.org/" property="sameAs"/>
+      <link href="http://en.wikipedia.org/wiki/Chicago_Symphony_Orchestra" property="sameAs"/>
+      <a property="name" href="examples/Performer?id=4434">Chicago Symphony Orchestra</a>
+    </div>
+    <div property="performer" typeof="Person">
+      <link href="http://www.jaapvanzweden.com/" property="sameAs"/>
+      <img src="/examples/jvanzweden_s.jpg" alt="Jaap van Zweden" property="image"/>
+      <a property="name" href="/examples/Performer.aspx?id=11324">Jaap van Zweden</a>
+      <div>conductor</div>
+    </div>
+  </div>
+</div>
+ <script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "MusicEvent",
+  "location": {
+    "@type": "MusicVenue",
+    "name": "Chicago Symphony Center",
+    "address": "220 S. Michigan Ave, Chicago, Illinois, USA"
+  },
+  "name": "Shostakovich Leningrad",
+  "offers": {
+    "@type": "Offer",
+    "url": "/examples/ticket/12341234",
+    "price": "40",
+    "priceCurrency": "USD",
+    "availability": "http://schema.org/InStock"
+  },
+  "performer": [
+    {
+      "@type": "MusicGroup",
+      "name": "Chicago Symphony Orchestra",
+      "sameAs": [
+        "http://cso.org/",
+        "http://en.wikipedia.org/wiki/Chicago_Symphony_Orchestra"
+      ]
+    },
+    {
+      "@type": "Person",
+      "image": "/examples/jvanzweden_s.jpg",
+      "name": "Jaap van Zweden",
+      "sameAs": "http://www.jaapvanzweden.com/"
+    }
+  ],
+  "startDate": "2014-05-23T20:00",
+  "workPerformed": [
+    {
+      "@type": "CreativeWork",
+      "name": "Britten Four Sea Interludes and Passacaglia from Peter Grimes",
+      "sameAs": "http://en.wikipedia.org/wiki/Peter_Grimes"
+    },
+    {
+      "@type": "CreativeWork",
+      "name": "Shostakovich Symphony No. 7 (Leningrad)",
+      "sameAs": "http://en.wikipedia.org/wiki/Symphony_No._7_(Shostakovich)"
+    }
+  ]
+}
+</script>
+ Example 3 Without Markup Microdata RDFa JSON-LD An example of an order for multiple items, shipped separately.
+ACME Supplies
+Customer: Jane Doe
+Order:
+  Item abc123: 1 Widget: delivered 2015-03-10
+  Item def456: 3 Widget accessories: shipped 2015-03-12
+ <div itemscope itemtype="http://schema.org/Order">
+  <div itemprop="seller" itemscope itemtype="http://schema.org/Organization">
+    <b itemprop="name">ACME Supplies</b>
+  </div>
+  <div itemprop="customer" itemscope itemtype="http://schema.org/Person">
+    <b itemprop="name">Jane Doe</b>
+  </div>
+  <div itemprop="orderedItem" itemscope itemtype="http://schema.org/OrderItem">
+    Item number: <span itemprop="orderItemNumber">abc123</span>
+    <span itemprop="orderQuantity">1</span>
+    <div itemprop="orderedItem" itemscope itemtype="http://schema.org/Product">
+      <span itemprop="name">Widget</span>
+    </div>
+    <link itemprop="orderItemStatus" href="http://schema.org/OrderDelivered" />Delivered
+    <div itemprop="orderDelivery" itemscope itemtype="http://schema.org/ParcelDelivery">
+      <time="expectedArrivalFrom">2015-03-10</time>
+    </div>
+  </div>
+  <div itemprop="orderedItem" itemscope itemtype="http://schema.org/OrderItem">
+    Item number: <span itemprop="orderItemNumber">def456</span>
+    <span itemprop="orderQuantity">4</span>
+    <div itemprop="orderedItem" itemscope itemtype="http://schema.org/Product">
+      <span itemprop="name">Widget accessories</span>
+    </div>
+    <link itemprop="orderItemStatus" href="http://schema.org/OrderInTransit" />Shipped
+    <div itemprop="orderDelivery" itemscope itemtype="http://schema.org/ParcelDelivery">
+      <time itemprop="expectedArrivalFrom">2015-03-15</time>
+      <time itemprop="expectedArrivalUntil">2015-03-18</time>
+    </div>
+  </div>
+</div>
+ <div vocab="http://schema.org/" typeof="Order">
+  <div property="seller" typeof="Organization">
+    <b property="name">ACME Supplies</b>
+  </div>
+  <div property="customer" typeof="Person">
+    <b property="name">Jane Doe</b>
+  </div>
+  <div property="orderedItem" typeof="OrderItem">
+    Item number: <span property="orderItemNumber">abc123</span>
+    <span property="orderQuantity">1</span>
+    <div property="orderedItem" typeof="Product">
+      <span property="name">Widget</span>
+    </div>
+    <link property="orderItemStatus" href="http://schema.org/OrderDelivered" />Delivered
+    <div property="orderDelivery" typeof="ParcelDelivery">
+      <time property="expectedArrivalFrom">2015-03-10</time>
+    </div>
+  </div>
+  <div property="orderedItem" typeof="OrderItem">
+    Item number: <span property="orderItemNumber">def456</span>
+    <span property="orderQuantity">4</span>
+    <div property="orderedItem" typeof="Product">
+      <span property="name">Widget accessories</span>
+    </div>
+    <link property="orderItemStatus" href="http://schema.org/OrderInTransit" />Shipped
+    <div property="orderDelivery" typeof="ParcelDelivery">
+      <time property="expectedArrivalFrom">2015-03-15</time>
+      <time property="expectedArrivalUntil">2015-03-18</time>
+    </div>
+  </div>
+</div>
+ <script type="application/ld+json">
+{
+  "@context": "http://schema.org/",
+  "@type": "Order",
+  "seller": {
+    "@type": "Organization",
+    "name": "ACME Supplies"
+  },
+  "customer": {
+    "@type": "Person",
+    "name": "Jane Doe"
+  },
+  "orderedItem": [
+    {
+      "@type": "OrderItem",
+      "orderItemNumber": "abc123",
+      "orderQuantity": 1,
+      "orderedItem": {
+        "@type": "Product",
+        "name": "Widget"
+      },
+      "orderItemStatus": "http://schema.org/OrderDelivered",
+      "orderDelivery": {
+        "@type": "ParcelDelivery",
+        "expectedArrivalFrom": "2015-03-10"
+      }
+    },
+    {
+      "@type": "OrderItem",
+      "orderItemNumber": "def456",
+      "orderQuantity": 3,
+      "orderedItem": {
+        "@type": "Product",
+        "name": "Widget accessories"
+      },
+      "orderItemStatus": "http://schema.org/OrderInTransit",
+      "orderDelivery": {
+        "@type": "ParcelDelivery",
+        "expectedArrivalFrom": "2015-03-15",
+        "expectedArrivalUntil": "2015-03-18"
+      }
+    }
+  ]
+}
+</script>
+ Example 4 Without Markup Microdata RDFa JSON-LD George Bush, the 41st President of the United States is the father of George W. Bush, the 43rd President of the United States.
+ <div itemscope itemtype="http://schema.org/Person">
+  <span itemprop="name">George Bush</span>, the
+  <span itemprop="disambiguatingDescription">41st President of the United States</span>
+  is the father of
+  <div itemprop="children" itemscope itemtype="http://schema.org/Person">
+    <span itemprop="name">George W. Bush</span>, the
+    <span itemprop="disambiguatingDescription">43rd President of the United States</span>.
+  </div>
+</div>
+ <div vocab="http://schema.org/" typeof="Person">
+  <span property="name">George Bush</span>, the
+  <span property="disambiguatingDescription">41st President of the United States</span>
+  is the father of
+  <div property="children" typeof="Person">
+    <span property="name">George W. Bush</span>, the
+    <span property="disambiguatingDescription">43rd President of the United States</span>.
+  </div>
+</div>
+ <script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "Person",
+  "name": "George Bush",
+  "disambiguatingDescription": "41st President of the United States",
+  "children": {
+    "@type": "Person",
+    "name": "George W. Bush",
+    "disambiguatingDescription": "43rd President of the United States"
+  }
+}
+</script>
+ Example 5 Without Markup Microdata RDFa JSON-LD See JSON example.
+ TODO
+ TODO
+ <script type="application/ld+json">
+{
+  "@context": "http://schema.org/",
+  "@type": "Person",
+  "name": "Peter Venkman",
+  "hasOccupation": {
+    "@type": "Occupation",
+    "name": "Parapsychologist",
+    "educationRequirements": "PhD in parapsychology"
+  }
+}
+</script>
+ Example 6 Without Markup Microdata RDFa JSON-LD See JSON example.
+ TODO
+ TODO
+ <script type="application/ld+json">
+{
+  "@context": "http://schema.org/",
+  "@type": "Person",
+  "name": "Albert Einstein",
+  "hasOccupation": [
+    {
+      "@type": "Role",
+      "hasOccupation": {
+      "@type": "Occupation",
+      "name": "Patent examiner",
+        "occupationalCategory": "23-2099.00"
+      },
+      "startDate": "1901",
+      "endDate": "1906"
+    },
+    {
+      "@type": "Occupation",
+      "name": "Professor of Physics",
+      "educationRequirements": "PhD in Physics"
+    }
+  ]
+}
+</script>
+ Example 7 Without Markup Microdata RDFa JSON-LD <!-- jobTitle utilising DefinedTerm -->
+<!-- JSONLD only example -->
+ <!-- JSONLD only example -->
+ <!-- JSONLD only example -->
+ <!-- jobTitle utilising DefinedTerm -->
+<script type="application/ld+json">
+{
+    "@context": "http://schema.org/",
+    "@type": "Person",
+    "name": "A. N. Other",
+    "jobTitle": {
+        "@type": "DefinedTerm",
+        "inDefinedTermSet": "https://targetjobs.co.uk/careers-advice/job-descriptions",
+        "termCode": "277133-aid-workerhumanitarian-worker-job-description",
+        "name": "Aid worker/humanitarian worker",
+        "url": "https://targetjobs.co.uk/careers-advice/job-descriptions/277133-aid-workerhumanitarian-worker-job-description"
+    }
+}
+</script>
+ Example 8 Without Markup Microdata RDFa JSON-LD A JSON example of an OrganizationRole, showing information
+about a 'member' of a 'SportsTeam', including time qualfiers
+(when he began and ended that role).
+ <div itemscope itemtype="http://schema.org/SportsTeam">
+    <span itemprop="name">San Francisco 49ers</span>
+    <div itemprop="member" itemscope itemtype="http://schema.org/OrganizationRole">
+        <div itemprop="member" itemscope itemtype="http://schema.org/Person">
+            <span itemprop="name">Joe Montana</span>
+        </div>
+        <span itemprop="startDate">1979</span>
+        <span itemprop="endDate">1992</span>
+        <span itemprop="roleName">Quarterback</span>
+    </div>
+</div>
+ <div vocab="http://schema.org/" typeof="SportsTeam">
+    <span property="name">San Francisco 49ers</span>
+    <div property="member" typeof="OrganizationRole">
+        <div property="member" typeof="http://schema.org/Person">
+            <span property="name">Joe Montana</span>
+        </div>
+        <span property="startDate">1979</span>
+        <span property="endDate">1992</span>
+        <span property="roleName">Quarterback</span>
+    </div>
+</div>
+ <script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "SportsTeam",
+  "name": "San Francisco 49ers",
+  "member": {
+    "@type": "OrganizationRole",
+    "member": {
+      "@type": "Person",
+      "name": "Joe Montana"
+    },
+    "startDate": "1979",
+    "endDate": "1992",
+    "roleName": "Quarterback"
+  }
+}
+</script>
+ Example 9 Without Markup Microdata RDFa JSON-LD Fairly straightforward painting markup.
+    <div>
+        <h1 lang="fr">La trahison des images </h1>
+        <p>
+            A painting also known as The Treason of Images or
+            The Treachery of Images.
+        </p>
+        <img src="http://upload.wikimedia.org/wikipedia/en/b/b9/MagrittePipe.jpg" />
+        <div>
+            <p>
+                The painting shows a pipe. Below it, Magritte painted,
+                <q lang="fr">Ceci n'est pas une pipe.</q>, French for
+                "This is not a pipe."
+            </p>
+            <p>
+                His statement is taken to mean that the painting itself is not a pipe.
+                The painting is merely an image of a pipe. Hence, the description,
+                "this is not a pipe."
+            </p>
+            <p>
+                Similarly, the image shown above is neither a pipe nor even a painting,
+                but rather a digital photograph.
+            </p>
+            <p>
+                The painting is sometimes given as an example of meta message conveyed
+                by paralanguage. Compare with Korzybski's <q>The word is not the thing</q>
+                and <q>The map is not the territory</q>.
+        </div>
+        <ul>
+            <li>Artist: <a href="https://www.freebase.com/m/06h88">René Magritte</a></li>
+            <li>Dimensions: 940 mm × 635 mm</li>
+            <li>Materials: oil on canvas</li>
+        </ul>
+    </div>
+     <div itemscope itemtype="http://schema.org/VisualArtwork">
+        <link itemprop="sameAs" href="http://rdf.freebase.com/rdf/m.0439_q" />
+        <h1 itemprop="name" lang="fr">La trahison des images </h1>
+        <p>
+            A <span itemprop="artform">painting</span> also known as
+            <span>The Treason of Images</span> or
+            <span itemprop="alternateName">The Treachery of Images</span>.
+        </p>
+        <img itemprop="image" src="http://upload.wikimedia.org/wikipedia/en/b/b9/MagrittePipe.jpg" />
+        <div itemprop="description">
+            <p>
+                The painting shows a pipe. Below it, Magritte painted,
+                <q lang="fr">Ceci n'est pas une pipe.</q>, French for
+                "This is not a pipe."
+            </p>
+            <p>
+                His statement is taken to mean that the painting itself is not a pipe.
+                The painting is merely an image of a pipe. Hence, the description,
+                "this is not a pipe."
+            </p>
+            <p>
+                Similarly, the image shown above is neither a pipe nor even a painting,
+                but rather a digital photograph.
+            </p>
+            <p>
+                The painting is sometimes given as an example of meta message conveyed
+                by paralanguage. Compare with Korzybski's <q>The word is not the thing</q>
+                and <q>The map is not the territory</q>.
+        </div>
+        <ul>
+            <li>Artist:
+                <span itemprop="creator" itemscope itemtype="http://schema.org/Person">
+                    <a itemprop="sameAs" href="https://www.freebase.com/m/06h88">
+                        <span itemprop="name">René Magritte</span>
+                    </a>
+                </span>
+            </li>
+            <li>Dimensions:
+                <span itemprop="width" itemscope itemtype="http://schema.org/Distance">940 mm</span> ×
+                <span itemprop="height" itemscope itemtype="http://schema.org/Distance">635 mm</span>
+            </li>
+            <li>Materials:
+                <span itemprop="artMedium">oil</span> on <span itemprop="artworkSurface">canvas</span>
+            </li>
+        </ul>
+    </div>
+     <div vocab="http://schema.org/" typeof="VisualArtwork">
+        <link property="sameAs" href="http://rdf.freebase.com/rdf/m.0439_q" />
+        <h1 property="name" lang="fr">La trahison des images </h1>
+        <p>
+            A <span property="artform">painting</span> also known as
+            <span>The Treason of Images</span> or
+            <span property="alternateName">The Treachery of Images</span>.
+        </p>
+        <img property="image" src="http://upload.wikimedia.org/wikipedia/en/b/b9/MagrittePipe.jpg" />
+        <div property="description">
+            <p>
+                The painting shows a pipe. Below it, Magritte painted,
+                <q lang="fr">Ceci n'est pas une pipe.</q>, French for
+                "This is not a pipe."
+            </p>
+            <p>
+                His statement is taken to mean that the painting itself is not a pipe.
+                The painting is merely an image of a pipe. Hence, the description,
+                "this is not a pipe."
+            </p>
+            <p>
+                Similarly, the image shown above is neither a pipe nor even a painting,
+                but rather a digital photograph.
+            </p>
+            <p>
+                The painting is sometimes given as an example of meta message conveyed
+                by paralanguage. Compare with Korzybski's <q>The word is not the thing</q>
+                and <q>The map is not the territory</q>.
+        </div>
+        <ul>
+            <li>Artist:
+                <span property="creator" typeof="Person">
+                    <a property="sameAs" href="https://www.freebase.com/m/06h88">
+                        <span property="name">René Magritte</span>
+                    </a>
+                </span>
+            </li>
+            <li>Dimensions:
+                <span property="width" typeof="Distance">940 mm</span> ×
+                <span property="height" typeof="Distance">635 mm</span>
+            </li>
+            <li>Materials:
+                <span property="artMedium">oil</span> on <span property="artworkSurface">canvas</span>
+            </li>
+        </ul>
+    </div>
+     <script type="application/ld+json">
+    {
+      "@context": "http://schema.org",
+      "@type": "VisualArtwork",
+      "name": "La trahison des images",
+      "alternateName": "The Treachery of Images",
+      "image": "http://upload.wikimedia.org/wikipedia/en/b/b9/MagrittePipe.jpg",
+      "description": "The painting shows a pipe. Below it, Magritte...",
+      "creator": [
+        {
+          "@type": "Person",
+          "name": "René Magritte",
+          "sameAs": "https://www.freebase.com/m/06h88"
+        }
+      ],
+      "width": [
+        {
+          "@type": "Distance",
+          "name": "940 mm"
+        }
+      ],
+      "height": [
+        {
+          "@type": "Distance",
+          "name": "635 mm"
+        }
+      ],
+      "artMedium": "oil",
+      "artworkSurface": "canvas"
+    }
+    </script>
+ Example 10 Without Markup Microdata RDFa JSON-LD Jane Doe
+<img src="janedoe.jpg" alt="Photo of Jane Doe"/>
+Professor
+20341 Whitworth Institute
+405 Whitworth
+Seattle WA 98052
+(425) 123-4567
+<a href="mailto:jane-doe@xyz.edu">jane-doe@illinois.edu</a>
+Jane's home page:
+<a href="http://www.janedoe.com">janedoe.com</a>
+Graduate students:
+<a href="http://www.xyz.edu/students/alicejones.html">Alice Jones</a>
+<a href="http://www.xyz.edu/students/bobsmith.html">Bob Smith</a>
+ <div itemscope itemtype="http://schema.org/Person">
+  <span itemprop="name">Jane Doe</span>
+  <img src="janedoe.jpg" itemprop="image" alt="Photo of Jane Doe"/>
+  <span itemprop="jobTitle">Professor</span>
+  <div itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
+    <span itemprop="streetAddress">
+      20341 Whitworth Institute
+      405 N. Whitworth
+    </span>
+    <span itemprop="addressLocality">Seattle</span>,
+    <span itemprop="addressRegion">WA</span>
+    <span itemprop="postalCode">98052</span>
+  </div>
+  <span itemprop="telephone">(425) 123-4567</span>
+  <a href="mailto:jane-doe@xyz.edu" itemprop="email">
+    jane-doe@xyz.edu</a>
+  Jane's home page:
+  <a href="http://www.janedoe.com" itemprop="url">janedoe.com</a>
+  Graduate students:
+  <a href="http://www.xyz.edu/students/alicejones.html" itemprop="colleague">
+    Alice Jones</a>
+  <a href="http://www.xyz.edu/students/bobsmith.html" itemprop="colleague">
+    Bob Smith</a>
+</div>
+ <div vocab="http://schema.org/" typeof="Person">
+  <span property="name">Jane Doe</span>
+  <img src="janedoe.jpg" property="image" alt="Photo of Jane Doe"/>
+  <span property="jobTitle">Professor</span>
+  <div property="address" typeof="PostalAddress">
+    <span property="streetAddress">
+      20341 Whitworth Institute
+      405 N. Whitworth
+    </span>
+    <span property="addressLocality">Seattle</span>,
+    <span property="addressRegion">WA</span>
+    <span property="postalCode">98052</span>
+  </div>
+  <span property="telephone">(425) 123-4567</span>
+  <a href="mailto:jane-doe@xyz.edu" property="email">
+    jane-doe@xyz.edu</a>
+  Jane's home page:
+  <a href="http://www.janedoe.com" property="url">janedoe.com</a>
+  Graduate students:
+  <a href="http://www.xyz.edu/students/alicejones.html" property="colleague">
+    Alice Jones</a>
+  <a href="http://www.xyz.edu/students/bobsmith.html" property="colleague">
+    Bob Smith</a>
+</div>
+ <script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "Person",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Seattle",
+    "addressRegion": "WA",
+    "postalCode": "98052",
+    "streetAddress": "20341 Whitworth Institute 405 N. Whitworth"
+  },
+  "colleague": [
+    "http://www.xyz.edu/students/alicejones.html",
+    "http://www.xyz.edu/students/bobsmith.html"
+  ],
+  "email": "mailto:jane-doe@xyz.edu",
+  "image": "janedoe.jpg",
+  "jobTitle": "Professor",
+  "name": "Jane Doe",
+  "telephone": "(425) 123-4567",
+  "url": "http://www.janedoe.com"
+}
+</script>
+ Example 11 Without Markup Microdata RDFa JSON-LD An example of a credit card bill (invoice).
+ACME Bank
+Bill for: January 2015 Visa
+invoice link: http://www.acmebank.com/invoice.pdf
+Customer: Jane Doe
+account ID: xxxx-xxxx-xxxx-1234
+payment due: 2015-01-30
+minimum payment: $15.00
+total due: $200.00
+billing period: 2014-12-21 to 2015-01-20
+payment due
+ <div itemscope itemtype="http://schema.org/Invoice">
+  <h1 itemprop="description">January 2015 Visa</h1>
+  <a itemprop="url" href="http://acmebank.com/invoice.pdf">Invoice PDF</a>
+  <div itemprop="broker" itemscope itemtype="http://schema.org/BankOrCreditUnion">
+    <b itemprop="name">ACME Bank</b>
+  </div>
+  <span itemprop="accountId">xxxx-xxxx-xxxx-1234</span>
+  <div itemprop="customer" itemscope itemtype="http://schema.org/Person">
+    <b itemprop="name">Jane Doe</b>
+  </div>
+  <time itemprop="paymentDueDate">2015-01-30</time>
+  <div itemprop="minimumPaymentDue" itemscope itemtype="http://schema.org/PriceSpecification">
+    <span itemprop="price">15.00</span>
+    <span itemprop="priceCurrency">USD</span>
+  </div>
+  <div itemprop="totalPaymentDue" itemscope itemtype="http://schema.org/PriceSpecification">
+    <span itemprop="price">200.00</span>
+    <span itemprop="priceCurrency">USD</span>
+  </div>
+  <meta itemprop="billingPeriod" content="P30D" />starts:2014-12-21 30 days
+  <link itemprop="paymentStatus" href="http://schema.org/PaymentDue" />
+</div>
+ <div vocab="http://schema.org/" typeof="Invoice">
+  <h1 property="description">January 2015 Visa</h1>
+  <a property="url" href="http://acmebank.com/invoice.pdf">Invoice PDF</a>
+  <div property="broker" typeof="BankOrCreditUnion">
+    <b property="name">ACME Bank</b>
+  </div>
+  <span property="accountId">xxxx-xxxx-xxxx-1234</span>
+  <div property="customer" typeof="Person">
+    <b property="name">Jane Doe</b>
+  </div>
+  <time property="paymentDueDate">2015-01-30T12:00:00</time>
+  <div property="minimumPaymentDue" typeof="PriceSpecification">
+    <span property="price">15.00</span>
+    <span property="priceCurrency">USD</span>
+  </div>
+  <div property="totalPaymentDue" typeof="PriceSpecification">
+    <span property="price">200.00</span>
+    <span property="priceCurrency">USD</span>
+  </div>
+  <meta property="billingPeriod" content="P30D" />starts:2014-12-21 30 days
+  <link property="paymentStatus" href="PaymentDue" />
+</div>
+ <script type="application/ld+json">
+{
+    "@context": "http://schema.org/",
+    "@type": "Invoice",
+    "description": "January 2015 Visa bill.",
+    "url": "http://acmebank.com/invoice.pdf",
+    "broker": {
+      "@type": "BankOrCreditUnion",
+      "name": "ACME Bank"
+    },
+    "accountId": "xxxx-xxxx-xxxx-1234",
+    "customer": {
+      "@type": "Person",
+      "name": "Jane Doe"
+    },
+    "paymentDueDate": "2015-01-30T12:00:00",
+    "minimumPaymentDue": {
+      "@type": "PriceSpecification",
+      "price": 15.00,
+      "priceCurrency": "USD"
+    },
+    "totalPaymentDue": {
+      "@type": "PriceSpecification",
+      "price": 200.00,
+      "priceCurrency": "USD"
+    },
+    "billingPeriod": "P30D",
+    "paymentStatus": "http://schema.org/PaymentDue"
+}
+</script>
+ Example 12 Without Markup Microdata RDFa JSON-LD A MusicComposition Example. The following JSON-LD models
+the composition A Day in the Life by Lennon and McCartney,
+regardless of who performs or records the song.
+ Not available yet.
+ Not available yet.
+ <script type="application/ld+json">
+{
+    "@context": "http://schema.org",
+    "@type": "MusicComposition",
+    "@id": "http://musicbrainz.org/work/fd1aa4f2-ba26-3a05-b72d-4392c35a073c",
+    "name": "A Day in the Life",
+    "composer": [
+        {
+            "@type": "Person",
+            "name": "John Lennon",
+            "@id": "http://musicbrainz.org/artist/4d5447d7-c61c-4120-ba1b-d7f471d385b9"
+        },
+        {
+            "@type": "Person",
+            "name": "Paul McCartney",
+            "@id": "http://musicbrainz.org/artist/ba550d0e-adac-4864-b88b-407cab5e76af"
+        }
+    ],
+    "iswcCode": "T-010.140.236-1",
+    "inLanguage": "EN",
+    "publisher": {
+        "@type": "Organization",
+        "name": "Northern Songs, Ltd.",
+        "@id": "http://musicbrainz.org/label/26df054d-78cf-4d83-9bb1-a41816125528"
+    },
+    "datePublished": "1967",
+    "lyrics": {
+      "@type": "CreativeWork",
+      "text": "I  read the news today oh boy..."
+    }
+}
+</script>
+ Example 13 Without Markup Microdata RDFa JSON-LD <p>Christopher Froome was sponsored by Sky in the Tour de France.</p>
+ <p itemscope itemprop="Person" itemtype="http://schema.org/Person">
+  <span itemprop="name">Christopher Froome</span> was sponsored by
+  <span itemprop="sponsor" itemtype="http://schema.org/Organization">
+    <a itemprop="url" href="http://www.skysports.com/">Sky</a></span> in the Tour de France.
+</p>
+ <p vocab="http://schema.org/" typeof="Person">
+  <span property="name">Christopher Froome</span> was sponsored by
+  <span property="sponsor" typeof="http://schema.org/Organization">
+    <a property="url" href="http://www.skysports.com/">Sky</a></span> in the Tour de France.
+</p>
+ <script type="application/ld+json">
+{
+  "@context": "http://schema.org/",
+  "@type": "Person",
+  "name": "Christopher Froome",
+  "sponsor":
+  {
+    "@type": "Organization",
+    "name": "Sky",
+    "url": "http://www.skysports.com/"
+  }
+}
+</script>
+ Example 14 Without Markup Microdata RDFa JSON-LD <p>Rose Tyler was sponsored by Sarah Jane Smith in the membership process.</p>
+ <p itemscope itemprop="Person" itemtype="http://schema.org/Person">
+  <span itemprop="name">Rose Tyler</span> was sponsored by
+  <span itemscope itemprop="sponsor" itemtype="http://schema.org/Person">
+    <span itemprop="name">Sarah Jane Smith</span>
+  </span> in the membership process.
+</p>
+ <p vocab="http://schema.org/" typeof="Person">
+  <span property="name">Rose Tyler</span> was sponsored by
+  <span property="sponsor" typeof="http://schema.org/Person">
+    <span property="name">Sarah Jane Smith</span>
+  </span> in the membership process.
+</p>
+ <script type="application/ld+json">
+{
+  "@context": "http://schema.org/",
+  "@type": "Person",
+  "name": "Rose Tyler",
+  "sponsor":
+    {
+    "@type": "Person",
+    "name": "Sarah Jane Smith"
+    }
+}
+</script>

@@ -1,0 +1,2 @@
+Composite Capabilities/Preference Profiles: Terminology and
+  Abbreviations Composite Capabilities/Preference Profiles: Terminology and Abbreviations W3C Working Draft 21 July 2000 This version: http://www.w3.org/TR/2000/WD-CCPP-ta-20000721/ Latest version: http://www.w3.org/TR/CCPP-ta/ Editors: Mikael Nilsson, mikael.nilsson@ks.ericsson.se, Ericsson

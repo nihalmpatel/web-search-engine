@@ -1,0 +1,43 @@
+description - schema.org Property schema.org Documentation Schemas Home description Thing > Property > description A description of the item. [more...] Canonical URL: http://schema.org/description Equivalent Property: dct:description Leave public feedback on this term 💬 Check for open issues. Values expected to be one of these types Text Used on these types Thing Sub-properties disambiguatingDescription Examples Example 1 Without Markup Microdata RDFa JSON-LD <b>12oclock_girona.mp3</b>
+Total Time: 0m:15s - Recorded on a terrace of Girona a sunday morning
+composed by Roger
+ <script type="text/javascript">
+var fo = new FlashObject("http://google.com/flash/preview-player.swf", "flashPlayer_719", "358", "16", "6", "#FFFFFF");fo.addVariable("url", "http://media.freesound.org/data/0/previews/719__elmomo__12oclock_girona_preview.mp3");fo.addVariable("autostart", "0");fo.write("flashcontent_719");
+</script>
+ <div itemscope itemtype="http://schema.org/AudioObject">
+  <span itemprop="name"><b>12oclock_girona.mp3</b></span>
+<script type="text/javascript">
+  var fo = new FlashObject("http://google.com/flash/preview-player.swf",
+  "flashPlayer_719", "358", "16", "6", "#FFFFFF");fo.addVariable("url","http://media.freesound.org/data/0/previews/719__elmomo__12oclock_girona_preview.mp3");fo.addVariable("autostart", "0");fo.write("flashcontent_719");
+</script>
+<meta itemprop="encodingFormat" content="audio/mpeg" />
+ <meta itemprop="contentUrl" content="http://media.freesound.org/data/0/previews/719__elmomo__12oclock_girona_preview.mp3" />
+<span class="description">
+      <meta itemprop="duration" content="T0M15S" />
+      <span itemprop="description">Recorded on a terrace of Girona a sunday morning</span>
+</span>
+</div>
+ <div vocab="http://schema.org/" typeof="AudioObject">
+  <span property="name"><b>12oclock_girona.mp3</b></span>
+<script type="text/javascript">
+  var fo = new FlashObject("http://google.com/flash/preview-player.swf",
+  "flashPlayer_719", "358", "16", "6", "#FFFFFF");fo.addVariable("url","http://media.freesound.org/data/0/previews/719__elmomo__12oclock_girona_preview.mp3");fo.addVariable("autostart", "0");fo.write("flashcontent_719");
+</script>
+<meta property="encodingFormat" content="audio/mpeg" />
+ <meta property="contentUrl" content="http://media.freesound.org/data/0/previews/719__elmomo__12oclock_girona_preview.mp3" />
+<span class="description">
+      <meta property="duration" content="T0M15S" />
+      <span property="description">Recorded on a terrace of Girona a sunday morning</span>
+</span>
+</div>
+ <script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "AudioObject",
+  "contentUrl": "http://media.freesound.org/data/0/previews/719__elmomo__12oclock_girona_preview.mp3",
+  "description": "Recorded on a terrace of Girona a sunday morning",
+  "duration": "T0M15S",
+  "encodingFormat": "audio/mpeg",
+  "name": "12oclock_girona.mp3"
+}
+</script>

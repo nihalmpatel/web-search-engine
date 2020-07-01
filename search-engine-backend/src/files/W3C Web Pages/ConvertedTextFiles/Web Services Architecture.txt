@@ -1,0 +1,1 @@
+Web Services Architecture Web Services Architecture W3C Working Group Note 11 February 2004 This version: http://www.w3.org/TR/2004/NOTE-ws-arch-20040211/ Latest version: http://www.w3.org/TR/ws-arch/ Previous version:

@@ -1,0 +1,225 @@
+<!--googleoff: all-->
+<html>
+ <head>
+  <title>g3doc.corp.google.com - MOMA Single Sign On</title> 
+  <link href="/c/login.css" rel="stylesheet"> 
+  <link rel="icon" href="/c/favicon.ico" type="image/x-icon"> 
+  <script type="text/javascript" src="/c/corploginscript.js" nonce="1PDVh1iL4ZNQWnwz1tGVHQ">
+        
+      </script> 
+  <script type="text/javascript" nonce="1PDVh1iL4ZNQWnwz1tGVHQ">
+        
+        otpParam = "otp";
+        useOtp = 1;
+        var remoteAddress = "137.207.121.197";
+
+      </script>
+ </head> 
+ <body bgcolor="#ffffff" vlink="#666666">
+  <table width="95%" border="0" align="center" cellpadding="0" cellspacing="0">
+   <tbody>
+    <tr valign="top">
+     <td width="1%"><img src="/c/moma.gif" border="0" align="left" vspace="13" alt="moma - inside google"></td> 
+     <td width="99%" bgcolor="#ffffff" valign="top">
+      <table width="100%" cellpadding="1">
+       <tbody>
+        <tr valign="bottom">
+         <td>
+          <div align="right">
+           &nbsp;
+          </div></td>
+        </tr> 
+        <tr>
+         <td nowrap>
+          <table width="100%" align="center" cellpadding="0" cellspacing="0" bgcolor="#C3D9FF" style="margin-bottom:5">
+           <tbody>
+            <tr>
+             <td class="bubble tl"><img src="/c/tl.gif" alt=""></td> 
+             <th class="bubble" rowspan="2">Single Sign On</th> 
+             <td class="bubble tr"><img src="/c/tr.gif" alt=""></td>
+            </tr> 
+            <tr>
+             <td class="bubble bl"><img src="/c/bl.gif" alt=""></td> 
+             <td class="bubble br"><img src="/c/br.gif" alt=""></td>
+            </tr>
+           </tbody>
+          </table></td>
+        </tr>
+       </tbody>
+      </table></td>
+    </tr>
+   </tbody>
+  </table> 
+  <br> 
+  <form method="post" id="loginForm" name="loginForm" action="/login">
+   <input type="hidden" id="s" name="s" value="g3doc.corp.google.com:443/uberproxy/"> 
+   <input type="hidden" id="d" name="d" value="https://g3doc.corp.google.com/company/teams/sso/intro.md?upxsrf=AO9zFu07bv0YQ_L05JxLw0j_tGtisCAOZGHksVjKFn7F-CHM7Q:1575315881701"> 
+   <input type="hidden" id="keyIds" name="keyIds" value="zRI,s8x"> 
+   <input type="hidden" id="maxAge" name="maxAge" value="1200"> 
+   <input type="hidden" id="authLevel" name="authLevel" value="2000000"> 
+   <input type="hidden" id="ssoformat" name="ssoformat" value="CORP_SSO"> 
+   <input type="hidden" id="x" name="x" value="x:ChgIyM3tw5nqge0DEIr-ksHsLRiK_pLB7C0SJQDmqPmOg-MCxjDrgisOIsf77DKGyNd6us-U7PXRRnUMXRVGYMk"> 
+   <input type="hidden" id="interactive" name="interactive" value="yes"> 
+   <input type="hidden" id="hasJavascript" name="hasJavascript" value="no"> 
+   <input type="hidden" id="mi" name="mi" value=""> 
+   <script type="text/javascript" nonce="1PDVh1iL4ZNQWnwz1tGVHQ">
+          
+          document.getElementById('mi').value = riskMi12()
+        </script> 
+   <table width="1" align="center" cellpadding="5" cellspacing="1" class="signin">
+    <tbody>
+     <tr>
+      <td width="25%" valign="top" style="padding-top: .5em; padding-right: 2em;">
+       <div class="adverise-gnubby"></div>
+       <table cellpadding="5" width="100%" border="0">
+        <tbody>
+         <tr>
+          <td colspan="2" style="text-align:center" nowrap>
+           <div class="caption">
+            Use your SSO username and password
+           </div></td>
+         </tr> 
+         <tr>
+          <td nowrap>
+           <div align="right">
+            <font size="-1" face="Arial, sans-serif"><label for="username">Username:</label></font>
+           </div></td> 
+          <td nowrap><input type="text" name="u" tabindex="1" size="15" id="username" value=""> <span style="font-size: 83%; position: relative; bottom: 2px;"><span style="padding: 0 3px 0 5px;">@</span> google.com <a href="#" id="roleToggle" style="color:black; text-decoration: none">[+]</a> <script type="text/javascript" nonce="1PDVh1iL4ZNQWnwz1tGVHQ">
+              
+              document.getElementById('roleToggle').onclick = function(e) {
+                e.preventDefault();
+                toggleInput('roleToggle', 'roleRow', 'role', 2);
+              }
+            </script></span></td>
+         </tr> 
+         <tr id="roleRow" style="display: none;">
+          <td nowrap>
+           <div align="right">
+            <font size="-1" face="Arial, sans-serif"><label for="role">Role:</label></font>
+           </div></td> 
+          <td nowrap><input type="text" name="role" size="15" id="role"> <font size="-1">&nbsp;<a href="https://g3doc.corp.google.com/company/teams/sso/intro.md#role-accounts">What's this?</a></font></td>
+         </tr> 
+         <tr>
+          <td nowrap>
+           <div align="right">
+            <font size="-1"><label for="password">Password:</label></font>
+           </div></td> 
+          <td nowrap><input type="password" name="pw" tabindex="3" size="15" autocomplete="off" id="password"></td>
+         </tr> 
+         <tr>
+          <td>
+           <div align="right" style="width: 90px;">
+            <font size="-1"><label for="otp"><a href="/c/SecurityCode.html" target="_blank" rel="noopener noreferrer">Security Code</a>:</label></font>
+           </div></td> 
+          <td nowrap><input type="tel" name="otp" tabindex="4" size="15" autocomplete="off" id="otp"> </td>
+         </tr> 
+         <tr>
+          <td></td> 
+         </tr>
+         <tr>
+          <td colspan="2" align="center"><input type="submit" name="signInButton" id="signInButton" value="Sign in" style="padding: 2px;" tabindex="4"></td>
+         </tr> 
+         <tr>
+          <td colspan="2" align="center"></td>
+         </tr>
+        </tbody>
+       </table> 
+       <table border="0" width="100%" style="padding-top: 10px;">
+        <tbody>
+         <tr>
+          <td align="left"></td> 
+          <td align="right"><font size="-1"><a href="https://static.corp.google.com/corpsso/techstop/techstop-phones.html">Security Key help</a></font></td>
+         </tr> 
+         <tr>
+          <td colspan="2" align="right"><font size="-1"><a href="https://static.corp.google.com/corpsso/techstop/techstop-phones.html">Password help</a></font></td>
+         </tr>
+        </tbody>
+       </table></td> 
+      <td class="image-cell" valign="top">
+       <div id="corplogin-image">
+        <img class="login-image" src="https://static.corp.google.com/corpsso/images/dandelion.jpg" width="400" height="300" alt="decorative image">
+       </div></td>
+     </tr>
+    </tbody>
+   </table>
+  </form> 
+  <style type="text/css">
+    .hidden {
+      display: none !important;
+    }
+  </style> 
+  <div class="fedramp-warning ssobox gnubby-signin hidden">
+   <p>You've successfully signed in and will be redirected in 10 seconds</p> 
+   <p class="errormsg">You didn't use a Titan Security Key as required</p> 
+   <p>Visit <a href="http://go/fedramp-compliance">go/fedramp-compliance</a> to learn why you need to use a Titan Key</p>
+  </div> 
+  <div class="gnubby-update-warning ssobox gnubby-signin hidden">
+   <p>You've successfully signed in and will be redirected in 10 seconds</p> 
+   <p class="errormsg">Your security key software is out of date</p> 
+   <p>Update your key now (&lt; 1 minute)</p> 
+   <form id="update-in-new-tab-form" action="/o/securitykeyupdate#" method="POST" target="_blank">
+    <input id="gnubby-update-keyhandle" type="hidden" name="keyHandle" value=""> 
+    <input id="gnubby-update-nickname" type="hidden" name="skname" value=""> 
+    <input id="update-in-new-tab-button" type="submit" value="Update">
+   </form>
+  </div> 
+  <script type="text/javascript" nonce="1PDVh1iL4ZNQWnwz1tGVHQ">
+    
+    interstitialWarningDurationMs = 10000;
+    fedrampWarningCookieName = "FEDRAMPWARN";
+    gnubbyUpdateWarningCookieName = "KEYUPDATE";
+    gnubbyUpdateKeyhandleCookieName = "KEYUPDATEHANDLE";
+    gnubbyUpdateNicknameCookieName = "KEYUPDATENICKNAME";
+    const button = document.getElementById('update-in-new-tab-button');
+    const form = document.getElementById('update-in-new-tab-form');
+    button.addEventListener('click', () => {
+      button.setAttribute('disabled', true);
+      form.submit();
+    });
+  </script> 
+  <table width="95%" border="0" align="center" cellpadding="0" cellspacing="0" class="footer">
+   <tbody>
+    <tr valign="top">
+     <td width="99%" bgcolor="#ffffff" valign="top">
+      <table width="100%" cellpadding="1">
+       <tbody>
+        <tr valign="bottom">
+         <td>
+          <div align="right">
+           &nbsp;
+          </div></td>
+        </tr> 
+        <tr>
+         <td nowrap>
+          <table width="100%" align="center" cellpadding="0" cellspacing="0" bgcolor="#C3D9FF" style="margin-bottom:5">
+           <tbody>
+            <tr>
+             <td class="bubble tl"><img src="/c/tl.gif" alt=""></td> 
+             <th class="bubble" rowspan="2"><span>&nbsp;</span></th> 
+             <td class="bubble tr"><img src="/c/tr.gif" alt=""></td>
+            </tr> 
+            <tr>
+             <td class="bubble bl"><img src="/c/bl.gif" alt=""></td> 
+             <td class="bubble br"><img src="/c/br.gif" alt=""></td>
+            </tr>
+           </tbody>
+          </table></td>
+        </tr>
+       </tbody>
+      </table></td> 
+     <td width="1%"><a id="gnubbyLinkFooter" href="https://login.corp.google.com/request?s=g3doc.corp.google.com:443/uberproxy/&amp;d=https://g3doc.corp.google.com/company/teams/sso/intro.md?upxsrf%3DAO9zFu07bv0YQ_L05JxLw0j_tGtisCAOZGHksVjKFn7F-CHM7Q:1575315881701&amp;maxAge=1200&amp;authLevel=2000000&amp;keyIds=zRI,s8x"><img src="/c/balls.gif" border="0" alt="" align="left" vspace="13"></a> <script type="text/javascript" nonce="1PDVh1iL4ZNQWnwz1tGVHQ">
+            
+            document.getElementById('gnubbyLinkFooter').onclick = setGnubbyCookie;
+          </script></td>
+    </tr>
+   </tbody>
+  </table> 
+  <script type="text/javascript" nonce="1PDVh1iL4ZNQWnwz1tGVHQ">
+      
+      document.getElementById('loginForm').onsubmit = signInOnSubmit;
+      document.body.onload = function() {
+        loginOnload();
+      }
+    </script>
+ </body>
+</html>

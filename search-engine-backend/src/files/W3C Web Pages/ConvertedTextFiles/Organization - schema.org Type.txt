@@ -1,0 +1,458 @@
+Organization - schema.org Type schema.org Documentation Schemas Home Organization Thing > Organization An organization such as a school, NGO, corporation, club, etc. [more...] Canonical URL: http://schema.org/Organization Leave public feedback on this term 💬 Check for open issues. Property Expected Type Description Properties from Organization actionableFeedbackPolicy CreativeWork  or URL  For a NewsMediaOrganization or other news-related Organization, a statement about public engagement activities (for news media, the newsroom’s), including involving the public - digitally or otherwise -- in coverage decisions, reporting and activities after publication. address PostalAddress  or Text  Physical address of the item. aggregateRating AggregateRating  The overall rating, based on a collection of reviews or ratings, of the item. alumni Person  Alumni of an organization. Inverse property: alumniOf. areaServed AdministrativeArea  or GeoShape  or Place  or Text  The geographic area where a service or offered item is provided. Supersedes serviceArea. award Text  An award won by or for this item. Supersedes awards. brand Brand  or Organization  The brand(s) associated with a product or service, or the brand(s) maintained by an organization or business person. contactPoint ContactPoint  A contact point for a person or organization. Supersedes contactPoints. correctionsPolicy CreativeWork  or URL  For an Organization (e.g. NewsMediaOrganization), a statement describing (in news media, the newsroom’s) disclosure and correction policy for errors. department Organization  A relationship between an organization and a department of that organization, also described as an organization (allowing different urls, logos, opening hours). For example: a store with a pharmacy, or a bakery with a cafe. dissolutionDate Date  The date that this organization was dissolved. diversityPolicy CreativeWork  or URL  Statement on diversity policy by an Organization e.g. a NewsMediaOrganization. For a NewsMediaOrganization, a statement describing the newsroom’s diversity policy on both staffing and sources, typically providing staffing data. diversityStaffingReport Article  or URL  For an Organization (often but not necessarily a NewsMediaOrganization), a report on staffing diversity issues. In a news context this might be for example ASNE or RTDNA (US) reports, or self-reported. duns Text  The Dun & Bradstreet DUNS number for identifying an organization or business person. email Text  Email address. employee Person  Someone working for this organization. Supersedes employees. ethicsPolicy CreativeWork  or URL  Statement about ethics policy, e.g. of a NewsMediaOrganization regarding journalistic and publishing practices, or of a Restaurant, a page describing food source policies. In the case of a NewsMediaOrganization, an ethicsPolicy is typically a statement describing the personal, organizational, and corporate standards of behavior expected by the organization. event Event  Upcoming or past event associated with this place, organization, or action. Supersedes events. faxNumber Text  The fax number. founder Person  A person who founded this organization. Supersedes founders. foundingDate Date  The date that this organization was founded. foundingLocation Place  The place where the Organization was founded. funder Organization  or Person  A person or organization that supports (sponsors) something through some kind of financial contribution. globalLocationNumber Text  The Global Location Number (GLN, sometimes also referred to as International Location Number or ILN) of the respective organization, person, or place. The GLN is a 13-digit number used to identify parties and physical locations. hasCredential EducationalOccupationalCredential  A credential awarded to the Person or Organization. hasOfferCatalog OfferCatalog  Indicates an OfferCatalog listing for this Organization, Person, or Service. hasPOS Place  Points-of-Sales operated by the organization or person. hasProductReturnPolicy ProductReturnPolicy  Indicates a ProductReturnPolicy that may be applicable. isicV4 Text  The International Standard of Industrial Classification of All Economic Activities (ISIC), Revision 4 code for a particular organization, business person, or place. knowsAbout Text  or Thing  or URL  Of a Person, and less typically of an Organization, to indicate a topic that is known about - suggesting possible expertise but not implying it. We do not distinguish skill levels here, or relate this to educational content, events, objectives or JobPosting descriptions. knowsLanguage Language  or Text  Of a Person, and less typically of an Organization, to indicate a known language. We do not distinguish skill levels or reading/writing/speaking/signing here. Use language codes from the IETF BCP 47 standard. legalName Text  The official name of the organization, e.g. the registered company name. leiCode Text  An organization identifier that uniquely identifies a legal entity as defined in ISO 17442. location Place  or PostalAddress  or Text  The location of for example where the event is happening, an organization is located, or where an action takes place. logo ImageObject  or URL  An associated logo. makesOffer Offer  A pointer to products or services offered by the organization or person. Inverse property: offeredBy. member Organization  or Person  A member of an Organization or a ProgramMembership. Organizations can be members of organizations; ProgramMembership is typically for individuals. Supersedes members, musicGroupMember. Inverse property: memberOf. memberOf Organization  or ProgramMembership  An Organization (or ProgramMembership) to which this Person or Organization belongs. Inverse property: member. naics Text  The North American Industry Classification System (NAICS) code for a particular organization or business person. numberOfEmployees QuantitativeValue  The number of employees in an organization e.g. business. ownershipFundingInfo AboutPage  or CreativeWork  or Text  or URL  For an Organization (often but not necessarily a NewsMediaOrganization), a description of organizational ownership structure; funding and grants. In a news/media setting, this is with particular reference to editorial independence. Note that the funder is also available and can be used to make basic funder information machine-readable. owns OwnershipInfo  or Product  Products owned by the organization or person. parentOrganization Organization  The larger organization that this organization is a subOrganization of, if any. Supersedes branchOf. Inverse property: subOrganization. publishingPrinciples CreativeWork  or URL  The publishingPrinciples property indicates (typically via URL) a document describing the editorial principles of an Organization (or individual e.g. a Person writing a blog) that relate to their activities as a publisher, e.g. ethics or diversity policies. When applied to a CreativeWork (e.g. NewsArticle) the principles are those of the party primarily responsible for the creation of the CreativeWork. While such policies are most typically expressed in natural language, sometimes related information (e.g. indicating a funder) can be expressed using schema.org terminology. review Review  A review of the item. Supersedes reviews. seeks Demand  A pointer to products or services sought by the organization or person (demand). slogan Text  A slogan or motto associated with the item. sponsor Organization  or Person  A person or organization that supports a thing through a pledge, promise, or financial contribution. e.g. a sponsor of a Medical Study or a corporate sponsor of an event. subOrganization Organization  A relationship between two organizations where the first includes the second, e.g., as a subsidiary. See also: the more specific 'department' property. Inverse property: parentOrganization. taxID Text  The Tax / Fiscal ID of the organization or person, e.g. the TIN in the US or the CIF/NIF in Spain. telephone Text  The telephone number. unnamedSourcesPolicy CreativeWork  or URL  For an Organization (typically a NewsMediaOrganization), a statement about policy on use of unnamed sources and the decision process required. vatID Text  The Value-added Tax ID of the organization or person. Properties from Thing additionalType URL  An additional type for the item, typically used for adding more specific types from external vocabularies in microdata syntax. This is a relationship between something and a class that the thing is in. In RDFa syntax, it is better to use the native RDFa syntax - the 'typeof' attribute - for multiple types. Schema.org tools may have only weaker understanding of extra types, in particular those defined externally. alternateName Text  An alias for the item. description Text  A description of the item. disambiguatingDescription Text  A sub property of description. A short description of the item used to disambiguate from other, similar items. Information from other properties (in particular, name) may be necessary for the description to be useful for disambiguation. identifier PropertyValue  or Text  or URL  The identifier property represents any kind of identifier for any kind of Thing, such as ISBNs, GTIN codes, UUIDs etc. Schema.org provides dedicated properties for representing many of these, either as textual strings or as URL (URI) links. See background notes for more details. image ImageObject  or URL  An image of the item. This can be a URL or a fully described ImageObject. mainEntityOfPage CreativeWork  or URL  Indicates a page (or other CreativeWork) for which this thing is the main entity being described. See background notes for details. Inverse property: mainEntity. name Text  The name of the item. potentialAction Action  Indicates a potential Action, which describes an idealized action in which this thing would play an 'object' role. sameAs URL  URL of a reference Web page that unambiguously indicates the item's identity. E.g. the URL of the item's Wikipedia page, Wikidata entry, or official website. subjectOf CreativeWork  or Event  A CreativeWork or Event about this Thing. Inverse property: about. url URL  URL of the item. Instances of Organization may appear as values for the following properties Property On Types Description acquiredFrom OwnershipInfo  The organization or person from which the product was acquired. affiliation Person  An organization that this person is affiliated with. For example, a school/university, a club, or a team. agent Action  The direct performer or driver of the action (animate or inanimate). e.g. John wrote a book. alumniOf Person  An organization that the person is an alumni of. inverse property: alumni. attendee Event  A person or organization attending the event. Supersedes, attendees. authenticator MediaSubscription  The Organization responsible for authenticating the user's subscription. For example, many media apps require a cable/satellite provider to authenticate your subscription before playing media. author CreativeWork  or Rating  The author of this content or rating. Please note that author is special in that HTML 5 provides a special mechanism for indicating authorship via the rel tag. That is equivalent to this and may be used interchangeably. bccRecipient Message  A sub property of recipient. The recipient blind copied on a message. brand Organization  or Person  or Product  or Service  The brand(s) associated with a product or service, or the brand(s) maintained by an organization or business person. broadcastAffiliateOf BroadcastService  The media network(s) whose content is broadcast on this station. broadcaster BroadcastService  The organization owning or operating the broadcast service. broker Invoice  or Order  or Reservation  or Service  An entity that arranges for an exchange between a buyer and a seller. In most cases a broker never acquires or releases ownership of a product or service involved in an exchange. If it is not clear whether an entity is a broker, seller, or buyer, the latter two terms are preferred. Supersedes, bookingAgent. ccRecipient Message  A sub property of recipient. The recipient copied on a message. composer Event  or MusicComposition  The person or organization who wrote a composition, or who is the composer of a work performed at some event. contributor CreativeWork  or Event  A secondary contributor to the CreativeWork or Event. copyrightHolder CreativeWork  The party holding the legal copyright to the CreativeWork. creator CreativeWork  or UserComments  The creator/author of this CreativeWork. This is the same as the Author property for CreativeWork. creditedTo MusicRelease  The group the release is credited to if different than the byArtist. For example, Red and Blue is credited to "Stefani Germanotta Band", but by Lady Gaga. customer Invoice  or Order  Party placing the order or paying the invoice. department Organization  A relationship between an organization and a department of that organization, also described as an organization (allowing different urls, logos, opening hours). For example: a store with a pharmacy, or a bakery with a cafe. employmentUnit JobPosting  Indicates the department, unit and/or facility where the employee reports and/or in which the job is to be performed. endorsee EndorseAction  A sub property of participant. The person/organization being supported. endorsers Diet  People or organizations that endorse the plan. followee FollowAction  A sub property of object. The person or organization being followed. funder CreativeWork  or Event  or MonetaryGrant  or Organization  or Person  A person or organization that supports (sponsors) something through some kind of financial contribution. grantee DigitalDocumentPermission  The person, organization, contact point, or audience that has been granted this permission. hiringOrganization JobPosting  Organization offering the job position. hostingOrganization ProgramMembership  The organization (airline, travelers' club, etc.) the membership is made with. issuedBy Permit  or Ticket  The organization issuing the ticket or permit. landlord RentAction  A sub property of participant. The owner of the real estate property. legislationPassedBy Legislation  The person or organization that originally passed or made the law : typically parliament (for primary legislation) or government (for secondary legislation). This indicates the "legal author" of the law, as opposed to its physical author. legislationResponsible Legislation  An individual or organization that has some kind of responsibility for the legislation. Typically the ministry who is/was in charge of elaborating the legislation, or the adressee for potential questions about the legislation once it is published. lender BorrowAction  A sub property of participant. The person that lends the object being borrowed. manufacturer DietarySupplement  or Drug  or Product  The manufacturer of the product. member Organization  or ProgramMembership  A member of an Organization or a ProgramMembership. Organizations can be members of organizations; ProgramMembership is typically for individuals. Supersedes, members musicGroupMember. inverse property: memberOf. memberOf Organization  or Person  An Organization (or ProgramMembership) to which this Person or Organization belongs. inverse property: member. offeredBy Offer  A pointer to the organization or person making the offer. inverse property: makesOffer. organizer Event  An organizer of an Event. parentOrganization Organization  The larger organization that this organization is a subOrganization of, if any. Supersedes, branchOf. inverse property: subOrganization. participant Action  Other co-agents that participated in the action indirectly. e.g. John wrote a book with Steve. performer Event  A performer at the event—for example, a presenter, musician, musical group or actor. Supersedes, performers. producer CreativeWork  The person or organization who produced the work (e.g. music album, movie, tv/radio series etc.). productionCompany CreativeWorkSeason  or Episode  or MediaObject  or Movie  or MovieSeries  or RadioSeries  or TVSeries  or VideoGameSeries  The production company or studio responsible for the item e.g. series, video game, episode etc. provider CreativeWork  or EducationalOccupationalProgram  or Invoice  or ParcelDelivery  or Reservation  or Service  or Trip  The service provider, service operator, or service performer; the goods producer. Another party (a seller) may offer those services or goods on behalf of the provider. A provider may also serve as the seller. Supersedes, carrier. publishedBy PublicationEvent  An agent associated with the publication event. publisher CreativeWork  The publisher of the creative work. publisherImprint CreativeWork  The publishing division which published the comic. recipient AuthorizeAction  or CommunicateAction  or DonateAction  or GiveAction  or Message  or PayAction  or ReturnAction  or SendAction  or TipAction  A sub property of participant. The participant who is at the receiving end of the action. recognizedBy EducationalOccupationalCredential  An organization that acknowledges the validity, value or utility of a credential. Note: recognition may include a process of quality assurance or accreditation. recognizingAuthority MedicalEntity  If applicable, the organization that officially recognizes this entity as part of its endorsed system of medicine. recordLabel MusicRelease  The label that issued the release. reviewedBy WebPage  People or organizations that have reviewed the content on this web page for accuracy and/or completeness. sdPublisher CreativeWork  Indicates the party responsible for generating and publishing the current structured data markup, typically in cases where the structured data is derived automatically from existing published content but published on a different site. For example, student projects and open data initiatives often re-publish existing content with more explicitly structured metadata. The sdPublisher property helps make such practices more explicit. seller BuyAction  or Demand  or Flight  or Offer  or Order  An entity which offers (sells / leases / lends / loans) the services / goods. A seller may also be a provider. Supersedes, merchant vendor. sender Message  or ReceiveAction  A sub property of participant. The participant who is at the sending end of the action. serviceOperator GovernmentService  The operating organization, if different from the provider. This enables the representation of services that are provided by an organization, but operated by another organization like a subcontractor. sourceOrganization CreativeWork  The Organization on whose behalf the creator was working. spokenByCharacter Quotation  The (e.g. fictional) character, Person or Organization to whom the quotation is attributed within the containing CreativeWork. sponsor CreativeWork  or Event  or Grant  or MedicalStudy  or Organization  or Person  A person or organization that supports a thing through a pledge, promise, or financial contribution. e.g. a sponsor of a Medical Study or a corporate sponsor of an event. subOrganization Organization  A relationship between two organizations where the first includes the second, e.g., as a subsidiary. See also: the more specific 'department' property. inverse property: parentOrganization. toRecipient Message  A sub property of recipient. The recipient who was directly sent the message. translator CreativeWork  or Event  Organization or person who adapts a creative work to different languages, regional differences and technical requirements of a target market, or that translates during some event. underName Reservation  or Ticket  The person or organization the reservation or ticket is for. worksFor Person  Organizations that the person works for. More specific Types Airline Consortium Corporation EducationalOrganization FundingScheme GovernmentOrganization LibrarySystem LocalBusiness MedicalOrganization NGO NewsMediaOrganization PerformingGroup Project SportsOrganization WorkersUnion Examples Example 1 Without Markup Microdata RDFa JSON-LD A fuller example that illustrates multiple contact numbers for a company,
+including US toll-free numbers, a hearing-impaired number, and several contact categories.
+ This example is JSON-only.
+ This example is JSON-only.
+ <script type="application/ld+json">
+{ "@context" : "http://schema.org",
+  "@type" : "Organization",
+  "url" : "http://www.t-mobile.com",
+  "contactPoint" : [
+    { "@type" : "ContactPoint",
+      "telephone" : "+1-877-746-0909",
+      "contactType" : "customer service",
+      "contactOption" : "TollFree",
+      "areaServed" : "US"
+    } , {
+      "@type" : "ContactPoint",
+      "telephone" : "+1-505-998-3793",
+      "contactType" : "customer service"
+    } , {
+      "@type" : "ContactPoint",
+      "telephone" : "+1-877-296-1018",
+      "contactType" : "customer service",
+      "contactOption" : ["HearingImpairedSupported","TollFree"] ,
+      "areaServed" : "US"
+    } , {
+      "@type" : "ContactPoint",
+      "telephone" : "+1-877-453-1304",
+      "contactType" : "technical support",
+      "contactOption" : "TollFree",
+      "areaServed" : ["US","CA"],
+      "availableLanguage" : ["English","French"]
+    } , {
+      "@type" : "ContactPoint",
+      "telephone" : "+1-877-453-1304",
+      "contactType" : "bill payment",
+      "contactOption" : "TollFree",
+      "areaServed" : ["US","CA"]
+    } ] }
+</script>
+ Example 2 Without Markup Microdata RDFa JSON-LD An example of an order for multiple items, shipped separately.
+ACME Supplies
+Customer: Jane Doe
+Order:
+  Item abc123: 1 Widget: delivered 2015-03-10
+  Item def456: 3 Widget accessories: shipped 2015-03-12
+ <div itemscope itemtype="http://schema.org/Order">
+  <div itemprop="seller" itemscope itemtype="http://schema.org/Organization">
+    <b itemprop="name">ACME Supplies</b>
+  </div>
+  <div itemprop="customer" itemscope itemtype="http://schema.org/Person">
+    <b itemprop="name">Jane Doe</b>
+  </div>
+  <div itemprop="orderedItem" itemscope itemtype="http://schema.org/OrderItem">
+    Item number: <span itemprop="orderItemNumber">abc123</span>
+    <span itemprop="orderQuantity">1</span>
+    <div itemprop="orderedItem" itemscope itemtype="http://schema.org/Product">
+      <span itemprop="name">Widget</span>
+    </div>
+    <link itemprop="orderItemStatus" href="http://schema.org/OrderDelivered" />Delivered
+    <div itemprop="orderDelivery" itemscope itemtype="http://schema.org/ParcelDelivery">
+      <time="expectedArrivalFrom">2015-03-10</time>
+    </div>
+  </div>
+  <div itemprop="orderedItem" itemscope itemtype="http://schema.org/OrderItem">
+    Item number: <span itemprop="orderItemNumber">def456</span>
+    <span itemprop="orderQuantity">4</span>
+    <div itemprop="orderedItem" itemscope itemtype="http://schema.org/Product">
+      <span itemprop="name">Widget accessories</span>
+    </div>
+    <link itemprop="orderItemStatus" href="http://schema.org/OrderInTransit" />Shipped
+    <div itemprop="orderDelivery" itemscope itemtype="http://schema.org/ParcelDelivery">
+      <time itemprop="expectedArrivalFrom">2015-03-15</time>
+      <time itemprop="expectedArrivalUntil">2015-03-18</time>
+    </div>
+  </div>
+</div>
+ <div vocab="http://schema.org/" typeof="Order">
+  <div property="seller" typeof="Organization">
+    <b property="name">ACME Supplies</b>
+  </div>
+  <div property="customer" typeof="Person">
+    <b property="name">Jane Doe</b>
+  </div>
+  <div property="orderedItem" typeof="OrderItem">
+    Item number: <span property="orderItemNumber">abc123</span>
+    <span property="orderQuantity">1</span>
+    <div property="orderedItem" typeof="Product">
+      <span property="name">Widget</span>
+    </div>
+    <link property="orderItemStatus" href="http://schema.org/OrderDelivered" />Delivered
+    <div property="orderDelivery" typeof="ParcelDelivery">
+      <time property="expectedArrivalFrom">2015-03-10</time>
+    </div>
+  </div>
+  <div property="orderedItem" typeof="OrderItem">
+    Item number: <span property="orderItemNumber">def456</span>
+    <span property="orderQuantity">4</span>
+    <div property="orderedItem" typeof="Product">
+      <span property="name">Widget accessories</span>
+    </div>
+    <link property="orderItemStatus" href="http://schema.org/OrderInTransit" />Shipped
+    <div property="orderDelivery" typeof="ParcelDelivery">
+      <time property="expectedArrivalFrom">2015-03-15</time>
+      <time property="expectedArrivalUntil">2015-03-18</time>
+    </div>
+  </div>
+</div>
+ <script type="application/ld+json">
+{
+  "@context": "http://schema.org/",
+  "@type": "Order",
+  "seller": {
+    "@type": "Organization",
+    "name": "ACME Supplies"
+  },
+  "customer": {
+    "@type": "Person",
+    "name": "Jane Doe"
+  },
+  "orderedItem": [
+    {
+      "@type": "OrderItem",
+      "orderItemNumber": "abc123",
+      "orderQuantity": 1,
+      "orderedItem": {
+        "@type": "Product",
+        "name": "Widget"
+      },
+      "orderItemStatus": "http://schema.org/OrderDelivered",
+      "orderDelivery": {
+        "@type": "ParcelDelivery",
+        "expectedArrivalFrom": "2015-03-10"
+      }
+    },
+    {
+      "@type": "OrderItem",
+      "orderItemNumber": "def456",
+      "orderQuantity": 3,
+      "orderedItem": {
+        "@type": "Product",
+        "name": "Widget accessories"
+      },
+      "orderItemStatus": "http://schema.org/OrderInTransit",
+      "orderDelivery": {
+        "@type": "ParcelDelivery",
+        "expectedArrivalFrom": "2015-03-15",
+        "expectedArrivalUntil": "2015-03-18"
+      }
+    }
+  ]
+}
+</script>
+ Example 3 Without Markup Microdata RDFa JSON-LD Example specifying one customer service phone number.
+ This example is JSON-only.
+ This example is JSON-only.
+ <script type="application/ld+json">
+{ "@context" : "http://schema.org",
+  "@type" : "Organization",
+  "url" : "http://www.your-company-site.com",
+  "contactPoint" : [
+    { "@type" : "ContactPoint",
+      "telephone" : "+1-401-555-1212",
+      "contactType" : "customer service"
+    } ] }
+</script>
+ Example 4 Without Markup Microdata RDFa JSON-LD A JSON example of an OrganizationRole, showing information
+about a 'member' of a 'SportsTeam', including time qualfiers
+(when he began and ended that role).
+ <div itemscope itemtype="http://schema.org/SportsTeam">
+    <span itemprop="name">San Francisco 49ers</span>
+    <div itemprop="member" itemscope itemtype="http://schema.org/OrganizationRole">
+        <div itemprop="member" itemscope itemtype="http://schema.org/Person">
+            <span itemprop="name">Joe Montana</span>
+        </div>
+        <span itemprop="startDate">1979</span>
+        <span itemprop="endDate">1992</span>
+        <span itemprop="roleName">Quarterback</span>
+    </div>
+</div>
+ <div vocab="http://schema.org/" typeof="SportsTeam">
+    <span property="name">San Francisco 49ers</span>
+    <div property="member" typeof="OrganizationRole">
+        <div property="member" typeof="http://schema.org/Person">
+            <span property="name">Joe Montana</span>
+        </div>
+        <span property="startDate">1979</span>
+        <span property="endDate">1992</span>
+        <span property="roleName">Quarterback</span>
+    </div>
+</div>
+ <script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "SportsTeam",
+  "name": "San Francisco 49ers",
+  "member": {
+    "@type": "OrganizationRole",
+    "member": {
+      "@type": "Person",
+      "name": "Joe Montana"
+    },
+    "startDate": "1979",
+    "endDate": "1992",
+    "roleName": "Quarterback"
+  }
+}
+</script>
+ Example 5 Without Markup Microdata RDFa JSON-LD Google.Org
+Contact Details:
+Main address: 38 avenue de l'Opera, F-75002 Paris, France
+ Tel: ( 33 1) 42 68 53 00, Fax: ( 33 1) 42 68 53 01
+E-mail: secretariat (at) google.org
+URL: <a href="http://www.google.org">www.google.org</a>
+Members:
+- National Scientific Members in 100 countries and territories: Country1, Country2, ...
+- Scientific Union Members, 30 organizations listed in this Yearbook: Member 1, Member 2
+History:
+ <div itemscope itemtype="http://schema.org/Organization">
+  <span itemprop="name">Google.org (GOOG)</span>
+Contact Details:
+  <div itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
+    Main address:
+      <span itemprop="streetAddress">38 avenue de l'Opera</span>
+      <span itemprop="postalCode">F-75002</span>
+      <span itemprop="addressLocality">Paris, France</span>
+    ,
+  </div>
+    Tel:<span itemprop="telephone">( 33 1) 42 68 53 00 </span>,
+    Fax:<span itemprop="faxNumber">( 33 1) 42 68 53 01 </span>,
+    E-mail: <span itemprop="email">secretariat(at)google.org</span>
+Members:
+- National Scientific Members in 100 countries and territories: Country1, Country2, ...
+- Scientific Union Members, 30 organizations listed in this Yearbook:
+List of Alumni:
+ <span itemprop="alumni" itemscope itemtype="http://schema.org/Person">
+   <span itemprop="name">Jack Dan</span>
+ </span>,
+ <span itemprop="alumni" itemscope itemtype="http://schema.org/Person">
+   <span itemprop="name">John Smith</span>
+ </span>,
+History:
+</div>
+ <div vocab="http://schema.org/" typeof="Organization">
+  <span property="name">Google.org (GOOG)</span>
+Contact Details:
+  <div property="address" typeof="PostalAddress">
+    Main address:
+      <span property="streetAddress">38 avenue de l'Opera</span>
+      <span property="postalCode">F-75002</span>
+      <span property="addressLocality">Paris, France</span>
+    ,
+  </div>
+    Tel:<span property="telephone">( 33 1) 42 68 53 00 </span>,
+    Fax:<span property="faxNumber">( 33 1) 42 68 53 01 </span>,
+    E-mail: <span property="email">secretariat(at)google.org</span>
+Members:
+- National Scientific Members in 100 countries and territories: Country1, Country2, ...
+- Scientific Union Members, 30 organizations listed in this Yearbook:
+List of Alumni:
+ <span property="alumni"  typeof="Person">
+   <span property="name">Jack Dan</span>
+ </span>,
+ <span property="alumni"  typeof="Person">
+   <span property="name">John Smith</span>
+ </span>
+History:
+</div>
+ <script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "Organization",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Paris, France",
+    "postalCode": "F-75002",
+    "streetAddress": "38 avenue de l'Opera"
+  },
+  "email": "secretariat(at)google.org",
+  "faxNumber": "( 33 1) 42 68 53 01",
+  "member": [
+    {
+      "@type": "Organization"
+    },
+    {
+      "@type": "Organization"
+    }
+  ],
+  "alumni": [
+    {
+      "@type": "Person",
+      "name": "Jack Dan"
+    },
+    {
+      "@type": "Person",
+      "name": "John Smith"
+    }
+  ],
+  "name": "Google.org (GOOG)",
+  "telephone": "( 33 1) 42 68 53 00"
+}
+</script>
+ Example 6 Without Markup Microdata RDFa JSON-LD A MusicComposition Example. The following JSON-LD models
+the composition A Day in the Life by Lennon and McCartney,
+regardless of who performs or records the song.
+ Not available yet.
+ Not available yet.
+ <script type="application/ld+json">
+{
+    "@context": "http://schema.org",
+    "@type": "MusicComposition",
+    "@id": "http://musicbrainz.org/work/fd1aa4f2-ba26-3a05-b72d-4392c35a073c",
+    "name": "A Day in the Life",
+    "composer": [
+        {
+            "@type": "Person",
+            "name": "John Lennon",
+            "@id": "http://musicbrainz.org/artist/4d5447d7-c61c-4120-ba1b-d7f471d385b9"
+        },
+        {
+            "@type": "Person",
+            "name": "Paul McCartney",
+            "@id": "http://musicbrainz.org/artist/ba550d0e-adac-4864-b88b-407cab5e76af"
+        }
+    ],
+    "iswcCode": "T-010.140.236-1",
+    "inLanguage": "EN",
+    "publisher": {
+        "@type": "Organization",
+        "name": "Northern Songs, Ltd.",
+        "@id": "http://musicbrainz.org/label/26df054d-78cf-4d83-9bb1-a41816125528"
+    },
+    "datePublished": "1967",
+    "lyrics": {
+      "@type": "CreativeWork",
+      "text": "I  read the news today oh boy..."
+    }
+}
+</script>
+ Example 7 Without Markup Microdata RDFa JSON-LD <p>
+  <a href="http://npr.org">National Public Radio</a> has a sponsor:
+  <a href="http://www.example.com/GloboCorp">GloboCorp</a>.
+</p>
+ <p itemscope itemprop="organization" itemtype="http://schema.org/Organization">
+  <a href="http://npr.org" itemprop="url">
+    <span itemprop="name">National Public Radio</span></a> has a sponsor:
+	<span itemprop="sponsor" itemscope itemtype="http://schema.org/Organization">
+	  <a itemprop="url" href="http://www.example.com/GloboCorp">
+	  <span itemprop="name">GloboCorp</span></a>
+	</span>.
+</p>
+ <p vocab="http://schema.org/" typeof="Organization">
+  <a href="http://npr.org" property="url">
+  <span property="name">National Public Radio</span></a> has a sponsor,
+  <span property="sponsor" typeof="http://schema.org/Organization">
+    <a property="url" href="http://www.example.com/GloboCorp">
+    <span property="name">GloboCorp</span></a>
+  </span>.
+</p>
+ <script type="application/ld+json">
+{
+  "@context": "http://schema.org/",
+  "@type": "Organization",
+  "name": "National Public Radio",
+  "url": "http://npr.org",
+  "sponsor":
+  {
+    "@type": "Organization",
+    "name": "GloboCorp",
+    "url": "http://www.example.com/"
+  }
+}
+</script>
+ Example 8 Without Markup Microdata RDFa JSON-LD WAAY is an affiliate of the ABC network and broadcasts in SD.
+ <div itemscope itemtype="http://schema.org/BroadcastService">
+  <span itemprop="name">WAAY-TV</span>
+  <span itemprop="broadcastDisplayName">ABC</span>
+  <span itemprop="videoFormat">SD</span>
+  <span itemprop="broadcastTimezone" content="-8:00">PST</span>
+  <div itemprop="broadcastAffiliateOf" itemscope itemtype="http://schema.org/Organization">
+    <span itemprop="name">ABC</span>
+  </div>
+</div>
+ <div vocab="http://schema.org" typeof="BroadcastService">
+  <span property="name">WAAY-TV</span>
+  <span property="broadcastDisplayName">ABC</span>
+  <span property="videoFormat">SD</span>
+  <span property="broadcastTimezone" content="-8:00">PST</span>
+  <div property="broadcastAffiliateOf" typeof="Organization">
+    <span property="name">ABC</span>
+  </div>
+</div>
+ <script type="application/ld+json">
+{
+  "@context":"http://schema.org",
+  "@type":"BroadcastService",
+  "name":"WAAY-TV",
+  "broadcastDisplayName":"ABC",
+  "videoFormat":"SD",
+  "broadcastTimezone": "-8:00",
+  "broadcastAffiliateOf":{
+    "@type":"Organization",
+    "name":"ABC"
+  }
+}
+</script>
+ Example 9 Without Markup Microdata RDFa JSON-LD WAAY is channel 7 on Comcast cable.
+ <div itemscope itemtype="http://schema.org/TelevisionChannel">
+  <span itemprop="name">WAAY 7</span>
+  <span itemprop="broadcastChannelId">7</span>
+  <span itemprop="broadcastServiceTier">Premium</span>
+  <div itemprop="inBroadcastLineup" itemscope itemtype="http://schema.org/CableOrSatelliteService">
+    <span itemprop="name">Comcast</span>
+  </div>
+  <div itemprop="providesBroadcastService" itemscope itemtype="http://schema.org/BroadcastService">
+    <span itemprop="name">WAAY-TV</span>
+    <span itemprop="broadcastDisplayName">ABC</span>
+    <div itemprop="broadcastAffiliateOf" itemscope itemtype="http://schema.org/Organization">
+      <span itemprop="name">ABC</span>
+    </div>
+  </div>
+</div>
+ <div vocab="http://schema.org" typeof="TelevisionChannel">
+  <span property="name">WAAY 7</span>
+  <span property="broadcastChannelId">7</span>
+  <span property="broadcastServiceTier">Premium</span>
+  <div property="inBroadcastLineup" typeof="CableOrSatelliteService">
+    <span property="name">Comcast</span>
+  </div>
+  <div property="providesBroadcastService" typeof="BroadcastService">
+    <span property="name">WAAY-TV</span>
+    <span property="broadcastDisplayName">ABC</span>
+    <div property="broadcastAffiliateOf" typeof="Organization">
+      <span property="name">ABC</span>
+    </div>
+  </div>
+</div>
+ <script type="application/ld+json">
+{
+  "@context":"http://schema.org",
+  "@type":"TelevisionChannel",
+  "name": "WAAY 7",
+  "broadcastChannelId":"7",
+  "broadcastServiceTier":"Premium",
+  "inBroadcastLineup":{
+    "@type":"CableOrSatelliteService",
+    "name": "Comcast"
+  },
+  "providesBroadcastService":{
+    "@type":"BroadcastService",
+    "name": "WAAY-TV",
+    "broadcastDisplayName": "ABC",
+    "broadcastAffiliateOf":{
+      "@type":"Organization",
+      "name":"ABC"
+    }
+  }
+}
+</script>

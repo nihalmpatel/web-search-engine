@@ -1,0 +1,32 @@
+mainEntityOfPage - schema.org Property schema.org Documentation Schemas Home mainEntityOfPage Thing > Property > mainEntityOfPage Indicates a page (or other CreativeWork) for which this thing is the main entity being described. See background notes for details. [more...] Canonical URL: http://schema.org/mainEntityOfPage Leave public feedback on this term 💬 Check for open issues. Inverse-property: mainEntity. Values expected to be one of these types CreativeWork URL Used on these types Thing Examples Example 1 Without Markup Microdata RDFa JSON-LD      <div>
+      <h1>Cath's Cafe</h1>
+      <p>Open: Daily from 11:00am till 8pm</p>
+      <p>Phone: 555-0100-3344</p>
+      <p>View <a href="/menu">our menu</a>.</p>
+     </div>
+ <div itemscope itemtype="http://schema.org/Restaurant" itemid="#thecafe">
+    <a itemprop="mainEntityOfPage" href="http://cathscafe.example.com/"><h1 itemprop="name">Cath's Cafe</h1></a>
+    <p>Open: <span itemprop="openingHours" content="Mo,Tu,We,Th,Fr,Sa,Su 11:00-20:00">Daily from 11:00am till 8pm</span></p>
+    <p>Phone: <span itemprop="telephone" content="+155501003344">555-0100-3344</span></p>
+    <p>View <a itemprop="hasMenu" href="/menu">our menu</a>.</p>
+</div>
+ <div vocab="http://schema.org/" typeof="Restaurant" resource="#thecafe">
+    <a property="mainEntityOfPage" href="http://cathscafe.example.com/"><h1 property="name">Cath's Cafe</h1></a>
+    <p>Open: <span property="openingHours" content="Mo,Tu,We,Th,Fr,Sa,Su 11:00-20:00">Daily from 11:00am till 8pm</span></p>
+    <p>Phone: <span property="telephone" content="+155501003344">555-0100-3344</span></p>
+    <p>View <a property="hasMenu" href="/menu">our menu</a>.</p>
+</div>
+ <script type="application/ld+json">
+{
+    "@context": "http://schema.org",
+      "@type": "Restaurant",
+      "mainEntityOfPage": {
+         "@type": "WebPage",
+         "@id": "http://cathscafe.example.com/"
+      },
+      "name": "Cath's Cafe",
+      "openingHours": "Mo,Tu,We,Th,Fr,Sa,Su 11:00-20:00",
+      "telephone": "+155501003344",
+      "hasMenu": "/menu"
+}
+</script>

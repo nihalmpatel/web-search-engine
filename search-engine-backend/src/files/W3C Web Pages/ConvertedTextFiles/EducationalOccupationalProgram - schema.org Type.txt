@@ -1,0 +1,69 @@
+EducationalOccupationalProgram - schema.org Type schema.org Documentation Schemas Home EducationalOccupationalProgram This term is proposed for full integration into Schema.org, pending implementation feedback and adoption from applications and websites. Thing > Intangible > EducationalOccupationalProgram A program offered by an institution which determines the learning progress to achieve an outcome, usually a credential like a degree or certificate. This would define a discrete set of opportunities (e.g., job, courses) that together constitute a program with a clear start, end, set of requirements, and transition to a new occupational opportunity (e.g., a job), or sometimes a higher educational opportunity (e.g., an advanced degree). [more...] Canonical URL: http://schema.org/EducationalOccupationalProgram Leave public feedback on this term 💬 Check for open issues. 'EducationalOccupationalProgram' is mentioned in the pending extention. Property Expected Type Description Properties from EducationalOccupationalProgram educationalCredentialAwarded EducationalOccupationalCredential  or Text  or URL  A description of the qualification, award, certificate, diploma or other educational credential awarded as a consequence of successful completion of this course or program. occupationalCredentialAwarded EducationalOccupationalCredential  or Text  or URL  A description of the qualification, award, certificate, diploma or other occupational credential awarded as a consequence of successful completion of this course or program. offers Offer  An offer to provide this item—for example, an offer to sell a product, rent the DVD of a movie, perform a service, or give away tickets to an event. programPrerequisites AlignmentObject  or Course  or EducationalOccupationalCredential  or Text  Prerequisites for enrolling in the program. provider Organization  or Person  The service provider, service operator, or service performer; the goods producer. Another party (a seller) may offer those services or goods on behalf of the provider. A provider may also serve as the seller. Supersedes carrier. salaryUponCompletion MonetaryAmountDistribution  The expected salary upon completing the training. timeToComplete Duration  The expected length of time to complete the program if attending full-time. Properties from Thing additionalType URL  An additional type for the item, typically used for adding more specific types from external vocabularies in microdata syntax. This is a relationship between something and a class that the thing is in. In RDFa syntax, it is better to use the native RDFa syntax - the 'typeof' attribute - for multiple types. Schema.org tools may have only weaker understanding of extra types, in particular those defined externally. alternateName Text  An alias for the item. description Text  A description of the item. disambiguatingDescription Text  A sub property of description. A short description of the item used to disambiguate from other, similar items. Information from other properties (in particular, name) may be necessary for the description to be useful for disambiguation. identifier PropertyValue  or Text  or URL  The identifier property represents any kind of identifier for any kind of Thing, such as ISBNs, GTIN codes, UUIDs etc. Schema.org provides dedicated properties for representing many of these, either as textual strings or as URL (URI) links. See background notes for more details. image ImageObject  or URL  An image of the item. This can be a URL or a fully described ImageObject. mainEntityOfPage CreativeWork  or URL  Indicates a page (or other CreativeWork) for which this thing is the main entity being described. See background notes for details. Inverse property: mainEntity. name Text  The name of the item. potentialAction Action  Indicates a potential Action, which describes an idealized action in which this thing would play an 'object' role. sameAs URL  URL of a reference Web page that unambiguously indicates the item's identity. E.g. the URL of the item's Wikipedia page, Wikidata entry, or official website. subjectOf CreativeWork  or Event  A CreativeWork or Event about this Thing. Inverse property: about. url URL  URL of the item. More specific Types WorkBasedProgram Source https://github.com/schemaorg/schemaorg/issues/2289 Examples Example 1 Without Markup Microdata RDFa JSON-LD A 4 year educational program from a local university.
+ <!-- JSON-LD example only -->
+ <!-- JSON-LD example only -->
+ <script type="application/ld+json">
+{
+  "@context": "http://schema.org/",
+  "@type": "EducationalOccupationalProgram",
+  "name": "Undergraduate CS degree from ACME College",
+  "url": "http://www.acme.edu/CS",
+   provider": {
+    "@type": "CollegeOrUniversity",
+    "name": "ACME Community College",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "123 Main Street",
+      "addressLocality": "Boston",
+      "addressRegion", "MA",
+      "postalCode": "02134"
+    },
+  },
+  timeToComplete": "P4Y",
+  "educationalCredentialAwarded": {
+    "@type": "EducationalOccupationalCredential",
+    "credentialCategory": "Bachelor of Science in Computer Science"
+  },
+  programPrerequisites": {
+      "@type": "EducationalOccupationalCredential",
+      "credentialCategory": "High school diploma"
+  },
+  "offers": [
+    {
+      "@type": "Offer",
+      "category": "Resident Tuition",
+      "priceSpecification": {
+        "@type": "PriceSpecification",
+        "price": 16278,
+        "priceCurrency": "USD"
+      }
+    },
+    {
+      "@type": "Offer",
+      "category": "International Tuition",
+      "priceSpecification": {
+        "@type": "PriceSpecification",
+        "price": 37344,
+        "priceCurrency": "USD"
+      }
+    },
+    {
+      "@type": "Offer",
+      "category": "Other Tuition",
+      "priceSpecification": {
+        "@type": "PriceSpecification",
+        "price": 35599,
+        "priceCurrency": "USD"
+      }
+    },
+    {
+      "@type": "Offer",
+      "category": "Room and Board",
+      "priceSpecification": {
+        "@type": "PriceSpecification",
+        "price": 13588,
+        "priceCurrency": "USD"
+      }
+    }
+  ]
+}
+</script>

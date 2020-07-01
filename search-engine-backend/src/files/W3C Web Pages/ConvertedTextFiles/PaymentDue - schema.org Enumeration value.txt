@@ -1,0 +1,1 @@
+PaymentDue - schema.org Enumeration value schema.org Documentation Schemas Home PaymentDue Thing > Intangible > Enumeration > PaymentStatusType :: PaymentDue The payment is due, but still within an acceptable time to be received. [more...] Canonical URL: http://schema.org/PaymentDue Leave public feedback on this term 💬 Check for open issues.

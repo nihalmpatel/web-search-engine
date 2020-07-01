@@ -1,0 +1,1 @@
+GenderType - schema.org Enumeration type schema.org Documentation Schemas Home GenderType Thing > Intangible > Enumeration > GenderType An enumeration of genders. [more...] Canonical URL: http://schema.org/GenderType Leave public feedback on this term 💬 Check for open issues. Enumeration members Female Male

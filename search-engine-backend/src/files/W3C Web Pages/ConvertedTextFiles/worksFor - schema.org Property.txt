@@ -1,0 +1,1 @@
+worksFor - schema.org Property schema.org Documentation Schemas Home worksFor Thing > Property > worksFor Organizations that the person works for. [more...] Canonical URL: http://schema.org/worksFor Leave public feedback on this term 💬 Check for open issues. Values expected to be one of these types Organization Used on these types Person

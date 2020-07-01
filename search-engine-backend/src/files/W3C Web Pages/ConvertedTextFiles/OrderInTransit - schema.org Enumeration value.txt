@@ -1,0 +1,1 @@
+OrderInTransit - schema.org Enumeration value schema.org Documentation Schemas Home OrderInTransit Thing > Intangible > Enumeration > OrderStatus :: OrderInTransit OrderStatus representing that an order is in transit. [more...] Canonical URL: http://schema.org/OrderInTransit Leave public feedback on this term 💬 Check for open issues.

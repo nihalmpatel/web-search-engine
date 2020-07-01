@@ -1,0 +1,649 @@
+<!--?xml version='1.0' encoding='UTF-8'?--><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xml:lang="en" lang="en" xmlns="http://www.w3.org/1999/xhtml">
+ <head>
+  <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+  <style type="text/css">
+        code           { font-family: monospace; }
+        
+        div.constraint,
+        div.issue,
+        div.note,
+        div.notice     { margin-left: 2em; }
+        
+        li p           { margin-top: 0.3em;
+                         margin-bottom: 0.3em; }
+      
+          div.exampleInner pre { margin-left: 1em;
+                                 margin-top: 0em; margin-bottom: 0em}
+          div.exampleOuter {border: 4px double gray;
+                            margin: 0em; padding: 0em}
+          div.exampleInner { background-color: #d5dee3;
+                             border-top-width: 4px;
+                             border-top-style: double;
+                             border-top-color: #d3d3d3;
+                             border-bottom-width: 4px;
+                             border-bottom-style: double;
+                             border-bottom-color: #d3d3d3;
+                             padding: 4px; margin: 0em }
+          div.exampleWrapper { margin: 4px }
+          div.exampleHeader { font-weight: bold;
+                              margin: 4px}
+        
+      div.diff-add  { background-color: #FFFF99; }
+      div.diff-del  { text-decoration: line-through; }
+      div.diff-chg  { background-color: #99FF99; }
+      div.diff-off  {  }
+      
+      span.diff-add { background-color: #FFFF99; }
+      span.diff-del { text-decoration: line-through; }
+      span.diff-chg { background-color: #99FF99; }
+      span.diff-off {  }
+      
+      td.diff-add   { background-color: #FFFF99; }
+      td.diff-del   { text-decoration: line-through }
+      td.diff-chg   { background-color: #99FF99; }
+      td.diff-off   {  }
+    
+  em.rfc2119 { text-transform: lowercase;
+               font-variant: small-caps;
+               font-style: normal; }
+  dt.plusmarge { margin-top: 2em; }
+  </style>
+  <link rel="stylesheet" type="text/css" href="http://www.w3.org/StyleSheets/TR/base.css"> 
+  <title>Errata in REC-xml-20060816</title> 
+  <link href="http://www.w3.org/TR/2006/REC-xml-20060816" rel="start"> 
+  <style type="text/css">
+  h3.errata {
+    background: #C8C8C8;
+    padding: 2ex;
+    text-align: center;
+  }
+  .quote     { font-family: Arial, Helvetica, sans-serif; }
+  span.editor { color: red; display: inline }
+ </style> 
+ </head> 
+ <body>
+  <div class="head">
+   <p> <a href="http://www.w3.org/"> <img alt="W3C" src="http://www.w3.org//Icons/w3c_home" height="48" width="72"> </a> </p>
+   <h1>XML 1.0 Fourth Edition Specification Errata</h1>
+   <h2>Abstract</h2>
+   <p>This document records all known errors in the <a href="http://www.w3.org/TR/2006/REC-xml-20060816/"><cite>Fourth Edition of the Extensible Markup Language (XML) 1.0 Specification</cite> </a>; for updates see <a href="http://www.w3.org/TR/xml">the latest version</a>.</p>
+   <p>The errata are numbered, classified as <a href="#substantive">Substantive</a> or <a href="#editorial">Editorial</a>, and listed in <em>reverse chronological order</em> of their date of publication in each category. Changes to the text of the spec are indicated thus: <span class="quote"> <span class="diff-del"><span>deleted text</span></span>, <span class="diff-add"><span>new text</span></span>, <span class="diff-chg"><span>modified text</span></span> </span>. Substantive corrections are proposed by the <a href="http://www.w3.org/XML/Core/">XML Core Working Group</a>, which has consensus that they are appropriate; they are not to be considered normative until approved by a <a href="http://www.w3.org/2004/02/Process-20040205/tr.html#cfr-corrections">Call for Review of Proposed Corrections</a> or a <a href="http://www.w3.org/2004/02/Process-20040205/tr.html#cfr-edited">Call for Review of an Edited Recommendation</a>.</p>
+   <p>Please email error reports to <a href="mailto:xml-editor@w3.org">xml-editor@w3.org</a>.</p>
+  </div>
+  <h2 id="substantive">Substantive errata</h2>
+  <a id="S20080118" name="S20080118"></a>
+  <h3 class="errata">Errata as of 2008-01-18</h3> 
+  <div class="erratum">
+   <a name="E11" id="E11"></a>
+   <h4>E11</h4> 
+   <dl> 
+    <dt class="plusmarge">
+     Section 
+     <a href="http://www.w3.org/TR/2006/REC-xml-20060816#charsets"><b>2.2 Characters</b></a>
+    </dt> 
+    <dd> 
+     <p>In the paragraph following production [2], change the reference to [Unicode3] to point to [Unicode]:</p> 
+     <blockquote>
+      The mechanism for encoding character code points into bit patterns may; vary from entity to entity. All XML processors 
+      <em class="rfc2119" title="Keyword in RFC 2119 context">MUST</em> accept the UTF-8 and UTF-16 encodings of Unicode
+      <span class="diff-del"><span> 3.1</span></span> 
+      <span class="diff-chg"><span><a href="#Unicode">[Unicode]</a></span></span>; the mechanisms for signaling which of the two is in use, or for bringing other encodings into play, are discussed later, in 
+      <a href="http://www.w3.org/TR/2006/REC-xml-20060816#charencoding"><b>4.3.3 Character Encoding in Entities</b></a>.
+     </blockquote> 
+     <p>Amend the first paragraph of the following Note to read:</p> 
+     <div class="note">
+      <p class="prefix"><b>Note:</b></p>
+      <p>Document authors are encouraged to avoid "compatibility characters", as defined in section <span class="diff-chg"><span>2.3</span></span> of <a href="#Unicode">[Unicode]</a><span class="diff-del"><span> (see also D21 in section 3.6 of <a href="#Unicode3">[Unicode3]</a>)</span></span>. The characters defined in the following ranges are also discouraged. They are either control characters or permanently undefined Unicode characters:</p>
+     </div> 
+    </dd> 
+    <dt class="plusmarge">
+     Section 
+     <a href="http://www.w3.org/TR/2006/REC-xml-20060816#sec-external-ent"><b>4.2.2 External Entities</b></a>
+    </dt> 
+    <dd> 
+     <p>In the first item of the numbered list, change the reference to [Unicode3] to point to [Unicode]:</p> 
+     <ol type="1">
+      <li><p>Each character to be escaped is represented in UTF-8 <span class="diff-chg"><a href="#Unicode">[Unicode]</a></span> as one or more bytes.</p></li>
+     </ol> 
+    </dd> 
+    <dt class="plusmarge">
+     Section 
+     <a href="http://www.w3.org/TR/2006/REC-xml-20060816#charencoding"><b>4.3.3 Character Encoding in Entities</b></a>
+    </dt> 
+    <dd> 
+     <p>Amend the second paragraph to read:</p> 
+     <blockquote>
+      Entities encoded in UTF-16 
+      <em class="rfc2119" title="Keyword in RFC 2119 context">MUST</em> and entities encoded in UTF-8 
+      <em class="rfc2119" title="Keyword in RFC 2119 context">MAY</em> begin with the Byte Order Mark described by Annex H of 
+      <a href="#">[ISO10646-2000]</a>, section 
+      <span class="diff-chg"><span>16.8</span></span> of 
+      <a href="#Unicode">[Unicode]</a>
+      <span class="diff-del"><span>, and section 2.7 of <a href="#Unicode3">[Unicode3]</a></span></span> (the ZERO WIDTH NO-BREAK SPACE character, #xFEFF). This is an encoding signature, not part of either the markup or the character data of the XML document. XML processors 
+      <em class="rfc2119" title="Keyword in RFC 2119 context">MUST</em> be able to use this character to differentiate between UTF-8 and UTF-16 encoded documents.
+     </blockquote> 
+     <p>Amend the next-to-last paragraph to read:</p> 
+     <blockquote>
+      It is a 
+      <a title="" href="#">fatal error</a> when an XML processor encounters an entity with an encoding that it is unable to process. It is a 
+      <a title="" href="#">fatal error</a> if an XML entity is determined (via default, encoding declaration, or higher-level protocol) to be in a certain encoding but contains byte sequences that are not legal in that encoding. Specifically, it is a fatal error if an entity encoded in UTF-8 contains any 
+      <span class="diff-del"><span>irregular</span></span>
+      <span class="diff-add"><span>ill-formed</span></span> code unit sequences, as defined in 
+      <span class="diff-add"><span>section 3.9 of </span></span>Unicode
+      <span class="diff-del"><span> 3.1</span></span> 
+      <span class="diff-chg"><span><a href="#Unicode">[Unicode]</a></span></span>. Unless an encoding is determined by a higher-level protocol, it is also a 
+      <a title="" href="#">fatal error</a> if an XML entity contains no encoding declaration and its content is not legal UTF-8 or UTF-16.
+     </blockquote> 
+    </dd> 
+    <dt class="plusmarge">
+     Section 
+     <a href="http://www.w3.org/TR/2006/REC-xml-20060816#sec-existing-stds"><b>A.1 Normative References</b></a>
+    </dt> 
+    <dd> 
+     <p>Amend the [Unicode] entry to read:</p> 
+     <dl> 
+      <dt class="label">
+       <a name="Unicode" id="Unicode"></a>Unicode
+      </dt>
+      <dd>
+       The Unicode Consortium. 
+       <em>The Unicode Standard, Version <span class="diff-chg"><span>5.0.0,</span></span></em> 
+       <span class="diff-del"><span>Reading, Mass.: Addison-Wesley Developers Press, 1996</span></span>
+       <span class="diff-add"><span>defined by: The Unicode Standard, Version 5.0 (Boston, MA, Addison-Wesley, 2007. ISBN 0-321-48091-0)</span></span>.
+      </dd>
+     </dl> 
+     <p>Remove the [Unicode3] entry.</p> 
+     <dl> 
+      <dt class="label">
+       <span class="diff-del"><a name="Unicode3"></a>Unicode3</span>
+      </dt>
+      <dd>
+       <div class="diff-del">
+        The Unicode Consortium. 
+        <em>The Unicode Standard, Version 3.2</em>, defined by: 
+        <em>The Unicode Standard, Version 3.0</em> (Reading, MA, Addison-Wesley, 2000. ISBN 0-201-61633-5), as amended by the 
+        <em>Unicode Standard Annex #27: Unicode 3.1</em> (
+        <a href="http://www.unicode.org/reports/tr27/">http://www.unicode.org/reports/tr27</a>) and the 
+        <em>Unicode Standard Annex #28: Unicode 3.2</em> (
+        <a href="http://www.unicode.org/reports/tr28/">http://www.unicode.org/reports/tr28</a>).
+       </div>
+      </dd> 
+     </dl>
+    </dd> 
+    <dt class="plusmarge">
+     Rationale
+    </dt> 
+    <dd>
+     These changes bring XML in line with the most up-to-date version of the Unicode specification.
+    </dd> 
+   </dl> 
+   <hr align="left" width="50%">
+  </div> 
+  <div class="erratum">
+   <a name="E10" id="E10"></a>
+   <h4>E10</h4> 
+   <dl> 
+    <dt class="plusmarge">
+     Section 
+     <a href="http://www.w3.org/TR/2006/REC-xml-20060816#sec-prolog-dtd"><b>2.8 Prolog and Document Type Declaration</b></a>
+    </dt> 
+    <dd> 
+     <p>Alter production [26] so that it reads:</p> 
+     <table>
+      <tbody>
+       <tr valign="baseline">
+        <td><a name="NT-VersionNum" id="NT-VersionNum"></a>[26]&nbsp;&nbsp;&nbsp;</td>
+        <td><code>VersionNum</code></td>
+        <td>&nbsp;&nbsp;&nbsp;::=&nbsp;&nbsp;&nbsp;</td>
+        <td class="diff-chg"><code>'1.' [0-9]+</code></td>
+       </tr>
+      </tbody>
+     </table> 
+     <p>Add a new paragraph immediately after production [27] as follows:</p> 
+     <div class="diff-add">
+      <p>Even though the <a href="#NT-VersionNum">VersionNum</a> production matches any version number of the form '1.x', XML 1.0 documents <em class="rfc2119" title="Keyword in RFC 2119 context">SHOULD NOT</em> specify a version number other than '1.0'.</p>
+     </div> 
+     <div class="diff-add">
+      <div class="note">
+       <p class="prefix"><b>Note:</b></p>
+       <p>When an XML 1.0 processor encounters a document that specifies a 1.x version number other than '1.0', it will process it as a 1.0 document. This means that an XML 1.0 processor will accept 1.x documents provided they do not use any non-1.0 features.</p>
+      </div>
+     </div> 
+    </dd> 
+    <dt class="plusmarge">
+     Rationale
+    </dt> 
+    <dd>
+     This change effectively reverses a change introduced by 
+     <a href="http://www.w3.org/XML/xml-V10-2e-errata.html#E38">erratum E38 to the second edition</a>, in order to allow parsers to attempt forward-compatible processing of post-1.0 documents. 
+    </dd> 
+   </dl> 
+   <hr align="left" width="50%">
+  </div> 
+  <div class="erratum">
+   <a name="E09" id="E09"></a>
+   <h4>E09</h4> 
+   <dl> 
+    <dt class="plusmarge">
+     Section 
+     <a href="http://www.w3.org/TR/2006/REC-xml-20060816#sec-common-syn"><b>2.3 Common Syntactic Constructs</b></a>
+    </dt> 
+    <dd> 
+     <p>Delete the following paragraph:</p> 
+     <blockquote>
+      <div class="diff-del">
+       <p>Characters are classified for convenience as letters, digits, or other characters. A letter consists of an alphabetic or syllabic base character or an ideographic character. Full definitions of the specific characters in each class are given in <a href="http://www.w3.org/TR/2006/REC-xml-20060816#CharClasses"><b>B Character Classes</b></a>.</p>
+      </div>
+     </blockquote> 
+     <p>Restructure the introduction of Name and Nmtoken to read as follows:</p> 
+     <blockquote>
+      <p>An <a href="#NT-Nmtoken">Nmtoken</a> (name token) is any mixture of name characters.</p> 
+      <div class="diff-chg"> 
+       <p>[<a name="dt-name" id="dt-name" title="Name">Definition</a>: A <a href="#NT-Name">Name</a> is an <a href="#NT-Nmtoken">Nmtoken</a> with a restricted set of initial characters.] Disallowed initial characters for <a href="#NT-Name">Names</a> include digits, diacritics, the full stop and the hyphen.</p> 
+      </div> 
+      <p>Names beginning with the string "<code>xml</code>", or with any string which would match <code>(('X'|'x') ('M'|'m') ('L'|'l'))</code>, are reserved for standardization in this or future versions of this specification.</p> 
+      <div class="note">
+       <p class="prefix"><b>Note:</b></p>
+       <p>The Namespaces in XML Recommendation <a href="#xml-names">[XML Names]</a> assigns a meaning to names containing colon characters. Therefore, authors should not use the colon in XML names except for namespace purposes, but XML processors must accept the colon as a name character.</p>
+      </div> 
+     </blockquote> 
+     <p>Replace the group of productions [4] to [8], including the "Names and Tokens" heading, with the following:</p> 
+     <blockquote>
+      <div class="diff-add">
+       <p>The first character of a Name <em class="rfc2119" title="Keyword in RFC 2119 context">MUST</em> be a NameStartChar, and any other characters <em class="rfc2119" title="Keyword in RFC 2119 context">MUST</em> be NameChars; this mechanism is used to prevent names from beginning with European (ASCII) digits or with basic combining characters. Almost all characters are permitted in names, except those which either are or reasonably could be used as delimiters. The intention is to be inclusive rather than exclusive, so that writing systems not yet encoded in Unicode can be used in XML names. See <a href="http://www.w3.org/TR/2006/REC-xml-20060816#sec-suggested-names"><b>J Suggestions for XML Names</b></a> for suggestions on the creation of names.</p>
+      </div> 
+      <div class="diff-add">
+       <p>Document authors are encouraged to use names which are meaningful words or combinations of words in natural languages, and to avoid symbolic or white space characters in names. Note that COLON, HYPHEN-MINUS, FULL STOP (period), LOW LINE (underscore), and MIDDLE DOT are explicitly permitted.</p>
+      </div> 
+      <div class="diff-add">
+       <p>The ASCII symbols and punctuation marks, along with a fairly large group of Unicode symbol characters, are excluded from names because they are more useful as delimiters in contexts where XML names are used outside XML documents; providing this group gives those contexts hard guarantees about what <em>cannot</em> be part of an XML name. The character #x037E, GREEK QUESTION MARK, is excluded because when normalized it becomes a semicolon, which could change the meaning of entity references.</p>
+      </div> 
+      <h5><a name="IDAMV4P" id="IDAMV4P"></a>Names and Tokens</h5>
+      <table class="scrap" summary="Scrap">
+       <tbody>
+        <tr valign="baseline">
+         <td class="diff-chg"><a name="NT-NameStartChar" id="NT-NameStartChar"></a>[4]&nbsp;&nbsp;&nbsp;</td>
+         <td class="diff-chg"><code>NameStartChar</code></td>
+         <td class="diff-chg">&nbsp;&nbsp;&nbsp;::=&nbsp;&nbsp;&nbsp;</td>
+         <td class="diff-chg"><code>":" | [A-Z] | "_" | [a-z] | [#xC0-#xD6] | [#xD8-#xF6] | [#xF8-#x2FF] | [#x370-#x37D] | [#x37F-#x1FFF] | [#x200C-#x200D] | [#x2070-#x218F] | [#x2C00-#x2FEF] | [#x3001-#xD7FF] | [#xF900-#xFDCF] | [#xFDF0-#xFFFD] | [#x10000-#xEFFFF]</code></td>
+        </tr>
+       </tbody>
+      </table>
+      <table>
+       <tbody>
+        <tr valign="baseline">
+         <td class="diff-add"><a name="NT-NameChar" id="NT-NameChar"></a>[4a]&nbsp;&nbsp;&nbsp;</td>
+         <td class="diff-add"><code>NameChar</code></td>
+         <td class="diff-add">&nbsp;&nbsp;&nbsp;::=&nbsp;&nbsp;&nbsp;</td>
+         <td class="diff-add"><code> <a href="#NT-NameStartChar">NameStartChar</a> | "-" | "." | [0-9] | #xB7 | [#x0300-#x036F] | [#x203F-#x2040]</code></td>
+        </tr>
+       </tbody>
+      </table>
+      <table>
+       <tbody>
+        <tr valign="baseline">
+         <td><a name="NT-Name" id="NT-Name"></a>[5]&nbsp;&nbsp;&nbsp;</td>
+         <td><code>Name</code></td>
+         <td>&nbsp;&nbsp;&nbsp;::=&nbsp;&nbsp;&nbsp;</td>
+         <td class="diff-chg"><code> <a href="#NT-NameStartChar">NameStartChar</a> (<a href="#NT-NameChar">NameChar</a>)*</code></td>
+        </tr>
+       </tbody>
+      </table>
+      <table>
+       <tbody>
+        <tr valign="baseline">
+         <td><a name="NT-Names" id="NT-Names"></a>[6]&nbsp;&nbsp;&nbsp;</td>
+         <td><code>Names</code></td>
+         <td>&nbsp;&nbsp;&nbsp;::=&nbsp;&nbsp;&nbsp;</td>
+         <td><code> <a href="#NT-Name">Name</a> (#x20 <a href="#NT-Name">Name</a>)*</code></td>
+        </tr>
+       </tbody>
+      </table>
+      <table>
+       <tbody>
+        <tr valign="baseline">
+         <td><a name="NT-Nmtoken" id="NT-Nmtoken"></a>[7]&nbsp;&nbsp;&nbsp;</td>
+         <td><code>Nmtoken</code></td>
+         <td>&nbsp;&nbsp;&nbsp;::=&nbsp;&nbsp;&nbsp;</td>
+         <td><code>(<a href="#NT-NameChar">NameChar</a>)+</code></td>
+        </tr>
+       </tbody>
+      </table>
+      <table>
+       <tbody>
+        <tr valign="baseline">
+         <td><a name="NT-Nmtokens" id="NT-Nmtokens"></a>[8]&nbsp;&nbsp;&nbsp;</td>
+         <td><code>Nmtokens</code></td>
+         <td>&nbsp;&nbsp;&nbsp;::=&nbsp;&nbsp;&nbsp;</td>
+         <td><code> <a href="#NT-Nmtoken">Nmtoken</a> (#x20 <a href="#NT-Nmtoken">Nmtoken</a>)*</code></td>
+        </tr>
+       </tbody>
+      </table> 
+     </blockquote> 
+    </dd> 
+   </dl> 
+   <hr> 
+   <dl> 
+    <dt class="plusmarge">
+     Section&nbsp;
+     <a href="http://www.w3.org/TR/2006/REC-xml-20060816#CharClasses"><b>B Character Classes</b></a>
+    </dt> 
+    <dd> 
+     <p>Add a new paragraph at the beginning of this Appendix, as follows:</p> 
+     <blockquote>
+      <div class="diff-add">
+       <p>Because of changes to productions <a href="#NT-NameStartChar">[4]</a> and <a href="#NT-Name">[5]</a>, the productions in this Appendix are now orphaned and not used anymore in determining name characters. This Appendix may be removed in a future edition of this specification; other specifications that wish to refer to the productions herein should do so by means of a reference to the relevant production(s) in the <a href="http://www.w3.org/TR/2006/REC-xml-20060816">Fourth Edition</a> of this specification. </p>
+      </div>
+     </blockquote> 
+    </dd> 
+   </dl> 
+   <hr> 
+   <p>Add a new Appendix as follows:</p> 
+   <blockquote>
+    <div class="diff-add">
+     <div class="div1"> 
+      <h2><a name="sec-suggested-names" id="sec-suggested-names"></a>J Suggestions for XML Names (Non-Normative)</h2>
+      <p>The following suggestions define what is believed to be best practice in the construction of XML names used as element names, attribute names, processing instruction targets, entity names, notation names, and the values of attributes of type ID, and are intended as guidance for document authors and schema designers. All references to Unicode are understood with respect to a particular version of the Unicode Standard greater than or equal to 5.0; which version should be used is left to the discretion of the document author or schema designer.</p>
+      <p>The first two suggestions are directly derived from the rules given for identifiers in Standard Annex #31 (UAX #31) of the Unicode Standard, version 5.0, and exclude all control characters, enclosing nonspacing marks, non-decimal numbers, private-use characters, punctuation characters (with the noted exceptions), symbol characters, unassigned codepoints, and white space characters. The other suggestions are mostly derived from Appendix B in previous editions of this specification.</p>
+      <ol type="1">
+       <li><p>The first character of any name <em class="rfc2119" title="Keyword in RFC 2119 context">SHOULD</em> have a Unicode property of ID_Start, or else be '_' #x5F.</p></li>
+       <li><p>Characters other than the first <em class="rfc2119" title="Keyword in RFC 2119 context">SHOULD</em> have a Unicode property of ID_Continue, or be one of the characters listed in the table entitled "Characters for Natural Language Identifiers" in UAX #31, with the exception of "'" #x27 and "’" #x2019.</p></li>
+       <li><p>Ideographic characters which have a canonical decomposition (including those in the ranges [#xF900-#xFAFF] and [#x2F800-#x2FFFD], with 12 exceptions) should not be used in names. </p></li>
+       <li><p>Characters which have a compatibility decomposition (those with a "compatibility formatting tag" in field 5 of the Unicode Character Database -- marked by field 5 beginning with a "&lt;") should not be used in names. This suggestion does not apply to #x0E33 THAI CHARACTER SARA AM or #x0EB3 LAO CHARACTER AM, which despite their compatibility decompositions are in regular use in those scripts.</p></li>
+       <li><p>Combining characters meant for use with symbols only (including those in the ranges [#x20D0-#x20EF] and [#x1D165-#x1D1AD]) should not be used in names.</p></li>
+       <li><p>The interlinear annotation characters ([#xFFF9-#xFFFB]) should not be used in names.</p></li>
+       <li><p>Variation selector characters should not be used in names.</p></li>
+       <li><p>Names which are nonsensical, unpronounceable, hard to read, or easily confusable with other names should not be employed.</p></li>
+      </ol>
+     </div>
+    </div>
+   </blockquote> 
+   <dl> 
+    <dt class="plusmarge">
+     Rationale
+    </dt> 
+    <dd> 
+     <p>Since XML 1.1 became a W3C Recommendation in August 2006, there has been a substantial uptake of it as a peer of XML 1.0 in new and ongoing W3C work. This is appropriate, as XML 1.1 was explicitly not designed to replace XML 1.0, but to supplement it for the benefit of various groups against which XML 1.0 had unjustly, but unintentionally, discriminated.</p> 
+     <p>However, there are very few XML 1.1 documents in the wild. The XML Core WG believes this to be the result of a vicious circle, in which widely distributed XML parsers do not support 1.1 because the parser authors believe that few document authors will use it. This becomes a self-fulfilling prophecy, as those who would benefit from XML 1.1 are rightfully concerned that documents written in it will not be widely acceptable.</p> 
+     <p>After considering various other means by which to achieve the main goal of XML 1.1, that is, to deliver on XML's original promise of universality across all the world's languages, the XML Core WG has drafted this erratum to change XML 1.0 to relax the restrictions on names, thereby providing in XML 1.0 the major end user benefit currently achievable only by using XML 1.1, and completing the decoupling of XML from specific versions of Unicode.</p> 
+     <p>To quote the XML 1.1 Recommendation:</p> 
+     <blockquote>
+      The W3C's XML 1.0 Recommendation was first issued in 1998, and despite the issuance of many errata culminating in a Third Edition of 2004, has remained (by intention) unchanged with respect to what is well-formed XML and what is not. This stability has been extremely useful for interoperability. However, the Unicode Standard on which XML 1.0 relies for character specifications has not remained static, evolving from version 2.0 to version 4.0 and beyond. Characters not present in Unicode 2.0 may already be used in XML 1.0 character data. However, they are not allowed in XML names such as element type names, attribute names, enumerated attribute values, processing instruction targets, and so on. In addition, some characters that should have been permitted in XML names were not, due to oversights and inconsistencies in Unicode 2.0.
+     </blockquote> 
+     <blockquote>
+      The overall philosophy of names has changed since XML 1.0. Whereas XML 1.0 provided a rigid definition of names, wherein everything that was not permitted was forbidden, XML 1.1 names are designed so that everything that is not forbidden (for a specific reason) is permitted. Since Unicode will continue to grow past version 4.0, further changes to XML can be avoided by allowing almost any character, including those not yet assigned, in names.
+     </blockquote> 
+     <p>Since then, Unicode has continued its efforts to add scripts and characters in order to improve or add support for the world's languages and writing systems. This effort that is by no means complete. The changes since the XML 1.0 name character inventory was fixed encompass a variety of additions to the Unicode standard, and include support for:</p> 
+     <ul>
+      <li>additional scripts, including Ethiopic, Cherokee, Canadian Syllabics, Khmer, Mongolian, Yi, Philippine, New Tai Lue, Buginese, Syloti Nagri, N'Ko, and Tifinagh</li>
+      <li>many additional Han ideographs (used predominantly for Chinese)</li>
+      <li>additional characters for scripts that were incompletely understood at the time 2.0 was released, notably scripts native to South Asia</li>
+     </ul> 
+     <p>This change to XML 1.0 relaxes the restrictions on names, used not only for element and attribute names but also identifiers and enumerated attribute values. Those who prefer to retain the constraints on names from the previous version of XML 1.0 in their documents will be free to do so, but those who wish to use names that incorporate these additional characters will be able to do so.</p> 
+    </dd> 
+   </dl> 
+  </div> 
+  <a id="S20071205" name="S20071205"></a>
+  <h3 class="errata">Errata as of 2007-12-05</h3> 
+  <div class="erratum">
+   <a name="E06" id="E06"></a>
+   <h4>E06</h4> 
+   <dl> 
+    <dt class="plusmarge">
+     Section 
+     <a href="http://www.w3.org/TR/2006/REC-xml-20060816#charencoding"><b>4.3.3 Character Encoding in Entities</b></a>
+    </dt> 
+    <dd> 
+     <p>Add a new paragraph following the second paragraph, to read:</p> 
+     <blockquote>
+      <span class="diff-add"><span>If the replacement text of an external entity is to begin with the character U+FEFF, and no text declaration is present, then a Byte Order Mark MUST be present, whether the entity is encoded in UTF-8 or UTF-16.</span></span>
+     </blockquote> 
+    </dd> 
+    <dt class="plusmarge">
+     Rationale
+    </dt> 
+    <dd>
+     Provide unambiguous behavior by working around the inherent ambiguity of the BOM in Unicode.
+    </dd> 
+   </dl> 
+  </div> 
+  <a id="S20070815" name="S20070815"></a>
+  <h3 class="errata">Errata as of 2007-08-15</h3> 
+  <div class="erratum">
+   <a name="E01" id="E01"></a>
+   <h4>E01</h4> 
+   <dl> 
+    <dt class="plusmarge">
+     Section 
+     <a href="http://www.w3.org/TR/2006/REC-xml-20060816#sec-origin-goals"><b>1.1 Origin and Goals</b></a>
+    </dt> 
+    <dd> 
+     <p>Amend the first paragraph after the list of goals, so that it reads:</p> 
+     <blockquote>
+      This specification, together with associated standards (Unicode 
+      <a href="#Unicode">[Unicode]</a> and ISO/IEC 10646 
+      <a href="#">[ISO10646]</a> for characters, Internet RFC 
+      <span class="diff-del"><span>3066</span></span>
+      <span class="diff-add"><span>4646</span></span> 
+      <a href="#">[RFC1766]</a> 
+      <span class="diff-add"><span>and the Language Subtag Registry <a href="#">[IANA-LANGCODES]</a></span></span> for language identification tags
+      <span class="diff-del"><span>, ISO 639 <a href="#">[ISO639]</a> for language name codes, and ISO 3166 <a href="#">[ISO3166]</a> for country name codes</span></span>), provides all the information necessary to understand XML Version 1.0; and construct computer programs to process it.
+     </blockquote> 
+    </dd> 
+    <dt class="plusmarge">
+     Section 
+     <a href="http://www.w3.org/TR/2006/REC-xml-20060816#sec-existing-stds"><b>A.1 Normative References</b></a>
+    </dt> 
+    <dd> 
+     <p>Change the [IETF RFC 3066] entry so that it points to <a href="http://www.ietf.org/rfc/rfc4646.txt">IETF RFC 4646</a>.</p> 
+    </dd> 
+    <dt class="plusmarge">
+     Section 
+     <a href="http://www.w3.org/TR/2006/REC-xml-20060816#null"><b>A.2 Other References</b></a>
+    </dt> 
+    <dd> 
+     <p>Change the [IANA-LANGCODES] entry so that it points to the new registry at <a href="http://www.iana.org/assignments/language-subtag-registry">http://www.iana.org/assignments/language-subtag-registry</a>.</p> 
+    </dd> 
+    <dt class="plusmarge">
+     Rationale
+    </dt> 
+    <dd>
+     RFC 3066 has been replaced by 
+     <a href="http://www.ietf.org/rfc/rfc4646.txt">RFC 4646</a>. The old registry pointed to by the IANA-LANGCODES entry is now stale and closed. With the new registry, reference to ISO 639 and ISO 3166 is no longer necessary (and may even be harmful in the future, because of stability concerns).
+    </dd> 
+   </dl> 
+   <hr align="left" width="50%">
+  </div> 
+  <div class="erratum">
+   <a name="E02" id="E02"></a>
+   <h4>E02</h4> 
+   <dl> 
+    <dt class="plusmarge">
+     Section 
+     <a href="http://www.w3.org/TR/2006/REC-xml-20060816#charsets"><b>2.2 Characters</b></a>
+    </dt> 
+    <dd> 
+     <p>Amend the [#xFDD0-#xFDDF] range in the list of discouraged characters to read [#xFDD0-#xFD<span class="diff-chg"><span>E</span></span>F].</p> 
+    </dd> 
+    <dt class="plusmarge">
+     Rationale
+    </dt> 
+    <dd>
+     "#xFDDF" was a typo, as can be ascertained by consulting the Unicode standard in which the whole [#xFDD0-#xFDEF] range was introduced as a block in one version (3.1) to serve as "non-characters" for internal use.
+    </dd> 
+   </dl> 
+  </div> 
+  <hr align="left" width="50%">
+  <h2 id="editorial">Editorial errata</h2>
+  <a id="E20080118" name="E20080118"></a>
+  <h3 class="errata">Errata as of 2008-01-18</h3> 
+  <div class="erratum">
+   <a name="E08" id="E08"></a>
+   <h4>E08</h4> 
+   <dl> 
+    <dt class="plusmarge">
+     Section 
+     <a href="http://www.w3.org/TR/2006/REC-xml-20060816#sec-references"><b>4.1 Character and Entity References</b></a>
+    </dt> 
+    <dd> 
+     <p>Change the first sentence of the text of the Entity Declared VC as follows:</p> 
+     <blockquote>
+      In a document with an external subset or parameter entity references
+      <span class="diff-chg"><span>, if the document is not standalone (either "<code>standalone='no'</code>" is specified or there is no standalone declaration), then</span></span> the 
+      <a href="#NT-Name">Name</a> given in the entity reference 
+      <em class="rfc2119" title="Keyword in RFC 2119 context">MUST</em> 
+      <a title="" href="#">match</a> that in an 
+      <a href="#sec-entity-decl"><cite>entity declaration</cite></a>.
+     </blockquote> 
+    </dd> 
+    <dt class="plusmarge">
+     Rationale
+    </dt> 
+    <dd>
+     The existing wording was ambiguous and did not explicitly address the case of an absent standalone declaration.
+    </dd> 
+   </dl> 
+  </div> 
+  <a id="E20071205" name="E20071205"></a>
+  <h3 class="errata">Errata as of 2007-12-05</h3> 
+  <div class="erratum">
+   <a name="E07" id="E07"></a>
+   <h4>E07</h4> 
+   <dl> 
+    <dt class="plusmarge">
+     Section 
+     <a href="http://www.w3.org/TR/2006/REC-xml-20060816#sec-entexpand"><b>D Expansion of Entity and Character References</b></a>
+    </dt> 
+    <dd> 
+     <p>Append the following at the end of the Appendix:</p> 
+     <div class="diff-add">
+      <p>In the following example</p>
+     </div> 
+     <div class="diff-add">
+      <div class="exampleInner">
+       <pre class="diff-add">&lt;!DOCTYPE foo [ 
+&lt;!ENTITY x "&amp;lt;"&gt; 
+]&gt; 
+&lt;foo attr="&amp;x;"/&gt;</pre>
+      </div>
+     </div> 
+     <div class="diff-add">
+      <p>the replacement text of x is the four characters "&amp;lt;" because references to general entities in entity values are <a href="#bypass"><cite>bypassed</cite></a>. The replacement text of lt is a character reference to the less-than character, for example the five characters "&amp;#60;" (see <a href="http://www.w3.org/TR/2006/REC-xml-20060816#sec-predefined-ent"><b>4.6 Predefined Entities</b></a>). Since neither of these contains a less-than character the result is well-formed.</p>
+     </div> 
+     <div class="diff-add">
+      <p>If the definition of x had been</p>
+     </div> 
+     <div class="diff-add">
+      <div class="exampleInner">
+       <pre class="diff-add">&lt;!ENTITY x "&amp;#60;"&gt;</pre>
+      </div>
+     </div> 
+     <div class="diff-add">
+      <p>then the document would not have been well-formed, because the replacement text of x would be the single character "&lt;" which is not permitted in attribute values (see <a href="#CleanAttrVals"><cite>WFC: No &lt; in Attribute Values</cite></a>).</p>
+     </div> 
+    </dd> 
+    <dt class="plusmarge">
+     Rationale
+    </dt> 
+    <dd>
+     This is an editorial clarification of a case that remained confusing.
+    </dd> 
+   </dl> 
+   <hr align="left" width="50%">
+  </div> 
+  <div class="erratum">
+   <a name="E05" id="E05"></a>
+   <h4>E05</h4> 
+   <dl> 
+    <dt class="plusmarge">
+     Section 
+     <a href="http://www.w3.org/TR/2006/REC-xml-20060816#charencoding"><b>4.3.3 Character Encoding in Entities</b></a>
+    </dt> 
+    <dd> 
+     <p>Change the second sentence of the first paragraph to read:</p> 
+     <blockquote>
+      The terms "UTF-8" and "UTF-16" in this specification do not apply to 
+      <span class="diff-del"><span>character encodings with any other labels, even if the encodings or labels are very similar to UTF-8 or UTF-16.</span></span> 
+      <span class="diff-add"><span>related character encodings, including but not limited to UTF-16BE, UTF-16LE, or CESU-8.</span></span> 
+     </blockquote> 
+    </dd> 
+    <dt class="plusmarge">
+     Section 
+     <a href="http://www.w3.org/TR/2006/REC-xml-20060816#sec-guessing"><b>F Autodetection of Character Encodings</b></a>
+    </dt> 
+    <dd> 
+     <p>Change the last sentence of the first paragraph to read:</p> 
+     <blockquote>
+       We 
+      <span class="diff-add"><span>will</span></span> consider 
+      <span class="diff-del"><span>the first case first.</span></span> 
+      <span class="diff-add"><span>these cases in turn.</span></span> 
+     </blockquote> 
+    </dd> 
+    <dt class="plusmarge">
+     Rationale
+    </dt> 
+    <dd>
+     The former reading in 4.3.3 still caused some confusion, especially with respect to UTF-16BE and UTF-16LE.
+    </dd> 
+   </dl> 
+   <hr align="left" width="50%">
+  </div> 
+  <div class="erratum">
+   <a name="E04" id="E04"></a>
+   <h4>E04</h4> 
+   <dl> 
+    <dt class="plusmarge">
+     Section 
+     <a href="http://www.w3.org/TR/2006/REC-xml-20060816#safe-behavior"><b>5.2 Using XML Processors</b></a>
+    </dt> 
+    <dd> 
+     <p>Amend the last sentence of the second item of the bulleted list so that it reads:</p> 
+     <blockquote>
+      For example, a non-validating processor may fail to 
+      <a href="#AVNormalize"><cite>normalize</cite></a> attribute values, 
+      <a href="#included"><cite>include</cite></a> the replacement text of internal entities, or supply 
+      <a href="#sec-attr-defaults"><cite>default attribute values</cite></a>, where doing so depends on having read declarations in external or parameter entities
+      <span class="diff-add"><span>, or in the internal subset after an unread parameter entity reference</span></span>.
+     </blockquote> 
+    </dd> 
+    <dt class="plusmarge">
+     Rationale
+    </dt> 
+    <dd>
+     Improve the informativeness of the example sentence.
+    </dd> 
+   </dl> 
+  </div> 
+  <a id="E20070925" name="E20070925"></a>
+  <h3 class="errata">Errata as of 2007-09-25</h3> 
+  <div class="erratum">
+   <a name="E03" id="E03"></a>
+   <h4>E03</h4> 
+   <dl> 
+    <dt class="plusmarge">
+     Section 
+     <a href="http://www.w3.org/TR/2006/REC-xml-20060816#sec-references"><b>4.1 Character and Entity References</b></a>
+    </dt> 
+    <dd> 
+     <p>Remove a duplicate "to" from the last paragraph of the description of the <a href="http://www.w3.org/TR/2006/REC-xml-20060816/#wf-entdeclared">"Entity Declared" WFC</a>, so that it reads:</p> 
+     <blockquote>
+      Note that non-validating processors are 
+      <a href="#include-if-valid"><cite>not obligated to</cite></a> 
+      <span class="diff-del"><span>to </span></span>read and process entity declarations occurring in parameter entities or in the external subset; for such documents, the rule that an entity must be declared is a well-formedness constraint only if 
+      <a href="#sec-rmd"><cite>standalone='yes'</cite></a>.
+     </blockquote> 
+    </dd> 
+    <dt class="plusmarge">
+     Rationale
+    </dt> 
+    <dd>
+     This was a typo.
+    </dd> 
+   </dl> 
+  </div> 
+  <hr align="left" width="50%">
+  <address>Last updated $Date: 2008/11/18 16:33:50 $ by $Author: ht $<br><br> <a href="mailto:xml-editor@w3.org">xml-editor</a> </address>  
+ </body>
+</html>

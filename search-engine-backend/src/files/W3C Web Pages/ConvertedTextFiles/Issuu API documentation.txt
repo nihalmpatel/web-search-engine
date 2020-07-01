@@ -1,0 +1,36 @@
+Issuu API documentation API documentation Getting Started Signing Request API limits Managing Your Publications Bookmarks Documents Document Embed Folders Troubleshooting FAQ Search Getting Started Introduction Search Request Search Response Examples Appendix Feeds FAQ oEmbed Getting Started Issuu offers a simple REST-based interface making it quick and easy to get started. Step 1: Apply for API key The first thing you need to do is to apply for an API key. The only thing we require is that you have an active Issuu account and that you give us a bit of information about the application you would like to build. We are very curious to see what cool stuff you come up with! Please remember that the API key should be treated like any other password. With it you can carry out actions like deleting information and documents from your Issuu account. Do not disclose or share your API key with anyone else! Step 2: Choose API method Before you can make a request you must choose an API method. Depending on which method you would like to call you need to choose the correct endpoint. As a rule all requests must be made to the following endpoint: http http://api.issuu.com/1_0
+ Parameters should either be sent as part of the URL when using HTTP GET requests or inside the HTTP body for HTTP POST requests. Every rule needs an exception though! When uploading documents a special endpoint must be used: http http://upload.issuu.com/1_0
+ When uploading files you must use HTTP POST with encoding multipart/form-data. Step 3: Make a request To perform an action against the Issuu API there are three parameters which must always be included in the request: The required parameter apiKey is used for authentication. The request will be carried out on behalf of the associated user account. The required parameter signature is used for authentication. Signing Requests describes how to calculate the signature value The required parameter action is used to specify the calling method. You are free to choose between sending the parameters using HTTP GET or HTTP POST. http http://api.issuu.com/1_0?apiKey=<apiKey>&signature=<signature>&action=<method>
+ Note: All data sent to the Issuu API must be UTF-8 encoded. And all data returned by the API will be UTF-8 encoded. Submitting data in a different encoding will cause the request to fail with error code 201 "Invalid field format". See Step 5: Handle Errors for common error codes. Request headers When using POST it is required that you set the Content-Type header to "x-www-form-urlencoded" for all API calls except when uploading files. Sending data as POST parameters: undefined POST /1_0 HTTP/1.1
+Host: api.issuu.com
+Content-Type: x-www-form-urlencoded
+ The upload API handles only requests encoded as "multipart/form-data". See issuu.document.upload for details. Sending file content and data: undefined POST /1_0 HTTP/1.1
+Host: upload.issuu.com
+Content-Type: multipart/form-data; boundary=XXXXXXXXXX
+ It is highly recommended to use a standard library for handling the encoding when submitting HTTP requests. If the Content-Type is not specified correctly the posted parameters will not be recognized and the error code 200 "Required field is missing" is returned. GET requests must not include a Content-Type header. Response format Two optional parameters are used to specify the response format: The optional parameter format is used to specify the response format as either XML or JSON/JSONP. The optional parameter jsonCallback is used to specify the name of the JSONP callback function. When calling one of the data listing methods it is highly recommended that you use the optional parameter responseParams to limit the response to only include the parameters which are required by your application. Step 4: Parse the response The response from the API server has the same structure for both XML and JSON/JSONP formats. The actual payload of the response is wrapped in an "rsp" element and an attribute named "stat" indicates if the request was successful or not. XML XML <rsp stat="ok">
+    <!-- payload goes here -->
+</rsp>
+ JSON JSON {
+    "rsp": {
+        "_content": {
+            /* payload goes here */
+        },
+        "stat": "ok"
+    }
+}
+ The HTTP status code for the response is always 200 'OK' even if the request fails. Step 5: Handle errors In case of errors the stat attribute will have the value "fail". The payload of the response is then a single error object with "code" and "message" attributes. If the error is caused by one or more malformed request parameters the optional "field" attribute will indicate the name of the first offending parameter. XML XML <rsp stat="fail">
+    <error code="[code]" message="[message]" field="[field]"/>
+</rsp>
+ JSON JSON {
+    "rsp": {
+         "_content": {
+             "error": {
+                 "code": "[code]",
+                 "message": "[message]",
+                 "field": "[field]"
+             }
+         },
+         "stat": "fail"
+    }
+}
+ The table below lists the most common errors: Code Message Explanation 009 Authentication required Check that API key parameter was included in request 010 Invalid API key Check that API key was submitted correctly. It should consist of 32 characters 011 Bad signature Check your Request Signing procedure 200 Required field is missing Check "field" attribute to see which field is missing 201 Invalid field format Check the documentation for the method you are calling. Certain fields have special formatting requirements. Also check that you are using UTF-8 encoding 205 File size is too large Currently size of uploaded files cannot exceed 100 MB Connecting content to people. Issuu Inc. Company About us Careers Blog Press Creator Hub Overview Stories Shareable Full-Screen Reader Video Embeds & Social Sharing Resources Support Developers Success Stories Directory Redeem Code Plans & Products Plans Collaborate Advertise on Issuu Reseller Program Sell on Issuu Apps iOS Android Terms Privacy DMCA

@@ -1,0 +1,623 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
+ <head profile="http://gmpg.org/xfn/11"> 
+  <meta charset="utf-8"> 
+  <!--
+<meta property="fb:page_id" content="6427302910" />
+--> 
+  <meta name="google-site-verification" content="7VWES_-rcHBcmaQis9mSYamPfNwE03f4vyTj4pfuAw0"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1"> 
+  <title>Block Editor Handbook | WordPress Developer Resources</title> 
+  <meta name="referrer" content="always"> 
+  <link href="//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,400,300,600&amp;subset=latin,cyrillic-ext,greek-ext,greek,vietnamese,latin-ext,cyrillic" rel="stylesheet" type="text/css"> 
+  <link rel="stylesheet" href="//s.w.org/style/wp4.css?82"> 
+  <link rel="shortcut icon" href="//s.w.org/favicon.ico?2" type="image/x-icon"> 
+  <link rel="pingback" href="https://developer.wordpress.org/xmlrpc.php">
+  <link rel="dns-prefetch" href="//fonts.googleapis.com"> 
+  <link rel="dns-prefetch" href="//s.w.org"> 
+  <link rel="dns-prefetch" href="//www.googletagmanager.com"> 
+  <link rel="dns-prefetch" href="//fonts.gstatic.com"> 
+  <link rel="alternate" type="application/rss+xml" title="WordPress Developer Resources » Feed" href="https://developer.wordpress.org/feed/"> 
+  <link rel="alternate" type="application/rss+xml" title="WordPress Developer Resources » Comments Feed" href="https://developer.wordpress.org/comments/feed/"> 
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-P24PF4B');</script> 
+  <script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/12.0.0-1\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/12.0.0-1\/svg\/","svgExt":".svg","source":{"concatemoji":"https:\/\/developer.wordpress.org\/wp-includes\/js\/wp-emoji-release.min.js?ver=5.4-alpha-46799"}};
+			/*! This file is auto-generated */
+			!function(e,a,t){var r,n,o,i,p=a.createElement("canvas"),s=p.getContext&&p.getContext("2d");function c(e,t){var a=String.fromCharCode;s.clearRect(0,0,p.width,p.height),s.fillText(a.apply(this,e),0,0);var r=p.toDataURL();return s.clearRect(0,0,p.width,p.height),s.fillText(a.apply(this,t),0,0),r===p.toDataURL()}function l(e){if(!s||!s.fillText)return!1;switch(s.textBaseline="top",s.font="600 32px Arial",e){case"flag":return!c([127987,65039,8205,9895,65039],[127987,65039,8203,9895,65039])&&(!c([55356,56826,55356,56819],[55356,56826,8203,55356,56819])&&!c([55356,57332,56128,56423,56128,56418,56128,56421,56128,56430,56128,56423,56128,56447],[55356,57332,8203,56128,56423,8203,56128,56418,8203,56128,56421,8203,56128,56430,8203,56128,56423,8203,56128,56447]));case"emoji":return!c([55357,56424,55356,57342,8205,55358,56605,8205,55357,56424,55356,57340],[55357,56424,55356,57342,8203,55358,56605,8203,55357,56424,55356,57340])}return!1}function d(e){var t=a.createElement("script");t.src=e,t.defer=t.type="text/javascript",a.getElementsByTagName("head")[0].appendChild(t)}for(i=Array("flag","emoji"),t.supports={everything:!0,everythingExceptFlag:!0},o=0;o<i.length;o++)t.supports[i[o]]=l(i[o]),t.supports.everything=t.supports.everything&&t.supports[i[o]],"flag"!==i[o]&&(t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&t.supports[i[o]]);t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&!t.supports.flag,t.DOMReady=!1,t.readyCallback=function(){t.DOMReady=!0},t.supports.everything||(n=function(){t.readyCallback()},a.addEventListener?(a.addEventListener("DOMContentLoaded",n,!1),e.addEventListener("load",n,!1)):(e.attachEvent("onload",n),a.attachEvent("onreadystatechange",function(){"complete"===a.readyState&&t.readyCallback()})),(r=t.source||{}).concatemoji?d(r.concatemoji):r.wpemoji&&r.twemoji&&(d(r.twemoji),d(r.wpemoji)))}(window,document,window._wpemojiSettings);
+		</script> 
+  <style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style> 
+  <link rel="stylesheet" id="dashicons-css" href="https://developer.wordpress.org/wp-includes/css/dashicons.min.css?ver=5.4-alpha-46799" type="text/css" media="all"> 
+  <link rel="stylesheet" id="admin-bar-css" href="https://developer.wordpress.org/wp-includes/css/admin-bar.min.css?ver=5.4-alpha-46799" type="text/css" media="all"> 
+  <link rel="stylesheet" id="wp-block-library-css" href="https://developer.wordpress.org/wp-includes/css/dist/block-library/style.min.css?ver=5.4-alpha-46799" type="text/css" media="all"> 
+  <link rel="stylesheet" id="wporg-handbook-css-css" href="https://developer.wordpress.org/wp-content/plugins/handbook/stylesheets/callout-boxes.css?ver=20180111" type="text/css" media="all"> 
+  <link rel="stylesheet" id="open-sans-css" href="https://fonts.googleapis.com/css?family=Open+Sans%3A300italic%2C400italic%2C600italic%2C300%2C400%2C600&amp;subset=latin%2Clatin-ext&amp;display=fallback&amp;ver=5.4-alpha-46799" type="text/css" media="all"> 
+  <link rel="stylesheet" id="wporg-developer-style-css" href="https://developer.wordpress.org/wp-content/themes/pub/wporg-developer/style.css?ver=2" type="text/css" media="all"> 
+  <link rel="stylesheet" id="wp-dev-sass-compiled-css" href="https://developer.wordpress.org/wp-content/themes/pub/wporg-developer/stylesheets/main.css?ver=20190729" type="text/css" media="all"> 
+  <link rel="stylesheet" id="awesomplete-css-css" href="https://developer.wordpress.org/wp-content/themes/pub/wporg-developer/stylesheets/awesomplete.css?ver=20160114" type="text/css" media="all"> 
+  <link rel="stylesheet" id="autocomplete-css-css" href="https://developer.wordpress.org/wp-content/themes/pub/wporg-developer/stylesheets/autocomplete.css?ver=20171220" type="text/css" media="all"> 
+  <link rel="stylesheet" id="syntaxhighlighter-core-css" href="https://developer.wordpress.org/wp-content/plugins/syntaxhighlighter/syntaxhighlighter3/styles/shCore.css?ver=3.0.9b" type="text/css" media="all"> 
+  <link rel="stylesheet" id="syntaxhighlighter-theme-default-css" href="https://developer.wordpress.org/wp-content/plugins/syntaxhighlighter/syntaxhighlighter3/styles/shThemeDefault.css?ver=3.0.9b" type="text/css" media="all"> 
+  <script type="text/javascript" src="https://developer.wordpress.org/wp-includes/js/jquery/jquery.js?ver=1.12.4-wp"></script> 
+  <script type="text/javascript" src="https://developer.wordpress.org/wp-includes/js/jquery/jquery-migrate.min.js?ver=1.4.1"></script> 
+  <script type="text/javascript" src="https://developer.wordpress.org/wp-content/plugins/handbook/scripts/handbook.js?ver=20150930"></script> 
+  <script type="text/javascript" src="https://developer.wordpress.org/wp-content/themes/pub/wporg-developer/js/chapters.js?ver=20190603"></script> 
+  <script type="text/javascript" src="https://developer.wordpress.org/wp-content/plugins/syntaxhighlighter/syntaxhighlighter3/scripts/shCore.js?ver=3.0.9b"></script> 
+  <script type="text/javascript" src="https://developer.wordpress.org/wp-content/plugins/syntaxhighlighter/syntaxhighlighter3/scripts/shBrushPhp.js?ver=3.0.9b"></script> 
+  <link rel="https://api.w.org/" href="https://developer.wordpress.org/wp-json/"> 
+  <link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://developer.wordpress.org/xmlrpc.php?rsd"> 
+  <link rel="wlwmanifest" type="application/wlwmanifest+xml" href="https://developer.wordpress.org/wp-includes/wlwmanifest.xml"> 
+  <link rel="prev" title="Localizing Gutenberg Plugin" href="https://developer.wordpress.org/block-editor/contributors/develop/localizing/"> 
+  <link rel="next" title="@wordpress/data-controls" href="https://developer.wordpress.org/block-editor/packages/packages-data-controls/"> 
+  <meta name="generator" content="WordPress 5.4-alpha-46799"> 
+  <link rel="canonical" href="https://developer.wordpress.org/block-editor/"> 
+  <link rel="shortlink" href="https://developer.wordpress.org/?p=122779"> 
+  <link rel="alternate" type="application/json+oembed" href="https://developer.wordpress.org/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fdeveloper.wordpress.org%2Fblock-editor%2F"> 
+  <link rel="alternate" type="text/xml+oembed" href="https://developer.wordpress.org/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fdeveloper.wordpress.org%2Fblock-editor%2F&amp;format=xml"> 
+  <style>
+		@media screen and (max-width: 782px) {
+			#wpadminbar li#wp-admin-bar-log-in,
+			#wpadminbar li#wp-admin-bar-register {
+				display: block;
+			}
+
+			#wpadminbar li#wp-admin-bar-log-in a,
+			#wpadminbar li#wp-admin-bar-register a {
+				padding: 0 8px;
+			}
+		}
+	</style> 
+  <style>
+			a.github-edit {
+				margin-left: .5em;
+				font-size: .5em;
+				vertical-align: top;
+				display: inline-block;
+				border: 1px solid #eeeeee;
+				border-radius: 2px;
+				background: #eeeeee;
+				padding: .5em .6em .4em;
+				color: black;
+				margin-top: 0.1em;
+			}
+			a.github-edit > * {
+				opacity: 0.6;
+			}
+			a.github-edit:hover > * {
+				opacity: 1;
+				color: black;
+			}
+			a.github-edit img {
+				height: .8em;
+			}
+		</style> 
+  <script type="text/javascript">
+		jQuery( '<style>.hide-if-js { display: none; }</style>' ).appendTo( 'head' );
+		jQuery( function($) {
+			$( 'body' ).addClass('js');
+		} );
+	</script> 
+  <style type="text/css" media="print">#wpadminbar { display:none; }</style> 
+  <style type="text/css" media="screen">
+	html { margin-top: 32px !important; }
+	* html body { margin-top: 32px !important; }
+	@media screen and ( max-width: 782px ) {
+		html { margin-top: 46px !important; }
+		* html body { margin-top: 46px !important; }
+	}
+</style> 
+  <script>document.cookie='devicePixelRatio='+((window.devicePixelRatio === undefined) ? 1 : window.devicePixelRatio)+'; path=/';</script> 
+ </head> 
+ <body id="wordpress-org" class="blocks-handbook-template-default single single-blocks-handbook postid-122779 admin-bar no-customize-support handbook-landing-page single-handbook"> 
+  <noscript>
+   <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-P24PF4B" height="0" width="0" style="display:none;visibility:hidden"></iframe>
+  </noscript> 
+  <div id="wporg-header"> 
+   <div class="wrapper"> 
+    <h1><a href="//wordpress.org">WordPress.org</a></h1> 
+    <div id="head-search"> 
+     <form action="//wordpress.org/search/do-search.php" method="get"> 
+      <label for="global-search" class="screen-reader-text">Search WordPress.org for:</label> 
+      <input id="global-search" class="text" name="search" type="text" value="" maxlength="150" placeholder="Search WordPress.org"> 
+      <button type="submit" class="button"><span class="screen-reader-text">Submit</span></button> 
+     </form> 
+    </div> 
+    <div style="clear:both"></div> 
+    <button id="mobile-menu-button" aria-expanded="false"><span class="screen-reader-text">Toggle Menu</span></button> 
+    <nav aria-label="Main Menu"> 
+     <ul id="wporg-header-menu"> 
+      <li class="menu-item"><a href="//wordpress.org/showcase/" data-title="See some of the sites built on WordPress.">Showcase</a></li> 
+      <li class="menu-item"><a href="//wordpress.org/themes/" data-title="Find just the right look for your website.">Themes</a></li> 
+      <li class="menu-item"><a href="//wordpress.org/plugins/" data-title="Plugins can extend WordPress to do almost anything you can imagine.">Plugins</a></li> 
+      <li class="menu-item"><a href="//wordpress.org/mobile/" data-title="Take your website on the go!">Mobile</a></li> 
+      <li class="menu-item"><a href="//wordpress.org/support/" data-title="Forums, documentation, help.">Support</a>
+       <ul class="nav-submenu">
+        <li><a href="//wordpress.org/support/" title="Documentation, tutorials, best practices.">Documentation</a></li>
+        <li><a href="//wordpress.org/support/forums/" title="Support and discussion forums.">Forums</a></li>
+       </ul>
+       <div class="uparrow"></div></li> 
+      <li class="menu-item"><a href="//make.wordpress.org/" data-title="Contribute your knowledge.">Get Involved</a>
+       <ul class="nav-submenu">
+        <li><a href="//wordpress.org/five-for-the-future/" title="How five percent is powering the next generation of the web">Five for the Future</a></li>
+       </ul>
+       <div class="uparrow"></div></li> 
+      <li class="menu-item"><a href="//wordpress.org/about/" data-title="About the WordPress Organization, and where we're going.">About</a></li> 
+      <li class="menu-item"><a href="//wordpress.org/news/" data-title="Come here for the latest scoop.">Blog</a></li> 
+      <li class="menu-item"><a href="//wordpress.org/hosting/" data-title="Find a home for your blog.">Hosting</a></li> 
+      <li id="download" class="button download-button menu-item"><a href="//wordpress.org/download/" data-title="Get it. Got it? Good.">Get WordPress</a></li> 
+     </ul> 
+    </nav> 
+    <div style="clear:both"></div> 
+   </div> 
+  </div> 
+  <header id="masthead" class="site-header" role="banner"> 
+   <div class="site-branding"> 
+    <h1 class="site-title"> <a href="https://developer.wordpress.org/" rel="home">Block Editor Handbook</a> </h1> 
+    <nav id="site-navigation" class="main-navigation" role="navigation"> 
+     <button class="menu-toggle dashicons dashicons-arrow-down-alt2" aria-controls="primary-menu" aria-expanded="false" aria-label="Primary Menu"></button> 
+    </nav> 
+   </div> 
+  </header>
+  <!-- #masthead --> 
+  <div id="page" class="hfeed site devhub-wrap"> 
+   <a href="#main" class="screen-reader-text">Skip to content</a> 
+   <div id="content" class="site-content"> 
+    <div id="secondary" class="widget-area" role="complementary"> 
+     <a href="#" id="secondary-toggle"></a> 
+     <div id="secondary-content"> 
+      <aside id="search-7" class="widget widget_search">
+       <div class="search-section section clear hide-if-js"> 
+        <form role="search" method="get" class="searchform searchform-handbook" action="https://developer.wordpress.org/block-editor/"> 
+         <label for="search-field" class="screen-reader-text">Search for:</label> 
+         <input type="text" id="search-field" class="search-field" placeholder="Search …" value="" name="s"> 
+         <button class="button button-primary button-search"><i class="dashicons dashicons-search"></i><span class="screen-reader-text">Search plugins</span></button> 
+        </form> 
+       </div>
+       <!-- /search-guide --> 
+      </aside>
+      <aside id="handbook_pages-3" class="widget widget_wporg_handbook_pages">
+       <h2 class="widget-title">Chapters</h2> 
+       <div class="menu-table-of-contents-container"> 
+        <ul> 
+         <li class="page_item page-item-122779 current_page_item current-menu-item menu-item"><a href="https://developer.wordpress.org/block-editor/" aria-current="page">Block Editor Handbook</a></li> 
+         <li class="page_item page-item-41449 menu-item"><a href="https://developer.wordpress.org/block-editor/key-concepts/">Key Concepts</a></li> 
+         <li class="page_item page-item-41450 page_item_has_children menu-item menu-item-has-children"><a href="https://developer.wordpress.org/block-editor/developers/">Developer Documentation</a> 
+          <ul class="children"> 
+           <li class="page_item page-item-41451 page_item_has_children menu-item menu-item-has-children"><a href="https://developer.wordpress.org/block-editor/developers/block-api/">Block API Reference</a> 
+            <ul class="children"> 
+             <li class="page_item page-item-41452 menu-item"><a href="https://developer.wordpress.org/block-editor/developers/block-api/block-registration/">Block Registration</a></li> 
+             <li class="page_item page-item-41453 menu-item"><a href="https://developer.wordpress.org/block-editor/developers/block-api/block-edit-save/">Edit and Save</a></li> 
+             <li class="page_item page-item-41454 menu-item"><a href="https://developer.wordpress.org/block-editor/developers/block-api/block-attributes/">Attributes</a></li> 
+             <li class="page_item page-item-41455 menu-item"><a href="https://developer.wordpress.org/block-editor/developers/block-api/block-deprecation/">Deprecated Blocks</a></li> 
+             <li class="page_item page-item-41456 menu-item"><a href="https://developer.wordpress.org/block-editor/developers/block-api/block-templates/">Templates</a></li> 
+             <li class="page_item page-item-41457 menu-item"><a href="https://developer.wordpress.org/block-editor/developers/block-api/block-annotations/">Annotations</a></li> 
+            </ul> </li> 
+           <li class="page_item page-item-41458 page_item_has_children menu-item menu-item-has-children"><a href="https://developer.wordpress.org/block-editor/developers/filters/">Filter Reference</a> 
+            <ul class="children"> 
+             <li class="page_item page-item-41459 menu-item"><a href="https://developer.wordpress.org/block-editor/developers/filters/block-filters/">Block Filters</a></li> 
+             <li class="page_item page-item-41460 menu-item"><a href="https://developer.wordpress.org/block-editor/developers/filters/editor-filters/">Editor Filters (Experimental)</a></li> 
+             <li class="page_item page-item-41461 menu-item"><a href="https://developer.wordpress.org/block-editor/developers/filters/parser-filters/">Parser Filters</a></li> 
+             <li class="page_item page-item-41462 menu-item"><a href="https://developer.wordpress.org/block-editor/developers/filters/autocomplete-filters/">Autocomplete</a></li> 
+            </ul> </li> 
+           <li class="page_item page-item-125124 page_item_has_children menu-item menu-item-has-children"><a href="https://developer.wordpress.org/block-editor/developers/slotfills/">SlotFills Reference</a> 
+            <ul class="children"> 
+             <li class="page_item page-item-125125 menu-item"><a href="https://developer.wordpress.org/block-editor/developers/slotfills/plugin-block-settings-menu-item/">PluginBlockSettingsMenuItem</a></li> 
+             <li class="page_item page-item-125570 menu-item"><a href="https://developer.wordpress.org/block-editor/developers/slotfills/plugin-document-setting-panel/">PluginDocumentSettingPanel</a></li> 
+             <li class="page_item page-item-125126 menu-item"><a href="https://developer.wordpress.org/block-editor/developers/slotfills/plugin-more-menu-item/">PluginMoreMenuItem</a></li> 
+             <li class="page_item page-item-125127 menu-item"><a href="https://developer.wordpress.org/block-editor/developers/slotfills/plugin-post-publish-panel/">PluginPostPublishPanel</a></li> 
+             <li class="page_item page-item-125128 menu-item"><a href="https://developer.wordpress.org/block-editor/developers/slotfills/plugin-post-status-info/">PluginPostStatusInfo</a></li> 
+             <li class="page_item page-item-125129 menu-item"><a href="https://developer.wordpress.org/block-editor/developers/slotfills/plugin-pre-publish-panel/">PluginPrePublishPanel</a></li> 
+             <li class="page_item page-item-125130 menu-item"><a href="https://developer.wordpress.org/block-editor/developers/slotfills/plugin-sidebar/">PluginSidebar</a></li> 
+             <li class="page_item page-item-125131 menu-item"><a href="https://developer.wordpress.org/block-editor/developers/slotfills/plugin-sidebar-more-menu-item/">PluginSidebarMoreMenuItem</a></li> 
+            </ul> </li> 
+           <li class="page_item page-item-125478 menu-item"><a href="https://developer.wordpress.org/block-editor/developers/richtext/">RichText Reference</a></li> 
+           <li class="page_item page-item-41463 menu-item"><a href="https://developer.wordpress.org/block-editor/developers/internationalization/">Internationalization</a></li> 
+           <li class="page_item page-item-41464 menu-item"><a href="https://developer.wordpress.org/block-editor/developers/accessibility/">Accessibility</a></li> 
+           <li class="page_item page-item-41465 menu-item"><a href="https://developer.wordpress.org/block-editor/developers/feature-flags/">Feature Flags</a></li> 
+           <li class="page_item page-item-41469 page_item_has_children menu-item menu-item-has-children"><a href="https://developer.wordpress.org/block-editor/developers/themes/">Theming for the Block Editor</a> 
+            <ul class="children"> 
+             <li class="page_item page-item-41470 menu-item"><a href="https://developer.wordpress.org/block-editor/developers/themes/theme-support/">Theme Support</a></li> 
+            </ul> </li> 
+           <li class="page_item page-item-41471 page_item_has_children menu-item menu-item-has-children"><a href="https://developer.wordpress.org/block-editor/developers/backward-compatibility/">Backward Compatibility</a> 
+            <ul class="children"> 
+             <li class="page_item page-item-41472 menu-item"><a href="https://developer.wordpress.org/block-editor/developers/backward-compatibility/deprecations/">Deprecations</a></li> 
+             <li class="page_item page-item-41473 menu-item"><a href="https://developer.wordpress.org/block-editor/developers/backward-compatibility/meta-box/">Meta Boxes</a></li> 
+            </ul> </li> 
+          </ul> </li> 
+         <li class="page_item page-item-41508 page_item_has_children menu-item menu-item-has-children"><a href="https://developer.wordpress.org/block-editor/designers/">Designer Documentation</a> 
+          <ul class="children"> 
+           <li class="page_item page-item-41509 menu-item"><a href="https://developer.wordpress.org/block-editor/designers/block-design/">Block Design</a></li> 
+           <li class="page_item page-item-41510 menu-item"><a href="https://developer.wordpress.org/block-editor/designers/design-patterns/">Patterns</a></li> 
+           <li class="page_item page-item-41511 menu-item"><a href="https://developer.wordpress.org/block-editor/designers/design-resources/">Resources</a></li> 
+           <li class="page_item page-item-41512 menu-item"><a href="https://developer.wordpress.org/block-editor/designers/animation/">Animation</a></li> 
+          </ul> </li> 
+         <li class="page_item page-item-41513 page_item_has_children menu-item menu-item-has-children"><a href="https://developer.wordpress.org/block-editor/contributors/">Contributor Documentation</a> 
+          <ul class="children"> 
+           <li class="page_item page-item-41514 menu-item"><a href="https://developer.wordpress.org/block-editor/contributors/principles/">Principles</a></li> 
+           <li class="page_item page-item-41515 page_item_has_children menu-item menu-item-has-children"><a href="https://developer.wordpress.org/block-editor/contributors/design/">Design Principles &amp; Vision</a> 
+            <ul class="children"> 
+             <li class="page_item page-item-41516 menu-item"><a href="https://developer.wordpress.org/block-editor/contributors/design/the-block/">Blocks are the Interface</a></li> 
+             <li class="page_item page-item-41517 menu-item"><a href="https://developer.wordpress.org/block-editor/contributors/design/reference/">Reference</a></li> 
+            </ul> </li> 
+           <li class="page_item page-item-41518 page_item_has_children menu-item menu-item-has-children"><a href="https://developer.wordpress.org/block-editor/contributors/develop/">Developer Contributions</a> 
+            <ul class="children"> 
+             <li class="page_item page-item-41895 menu-item"><a href="https://developer.wordpress.org/block-editor/contributors/develop/getting-started/">Getting Started</a></li> 
+             <li class="page_item page-item-41521 menu-item"><a href="https://developer.wordpress.org/block-editor/contributors/develop/git-workflow/">Git Workflow</a></li> 
+             <li class="page_item page-item-41519 menu-item"><a href="https://developer.wordpress.org/block-editor/contributors/develop/coding-guidelines/">Coding Guidelines</a></li> 
+             <li class="page_item page-item-41520 menu-item"><a href="https://developer.wordpress.org/block-editor/contributors/develop/testing-overview/">Testing Overview</a></li> 
+             <li class="page_item page-item-41522 menu-item"><a href="https://developer.wordpress.org/block-editor/contributors/develop/grammar/">Block Grammar</a></li> 
+             <li class="page_item page-item-41523 menu-item"><a href="https://developer.wordpress.org/block-editor/contributors/develop/scripts/">Scripts</a></li> 
+             <li class="page_item page-item-41896 menu-item"><a href="https://developer.wordpress.org/block-editor/contributors/develop/managing-packages/">Managing Packages</a></li> 
+             <li class="page_item page-item-41524 menu-item"><a href="https://developer.wordpress.org/block-editor/contributors/develop/release/">Gutenberg Release Process</a></li> 
+             <li class="page_item page-item-41897 menu-item"><a href="https://developer.wordpress.org/block-editor/contributors/develop/localizing/">Localizing Gutenberg Plugin</a></li> 
+             <li class="page_item page-item-126146 menu-item"><a href="https://developer.wordpress.org/block-editor/contributors/develop/native-mobile/">React Native based mobile Gutenberg</a></li> 
+            </ul> </li> 
+           <li class="page_item page-item-41525 page_item_has_children menu-item menu-item-has-children"><a href="https://developer.wordpress.org/block-editor/contributors/document/">Documentation Contributions</a> 
+            <ul class="children"> 
+             <li class="page_item page-item-41526 menu-item"><a href="https://developer.wordpress.org/block-editor/contributors/document/copy-guide/">Copy Guidelines</a></li> 
+            </ul> </li> 
+           <li class="page_item page-item-41527 menu-item"><a href="https://developer.wordpress.org/block-editor/contributors/history/">History</a></li> 
+           <li class="page_item page-item-41528 menu-item"><a href="https://developer.wordpress.org/block-editor/contributors/glossary/">Glossary</a></li> 
+           <li class="page_item page-item-41529 menu-item"><a href="https://developer.wordpress.org/block-editor/contributors/faq/">Frequently Asked Questions</a></li> 
+           <li class="page_item page-item-41530 menu-item"><a href="https://developer.wordpress.org/block-editor/contributors/repository-management/">Repository Management</a></li> 
+           <li class="page_item page-item-41531 menu-item"><a href="https://developer.wordpress.org/block-editor/contributors/outreach/">Outreach</a></li> 
+          </ul> </li> 
+         <li class="page_item page-item-41474 page_item_has_children menu-item menu-item-has-children"><a href="https://developer.wordpress.org/block-editor/tutorials/">Tutorials</a> 
+          <ul class="children"> 
+           <li class="page_item page-item-41475 page_item_has_children menu-item menu-item-has-children"><a href="https://developer.wordpress.org/block-editor/tutorials/javascript/">Getting Started with JavaScript</a> 
+            <ul class="children"> 
+             <li class="page_item page-item-41476 menu-item"><a href="https://developer.wordpress.org/block-editor/tutorials/javascript/plugins-background/">Plugins Background</a></li> 
+             <li class="page_item page-item-41477 menu-item"><a href="https://developer.wordpress.org/block-editor/tutorials/javascript/loading-javascript/">Loading JavaScript</a></li> 
+             <li class="page_item page-item-41478 menu-item"><a href="https://developer.wordpress.org/block-editor/tutorials/javascript/extending-the-block-editor/">Extending the Block Editor</a></li> 
+             <li class="page_item page-item-41479 menu-item"><a href="https://developer.wordpress.org/block-editor/tutorials/javascript/troubleshooting/">Troubleshooting</a></li> 
+             <li class="page_item page-item-41480 menu-item"><a href="https://developer.wordpress.org/block-editor/tutorials/javascript/versions-and-building/">JavaScript Versions and Build Step</a></li> 
+             <li class="page_item page-item-41481 menu-item"><a href="https://developer.wordpress.org/block-editor/tutorials/javascript/scope-your-code/">Scope Your Code</a></li> 
+             <li class="page_item page-item-41482 menu-item"><a href="https://developer.wordpress.org/block-editor/tutorials/javascript/js-build-setup/">JavaScript Build Setup</a></li> 
+            </ul> </li> 
+           <li class="page_item page-item-41483 page_item_has_children menu-item menu-item-has-children"><a href="https://developer.wordpress.org/block-editor/tutorials/block-tutorial/">Blocks</a> 
+            <ul class="children"> 
+             <li class="page_item page-item-41484 menu-item"><a href="https://developer.wordpress.org/block-editor/tutorials/block-tutorial/writing-your-first-block-type/">Writing Your First Block Type</a></li> 
+             <li class="page_item page-item-41485 menu-item"><a href="https://developer.wordpress.org/block-editor/tutorials/block-tutorial/applying-styles-with-stylesheets/">Applying Styles From a Stylesheet</a></li> 
+             <li class="page_item page-item-41486 menu-item"><a href="https://developer.wordpress.org/block-editor/tutorials/block-tutorial/introducing-attributes-and-editable-fields/">Introducing Attributes and Editable Fields</a></li> 
+             <li class="page_item page-item-125450 menu-item"><a href="https://developer.wordpress.org/block-editor/tutorials/block-tutorial/block-controls-toolbar-and-sidebar/">Block Controls: Block Toolbar and Settings Sidebar</a></li> 
+             <li class="page_item page-item-41488 menu-item"><a href="https://developer.wordpress.org/block-editor/tutorials/block-tutorial/creating-dynamic-blocks/">Creating dynamic blocks</a></li> 
+             <li class="page_item page-item-41489 menu-item"><a href="https://developer.wordpress.org/block-editor/tutorials/block-tutorial/generate-blocks-with-wp-cli/">Generate Blocks with WP-CLI</a></li> 
+            </ul> </li> 
+           <li class="page_item page-item-41490 page_item_has_children menu-item menu-item-has-children"><a href="https://developer.wordpress.org/block-editor/tutorials/metabox/">Meta Boxes</a> 
+            <ul class="children"> 
+             <li class="page_item page-item-41491 menu-item"><a href="https://developer.wordpress.org/block-editor/tutorials/metabox/meta-block-1-intro/">Store Post Meta with a Block</a></li> 
+             <li class="page_item page-item-41492 menu-item"><a href="https://developer.wordpress.org/block-editor/tutorials/metabox/meta-block-2-register-meta/">Register Meta Field</a></li> 
+             <li class="page_item page-item-41493 menu-item"><a href="https://developer.wordpress.org/block-editor/tutorials/metabox/meta-block-3-add/">Create Meta Block</a></li> 
+             <li class="page_item page-item-41494 menu-item"><a href="https://developer.wordpress.org/block-editor/tutorials/metabox/meta-block-4-use-data/">Use Post Meta Data</a></li> 
+             <li class="page_item page-item-41495 menu-item"><a href="https://developer.wordpress.org/block-editor/tutorials/metabox/meta-block-5-finishing/">Finishing Touches</a></li> 
+            </ul> </li> 
+           <li class="page_item page-item-41496 menu-item"><a href="https://developer.wordpress.org/block-editor/tutorials/notices/">Displaying Notices from Your Plugin or Theme</a></li> 
+           <li class="page_item page-item-41497 page_item_has_children menu-item menu-item-has-children"><a href="https://developer.wordpress.org/block-editor/tutorials/plugin-sidebar-0/">Creating a Sidebar for Your Plugin</a> 
+            <ul class="children"> 
+             <li class="page_item page-item-41498 menu-item"><a href="https://developer.wordpress.org/block-editor/tutorials/plugin-sidebar-0/plugin-sidebar-1-up-and-running/">Get a Sidebar up and Running</a></li> 
+             <li class="page_item page-item-41499 menu-item"><a href="https://developer.wordpress.org/block-editor/tutorials/plugin-sidebar-0/plugin-sidebar-2-styles-and-controls/">Tweak the sidebar style and add controls</a></li> 
+             <li class="page_item page-item-41500 menu-item"><a href="https://developer.wordpress.org/block-editor/tutorials/plugin-sidebar-0/plugin-sidebar-3-register-meta/">Register the Meta Field</a></li> 
+             <li class="page_item page-item-41501 menu-item"><a href="https://developer.wordpress.org/block-editor/tutorials/plugin-sidebar-0/plugin-sidebar-4-initialize-input/">Initialize the Input Control</a></li> 
+             <li class="page_item page-item-41502 menu-item"><a href="https://developer.wordpress.org/block-editor/tutorials/plugin-sidebar-0/plugin-sidebar-5-update-meta/">Update the Meta Field When the Input’s Content Changes</a></li> 
+             <li class="page_item page-item-41503 menu-item"><a href="https://developer.wordpress.org/block-editor/tutorials/plugin-sidebar-0/plugin-sidebar-6-finishing-touches/">Finishing Touches</a></li> 
+            </ul> </li> 
+           <li class="page_item page-item-41504 page_item_has_children menu-item menu-item-has-children"><a href="https://developer.wordpress.org/block-editor/tutorials/format-api/">Introduction to the Format API</a> 
+            <ul class="children"> 
+             <li class="page_item page-item-41505 menu-item"><a href="https://developer.wordpress.org/block-editor/tutorials/format-api/1-register-format/">Register a New Format</a></li> 
+             <li class="page_item page-item-41506 menu-item"><a href="https://developer.wordpress.org/block-editor/tutorials/format-api/2-toolbar-button/">Add a Button to the Toolbar</a></li> 
+             <li class="page_item page-item-41507 menu-item"><a href="https://developer.wordpress.org/block-editor/tutorials/format-api/3-apply-format/">Apply the Format When the Button Is Clicked</a></li> 
+            </ul> </li> 
+          </ul> </li> 
+         <li class="page_item page-item-41468 page_item_has_children menu-item menu-item-has-children"><a href="https://developer.wordpress.org/block-editor/components/">Component Reference</a> 
+          <ul class="children"> 
+           <li class="page_item page-item-41590 menu-item"><a href="https://developer.wordpress.org/block-editor/components/animate/">Animate</a></li> 
+           <li class="page_item page-item-41591 menu-item"><a href="https://developer.wordpress.org/block-editor/components/autocomplete/">Autocomplete</a></li> 
+           <li class="page_item page-item-41592 menu-item"><a href="https://developer.wordpress.org/block-editor/components/base-control/">BaseControl</a></li> 
+           <li class="page_item page-item-41593 menu-item"><a href="https://developer.wordpress.org/block-editor/components/button-group/">ButtonGroup</a></li> 
+           <li class="page_item page-item-41594 menu-item"><a href="https://developer.wordpress.org/block-editor/components/button/">Button</a></li> 
+           <li class="page_item page-item-126612 menu-item"><a href="https://developer.wordpress.org/block-editor/components/card/">Card</a></li> 
+           <li class="page_item page-item-41595 menu-item"><a href="https://developer.wordpress.org/block-editor/components/checkbox-control/">CheckboxControl</a></li> 
+           <li class="page_item page-item-41596 menu-item"><a href="https://developer.wordpress.org/block-editor/components/clipboard-button/">ClipboardButton</a></li> 
+           <li class="page_item page-item-41597 menu-item"><a href="https://developer.wordpress.org/block-editor/components/color-indicator/">ColorIndicator</a></li> 
+           <li class="page_item page-item-41598 menu-item"><a href="https://developer.wordpress.org/block-editor/components/color-palette/">ColorPalette</a></li> 
+           <li class="page_item page-item-41599 menu-item"><a href="https://developer.wordpress.org/block-editor/components/color-picker/">ColorPicker</a></li> 
+           <li class="page_item page-item-41600 menu-item"><a href="https://developer.wordpress.org/block-editor/components/dashicon/">Dashicon</a></li> 
+           <li class="page_item page-item-41601 menu-item"><a href="https://developer.wordpress.org/block-editor/components/date-time/">DateTime</a></li> 
+           <li class="page_item page-item-126115 menu-item"><a href="https://developer.wordpress.org/block-editor/components/dimension-control/">DimensionControl</a></li> 
+           <li class="page_item page-item-41602 menu-item"><a href="https://developer.wordpress.org/block-editor/components/disabled/">Disabled</a></li> 
+           <li class="page_item page-item-41603 menu-item"><a href="https://developer.wordpress.org/block-editor/components/draggable/">Draggable</a></li> 
+           <li class="page_item page-item-41604 menu-item"><a href="https://developer.wordpress.org/block-editor/components/drop-zone/">DropZone</a></li> 
+           <li class="page_item page-item-41605 menu-item"><a href="https://developer.wordpress.org/block-editor/components/dropdown-menu/">DropdownMenu</a></li> 
+           <li class="page_item page-item-41606 menu-item"><a href="https://developer.wordpress.org/block-editor/components/dropdown/">Dropdown</a></li> 
+           <li class="page_item page-item-41607 menu-item"><a href="https://developer.wordpress.org/block-editor/components/external-link/">ExternalLink</a></li> 
+           <li class="page_item page-item-41608 menu-item"><a href="https://developer.wordpress.org/block-editor/components/focal-point-picker/">FocalPointPicker</a></li> 
+           <li class="page_item page-item-41609 menu-item"><a href="https://developer.wordpress.org/block-editor/components/focusable-iframe/">FocusableIframe</a></li> 
+           <li class="page_item page-item-41610 menu-item"><a href="https://developer.wordpress.org/block-editor/components/font-size-picker/">FontSizePicker</a></li> 
+           <li class="page_item page-item-41611 menu-item"><a href="https://developer.wordpress.org/block-editor/components/form-file-upload/">FormFileUpload</a></li> 
+           <li class="page_item page-item-41612 menu-item"><a href="https://developer.wordpress.org/block-editor/components/form-toggle/">FormToggle</a></li> 
+           <li class="page_item page-item-41613 menu-item"><a href="https://developer.wordpress.org/block-editor/components/form-token-field/">FormTokenField</a></li> 
+           <li class="page_item page-item-126665 menu-item"><a href="https://developer.wordpress.org/block-editor/components/guide/">Guide</a></li> 
+           <li class="page_item page-item-41614 menu-item"><a href="https://developer.wordpress.org/block-editor/components/navigate-regions/">NavigateRegions</a></li> 
+           <li class="page_item page-item-41615 menu-item"><a href="https://developer.wordpress.org/block-editor/components/higher-order/">HigherOrder</a></li> 
+           <li class="page_item page-item-41616 menu-item"><a href="https://developer.wordpress.org/block-editor/components/with-constrained-tabbing/">WithConstrainedTabbing</a></li> 
+           <li class="page_item page-item-41617 menu-item"><a href="https://developer.wordpress.org/block-editor/components/with-fallback-styles/">WithFallbackStyles</a></li> 
+           <li class="page_item page-item-41618 menu-item"><a href="https://developer.wordpress.org/block-editor/components/with-filters/">WithFilters</a></li> 
+           <li class="page_item page-item-41619 menu-item"><a href="https://developer.wordpress.org/block-editor/components/with-focus-outside/">WithFocusOutside</a></li> 
+           <li class="page_item page-item-41620 menu-item"><a href="https://developer.wordpress.org/block-editor/components/with-focus-return/">WithFocusReturn</a></li> 
+           <li class="page_item page-item-41621 menu-item"><a href="https://developer.wordpress.org/block-editor/components/with-notices/">WithNotices</a></li> 
+           <li class="page_item page-item-41622 menu-item"><a href="https://developer.wordpress.org/block-editor/components/with-spoken-messages/">WithSpokenMessages</a></li> 
+           <li class="page_item page-item-41623 menu-item"><a href="https://developer.wordpress.org/block-editor/components/icon-button/">IconButton</a></li> 
+           <li class="page_item page-item-41624 menu-item"><a href="https://developer.wordpress.org/block-editor/components/icon/">Icon</a></li> 
+           <li class="page_item page-item-41625 menu-item"><a href="https://developer.wordpress.org/block-editor/components/isolated-event-container/">IsolatedEventContainer</a></li> 
+           <li class="page_item page-item-41626 menu-item"><a href="https://developer.wordpress.org/block-editor/components/keyboard-shortcuts/">KeyboardShortcuts</a></li> 
+           <li class="page_item page-item-41627 menu-item"><a href="https://developer.wordpress.org/block-editor/components/menu-group/">MenuGroup</a></li> 
+           <li class="page_item page-item-41628 menu-item"><a href="https://developer.wordpress.org/block-editor/components/menu-item/">MenuItem</a></li> 
+           <li class="page_item page-item-41629 menu-item"><a href="https://developer.wordpress.org/block-editor/components/menu-items-choice/">MenuItemsChoice</a></li> 
+           <li class="page_item page-item-41630 menu-item"><a href="https://developer.wordpress.org/block-editor/components/modal/">Modal</a></li> 
+           <li class="page_item page-item-41631 menu-item"><a href="https://developer.wordpress.org/block-editor/components/navigable-container/">NavigableContainer</a></li> 
+           <li class="page_item page-item-41632 menu-item"><a href="https://developer.wordpress.org/block-editor/components/notice/">Notice</a></li> 
+           <li class="page_item page-item-41633 menu-item"><a href="https://developer.wordpress.org/block-editor/components/panel/">Panel</a></li> 
+           <li class="page_item page-item-41634 menu-item"><a href="https://developer.wordpress.org/block-editor/components/placeholder/">Placeholder</a></li> 
+           <li class="page_item page-item-41635 menu-item"><a href="https://developer.wordpress.org/block-editor/components/popover/">Popover</a></li> 
+           <li class="page_item page-item-125147 menu-item"><a href="https://developer.wordpress.org/block-editor/components/block-quotation/">BlockQuotation</a></li> 
+           <li class="page_item page-item-41636 menu-item"><a href="https://developer.wordpress.org/block-editor/components/horizontal-rule/">HorizontalRule</a></li> 
+           <li class="page_item page-item-41637 menu-item"><a href="https://developer.wordpress.org/block-editor/components/svg/">Svg</a></li> 
+           <li class="page_item page-item-41638 menu-item"><a href="https://developer.wordpress.org/block-editor/components/query-controls/">QueryControls</a></li> 
+           <li class="page_item page-item-41639 menu-item"><a href="https://developer.wordpress.org/block-editor/components/radio-control/">RadioControl</a></li> 
+           <li class="page_item page-item-41640 menu-item"><a href="https://developer.wordpress.org/block-editor/components/range-control/">RangeControl</a></li> 
+           <li class="page_item page-item-41646 menu-item"><a href="https://developer.wordpress.org/block-editor/components/server-side-render/">ServerSideRender</a></li> 
+           <li class="page_item page-item-41641 menu-item"><a href="https://developer.wordpress.org/block-editor/components/resizable-box/">ResizableBox</a></li> 
+           <li class="page_item page-item-41642 menu-item"><a href="https://developer.wordpress.org/block-editor/components/responsive-wrapper/">ResponsiveWrapper</a></li> 
+           <li class="page_item page-item-41643 menu-item"><a href="https://developer.wordpress.org/block-editor/components/sandbox/">Sandbox</a></li> 
+           <li class="page_item page-item-41644 menu-item"><a href="https://developer.wordpress.org/block-editor/components/scroll-lock/">ScrollLock</a></li> 
+           <li class="page_item page-item-41645 menu-item"><a href="https://developer.wordpress.org/block-editor/components/select-control/">SelectControl</a></li> 
+           <li class="page_item page-item-41647 menu-item"><a href="https://developer.wordpress.org/block-editor/components/slot-fill/">SlotFill</a></li> 
+           <li class="page_item page-item-125177 menu-item"><a href="https://developer.wordpress.org/block-editor/components/snackbar/">Snackbar</a></li> 
+           <li class="page_item page-item-41648 menu-item"><a href="https://developer.wordpress.org/block-editor/components/spinner/">Spinner</a></li> 
+           <li class="page_item page-item-41649 menu-item"><a href="https://developer.wordpress.org/block-editor/components/tab-panel/">TabPanel</a></li> 
+           <li class="page_item page-item-41650 menu-item"><a href="https://developer.wordpress.org/block-editor/components/text-control/">TextControl</a></li> 
+           <li class="page_item page-item-41651 menu-item"><a href="https://developer.wordpress.org/block-editor/components/textarea-control/">TextareaControl</a></li> 
+           <li class="page_item page-item-41652 menu-item"><a href="https://developer.wordpress.org/block-editor/components/toggle-control/">ToggleControl</a></li> 
+           <li class="page_item page-item-41653 menu-item"><a href="https://developer.wordpress.org/block-editor/components/toolbar/">Toolbar</a></li> 
+           <li class="page_item page-item-41654 menu-item"><a href="https://developer.wordpress.org/block-editor/components/tooltip/">Tooltip</a></li> 
+           <li class="page_item page-item-41655 menu-item"><a href="https://developer.wordpress.org/block-editor/components/tree-select/">TreeSelect</a></li> 
+           <li class="page_item page-item-126045 menu-item"><a href="https://developer.wordpress.org/block-editor/components/visually-hidden/">VisuallyHidden</a></li> 
+          </ul> </li> 
+         <li class="page_item page-item-41466 page_item_has_children menu-item menu-item-has-children"><a href="https://developer.wordpress.org/block-editor/data/">Data Module Reference</a> 
+          <ul class="children"> 
+           <li class="page_item page-item-41656 menu-item"><a href="https://developer.wordpress.org/block-editor/data/data-core/">WordPress Core Data</a></li> 
+           <li class="page_item page-item-41657 menu-item"><a href="https://developer.wordpress.org/block-editor/data/data-core-annotations/">Annotations</a></li> 
+           <li class="page_item page-item-41658 menu-item"><a href="https://developer.wordpress.org/block-editor/data/data-core-blocks/">Block Types Data</a></li> 
+           <li class="page_item page-item-41659 menu-item"><a href="https://developer.wordpress.org/block-editor/data/data-core-block-editor/">The Block Editor’s Data</a></li> 
+           <li class="page_item page-item-41660 menu-item"><a href="https://developer.wordpress.org/block-editor/data/data-core-editor/">The Post Editor’s Data</a></li> 
+           <li class="page_item page-item-41661 menu-item"><a href="https://developer.wordpress.org/block-editor/data/data-core-edit-post/">The Editor’s UI Data</a></li> 
+           <li class="page_item page-item-41662 menu-item"><a href="https://developer.wordpress.org/block-editor/data/data-core-notices/">Notices Data</a></li> 
+           <li class="page_item page-item-41663 menu-item"><a href="https://developer.wordpress.org/block-editor/data/data-core-nux/">The NUX (New User Experience) Data</a></li> 
+           <li class="page_item page-item-41664 menu-item"><a href="https://developer.wordpress.org/block-editor/data/data-core-viewport/">The Viewport Data</a></li> 
+          </ul> </li> 
+         <li class="page_item page-item-41467 page_item_has_children menu-item menu-item-has-children"><a href="https://developer.wordpress.org/block-editor/packages/">Package Reference</a> 
+          <ul class="children"> 
+           <li class="page_item page-item-41532 menu-item"><a href="https://developer.wordpress.org/block-editor/packages/packages-a11y/">@wordpress/a11y</a></li> 
+           <li class="page_item page-item-41533 menu-item"><a href="https://developer.wordpress.org/block-editor/packages/packages-annotations/">@wordpress/annotations</a></li> 
+           <li class="page_item page-item-41534 menu-item"><a href="https://developer.wordpress.org/block-editor/packages/packages-api-fetch/">@wordpress/api-fetch</a></li> 
+           <li class="page_item page-item-41535 menu-item"><a href="https://developer.wordpress.org/block-editor/packages/packages-autop/">@wordpress/autop</a></li> 
+           <li class="page_item page-item-41536 menu-item"><a href="https://developer.wordpress.org/block-editor/packages/packages-babel-plugin-import-jsx-pragma/">@wordpress/babel-plugin-import-jsx-pragma</a></li> 
+           <li class="page_item page-item-41537 menu-item"><a href="https://developer.wordpress.org/block-editor/packages/packages-babel-plugin-makepot/">@wordpress/babel-plugin-makepot</a></li> 
+           <li class="page_item page-item-41538 menu-item"><a href="https://developer.wordpress.org/block-editor/packages/packages-babel-preset-default/">@wordpress/babel-preset-default</a></li> 
+           <li class="page_item page-item-126020 menu-item"><a href="https://developer.wordpress.org/block-editor/packages/packages-base-styles/">@wordpress/base-styles</a></li> 
+           <li class="page_item page-item-41539 menu-item"><a href="https://developer.wordpress.org/block-editor/packages/packages-blob/">@wordpress/blob</a></li> 
+           <li class="page_item page-item-125865 menu-item"><a href="https://developer.wordpress.org/block-editor/packages/packages-block-directory/">@wordpress/block-directory</a></li> 
+           <li class="page_item page-item-41540 menu-item"><a href="https://developer.wordpress.org/block-editor/packages/packages-block-editor/">@wordpress/block-editor</a></li> 
+           <li class="page_item page-item-41541 menu-item"><a href="https://developer.wordpress.org/block-editor/packages/packages-block-library/">@wordpress/block-library</a></li> 
+           <li class="page_item page-item-41542 menu-item"><a href="https://developer.wordpress.org/block-editor/packages/packages-block-serialization-default-parser/">@wordpress/block-serialization-default-parser</a></li> 
+           <li class="page_item page-item-41543 menu-item"><a href="https://developer.wordpress.org/block-editor/packages/packages-block-serialization-spec-parser/">@wordpress/block-serialization-spec-parser</a></li> 
+           <li class="page_item page-item-41544 menu-item"><a href="https://developer.wordpress.org/block-editor/packages/packages-blocks/">@wordpress/blocks</a></li> 
+           <li class="page_item page-item-41545 menu-item"><a href="https://developer.wordpress.org/block-editor/packages/packages-browserslist-config/">@wordpress/browserslist-config</a></li> 
+           <li class="page_item page-item-41546 menu-item"><a href="https://developer.wordpress.org/block-editor/packages/packages-components/">@wordpress/components</a></li> 
+           <li class="page_item page-item-41547 menu-item"><a href="https://developer.wordpress.org/block-editor/packages/packages-compose/">@wordpress/compose</a></li> 
+           <li class="page_item page-item-41548 menu-item"><a href="https://developer.wordpress.org/block-editor/packages/packages-core-data/">@wordpress/core-data</a></li> 
+           <li class="page_item page-item-41549 menu-item"><a href="https://developer.wordpress.org/block-editor/packages/packages-custom-templated-path-webpack-plugin/">@wordpress/custom-templated-path-webpack-plugin</a></li> 
+           <li class="page_item page-item-125118 menu-item"><a href="https://developer.wordpress.org/block-editor/packages/packages-data-controls/">@wordpress/data-controls</a></li> 
+           <li class="page_item page-item-41550 menu-item"><a href="https://developer.wordpress.org/block-editor/packages/packages-data/">@wordpress/data</a></li> 
+           <li class="page_item page-item-41551 menu-item"><a href="https://developer.wordpress.org/block-editor/packages/packages-date/">@wordpress/date</a></li> 
+           <li class="page_item page-item-41552 menu-item"><a href="https://developer.wordpress.org/block-editor/packages/packages-dependency-extraction-webpack-plugin/">@wordpress/dependency-extraction-webpack-plugin</a></li> 
+           <li class="page_item page-item-41553 menu-item"><a href="https://developer.wordpress.org/block-editor/packages/packages-deprecated/">@wordpress/deprecated</a></li> 
+           <li class="page_item page-item-41554 menu-item"><a href="https://developer.wordpress.org/block-editor/packages/packages-docgen/">@wordpress/docgen</a></li> 
+           <li class="page_item page-item-41555 menu-item"><a href="https://developer.wordpress.org/block-editor/packages/packages-dom-ready/">@wordpress/dom-ready</a></li> 
+           <li class="page_item page-item-41556 menu-item"><a href="https://developer.wordpress.org/block-editor/packages/packages-dom/">@wordpress/dom</a></li> 
+           <li class="page_item page-item-41557 menu-item"><a href="https://developer.wordpress.org/block-editor/packages/packages-e2e-test-utils/">@wordpress/e2e-test-utils</a></li> 
+           <li class="page_item page-item-41558 menu-item"><a href="https://developer.wordpress.org/block-editor/packages/packages-e2e-tests/">@wordpress/e2e-tests</a></li> 
+           <li class="page_item page-item-41559 menu-item"><a href="https://developer.wordpress.org/block-editor/packages/packages-edit-post/">@wordpress/edit-post</a></li> 
+           <li class="page_item page-item-41560 menu-item"><a href="https://developer.wordpress.org/block-editor/packages/packages-edit-widgets/">@wordpress/edit-widgets</a></li> 
+           <li class="page_item page-item-41561 menu-item"><a href="https://developer.wordpress.org/block-editor/packages/packages-editor/">@wordpress/editor</a></li> 
+           <li class="page_item page-item-41562 menu-item"><a href="https://developer.wordpress.org/block-editor/packages/packages-element/">@wordpress/element</a></li> 
+           <li class="page_item page-item-125979 menu-item"><a href="https://developer.wordpress.org/block-editor/packages/packages-env/">@wordpress/env</a></li> 
+           <li class="page_item page-item-41563 menu-item"><a href="https://developer.wordpress.org/block-editor/packages/packages-escape-html/">@wordpress/escape-html</a></li> 
+           <li class="page_item page-item-41564 menu-item"><a href="https://developer.wordpress.org/block-editor/packages/packages-eslint-plugin/">@wordpress/eslint-plugin</a></li> 
+           <li class="page_item page-item-41565 menu-item"><a href="https://developer.wordpress.org/block-editor/packages/packages-format-library/">@wordpress/format-library</a></li> 
+           <li class="page_item page-item-41566 menu-item"><a href="https://developer.wordpress.org/block-editor/packages/packages-hooks/">@wordpress/hooks</a></li> 
+           <li class="page_item page-item-41567 menu-item"><a href="https://developer.wordpress.org/block-editor/packages/packages-html-entities/">@wordpress/html-entities</a></li> 
+           <li class="page_item page-item-41568 menu-item"><a href="https://developer.wordpress.org/block-editor/packages/packages-i18n/">@wordpress/i18n</a></li> 
+           <li class="page_item page-item-41569 menu-item"><a href="https://developer.wordpress.org/block-editor/packages/packages-is-shallow-equal/">@wordpress/is-shallow-equal</a></li> 
+           <li class="page_item page-item-41570 menu-item"><a href="https://developer.wordpress.org/block-editor/packages/packages-jest-console/">@wordpress/jest-console</a></li> 
+           <li class="page_item page-item-41571 menu-item"><a href="https://developer.wordpress.org/block-editor/packages/packages-jest-preset-default/">@wordpress/jest-preset-default</a></li> 
+           <li class="page_item page-item-41572 menu-item"><a href="https://developer.wordpress.org/block-editor/packages/packages-jest-puppeteer-axe/">@wordpress/jest-puppeteer-axe</a></li> 
+           <li class="page_item page-item-41573 menu-item"><a href="https://developer.wordpress.org/block-editor/packages/packages-keycodes/">@wordpress/keycodes</a></li> 
+           <li class="page_item page-item-41574 menu-item"><a href="https://developer.wordpress.org/block-editor/packages/packages-library-export-default-webpack-plugin/">@wordpress/library-export-default-webpack-plugin</a></li> 
+           <li class="page_item page-item-41575 menu-item"><a href="https://developer.wordpress.org/block-editor/packages/packages-list-reusable-blocks/">@wordpress/list-reusable-blocks</a></li> 
+           <li class="page_item page-item-125185 menu-item"><a href="https://developer.wordpress.org/block-editor/packages/packages-media-utils/">@wordpress/media-utils</a></li> 
+           <li class="page_item page-item-41576 menu-item"><a href="https://developer.wordpress.org/block-editor/packages/packages-notices/">@wordpress/notices</a></li> 
+           <li class="page_item page-item-41577 menu-item"><a href="https://developer.wordpress.org/block-editor/packages/packages-npm-package-json-lint-config/">@wordpress/npm-package-json-lint-config</a></li> 
+           <li class="page_item page-item-41578 menu-item"><a href="https://developer.wordpress.org/block-editor/packages/packages-nux/">@wordpress/nux</a></li> 
+           <li class="page_item page-item-41579 menu-item"><a href="https://developer.wordpress.org/block-editor/packages/packages-plugins/">@wordpress/plugins</a></li> 
+           <li class="page_item page-item-41580 menu-item"><a href="https://developer.wordpress.org/block-editor/packages/packages-postcss-themes/">@wordpress/postcss-themes</a></li> 
+           <li class="page_item page-item-41581 menu-item"><a href="https://developer.wordpress.org/block-editor/packages/packages-priority-queue/">@wordpress/priority-queue</a></li> 
+           <li class="page_item page-item-125800 menu-item"><a href="https://developer.wordpress.org/block-editor/packages/packages-project-management-automation/">@wordpress/project-management-automation</a></li> 
+           <li class="page_item page-item-41582 menu-item"><a href="https://developer.wordpress.org/block-editor/packages/packages-redux-routine/">@wordpress/redux-routine</a></li> 
+           <li class="page_item page-item-41583 menu-item"><a href="https://developer.wordpress.org/block-editor/packages/packages-rich-text/">@wordpress/rich-text</a></li> 
+           <li class="page_item page-item-41584 menu-item"><a href="https://developer.wordpress.org/block-editor/packages/packages-scripts/">@wordpress/scripts</a></li> 
+           <li class="page_item page-item-125281 menu-item"><a href="https://developer.wordpress.org/block-editor/packages/packages-server-side-render/">@wordpress/server-side-render</a></li> 
+           <li class="page_item page-item-41585 menu-item"><a href="https://developer.wordpress.org/block-editor/packages/packages-shortcode/">@wordpress/shortcode</a></li> 
+           <li class="page_item page-item-41586 menu-item"><a href="https://developer.wordpress.org/block-editor/packages/packages-token-list/">@wordpress/token-list</a></li> 
+           <li class="page_item page-item-41587 menu-item"><a href="https://developer.wordpress.org/block-editor/packages/packages-url/">@wordpress/url</a></li> 
+           <li class="page_item page-item-41588 menu-item"><a href="https://developer.wordpress.org/block-editor/packages/packages-viewport/">@wordpress/viewport</a></li> 
+           <li class="page_item page-item-41589 menu-item"><a href="https://developer.wordpress.org/block-editor/packages/packages-wordcount/">@wordpress/wordcount</a></li> 
+          </ul> </li> 
+        </ul> 
+       </div> 
+      </aside>
+     </div> 
+    </div>
+    <!-- #secondary --> 
+    <main id="primary" class="site-main post-122779 blocks-handbook type-blocks-handbook status-publish hentry type-handbook" role="main"> 
+     <div class="breadcrumb-trail breadcrumbs" itemprop="breadcrumb"> 
+      <span class="trail-browse">Browse:</span> 
+      <span class="trail-begin"><a href="https://developer.wordpress.org" title="WordPress Developer Resources" rel="home">Home</a></span> 
+      <span class="sep">/</span> 
+      <span class="trail-end">Block Editor Handbook</span> 
+     </div> 
+     <h1>Block Editor Handbook <a class="github-edit" href="https://github.com/WordPress/gutenberg/edit/master/docs/readme.md"><img src="https://developer.wordpress.org/wp-content/plugins/wporg-cli/assets/images/github-mark.svg"> <span>Edit</span></a></h1> 
+     <p>The Gutenberg project is transforming the way content is created on WordPress. A block editor was the first product launched creating a new methodology for working with content. This handbook provides documentation for how designers and developers can extend the editor, and also how you can start contributing to the project.</p> 
+     <p><img src="https://cldup.com/kZXGDcGPMU.gif" alt="Gutenberg Demo"></p> 
+     <p>Using a system of Blocks to compose and format content, the new block-based editor is designed to create rich, flexible layouts for websites and digital products. Content is created in the unit of blocks instead of freeform text with inserted media, embeds and Shortcodes (there’s a Shortcode block though).</p> 
+     <p>Blocks treat Paragraphs, Headings, Media, and Embeds all as components that, when strung together, make up the content stored in the WordPress database, replacing the traditional concept of freeform text with embedded media and shortcodes. The new editor is designed with progressive enhancement, meaning that it is back-compatible with all legacy content, and it also offers a process to try to convert and split a Classic block into equivalent blocks using client-side parsing. Finally, the blocks offer enhanced editing and format controls.</p> 
+     <p>The Editor offers rich new value to users with visual, drag-and-drop creation tools and powerful developer enhancements with modern vendor packages, reusable components, rich APIs and hooks to modify and extend the editor through Custom Blocks, Custom Block Styles and Plugins.</p> 
+     <div class="bottom-of-entry">
+      &nbsp;
+     </div> 
+     <nav class="handbook-navigation" role="navigation"> 
+      <h1 class="screen-reader-text">Handbook navigation</h1> 
+      <div class="nav-links"> 
+       <a href="https://developer.wordpress.org/block-editor/key-concepts/" rel="next">Key Concepts <span class="meta-nav">→</span></a> 
+      </div> 
+      <!-- .nav-links --> 
+     </nav>
+     <!-- .navigation --> 
+    </main>
+    <!-- #main --> 
+   </div>
+   <!-- #content --> 
+  </div>
+  <!-- #page --> 
+  <div id="wporg-footer"> 
+   <div class="wrapper"> 
+    <ul> 
+     <li><a href="//wordpress.org/about/" title="An introduction to the WordPress project">About</a></li> 
+     <li><a href="//wordpress.org/news/" title="News and Updates">Blog</a></li> 
+     <li><a href="//wordpress.org/hosting/" title="Recommended web hosting providers">Hosting</a></li> 
+     <li><a href="https://wordpressfoundation.org/donate/" title="Donate to the WordPress Foundation">Donate</a></li> 
+    </ul> 
+    <ul> 
+     <li><a href="//wordpress.org/support/" title="Forums, documentation, and other resources">Support</a></li> 
+     <li><a href="//developer.wordpress.org" title="Resources for WordPress developers">Developers</a></li> 
+     <li><a href="//make.wordpress.org/" title="Give back to WordPress through code, support, translation and more">Get Involved</a></li> 
+    </ul> 
+    <ul> 
+     <li><a href="//wordpress.org/showcase/" title="Some of the best WordPress sites on the Web">Showcase</a></li> 
+     <li><a href="//wordpress.org/plugins/" title="Add extra functionality to WordPress">Plugins</a></li> 
+     <li><a href="//wordpress.org/themes/" title="Make your WordPress pretty">Themes</a></li> 
+    </ul> 
+    <ul> 
+     <li><a href="//central.wordcamp.org/" title="Find a WordPress event near you">WordCamp</a></li> 
+     <li><a href="//wordpress.tv/" title="Videos, tutorials, and WordCamp sessions">WordPress.TV</a></li> 
+     <li><a href="//buddypress.org/" title="A set of plugins to transform your WordPress into a social network">BuddyPress</a></li> 
+     <li><a href="//bbpress.org/" title="Fast, slick forums built on WordPress">bbPress</a></li> 
+    </ul> 
+    <ul> 
+     <li><a href="//wordpress.com/?ref=wporg-footer" title="Hassle-free WordPress hosting">WordPress.com</a></li> 
+     <li><a href="//ma.tt/" title="Co-founder of WordPress, an example of what WordPress can do">Matt</a></li> 
+     <li><a href="//wordpress.org/about/privacy/" title="WordPress.org Privacy Policy">Privacy</a></li> 
+     <li><a href="https://publiccode.eu/" target="_blank">Public Code</a></li> 
+    </ul> 
+    <ul> 
+     <li><span class="dashicons dashicons-twitter"></span><a href="https://twitter.com/WordPress" title="Follow @WordPress on Twitter">@WordPress</a></li> 
+     <li><span class="dashicons dashicons-facebook"></span><a href="https://www.facebook.com/WordPress/" title="Like WordPress on Facebook">WordPress</a></li> 
+    </ul> 
+   </div> 
+   <p class="cip cip-image">Code is Poetry.</p> 
+  </div> 
+  <script src="https://s.w.org/style/js/navigation.min.js?20190128"></script> 
+  <script type="text/javascript" src="https://gravatar.com/js/gprofiles.js"></script> 
+  <script type="text/javascript" src="https://developer.wordpress.org/wp-includes/js/admin-bar.min.js?ver=5.4-alpha-46799"></script> 
+  <script type="text/javascript" src="https://developer.wordpress.org/wp-content/themes/pub/wporg-developer/js/navigation.js?ver=20181209"></script> 
+  <script type="text/javascript" src="https://developer.wordpress.org/wp-content/themes/pub/wporg-developer/js/skip-link-focus-fix.js?ver=20130115"></script> 
+  <script type="text/javascript" src="https://developer.wordpress.org/wp-content/themes/pub/wporg-developer/js/search.js?ver=20150430"></script> 
+  <script type="text/javascript" src="https://developer.wordpress.org/wp-content/themes/pub/wporg-developer/js/menu.js?ver=20180201"></script> 
+  <script type="text/javascript" src="https://developer.wordpress.org/wp-content/themes/pub/wporg-developer/js/awesomplete.min.js?ver=20160322"></script> 
+  <script type="text/javascript">
+/* <![CDATA[ */
+var autocomplete = {"ajaxurl":"https:\/\/developer.wordpress.org\/wp-admin\/admin-ajax.php","nonce":"97b505d027"};
+/* ]]> */
+</script> 
+  <script type="text/javascript" src="https://developer.wordpress.org/wp-content/themes/pub/wporg-developer/js/autocomplete.js?ver=20160524"></script> 
+  <script type="text/javascript" src="https://developer.wordpress.org/wp-content/themes/pub/wporg-developer/js/function-reference.js?ver=20180724"></script> 
+  <script type="text/javascript">
+/* <![CDATA[ */
+var quicktagsL10n = {"closeAllOpenTags":"Close all open tags","closeTags":"close tags","enterURL":"Enter the URL","enterImageURL":"Enter the URL of the image","enterImageDescription":"Enter a description of the image","textdirection":"text direction","toggleTextdirection":"Toggle Editor Text Direction","dfw":"Distraction-free writing mode","strong":"Bold","strongClose":"Close bold tag","em":"Italic","emClose":"Close italic tag","link":"Insert link","blockquote":"Blockquote","blockquoteClose":"Close blockquote tag","del":"Deleted text (strikethrough)","delClose":"Close deleted text tag","ins":"Inserted text","insClose":"Close inserted text tag","image":"Insert image","ul":"Bulleted list","ulClose":"Close bulleted list tag","ol":"Numbered list","olClose":"Close numbered list tag","li":"List item","liClose":"Close list item tag","code":"Code","codeClose":"Close code tag","more":"Insert Read More tag"};
+/* ]]> */
+</script> 
+  <script type="text/javascript" src="https://developer.wordpress.org/wp-includes/js/quicktags.min.js?ver=5.4-alpha-46799"></script> 
+  <script type="text/javascript" src="https://developer.wordpress.org/wp-content/themes/pub/wporg-developer/js/user-notes.js?ver=20181019"></script> 
+  <script type="text/javascript">
+/* <![CDATA[ */
+var wporg_note_feedback = {"show":"Show Feedback","hide":"Hide Feedback"};
+/* ]]> */
+</script> 
+  <script type="text/javascript" src="https://developer.wordpress.org/wp-content/themes/pub/wporg-developer/js/user-notes-feedback.js?ver=20181023"></script> 
+  <script type="text/javascript" src="https://developer.wordpress.org/wp-content/themes/pub/wporg-developer/js/tabs.js?ver=20160824"></script> 
+  <script type="text/javascript">
+/* <![CDATA[ */
+var wporg_note_preview = {"ajaxurl":"https:\/\/developer.wordpress.org\/wp-admin\/admin-ajax.php","nonce":"8ece0519d3","preview":"preview note","preview_empty":"Nothing to preview","is_admin":""};
+/* ]]> */
+</script> 
+  <script type="text/javascript" src="https://developer.wordpress.org/wp-content/themes/pub/wporg-developer/js/user-notes-preview.js?ver=20181019"></script> 
+  <script type="text/javascript" src="https://developer.wordpress.org/wp-includes/js/wp-embed.min.js?ver=5.4-alpha-46799"></script> 
+  <div id="wpadminbar" class="nojq nojs"> 
+   <a class="screen-reader-shortcut" href="#wp-toolbar" tabindex="1">Skip to toolbar</a> 
+   <div class="quicklinks" id="wp-toolbar" role="navigation" aria-label="Toolbar"> 
+    <ul id="wp-admin-bar-root-default" class="ab-top-menu">
+     <li id="wp-admin-bar-wp-logo" class="menupop"><a class="ab-item" aria-haspopup="true" href="https://wordpress.org/about/"><span class="ab-icon"></span><span class="screen-reader-text">About WordPress</span></a>
+      <div class="ab-sub-wrapper">
+       <ul id="wp-admin-bar-wp-logo-default" class="ab-submenu">
+        <li id="wp-admin-bar-about"><a class="ab-item" href="https://wordpress.org/about/">About WordPress</a></li>
+       </ul>
+       <ul id="wp-admin-bar-wp-logo-external" class="ab-sub-secondary ab-submenu">
+        <li id="wp-admin-bar-wporg"><a class="ab-item" href="https://wordpress.org/">WordPress.org</a></li>
+        <li id="wp-admin-bar-documentation"><a class="ab-item" href="https://codex.wordpress.org/">Documentation</a></li>
+        <li id="wp-admin-bar-support-forums"><a class="ab-item" href="https://wordpress.org/support/">Support</a></li>
+        <li id="wp-admin-bar-feedback"><a class="ab-item" href="https://wordpress.org/support/forum/requests-and-feedback">Feedback</a></li>
+       </ul>
+      </div></li>
+    </ul>
+    <ul id="wp-admin-bar-top-secondary" class="ab-top-secondary ab-top-menu">
+     <li id="wp-admin-bar-search" class="admin-bar-search">
+      <div class="ab-item ab-empty-item" tabindex="-1">
+       <form action="https://developer.wordpress.org/" method="get" id="adminbarsearch">
+        <input class="adminbar-input" name="s" id="adminbar-search" type="text" value="" maxlength="150">
+        <label for="adminbar-search" class="screen-reader-text">Search</label>
+        <input type="submit" class="adminbar-button" value="Search">
+       </form>
+      </div></li>
+     <li id="wp-admin-bar-log-in"><a class="ab-item" href="https://login.wordpress.org/?locale=en_US">Log In</a></li>
+     <li id="wp-admin-bar-register"><a class="ab-item" href="https://login.wordpress.org/register?locale=en_US">Register</a></li>
+    </ul> 
+   </div> 
+  </div>   
+ </body>
+</html>

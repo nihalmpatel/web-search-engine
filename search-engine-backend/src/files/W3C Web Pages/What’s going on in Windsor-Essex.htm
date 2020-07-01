@@ -1,0 +1,1335 @@
+<!DOCTYPE html>
+<html itemscope itemtype="https://schema.org/NewsArticle" class="no-js" prefix="og: https://ogp.me/ns#" lang="en">
+ <head id="janrain-analytics" data-evt="click" data-evt-typ="signin-reg-module" data-evt-val="{&quot;viewSignRegMod&quot;:&quot;Paywall Limit Reached&quot;}"> 
+  <meta charset="UTF-8"> 
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+  <meta name="robots" content="noarchive"> 
+  <meta name="msvalidate.01" content="915AE10930FFCE1EFBB9D7838CE66DE7"> 
+  <title>
+		What’s going on in Windsor-Essex | Windsor Star	</title> 
+  <link rel="profile" href="https://gmpg.org/xfn/11"> 
+  <link rel="pingback" href="https://windsorstar.com/xmlrpc.php"> 
+  <script type="text/javascript">
+/*! loadCSS. [c]2017 Filament Group, Inc. MIT License */
+/* This file is meant as a standalone workflow for
+- testing support for link[rel=preload]
+- enabling async CSS loading in browsers that do not support rel=preload
+- applying rel preload css once loaded, whether supported or not.
+*/
+(function( w ){
+	"use strict";
+	// rel=preload support test
+	if( !w.loadCSS ){
+		w.loadCSS = function(){};
+	}
+	var rp = loadCSS.relpreload = {};
+	// rel=preload feature support test
+	// runs once and returns a function for compat purposes
+	rp.support = (function(){
+		var ret;
+		try {
+			ret = w.document.createElement( "link" ).relList.supports( "preload" );
+		} catch (e) {
+			ret = false;
+		}
+		return function(){
+			return ret;
+		};
+	})();
+	// if preload isn't supported, get an asynchronous load by using a non-matching media attribute
+	// then change that media back to its intended value on load
+	rp.bindMediaToggle = function( link ){
+		// remember existing media attr for ultimate state, or default to 'all'
+		var finalMedia = link.media || "all";
+
+		function enableStylesheet(){
+			link.media = finalMedia;
+		}
+
+		// bind load handlers to enable media
+		if( link.addEventListener ){
+			link.addEventListener( "load", enableStylesheet );
+		} else if( link.attachEvent ){
+			link.attachEvent( "onload", enableStylesheet );
+		}
+
+		// Set rel and non-applicable media type to start an async request
+		// note: timeout allows this to happen async to let rendering continue in IE
+		setTimeout(function(){
+			link.rel = "stylesheet";
+			link.media = "only x";
+		});
+		// also enable media after 3 seconds,
+		// which will catch very old browsers (android 2.x, old firefox) that don't support onload on link
+		setTimeout( enableStylesheet, 3000 );
+	};
+
+	// loop through link elements in DOM
+	rp.poly = function(){
+		// double check this to prevent external calls from running
+		if( rp.support() ){
+			return;
+		}
+		var links = w.document.getElementsByTagName( "link" );
+		for( var i = 0; i < links.length; i++ ){
+			var link = links[ i ];
+			// qualify links to those with rel=preload and as=style attrs
+			if( link.rel === "preload" && link.getAttribute( "as" ) === "style" && !link.getAttribute( "data-loadcss" ) ){
+				// prevent rerunning on link
+				link.setAttribute( "data-loadcss", true );
+				// bind listeners to toggle media back
+				rp.bindMediaToggle( link );
+			}
+		}
+	};
+	// if unsupported, run the polyfill
+	if( !rp.support() ){
+		// run once at least
+		rp.poly();
+
+		// rerun poly on an interval until onload
+		var run = w.setInterval( rp.poly, 500 );
+		if( w.addEventListener ){
+			w.addEventListener( "load", function(){
+				rp.poly();
+				w.clearInterval( run );
+			} );
+		} else if( w.attachEvent ){
+			w.attachEvent( "onload", function(){
+				rp.poly();
+				w.clearInterval( run );
+			} );
+		}
+	}
+	// commonjs
+	if( typeof exports !== "undefined" ){
+		exports.loadCSS = loadCSS;
+	}
+	else {
+		w.loadCSS = loadCSS;
+	}
+}( typeof global !== "undefined" ? global : this ) );
+
+</script> 
+  <link rel="preload" href="https://s2.wp.com/wp-content/themes/vip/postmedia-theme-broadsheet/fonts/TitlingGothicFBCondStandard/5993ebd0-66f0-45c7-8230-d8c123bfc3a7-5.woff2" as="font" type="font/woff2" crossorigin=""> 
+  <link rel="preload" href="https://s2.wp.com/wp-content/themes/vip/postmedia-theme-broadsheet/fonts/BentonSansRegular/BentonSans-Regular.woff2" as="font" type="font/woff2" crossorigin=""> 
+  <meta name="description" content="Great things are happening for good causes in Windsor-Essex.Community organizations are holding fundraisers, information meetings and celebrations and they want you to know about them. And we would like to help them."> 
+  <meta name="news_keywords" content="amherstburg, caesars windsor, canada, chatham-kent, community calendar, essex, kingsville, lakeshore, lasalle, leamington, tecumseh, university of windsor, windsor"> 
+  <script type="application/json" id="page-data">{"ads":{"bidding":[{"account":"3528","client":"amazon"},{"account":"184635-3683795904303","client":"ix"}],"provider":{"account":"3081"},"network":"print","property":"ws","site":"ws_ind.com","vendor":[],"refresh":{"s":20},"verifier":{"account":"928934"}},"analytics":{"brand":"windsor star","debug":"WP | fem","division":"broadsheet","domain":"windsorstar.com","provider":{"account":"cd4afed6a2719d439af431746c942e3c","isDev":false},"vendor":"postmedia vip","tags":{"gtm":["GTM-MKM4ZNQ"]}},"page":{"ancestry":["special-features-3"],"originId":"948138","date":{"pub":"2018-01-31T09:38:52Z","mod":"2019-12-02T15:00:00Z"},"authors":["Custom Content Studio"],"articleId":"0730600d-35bc-4531-8e60-62bcb248945d","title":{"main":"What's going on in Windsor-Essex"},"type":"story","kw":[],"paywall":"whitelist","tags":["amherstburg, caesars windsor, canada, chatham-kent, community calendar, essex, kingsville, lakeshore, lasalle, leamington, tecumseh, university of windsor, windsor"],"sponsor":"","video":{"ids":[],"inPage":false},"isOrigin":true,"slug":"0126 commcalendar","format":"HTML5","wc":2316,"dist":"windsor star","klangoo":{"categories":[{"name":"Technology","score":4.09,"specificCategories":[{"name":"Social-Media","score":4.09}]}],"created":"2018-01-30T21:09:10.422Z","entities":[{"token":"Essex","typeID":12,"type":"Locations & natural formations","subtype":"location","entityID":47430,"score":null,"rank":"VR"},{"token":"Northstar Cultural Community Centre","typeID":1,"type":"Artifacts","subtype":"Center","entityID":1827642610,"score":null,"rank":"VR"},{"token":"Caboto Club","typeID":2,"type":"Associations & groups","subtype":"club","entityID":1375413768,"score":null,"rank":"R"},{"token":"Arthritis Society","typeID":2,"type":"Associations & groups","subtype":"club","entityID":2258177648,"score":null,"rank":"R"},{"token":"Jenn Sadai","typeID":18,"type":"People","subtype":"person name","entityID":56864679,"score":null,"rank":"SR"},{"token":"Ouellette avenue","typeID":1,"type":"Artifacts","subtype":"artifact","entityID":1562483179,"score":null,"rank":"SR"},{"token":"Arts Society of Kingsville","typeID":2,"type":"Associations & groups","subtype":"club","entityID":1957911567,"score":null,"rank":"SR"},{"token":"Connections Early Years Family Centre","typeID":1,"type":"Artifacts","subtype":"Center","entityID":3602970301,"score":null,"rank":"SR"},{"token":"Royal Canadian Legion","typeID":15,"type":"Organizations","subtype":"group","entityID":3155460067,"score":null,"rank":"SR"},{"token":"Rock avenue","typeID":1,"type":"Artifacts","subtype":"artifact","entityID":1155998837,"score":null,"rank":"SR"},{"token":"Capitol Theatre","typeID":1,"type":"Artifacts","subtype":"Theatre","entityID":3690530081,"score":null,"rank":"SR"},{"token":"Walkerville Brewery","typeID":6,"type":"Companies","subtype":"food beverage tobacco company","entityID":1557314262,"score":null,"rank":"SR"},{"token":"W.","typeID":18,"type":"People","subtype":"person","entityID":1908452443,"score":null,"rank":"SR"},{"token":"Facebook","typeID":31,"type":"Websites","subtype":"Social Network Website","entityID":81455,"score":null,"rank":"SR"},{"token":"Marentette ave.","typeID":1,"type":"Artifacts","subtype":"artifact","entityID":3621565829,"score":null,"rank":"SR"},{"token":"Business Improvement Association","typeID":2,"type":"Associations & groups","subtype":"group","entityID":3346085676,"score":null,"rank":"SR"},{"token":"Riverside","typeID":12,"type":"Locations & natural formations","subtype":"location","entityID":48261,"score":null,"rank":"SR"},{"token":"Learning Disabilities Association of Windsor Essex County","typeID":2,"type":"Associations & groups","subtype":"group","entityID":1187653279,"score":null,"rank":"SR"},{"token":"Harrow United Church","typeID":1,"type":"Artifacts","subtype":"Church","entityID":3826736888,"score":null,"rank":"SR"},{"token":"Valentine's Day","typeID":10,"type":"Events","subtype":"time","entityID":80790,"score":null,"rank":"SR"},{"token":"Speed","typeID":18,"type":"People","subtype":"singers bands","entityID":115880,"score":null,"rank":"SR"},{"token":"March of Dimes","typeID":2,"type":"Associations & groups","subtype":"Scientific NGO\/Association","entityID":118844,"score":null,"rank":"SR"},{"token":"Canada","typeID":37,"type":"Countries","subtype":"location","entityID":47202,"score":null,"rank":"SR"},{"token":"Twitter","typeID":31,"type":"Websites","subtype":"Social Network Website","entityID":81457,"score":null,"rank":"SR"},{"token":"Long road","typeID":1,"type":"Artifacts","subtype":"artifact","entityID":1348574417,"score":null,"rank":"SR"},{"token":"Ouellette ave.","typeID":1,"type":"Artifacts","subtype":"artifact","entityID":1592684401,"score":null,"rank":"SR"},{"token":"Metro","typeID":22,"type":"Publication","subtype":"newspaper","entityID":121173,"score":null,"rank":"SR"},{"token":"E.","typeID":18,"type":"People","subtype":"person","entityID":2657770681,"score":null,"rank":"SR"},{"token":"James Gibb","typeID":18,"type":"People","subtype":"artist","entityID":4123844890,"score":null,"rank":"SR"},{"token":"Chimczuk Museum","typeID":1,"type":"Artifacts","subtype":"Museum","entityID":3233199614,"score":null,"rank":"SR"},{"token":"Wilfred Harding","typeID":18,"type":"People","subtype":"person name","entityID":3681794372,"score":null,"rank":"SR"},{"token":"Sunset ave","typeID":1,"type":"Artifacts","subtype":"artifact","entityID":4248403108,"score":null,"rank":"SR"},{"token":"Ontario","typeID":12,"type":"Locations & natural formations","subtype":"location","entityID":131742,"score":null,"rank":"SR"},{"token":"St. E.","typeID":18,"type":"People","subtype":"person","entityID":513041734,"score":null,"rank":"SR"},{"token":"Shadowbox Theatre","typeID":1,"type":"Artifacts","subtype":"Theatre","entityID":189552202,"score":null,"rank":"SR"},{"token":"University of Windsor Chamber Choir","typeID":9,"type":"Educational institutes","subtype":"university","entityID":116292,"score":null,"rank":"SR"},{"token":"Student Centre","typeID":1,"type":"Artifacts","subtype":"Center","entityID":4095987089,"score":null,"rank":"SR"},{"token":"Dan Wells","typeID":18,"type":"People","subtype":"person name","entityID":981886936,"score":null,"rank":"SR"},{"token":"Irene Moore Davis","typeID":18,"type":"People","subtype":"author","entityID":3873347166,"score":null,"rank":"SR"},{"token":"Hiram Walker & son","typeID":6,"type":"Companies","subtype":"company","entityID":2846104985,"score":null,"rank":"SR"},{"token":"Reggi Media","typeID":6,"type":"Companies","subtype":"media company","entityID":2428884186,"score":null,"rank":"SR"},{"token":"John Patrick Shanley","typeID":18,"type":"People","subtype":"person name","entityID":2149337650,"score":null,"rank":"SR"},{"token":"Peru Project","typeID":6,"type":"Companies","subtype":"act","entityID":273824613,"score":null,"rank":"SR"},{"token":"Fred Israel Auditorium","typeID":18,"type":"People","subtype":"person name","entityID":2240896095,"score":null,"rank":"SR"},{"token":"Heart & Stroke Foundation","typeID":15,"type":"Organizations","subtype":"group","entityID":1598855994,"score":null,"rank":"SR"},{"token":"Amherstburg Freedom Museum","typeID":1,"type":"Artifacts","subtype":"Museum","entityID":1481153547,"score":null,"rank":"SR"},{"token":"103B 1501 Howard ave","typeID":1,"type":"Artifacts","subtype":"artifact","entityID":1240582196,"score":null,"rank":"SR"},{"token":"Laura Peters","typeID":18,"type":"People","subtype":"person name","entityID":4034087064,"score":null,"rank":"SR"},{"token":"Africa","typeID":39,"type":"Continents","subtype":"location","entityID":48941,"score":null,"rank":"SR"},{"token":"Peru","typeID":37,"type":"Countries","subtype":"location","entityID":47881,"score":null,"rank":"SR"},{"token":"Mack Flash Entertainment","typeID":18,"type":"People","subtype":"person name","entityID":297800987,"score":null,"rank":"SR"},{"token":"Coral Spa","typeID":18,"type":"People","subtype":"person name","entityID":4148809649,"score":null,"rank":"SR"},{"token":"Mike Kovaliv Photography","typeID":18,"type":"People","subtype":"person name","entityID":3669685104,"score":null,"rank":"SR"},{"token":"Episcopal Church","typeID":2,"type":"Associations & groups","subtype":"group","entityID":43779,"score":null,"rank":"SR"},{"token":"National Historic Site","typeID":15,"type":"Organizations","subtype":"group","entityID":1898065057,"score":null,"rank":"SR"},{"token":"Anne Safranyos","typeID":18,"type":"People","subtype":"person name","entityID":1142993870,"score":null,"rank":"SR"},{"token":"Gene Wu","typeID":18,"type":"People","subtype":"person name","entityID":605363267,"score":null,"rank":"SR"},{"token":"Bruce Kotowich","typeID":18,"type":"People","subtype":"person name","entityID":1718827855,"score":null,"rank":"SR"},{"token":"Caitlin Wood","typeID":18,"type":"People","subtype":"person name","entityID":100225951,"score":null,"rank":"SR"},{"token":"Colleen Daly","typeID":18,"type":"People","subtype":"person name","entityID":1081791208,"score":null,"rank":"SR"},{"token":"Clarence Frazer","typeID":18,"type":"People","subtype":"person name","entityID":28227401,"score":null,"rank":"SR"},{"token":"Ryan Downey","typeID":18,"type":"People","subtype":"person name","entityID":443475668,"score":null,"rank":"SR"},{"token":"Robert Franz","typeID":18,"type":"People","subtype":"person name","entityID":3953990731,"score":null,"rank":"SR"},{"token":"Lesley Andrew","typeID":18,"type":"People","subtype":"person name","entityID":2432855207,"score":null,"rank":"SR"},{"token":"Emily Houchen","typeID":18,"type":"People","subtype":"person name","entityID":1563775240,"score":null,"rank":"SR"},{"token":"Tom Goerz","typeID":18,"type":"People","subtype":"person name","entityID":2911979743,"score":null,"rank":"SR"},{"token":"Emma Char","typeID":18,"type":"People","subtype":"person name","entityID":1290007180,"score":null,"rank":"SR"}],"keyTopics":[{"text":"more information","score":null},{"text":"information meetings","score":null},{"text":"Windsor","score":null},{"text":"public information forum","score":null},{"text":"fifth book","score":null},{"text":"one drink ticket","score":null},{"text":"more information contact","score":null},{"text":"Tickets","score":null},{"text":"Windsor Essex","score":null},{"text":"book drive","score":null},{"text":"book reports","score":null},{"text":"Windsor Symphony Orchestra","score":null},{"text":"Community organizations","score":null},{"text":"Great things","score":null},{"text":"10 gallery admission","score":null},{"text":"topics","score":null},{"text":"Northstar Cultural Community Centre","score":null},{"text":"contact Jenn","score":null},{"text":"Windsor Essex's Black community","score":null},{"text":"City Grill restaurant","score":null},{"text":"world","score":null},{"text":"annual fundraiser","score":null},{"text":"family's history","score":null},{"text":"access process","score":null},{"text":"Arts Society of Kingsville","score":null}],"properties":{"lang":"en"},"summary":"Great things are happening for good causes in Windsor-Essex.  Community organizations are holding fundraisers, information meetings and celebrations and they want you to know about them. \n\nFor more information about the forum or to register, visit  arthritis.ca\/events\n\nCome early for a good seat at Walkerville Brewery (525 Argyle Rd., Windsor), 6-9 p.m. For more information, call 519-254-6067 or visit their  Facebook  page. Feb. 2 : Connections Early Years Family Centre holds its annual Trivia Night  at Royal Canadian Legion Branch 143 (1570 Marentette Ave., Windsor).  \n\nFeb. 16:  Rock For Dimes Windsor 2018, an annual fundraiser in support of the March of Dimes Canada's programs and services, hits the stage at Average Joe's Sports Bar in Windsor (1286 Lauzon Rd)., 8 p.m. Local bands Rock Avenue, Zephyr, Disaster Strike, Band Rock of Ages, The Trudys and Midnight Metro will raise money and compete for the title of Windsor's best amateur band.\n\nSponsored by Airgo, Agency 59, Average Joe's Sports Bar, Caesar's Windsor, Cool 100.7,\n\n April 2018 Apr. 27 : Jenn Sadai launches her fifth book,  No Kids Required  (a $15 value), as a fundraiser for The Welcome Centre Shelter For Women at The City Grill restaurant (375 Ouellette Avenue), 7-11 p.m. Tickets include a copy of the book, a small thank-you gift, one drink ticket, appetizers and live music. "}},"identity":{"sso":{"account":"ztcpr5854s8kyh93khrgw44sv9","application":"postmedia.us","client":"jwze6dse55fgqchrwptq7cq2a5paqxdg"},"subscriber":{"account":"kvh83nNiMM"}}}</script> 
+  <script>
+							var el = document.createElement('script');
+							el.async = true;
+							el.onload = function () {
+								// disable FEM's Janrain and Piano adapters by indicating existing configs:
+								window.janrain = window.janrain || {};
+								window.tp = window.tp || [];
+								FrontEndModules.initPage(JSON.parse(document.getElementById('page-data').innerHTML));
+							}
+							el.src = 'https://d395dw5zk780j2.cloudfront.net/v3.3/fem.js';
+							document.head.appendChild(el);
+						</script> 
+  <meta name="google-site-verification" content="JrkIjXpOy38cuT1TQjtIzB5ZEkzvLo20TRuRAFzL8A8"> 
+  <script src="https://r-login.wordpress.com/remote-login.php?action=js&amp;host=windsorstar.com&amp;id=79897690&amp;t=1575317706&amp;back=https%3A%2F%2Fwindsorstar.com%2Fspecial-features-3%2Fwhats-going-on-in-windsor-essex" type="text/javascript"></script> 
+  <script type="text/javascript">
+		/* <![CDATA[ */
+			if ( 'function' === typeof WPRemoteLogin ) {
+				document.cookie = "wordpress_test_cookie=test; path=/";
+				if ( document.cookie.match( /(;|^)\s*wordpress_test_cookie\=/ ) ) {
+					WPRemoteLogin();
+				}
+			}
+		/* ]]> */
+		</script> 
+  <link rel="dns-prefetch" href="//s0.wp.com"> 
+  <link rel="dns-prefetch" href="//s2.wp.com"> 
+  <link rel="dns-prefetch" href="//contributor.google.com"> 
+  <link rel="dns-prefetch" href="//pymx5.com"> 
+  <link rel="dns-prefetch" href="//platform.twitter.com"> 
+  <link rel="dns-prefetch" href="//s1.wp.com"> 
+  <link rel="dns-prefetch" href="//static.freeskreen.com"> 
+  <link rel="dns-prefetch" href="//ak.sail-horizon.com"> 
+  <link rel="dns-prefetch" href="//cdn.viafoura.net"> 
+  <link rel="dns-prefetch" href="//cdn.mediavoice.com"> 
+  <link rel="dns-prefetch" href="//postmediawindsorstar2.wordpress.com"> 
+  <link rel="dns-prefetch" href="//wordpress.com"> 
+  <script type="text/javascript">
+		/* <![CDATA[ */
+		function addLoadEvent(func) {
+			var oldonload = window.onload;
+			if (typeof window.onload != 'function') {
+				window.onload = func;
+			} else {
+				window.onload = function () {
+					oldonload();
+					func();
+				}
+			}
+		}
+		/* ]]> */
+	</script> 
+  <link rel="stylesheet" id="all-css-0-1" href="https://s2.wp.com/_static/??-eJylVNtu2zAM/aExyrY2exr2CwM2oI8DJTMOG90gykn795VlJ3abzWuTF4M8Jg95SNPqGMEEn8lnlXfkSNSBo4pBsqOGESoIOgVsZEdUoshFi7kERkYfDk/KyGivivVJzRhdB9F2LXspqAkOxLGl5zfeUprlfan0SDmi2UP1lsJNSFRwFzH3EVUC2aLA58XmuGkpS1Uy2JDpaTmlKtA6JhKB8nTcuWFa/+nQ9d0MUmrBV8iQysqHzCVbzsYF51+3daryFgFPR7GUM6Vac3Lfx3vxFfQkDgsx6nAg2Abb3MA0zv8GBkG2eZc6GNc3vb6BVHfCvl/vkRPd0pwpKILDtO/iBxfpQYJhtAM8qBtIKwxz/GPUxqIIb5kamfNO8J93sI5c5/F/XX2ZbXQlnRaTWF89vb6ZEvbzFKIeSKuH8Vx/E7pf/cnrgKkZR31yl46wpQA2GMwc/CsHthb58iZmqYXdhraYba03uVcqnH6nB24oDCLKye+foQLX3n1RdVY4PzHH/l+UuzvV2qDR9gE/3PfP95vN/Xrzbb1+fAGoOVcy?cssminify=yes" type="text/css" media="all"> 
+  <script type="text/javascript" src="https://s2.wp.com/_static/??-eJyFztEKwjAMBdAfsisyOnwRv6XWOFKXtDbphn69HeiDMBQC9+EeuLFLNshhqhcQG9vdK5THO7ooO/sLGMKxeIWOkD84JFZgXW1OogQifoSNltIZJzBVoDTA2mauacN9v4Q8Iyx/WQTNPtxMAcHnun6i4965Q++GwfXxBTkPW9k="></script> 
+  <script src="https://contributor.google.com/scripts/446a78e82a3d3895/loader.js?ver=5.3"></script> 
+  <script>
+var PostmediaVO = {"appServiceUrl":"http:\/\/app.canada.com\/video\/video.svc"};
+</script> 
+  <script type="text/javascript" src="https://s1.wp.com/_static/??-eJy1jbkOwjAQRH8IswpXRIEQDbTpKJETb4KDL3mdRPl7TA6JFhDd6u3MG+gcK6wJaAKEO2okaKUDZyloFJIzp5pKGnojSuae+x4KxYliPps/cMUcsil/sbZSeG6MkKaCmsBgx6oBsnKky5oW8K/9k+GqD7Kg13aJ+sZn8NGsKB3jYpA4Eyv2IfEHQYc8pv03othupUDLbIvex2tSjtAp3qOPwqM+JNvdepXs03RTPwFIm7Q8"></script> 
+  <script src="//ak.sail-horizon.com/spm/spm.v1.min.js?ver=5.3"></script> 
+  <script>
+var tag = {"options":{"customerId":"b9d3df2fccd108b5eff3c44f573b2cd6"}};
+</script> 
+  <script>
+var Postmedia = {"adConfig":{"site":"ws_ind.com","msite":"ws.m","preroll":"on","networkId":3081,"keys":{"aid":["0730600d-35bc-4531-8e60-62bcb248945d","948138"],"author":"custom-content-studio","ck":"special-features-3","nk":"print","page":"story","pr":"ws","agegate":"true"},"async":false,"enablecasale":false,"sticky_ads":{"sticky_ldrb":{"sizes":[["728","90"],["970","90"]],"time":2}},"zone":"special-features-3\/story"},"Urls":{"home_url":"https:\/\/windsorstar.com","stylesheet_directory_uri":"https:\/\/s2.wp.com\/wp-content\/themes\/vip\/postmedia-theme-broadsheet","ajaxurl":"https:\/\/windsorstar.com\/wp-admin\/admin-ajax.php"},"Properties":{"domain":"","userAgents":["mozilla","msie","webkit","ipad"],"mobileAgents":["iphone","ipod","android"],"isMobile":false,"isIpad":false,"isModal":false},"Facebook":{"pageId":"41743dd369ff9d9d763282ea7e2cd33e","appId":"239752276115767","mobileId":"ws.m"}};
+</script> 
+  <script type="text/javascript" src="https://s2.wp.com/_static/??-eJylzDkOAjEMQNEL4bEGFAUKxFlMYk0cZdPYgeuz9FS0X3ofnwNCb8bN0BJXVnzIwFHmJk1RSYqlfcJpOWJWNNqWrAf8obpa5SgE3wj3vVPUxGwfG2KAaVL0r0Mko/fgVq+rW8/ee+cu+QWo3Ugv"></script> 
+  <script src="https://cdn.viafoura.net/vf-v2.js?ver=5.3" async="true"></script> 
+  <script>
+var PN_VO = {"appServiceUrl":"https:\/\/api.pddataservices.com"};
+</script> 
+  <script>
+var postmedia_geolocation = {"nonce":"86c27ea222"};
+</script> 
+  <script type="text/javascript" src="https://s0.wp.com/_static/??-eJy9kUuOwjAMQC9EYhGoWCGuwGpmnaamuLhJiNOi3J6Wj1ggZjELdpY/79kyXKJywWf0GfIRexQYKUIMkntsyKrIQ0tewLEVoQNhI+pCTYsZOoHuPGAq2hXHqC2zNnpjdCcL+MB90MQS52Ma1EqbmXMnahlqcYlq/Avxttorw1Qnm8p92al//6zAL9awf/T/UINhto5zoMKIiW35jjJOJkzfcUkmdyrqduU/jS0GDs5mCv72JrTTYNI9+Qm467fLar02S1OZqrsCqjfcQA=="></script> 
+  <link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://postmediawindsorstar2.wordpress.com/xmlrpc.php?rsd"> 
+  <link rel="wlwmanifest" type="application/wlwmanifest+xml" href="https://s1.wp.com/wp-includes/wlwmanifest.xml"> 
+  <meta name="generator" content="WordPress.com"> 
+  <link rel="canonical" href="https://windsorstar.com/special-features-3/whats-going-on-in-windsor-essex"> 
+  <link rel="shortlink" href="https://windsorstar.com/wcm/0730600d-35bc-4531-8e60-62bcb248945d"> 
+  <link rel="alternate" type="application/json+oembed" href="https://public-api.wordpress.com/oembed/?format=json&amp;url=https%3A%2F%2Fwindsorstar.com%2Fspecial-features-3%2Fwhats-going-on-in-windsor-essex&amp;for=wpcom-auto-discovery">
+  <link rel="alternate" type="application/xml+oembed" href="https://public-api.wordpress.com/oembed/?format=xml&amp;url=https%3A%2F%2Fwindsorstar.com%2Fspecial-features-3%2Fwhats-going-on-in-windsor-essex&amp;for=wpcom-auto-discovery"> 
+  <!-- Jetpack Open Graph Tags --> 
+  <meta property="og:type" content="article"> 
+  <meta property="og:title" content="What's going on in Windsor-Essex"> 
+  <meta property="og:url" content="https://windsorstar.com/special-features-3/whats-going-on-in-windsor-essex"> 
+  <meta property="og:description" content="Great things are happening for good causes in Windsor-Essex.Community organizations are holding fundraisers, information meetings and celebrations and they want you to know about them. And we would…"> 
+  <meta property="article:published_time" content="2018-01-31T14:38:52+00:00"> 
+  <meta property="article:modified_time" content="2019-12-02T20:00:00+00:00"> 
+  <meta property="og:site_name" content="Windsor Star"> 
+  <meta property="og:image" content="https://postmediawindsorstar2.files.wordpress.com/2018/01/holiday-community-calendar-logo-for-web-1.jpg"> 
+  <meta property="og:image:width" content="1350"> 
+  <meta property="og:image:height" content="1971"> 
+  <meta property="og:locale" content="en_US"> 
+  <meta name="twitter:site" content="@thewindsorstar"> 
+  <meta name="twitter:text:title" content="What's going on in Windsor-Essex"> 
+  <meta name="twitter:card" content="summary_large_image"> 
+  <meta property="article:publisher" content="https://www.facebook.com/windsorstar"> 
+  <meta name="twitter:title" content="What's going on in Windsor-Essex"> 
+  <meta name="twitter:description" content="Great things are happening for good causes in Windsor-Essex.Community organizations are holding fundraisers, information meetings and celebrations and they want you to know about them."> 
+  <meta name="twitter:image" content="https://postmediawindsorstar2.files.wordpress.com/2018/01/holiday-community-calendar-logo-for-web-1.jpg"> 
+  <!-- End Jetpack Open Graph Tags --> 
+  <link rel="shortcut icon" type="image/x-icon" href="https://secure.gravatar.com/blavatar/97db7402998b7be4aa95f5c03e508a93?s=32" sizes="16x16"> 
+  <link rel="icon" type="image/x-icon" href="https://secure.gravatar.com/blavatar/97db7402998b7be4aa95f5c03e508a93?s=32" sizes="16x16"> 
+  <link rel="apple-touch-icon-precomposed" href="https://secure.gravatar.com/blavatar/97db7402998b7be4aa95f5c03e508a93?s=114"> 
+  <link rel="openid.server" href="https://windsorstar.com/?openidserver=1"> 
+  <link rel="openid.delegate" href="https://windsorstar.com/"> 
+  <link rel="search" type="application/opensearchdescription+xml" href="https://windsorstar.com/osd.xml" title="Windsor Star"> 
+  <link rel="search" type="application/opensearchdescription+xml" href="https://s1.wp.com/opensearch.xml" title="WordPress.com"> 
+  <meta name="stats-full-init" value="0.023"> 
+  <meta name="stats-postmedia_theme_pre_initialize" value="0.000"> 
+  <meta name="stats-initialize" value="0.020"> 
+  <meta name="stats-postmedia_theme_post_initialize" value="0.002"> 
+  <meta name="stats-vip_load_plugins" value="0.003"> 
+  <meta name="stats-load_plugins" value="0.014"> 
+  <meta name="stats-register_widgets" value="0.000"> 
+  <meta property="fb:pages" content="42682032028"> 
+  <script type="text/javascript">
+			/* <![CDATA[ */
+			var adSlots = [];
+			/* ]]> */
+		</script> 
+  <script type="text/javascript">
+				/* <![CDATA[ */
+				var pn_Gpt_Weather = JSON.parse( decodeURIComponent('%7B%22wc%22%3A%22overcast%22%2C%22wt%22%3A%222%22%2C%22ws%22%3A%221%22%7D') );
+				/* ]]> */
+			</script>
+  <script type="text/javascript">var pnMeterExempt=1</script>
+  <meta name="ROBOTS" content="NOARCHIVE">
+  <script type="text/javascript">
+function janrainSignOut() {
+	janrain.capture.ui.endCaptureSession();
+}
+(function() {
+	if ( typeof window.janrain !== 'object' ) {
+		window.janrain = {};
+	}
+	window.janrain.settings = {};
+	window.janrain.settings.capture = {};
+
+	// capture settings
+	janrain.settings.capture.redirectUri = "https://postmediawindsorstar2.wordpress.com/wp-admin/admin-ajax.php?action=janrain_capture_redirect_uri";
+	janrain.settings.capture.appId = "ztcpr5854s8kyh93khrgw44sv9";
+	janrain.settings.capture.clientId = "jwze6dse55fgqchrwptq7cq2a5paqxdg";
+	janrain.settings.capture.responseType = 'token';
+	janrain.settings.capture.captureServer = "https://postmedia.us.janraincapture.com";
+	janrain.settings.capture.registerFlow = 'socialRegistration';
+	janrain.settings.packages = ["capture","login"];
+
+	janrain.settings.capture.setProfileCookie = true;
+	janrain.settings.capture.keepProfileCookieAfterLogout = true;
+	janrain.settings.capture.setProfileData = 'true';
+	janrain.settings.capture.recaptchaVersion = 2;
+
+	janrain.settings.capture.federateEnableSafari = true;
+
+	// styles
+	janrain.settings.capture.stylesheets = ["https://s1.wp.com/wp-content/themes/vip/postmedia-plugins/postmedia-library/classes/Postmedia/Web/Plugins/JanrainCapture/janrain-capture-screens/stylesheets/styles.css","https://postmediawindsorstar2.wordpress.com/wp-content/themes/vip/postmedia-theme-broadsheet/janrain-capture-screens/stylesheets/styles.css?m=1516026540h"];
+	janrain.settings.capture.mobileStylesheets = ["https://s2.wp.com/wp-content/themes/vip/postmedia-plugins/postmedia-library/classes/Postmedia/Web/Plugins/JanrainCapture/janrain-capture-screens/stylesheets/mobile-styles.css"];
+	janrain.settings.capture.recaptchaPublicKey = '6LeVKb4SAAAAAGv-hg5i6gtiOV4XrLuCDsJOnYoP';
+		
+		// engage settings
+		janrain.settings.appUrl = "https://login.canada.com";
+		janrain.settings.tokenAction = 'event';
+	
+				
+		// federate settings
+		janrain.settings.capture.federate = 1;
+		janrain.settings.capture.federateServer = "https://postmedia.us.janrainsso.com";
+		janrain.settings.capture.federateXdReceiver = "https://s1.wp.com/wp-content/themes/vip/postmedia-plugins/postmedia-library/classes/Postmedia/Web/Plugins/JanrainCapture/xdcomm.html";
+		janrain.settings.capture.federateLogoutUri = "https://postmediawindsorstar2.wordpress.com/wp-login.php?loggedout=true";
+	
+	function isReady() {
+		janrain.ready = true;
+	}
+	if (document.addEventListener) {
+		document.addEventListener( 'DOMContentLoaded', isReady, false );
+	} else {
+		window.attachEvent( 'onload', isReady );
+	}
+
+	var e = document.createElement( 'script' );
+	e.type = 'text/javascript';
+	e.id = 'janrainAuthWidget'
+	var url = document.location.protocol === 'https:' ? 'https://' : 'http://';
+	url += "widget-cdn.rpxnow.com/load/login.canada.com";
+	e.src = url;
+	var s = document.getElementsByTagName( 'script' )[0];
+	s.parentNode.insertBefore( e, s );
+})();
+</script> 
+  <!-- BEGIN Sailthru Horizon Meta Information --> 
+  <meta name="sailthru.date" content="2018-01-31 09:38:52"> 
+  <meta name="sailthru.title" content="What's going on in Windsor-Essex"> 
+  <meta name="sailthru.tags" content="brand-windsorstar, category-specialfeatures, more information, information meetings, Windsor, public information forum, fifth book, one drink ticket, more information contact, Tickets, Windsor Essex, book drive, book reports, Windsor Symphony Orchestra, Community organizations, Great things, 10 gallery admission, topics, Northstar Cultural Community Centre, contact Jenn, Windsor Essex's Black community, City Grill restaurant, world, annual fundraiser, family's history, access process, Arts Society of Kingsville"> 
+  <meta name="sailthru.description" content="Great things are happening for good causes in Windsor-Essex. Community organizations are holding fundraisers, information meetings and celebrations and they want you to know about them. And we would like to help them. If you have an upcoming event that you would like to see featured in the&nbsp;Star’s&nbsp;Community Calendar, send your press release or poster […]"> 
+  <meta name="sailthru.image.full" content="https://postmediawindsorstar2.files.wordpress.com/2018/01/holiday-community-calendar-logo-for-web-1.jpg"> 
+  <meta name="sailthru.image.thumb" content="https://postmediawindsorstar2.files.wordpress.com/2018/01/holiday-community-calendar-logo-for-web-1.jpg"> 
+  <!-- END Sailthru Horizon Meta Information --> 
+  <meta name="google-site-verification" content="ljXFsNxnI10A5Du893byKprf90Ycw4E4nL7sYyc7wTU"> 
+  <meta itemprop="genre" content="News"> 
+  <script type="text/javascript">
+			/* <![CDATA[ */
+							var pn_theme_piano_app_id = "kvh83nNiMM";
+			
+						/* ]]> */
+		</script> 
+  <meta property="fb:pages" content="110225254594"> 
+  <meta property="fb:pages" content="168282878593"> 
+  <meta property="fb:pages" content="7561650675"> 
+  <meta property="fb:pages" content="7116517082"> 
+  <meta property="fb:pages" content="20654027008"> 
+  <meta property="fb:pages" content="141888329160971"> 
+  <meta property="fb:pages" content="164697223559731"> 
+  <meta property="fb:pages" content="207513175076"> 
+  <meta property="fb:pages" content="100429659640"> 
+  <meta property="fb:pages" content="42682032028"> 
+  <meta property="fb:pages" content="6533373917"> 
+  <meta property="fb:pages" content="273805206181"> 
+  <meta itemprop="mainEntityOfPage" content="https://windsorstar.com/special-features-3/whats-going-on-in-windsor-essex"> 
+  <meta itemprop="datePublished" content="January 31, 2018"> 
+  <meta itemprop="dateModified" content="December 2, 2019"> 
+  <meta itemprop="copyrightYear" content="2018"> 
+  <meta itemprop="description" name="description" content="Great things are happening for good causes in Windsor-Essex.Community organizations are holding fundraisers, information meetings and celebrations and they want you to know about them."> 
+  <meta property="vf:unique_id" content="0730600d-35bc-4531-8e60-62bcb248945d"> 
+  <meta property="fb:app_id" content="239752276115767"> 
+  <meta property="fb:page_id" content="41743dd369ff9d9d763282ea7e2cd33e"> 
+  <meta property="fb:admins" content="100002625504753"> 
+  <style type="text/css">
+			.recentcomments a {
+				display: inline !important;
+				padding: 0 !important;
+				margin: 0 !important;
+			}
+
+			table.recentcommentsavatartop img.avatar, table.recentcommentsavatarend img.avatar {
+				border: 0px;
+				margin: 0;
+			}
+
+			table.recentcommentsavatartop a, table.recentcommentsavatarend a {
+				border: 0px !important;
+				background-color: transparent !important;
+			}
+
+			td.recentcommentsavatarend, td.recentcommentsavatartop {
+				padding: 0px 0px 1px 0px;
+				margin: 0px;
+			}
+
+			td.recentcommentstextend {
+				border: none !important;
+				padding: 0px 0px 2px 10px;
+			}
+
+			.rtl td.recentcommentstextend {
+				padding: 0px 10px 2px 0px;
+			}
+
+			td.recentcommentstexttop {
+				border: none;
+				padding: 0px 0px 0px 10px;
+			}
+
+			.rtl td.recentcommentstexttop {
+				padding: 0px 10px 0px 0px;
+			}
+		</style> 
+  <script type="text/javascript">var sailthru_vars = {"ajaxurl":"https:\/\/postmediawindsorstar2.wordpress.com\/wp-admin\/admin-ajax.php"}</script>
+  <meta name="application-name" content="Windsor Star">
+  <meta name="msapplication-window" content="width=device-width;height=device-height">
+  <meta name="msapplication-tooltip" content="Windsor Latest News, Breaking Headlines &amp; Sports">
+  <meta name="msapplication-task" content="name=Subscribe;action-uri=https://windsorstar.com/feed;icon-uri=https://secure.gravatar.com/blavatar/97db7402998b7be4aa95f5c03e508a93?s=16">
+  <link rel="amphtml" href="https://windsorstar.com/special-features-3/whats-going-on-in-windsor-essex/amp"> 
+  <!--Invisibly Pixel Code --> 
+  <script>
+						window.ia = window.ia || function() {
+							(window.ia.q = window.ia.q || []).push(arguments);
+						};
+						ia("track", "PAGE_VIEW");
+					</script> 
+  <!-- END Invisibly Pixel Code --> 
+ </head> 
+ <body class="post-template-default single single-post postid-0730600d-35bc-4531-8e60-62bcb248945d single-format-standard customizer-styles-applied group-blog highlander-enabled highlander-light" data-evt="page-load" data-evt-typ="view-article"> 
+  <!--Invisibly Pixel Code --> 
+  <noscript> 
+   <img height="1" width="1" style="display:none" src="https://api.pymx5.com/v1/sites/track?event_type=PAGE_VIEW&amp;noscript=1"> 
+  </noscript> 
+  <!-- END Invisibly Pixel Code --> 
+  <div></div> 
+  <div data-evt="page-load" data-evt-typ="page-view"></div> 
+  <div id="fb-root"></div> 
+  <div class="out-of-page"> 
+   <!-- Out of Page Ad --> 
+   <div id="gpt-oop" class="pn_dfpads adslot" data-ad="" data-ad-oop="" data-ad-ref="off"> 
+   </div> 
+   <!-- Out of Page ends --> 
+  </div> 
+  <nav class="accessibility-nav"> 
+   <ol> 
+    <li><a href="#side-navigation">Skip to navigation</a></li> 
+    <li><a href="#main">Skip to content</a></li> 
+   </ol> 
+  </nav> 
+  <!-- / accessibility-nav --> 
+  <div class="wallpaper-container" style="position:absolute"> 
+   <div id="gpt-wallpaper" class="pn_dfpads adslot" data-ad="[4,4]"> 
+   </div> 
+  </div> 
+  <div id="page" class="hfeed site"> 
+   <!-- OLD ALERTS SHOWED HERE --> 
+   <header class="l-header
+	 "> 
+    <div class="l-constrained"> 
+     <div id="special-features-3" class="header-nav
+				 "> 
+      <div class="masthead"> 
+       <div class="header-logo track_event" data-evt="click" data-evt-typ="navigation" data-evt-val="{&quot;name&quot;:&quot;Logo&quot;,&quot;loc&quot;:&quot;Header Logo - Navigation&quot;}" itemscope itemtype="https://schema.org/Organization"> 
+        <a itemprop="url" href="https://windsorstar.com"> 
+         <div itemprop="logo" itemscope itemtype="https://schema.org/ImageObject"> 
+          <img src="https://postmediawindsorstar2.files.wordpress.com/2015/11/ws_300x300_rgb.png?resize=120,120" alt="
+													Windsor Star							Homepage"> 
+          <meta itemprop="url" content="https://postmediawindsorstar2.files.wordpress.com/2015/11/ws_300x300_rgb.png"> 
+          <meta itemprop="width" content="120"> 
+          <meta itemprop="height" content="120"> 
+         </div> </a> 
+        <meta itemprop="name" content="Windsor Star"> 
+        <link itemprop="sameAs" href="https://www.facebook.com/windsorstar"> 
+        <link itemprop="sameAs" href="https://twitter.com/thewindsorstar"> 
+        <link itemprop="sameAs" href="https://plus.google.com/+windsorstar"> 
+        <link itemprop="sameAs" href="https://www.youtube.com/user/TheWindsorStar"> 
+        <link itemprop="sameAs" href="https://play.google.com/store/apps/details?id=com.indusblue.windsorstar&amp;hl=en"> 
+        <link itemprop="sameAs" href="https://itunes.apple.com/ca/app/the-windsor-star/id406388735?mt=8"> 
+        <link itemprop="sameAs" href="https://www.instagram.com/windsorstar/"> 
+        <link itemprop="sameAs" href="https://www.pinterest.com/thewindsorstar/"> 
+        <link itemprop="sameAs" href="https://en.wikipedia.org/wiki/Windsor_Star"> 
+       </div> 
+      </div> 
+      <div class="nav-wrap track_event"> 
+       <div class="left-drop-shadow"></div> 
+       <nav id="primary-nav" class="navigation">
+        <ul id="menu-main-menu" class="main-nav">
+         <li id="menu-item-521722" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-has-children menu-item-has-children menu-item-521722 news"><a href="https://windsorstar.com/category/news" data-evt="click" data-evt-typ="navigation" data-evt-val="{&quot;loc&quot;:&quot;Main&quot;,&quot;name&quot;:&quot;news&quot;}">News</a> 
+          <div class="subnav"> 
+           <ul> 
+            <li id="menu-item-521738" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-521738 news"><a href="https://windsorstar.com/category/news" data-evt="click" data-evt-typ="navigation" data-evt-val="{&quot;loc&quot;:&quot;Main&quot;,&quot;name&quot;:&quot;news&quot;}">All News</a> </li>
+            <li id="menu-item-521723" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-521723 local-news"><a href="https://windsorstar.com/category/news/local-news" data-evt="click" data-evt-typ="navigation" data-evt-val="{&quot;loc&quot;:&quot;Main&quot;,&quot;name&quot;:&quot;local-news&quot;}">Local News</a> </li>
+            <li id="menu-item-521724" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-has-children menu-item-521724 national"><a href="https://windsorstar.com/category/news/national" data-evt="click" data-evt-typ="navigation" data-evt-val="{&quot;loc&quot;:&quot;Main&quot;,&quot;name&quot;:&quot;national&quot;}">National</a> 
+             <div class="subnav"> 
+              <ul> 
+               <li id="menu-item-1187325" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1187325"><a href="https://windsorstar.com/category/news/national/election-2019" data-evt="click" data-evt-typ="navigation" data-evt-val="{&quot;loc&quot;:&quot;Main&quot;,&quot;name&quot;:&quot;Election 2019&quot;}">Election 2019</a> </li>
+              </ul> 
+             </div> </li>
+            <li id="menu-item-521725" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-521725 world"><a href="https://windsorstar.com/category/news/world" data-evt="click" data-evt-typ="navigation" data-evt-val="{&quot;loc&quot;:&quot;Main&quot;,&quot;name&quot;:&quot;world&quot;}">World</a> </li>
+            <li id="menu-item-542039" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-542039"><a href="https://windsorstar.com/traffic">Traffic</a> </li>
+           </ul> 
+          </div> </li>
+         <li id="menu-item-521772" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-has-children menu-item-has-children menu-item-521772 business"><a href="https://windsorstar.com/category/business" data-evt="click" data-evt-typ="navigation" data-evt-val="{&quot;loc&quot;:&quot;Main&quot;,&quot;name&quot;:&quot;business&quot;}">Business</a> 
+          <div class="subnav"> 
+           <ul> 
+            <li id="menu-item-521775" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-521775 business"><a href="https://windsorstar.com/category/business" data-evt="click" data-evt-typ="navigation" data-evt-val="{&quot;loc&quot;:&quot;Main&quot;,&quot;name&quot;:&quot;business&quot;}">All Business</a> </li>
+            <li id="menu-item-521774" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-521774 local-business"><a href="https://windsorstar.com/category/business/local-business" data-evt="click" data-evt-typ="navigation" data-evt-val="{&quot;loc&quot;:&quot;Main&quot;,&quot;name&quot;:&quot;local-business&quot;}">Local Business</a> </li>
+            <li id="menu-item-521773" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-521773 energy"><a href="https://windsorstar.com/category/business/energy" data-evt="click" data-evt-typ="navigation" data-evt-val="{&quot;loc&quot;:&quot;Main&quot;,&quot;name&quot;:&quot;energy&quot;}">Energy</a> </li>
+            <li id="menu-item-521781" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-has-children menu-item-has-children menu-item-521781 technology"><a href="https://windsorstar.com/category/technology" data-evt="click" data-evt-typ="navigation" data-evt-val="{&quot;loc&quot;:&quot;Main&quot;,&quot;name&quot;:&quot;technology&quot;}">Technology</a> 
+             <div class="subnav"> 
+              <ul> 
+               <li id="menu-item-521782" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-521782 technology"><a href="https://windsorstar.com/category/technology" data-evt="click" data-evt-typ="navigation" data-evt-val="{&quot;loc&quot;:&quot;Main&quot;,&quot;name&quot;:&quot;technology&quot;}">All Technology</a> </li>
+               <li id="menu-item-521779" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-521779 gaming"><a href="https://windsorstar.com/category/technology/gaming" data-evt="click" data-evt-typ="navigation" data-evt-val="{&quot;loc&quot;:&quot;Main&quot;,&quot;name&quot;:&quot;gaming&quot;}">Gaming</a> </li>
+               <li id="menu-item-521780" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-521780 internet"><a href="https://windsorstar.com/category/technology/internet" data-evt="click" data-evt-typ="navigation" data-evt-val="{&quot;loc&quot;:&quot;Main&quot;,&quot;name&quot;:&quot;internet&quot;}">Internet</a> </li>
+               <li id="menu-item-521783" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-521783 personal-tech"><a href="https://windsorstar.com/category/technology/personal-tech" data-evt="click" data-evt-typ="navigation" data-evt-val="{&quot;loc&quot;:&quot;Main&quot;,&quot;name&quot;:&quot;personal-tech&quot;}">Personal Tech</a> </li>
+               <li id="menu-item-521784" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-521784 science"><a href="https://windsorstar.com/category/technology/science" data-evt="click" data-evt-typ="navigation" data-evt-val="{&quot;loc&quot;:&quot;Main&quot;,&quot;name&quot;:&quot;science&quot;}">Science</a> </li>
+               <li id="menu-item-521785" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-521785 space"><a href="https://windsorstar.com/category/technology/space" data-evt="click" data-evt-typ="navigation" data-evt-val="{&quot;loc&quot;:&quot;Main&quot;,&quot;name&quot;:&quot;space&quot;}">Space</a> </li>
+               <li id="menu-item-521786" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-521786 tech-biz"><a href="https://windsorstar.com/category/technology/tech-biz" data-evt="click" data-evt-typ="navigation" data-evt-val="{&quot;loc&quot;:&quot;Main&quot;,&quot;name&quot;:&quot;tech-biz&quot;}">Tech-Biz</a> </li>
+              </ul> 
+             </div> </li>
+            <li id="menu-item-521776" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-521776"><a href="https://business.financialpost.com/markets" data-evt="click" data-evt-typ="navigation" data-evt-val="{&quot;loc&quot;:&quot;Main&quot;,&quot;name&quot;:&quot;FP Markets&quot;}">FP Markets</a> </li>
+            <li id="menu-item-521777" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-521777"><a href="https://business.financialpost.com/category/news/" data-evt="click" data-evt-typ="navigation" data-evt-val="{&quot;loc&quot;:&quot;Main&quot;,&quot;name&quot;:&quot;FP Headlines&quot;}">FP Headlines</a> </li>
+            <li id="menu-item-521778" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-521778"><a href="https://business.financialpost.com/category/personal-finance/" data-evt="click" data-evt-typ="navigation" data-evt-val="{&quot;loc&quot;:&quot;Main&quot;,&quot;name&quot;:&quot;FP Money&quot;}">FP Money</a> </li>
+            <li id="menu-item-939408" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-939408"><a href="/category/business/small-business" data-evt="click" data-evt-typ="navigation" data-evt-val="{&quot;loc&quot;:&quot;Main&quot;,&quot;name&quot;:&quot;Small Business&quot;}">Small Business</a> </li>
+           </ul> 
+          </div> </li>
+         <li id="menu-item-521726" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-has-children menu-item-521726 opinion"><a href="https://windsorstar.com/category/opinion" data-evt="click" data-evt-typ="navigation" data-evt-val="{&quot;loc&quot;:&quot;Main&quot;,&quot;name&quot;:&quot;opinion&quot;}">Opinion</a> 
+          <div class="subnav"> 
+           <ul> 
+            <li id="menu-item-521739" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-521739 opinion"><a href="https://windsorstar.com/category/opinion" data-evt="click" data-evt-typ="navigation" data-evt-val="{&quot;loc&quot;:&quot;Main&quot;,&quot;name&quot;:&quot;opinion&quot;}">All Opinion</a> </li>
+            <li id="menu-item-521729" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-521729 editorials"><a href="https://windsorstar.com/category/opinion/editorials" data-evt="click" data-evt-typ="navigation" data-evt-val="{&quot;loc&quot;:&quot;Main&quot;,&quot;name&quot;:&quot;editorials&quot;}">Editorials</a> </li>
+            <li id="menu-item-521728" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-521728 columnists"><a href="https://windsorstar.com/category/opinion/columnists" data-evt="click" data-evt-typ="navigation" data-evt-val="{&quot;loc&quot;:&quot;Main&quot;,&quot;name&quot;:&quot;columnists&quot;}">Columnists</a> </li>
+            <li id="menu-item-521727" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-521727 letters"><a href="https://windsorstar.com/category/opinion/letters" data-evt="click" data-evt-typ="navigation" data-evt-val="{&quot;loc&quot;:&quot;Main&quot;,&quot;name&quot;:&quot;letters&quot;}">Letters</a> </li>
+           </ul> 
+          </div> </li>
+         <li id="menu-item-521740" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-has-children menu-item-521740 sports"><a href="https://windsorstar.com/category/sports" data-evt="click" data-evt-typ="navigation" data-evt-val="{&quot;loc&quot;:&quot;Main&quot;,&quot;name&quot;:&quot;sports&quot;}">Sports</a> 
+          <div class="subnav"> 
+           <ul> 
+            <li id="menu-item-521742" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-521742 sports"><a href="https://windsorstar.com/category/sports" data-evt="click" data-evt-typ="navigation" data-evt-val="{&quot;loc&quot;:&quot;Main&quot;,&quot;name&quot;:&quot;sports&quot;}">All Sports</a> </li>
+            <li id="menu-item-521741" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-has-children menu-item-521741 hockey"><a href="https://windsorstar.com/category/sports/hockey" data-evt="click" data-evt-typ="navigation" data-evt-val="{&quot;loc&quot;:&quot;Main&quot;,&quot;name&quot;:&quot;hockey&quot;}">Hockey</a> 
+             <div class="subnav"> 
+              <ul> 
+               <li id="menu-item-521743" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-521743 hockey"><a href="https://windsorstar.com/category/sports/hockey" data-evt="click" data-evt-typ="navigation" data-evt-val="{&quot;loc&quot;:&quot;Main&quot;,&quot;name&quot;:&quot;hockey&quot;}">All Hockey</a> </li>
+               <li id="menu-item-521760" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-521760 nhl"><a href="https://windsorstar.com/category/sports/hockey/nhl" data-evt="click" data-evt-typ="navigation" data-evt-val="{&quot;loc&quot;:&quot;Main&quot;,&quot;name&quot;:&quot;nhl&quot;}">NHL</a> </li>
+               <li id="menu-item-522133" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-522133 detroit-red-wings"><a href="https://windsorstar.com/category/sports/hockey/nhl/detroit-red-wings" data-evt="click" data-evt-typ="navigation" data-evt-val="{&quot;loc&quot;:&quot;Main&quot;,&quot;name&quot;:&quot;detroit-red-wings&quot;}">Detroit Red Wings</a> </li>
+               <li id="menu-item-522134" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-522134 toronto-maple-leafs"><a href="https://windsorstar.com/category/sports/hockey/nhl/toronto-maple-leafs" data-evt="click" data-evt-typ="navigation" data-evt-val="{&quot;loc&quot;:&quot;Main&quot;,&quot;name&quot;:&quot;toronto-maple-leafs&quot;}">Toronto Maple Leafs</a> </li>
+              </ul> 
+             </div> </li>
+            <li id="menu-item-521748" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-has-children menu-item-521748 football"><a href="https://windsorstar.com/category/sports/football" data-evt="click" data-evt-typ="navigation" data-evt-val="{&quot;loc&quot;:&quot;Main&quot;,&quot;name&quot;:&quot;football&quot;}">Football</a> 
+             <div class="subnav"> 
+              <ul> 
+               <li id="menu-item-521769" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-521769 football"><a href="https://windsorstar.com/category/sports/football" data-evt="click" data-evt-typ="navigation" data-evt-val="{&quot;loc&quot;:&quot;Main&quot;,&quot;name&quot;:&quot;football&quot;}">All Football</a> </li>
+               <li id="menu-item-521752" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-521752 nfl"><a href="https://windsorstar.com/category/sports/football/nfl" data-evt="click" data-evt-typ="navigation" data-evt-val="{&quot;loc&quot;:&quot;Main&quot;,&quot;name&quot;:&quot;nfl&quot;}">NFL</a> </li>
+               <li id="menu-item-521753" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-521753 detroit-lions"><a href="https://windsorstar.com/category/sports/football/nfl/detroit-lions" data-evt="click" data-evt-typ="navigation" data-evt-val="{&quot;loc&quot;:&quot;Main&quot;,&quot;name&quot;:&quot;detroit-lions&quot;}">Detroit Lions</a> </li>
+               <li id="menu-item-521751" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-521751 cfl"><a href="https://windsorstar.com/category/sports/football/cfl" data-evt="click" data-evt-typ="navigation" data-evt-val="{&quot;loc&quot;:&quot;Main&quot;,&quot;name&quot;:&quot;cfl&quot;}">CFL</a> </li>
+              </ul> 
+             </div> </li>
+            <li id="menu-item-521745" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-has-children menu-item-521745 baseball"><a href="https://windsorstar.com/category/sports/baseball" data-evt="click" data-evt-typ="navigation" data-evt-val="{&quot;loc&quot;:&quot;Main&quot;,&quot;name&quot;:&quot;baseball&quot;}">Baseball</a> 
+             <div class="subnav"> 
+              <ul> 
+               <li id="menu-item-521766" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-521766 baseball"><a href="https://windsorstar.com/category/sports/baseball" data-evt="click" data-evt-typ="navigation" data-evt-val="{&quot;loc&quot;:&quot;Main&quot;,&quot;name&quot;:&quot;baseball&quot;}">All Baseball</a> </li>
+               <li id="menu-item-521755" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-521755 detroit-tigers"><a href="https://windsorstar.com/category/sports/baseball/detroit-tigers" data-evt="click" data-evt-typ="navigation" data-evt-val="{&quot;loc&quot;:&quot;Main&quot;,&quot;name&quot;:&quot;detroit-tigers&quot;}">Detroit Tigers</a> </li>
+              </ul> 
+             </div> </li>
+            <li id="menu-item-521746" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-has-children menu-item-521746 basketball"><a href="https://windsorstar.com/category/sports/basketball" data-evt="click" data-evt-typ="navigation" data-evt-val="{&quot;loc&quot;:&quot;Main&quot;,&quot;name&quot;:&quot;basketball&quot;}">Basketball</a> 
+             <div class="subnav"> 
+              <ul> 
+               <li id="menu-item-521767" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-521767 basketball"><a href="https://windsorstar.com/category/sports/basketball" data-evt="click" data-evt-typ="navigation" data-evt-val="{&quot;loc&quot;:&quot;Main&quot;,&quot;name&quot;:&quot;basketball&quot;}">All Basketball</a> </li>
+               <li id="menu-item-521758" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-521758 nba"><a href="https://windsorstar.com/category/sports/basketball/nba" data-evt="click" data-evt-typ="navigation" data-evt-val="{&quot;loc&quot;:&quot;Main&quot;,&quot;name&quot;:&quot;nba&quot;}">NBA</a> </li>
+               <li id="menu-item-521759" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-521759 ncaa"><a href="https://windsorstar.com/category/sports/basketball/ncaa" data-evt="click" data-evt-typ="navigation" data-evt-val="{&quot;loc&quot;:&quot;Main&quot;,&quot;name&quot;:&quot;ncaa&quot;}">NCAA</a> </li>
+               <li id="menu-item-521764" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-521764 windsor-express"><a href="https://windsorstar.com/category/sports/basketball/windsor-express" data-evt="click" data-evt-typ="navigation" data-evt-val="{&quot;loc&quot;:&quot;Main&quot;,&quot;name&quot;:&quot;windsor-express&quot;}">Windsor Express</a> </li>
+              </ul> 
+             </div> </li>
+            <li id="menu-item-521749" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-has-children menu-item-521749 golf"><a href="https://windsorstar.com/category/sports/golf" data-evt="click" data-evt-typ="navigation" data-evt-val="{&quot;loc&quot;:&quot;Main&quot;,&quot;name&quot;:&quot;golf&quot;}">Golf</a> 
+             <div class="subnav"> 
+              <ul> 
+               <li id="menu-item-972941" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-972941"><a href="http://windsorstar.sportstonews.com/" data-evt="click" data-evt-typ="navigation" data-evt-val="{&quot;loc&quot;:&quot;Main&quot;,&quot;name&quot;:&quot;Golf Videos&quot;}">Golf Videos</a> </li>
+              </ul> 
+             </div> </li>
+            <li id="menu-item-521761" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-has-children menu-item-521761 soccer"><a href="https://windsorstar.com/category/sports/soccer" data-evt="click" data-evt-typ="navigation" data-evt-val="{&quot;loc&quot;:&quot;Main&quot;,&quot;name&quot;:&quot;soccer&quot;}">Soccer</a> 
+             <div class="subnav"> 
+              <ul> 
+               <li id="menu-item-521765" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-521765 soccer"><a href="https://windsorstar.com/category/sports/soccer" data-evt="click" data-evt-typ="navigation" data-evt-val="{&quot;loc&quot;:&quot;Main&quot;,&quot;name&quot;:&quot;soccer&quot;}">All Soccer</a> </li>
+               <li id="menu-item-522079" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-522079 international-soccer"><a href="https://windsorstar.com/category/sports/soccer/international-soccer" data-evt="click" data-evt-typ="navigation" data-evt-val="{&quot;loc&quot;:&quot;Main&quot;,&quot;name&quot;:&quot;international-soccer&quot;}">International Soccer</a> </li>
+               <li id="menu-item-521757" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-521757 mls"><a href="https://windsorstar.com/category/sports/soccer/mls" data-evt="click" data-evt-typ="navigation" data-evt-val="{&quot;loc&quot;:&quot;Main&quot;,&quot;name&quot;:&quot;mls&quot;}">MLS</a> </li>
+              </ul> 
+             </div> </li>
+            <li id="menu-item-521747" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-521747 curling"><a href="https://windsorstar.com/category/sports/curling" data-evt="click" data-evt-typ="navigation" data-evt-val="{&quot;loc&quot;:&quot;Main&quot;,&quot;name&quot;:&quot;curling&quot;}">Curling</a> </li>
+            <li id="menu-item-521762" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-521762 tennis"><a href="https://windsorstar.com/category/sports/tennis" data-evt="click" data-evt-typ="navigation" data-evt-val="{&quot;loc&quot;:&quot;Main&quot;,&quot;name&quot;:&quot;tennis&quot;}">Tennis</a> </li>
+            <li id="menu-item-521744" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-521744 auto-racing"><a href="https://windsorstar.com/category/sports/auto-racing" data-evt="click" data-evt-typ="navigation" data-evt-val="{&quot;loc&quot;:&quot;Main&quot;,&quot;name&quot;:&quot;auto-racing&quot;}">Auto Racing</a> </li>
+           </ul> 
+          </div> </li>
+         <li id="menu-item-521788" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-has-children menu-item-521788 entertainment"><a href="https://windsorstar.com/category/entertainment" data-evt="click" data-evt-typ="navigation" data-evt-val="{&quot;loc&quot;:&quot;Main&quot;,&quot;name&quot;:&quot;entertainment&quot;}">Arts</a> 
+          <div class="subnav"> 
+           <ul> 
+            <li id="menu-item-521789" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-521789 entertainment"><a href="https://windsorstar.com/category/entertainment" data-evt="click" data-evt-typ="navigation" data-evt-val="{&quot;loc&quot;:&quot;Main&quot;,&quot;name&quot;:&quot;entertainment&quot;}">All Arts</a> </li>
+            <li id="menu-item-521792" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-521792 local-arts"><a href="https://windsorstar.com/category/entertainment/local-arts" data-evt="click" data-evt-typ="navigation" data-evt-val="{&quot;loc&quot;:&quot;Main&quot;,&quot;name&quot;:&quot;local-arts&quot;}">Local Arts</a> </li>
+            <li id="menu-item-521793" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-has-children menu-item-has-children menu-item-521793 movies"><a href="https://windsorstar.com/category/entertainment/movies" data-evt="click" data-evt-typ="navigation" data-evt-val="{&quot;loc&quot;:&quot;Main&quot;,&quot;name&quot;:&quot;movies&quot;}">Movies</a> 
+             <div class="subnav"> 
+              <ul> 
+               <li id="menu-item-521795" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-521795 movies"><a href="https://windsorstar.com/category/entertainment/movies" data-evt="click" data-evt-typ="navigation" data-evt-val="{&quot;loc&quot;:&quot;Main&quot;,&quot;name&quot;:&quot;movies&quot;}">All Movies</a> </li>
+               <li id="menu-item-521797" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-521797"><a href="http://movies.windsorstar.com" data-evt="click" data-evt-typ="navigation" data-evt-val="{&quot;loc&quot;:&quot;Main&quot;,&quot;name&quot;:&quot;Movie Listings&quot;}">Movie Listings</a> </li>
+              </ul> 
+             </div> </li>
+            <li id="menu-item-521787" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-has-children menu-item-521787 television"><a href="https://windsorstar.com/category/entertainment/television" data-evt="click" data-evt-typ="navigation" data-evt-val="{&quot;loc&quot;:&quot;Main&quot;,&quot;name&quot;:&quot;television&quot;}">Television</a> 
+             <div class="subnav"> 
+              <ul> 
+               <li id="menu-item-521796" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-521796 television"><a href="https://windsorstar.com/category/entertainment/television" data-evt="click" data-evt-typ="navigation" data-evt-val="{&quot;loc&quot;:&quot;Main&quot;,&quot;name&quot;:&quot;television&quot;}">All Television</a> </li>
+               <li id="menu-item-521798" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-521798"><a href="http://www.windsorstar.com/entertainment/television/tv-listings/index.html" data-evt="click" data-evt-typ="navigation" data-evt-val="{&quot;loc&quot;:&quot;Main&quot;,&quot;name&quot;:&quot;TV Listings&quot;}">TV Listings</a> </li>
+              </ul> 
+             </div> </li>
+            <li id="menu-item-521794" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-has-children menu-item-has-children menu-item-521794 music"><a href="https://windsorstar.com/category/entertainment/music" data-evt="click" data-evt-typ="navigation" data-evt-val="{&quot;loc&quot;:&quot;Main&quot;,&quot;name&quot;:&quot;music&quot;}">Music</a> 
+             <div class="subnav"> 
+              <ul> 
+               <li id="menu-item-794654" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-794654 music"><a href="https://windsorstar.com/category/entertainment/music" data-evt="click" data-evt-typ="navigation" data-evt-val="{&quot;loc&quot;:&quot;Main&quot;,&quot;name&quot;:&quot;music&quot;}">All Music</a> </li>
+               <li id="menu-item-794651" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-794651"><a target="_blank" rel="noopener noreferrer" href="https://youtube.com/nationalpostmusic" data-evt="click" data-evt-typ="navigation" data-evt-val="{&quot;loc&quot;:&quot;Main&quot;,&quot;name&quot;:&quot;NP Music&quot;}">NP Music</a> </li>
+              </ul> 
+             </div> </li>
+            <li id="menu-item-521790" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-521790 books"><a href="https://windsorstar.com/category/entertainment/books" data-evt="click" data-evt-typ="navigation" data-evt-val="{&quot;loc&quot;:&quot;Main&quot;,&quot;name&quot;:&quot;books&quot;}">Books</a> </li>
+            <li id="menu-item-521791" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-521791 celebrity"><a href="https://windsorstar.com/category/entertainment/celebrity" data-evt="click" data-evt-typ="navigation" data-evt-val="{&quot;loc&quot;:&quot;Main&quot;,&quot;name&quot;:&quot;celebrity&quot;}">Celebrity</a> </li>
+           </ul> 
+          </div> </li>
+         <li id="menu-item-521803" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-has-children menu-item-521803 life"><a href="https://windsorstar.com/category/life" data-evt="click" data-evt-typ="navigation" data-evt-val="{&quot;loc&quot;:&quot;Main&quot;,&quot;name&quot;:&quot;life&quot;}">Life</a> 
+          <div class="subnav"> 
+           <ul> 
+            <li id="menu-item-651838" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-651838"><a href="/tag/milestones" data-evt="click" data-evt-typ="navigation" data-evt-val="{&quot;loc&quot;:&quot;Main&quot;,&quot;name&quot;:&quot;Milestones&quot;}">Milestones</a> </li>
+            <li id="menu-item-521815" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-521815 life"><a href="https://windsorstar.com/category/life" data-evt="click" data-evt-typ="navigation" data-evt-val="{&quot;loc&quot;:&quot;Main&quot;,&quot;name&quot;:&quot;life&quot;}">All Life</a> </li>
+            <li id="menu-item-521804" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-521804 fashion-beauty"><a href="https://windsorstar.com/category/life/fashion-beauty" data-evt="click" data-evt-typ="navigation" data-evt-val="{&quot;loc&quot;:&quot;Main&quot;,&quot;name&quot;:&quot;fashion-beauty&quot;}">Fashion &amp; Beauty</a> </li>
+            <li id="menu-item-521817" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-has-children menu-item-521817 homes"><a href="https://windsorstar.com/category/life/homes" data-evt="click" data-evt-typ="navigation" data-evt-val="{&quot;loc&quot;:&quot;Main&quot;,&quot;name&quot;:&quot;homes&quot;}">Homes</a> 
+             <div class="subnav"> 
+              <ul> 
+               <li id="menu-item-521808" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-521808 homes"><a href="https://windsorstar.com/category/life/homes" data-evt="click" data-evt-typ="navigation" data-evt-val="{&quot;loc&quot;:&quot;Main&quot;,&quot;name&quot;:&quot;homes&quot;}">All Homes</a> </li>
+               <li id="menu-item-521810" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-521810 condos"><a href="https://windsorstar.com/category/life/homes/condos" data-evt="click" data-evt-typ="navigation" data-evt-val="{&quot;loc&quot;:&quot;Main&quot;,&quot;name&quot;:&quot;condos&quot;}">Condos</a> </li>
+               <li id="menu-item-521811" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-521811 decorating"><a href="https://windsorstar.com/category/life/homes/decorating" data-evt="click" data-evt-typ="navigation" data-evt-val="{&quot;loc&quot;:&quot;Main&quot;,&quot;name&quot;:&quot;decorating&quot;}">Decorating</a> </li>
+               <li id="menu-item-521812" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-521812 gardening"><a href="https://windsorstar.com/category/life/homes/gardening" data-evt="click" data-evt-typ="navigation" data-evt-val="{&quot;loc&quot;:&quot;Main&quot;,&quot;name&quot;:&quot;gardening&quot;}">Gardening</a> </li>
+               <li id="menu-item-521821" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-521821 renovating"><a href="https://windsorstar.com/category/life/homes/renovating" data-evt="click" data-evt-typ="navigation" data-evt-val="{&quot;loc&quot;:&quot;Main&quot;,&quot;name&quot;:&quot;renovating&quot;}">Renovating</a> </li>
+               <li id="menu-item-521822" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-521822 vacation-homes"><a href="https://windsorstar.com/category/life/homes/vacation-homes" data-evt="click" data-evt-typ="navigation" data-evt-val="{&quot;loc&quot;:&quot;Main&quot;,&quot;name&quot;:&quot;vacation-homes&quot;}">Vacation Homes</a> </li>
+              </ul> 
+             </div> </li>
+            <li id="menu-item-521805" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-has-children menu-item-has-children menu-item-521805 food"><a href="https://windsorstar.com/category/life/food" data-evt="click" data-evt-typ="navigation" data-evt-val="{&quot;loc&quot;:&quot;Main&quot;,&quot;name&quot;:&quot;food&quot;}">Food</a> 
+             <div class="subnav"> 
+              <ul> 
+               <li id="menu-item-521816" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-521816 food"><a href="https://windsorstar.com/category/life/food" data-evt="click" data-evt-typ="navigation" data-evt-val="{&quot;loc&quot;:&quot;Main&quot;,&quot;name&quot;:&quot;food&quot;}">All Food</a> </li>
+               <li id="menu-item-521806" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-521806 local-food-reviews"><a href="https://windsorstar.com/category/life/food/local-food-reviews" data-evt="click" data-evt-typ="navigation" data-evt-val="{&quot;loc&quot;:&quot;Main&quot;,&quot;name&quot;:&quot;local-food-reviews&quot;}">Local Food Reviews</a> </li>
+               <li id="menu-item-542072" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-542072 recipes"><a href="https://windsorstar.com/category/life/food/recipes" data-evt="click" data-evt-typ="navigation" data-evt-val="{&quot;loc&quot;:&quot;Main&quot;,&quot;name&quot;:&quot;recipes&quot;}">Recipes</a> </li>
+              </ul> 
+             </div> </li>
+            <li id="menu-item-521807" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-521807 from-the-vault"><a href="https://windsorstar.com/category/life/from-the-vault" data-evt="click" data-evt-typ="navigation" data-evt-val="{&quot;loc&quot;:&quot;Main&quot;,&quot;name&quot;:&quot;from-the-vault&quot;}">From the Vault</a> </li>
+            <li id="menu-item-521814" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-has-children menu-item-521814 health"><a href="https://windsorstar.com/category/health" data-evt="click" data-evt-typ="navigation" data-evt-val="{&quot;loc&quot;:&quot;Main&quot;,&quot;name&quot;:&quot;health&quot;}">Health</a> 
+             <div class="subnav"> 
+              <ul> 
+               <li id="menu-item-521799" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-521799 health"><a href="https://windsorstar.com/category/health" data-evt="click" data-evt-typ="navigation" data-evt-val="{&quot;loc&quot;:&quot;Main&quot;,&quot;name&quot;:&quot;health&quot;}">All Health</a> </li>
+               <li id="menu-item-521800" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-521800 diet-fitness"><a href="https://windsorstar.com/category/health/diet-fitness" data-evt="click" data-evt-typ="navigation" data-evt-val="{&quot;loc&quot;:&quot;Main&quot;,&quot;name&quot;:&quot;diet-fitness&quot;}">Diet &amp; Fitness</a> </li>
+               <li id="menu-item-521801" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-521801 family-child"><a href="https://windsorstar.com/category/health/family-child" data-evt="click" data-evt-typ="navigation" data-evt-val="{&quot;loc&quot;:&quot;Main&quot;,&quot;name&quot;:&quot;family-child&quot;}">Family &amp; Child</a> </li>
+               <li id="menu-item-521802" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-521802 men"><a href="https://windsorstar.com/category/health/men" data-evt="click" data-evt-typ="navigation" data-evt-val="{&quot;loc&quot;:&quot;Main&quot;,&quot;name&quot;:&quot;men&quot;}">Men</a> </li>
+               <li id="menu-item-521825" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-521825 women"><a href="https://windsorstar.com/category/health/women" data-evt="click" data-evt-typ="navigation" data-evt-val="{&quot;loc&quot;:&quot;Main&quot;,&quot;name&quot;:&quot;women&quot;}">Women</a> </li>
+               <li id="menu-item-521823" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-521823 seniors"><a href="https://windsorstar.com/category/health/seniors" data-evt="click" data-evt-typ="navigation" data-evt-val="{&quot;loc&quot;:&quot;Main&quot;,&quot;name&quot;:&quot;seniors&quot;}">Seniors</a> </li>
+               <li id="menu-item-521824" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-521824 sexual-health"><a href="https://windsorstar.com/category/health/sexual-health" data-evt="click" data-evt-typ="navigation" data-evt-val="{&quot;loc&quot;:&quot;Main&quot;,&quot;name&quot;:&quot;sexual-health&quot;}">Sexual Health</a> </li>
+              </ul> 
+             </div> </li>
+            <li id="menu-item-851883" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-851883 life-by-design"><a href="https://windsorstar.com/category/life/life-by-design" data-evt="click" data-evt-typ="navigation" data-evt-val="{&quot;loc&quot;:&quot;Main&quot;,&quot;name&quot;:&quot;life-by-design&quot;}">Life By Design</a> </li>
+            <li id="menu-item-521813" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-521813 parenting"><a href="https://windsorstar.com/category/life/parenting" data-evt="click" data-evt-typ="navigation" data-evt-val="{&quot;loc&quot;:&quot;Main&quot;,&quot;name&quot;:&quot;parenting&quot;}">Parenting</a> </li>
+            <li id="menu-item-521819" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-521819 relationships"><a href="https://windsorstar.com/category/life/relationships" data-evt="click" data-evt-typ="navigation" data-evt-val="{&quot;loc&quot;:&quot;Main&quot;,&quot;name&quot;:&quot;relationships&quot;}">Relationships</a> </li>
+            <li id="menu-item-521820" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-521820 royals"><a href="https://windsorstar.com/category/life/royals" data-evt="click" data-evt-typ="navigation" data-evt-val="{&quot;loc&quot;:&quot;Main&quot;,&quot;name&quot;:&quot;royals&quot;}">Royals</a> </li>
+            <li id="menu-item-543172" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-543172 travel"><a href="https://windsorstar.com/category/travel" data-evt="click" data-evt-typ="navigation" data-evt-val="{&quot;loc&quot;:&quot;Main&quot;,&quot;name&quot;:&quot;travel&quot;}">Travel</a> </li>
+           </ul> 
+          </div> </li>
+         <li id="menu-item-521827" class="obits menu-item menu-item-type-custom menu-item-object-custom menu-item-521827"><a href="http://windsorstar.remembering.ca" data-evt="click" data-evt-typ="navigation" data-evt-val="{&quot;loc&quot;:&quot;Main&quot;,&quot;name&quot;:&quot;Obits&quot;}">Obits</a></li>
+         <li id="menu-item-521828" class="obits menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-521828"><a href="http://classifieds.windsorstar.com/" data-evt="click" data-evt-typ="navigation" data-evt-val="{&quot;loc&quot;:&quot;Main&quot;,&quot;name&quot;:&quot;Classifieds&quot;}">Classifieds</a> 
+          <div class="subnav"> 
+           <ul> 
+            <li id="menu-item-521829" class="obits menu-item menu-item-type-custom menu-item-object-custom menu-item-521829"><a href="http://classifieds.windsorstar.com/" data-evt="click" data-evt-typ="navigation" data-evt-val="{&quot;loc&quot;:&quot;Main&quot;,&quot;name&quot;:&quot;All Classifieds&quot;}">All Classifieds</a> </li>
+            <li id="menu-item-521830" class="obits menu-item menu-item-type-custom menu-item-object-custom menu-item-521830"><a href="/flyercity" data-evt="click" data-evt-typ="navigation" data-evt-val="{&quot;loc&quot;:&quot;Main&quot;,&quot;name&quot;:&quot;Flyercity&quot;}">Flyercity</a> </li>
+            <li id="menu-item-521833" class="obits menu-item menu-item-type-custom menu-item-object-custom menu-item-521833"><a href="https://classifieds.windsorstar.com/windsor/celebrating/search" data-evt="click" data-evt-typ="navigation" data-evt-val="{&quot;loc&quot;:&quot;Main&quot;,&quot;name&quot;:&quot;Celebrating&quot;}">Celebrating</a> </li>
+            <li id="menu-item-521834" class="obits menu-item menu-item-type-custom menu-item-object-custom menu-item-521834"><a href="http://classifieds.windsorstar.com/" data-evt="click" data-evt-typ="navigation" data-evt-val="{&quot;loc&quot;:&quot;Main&quot;,&quot;name&quot;:&quot;Browse Listings&quot;}">Browse Listings</a> </li>
+            <li id="menu-item-542087" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-542087"><a href="http://windsorstar.adperfect.com/" data-evt="click" data-evt-typ="navigation" data-evt-val="{&quot;loc&quot;:&quot;Main&quot;,&quot;name&quot;:&quot;Place a Classifieds Ad&quot;}">Place a Classifieds Ad</a> </li>
+            <li id="menu-item-930611" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-930611"><a href="http://local.windsorstar.com" data-evt="click" data-evt-typ="navigation" data-evt-val="{&quot;loc&quot;:&quot;Main&quot;,&quot;name&quot;:&quot;Local Directory&quot;}">Local Directory</a> </li>
+           </ul> 
+          </div> </li>
+         <li id="menu-item-521826" class="jobs menu-item menu-item-type-custom menu-item-object-custom menu-item-521826"><a href="http://working.com/windsor" data-evt="click" data-evt-typ="navigation" data-evt-val="{&quot;loc&quot;:&quot;Main&quot;,&quot;name&quot;:&quot;Careers&quot;}">Careers</a></li>
+         <li id="menu-item-521838" class="driving menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-521838"><a href="https://driving.ca/" data-evt="click" data-evt-typ="navigation" data-evt-val="{&quot;loc&quot;:&quot;Main&quot;,&quot;name&quot;:&quot;Driving&quot;}">Driving</a> 
+          <div class="subnav"> 
+           <ul> 
+            <li id="menu-item-542089" class="driving menu-item menu-item-type-custom menu-item-object-custom menu-item-542089"><a href="https://driving.ca/" data-evt="click" data-evt-typ="navigation" data-evt-val="{&quot;loc&quot;:&quot;Main&quot;,&quot;name&quot;:&quot;All Driving&quot;}">All Driving</a> </li>
+            <li id="menu-item-542090" class="Driving menu-item menu-item-type-custom menu-item-object-custom menu-item-542090"><a href="https://driving.ca/category/auto-news" data-evt="click" data-evt-typ="navigation" data-evt-val="{&quot;loc&quot;:&quot;Main&quot;,&quot;name&quot;:&quot;News&quot;}">News</a> </li>
+            <li id="menu-item-542091" class="driving menu-item menu-item-type-custom menu-item-object-custom menu-item-542091"><a href="https://driving.ca/category/reviews" data-evt="click" data-evt-typ="navigation" data-evt-val="{&quot;loc&quot;:&quot;Main&quot;,&quot;name&quot;:&quot;Reviews&quot;}">Reviews</a> </li>
+            <li id="menu-item-607148" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-607148"><a href="https://driving.ca/car-comparison" data-evt="click" data-evt-typ="navigation" data-evt-val="{&quot;loc&quot;:&quot;Main&quot;,&quot;name&quot;:&quot;Car Comparison&quot;}">Car Comparison</a> </li>
+            <li id="menu-item-607149" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-607149"><a href="https://driving.ca/buyers-guide/2015" data-evt="click" data-evt-typ="navigation" data-evt-val="{&quot;loc&quot;:&quot;Main&quot;,&quot;name&quot;:&quot;Buyer\u2019s Guide&quot;}">Buyer’s Guide</a> </li>
+           </ul> 
+          </div> </li>
+         <li id="menu-item-542092" class="subscribe_mobile menu-item menu-item-type-post_type menu-item-object-page menu-item-542092"><a href="https://windsorstar.com/subscription">Subscription</a></li>
+        </ul>
+       </nav> 
+       <div class="subnav-btn-container subnav-prev-btn-container"></div> 
+       <div class="subnav-btn-container subnav-next-btn-container"></div> 
+       <div class="right-drop-shadow"></div> 
+      </div> 
+      <!-- /nav-wrap --> 
+      <div class="lower-header"> 
+       <div class="breadcrumb-wrap "> 
+        <ul class="breadcrumb-list" itemscope itemtype="https://schema.org/BreadcrumbList"> 
+        </ul> 
+        <div class="more-category-and-feature"> 
+         <ul class="circular-list"> 
+          <li class="featured-title">
+           <div class="feature-title">
+            <span class="separator">|</span>Featured:
+           </div></li> 
+          <li class="track_event" data-evt="click" data-evt-typ="navigation" data-evt-val="{&quot;name&quot;:&quot;Milestones&quot;,&quot;loc&quot;:&quot;Featured Item&quot;}"> <a href="https://windsorstar.com/tag/milestones">Milestones</a> </li> 
+          <li class="track_event" data-evt="click" data-evt-typ="navigation" data-evt-val="{&quot;name&quot;:&quot;Fit Tips&quot;,&quot;loc&quot;:&quot;Featured Item&quot;}"> <a href="https://windsorstar.com/tag/fit-tips">Fit Tips</a> </li> 
+          <li class="track_event" data-evt="click" data-evt-typ="navigation" data-evt-val="{&quot;name&quot;:&quot;Windsor In Pictures&quot;,&quot;loc&quot;:&quot;Featured Item&quot;}"> <a href="https://windsorstar.com/tag/windsor-in-pictures">Windsor In Pictures</a> </li> 
+          <li class="track_event" data-evt="click" data-evt-typ="navigation" data-evt-val="{&quot;name&quot;:&quot;Kelly Steele&quot;,&quot;loc&quot;:&quot;Featured Item&quot;}"> <a href="https://windsorstar.com/author/winstarsteele">Kelly Steele</a> </li> 
+          <li class="track_event" data-evt="click" data-evt-typ="navigation" data-evt-val="{&quot;name&quot;:&quot;&quot;,&quot;loc&quot;:&quot;Featured Item&quot;}"> <a href=""></a> </li> 
+          <li><span class="separator last_separator">|</span></li> 
+         </ul> 
+        </div> 
+        <div class="right-drop-shadow"></div> 
+        <a href="javascript:void(0);" class="more-items">More</a> 
+       </div> 
+       <ul class="header-actions"> 
+        <li class="search"> 
+         <form class="form-search" action="https://windsorstar.com/" method="get"> 
+          <fieldset> 
+           <label class="form-search-label" for="main-mobile-searcher">Open Search</label> 
+           <input class="form-search-input" type="text" name="s" id="main-mobile-searcher" placeholder="Find something right now" title="Find something right now"> 
+           <button class="close close-search" alt="Close Search" title="Close Search" type="button">Close Search</button> 
+           <button class="start-search" alt="Search" title="Search" type="submit">Search</button> 
+          </fieldset> 
+         </form> </li> 
+       </ul> 
+      </div> 
+      <!-- /lower-header --> 
+      <div class="header-links track_event"> 
+       <a class="videos-btn" data-evt="click" data-evt-typ="navigation" data-evt-val="{&quot;name&quot;:&quot;Videos&quot;,&quot;loc&quot;:&quot;Header Subscription&quot;}" href="/watch">Videos</a> 
+       <span data-evt="click" data-evt-typ="navigation" data-evt-val="{&quot;name&quot;:&quot;Sign In&quot;,&quot;loc&quot;:&quot;Header Subscription&quot;}"><a class="signin-btn loading" id="captureSignInLink" data-evt="click" data-evt-typ="signin-reg-module" data-evt-val="{&quot;viewSignRegMod&quot;:&quot;Self-Sign In&quot;}" onclick="pn_janrain_render_screen('signIn');" href="javascript:void(0);">Sign In</a></span> 
+       <a class="sign-out" id="captureSignOutLink" style="display:none" href="javascript:void(0);">Sign Out</a> 
+       <style>#janrainModal .logo_image { background-image: url( https://postmediawindsorstar2.files.wordpress.com/2018/09/windsor_star_logo-500x100.png ); }</style> 
+       <span data-evt="click" data-evt-typ="subscription-button-click" data-evt-val="{&quot;loc&quot;:&quot;Header Subscription&quot;}"><a class="subscribe-btn" href="https://windsorstar.com/subscription" data-evt="click" data-evt-typ="navigation" data-evt-val="{&quot;name&quot;:&quot;Subscribe&quot;,&quot;loc&quot;:&quot;Header Subscription&quot;}">Subscribe</a></span> 
+      </div> 
+      <!-- / header-links --> 
+      <a href="https://www.postmedia.com/" class="postmedia-logo track_event" data-evt="click" data-evt-typ="navigation" data-evt-val="{&quot;name&quot;:&quot;Postmedia Logo&quot;,&quot;loc&quot;:&quot;Postmedia Logo - Navigation&quot;}" target="_blank"><span></span></a> 
+      <!-- / postmedia brands --> 
+     </div> 
+     <!-- /header-nav --> 
+    </div>
+    <!-- /l-constrained--> 
+   </header> 
+   <!-- / header --> 
+   <div class="l-constrained alerts"></div> 
+   <div id="content" class="site-content"> 
+    <div class="l-content"> 
+     <div class="l-constrained container contentbody"> 
+      <section class="l-top-content"> 
+       <div class="adunit"> 
+        <div class="widget-advertisement advertisement pnLeaderboard"> 
+         <div id="pnLeaderBoardStickyBG"> 
+          <div> 
+           <div id="gpt-billboard"></div> 
+           <div id="pn-leaderboard-ad-large"> 
+            <div id="gpt-leaderboard" class="pn_dfpads adslot" data-ad="[[728,90],[970,90],[970,250],[1200,90],[1200,250]]" data-ad-sticky="[[728, 90], [970, 90]]" data-ad-sticky-sec="2"> 
+            </div> 
+           </div> 
+          </div> 
+         </div> 
+        </div> 
+       </div> 
+      </section> 
+      <div class="l-main" id="main"> 
+       <span itemprop="publisher" itemscope itemtype="https://schema.org/Organization"></span> 
+       <span itemprop="logo" itemscope itemtype="https://schema.org/ImageObject"></span> 
+       <meta itemprop="url" content="https://postmediawindsorstar2.files.wordpress.com/2015/11/ws_300x300_rgb.png"> 
+       <meta itemprop="width" content="120"> 
+       <meta itemprop="height" content="120">  
+       <meta itemprop="name" content="Windsor Star">  
+       <article id="post-0730600d-35bc-4531-8e60-62bcb248945d" class="l-article post-0730600d-35bc-4531-8e60-62bcb248945d post type-post status-publish format-standard has-post-thumbnail hentry category-special-features-3 tag-amherstburg tag-caesars-windsor tag-canada tag-chatham-kent tag-community-calendar tag-essex tag-kingsville tag-lakeshore tag-lasalle tag-leamington tag-tecumseh tag-university-of-windsor tag-windsor"> 
+        <header class="entry-header"> 
+         <h1 itemprop="headline" class="entry-title">What's going on in Windsor-Essex</h1> 
+         <div class="entry-content"> 
+          <p> </p> 
+         </div> 
+         <div class="entry-details byline"> 
+          <div class="author-wrap"> 
+           <a href="https://windsorstar.com/author/custom-content-studio" class="author" itemprop="name"><span class="name">Custom Content Studio</span></a> 
+          </div> 
+          <div class="byline-dates">
+            Updated: December 2, 2019 
+          </div> 
+         </div> 
+        </header>
+        <!-- .entry-header --> 
+        <div class="entry-content p402_premium"> 
+         <figure class="align-none wp-caption post-img" id="post-1214062media-1214062" itemprop="image" itemscope itemid="https://postmediawindsorstar2.files.wordpress.com/2018/01/holiday-community-calendar-logo-for-web-1.jpg?quality=80&amp;strip=all&amp;w=840&amp;h=630&amp;crop=1" itemtype="https://schema.org/ImageObject"> 
+          <img class="wp-post-image" alt="" src="https://postmediawindsorstar2.files.wordpress.com/2018/01/holiday-community-calendar-logo-for-web-1.jpg?quality=80&amp;strip=all&amp;w=840&amp;h=630&amp;crop=1" width="840" height="630"> 
+          <meta itemprop="url" content="https://postmediawindsorstar2.files.wordpress.com/2018/01/holiday-community-calendar-logo-for-web-1.jpg?quality=80&amp;strip=all&amp;w=840&amp;h=630&amp;crop=1"> 
+          <meta itemprop="width" content="840"> 
+          <meta itemprop="height" content="630"> 
+         </figure> 
+         <div class="article-actions"> 
+          <a href="#" class="icon-share" data-modal-target="#modal-share">Share</a> 
+          <a href="#" class="icon-adjust">Adjust</a> 
+          <a href="#" class="icon-comment">Comment</a> 
+          <a href="javascript:window.print();" class="icon-print">Print</a> 
+         </div> 
+         <div itemprop="articleBody"> 
+          <p>Great things are happening for good causes in Windsor-Essex.</p>
+          <p>Community organizations are holding fundraisers, information meetings and celebrations and they want you to know about them. And we would like to help them.</p>
+          <p>If you have an upcoming event that you would like to see featured in the&nbsp;<em>Star’s</em>&nbsp;Community Calendar, send your press release or poster in an email to&nbsp;<a href="mailto:specialfeatures@windsorstar.com" target="_blank" rel="noopener">specialfeatures@windsorstar.com</a>&nbsp;and&nbsp;we’ll spread the word.</p>
+          <hr>
+          <figure id="attachment_" style="width:2694px;" class="wp-caption post-img size_this_image_test aligncenter" itemprop="associatedMedia" itemscope itemid="photo url" itemtype="https://schema.org/ImageObject">
+           <img src="https://postmediawindsorstar2.files.wordpress.com/2018/01/saints8.jpg?quality=55&amp;strip=all&amp;w=640">
+           <figcaption class="wp-caption-text wp-caption"> 
+            <p> <span class="img-caption"> The S’Aints band, shown performing at the Caesars Windsor Colosseum in 2016, return with another fundraising concert to “sleigh hunger” on Friday, Dec. 20.</span> <span class="img-author"> <span itemprop="creator">DAN JANISSE/Windsor Star</span></span> </p> 
+           </figcaption> 
+          </figure>
+          <h1><span style="color:#ff0000;">December 2019</span></h1>
+          <p><strong>Dec. 3</strong>: <span class="s1">Windsor Symphony Orchestra’s Handel’s Messiah: From Entertainment to Oratorio, part of the Amici Musicae lecture series, will be at the Riverside Library at 1 p.m. Prof. Charles Edward McGiuire will deliver the lecture on DVD.</span></p>
+          <p><strong>Dec. 3</strong>: Giving Tuesday, a grassroots global movement to give back to charities that followed Black Friday and Cyber Monday, involves the participation of a number of non-profit groups. <a href="https://connectwithus.ca/" target="_blank" rel="noopener">Connections Early Years Family Centre</a>&nbsp; is asking the community to consider donating to the centre to support its Elevator Fund. Donations will be matched up to its goal amount of $1,000 by matching partner Jason Campbell of Sterling Mutuals Inc. Travis, the centre’s youngest donor, made a video about why he gives a portion of his allowance to the centre which you can view by clicking on this <a href="https://www.youtube.com/watch?v=5sC10Y8_g6g" target="_blank" rel="noopener">link</a>. To donate, click <a href="https://www.canadahelps.org/en/charities/connections-early-years-family-centre/" target="_blank" rel="noopener">here</a>.</p>
+          <p><strong>Dec. 4</strong>: The Windsor-Essex Regional Chamber of Commerce’s&nbsp;<span class="s1"> 143rd Annual General Meeting will be held at the Ciociaro Club (3745 North Talbot Rd., Windsor) from 11:30 a.m. to 1:30 p.m. Keynote addresses will be from Aaron Epstein, CEO &amp; Project Director of Bridging North America and Bryce Phillips, CEO of Windsor-Detroit Bridge Authority on the updated status of the Gordie Howe International Bridge. For more information or to register for this or other Windsor-Essex Regional Chamber of Commerce events, click on this <a href="https://business.windsoressexchamber.org/events" target="_blank" rel="noopener">link</a>.</span></p>
+          <p><strong>Dec. 6</strong>: The Windsor-Essex Regional Chamber of Commerce’s annual Multiple Business Holiday Party is at Caesars Windsor from 6 p.m. to midnight. Click <a href="https://business.windsoressexchamber.org/events/details/17th-annual-multiple-business-holiday-party-1144" target="_blank" rel="noopener">here</a> for more information.</p>
+          <p><strong>Dec. 7</strong>: Havana Nights, a Cuban-themed fundraiser to support TLC Animal Aid, will be held at Water’s Edge (2879 Riverside Dr. E., Windsor) with cocktails at 6 p.m., dinner at 7 followed by dancing at 9. Tickets are $65 and there are group discounts. The evening features Cuban drinks, Cuban fine dining and Cuban music with Latin Fiesta, DJ Chino and drummer Teajai Travis. For more information, call 519-257-1983 or email <a href="mailto:info@watersedgeeventcentre.ca" target="_blank" rel="noopener">info@watersedgeeventcentre.ca</a>.</p>
+          <p><strong>Dec. 7</strong>: A Windsor Symphony Orchestra annual tradition, Handel’s timeless classic Messiah features four outstanding soloists and the WSO at Leamington United Mennonite Church (78 Oak St. E.) at 7:30 p.m. For more information and tickets, click <a href="http://www.windsorsymphony.com/event/0c36a203ca11e4cc967e02014dad1c05/Handels-Messiah----Leamington?linkNum=3&amp;campaignID=355307&amp;patronID=1054448755&amp;memberID=d44fc8645781cdf75d9e98780b4fd52f" target="_blank" rel="noopener">here</a>.</p>
+          <p><strong>Dec. 7</strong>: <span class="s1">The Bank Theatre (</span><span class="s1">10 Erie Street S., Leamington) </span><span class="s1">presents Francine Honey’s “Take Me To The North Pole” album release party. Doors open at 6:30 p.m., followed by the show at 7:30 p.m. The i</span><span class="s1">nternational award-winning Canadian bilingual singer-songwriter and recording artist </span><span class="s1">will be joined by her band the Stingers in presenting a fantasy ride in Santa’s sleigh to the north with a moving southern swagger.&nbsp;</span><span class="s1">Ticket, $25, are available at box office Thursday to Saturday, 11 a.m. to 2 p.m., by calling the hotline at 519-326-8805 or online at <a href="https://urldefense.com/v3/__http://www.banktheatre.com__;!9uxzVPOYHkA!Q-3l_aLvYTUDb8oZcqH-j9gvKO6Htg82eQjD7ifAQVvso7L4aqS-Klt2x9n8q7hDogmr6IQ%24" target="_blank" rel="noopener"><span class="s2">banktheatre.com.</span></a></span></p>
+          <p><strong>Dec. 7</strong>: Miracle in Sandwich includes breakfast and storytime with Santa, a holiday market, tours of the historic McGregor-Cowan Houseand Duff-Baby Mansion, crafts, hot chocolate and more. It runs from 9 a.m. to 6 p.m.m in Windsor’s historic Sandwich Towne. For details, click <a href="https://visitwindsoressex.com/event/miracle-in-sandwich/" target="_blank" rel="noopener">here</a>.</p>
+          <p><strong>Dec. 7-8</strong>: Festival of Christmas, 70 minutes of glorious choral music in each performance featuring <span class="s1">UWindsor Chamber Choir and University Singers director </span><span class="s1">Dr. Bruce J.G. Kotowich, will be at the Heritage Auditorium (400 Huron Church Rd., Windsor) for performances at 2:30 p.m. both days.&nbsp;</span><span class="s1">Tickets are $20 or $10 for students with ID. Hot chocolate and cookies served. To purchase tickets for the Saturday, click <a href="https://urldefense.com/v3/__http://web2.uwindsor.ca/its/wsg/wsg-mailer/mail-redirect.php?d-id=9160807&amp;l-id=3973372&amp;s-id=4562&amp;url=http:**Awww.uwindsor.ca*music*577*festival-christmas-saturday__;Ly8vLy8!9uxzVPOYHkA!QgOR8SqgXj1RJ5DDIgHxufQ4pkcVz7DCuKZ762ivrpYpPvVhjMGPHVKZZWjW208j43X__9Q%24" target="_blank" rel="noopener">here</a> and for the Sunday performance <a href="https://urldefense.com/v3/__http://web2.uwindsor.ca/its/wsg/wsg-mailer/mail-redirect.php?d-id=9160807&amp;l-id=3973372&amp;s-id=4562&amp;url=http:**Awww.uwindsor.ca*music*578*festival-christmas-sunday__;Ly8vLy8!9uxzVPOYHkA!QgOR8SqgXj1RJ5DDIgHxufQ4pkcVz7DCuKZ762ivrpYpPvVhjMGPHVKZZWjW208jJqVsLnI%24" target="_blank" rel="noopener">here</a>.</span></p>
+          <p><strong>Dec. 8</strong>: Breakfast with Santa at the Riverside Royal Canadian Legion Br. 255 (5645 Wyandotte St., Windsor) includes breakfast (scrambled eggs, bacon, sausage, pancakes, home fries, juice, coffee or tea) and features Collective Ensemble from Pure Dance Academy, crafts, cookie decorating and Santa and Mrs. Claus plus a gift from Santa along with so much more. Cost is $10 for adults, $7.50 for children 6-10 and free for children five and under. The event runs from 10 a.m. to 2 p.m.</p>
+          <p><strong>Dec. 8</strong>: A <span class="s1">Christmas Musical Presentation by the adult and children’s choirs of Cottam United Church (137 County Road 34W, Cottam) will be held at 10:15 a.m. and 7 p.m. Free will offering gratefully accepted. Refreshments follow the evening program.&nbsp; For info call 519-839-4266.</span></p>
+          <p><strong>Dec. 8</strong>: Club SoDA at the University of Windsor is holding a holiday double feature screening of the classic 1966 movie How the Grinch Stole Christmas and Home Alone at the Jackman Dramatic Art Centre Studio Theatre. Doors open at 7 p.m. and the movies start at 7:30 p.m. The movies are open to the Windsor-Essex community and Club SoDA asks to pay what you can. Snacks, including hot chocolate, candy canes and other sweets and treats, are available for purchase and a photo booth will be set up with some of your favourite Christmasey characters. Bring the family and your most comfortable sweater and blanket and get snuggly for the movies.</p>
+          <p><strong>Dec. 8</strong>: A Windsor Symphony Orchestra annual tradition, Handel’s timeless classic Messiah features four outstanding soloists and the WSO at St. Anne’s Church (12233 Tecumseh Rd. E., Tecumseh) at 7:30 p.m. For more information and tickets, click <a href="http://www.windsorsymphony.com/event/af6a4eac63d314d3464846b12424e5b4/Handels-Messiah---Tecumseh?linkNum=4&amp;campaignID=355307&amp;patronID=1054448755&amp;memberID=d44fc8645781cdf75d9e98780b4fd52f" target="_blank" rel="noopener">here</a>.</p>
+          <p><strong>Dec. 8</strong>: Christmas in the Country at John R. Park Homestead (915 Essex Cty. Rd. 50, Essex) lets you enjoy the homestead in all its holiday splendour with cider, roasted chestnuts. St. Nicholas’s historic counterparts (Ruprecht and Belsnickel) and making a gingerbread cookie and traditional ornament to take home. Cost is $6 for adults, $4 children 3-16 years and $20 per family maximum. For more details, click <a href="https://essexregionconservation.ca/education-and-events/christmas-in-the-country-2/" target="_blank" rel="noopener">here</a>.</p>
+          <p><strong>Dec. 8</strong>: Enjoy a free showing of the movie Elf, starring Will Ferrell, at the Olde Walkerville Theatre at 1 and 4 p.m. A donation of two non-perishable food items is appreciated. Doors open half an hour before showtime. For more details, click <a href="https://www.oldewalkervilletheatre.com/elf?fbclid=IwAR3Ro8wrQm97NgceiM41QqrJqpXWC3Sv50QrsOAvVM8KuLMmlNTxmszdOpw" target="_blank" rel="noopener">here</a>.</p>
+          <p><strong>Dec. 8</strong>: <a href="http://www.greaterwindsorconcertband.ca/" target="_blank" rel="noopener">The Greater Windsor Concert Band,</a> under the musical direction of Ric Moor, presents Celebrate Glad Tidings, a Christmas concert at the Royal Canadian Legion’s Br. 261 (12326 Lanoue, at Lesperance Rd., Tecumseh) at 3 p.m. There will be prizes, a bake sale and Christmas CD, as well as a photo op with Santa at the intermission. Tickets $15, or $10 seniors/students and $35 for a family (maximum of two adults). For more information, call 519-979-1686, email <a href="mailto:info@greaterwindsorconcertband.ca" target="_blank" rel="noopener">info@greaterwindsorconcertband.ca</a> or visit <a href="http://www.greaterwindsorconcertband.ca/" target="_blank" rel="noopener">greaterwindsorconcertband.ca</a>.</p>
+          <p><strong>Dec. 10</strong>: John R. Park Homestead (<span class="tribe-address"><span class="tribe-street-address">915 Essex Cty. Rd 50, </span><span class="tribe-locality">Essex) invites you to Candlelight Christmas from 7-9 p.m. The 1842 house will be decorated with natural materials from forest and farm. Costumed guides will lead visitors on a tour with stops giving you a flavour of the days of John and Amelia Park. Cost is $15. For more details, click <a href="https://essexregionconservation.ca/education-and-events/candlelight-christmas/" target="_blank" rel="noopener">here</a>.</span></span></p>
+          <p><strong>Dec. 13-15</strong>: Windsor Dance eXperiences presents New Adventures in Toyland, an all-ages performance at the Capitol Theatre (121 University Ave. W., Windsor), with shows at 7 p.m. both nights and a 2:30 p.m. matinee Sunday. For tickets and more information, click <a href="http://www.capitoltheatrewindsor.ca/event/new-adventures-in-toyland/" target="_blank" rel="noopener">here</a>.</p>
+          <p><strong>Dec. 13-15</strong>: C.C.’s Events eight annual Handmade Christmas Extravaganza, Windsor’s largest indoor craft show, takes place at the WFCU Centre (8787 McHugh St., Windsor) Dec. 13 from 4:30-8:30 p.m. and on the weekend from 10 a.m. to 4 p.m. Admission is free but donations to aid local school breakfast programs are appreciated. For more information, click on this Facebook <a href="https://www.facebook.com/events/1225145647677866/?active_tab=about" target="_blank" rel="noopener">page</a>.</p>
+          <p><strong>Dec. 14:</strong> The Riverside Royal Canadian Legion Br. 255 Ladies Auxiliary presents SantaRama: The Pub Crawl Before Christmas! with stops at the Howard Legion 594, Tilbury Legion 206, Tecumseh Legion 261 and Riverside Legion 255. Bus leaves Br. 255 at 11:30 a.m. sharp. Tickets are $20 for the bus ride and $20 for dinner. Santa hat included.</p>
+          <p><strong>Dec. 14</strong>: All-you-can-eat Christmas Turkey Dinner, hosted by the Ladies Auxiliary of Royal Canadian Legion Br. 255, comes with all the fixings: Stuffing, cranberry sauce, vegetable, mashed potato, homemade gravy, salad, bun roll and pie. Dinner is served around 6:30 p.m. Cost is $20.</p>
+          <p><strong>Dec. 15</strong>: The <a href="https://www.ctmhv.com/" target="_blank" rel="noopener">Canadian Transportation Museum &amp; Heritage Village</a> (6155 Arner Townline, Kingsville) presents Breakfast with Santa! from 8 a.m. to 2 p.m. Santa visits from 9-11 a.m. and again from 11:30 a.m. to 1 p.m. PURE Dance Academy dancers perform from 9-9:45 a.m., breakfast buffet from 8 a.m. to 2 p.m. Cost is $13.95 adults, $7 kids. Call 519-776-6909.</p>
+          <p><span class="s1"><strong>Dec. 15</strong></span>: <span class="s1">Windsor Minor Lacrosse is holding a free Try Lacrosse clinic at Central Park Athletics (3400 Grand Marais E., Windsor) for boys and girls, 3 to 21 years old. Hockey helmet and gloves are required but loaner sticks are available. Paperweight-Novice tryout is from 11 a.m. to 12 noon, Peewee-Intermediate from 12 noon to 1 p.m. Visit <a href="https://urldefense.com/v3/__http://www.warlockslacrosse.com__;!9uxzVPOYHkA!SN71e_h6aDqtg9mut-x1EOHgLTXuUL71uAvxp_dVLAtuvlHlffYvOc28zXdsJx3e3NiSyj0%24" target="_blank" rel="noopener"><span class="s2">www.warlockslacrosse.com</span></a>&nbsp; for more info. Registration available in person.&nbsp;</span></p>
+          <p><strong>Dec. 18</strong>: The Windsor-Essex Regional Chamber of Commerce’s&nbsp;<span class="s1">December After Business Mini Trade Show 2019 will be held at the Essex Golf and Country Club (7555 Matchette Rd., Windsor) from 5-7 p.m. To register, click on this <a href="https://windsorchamberon.chambermaster.com/eventregistration/register/1155" target="_blank" rel="noopener">link</a>.</span></p>
+          <p><strong>Dec. 20</strong>: The S’Aints join forces with St. Clair College and Caesars Windsor to “sleigh hunger” with an<i> </i>all ages, annual fundraising <a href="https://www.caesars.com/caesars-windsor/shows/the-saints#.XeVon78nZ25" target="_blank" rel="noopener">concert</a> at Caesars Windsor’s The Colosseum stage<b>&nbsp;</b>at 8 p.m. The band features local and world-renowned talents: lead vocalist Jody Raffoul, Tea Party drummer Jeff Burrows, Wes Buckley, Kelly “Mr. Chill” Hoppe, David Cyrenne, Kelly Authier, Marty Bak, Liz Robinson and Stephanie Baker. All proceeds from concert ticket sales and the accompanying holiday CD stay within the local community. To purchase tickets, click on this <a href="https://www1.ticketmaster.ca/the-saints/event/1000574F1AAB65DB?CAMEFROM=CFC_CAESARS_WINDSOR_WEB_WEBSITE_THESAINTS&amp;camefrom=CFC_CAESARSENT_WCL_THESAINTSALLAGES" target="_blank" rel="noopener">link</a>.</p>
+          <hr>
+          <h1><span style="color:#ff0000;">January 2020</span></h1>
+          <p><strong>Jan. 11-12</strong>: <a href="https://weddingodyssey.ca/show-details/" target="_blank" rel="noopener">The Wedding Odyssey</a> at the Ciociaro Club (3745 North Talbot Rd., Windsor) runs 10 a.m. to 5 p.m. Saturday and Sunday, with fashions shows at 1 p.m. both days. Admission is $12 at the door. Register online at this <a href="https://weddingodyssey.ca/wedding-registration/" target="_blank" rel="noopener">link</a> and receive a $2 off admission coupon. For more information, call 519-978-9477 or email <a href="mailto:weddingodyssey@yahoo.com" target="_blank" rel="noopener">weddingodyssey@yahoo.com</a>.</p>
+          <p><strong>Jan. 17</strong>: The Windsor Symphony Orchestra performs Giacomo Puccini’s Madama Butterfly at The Capitol Theatre (121 University Ave. W., Windsor) at 7:30 p.m. Maestro Robert Franz has assembled a top-flight, all-Canadian cast of singers to perform the opera. Pre-concert talk at 1:30 p.m. For tickets, click on this <a href="http://www.capitoltheatrewindsor.ca/event/madama-butterfly-in-concert-2/" target="_blank" rel="noopener">link</a>.</p>
+          <p><strong>Jan. 25</strong>: Peter and the Wolf, one of the most beloved and enchanting symphonic tales for children, will be performed by the WSO at the Capitol Theatre (121 University Ave. W., Windsor) from 11 a.m. to 1 p.m. as part of its Concerts for Kids series, ideal for children ages four to eight. Discover how each instrument is used to represent a character in the story. Before each concert, there is craft activity related to the concert theme. Tickets $45. To purchase them, click <a href="http://www.capitoltheatrewindsor.ca/event/concert-for-kids-peter-and-the-wolf/" target="_blank" rel="noopener">here</a>.</p>
+          <p>&nbsp;</p>
+          <hr>
+          <figure id="attachment_" style="width:1350px;" class="wp-caption post-img size_this_image_test aligncenter" itemprop="associatedMedia" itemscope itemid="photo url" itemtype="https://schema.org/ImageObject">
+           <img src="https://postmediawindsorstar2.files.wordpress.com/2018/01/lights2.jpg?quality=55&amp;strip=all&amp;w=640">
+           <figcaption class="wp-caption-text wp-caption"> 
+            <p> <span class="img-caption"> People check out the sights at the Bright Lights Windsor display at the Jackson Park last year. The holiday light show officially opens this season on Dec. 6 and continues through to Jan. 6, 2020.</span> <span class="img-author"> <span itemprop="creator">DAN JANISSE/THE WINDSOR STAR</span></span> </p> 
+           </figcaption> 
+          </figure>
+          <h1><span style="color:#ff0000;">Ongoing</span></h1>
+          <p><a href="https://www.citywindsor.ca/residents/Recreation/Special-Events/bright-lights-windsor/Pages/default.aspx" target="_blank" rel="noopener">Bright Lights Windsor</a>,&nbsp; featuring a giant illuminated tree in the Queen Elizabeth II Sunken Gardens, thousands of lights and holiday characters and food and vendors, continues at Jackson Park (125 Tecumseh Rd. E., Windsor) until Jan. 7, 2020. Opening ceremonies are Friday, Dec. 6 from 5:30-10 p.m.</p>
+          <p>A <a href="https://visitwindsoressex.com/event/a-signature-christmas-indoor-artist-market/" target="_blank" rel="noopener">Signature Christmas Indoor Artist Market</a>, at the Leamington Arts Centre (72 Talbot St., Leamington), is an annual arts and crafts show which offers unique and beautiful gifts. It continues until Saturday, Dec. 21.</p>
+          <p><a href="https://www.kingsville.ca/en/explore-and-play/fantasy-of-lights.aspx" target="_blank" rel="noopener">Kingsville Fantasy of Lights,</a> which runs until Jan. 8, 2020, features all kinds of events for the whole family.</p>
+          <p>The <a href="https://visitamherstburg.ca/events/river-lights-winter-festival/" target="_blank" rel="noopener">River Lights Festival</a> in Amherstburg features hundreds of customized festive light displays, interactive photo ops and a life-size Gingerbread Warming House. The fest continues until Feb. 16, 2020.</p>
+          <p><a href="https://oa.org/" target="_blank" rel="noopener">Overeaters Anonymous</a>&nbsp;meets at Banwell Community Church (2400 Banwell Rd., Windsor) Tuesdays at 10 a.m. (open meeting, room 6), Wednesdays at 7 p.m. (open meeting, room 1) and Fridays at 10 a.m. (big book study, room 6). No dues, fees, weigh-ins or diets. For Tuesdays, contact Sylvia (226-350-7577<strong>)</strong>, Wednesdays Mary (226-260-4044) and Fridays Corinne (519-995-0015).</p>
+          <p><a href="https://www.agw.ca/exhibition/482" target="_blank" rel="noopener">Look Again</a>! The AGW Collection at 75 Years Exhibition at the Art Gallery of Windsor is part of the AGW’s commitment to providing an opportunity&nbsp;for sustained engagement in learning about art in Canada and to support visitor experience and student learning.&nbsp;This exhibition continues to profile themes of&nbsp;<em>Canadian Heritage and the Land&nbsp;</em>and&nbsp;<em>Portraiture and the Body</em>, and celebrates the historical collections leading to the 20<sup>th</sup>&nbsp;century, including many favourite works from artists such as Prudence Heward, Emily Carr, members of the Group of Seven and their contemporaries. Admission is $10 for non-members or free to AGW members. The gallery is located at&nbsp;401 Riverside Drive West. Call&nbsp;519-977-0013.</p>
+          <p><a href="http://www.maycourtclubs.org/our-clubs" target="_blank" rel="noopener">May Court Club</a> of Windsor, staffed by volunteers, fundraises for local child and youth programs through sales at its store at 1122 Wyandotte St. E. Last year, it distributed $28,000 and the year before almost $40,000 to about 18 organizations that applied yearly. For more information, visit their Facebook <a href="https://www.facebook.com/pg/The-May-Court-Club-of-Windsor-421088428049508/about/?ref=page_internal" target="_blank" rel="noopener">page</a>.</p>
+          <p>“<a href="https://www.facebook.com/knowyourneighbourwindsoressex/" target="_blank" rel="noopener">Know Your Neighbour</a>” is a Windsor-Essex campaign started by a Community Action Group of local leaders through United Way. Through a collaborative series of open houses, social media campaigns and hard-copy handouts, Housing with Support (HWS) organizations want to know what is going well in our neighbourhoods and what is not? How can we work together to solve neighbour related problem? Know Your Neighbour is encouraging all citizens and businesses to come and talk with HWS organizations like Victoria Manor, Iris House, and Devonshire Lodge (among 17 others). How can we improve our neighbourhoods, and feel more comfortable living together? Visit their Facebook page at this <a href="https://www.facebook.com/knowyourneighbourwindsoressex/" target="_blank" rel="noopener">link</a>.</p> 
+         </div> 
+         <div class="clearfix"></div> 
+         <nav role="navigation" id="nav-below" class="pagination post-navigation"> 
+          <nav class="pagination"> 
+           <a href="https://windsorstar.com/sponsored/business-sponsored/moving-made-easy-2" class="next"> <span class="tablet-up pag-content"> <img src="https://postmediawindsorstar2.files.wordpress.com/2018/03/seniors-moving-house.jpg?quality=80&amp;strip=all&amp;w=150" alt="" class="attachment-post-thumbnail wp-post-image"> <span> Moving made easy</span> </span> </a> 
+           <a href="https://windsorstar.com/special-features-3/let-us-help-you-celebrate" class="previous"> <span class="tablet-up pag-content"> <img src="https://postmediawindsorstar2.files.wordpress.com/2018/01/armandos-50th-cropped-4x31.jpg?quality=80&amp;strip=all&amp;w=150" alt="" class="attachment-post-thumbnail wp-post-image"> <span> Let us help you celebrate</span> </span> </a> 
+          </nav> 
+         </nav>
+         <!-- #nav-below --> 
+         <footer class="entry-meta"> 
+         </footer>
+         <!-- .entry-meta --> 
+        </div>
+        <!-- .entry-content --> 
+       </article>
+       <!-- #post-## --> 
+       <div class="section-header-wrap"> 
+        <h2 class="flyers-header"><span>This Week's Flyers</span></h2> 
+       </div> 
+       <div id="flyertown_module_14785"></div>
+       <style>.pm_layouts_news_ticker .flyer-ticker{min-height:334px;}.widget_postmediaflyercitywidget{min-height:430px;}@media only screen and (max-width:1024px){.pm_layouts_news_ticker .flyer-ticker{min-height:320px}}@media only screen and (max-width:768px){.pm_layouts_news_ticker .widget.flyer-ticker{min-height:272px}}</style>
+       <script defer src="https://api.flyertown.ca/14785/c7116ccc726dfadb/flyertown_module.js"></script> 
+      </div>
+      <!-- / main --> 
+      <aside id="sidebar" class="l-sidebar"> 
+       <div id="postmedia_layouts_ad-top" class="widget-wrap clearfix widget_postmedia_layouts_ad widget-sticky adsizewrapper " style="height:1200px;">
+        <div class="widget"> 
+         <div id="gpt-bigboxtop" class="pn_dfpads adslot" data-ad="[[300,250],[300,251],[300,600],[300,601],[300,1050]]"> 
+         </div> 
+        </div>
+       </div>
+       <div id="pn_socialmedia_widget-28" class="track_event--1 widget pn_socialmedia_widget"> 
+        <h2 class="cat-head"><span>Connect With Us</span></h2> 
+        <div id="social_media_widget" class="widget"> 
+         <ul> 
+          <li class="fb"><a href="https://www.facebook.com/windsorstar" target="_blank"></a></li> 
+          <li class="twitter"><a href="https://twitter.com/thewindsorstar" target="_blank"></a></li> 
+          <li class="rss"><a href="/feed" target="_blank"></a></li> 
+         </ul> 
+        </div> 
+       </div>
+       <div id="postmedia_polarmediavoice-11" class="track_event--1 widget postmedia_polarmediavoice"> 
+        <div class="rightrail_native_ad"> 
+         <div class="nativead"> 
+          <div class="adcontent"> 
+          </div> 
+         </div> 
+        </div> 
+       </div>
+       <div id="pmlay_lists_widget-55" class="track_event--1 widget widget_pmlay_lists_widget"> 
+        <section class="widget_2 widget-outfit widget-outfit-title-list" data-evt="scroll" data-evt-typ="widget-inview" data-evt-val="{&quot;wdgt&quot;:{&quot;type&quot;:&quot;Sidebar Outfit&quot;,&quot;name&quot;:&quot;Title&quot;,&quot;pos&quot;:&quot;-1&quot;},&quot;storyPos&quot;:&quot;7&quot;,&quot;feed&quot;:[{&quot;name&quot;:&quot;Chartbeat Trending&quot;,&quot;id&quot;:&quot;0&quot;,&quot;type&quot;:&quot;chrt&quot;,&quot;pos&quot;:&quot;0&quot;}],&quot;story&quot;:{&quot;id&quot;:&quot;&quot;,&quot;title&quot;:&quot;&quot;}}"> 
+         <header id="section-header" class="section-header "> 
+          <div id="section-label" class="section-label  clearfix"> 
+           <h2 class="cat-head
+												"> <span>Most Popular Now</span> </h2> 
+           <div id="section-body"></div> 
+          </div> 
+         </header> 
+         <ul class="posts-list dotted-line hfeed "> 
+          <li class="
+						"> 
+           <article class="post post-excerpt hentry track_event" data-evt="click" data-evt-typ="widget" data-evt-val="{&quot;wdgt&quot;:{&quot;type&quot;:&quot;Sidebar Outfit&quot;,&quot;name&quot;:&quot;Title&quot;,&quot;pos&quot;:&quot;-1&quot;},&quot;storyPos&quot;:&quot;1&quot;,&quot;feed&quot;:[{&quot;name&quot;:&quot;Chartbeat Trending&quot;,&quot;id&quot;:&quot;0&quot;,&quot;type&quot;:&quot;chrt&quot;,&quot;pos&quot;:&quot;0&quot;}],&quot;story&quot;:{&quot;id&quot;:&quot;&quot;,&quot;title&quot;:&quot;&quot;}}"> 
+            <header> 
+             <h4 class="entry-title"><a href="https://windsorstar.com/entertainment/music/kid-rock-opens-up-about-foul-mouthed-oprah-winfrey-rant" target="_blank" rel="bookmark" title="">Kid Rock opens up about foul-mouthed Oprah Winfrey rant | Windsor Star</a></h4> 
+            </header> 
+           </article> </li> 
+          <li class="
+						"> 
+           <article class="post post-excerpt hentry track_event" data-evt="click" data-evt-typ="widget" data-evt-val="{&quot;wdgt&quot;:{&quot;type&quot;:&quot;Sidebar Outfit&quot;,&quot;name&quot;:&quot;Title&quot;,&quot;pos&quot;:&quot;-1&quot;},&quot;storyPos&quot;:&quot;2&quot;,&quot;feed&quot;:[{&quot;name&quot;:&quot;Chartbeat Trending&quot;,&quot;id&quot;:&quot;0&quot;,&quot;type&quot;:&quot;chrt&quot;,&quot;pos&quot;:&quot;0&quot;}],&quot;story&quot;:{&quot;id&quot;:&quot;&quot;,&quot;title&quot;:&quot;&quot;}}"> 
+            <header> 
+             <h4 class="entry-title"><a href="https://windsorstar.com/entertainment/music/pussycat-dolls-raunchy-nearly-naked-tv-reunion-sparks-400-complaints" target="_blank" rel="bookmark" title="">Pussycat Dolls’ raunchy ‘nearly naked’ reunion sparks 400 complaints | Windsor Star</a></h4> 
+            </header> 
+           </article> </li> 
+          <li class="
+						"> 
+           <article class="post post-excerpt hentry track_event" data-evt="click" data-evt-typ="widget" data-evt-val="{&quot;wdgt&quot;:{&quot;type&quot;:&quot;Sidebar Outfit&quot;,&quot;name&quot;:&quot;Title&quot;,&quot;pos&quot;:&quot;-1&quot;},&quot;storyPos&quot;:&quot;3&quot;,&quot;feed&quot;:[{&quot;name&quot;:&quot;Chartbeat Trending&quot;,&quot;id&quot;:&quot;0&quot;,&quot;type&quot;:&quot;chrt&quot;,&quot;pos&quot;:&quot;0&quot;}],&quot;story&quot;:{&quot;id&quot;:&quot;&quot;,&quot;title&quot;:&quot;&quot;}}"> 
+            <header> 
+             <h4 class="entry-title"><a href="https://windsorstar.com/news/local-news/windsor-woman-dies-in-chatham-kent-crash" target="_blank" rel="bookmark" title="">Windsor woman dies in Chatham-Kent crash | Windsor Star</a></h4> 
+            </header> 
+           </article> </li> 
+          <li class="
+						"> 
+           <article class="post post-excerpt hentry track_event" data-evt="click" data-evt-typ="widget" data-evt-val="{&quot;wdgt&quot;:{&quot;type&quot;:&quot;Sidebar Outfit&quot;,&quot;name&quot;:&quot;Title&quot;,&quot;pos&quot;:&quot;-1&quot;},&quot;storyPos&quot;:&quot;4&quot;,&quot;feed&quot;:[{&quot;name&quot;:&quot;Chartbeat Trending&quot;,&quot;id&quot;:&quot;0&quot;,&quot;type&quot;:&quot;chrt&quot;,&quot;pos&quot;:&quot;0&quot;}],&quot;story&quot;:{&quot;id&quot;:&quot;&quot;,&quot;title&quot;:&quot;&quot;}}"> 
+            <header> 
+             <h4 class="entry-title"><a href="https://windsorstar.com/news/local-news/man-gets-house-arrest-for-defrauding-employer-of-almost-1-million" target="_blank" rel="bookmark" title="">Man gets house arrest for defrauding employer of almost $1 million | Windsor Star</a></h4> 
+            </header> 
+           </article> </li> 
+          <li class="
+						"> 
+           <article class="post post-excerpt hentry track_event" data-evt="click" data-evt-typ="widget" data-evt-val="{&quot;wdgt&quot;:{&quot;type&quot;:&quot;Sidebar Outfit&quot;,&quot;name&quot;:&quot;Title&quot;,&quot;pos&quot;:&quot;-1&quot;},&quot;storyPos&quot;:&quot;5&quot;,&quot;feed&quot;:[{&quot;name&quot;:&quot;Chartbeat Trending&quot;,&quot;id&quot;:&quot;0&quot;,&quot;type&quot;:&quot;chrt&quot;,&quot;pos&quot;:&quot;0&quot;}],&quot;story&quot;:{&quot;id&quot;:&quot;&quot;,&quot;title&quot;:&quot;&quot;}}"> 
+            <header> 
+             <h4 class="entry-title"><a href="https://windsorstar.com/opinion/columnists/guest-column-anesthesiologist-shortage-could-be-solved-with-nurse-anesthetists" target="_blank" rel="bookmark" title="">Guest column: Anesthesiologist shortage could be solved with nurse anesthetists | Windsor Star</a></h4> 
+            </header> 
+           </article> </li> 
+          <li class="
+						"> 
+           <article class="post post-excerpt hentry track_event" data-evt="click" data-evt-typ="widget" data-evt-val="{&quot;wdgt&quot;:{&quot;type&quot;:&quot;Sidebar Outfit&quot;,&quot;name&quot;:&quot;Title&quot;,&quot;pos&quot;:&quot;-1&quot;},&quot;storyPos&quot;:&quot;6&quot;,&quot;feed&quot;:[{&quot;name&quot;:&quot;Chartbeat Trending&quot;,&quot;id&quot;:&quot;0&quot;,&quot;type&quot;:&quot;chrt&quot;,&quot;pos&quot;:&quot;0&quot;}],&quot;story&quot;:{&quot;id&quot;:&quot;&quot;,&quot;title&quot;:&quot;&quot;}}"> 
+            <header> 
+             <h4 class="entry-title"><a href="https://windsorstar.com/news/local-news/amherstburg-diageo-workers-ratify-3-year-contract" target="_blank" rel="bookmark" title="">Amherstburg Diageo workers ratify 3-year contract | Windsor Star</a></h4> 
+            </header> 
+           </article> </li> 
+          <li class="
+						"> 
+           <article class="post post-excerpt hentry track_event" data-evt="click" data-evt-typ="widget" data-evt-val="{&quot;wdgt&quot;:{&quot;type&quot;:&quot;Sidebar Outfit&quot;,&quot;name&quot;:&quot;Title&quot;,&quot;pos&quot;:&quot;-1&quot;},&quot;storyPos&quot;:&quot;7&quot;,&quot;feed&quot;:[{&quot;name&quot;:&quot;Chartbeat Trending&quot;,&quot;id&quot;:&quot;0&quot;,&quot;type&quot;:&quot;chrt&quot;,&quot;pos&quot;:&quot;0&quot;}],&quot;story&quot;:{&quot;id&quot;:&quot;&quot;,&quot;title&quot;:&quot;&quot;}}"> 
+            <header> 
+             <h4 class="entry-title"><a href="https://windsorstar.com/news/local-news/police-arrest-fleeing-suspect-following-downtown-assault" target="_blank" rel="bookmark" title="">Police arrest fleeing suspect following downtown assault | Windsor Star</a></h4> 
+            </header> 
+           </article> </li> 
+         </ul> 
+        </section> 
+       </div>
+       <div id="postmedia_layouts_ad-mid" class="widget-wrap clearfix widget_postmedia_layouts_ad widget-sticky adsizewrapper " style="height:600px;">
+        <div class="widget"> 
+         <div id="gpt-bigboxmid" class="pn_dfpads adslot" data-ad="[[300,250],[300,252],[300,600],[300,602]]" data-ad-loc="mid"> 
+         </div> 
+        </div>
+       </div>
+       <div id="postmedia_weather_widget-23" class="track_event--1 widget widget_postmedia_weather_widget">
+        <section class="widget_2 widget-outfit-title-list"> 
+         <a href="/weather/" title="Weather"> 
+          <header class="section-header" id="section-header"> 
+           <div class="section-label clearfix" id="section-label"> 
+            <h2 class="cat-head"> <span>Weather</span> </h2> 
+            <div id="section-body"></div> 
+           </div> 
+          </header> </a> 
+        </section> 
+        <div class="widget widget-weather"> 
+         <div class="weather cat-head blue"> 
+          <a href="/weather/"> <h2 alt="View Full Forecast" title="View Full Forecast" class="weather"><span>Weather</span></h2> </a> 
+          <div class="weather-wrap weather-proof is-weather"> 
+           <div class="weather-header"> 
+            <h3 id="pm_weather_body"></h3> 
+            <a href="javascript:void(0);" class="options weather_settings" alt="Customize your Weather" title="Customize your Weather" id="pm_weather_settings"></a> 
+           </div> 
+           <div class="weather-content"> 
+            <ul> 
+             <li class="icon-weather"> 
+              <figure>
+               <img src="" style="width:40px; height:auto;" id="pm_weather_image" alt="">
+              </figure> <span id="pm_weather_details" style="white-space:nowrap;"></span> </li> 
+             <li class="temperature" id="pm_weather_templi"> <p><span id="pm_weather_temp"></span></p> <span>Currently</span> </li> 
+             <li class="feels-like"> <p><span id="pm_weather_real"></span></p> <span>Feels Like</span> </li> 
+            </ul> 
+            <div class="location widget-form"> 
+             <h3>We want you to have the most accurate weather report you can.</h3> 
+             <div id="pm_weather_message">
+              Please enter a valid postal code
+             </div> 
+             <div id="pm_weather_loc_fsa" style="display:block;"> 
+              <div class="input-wrap textbox-wrap"> 
+               <input type="text" placeholder="Enter a valid postal code" title="Enter a valid postal code" name="pm_weather_postal" id="pm_weather_postal"> 
+              </div> 
+              <input type="submit" name="pm_weather_postal_btn" id="pm_weather_postal_btn" value="Save"> 
+             </div> 
+            </div> 
+           </div> 
+          </div> 
+         </div> 
+        </div> 
+        <script type="text/javascript">
+	var weather_path = "https://s1.wp.com/wp-content/themes/vip/postmedia-plugins/postmedia-geolocation/images/";
+
+	var pm_geolocation = [];
+	pm_geolocation[0] = 42.299956473151;
+	pm_geolocation[1] = -83.024647411023;
+	pm_geolocation[2] = "";
+	pm_geolocation[3] = "Windsor";
+	pm_geolocation[4] = "ON";
+
+	// store this in cookie - set it from form in this space - look up lat/lng on gmaps from postal
+	ajaxurl = "https://postmediawindsorstar2.wordpress.com/wp-admin/admin-ajax.php";
+	pm_weather_json_request( 'basic', '' );
+</script> 
+       </div>
+       <div id="traffic_widget-17" class="track_event--1 widget widget_traffic_widget">
+        <div class="widget widget-traffic">
+         <div class="traffic-top traffic">
+          <a href="/traffic/"><h2 alt="Plan Your Route" title="Plan Your Route" class="cat-head traffic" onclick="javascript:location.href=/traffic/"><span>Traffic</span></h2>
+           <div class="traffic_map" style="background-image: url(https://s1.wp.com/wp-content/themes/vip/postmedia-plugins/postmedia-geolocation/images/traffic/traffic_map_7.jpg);"></div></a>
+         </div>
+        </div>
+       </div> 
+       <style>
+				.widget-traffic .traffic-top.traffic .traffic-content ul > li.pm_traffic_construction_list{background-image: url(https://s1.wp.com/wp-content/themes/vip/postmedia-plugins/postmedia-geolocation/images/traffic/construction_icon.png;}
+			</style> 
+       <div id="ownlocal-2" class="track_event--1 widget widget_ownlocal">
+        <var id="ownlocal"></var>
+       </div>
+       <div id="postmedia_layouts_ad-bot" class="widget-wrap clearfix widget_postmedia_layouts_ad widget-sticky adsizewrapper " style="height:500px;">
+        <div class="widget"> 
+         <div id="gpt-bigboxbot" class="pn_dfpads adslot" data-ad="[[300,250],[300,253]]" data-ad-loc="bot"> 
+         </div> 
+        </div>
+       </div>
+      </aside> 
+      <div id="modal-share" class="modal"> 
+       <button class="modal-close" type="button" title="Close (Esc)"></button> 
+       <div class="modal-wrap"> 
+        <header class="modal-header"> 
+         <span class="share">Share this story</span> 
+         <h2 class="modal-title">What's going on in Windsor-Essex</h2> 
+        </header> 
+        <!-- / modal-header --> 
+        <div class="modal-content"> 
+         <ul class="share-icons"> 
+          <li> <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fwindsorstar.com%2Fspecial-features-3%2Fwhats-going-on-in-windsor-essex%2F&amp;t=What%27s%20going%20on%20in%20Windsor-Essex" target="_blank" class="share-icon fb" data-evt="click" data-evt-typ="social-share" data-evt-val="{&quot;chnl&quot;:&quot;facebook&quot;,&quot;loc&quot;:&quot;social share - story modal&quot;}"><span>Facebook</span></a> </li> 
+          <li> <a href="https://twitter.com/intent/tweet?url=https%3A%2F%2Fwindsorstar.com%2Fspecial-features-3%2Fwhats-going-on-in-windsor-essex%2F&amp;text=What%27s%20going%20on%20in%20Windsor-Essex" target="_blank" class="share-icon tw" data-evt="click" data-evt-typ="social-share" data-evt-val="{&quot;chnl&quot;:&quot;twitter&quot;,&quot;loc&quot;:&quot;social share - story modal&quot;}"><span>Twitter</span></a> </li> 
+          <li> <a href="https://www.reddit.com/submit?url=https%3A%2F%2Fwindsorstar.com%2Fspecial-features-3%2Fwhats-going-on-in-windsor-essex%2F&amp;title=What%27s%20going%20on%20in%20Windsor-Essex" target="_blank" class="share-icon reddit" data-evt="click" data-evt-typ="social-share" data-evt-val="{&quot;chnl&quot;:&quot;reddit&quot;,&quot;loc&quot;:&quot;social share - story modal&quot;}"><span>Reddit</span></a> </li> 
+          <li> <a href="mailto:?subject=Windsor%20Star%3A%20What%27s%20going%20on%20in%20Windsor-Essex&amp;body=I%20wanted%20to%20share%20a%20story%20with%20you%20from%20Windsor%20Star%3A%0A%0AWhat%27s%20going%20on%20in%20Windsor-Essex%0A%0Ahttps%3A%2F%2Fwindsorstar.com%2Fspecial-features-3%2Fwhats-going-on-in-windsor-essex%0A" class="share-icon email" data-evt="click" data-evt-typ="social-share" data-evt-val="{&quot;chnl&quot;:&quot;email&quot;,&quot;loc&quot;:&quot;social share - story modal&quot;}"> <span>Email</span> </a> </li> 
+          <li> <a href="https://tumblr.com/widgets/share/tool?canonicalUrl=https%3A%2F%2Fwindsorstar.com%2Fspecial-features-3%2Fwhats-going-on-in-windsor-essex%2F&amp;name=What%27s%20going%20on%20in%20Windsor-Essex&amp;description" target="_blank" class="share-icon tumblr" data-evt="click" data-evt-typ="social-share" data-evt-val="{&quot;chnl&quot;:&quot;tumblr&quot;,&quot;loc&quot;:&quot;social share - story modal&quot;}"><span>Tumblr</span></a> </li> 
+          <li> <a href="https://pinterest.com/pin/create/button/?url=https%3A%2F%2Fwindsorstar.com%2Fspecial-features-3%2Fwhats-going-on-in-windsor-essex%2F&amp;media=https%3A%2F%2Fpostmediawindsorstar2.files.wordpress.com%2F2018%2F01%2Fholiday-community-calendar-logo-for-web-1.jpg%3Fquality%3D80%26strip%3Dall%26w%3D840%26h%3D630%26crop%3D1&amp;description=What%27s%20going%20on%20in%20Windsor-Essex" target="_blank" class="share-icon pin" data-evt="click" data-evt-typ="social-share" data-evt-val="{&quot;chnl&quot;:&quot;pinterest&quot;,&quot;loc&quot;:&quot;social share - story modal&quot;}"><span>Pinterest</span></a> </li> 
+          <li> <a href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https%3A%2F%2Fwindsorstar.com%2Fspecial-features-3%2Fwhats-going-on-in-windsor-essex%2F&amp;title=What%27s%20going%20on%20in%20Windsor-Essex&amp;summary" target="_blank" class="share-icon lin" data-evt="click" data-evt-typ="social-share" data-evt-val="{&quot;chnl&quot;:&quot;linkedin&quot;,&quot;loc&quot;:&quot;social share - story modal&quot;}"><span>LinkedIn</span></a> </li> 
+         </ul> 
+         <!-- / share-social --> 
+        </div> 
+        <!-- / modal-content --> 
+       </div> 
+       <!-- / modal-wrap --> 
+      </div> 
+      <!-- / modal-share --> 
+     </div>
+     <!-- / container --> 
+    </div>
+    <!-- / content --> 
+    <div id="incentive-offer"></div> 
+   </div>
+   <!-- #content --> 
+   <footer itemscope itemtype="https://schema.org/WPFooter" class="l-footer"> 
+    <div id="analytics-scroll"></div> 
+    <div id="analytics-janrain"></div> 
+    <div class="top-footer"> 
+     <div class="l-constrained container track_event"> 
+      <nav id="footer-nav" class="footer-nav">
+       <ul id="menu-main-menu-1" class="">
+        <li class="col menu-item-521722 news menu-item menu-item-type-taxonomy menu-item-object-category menu-item-has-children menu-item-has-children"><h2 class="head"><a href="https://windsorstar.com/category/news" data-evt="click" data-evt-typ="navigation" data-evt-val="{&quot;loc&quot;:&quot;Footer - Categories&quot;,&quot;name&quot;:&quot;news&quot;}">News</a></h2> 
+         <ul class="subnav"> 
+          <li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-521738"><a href="https://windsorstar.com/category/news" data-evt="click" data-evt-typ="navigation" data-evt-val="{&quot;loc&quot;:&quot;Footer - Categories&quot;,&quot;name&quot;:&quot;news&quot;}">All News</a></li> 
+          <li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-521723"><a href="https://windsorstar.com/category/news/local-news" data-evt="click" data-evt-typ="navigation" data-evt-val="{&quot;loc&quot;:&quot;Footer - Categories&quot;,&quot;name&quot;:&quot;local-news&quot;}">Local News</a></li> 
+          <li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-has-children menu-item-has-children menu-item-521724"><a href="https://windsorstar.com/category/news/national" data-evt="click" data-evt-typ="navigation" data-evt-val="{&quot;loc&quot;:&quot;Footer - Categories&quot;,&quot;name&quot;:&quot;national&quot;}">National</a></li> 
+          <li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-521725"><a href="https://windsorstar.com/category/news/world" data-evt="click" data-evt-typ="navigation" data-evt-val="{&quot;loc&quot;:&quot;Footer - Categories&quot;,&quot;name&quot;:&quot;world&quot;}">World</a></li> 
+          <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-542039"><a href="https://windsorstar.com/traffic">Traffic</a></li> 
+         </ul> </li> 
+        <li class="col menu-item-521772 business menu-item menu-item-type-taxonomy menu-item-object-category menu-item-has-children menu-item-has-children"><h2 class="head"><a href="https://windsorstar.com/category/business" data-evt="click" data-evt-typ="navigation" data-evt-val="{&quot;loc&quot;:&quot;Footer - Categories&quot;,&quot;name&quot;:&quot;business&quot;}">Business</a></h2> 
+         <ul class="subnav"> 
+          <li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-521775"><a href="https://windsorstar.com/category/business" data-evt="click" data-evt-typ="navigation" data-evt-val="{&quot;loc&quot;:&quot;Footer - Categories&quot;,&quot;name&quot;:&quot;business&quot;}">All Business</a></li> 
+          <li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-521774"><a href="https://windsorstar.com/category/business/local-business" data-evt="click" data-evt-typ="navigation" data-evt-val="{&quot;loc&quot;:&quot;Footer - Categories&quot;,&quot;name&quot;:&quot;local-business&quot;}">Local Business</a></li> 
+          <li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-521773"><a href="https://windsorstar.com/category/business/energy" data-evt="click" data-evt-typ="navigation" data-evt-val="{&quot;loc&quot;:&quot;Footer - Categories&quot;,&quot;name&quot;:&quot;energy&quot;}">Energy</a></li> 
+          <li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-has-children menu-item-has-children menu-item-521781"><a href="https://windsorstar.com/category/technology" data-evt="click" data-evt-typ="navigation" data-evt-val="{&quot;loc&quot;:&quot;Footer - Categories&quot;,&quot;name&quot;:&quot;technology&quot;}">Technology</a></li> 
+          <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-521776"><a href="https://business.financialpost.com/markets" data-evt="click" data-evt-typ="navigation" data-evt-val="{&quot;loc&quot;:&quot;Footer - Categories&quot;,&quot;name&quot;:&quot;FP Markets&quot;}">FP Markets</a></li> 
+          <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-521777"><a href="https://business.financialpost.com/category/news/" data-evt="click" data-evt-typ="navigation" data-evt-val="{&quot;loc&quot;:&quot;Footer - Categories&quot;,&quot;name&quot;:&quot;FP Headlines&quot;}">FP Headlines</a></li> 
+          <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-521778"><a href="https://business.financialpost.com/category/personal-finance/" data-evt="click" data-evt-typ="navigation" data-evt-val="{&quot;loc&quot;:&quot;Footer - Categories&quot;,&quot;name&quot;:&quot;FP Money&quot;}">FP Money</a></li> 
+          <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-939408"><a href="/category/business/small-business" data-evt="click" data-evt-typ="navigation" data-evt-val="{&quot;loc&quot;:&quot;Footer - Categories&quot;,&quot;name&quot;:&quot;Small Business&quot;}">Small Business</a></li> 
+         </ul> </li> 
+        <li class="col menu-item-521726 opinion menu-item menu-item-type-taxonomy menu-item-object-category menu-item-has-children menu-item-has-children"><h2 class="head"><a href="https://windsorstar.com/category/opinion" data-evt="click" data-evt-typ="navigation" data-evt-val="{&quot;loc&quot;:&quot;Footer - Categories&quot;,&quot;name&quot;:&quot;opinion&quot;}">Opinion</a></h2> 
+         <ul class="subnav"> 
+          <li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-521739"><a href="https://windsorstar.com/category/opinion" data-evt="click" data-evt-typ="navigation" data-evt-val="{&quot;loc&quot;:&quot;Footer - Categories&quot;,&quot;name&quot;:&quot;opinion&quot;}">All Opinion</a></li> 
+          <li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-521729"><a href="https://windsorstar.com/category/opinion/editorials" data-evt="click" data-evt-typ="navigation" data-evt-val="{&quot;loc&quot;:&quot;Footer - Categories&quot;,&quot;name&quot;:&quot;editorials&quot;}">Editorials</a></li> 
+          <li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-521728"><a href="https://windsorstar.com/category/opinion/columnists" data-evt="click" data-evt-typ="navigation" data-evt-val="{&quot;loc&quot;:&quot;Footer - Categories&quot;,&quot;name&quot;:&quot;columnists&quot;}">Columnists</a></li> 
+          <li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-521727"><a href="https://windsorstar.com/category/opinion/letters" data-evt="click" data-evt-typ="navigation" data-evt-val="{&quot;loc&quot;:&quot;Footer - Categories&quot;,&quot;name&quot;:&quot;letters&quot;}">Letters</a></li> 
+         </ul> </li> 
+        <li class="col menu-item-521740 sports menu-item menu-item-type-taxonomy menu-item-object-category menu-item-has-children menu-item-has-children"><h2 class="head"><a href="https://windsorstar.com/category/sports" data-evt="click" data-evt-typ="navigation" data-evt-val="{&quot;loc&quot;:&quot;Footer - Categories&quot;,&quot;name&quot;:&quot;sports&quot;}">Sports</a></h2> 
+         <ul class="subnav"> 
+          <li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-521742"><a href="https://windsorstar.com/category/sports" data-evt="click" data-evt-typ="navigation" data-evt-val="{&quot;loc&quot;:&quot;Footer - Categories&quot;,&quot;name&quot;:&quot;sports&quot;}">All Sports</a></li> 
+          <li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-has-children menu-item-has-children menu-item-521741"><a href="https://windsorstar.com/category/sports/hockey" data-evt="click" data-evt-typ="navigation" data-evt-val="{&quot;loc&quot;:&quot;Footer - Categories&quot;,&quot;name&quot;:&quot;hockey&quot;}">Hockey</a></li> 
+          <li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-has-children menu-item-has-children menu-item-521748"><a href="https://windsorstar.com/category/sports/football" data-evt="click" data-evt-typ="navigation" data-evt-val="{&quot;loc&quot;:&quot;Footer - Categories&quot;,&quot;name&quot;:&quot;football&quot;}">Football</a></li> 
+          <li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-has-children menu-item-has-children menu-item-521745"><a href="https://windsorstar.com/category/sports/baseball" data-evt="click" data-evt-typ="navigation" data-evt-val="{&quot;loc&quot;:&quot;Footer - Categories&quot;,&quot;name&quot;:&quot;baseball&quot;}">Baseball</a></li> 
+          <li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-has-children menu-item-has-children menu-item-521746"><a href="https://windsorstar.com/category/sports/basketball" data-evt="click" data-evt-typ="navigation" data-evt-val="{&quot;loc&quot;:&quot;Footer - Categories&quot;,&quot;name&quot;:&quot;basketball&quot;}">Basketball</a></li> 
+          <li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-has-children menu-item-has-children menu-item-521749"><a href="https://windsorstar.com/category/sports/golf" data-evt="click" data-evt-typ="navigation" data-evt-val="{&quot;loc&quot;:&quot;Footer - Categories&quot;,&quot;name&quot;:&quot;golf&quot;}">Golf</a></li> 
+          <li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-has-children menu-item-has-children menu-item-521761"><a href="https://windsorstar.com/category/sports/soccer" data-evt="click" data-evt-typ="navigation" data-evt-val="{&quot;loc&quot;:&quot;Footer - Categories&quot;,&quot;name&quot;:&quot;soccer&quot;}">Soccer</a></li> 
+          <li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-521747"><a href="https://windsorstar.com/category/sports/curling" data-evt="click" data-evt-typ="navigation" data-evt-val="{&quot;loc&quot;:&quot;Footer - Categories&quot;,&quot;name&quot;:&quot;curling&quot;}">Curling</a></li> 
+          <li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-521762"><a href="https://windsorstar.com/category/sports/tennis" data-evt="click" data-evt-typ="navigation" data-evt-val="{&quot;loc&quot;:&quot;Footer - Categories&quot;,&quot;name&quot;:&quot;tennis&quot;}">Tennis</a></li> 
+          <li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-521744"><a href="https://windsorstar.com/category/sports/auto-racing" data-evt="click" data-evt-typ="navigation" data-evt-val="{&quot;loc&quot;:&quot;Footer - Categories&quot;,&quot;name&quot;:&quot;auto-racing&quot;}">Auto Racing</a></li> 
+         </ul> </li> 
+        <li class="col menu-item-521788 entertainment menu-item menu-item-type-taxonomy menu-item-object-category menu-item-has-children menu-item-has-children"><h2 class="head"><a href="https://windsorstar.com/category/entertainment" data-evt="click" data-evt-typ="navigation" data-evt-val="{&quot;loc&quot;:&quot;Footer - Categories&quot;,&quot;name&quot;:&quot;entertainment&quot;}">Arts</a></h2> 
+         <ul class="subnav"> 
+          <li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-521789"><a href="https://windsorstar.com/category/entertainment" data-evt="click" data-evt-typ="navigation" data-evt-val="{&quot;loc&quot;:&quot;Footer - Categories&quot;,&quot;name&quot;:&quot;entertainment&quot;}">All Arts</a></li> 
+          <li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-521792"><a href="https://windsorstar.com/category/entertainment/local-arts" data-evt="click" data-evt-typ="navigation" data-evt-val="{&quot;loc&quot;:&quot;Footer - Categories&quot;,&quot;name&quot;:&quot;local-arts&quot;}">Local Arts</a></li> 
+          <li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-has-children menu-item-has-children menu-item-521793"><a href="https://windsorstar.com/category/entertainment/movies" data-evt="click" data-evt-typ="navigation" data-evt-val="{&quot;loc&quot;:&quot;Footer - Categories&quot;,&quot;name&quot;:&quot;movies&quot;}">Movies</a></li> 
+          <li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-has-children menu-item-has-children menu-item-521787"><a href="https://windsorstar.com/category/entertainment/television" data-evt="click" data-evt-typ="navigation" data-evt-val="{&quot;loc&quot;:&quot;Footer - Categories&quot;,&quot;name&quot;:&quot;television&quot;}">Television</a></li> 
+          <li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-has-children menu-item-has-children menu-item-521794"><a href="https://windsorstar.com/category/entertainment/music" data-evt="click" data-evt-typ="navigation" data-evt-val="{&quot;loc&quot;:&quot;Footer - Categories&quot;,&quot;name&quot;:&quot;music&quot;}">Music</a></li> 
+          <li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-521790"><a href="https://windsorstar.com/category/entertainment/books" data-evt="click" data-evt-typ="navigation" data-evt-val="{&quot;loc&quot;:&quot;Footer - Categories&quot;,&quot;name&quot;:&quot;books&quot;}">Books</a></li> 
+          <li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-521791"><a href="https://windsorstar.com/category/entertainment/celebrity" data-evt="click" data-evt-typ="navigation" data-evt-val="{&quot;loc&quot;:&quot;Footer - Categories&quot;,&quot;name&quot;:&quot;celebrity&quot;}">Celebrity</a></li> 
+         </ul> </li> 
+        <li class="col menu-item-521803 life menu-item menu-item-type-taxonomy menu-item-object-category menu-item-has-children menu-item-has-children"><h2 class="head"><a href="https://windsorstar.com/category/life" data-evt="click" data-evt-typ="navigation" data-evt-val="{&quot;loc&quot;:&quot;Footer - Categories&quot;,&quot;name&quot;:&quot;life&quot;}">Life</a></h2> 
+         <ul class="subnav"> 
+          <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-651838"><a href="/tag/milestones" data-evt="click" data-evt-typ="navigation" data-evt-val="{&quot;loc&quot;:&quot;Footer - Categories&quot;,&quot;name&quot;:&quot;Milestones&quot;}">Milestones</a></li> 
+          <li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-521815"><a href="https://windsorstar.com/category/life" data-evt="click" data-evt-typ="navigation" data-evt-val="{&quot;loc&quot;:&quot;Footer - Categories&quot;,&quot;name&quot;:&quot;life&quot;}">All Life</a></li> 
+          <li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-521804"><a href="https://windsorstar.com/category/life/fashion-beauty" data-evt="click" data-evt-typ="navigation" data-evt-val="{&quot;loc&quot;:&quot;Footer - Categories&quot;,&quot;name&quot;:&quot;fashion-beauty&quot;}">Fashion &amp; Beauty</a></li> 
+          <li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-has-children menu-item-has-children menu-item-521817"><a href="https://windsorstar.com/category/life/homes" data-evt="click" data-evt-typ="navigation" data-evt-val="{&quot;loc&quot;:&quot;Footer - Categories&quot;,&quot;name&quot;:&quot;homes&quot;}">Homes</a></li> 
+          <li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-has-children menu-item-has-children menu-item-521805"><a href="https://windsorstar.com/category/life/food" data-evt="click" data-evt-typ="navigation" data-evt-val="{&quot;loc&quot;:&quot;Footer - Categories&quot;,&quot;name&quot;:&quot;food&quot;}">Food</a></li> 
+          <li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-521807"><a href="https://windsorstar.com/category/life/from-the-vault" data-evt="click" data-evt-typ="navigation" data-evt-val="{&quot;loc&quot;:&quot;Footer - Categories&quot;,&quot;name&quot;:&quot;from-the-vault&quot;}">From the Vault</a></li> 
+          <li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-has-children menu-item-has-children menu-item-521814"><a href="https://windsorstar.com/category/health" data-evt="click" data-evt-typ="navigation" data-evt-val="{&quot;loc&quot;:&quot;Footer - Categories&quot;,&quot;name&quot;:&quot;health&quot;}">Health</a></li> 
+          <li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-851883"><a href="https://windsorstar.com/category/life/life-by-design" data-evt="click" data-evt-typ="navigation" data-evt-val="{&quot;loc&quot;:&quot;Footer - Categories&quot;,&quot;name&quot;:&quot;life-by-design&quot;}">Life By Design</a></li> 
+          <li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-521813"><a href="https://windsorstar.com/category/life/parenting" data-evt="click" data-evt-typ="navigation" data-evt-val="{&quot;loc&quot;:&quot;Footer - Categories&quot;,&quot;name&quot;:&quot;parenting&quot;}">Parenting</a></li> 
+          <li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-521819"><a href="https://windsorstar.com/category/life/relationships" data-evt="click" data-evt-typ="navigation" data-evt-val="{&quot;loc&quot;:&quot;Footer - Categories&quot;,&quot;name&quot;:&quot;relationships&quot;}">Relationships</a></li> 
+          <li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-521820"><a href="https://windsorstar.com/category/life/royals" data-evt="click" data-evt-typ="navigation" data-evt-val="{&quot;loc&quot;:&quot;Footer - Categories&quot;,&quot;name&quot;:&quot;royals&quot;}">Royals</a></li> 
+          <li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-543172"><a href="https://windsorstar.com/category/travel" data-evt="click" data-evt-typ="navigation" data-evt-val="{&quot;loc&quot;:&quot;Footer - Categories&quot;,&quot;name&quot;:&quot;travel&quot;}">Travel</a></li> 
+         </ul> </li> 
+       </ul>
+      </nav> 
+      <!-- / navigation --> 
+     </div> 
+     <!-- / l-constrained --> 
+    </div> 
+    <!-- / top-footer --> 
+    <div class="bottom-footer"> 
+     <div class="l-constrained container track_event"> 
+      <div class="col footer-info"> 
+       <a href="https://www.postmedia.com" class="postmedia" data-evt="click" data-evt-typ="navigation" data-evt-val="{&quot;name&quot;:&quot;Postmedia Logo&quot;,&quot;loc&quot;:&quot;Footer - Info&quot;}" title="Postmedia Network Inc."><img src="https://s2.wp.com/wp-content/themes/vip/postmedia-theme-broadsheet/images/common/logo-postmedia.png" alt="Postmedia Logo"></a> 
+       <p>365 Bloor St East, Toronto, ON, M4W3L4, www.postmedia.com</p> 
+       <p class="copy"> © <span itemprop="copyrightYear">2019</span> <span itemprop="copyrightHolder provider sourceOrganization" itemscope itemtype="https://schema.org/Organization" itemid=" https://www.postmedia.com"><span itemprop="name">Postmedia Network Inc.</span></span> All rights reserved. </p> 
+       <p class="restrictions">Unauthorized distribution, transmission or republication strictly prohibited.</p> 
+       <p>Powered by <a href="https://wpvip.com/?utm_source=vip_powered_wpcom&amp;utm_medium=web&amp;utm_campaign=VIP%20Footer%20Credit&amp;utm_term=windsorstar.com" rel="generator nofollow" class="powered-by-wpcom">WordPress.com VIP</a></p> 
+      </div> 
+      <ul id="menu-footer" class="footer-links">
+       <li class="col menu-item-521689 menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children"><h2 class="head">Classifieds</h2> 
+        <ul class="subnav"> 
+         <li id="menu-item-521694" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-521694"><a href="http://windsorstar.remembering.ca" data-evt="click" data-evt-typ="navigation" data-evt-val="{&quot;loc&quot;:&quot;Footer - Info&quot;,&quot;name&quot;:&quot;Obits&quot;}">Obits</a></li> 
+         <li id="menu-item-541600" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-541600"><a href="http://working.com/windsor" data-evt="click" data-evt-typ="navigation" data-evt-val="{&quot;loc&quot;:&quot;Footer - Info&quot;,&quot;name&quot;:&quot;Careers&quot;}">Careers</a></li> 
+         <li id="menu-item-521690" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-521690"><a href="http://classifieds.windsorstar.com/" data-evt="click" data-evt-typ="navigation" data-evt-val="{&quot;loc&quot;:&quot;Footer - Info&quot;,&quot;name&quot;:&quot;Browse Classifieds&quot;}">Browse Classifieds</a></li> 
+         <li id="menu-item-521695" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-521695"><a href="http://windsorstar.adperfect.com/" data-evt="click" data-evt-typ="navigation" data-evt-val="{&quot;loc&quot;:&quot;Footer - Info&quot;,&quot;name&quot;:&quot;Place a Classified Ad&quot;}">Place a Classified Ad</a></li> 
+         <li id="menu-item-521693" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-521693"><a href="https://classifieds.windsorstar.com/windsor/celebrating/search" data-evt="click" data-evt-typ="navigation" data-evt-val="{&quot;loc&quot;:&quot;Footer - Info&quot;,&quot;name&quot;:&quot;Celebrating&quot;}">Celebrating</a></li> 
+         <li id="menu-item-521691" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-521691"><a href="https://driving.ca/" data-evt="click" data-evt-typ="navigation" data-evt-val="{&quot;loc&quot;:&quot;Footer - Info&quot;,&quot;name&quot;:&quot;Driving&quot;}">Driving</a></li> 
+         <li id="menu-item-521692" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-521692"><a href="/flyercity" data-evt="click" data-evt-typ="navigation" data-evt-val="{&quot;loc&quot;:&quot;Footer - Info&quot;,&quot;name&quot;:&quot;FlyerCity&quot;}">FlyerCity</a></li> 
+         <li id="menu-item-930609" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-930609"><a href="http://local.windsorstar.com" data-evt="click" data-evt-typ="navigation" data-evt-val="{&quot;loc&quot;:&quot;Footer - Info&quot;,&quot;name&quot;:&quot;Local Directory&quot;}">Local Directory</a></li> 
+        </ul> </li> 
+       <li class="col menu-item-521698 menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children"><h2 class="head">Legal</h2> 
+        <ul class="subnav"> 
+         <li id="menu-item-521699" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-521699"><a href="http://www.postmedia.com/privacy-statement/" data-evt="click" data-evt-typ="navigation" data-evt-val="{&quot;loc&quot;:&quot;Footer - Info&quot;,&quot;name&quot;:&quot;Privacy - Updated&quot;}">Privacy – Updated</a></li> 
+         <li id="menu-item-521700" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-521700"><a href="http://www.canada.com/aboutus/termsofservice.html" data-evt="click" data-evt-typ="navigation" data-evt-val="{&quot;loc&quot;:&quot;Footer - Info&quot;,&quot;name&quot;:&quot;Terms&quot;}">Terms</a></li> 
+         <li id="menu-item-521701" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-521701"><a href="http://www.canada.com/aboutus/copyright.html" data-evt="click" data-evt-typ="navigation" data-evt-val="{&quot;loc&quot;:&quot;Footer - Info&quot;,&quot;name&quot;:&quot;Copyright &amp; Permissions&quot;}">Copyright &amp; Permissions</a></li> 
+         <li id="menu-item-1149681" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1149681"><a href="https://adregistry.postmedia.com/" data-evt="click" data-evt-typ="navigation" data-evt-val="{&quot;loc&quot;:&quot;Footer - Info&quot;,&quot;name&quot;:&quot;Digital Ad Registry&quot;}">Digital Ad Registry</a></li> 
+        </ul> </li> 
+       <li class="col menu-item-521702 menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children"><h2 class="head">Services</h2> 
+        <ul class="subnav"> 
+         <li id="menu-item-521703" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-521703"><a href="http://www.postmediaadvertising.com/audience/brand/windsor-star/" data-evt="click" data-evt-typ="navigation" data-evt-val="{&quot;loc&quot;:&quot;Footer - Info&quot;,&quot;name&quot;:&quot;Advertise With Us&quot;}">Advertise With Us</a></li> 
+         <li id="menu-item-521846" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-521846"><a href="/subscription" data-evt="click" data-evt-typ="navigation" data-evt-val="{&quot;loc&quot;:&quot;Footer - Info&quot;,&quot;name&quot;:&quot;Subscribe&quot;}">Subscribe</a></li> 
+         <li id="menu-item-521847" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-521847"><a href="/subscription/my-subscription" data-evt="click" data-evt-typ="navigation" data-evt-val="{&quot;loc&quot;:&quot;Footer - Info&quot;,&quot;name&quot;:&quot;My Subscription&quot;}">My Subscription</a></li> 
+         <li id="menu-item-771944" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-771944"><a href="/edit-profile" data-evt="click" data-evt-typ="navigation" data-evt-val="{&quot;loc&quot;:&quot;Footer - Info&quot;,&quot;name&quot;:&quot;Edit Profile&quot;}">Edit Profile</a></li> 
+         <li id="menu-item-521704" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-521704"><a href="/contact/" data-evt="click" data-evt-typ="navigation" data-evt-val="{&quot;loc&quot;:&quot;Footer - Info&quot;,&quot;name&quot;:&quot;Contact&quot;}">Contact</a></li> 
+         <li id="menu-item-521705" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-521705"><a href="http://epaper.windsorstar.com/epaper" data-evt="click" data-evt-typ="navigation" data-evt-val="{&quot;loc&quot;:&quot;Footer - Info&quot;,&quot;name&quot;:&quot;ePaper&quot;}">ePaper</a></li> 
+         <li id="menu-item-521850" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-521850"><a href="/subscription" data-evt="click" data-evt-typ="navigation" data-evt-val="{&quot;loc&quot;:&quot;Footer - Info&quot;,&quot;name&quot;:&quot;Digital Access&quot;}">Digital Access</a></li> 
+         <li id="menu-item-521707" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-521707"><a href="http://www.windsorstar.com/contests/index.html" data-evt="click" data-evt-typ="navigation" data-evt-val="{&quot;loc&quot;:&quot;Footer - Info&quot;,&quot;name&quot;:&quot;Contests&quot;}">Contests</a></li> 
+         <li id="menu-item-1098121" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1098121"><a href="https://contests.canada.com/windsorstar/partnerships/index.html" data-evt="click" data-evt-typ="navigation" data-evt-val="{&quot;loc&quot;:&quot;Footer - Info&quot;,&quot;name&quot;:&quot;Partnerships&quot;}">Partnerships</a></li> 
+        </ul> </li> 
+       <li class="col menu-item-521708 menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children"><h2 class="head">Properties</h2> 
+        <ul class="subnav"> 
+         <li id="menu-item-521709" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-521709"><a href="https://calgaryherald.com/" data-evt="click" data-evt-typ="navigation" data-evt-val="{&quot;loc&quot;:&quot;Footer - Info&quot;,&quot;name&quot;:&quot;Calgary Herald&quot;}">Calgary Herald</a></li> 
+         <li id="menu-item-521710" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-521710"><a href="http://o.canada.com/" data-evt="click" data-evt-typ="navigation" data-evt-val="{&quot;loc&quot;:&quot;Footer - Info&quot;,&quot;name&quot;:&quot;Canada.com&quot;}">Canada.com</a></li> 
+         <li id="menu-item-521711" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-521711"><a href="https://edmontonjournal.com/" data-evt="click" data-evt-typ="navigation" data-evt-val="{&quot;loc&quot;:&quot;Footer - Info&quot;,&quot;name&quot;:&quot;Edmonton Journal&quot;}">Edmonton Journal</a></li> 
+         <li id="menu-item-968137" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-968137"><a href="https://lfpress.com" data-evt="click" data-evt-typ="navigation" data-evt-val="{&quot;loc&quot;:&quot;Footer - Info&quot;,&quot;name&quot;:&quot;London Free Press&quot;}">London Free Press</a></li> 
+         <li id="menu-item-521712" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-521712"><a href="https://montrealgazette.com" data-evt="click" data-evt-typ="navigation" data-evt-val="{&quot;loc&quot;:&quot;Footer - Info&quot;,&quot;name&quot;:&quot;Montreal Gazette&quot;}">Montreal Gazette</a></li> 
+         <li id="menu-item-521713" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-521713"><a href="https://nationalpost.com/" data-evt="click" data-evt-typ="navigation" data-evt-val="{&quot;loc&quot;:&quot;Footer - Info&quot;,&quot;name&quot;:&quot;National Post&quot;}">National Post</a></li> 
+         <li id="menu-item-521714" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-521714"><a href="https://ottawacitizen.com/" data-evt="click" data-evt-typ="navigation" data-evt-val="{&quot;loc&quot;:&quot;Footer - Info&quot;,&quot;name&quot;:&quot;Ottawa Citizen&quot;}">Ottawa Citizen</a></li> 
+         <li id="menu-item-521715" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-521715"><a href="https://leaderpost.com/" data-evt="click" data-evt-typ="navigation" data-evt-val="{&quot;loc&quot;:&quot;Footer - Info&quot;,&quot;name&quot;:&quot;Leader-Post (Regina)&quot;}">Leader-Post (Regina)</a></li> 
+         <li id="menu-item-521716" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-521716"><a href="https://thestarphoenix.com/" data-evt="click" data-evt-typ="navigation" data-evt-val="{&quot;loc&quot;:&quot;Footer - Info&quot;,&quot;name&quot;:&quot;The StarPhoenix (Saskatoon)&quot;}">The StarPhoenix (Saskatoon)</a></li> 
+         <li id="menu-item-521717" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-521717"><a href="https://theprovince.com/" data-evt="click" data-evt-typ="navigation" data-evt-val="{&quot;loc&quot;:&quot;Footer - Info&quot;,&quot;name&quot;:&quot;The Province (Vancouver)&quot;}">The Province (Vancouver)</a></li> 
+         <li id="menu-item-521718" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-521718"><a href="https://vancouversun.com/" data-evt="click" data-evt-typ="navigation" data-evt-val="{&quot;loc&quot;:&quot;Footer - Info&quot;,&quot;name&quot;:&quot;Vancouver Sun&quot;}">Vancouver Sun</a></li> 
+        </ul> </li> 
+      </ul> 
+     </div> 
+     <!-- / l-constrained --> 
+    </div> 
+    <!-- / bottom-footer --> 
+   </footer> 
+   <div id="article-counter"></div> 
+  </div>
+  <!-- #page --> 
+  <!-- wpcom_wp_footer --> 
+  <input type="hidden" id="dfp_weather_field_id" name="dfp_weather_field_id" value="13a542104d">
+  <input type="hidden" name="_wp_http_referer" value="/special-features-3/whats-going-on-in-windsor-essex"> 
+  <script>
+				$ = jQuery.noConflict();
+
+				// dynamically load MG2 script to improve initial page load
+				function openNewsletterModal () {
+					var newsletterScript = document.getElementById('scriptMg2Widget');
+					if ( typeof newsletterScript.src == undefined || newsletterScript.src == '' ) {
+						newsletterScript.src = "";
+						newsletterScript.addEventListener( 'load', function () {
+							mg2WidgetAPI.openNewsletter( { defaultCategoryId: "12" } );
+						});
+					} else {
+						// script is already loaded
+						mg2WidgetAPI.openNewsletter( { defaultCategoryId: "12" } );
+					}
+				}
+			</script> 
+  <script id="scriptMg2Widget"></script> 
+  <div id="mg2Widget-newsletter-container"></div> 
+  <div style="display:none" id="signIn"></div> 
+  <div style="display:none" id="returnSocial"></div> 
+  <div style="display:none" id="returnTraditional"></div> 
+  <script id="ownlocal-script" defer data-active="businesses" src="https://widget.secure.ownlocal.com/embed.js?uuid=4d9de90b-552c-4e16-9269-2cecda85461b&amp;?h=600&amp;min_featured_level=0&amp;category=all&amp;subcategory=all&amp;days_ago=30"></script> 
+  <div style="display:none"> 
+  </div> 
+  <link rel="stylesheet" id="all-css-0-2" href="https://s2.wp.com/_static/??-eJyljFEKAjEMRC9kjQUX9UM8S9wN20ibhiYo3t5avYD4N/OYefDQMFdxEgdPVMjgzgpazQstjGHAcG0VF0tEDrMZFGTZ9rCBn+9ORTN6H1rCxrIO4Tf/7xTUFXOmxr0Ncyfhg55v/aWc43TYx90UT8fbC733X/s=?cssminify=yes" type="text/css" media="all"> 
+  <script type="text/javascript" src="https://s2.wp.com/_static/??-eJxdjs0KwjAQhF/IugiG2oP4CBY8eJQ0XezGZBO7SbVvb8AfitdvvmEGHrEygRNygjSgR4GJIsQgyWNPuoouX4llQRx1ox5nME6LFL/9JnDGDtqPf4yJAstpZgO21PkS3kQKWVtZwWK5CD1OZDA+/yOffxcc3crcPWPGQXPvcCzywe83qt429U6pxr4AUvBNpg=="></script> 
+  <script src="https://pymx5.com/scripts/load_tags.js?ver=5.3"></script> 
+  <script>
+var comment_like_text = {"loading":"Loading..."};
+</script> 
+  <script type="text/javascript" src="https://s1.wp.com/_static/??-eJzTLy/QTc7PK0nNK9HPLdUtyClNz8wr1k/Oz80FCunmZGanFutnFevnZCbpF5dnFqTqZRXr6BOpCUUAqNE+19bQxNDM0tTI0NwwCwAz9Cyh"></script> 
+  <script src="https://platform.twitter.com/widgets.js?ver=20111117"></script> 
+  <script type="text/javascript" src="https://s0.wp.com/_static/??-eJyVzEESgjAMAMAPGTMyjsjB8S2FRkxp0wwJ8H178uTFB+zioTBVcRLHsoHmbWYx9IPdaYUxh2kZeY2gTCi000oSWeZzshP+Y/W38zcVMtxZUat5ocjhO8WXQoiGyVAFcvAWNFkXpvY8y+NyHfruPvS3Ln0AMX5Kdw=="></script> 
+  <script type="text/javascript" src="https://static.freeskreen.com/publisher/1573/freeskreen.min.js?ver=5.3" async></script> 
+  <script>
+var pn_janrain_vars = {"ajaxurl":"https:\/\/postmediawindsorstar2.wordpress.com\/wp-admin\/admin-ajax.php"};
+</script> 
+  <script>
+var postmedia_piano = {"paywall_exempt_ie":"1","endpoint":"\/\/experience.tinypass.com\/xbuilder\/experience\/load","theme":"vip\/postmedia-theme-broadsheet"};
+</script> 
+  <script type="text/javascript" src="https://s1.wp.com/_static/??-eJzNU01PwzAM/UOkoRITcEAcuKEhTQIBN5QmbuuQL+K00P16ErZJHDhUoE7c8uxnv2cn4e+BSe8SuMRTDxaIjxh48JQsKBQsmKFDR98iBpso4sSlEUSZvzlk+BM0fLPn3woXBbobEdIQgQfH9C5SaTrhR1LdSzK5w4xkBMi0FuzLP7JD2LmFnDyUJvy+9zFJr3JaE49AwTvCERi2UVhYUhlSQtcRv/NqMIWEwvnH5+IjlCMbP44qfyCtxXZae6GKEf02QJwq8k7Eyi57E7MMBWsyMhnNtvMVZE3MNdQDpNKGEsrXqUVj/tTGzv0mPxVrwi2ovC0hofdGQfz9OHlxpjzWa3tVr87P6tNVfXmhPwHmQ8/I"></script> 
+  <script async type="text/javascript" src="https://cdn.mediavoice.com/nativeads/script/postmedia/polarAd-2.0-prod.js"></script> 
+  <script>
+var wpcomVipAnalytics = {"is_404":"0","is_home":"0","is_single":"1","is_front_page":"0","is_archive":"0","percentToTrack":"1"};
+</script> 
+  <script type="text/javascript" src="https://s1.wp.com/_static/??-eJyVjkkOwjAMRS+EMS0qsEGcxU2sNiGTYreI2xN1gwRsWNl++oPxUcDkpJwU4wIlLJNLgj2srqAXbAMoUXiqM7L3ssPfBrLRJRipYiRRrm2DvHKtzrK82Z8JWsncv2p15sjba1iyaGTrCDYIY81kZWZuKo4lkDahJCoThcDVtct/gJZ+i9du6A9Dd7qcj/4F4y5myQ=="></script> 
+  <script type="text/javascript">
+// <![CDATA[
+(function() {
+try{
+  if ( window.external &&'msIsSiteMode' in window.external) {
+    if (window.external.msIsSiteMode()) {
+      var jl = document.createElement('script');
+      jl.type='text/javascript';
+      jl.async=true;
+      jl.src='/wp-content/plugins/ie-sitemode/custom-jumplist.php';
+      var s = document.getElementsByTagName('script')[0];
+      s.parentNode.insertBefore(jl, s);
+    }
+  }
+}catch(e){}
+})();
+// ]]>
+</script>
+  <script src="//stats.wp.com/w.js?60" type="text/javascript" async defer></script> 
+  <script type="text/javascript">
+_tkq = window._tkq || [];
+_stq = window._stq || [];
+_tkq.push(['storeContext', {'blog_id':'79897690','blog_tz':'-5','user_lang':'en','blog_lang':'en','user_id':'0'}]);
+_stq.push(['view', {'blog':'79897690','v':'wpcom','tz':'-5','user_id':'0','post':'352895557743776225','subd':'postmediawindsorstar2'}]);
+function st_vt() {var x=document.createElement("img");x.src="https://pixel.wp.com/g.gif?blog=79897690&v=wpcomvt&tz=-5&user_id=0&post=352895557743776225&subd=postmediawindsorstar2&rand="+Math.random();}
+_stq.push(['extra', {'crypt':'UE40eW5QN0p8M2Y/RE1BNmNJfGhxNCVxUDExYmtib2E/SzdEJm0lUEtbdFU0fFk4cHZvcUFrZT90Tn4yQm1+R3NyNTc/MUhXW11WSmguZHBnMVY9MCxuSkdvb2hvSCZmTltdfm9zN3RnTVgvL0UsbnwmRFUuSDc5XXhET0dzWjVIWUM9VHo1U1JNYV9OfisudHMvN35obUhFd1JmRUJvNHpad1FOU21ENiVHfHksU25oTWhXaX5VQ1ZkRTRNN3NRRXhQbkd+VTgmVDdIb11XWDFybUU0c2laLG40Ym1yOEp8M1h8OFlMUT04SnpzcHIuXUtXZEF+dGNrQVsyLk14MzYz'}]);
+_stq.push([ 'clickTrackerInit', '79897690', '352895557743776225' ]);
+	</script> 
+  <noscript>
+   <img src="https://pixel.wp.com/b.gif?v=noscript" style="height:0px;width:0px;overflow:hidden" alt="">
+  </noscript> 
+  <!-- Chartbeat Code Begins --> 
+  <script type="text/javascript">
+				var _sf_async_config = {};
+				_sf_async_config.uid = 34988;
+				_sf_async_config.domain = "postmedia.com";
+				_sf_async_config.useCanonical = true;
+				_sf_async_config.sections = "windsorstar.com";
+				_sf_async_config.videoPageGroups = true;
+
+				_sf_async_config.authors = "Custom Content Studio";
+				( function(){
+					function loadChartbeat() {
+						window._sf_endpt=(new Date()).getTime();
+						var e = document.createElement('script');
+						e.setAttribute('language', 'javascript');
+						e.setAttribute('type', 'text/javascript');
+						e.setAttribute('src', '//static.chartbeat.com/js/chartbeat_video.js');
+						document.body.appendChild(e);
+					}
+					var oldonload = window.onload;
+					window.onload = (typeof window.onload != 'function') ? loadChartbeat : function() { oldonload(); loadChartbeat(); };
+				})();
+			</script> 
+  <!-- Chartbeat Code Ends --> 
+  <script>
+				document.write('<scr' + 'ipt async type="text/javascript" src="//c.jsrdn.com/s/cs.js?p=22507"><\/sc' + 'ript>');
+			</script> 
+  <div id="ds_default_anchor"></div> 
+  <script>
+if ( 'object' === typeof wpcom_mobile_user_agent_info ) {
+
+	wpcom_mobile_user_agent_info.init();
+	var mobileStatsQueryString = "";
+	
+	if( false !== wpcom_mobile_user_agent_info.matchedPlatformName )
+		mobileStatsQueryString += "&x_" + 'mobile_platforms' + '=' + wpcom_mobile_user_agent_info.matchedPlatformName;
+	
+	if( false !== wpcom_mobile_user_agent_info.matchedUserAgentName )
+		mobileStatsQueryString += "&x_" + 'mobile_devices' + '=' + wpcom_mobile_user_agent_info.matchedUserAgentName;
+	
+	if( wpcom_mobile_user_agent_info.isIPad() )
+		mobileStatsQueryString += "&x_" + 'ipad_views' + '=' + 'views';
+
+	if( "" != mobileStatsQueryString ) {
+		new Image().src = document.location.protocol + '//pixel.wp.com/g.gif?v=wpcom-no-pv' + mobileStatsQueryString + '&baba=' + Math.random();
+	}
+	
+}
+</script>   
+ </body>
+</html>

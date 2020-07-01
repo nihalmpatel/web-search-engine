@@ -1,0 +1,99 @@
+makesOffer - schema.org Property schema.org Documentation Schemas Home makesOffer Thing > Property > makesOffer A pointer to products or services offered by the organization or person. [more...] Canonical URL: http://schema.org/makesOffer Leave public feedback on this term 💬 Check for open issues. Inverse-property: offeredBy. Values expected to be one of these types Offer Used on these types Organization Person Acknowledgement This term uses terminology from the GoodRelations Vocabulary for E-Commerce, created by Martin Hepp. GoodRelations is a data model for sharing e-commerce data on the Web. More information about GoodRelations can be found at http://purl.org/goodrelations/. Examples Example 1 Without Markup Microdata RDFa JSON-LD <body>
+  <main>
+    <article>
+      <h1>
+         <a href="http://example.com/explosive-tennis-balls">Explosive tennis balls</a>
+      </h1>
+      <img alt="Explosive tennis balls" title src="http://example.com/explosive-tennis-balls.jpg" />
+      <p >
+        $29.99 - In stock
+      </p>
+      <p >
+        Tickle your friends!<br />
+        Surprise your opponent!
+      <p>
+    </article>
+  </main>
+  <footer>
+    <p>
+      © <span>2015</span> - <span property="name">Acme Inc</span>
+    </p>
+    <ul>
+      <li><a href="https://twitter.com/AcmeInc">Twitter</a></li>
+      <li><a href="https://www.facebook.com/AcmeInc">Facebook</a></li>
+      <li><a href="https://plus.google.com/u/0/+AcmeInc/">Google+</a></li>
+    </ul>
+  </footer>
+</body>
+ No Microdata
+ <body vocab="http://schema.org/" resource="http://example.com/explosive-tennis-balls" typeof="ItemPage">
+  <link property="copyrightHolder publisher" href="#Organization" />
+  <main>
+    <article resource="#Product" property="mainEntity" typeof="Product">
+      <h1 property="name">
+         <a property="url" href="http://example.com/explosive-tennis-balls">Explosive tennis balls</a>
+      </h1>
+      <img property="image" alt="Explosive tennis balls" title src="http://example.com/explosive-tennis-balls.jpg" />
+      <p resource="#Offer" property="offers" typeof="Offer">
+        <meta property="priceCurrency" content="USD" />
+        <meta property="price" content="1000.00" />
+        <link property="availability" href="InStock" />
+        <link property="itemOffered" href="#Product" />
+        <link property="businessFunction" href="http://purl.org/goodrelations/v1#Sell" />
+        <link rev="makesOffer" href="#Organization" />
+        $29.99 - In stock
+      </p>
+      <p property="description">
+        Tickle your friends!<br />
+        Surprise your opponent!
+      <p>
+    </article>
+  </main>
+  <footer>
+    <p resource="#Organization" typeof="Organization">
+      © <span resource="#CopyrightYear" typeof="rdfa:Pattern">2015</span> - <span property="name">Acme Inc</span>
+      <link property="logo" href="http://example.com/acme-inc-logo.jpg" />
+      <link property="url" href="http://example.com" />
+      <link property="rdfa:copy" href="#SameAsResource"/>
+    </p>
+    <ul resource="#SameAsResource" typeof="rdfa:Pattern">
+      <li><a property="sameAs" href="https://twitter.com/AcmeInc">Twitter</a></li>
+      <li><a property="sameAs" href="https://www.facebook.com/AcmeInc">Facebook</a></li>
+      <li><a property="sameAs" href="https://plus.google.com/u/0/+AcmeInc/">Google+</a></li>
+    </ul>
+  </footer>
+</body>
+ <script type="application/ld+json">
+{
+  "@context":"http://schema.org",
+  "@id":"http://example.com/explosive-tennis-balls",
+  "@type":"ItemPage",
+  "copyrightYear":"2015",
+  "copyrightHolder":{"@id":"#Organization"},
+  "publisher":{"@id":"#Organization"},
+  "mainEntity":{
+    "@id":"#Product",
+    "@type":"Product",
+    "name":"Explosive tennis balls",
+    "description":"Tickle your friends! Surprise your opponent!",
+    "image":"http://example.com/explosive-tennis-balls.jpg",
+    "url":"http://example.com/explosive-tennis-balls",
+    "offers":{
+      "@id":"#Offer",
+      "@type":"Offer",
+      "priceCurrency":"USD",
+      "price":"1000.00",
+      "availability":"http://schema.org/InStock",
+      "itemOffered":{"@id":"#Product"},
+        "offeredBy":{
+          "@id":"#Organization",
+          "@type":"Organization",
+          "name":"Acme Inc",
+          "logo":"http://example.commple.com/acme-inc-logo.jpg",
+          "url":"http://example.com/",
+          "sameAs":["https://twitter.com/AcmeInc","https://www.facebook.com/AcmeInc","https://plus.google.com/u/0/+AcmeInc/"]
+        }
+    }
+  }
+}
+</script>

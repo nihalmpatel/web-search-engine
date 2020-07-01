@@ -1,0 +1,1 @@
+comment - schema.org Property schema.org Documentation Schemas Home comment Thing > Property > comment Comments, typically from users. [more...] Canonical URL: http://schema.org/comment Leave public feedback on this term 💬 Check for open issues. Values expected to be one of these types Comment Used on these types CreativeWork RsvpAction

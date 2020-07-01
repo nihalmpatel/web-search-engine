@@ -1,0 +1,192 @@
+hasOfferCatalog - schema.org Property schema.org Documentation Schemas Home hasOfferCatalog Thing > Property > hasOfferCatalog Indicates an OfferCatalog listing for this Organization, Person, or Service. [more...] Canonical URL: http://schema.org/hasOfferCatalog Leave public feedback on this term 💬 Check for open issues. Values expected to be one of these types OfferCatalog Used on these types Organization Person Service Examples Example 1 Without Markup Microdata RDFa JSON-LD ACME Home Cleaning offers a variety of services in Massachusetts, including:
+<ul>
+  <li>House cleaning</li>
+  <ul>
+    <li>Apartment light cleaning</li>
+    <li>House light cleaning up to 2 bedrooms</li>
+    <li>House light cleaning 3+ bedrooms</li>
+  </ul>
+  <li>One-time services</li>
+  <ul>
+    <li>Window washing</li>
+    <li>Carpet deep cleaning</li>
+    <li>Move in/out cleaning</li>
+  </ul>
+</ul>
+ <div itemscope itemtype="http://schema.org/Service">
+  <meta itemprop="serviceType" content="Home cleaning" />
+  <span itemprop="provider" itemscope itemtype="http://schema.org/LocalBusiness">
+    <span itemprop="name">ACME Home Cleaning</span>
+  </span>
+  offers a variety of services in
+  <span itemprop="areaServed" itemscope itemtype="http://schema.org/State">
+    <span itemprop="name">Massachusetts</span>, including
+  </span>
+  <ul itemprop="hasOfferCatalog" itemscope itemtype="http://schema.org/OfferCatalog">
+    <li itemprop="itemListElement" itemscope itemtype="http://schema.org/OfferCatalog">
+      <span itemprop="name">House cleaning</span>
+      <ul itemprop="itemListElement" itemscope itemtype="http://schema.org/OfferCatalog">
+        <li itemprop="itemListElement" itemscope itemtype="http://schema.org/Offer">
+          <div itemprop="itemOffered" itemscope itemtype="http://schema.org/Service">
+            <span itemprop="name">Apartment light cleaning</span>
+          </div>
+        </li>
+        <li itemprop="itemListElement" itemscope itemtype="http://schema.org/Offer">
+          <div itemprop="itemOffered" itemscope itemtype="http://schema.org/Service">
+            <span itemprop="name">House light cleaning up to 2 bedrooms</span>
+          </div>
+        </li>
+        <li itemprop="itemListElement" itemscope itemtype="http://schema.org/Offer">
+          <div itemprop="itemOffered" itemscope itemtype="http://schema.org/Service">
+            <span itemprop="name">House light cleaning 3+ bedrooms</span>
+          </div>
+        </li>
+      </ul>
+    <li itemprop="itemListElement" itemscope itemtype="http://schema.org/OfferCatalog">
+      <span itemprop="name">One-time services</span>
+      <ul itemprop="itemListElement" itemscope itemtype="http://schema.org/OfferCatalog">
+        <li itemprop="itemListElement" itemscope itemtype="http://schema.org/Offer">
+          <div itemprop="itemOffered" itemscope itemtype="http://schema.org/Service">
+            <span itemprop="name">Window washing</span>
+          </div>
+        </li>
+        <li itemprop="itemListElement" itemscope itemtype="http://schema.org/Offer">
+          <div itemprop="itemOffered" itemscope itemtype="http://schema.org/Service">
+            <span itemprop="name">Carpet deep cleaning</span>
+          </div>
+        </li>
+        <li itemprop="itemListElement" itemscope itemtype="http://schema.org/Offer">
+          <div itemprop="itemOffered" itemscope itemtype="http://schema.org/Service">
+            <span itemprop="name">Move in/out cleaning</span>
+          </div>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+ <div vocab="http://schema.org/" typeof="Service">
+  <meta property="serviceType" content="Home cleaning" />
+  <span property="provider" typeof="LocalBusiness">
+    <span property="name">ACME Home Cleaning</span>
+  </span>
+  offers a variety of services in
+  <span property="areaServed" typeof="State">
+    <span property="name">Massachusetts</span>, including
+  </span>
+  <ul property="hasOfferCatalog" typeof="OfferCatalog">
+    <li property="itemListElement" typeof="OfferCatalog">
+      <span property="name">House cleaning</span>
+      <ul property="itemListElement" typeof="OfferCatalog">
+        <li property="itemListElement" typeof="Offer">
+          <div property="itemOffered" typeof="Service">
+            <span property="name">Apartment light cleaning</span>
+          </div>
+        </li>
+        <li property="itemListElement" typeof="Offer">
+          <div property="itemOffered" typeof="Service">
+            <span property="name">House light cleaning up to 2 bedrooms</span>
+          </div>
+        </li>
+        <li property="itemListElement" typeof="Offer">
+          <div property="itemOffered" typeof="Service">
+            <span property="name">House light cleaning 3+ bedrooms</span>
+          </div>
+        </li>
+      </ul>
+    <li property="itemListElement" typeof="OfferCatalog">
+      <span property="name">One-time services</span>
+      <ul property="itemListElement" typeof="OfferCatalog">
+        <li property="itemListElement" typeof="Offer">
+          <div property="itemOffered" typeof="Service">
+            <span property="name">Window washing</span>
+          </div>
+        </li>
+        <li property="itemListElement" typeof="Offer">
+          <div property="itemOffered" typeof="Service">
+            <span property="name">Carpet deep cleaning</span>
+          </div>
+        </li>
+        <li property="itemListElement" typeof="Offer">
+          <div property="itemOffered" typeof="Service">
+            <span property="name">Move in/out cleaning</span>
+          </div>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+ <script type="application/ld+json">
+{
+  "@context": "http://schema.org/",
+  "@type": "Service",
+  "serviceType": "Weekly home cleaning",
+  "provider": {
+    "@type": "LocalBusiness",
+    "name": "ACME Home Cleaning"
+  },
+  "areaServed": {
+    "@type": "State",
+    "name": "Massachusetts"
+  },
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "Cleaning services",
+    "itemListElement": [
+      {
+        "@type": "OfferCatalog",
+        "name": "House Cleaning",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Apartment light cleaning"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "House light cleaning up to 2 bedrooms"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "House light cleaning 3+ bedrooms"
+            }
+          }
+        ]
+      },
+      {
+        "@type": "OfferCatalog",
+        "name": "One-time services",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Window washing"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Carpet cleaning"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Move in/out cleaning"
+            }
+          }
+        ]
+      }
+    ]
+  }
+}
+</script>

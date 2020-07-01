@@ -1,0 +1,1 @@
+name - schema.org Property schema.org Documentation Schemas Home name Thing > Property > name The name of the item. [more...] Canonical URL: http://schema.org/name Equivalent Property: dct:title Leave public feedback on this term 💬 Check for open issues. Values expected to be one of these types Text Used on these types Thing Super-properties rdfs:label

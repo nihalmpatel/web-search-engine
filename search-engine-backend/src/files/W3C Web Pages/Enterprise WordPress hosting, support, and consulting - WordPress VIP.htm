@@ -1,0 +1,647 @@
+<!DOCTYPE html>
+<html lang="en-US">
+ <head> 
+  <meta charset="UTF-8">
+  <script type="text/javascript">(window.NREUM||(NREUM={})).loader_config={licenseKey:"949ceaf672",applicationID:"199533422"};window.NREUM||(NREUM={}),__nr_require=function(n,e,t){function r(t){if(!e[t]){var i=e[t]={exports:{}};n[t][0].call(i.exports,function(e){var i=n[t][1][e];return r(i||e)},i,i.exports)}return e[t].exports}if("function"==typeof __nr_require)return __nr_require;for(var i=0;i<t.length;i++)r(t[i]);return r}({1:[function(n,e,t){function r(){}function i(n,e,t){return function(){return o(n,[u.now()].concat(f(arguments)),e?null:this,t),e?void 0:this}}var o=n("handle"),a=n(4),f=n(5),c=n("ee").get("tracer"),u=n("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],d="api-",l=d+"ixn-";a(p,function(n,e){s[e]=i(d+e,!0,"api")}),s.addPageAction=i(d+"addPageAction",!0),s.setCurrentRouteName=i(d+"routeName",!0),e.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(n,e){var t={},r=this,i="function"==typeof e;return o(l+"tracer",[u.now(),n,t],r),function(){if(c.emit((i?"":"no-")+"fn-start",[u.now(),r,i],t),i)try{return e.apply(this,arguments)}catch(n){throw c.emit("fn-err",[arguments,this,n],t),n}finally{c.emit("fn-end",[u.now()],t)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(n,e){m[e]=i(l+e)}),newrelic.noticeError=function(n,e){"string"==typeof n&&(n=new Error(n)),o("err",[n,u.now(),!1,e])}},{}],2:[function(n,e,t){function r(n,e){var t=n.getEntries();t.forEach(function(n){"first-paint"===n.name?a("timing",["fp",Math.floor(n.startTime)]):"first-contentful-paint"===n.name&&a("timing",["fcp",Math.floor(n.startTime)])})}function i(n){if(n instanceof c&&!s){var e,t=Math.round(n.timeStamp);e=t>1e12?Date.now()-t:f.now()-t,s=!0,a("timing",["fi",t,{type:n.type,fid:e}])}}if(!("init"in NREUM&&"page_view_timing"in NREUM.init&&"enabled"in NREUM.init.page_view_timing&&NREUM.init.page_view_timing.enabled===!1)){var o,a=n("handle"),f=n("loader"),c=NREUM.o.EV;if("PerformanceObserver"in window&&"function"==typeof window.PerformanceObserver){o=new PerformanceObserver(r);try{o.observe({entryTypes:["paint"]})}catch(u){}}if("addEventListener"in document){var s=!1,p=["click","keydown","mousedown","pointerdown","touchstart"];p.forEach(function(n){document.addEventListener(n,i,!1)})}}},{}],3:[function(n,e,t){function r(n,e){if(!i)return!1;if(n!==i)return!1;if(!e)return!0;if(!o)return!1;for(var t=o.split("."),r=e.split("."),a=0;a<r.length;a++)if(r[a]!==t[a])return!1;return!0}var i=null,o=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var f=navigator.userAgent,c=f.match(a);c&&f.indexOf("Chrome")===-1&&f.indexOf("Chromium")===-1&&(i="Safari",o=c[1])}e.exports={agent:i,version:o,match:r}},{}],4:[function(n,e,t){function r(n,e){var t=[],r="",o=0;for(r in n)i.call(n,r)&&(t[o]=e(r,n[r]),o+=1);return t}var i=Object.prototype.hasOwnProperty;e.exports=r},{}],5:[function(n,e,t){function r(n,e,t){e||(e=0),"undefined"==typeof t&&(t=n?n.length:0);for(var r=-1,i=t-e||0,o=Array(i<0?0:i);++r<i;)o[r]=n[e+r];return o}e.exports=r},{}],6:[function(n,e,t){e.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(n,e,t){function r(){}function i(n){function e(n){return n&&n instanceof r?n:n?c(n,f,o):o()}function t(t,r,i,o){if(!d.aborted||o){n&&n(t,r,i);for(var a=e(i),f=v(t),c=f.length,u=0;u<c;u++)f[u].apply(a,r);var p=s[y[t]];return p&&p.push([b,t,r,a]),a}}function l(n,e){h[n]=v(n).concat(e)}function m(n,e){var t=h[n];if(t)for(var r=0;r<t.length;r++)t[r]===e&&t.splice(r,1)}function v(n){return h[n]||[]}function g(n){return p[n]=p[n]||i(t)}function w(n,e){u(n,function(n,t){e=e||"feature",y[t]=e,e in s||(s[e]=[])})}var h={},y={},b={on:l,addEventListener:l,removeEventListener:m,emit:t,get:g,listeners:v,context:e,buffer:w,abort:a,aborted:!1};return b}function o(){return new r}function a(){(s.api||s.feature)&&(d.aborted=!0,s=d.backlog={})}var f="nr@context",c=n("gos"),u=n(4),s={},p={},d=e.exports=i();d.backlog=s},{}],gos:[function(n,e,t){function r(n,e,t){if(i.call(n,e))return n[e];var r=t();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(n,e,{value:r,writable:!0,enumerable:!1}),r}catch(o){}return n[e]=r,r}var i=Object.prototype.hasOwnProperty;e.exports=r},{}],handle:[function(n,e,t){function r(n,e,t,r){i.buffer([n],r),i.emit(n,e,t)}var i=n("ee").get("handle");e.exports=r,r.ee=i},{}],id:[function(n,e,t){function r(n){var e=typeof n;return!n||"object"!==e&&"function"!==e?-1:n===window?0:a(n,o,function(){return i++})}var i=1,o="nr@id",a=n("gos");e.exports=r},{}],loader:[function(n,e,t){function r(){if(!x++){var n=E.info=NREUM.info,e=l.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(n&&n.licenseKey&&n.applicationID&&e))return s.abort();u(y,function(e,t){n[e]||(n[e]=t)}),c("mark",["onload",a()+E.offset],null,"api");var t=l.createElement("script");t.src="https://"+n.agent,e.parentNode.insertBefore(t,e)}}function i(){"complete"===l.readyState&&o()}function o(){c("mark",["domContent",a()+E.offset],null,"api")}function a(){return O.exists&&performance.now?Math.round(performance.now()):(f=Math.max((new Date).getTime(),f))-E.offset}var f=(new Date).getTime(),c=n("handle"),u=n(4),s=n("ee"),p=n(3),d=window,l=d.document,m="addEventListener",v="attachEvent",g=d.XMLHttpRequest,w=g&&g.prototype;NREUM.o={ST:setTimeout,SI:d.setImmediate,CT:clearTimeout,XHR:g,REQ:d.Request,EV:d.Event,PR:d.Promise,MO:d.MutationObserver};var h=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1153.min.js"},b=g&&w&&w[m]&&!/CriOS/.test(navigator.userAgent),E=e.exports={offset:f,now:a,origin:h,features:{},xhrWrappable:b,userAgent:p};n(1),n(2),l[m]?(l[m]("DOMContentLoaded",o,!1),d[m]("load",r,!1)):(l[v]("onreadystatechange",i),d[v]("onload",r)),c("mark",["firstbyte",f],null,"api");var x=0,O=n(6)},{}],"wrap-function":[function(n,e,t){function r(n){return!(n&&n instanceof Function&&n.apply&&!n[a])}var i=n("ee"),o=n(5),a="nr@original",f=Object.prototype.hasOwnProperty,c=!1;e.exports=function(n,e){function t(n,e,t,i){function nrWrapper(){var r,a,f,c;try{a=this,r=o(arguments),f="function"==typeof t?t(r,a):t||{}}catch(u){d([u,"",[r,a,i],f])}s(e+"start",[r,a,i],f);try{return c=n.apply(a,r)}catch(p){throw s(e+"err",[r,a,p],f),p}finally{s(e+"end",[r,a,c],f)}}return r(n)?n:(e||(e=""),nrWrapper[a]=n,p(n,nrWrapper),nrWrapper)}function u(n,e,i,o){i||(i="");var a,f,c,u="-"===i.charAt(0);for(c=0;c<e.length;c++)f=e[c],a=n[f],r(a)||(n[f]=t(a,u?f+i:i,o,f))}function s(t,r,i){if(!c||e){var o=c;c=!0;try{n.emit(t,r,i,e)}catch(a){d([a,t,r,i])}c=o}}function p(n,e){if(Object.defineProperty&&Object.keys)try{var t=Object.keys(n);return t.forEach(function(t){Object.defineProperty(e,t,{get:function(){return n[t]},set:function(e){return n[t]=e,e}})}),e}catch(r){d([r])}for(var i in n)f.call(n,i)&&(e[i]=n[i]);return e}function d(e){try{n.emit("internal-error",e)}catch(t){}}return n||(n=i),t.inPlace=u,t.flag=a,t}},{}]},{},["loader"]);</script> 
+  <meta name="viewport" content="width=device-width, initial-scale=1"> 
+  <link rel="profile" href="http://gmpg.org/xfn/11"> 
+  <title>Enterprise WordPress hosting, support, and consulting - WordPress VIP</title> 
+  <!-- This site is optimized with the Yoast SEO plugin v11.6 - https://yoast.com/wordpress/plugins/seo/ --> 
+  <meta name="description" content="We are enterprise WordPress. Power your customer journey with the official digital experience platform from the makers of WordPress.com."> 
+  <link rel="canonical" href="https://wpvip.com/"> 
+  <meta property="og:locale" content="en_US"> 
+  <meta property="og:type" content="website"> 
+  <meta property="og:title" content="Enterprise WordPress hosting, support, and consulting - WordPress VIP"> 
+  <meta property="og:description" content="We are enterprise WordPress. Power your customer journey with the official digital experience platform from the makers of WordPress.com."> 
+  <meta property="og:url" content="https://wpvip.com/"> 
+  <meta property="og:site_name" content="Enterprise WordPress hosting, support, and consulting - WordPress VIP"> 
+  <meta property="og:image" content="https://wpvip.com/wp-content/uploads/2017/07/homepage_featured.png"> 
+  <meta property="og:image:secure_url" content="https://wpvip.com/wp-content/uploads/2017/07/homepage_featured.png"> 
+  <meta property="og:image:width" content="1200"> 
+  <meta property="og:image:height" content="630"> 
+  <meta name="twitter:card" content="summary_large_image"> 
+  <meta name="twitter:description" content="We are enterprise WordPress. Power your customer journey with the official digital experience platform from the makers of WordPress.com."> 
+  <meta name="twitter:title" content="Enterprise WordPress hosting, support, and consulting - WordPress VIP"> 
+  <meta name="twitter:image" content="https://wpvip.com/wp-content/uploads/2017/07/homepage_featured.png"> 
+  <script type="application/ld+json" class="yoast-schema-graph yoast-schema-graph--main">{"@context":"https://schema.org","@graph":[{"@type":"WebSite","@id":"https://wpvip.com/#website","url":"https://wpvip.com/","name":"Enterprise WordPress hosting, support, and consulting - WordPress VIP","potentialAction":{"@type":"SearchAction","target":"https://wpvip.com/?s={search_term_string}","query-input":"required name=search_term_string"}},{"@type":"ImageObject","@id":"https://wpvip.com/#primaryimage","url":"https://wpvip.com/wp-content/uploads/2017/07/homepage_featured.png","width":1200,"height":630,"caption":"Enterprise WordPress hosting, guidance, and support"},{"@type":"WebPage","@id":"https://wpvip.com/#webpage","url":"https://wpvip.com/","inLanguage":"en-US","name":"Enterprise WordPress hosting, support, and consulting - WordPress VIP","isPartOf":{"@id":"https://wpvip.com/#website"},"primaryImageOfPage":{"@id":"https://wpvip.com/#primaryimage"},"datePublished":"2017-07-19T18:30:40-04:00","dateModified":"2019-11-26T17:52:29-05:00","description":"We are enterprise WordPress. Power your customer journey with the official digital experience platform from the makers of WordPress.com."}]}</script> 
+  <!-- / Yoast SEO plugin. --> 
+  <link rel="dns-prefetch" href="//s0.wp.com"> 
+  <link rel="dns-prefetch" href="//fonts.googleapis.com"> 
+  <link rel="dns-prefetch" href="//s.w.org"> 
+  <link rel="alternate" type="application/rss+xml" title="Enterprise WordPress hosting, support, and consulting - WordPress VIP » Feed" href="https://wpvip.com/feed/"> 
+  <link rel="alternate" type="application/rss+xml" title="Enterprise WordPress hosting, support, and consulting - WordPress VIP » Comments Feed" href="https://wpvip.com/comments/feed/"> 
+  <script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/12.0.0-1\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/12.0.0-1\/svg\/","svgExt":".svg","source":{"concatemoji":"https:\/\/wpvip.com\/wp-includes\/js\/wp-emoji-release.min.js?ver=5.3"}};
+			!function(e,a,t){var r,n,o,i,p=a.createElement("canvas"),s=p.getContext&&p.getContext("2d");function c(e,t){var a=String.fromCharCode;s.clearRect(0,0,p.width,p.height),s.fillText(a.apply(this,e),0,0);var r=p.toDataURL();return s.clearRect(0,0,p.width,p.height),s.fillText(a.apply(this,t),0,0),r===p.toDataURL()}function l(e){if(!s||!s.fillText)return!1;switch(s.textBaseline="top",s.font="600 32px Arial",e){case"flag":return!c([127987,65039,8205,9895,65039],[127987,65039,8203,9895,65039])&&(!c([55356,56826,55356,56819],[55356,56826,8203,55356,56819])&&!c([55356,57332,56128,56423,56128,56418,56128,56421,56128,56430,56128,56423,56128,56447],[55356,57332,8203,56128,56423,8203,56128,56418,8203,56128,56421,8203,56128,56430,8203,56128,56423,8203,56128,56447]));case"emoji":return!c([55357,56424,55356,57342,8205,55358,56605,8205,55357,56424,55356,57340],[55357,56424,55356,57342,8203,55358,56605,8203,55357,56424,55356,57340])}return!1}function d(e){var t=a.createElement("script");t.src=e,t.defer=t.type="text/javascript",a.getElementsByTagName("head")[0].appendChild(t)}for(i=Array("flag","emoji"),t.supports={everything:!0,everythingExceptFlag:!0},o=0;o<i.length;o++)t.supports[i[o]]=l(i[o]),t.supports.everything=t.supports.everything&&t.supports[i[o]],"flag"!==i[o]&&(t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&t.supports[i[o]]);t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&!t.supports.flag,t.DOMReady=!1,t.readyCallback=function(){t.DOMReady=!0},t.supports.everything||(n=function(){t.readyCallback()},a.addEventListener?(a.addEventListener("DOMContentLoaded",n,!1),e.addEventListener("load",n,!1)):(e.attachEvent("onload",n),a.attachEvent("onreadystatechange",function(){"complete"===a.readyState&&t.readyCallback()})),(r=t.source||{}).concatemoji?d(r.concatemoji):r.wpemoji&&r.twemoji&&(d(r.twemoji),d(r.wpemoji)))}(window,document,window._wpemojiSettings);
+		</script> 
+  <style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style> 
+  <link rel="stylesheet" id="all-css-0" href="https://wpvip.com/_static/??/wp-content/plugins/gutenberg/build/block-library/style.css,/wp-content/mu-plugins/jetpack/modules/likes/style.css?m=1564151863" type="text/css" media="all"> 
+  <link rel="stylesheet" id="wpcomvip-google-fonts-css" href="https://fonts.googleapis.com/css?family=Noto+Sans:400,400i,700,700i%7CNoto+Serif:400,400i,700,700i" media="all"> 
+  <link rel="stylesheet" id="all-css-2" href="https://wpvip.com/_static/??-eJyVzMESwiAMBNAfEmMZK14cvwUDttEGGBLs72vbi+PN2+7s7IO5GMxJY1LQMXIUmAtmflEx9tA5CCQKKALsKe0/YQdfF26mTG2gJPCIWjw+gXNo08JQGKIKSPQVx5XYotkWc68rEv5Bpd0EKxWlnH7awlz50vXu6Oy5t6c3P2lRlQ==" type="text/css" media="all"> 
+  <script type="text/javascript" src="https://wpvip.com/_static/??-eJzTLy/QzcxLzilNSS3WzwKiwtLUokoopZdVrKOPT4FubmZ6UWJJql5uZh5QsX2uraGpuYmloaGBuWkWACWPIK4="></script> 
+  <link rel="https://api.w.org/" href="https://wpvip.com/wp-json/"> 
+  <link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://wpvip.com/xmlrpc.php?rsd"> 
+  <link rel="wlwmanifest" type="application/wlwmanifest+xml" href="https://wpvip.com/wp-includes/wlwmanifest.xml"> 
+  <meta name="generator" content="WordPress 5.3"> 
+  <link rel="shortlink" href="https://wpvip.com/"> 
+  <link rel="alternate" type="application/json+oembed" href="https://wpvip.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwpvip.com%2F"> 
+  <link rel="alternate" type="text/xml+oembed" href="https://wpvip.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwpvip.com%2F&amp;format=xml"> 
+  <link rel="dns-prefetch" href="//widgets.wp.com"> 
+  <link rel="dns-prefetch" href="//s0.wp.com"> 
+  <link rel="dns-prefetch" href="//0.gravatar.com"> 
+  <link rel="dns-prefetch" href="//1.gravatar.com"> 
+  <link rel="dns-prefetch" href="//2.gravatar.com"> 
+  <style type="text/css">img#wpstats{display:none}</style>
+  <meta name="robots" content=""> 
+  <style type="text/css">
+				/* If html does not have either class, do not show lazy loaded images. */
+				html:not( .jetpack-lazy-images-js-enabled ):not( .js ) .jetpack-lazy-image {
+					display: none;
+				}
+			</style> 
+  <script>
+				document.documentElement.classList.add(
+					'jetpack-lazy-images-js-enabled'
+				);
+			</script> 
+  <link rel="icon" href="https://wpvip.com/wp-content/uploads/2019/04/c0a70310ea07fb03e415f74916b37b35.png?w=32" sizes="32x32"> 
+  <link rel="icon" href="https://wpvip.com/wp-content/uploads/2019/04/c0a70310ea07fb03e415f74916b37b35.png?w=128" sizes="192x192"> 
+  <link rel="apple-touch-icon-precomposed" href="https://wpvip.com/wp-content/uploads/2019/04/c0a70310ea07fb03e415f74916b37b35.png?w=128"> 
+  <meta name="msapplication-TileImage" content="https://wpvip.com/wp-content/uploads/2019/04/c0a70310ea07fb03e415f74916b37b35.png?w=128"> 
+  <style type="text/css" id="wp-custom-css">
+			#analytics-bing-hidden {
+	display:none;
+	visibility:hidden;
+}
+
+#analytics-linkedin-hidden {
+	display:none;
+}
+
+.comment-form-cookies-consent label:before {
+    content: " ";
+}
+
+/** Code Styles */
+pre.wp-block-code {
+    padding: 0;
+    background-color: #ecebea;
+    background-color: hsl(40, 5%, 92%);
+    padding-right: 1.5em;
+}
+
+code {
+    display: inline-block;
+    padding: 0px 7px;
+    border-radius: 3px;
+    font-size: 15px;
+    background-color: #ecebea;
+    position: relative;
+    bottom: 1px;
+    color: #333;
+    cursor: text;
+    line-height: 1.4;
+}
+
+.wp-block-code code {
+    display: block;
+    padding: 1.5em;
+    font-weight: 400;
+}		</style> 
+ </head> 
+ <body class="home page-template-default page page-id-28660 group-blog nav-light-mode"> 
+  <div id="page" class="site"> 
+   <a class="skip-link screen-reader-text" href="#content">Skip to content</a> 
+   <header id="masthead" class="site-header"> 
+    <div class="site-header-bg"></div> 
+    <div class="site-header-inner"> 
+     <div class="site-branding"> 
+      <h1 class="site-title"><a href="https://wpvip.com/" rel="home"><span class="screen-reader-text">Enterprise WordPress hosting, support, and consulting – WordPress VIP</span>
+        <svg class="svg-icon svg-icon-vip" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 200 87.7">
+         <path d="M43.8 0C19.7 0 0 19.7 0 43.8 0 68 19.7 87.7 43.8 87.7 68 87.7 87.7 68 87.7 43.8 87.7 19.7 68 0 43.8 0zM4.4 43.8c0-5.7 1.2-11.1 3.4-16l18.8 51.5C13.5 72.9 4.4 59.4 4.4 43.8zm39.4 39.4c-3.9 0-7.6-.6-11.1-1.6l11.8-34.4 12.1 33.2c.1.2.2.4.3.5-4.1 1.5-8.5 2.3-13.1 2.3zm5.5-57.8c2.4-.1 4.5-.4 4.5-.4 2.1-.3 1.9-3.4-.3-3.2 0 0-6.4.5-10.5.5-3.9 0-10.4-.5-10.4-.5-2.1-.1-2.4 3.1-.2 3.2 0 0 2 .2 4.1.4l6.1 16.8L34 68 19.7 25.4c2.4-.1 4.5-.4 4.5-.4 2.1-.3 1.9-3.4-.3-3.2 0 0-6.4.5-10.5.5h-2.5C18 11.5 30.1 4.4 43.8 4.4c10.3 0 19.6 3.9 26.6 10.3h-.5c-3.9 0-6.6 3.4-6.6 7 0 3.2 1.9 6 3.9 9.2 1.5 2.6 3.2 6 3.2 10.9 0 3.4-1 7.6-3 12.7l-3.9 13.1-14.2-42.2zm14.3 52.5l12-34.8c2.2-5.6 3-10.1 3-14.1 0-1.5-.1-2.8-.3-4.1 3.1 5.6 4.8 12.1 4.8 18.9.1 14.6-7.7 27.3-19.5 34.1zM127.3 23.6l-8.9 26.1c-.9 3.2-1.7 6.2-2 9h-.2c-.2-2.8-1-5.9-2-9l-8.9-26.1H93.6l16.8 44.1h12l16.8-44.1h-11.9zM145 23.6l-3.3 8.7v35.3h11.8v-44M195.6 28.8c-2.9-4-7-6-12.2-6-5.5 0-9.3 2.2-12.1 6.5h-.6l-1.7-5.7h-9.6v64.1h11.8V69.2c0-.6-.2-2.7-.6-6.4h.6c2.9 3.8 6.6 5.6 11.8 5.6 3.4 0 6.4-.9 9-2.7 2.5-1.8 4.5-4.5 5.9-7.9 1.4-3.5 2.1-7.6 2.1-12.3 0-7.1-1.5-12.7-4.4-16.7zm-15.5 29.9c-3 0-5.3-1-6.7-3.1-1.4-2-2.1-5.4-2.1-10.2v-1.3c.1-4.2.8-7.2 2.1-9 1.4-1.8 3.5-2.7 6.5-2.7 2.8 0 4.9 1.1 6.2 3.3 1.3 2.2 2 5.4 2 9.8.1 8.7-2.6 13.2-8 13.2z" />
+        </svg></a></h1> 
+     </div>
+     <!-- .site-branding --> 
+     <div class="menu-persistent-container">
+      <ul id="persistent-menu" class="menu">
+       <li id="menu-item-29030" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-29030"><a href="https://wpvip.com/contact/">Contact us</a></li> 
+      </ul>
+     </div> 
+     <button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"> <span class="menu-toggle-border"></span> <span class="menu-toggle-border"></span> <span class="menu-toggle-border"></span> <span class="menu-toggle-border"></span> <span class="menu-toggle-border"></span> <span class="screen-reader-text">Primary Menu</span> </button> 
+     <nav id="site-navigation" class="main-navigation"> 
+      <span class="navigation-overlay"><span class="navigation-decor"></span></span> 
+      <div class="menu-primary-menu-container">
+       <ul id="primary-menu" class="menu">
+        <li id="menu-item-29023" class="menu-item menu-item-type-post_type_archive menu-item-object-case_studies menu-item-29023"><a href="https://wpvip.com/case-studies/">Case Studies</a></li> 
+        <li id="menu-item-29024" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-29024"><a href="https://wpvip.com/services/">Services</a></li> 
+        <li id="menu-item-34747" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-34747"><a href="https://wpvip.com/product/">Product</a></li> 
+        <li id="menu-item-29026" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-29026"><a href="https://wpvip.com/partners/">Partners</a></li> 
+       </ul>
+      </div>
+      <div class="menu-secondary-menu-container">
+       <ul id="secondary-menu" class="menu">
+        <li id="menu-item-29027" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-29027"><a href="https://wpvip.com/news/">News</a></li> 
+        <li id="menu-item-29028" class="menu-item menu-item-type-post_type_archive menu-item-object-vip_documentation menu-item-29028"><a href="https://wpvip.com/documentation/">Documentation</a></li> 
+        <li id="menu-item-29029" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-29029"><a href="https://wpvip.com/contact/">Contact</a></li> 
+        <li id="menu-item-30216" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-30216"><a href="https://wpvip.com/careers/">Careers</a></li> 
+       </ul>
+      </div>
+     </nav>
+     <!-- #site-navigation --> 
+    </div> 
+   </header>
+   <!-- #masthead --> 
+   <div id="content" class="site-content"> 
+    <div id="primary"> 
+     <main id="main"> 
+      <div class="featured-text-wrapper clearfix is-dark has-intro"> 
+       <p class="featured-text-intro">Power your digital experiences with the platform trusted by the world's top brands.</p> 
+       <h1 class="featured-text no-scroll"> <span class="featured-text-alt"><span class="word-wrapper" data-words="sell., market., innovate."><span class="word">Enterprise</span></span></span><br>WordPress </h1> 
+      </div> 
+      <div class="global-padding clearfix"> 
+       <div class="highlights highlights-count-1 has-overlap has-shadow"> 
+        <div class="highlight is-single-row"> 
+         <a href="https://wpvip.com/2019/11/01/disrupting-the-enterprise-nick-gernert-wcus-2019/" class="highlight-link">
+          <div class="highlight-inner">
+           <div class="highlight-cta-image-wrap">
+            <img width="900" height="600" src="https://wpvip.com/wp-content/uploads/2019/11/Nick-at-wcus.jpg?quality=90&amp;strip=all&amp;w=900" class="attachment-medium_large size-medium_large wp-post-image jetpack-lazy-image" alt="WordPress VIP CEO Nick Gernert speaking at WordCamp US 2019 in St. Louis" data-attachment-id="36147" data-permalink="https://wpvip.com/nick-at-wcus/" data-orig-file="https://wpvip.com/wp-content/uploads/2019/11/Nick-at-wcus.jpg?quality=90&amp;strip=all" data-orig-size="1000,667" data-comments-opened="1" data-image-meta="{&quot;aperture&quot;:&quot;0&quot;,&quot;credit&quot;:&quot;&quot;,&quot;camera&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;created_timestamp&quot;:&quot;0&quot;,&quot;copyright&quot;:&quot;&quot;,&quot;focal_length&quot;:&quot;0&quot;,&quot;iso&quot;:&quot;0&quot;,&quot;shutter_speed&quot;:&quot;0&quot;,&quot;title&quot;:&quot;&quot;,&quot;orientation&quot;:&quot;0&quot;}" data-image-title="Nick-Gernert-at-wordcamp-us" data-image-description="" data-medium-file="https://wpvip.com/wp-content/uploads/2019/11/Nick-at-wcus.jpg?quality=90&amp;strip=all&amp;w=280" data-large-file="https://wpvip.com/wp-content/uploads/2019/11/Nick-at-wcus.jpg?quality=90&amp;strip=all&amp;w=900" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7">
+           </div>
+           <h3>WordPress VIP CEO talks the state of Enterprise WordPress at WordCamp US</h3>
+           <p>WordPress VIP empowers enterprises to build large-scale digital experiences. Watch CEO Nick Gernert explain what business leaders gain from choosing WordPress.</p>
+           <p class="highlight-link-text">Watch talk</p>
+          </div></a> 
+        </div> 
+       </div> 
+      </div> 
+      <div class="global-padding clearfix"> 
+       <div class="highlights highlights-count-3"> 
+        <div class="highlight is-single-row"> 
+         <a href="https://wpvip.com/infrastructure/" class="highlight-link">
+          <div class="highlight-inner">
+           <img width="340" height="300" src="https://wpvip.com/wp-content/uploads/2017/07/cloud-dark.png?w=340" class="attachment-medium_large size-medium_large wp-post-image jetpack-lazy-image" alt="" data-attachment-id="28533" data-permalink="https://wpvip.com/cloud-dark/" data-orig-file="https://wpvip.com/wp-content/uploads/2017/07/cloud-dark.png" data-orig-size="340,300" data-comments-opened="1" data-image-meta="{&quot;aperture&quot;:&quot;0&quot;,&quot;credit&quot;:&quot;&quot;,&quot;camera&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;created_timestamp&quot;:&quot;0&quot;,&quot;copyright&quot;:&quot;&quot;,&quot;focal_length&quot;:&quot;0&quot;,&quot;iso&quot;:&quot;0&quot;,&quot;shutter_speed&quot;:&quot;0&quot;,&quot;title&quot;:&quot;&quot;,&quot;orientation&quot;:&quot;0&quot;}" data-image-title="cloud-dark" data-image-description="" data-medium-file="https://wpvip.com/wp-content/uploads/2017/07/cloud-dark.png?w=280" data-large-file="https://wpvip.com/wp-content/uploads/2017/07/cloud-dark.png?w=340" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7">
+           <h3>Enterprise WordPress Platform</h3>
+           <p>VIP is a fully managed WordPress cloud platform for unparalleled scale, security, flexibility, and performance.</p>
+           <p class="highlight-link-text">Explore our platform</p>
+          </div></a> 
+        </div> 
+        <div class="highlight is-single-row"> 
+         <a href="https://wpvip.com/our-approach/" class="highlight-link">
+          <div class="highlight-inner">
+           <img width="340" height="300" src="https://wpvip.com/wp-content/uploads/2017/07/support-dark.png?w=340" class="attachment-medium_large size-medium_large wp-post-image jetpack-lazy-image" alt="" data-attachment-id="28536" data-permalink="https://wpvip.com/support-dark/" data-orig-file="https://wpvip.com/wp-content/uploads/2017/07/support-dark.png" data-orig-size="340,300" data-comments-opened="1" data-image-meta="{&quot;aperture&quot;:&quot;0&quot;,&quot;credit&quot;:&quot;&quot;,&quot;camera&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;created_timestamp&quot;:&quot;0&quot;,&quot;copyright&quot;:&quot;&quot;,&quot;focal_length&quot;:&quot;0&quot;,&quot;iso&quot;:&quot;0&quot;,&quot;shutter_speed&quot;:&quot;0&quot;,&quot;title&quot;:&quot;&quot;,&quot;orientation&quot;:&quot;0&quot;}" data-image-title="support-dark" data-image-description="" data-medium-file="https://wpvip.com/wp-content/uploads/2017/07/support-dark.png?w=280" data-large-file="https://wpvip.com/wp-content/uploads/2017/07/support-dark.png?w=340" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7">
+           <h3>Implementation and Support</h3>
+           <p>End-to-end guidance and hands-on support, from project consideration through launch and every day thereafter.</p>
+           <p class="highlight-link-text">Check out our approach</p>
+          </div></a> 
+        </div> 
+        <div class="highlight is-single-row"> 
+         <a href="https://wpvip.com/capabilities/" class="highlight-link">
+          <div class="highlight-inner">
+           <img width="340" height="300" src="https://wpvip.com/wp-content/uploads/2017/07/windows-dark.png?w=340" class="attachment-medium_large size-medium_large wp-post-image jetpack-lazy-image" alt="Enterprise WordPress hosting" data-attachment-id="28537" data-permalink="https://wpvip.com/windows-dark/" data-orig-file="https://wpvip.com/wp-content/uploads/2017/07/windows-dark.png" data-orig-size="340,300" data-comments-opened="1" data-image-meta="{&quot;aperture&quot;:&quot;0&quot;,&quot;credit&quot;:&quot;&quot;,&quot;camera&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;created_timestamp&quot;:&quot;0&quot;,&quot;copyright&quot;:&quot;&quot;,&quot;focal_length&quot;:&quot;0&quot;,&quot;iso&quot;:&quot;0&quot;,&quot;shutter_speed&quot;:&quot;0&quot;,&quot;title&quot;:&quot;&quot;,&quot;orientation&quot;:&quot;0&quot;}" data-image-title="Enterprise WordPress Hosting" data-image-description="" data-medium-file="https://wpvip.com/wp-content/uploads/2017/07/windows-dark.png?w=280" data-large-file="https://wpvip.com/wp-content/uploads/2017/07/windows-dark.png?w=340" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7">
+           <h3>Build Your Digital Experiences</h3>
+           <p>Solutions at the ready. See how WordPress powers mission critical enterprise media and marketing systems.</p>
+           <p class="highlight-link-text">Explore use cases</p>
+          </div></a> 
+        </div> 
+       </div> 
+      </div> 
+      <h2 class="headline headline-align-center global-padding reduce-spacing"><span class="headline-inner">We support your applications as if they were our own.</span></h2>
+      <div class="text global-padding">
+       <p style="text-align: center;max-width: 500px;margin: 0 auto">We review every line of code and closely vet technical integrations. Our clients tell us that the standards we introduce bring confidence and creative freedom to their developers, trust to leadership, and efficiency and order to their pipelines.</p> 
+      </div>
+      <div class="module-cards-qoutes"> 
+       <div class="cards-quotes"> 
+        <div class="cards-quotes-with-image clearfix card-has-link"> 
+         <div class="cards-quotes-image"> 
+          <picture> 
+           <img width="900" height="675" src="https://wpvip.com/wp-content/uploads/2018/08/img_8198.jpg?quality=90&amp;strip=all&amp;w=900" class="attachment-large size-large jetpack-lazy-image" alt="Photo of train with NewsCorp Australia wrap ad. Text reads, &quot;Get on board. Have you read the news today?&quot;" data-attachment-id="33028" data-permalink="https://wpvip.com/case-studies/news-corp-australia-xwp/img_8198/" data-orig-file="https://wpvip.com/wp-content/uploads/2018/08/img_8198.jpg?quality=90&amp;strip=all" data-orig-size="1546,1160" data-comments-opened="1" data-image-meta="{&quot;aperture&quot;:&quot;1.8&quot;,&quot;credit&quot;:&quot;&quot;,&quot;camera&quot;:&quot;iPhone 7&quot;,&quot;caption&quot;:&quot;&quot;,&quot;created_timestamp&quot;:&quot;1520443999&quot;,&quot;copyright&quot;:&quot;&quot;,&quot;focal_length&quot;:&quot;3.99&quot;,&quot;iso&quot;:&quot;20&quot;,&quot;shutter_speed&quot;:&quot;0.0019417475728155&quot;,&quot;title&quot;:&quot;&quot;,&quot;orientation&quot;:&quot;0&quot;}" data-image-title="Daily Telegraph ad on train" data-image-description="" data-medium-file="https://wpvip.com/wp-content/uploads/2018/08/img_8198.jpg?quality=90&amp;strip=all&amp;w=280" data-large-file="https://wpvip.com/wp-content/uploads/2018/08/img_8198.jpg?quality=90&amp;strip=all&amp;w=900" data-lazy-srcset="https://wpvip.com/wp-content/uploads/2018/08/img_8198.jpg?quality=90&amp;strip=all 1546w, https://wpvip.com/wp-content/uploads/2018/08/img_8198.jpg?resize=120%2C90&amp;quality=90&amp;strip=all 120w, https://wpvip.com/wp-content/uploads/2018/08/img_8198.jpg?resize=280%2C210&amp;quality=90&amp;strip=all 280w, https://wpvip.com/wp-content/uploads/2018/08/img_8198.jpg?resize=768%2C576&amp;quality=90&amp;strip=all 768w, https://wpvip.com/wp-content/uploads/2018/08/img_8198.jpg?resize=1032%2C774&amp;quality=90&amp;strip=all 1032w, https://wpvip.com/wp-content/uploads/2018/08/img_8198.jpg?resize=1536%2C1152&amp;quality=90&amp;strip=all 1536w" data-lazy-sizes="(max-width: 900px) 100vw, 900px" data-lazy-src="https://wpvip.com/wp-content/uploads/2018/08/img_8198.jpg?quality=90&amp;strip=all&amp;w=900&amp;is-pending-load=1" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"> 
+          </picture> 
+         </div> 
+         <div class="cards-quotes-content-wrapper" data-ps="" data-ps-start-y="0.3" data-ps-end-y="-0.1" style="background-color:#2b4991;color:#ffffff;"> 
+          <div class="cards-quotes-content"> 
+           <span class="card-logo-image"><span class="image-ratio-large"><img width="900" height="139" src="https://wpvip.com/wp-content/uploads/2019/05/news_corp_australia_logo.png?w=900" class="attachment-medium_large size-medium_large jetpack-lazy-image" alt="NewsCorp Australia logo" data-attachment-id="34068" data-permalink="https://wpvip.com/front-new/news_corp_australia_logo-2/" data-orig-file="https://wpvip.com/wp-content/uploads/2019/05/news_corp_australia_logo.png" data-orig-size="1280,198" data-comments-opened="1" data-image-meta="{&quot;aperture&quot;:&quot;0&quot;,&quot;credit&quot;:&quot;&quot;,&quot;camera&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;created_timestamp&quot;:&quot;0&quot;,&quot;copyright&quot;:&quot;&quot;,&quot;focal_length&quot;:&quot;0&quot;,&quot;iso&quot;:&quot;0&quot;,&quot;shutter_speed&quot;:&quot;0&quot;,&quot;title&quot;:&quot;&quot;,&quot;orientation&quot;:&quot;0&quot;}" data-image-title="NewsCorp Australia logo" data-image-description="" data-medium-file="https://wpvip.com/wp-content/uploads/2019/05/news_corp_australia_logo.png?w=280" data-large-file="https://wpvip.com/wp-content/uploads/2019/05/news_corp_australia_logo.png?w=900" data-lazy-srcset="https://wpvip.com/wp-content/uploads/2019/05/news_corp_australia_logo.png?quality=90&amp;strip=all 1280w, https://wpvip.com/wp-content/uploads/2019/05/news_corp_australia_logo.png?resize=120%2C19&amp;quality=90&amp;strip=all 120w, https://wpvip.com/wp-content/uploads/2019/05/news_corp_australia_logo.png?resize=280%2C43&amp;quality=90&amp;strip=all 280w, https://wpvip.com/wp-content/uploads/2019/05/news_corp_australia_logo.png?resize=768%2C119&amp;quality=90&amp;strip=all 768w, https://wpvip.com/wp-content/uploads/2019/05/news_corp_australia_logo.png?resize=1032%2C160&amp;quality=90&amp;strip=all 1032w" data-lazy-sizes="(max-width: 900px) 100vw, 900px" data-lazy-src="https://wpvip.com/wp-content/uploads/2019/05/news_corp_australia_logo.png?w=900&amp;is-pending-load=1" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"></span></span>
+           <p>Australia’s largest digital publisher worked with us and featured partner XWP to consolidate 90+ brands across 15 sites on WordPress VIP.</p>
+           <a href="https://wpvip.com/case-studies/news-corp-australia-xwp/" class="cards-quotes-button"><span class="cards-quotes-button-icon">
+             <svg class="svg-icon svg-icon-arrow-right" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 20 16.9">
+              <path d="M19.8 7.9L12 0.2c-0.2-0.2-0.6-0.2-0.8 0l-0.6 0.6c-0.2 0.2-0.2 0.6 0 0.8L16 6.9c0.1 0.1 0 0.4-0.2 0.4H0.6C0.2 7.3 0 7.6 0 7.9v0.9c0 0.3 0.2 0.6 0.6 0.6h15.3c0.2 0 0.3 0.2 0.2 0.4l-5.5 5.5c-0.2 0.2-0.2 0.6 0 0.8l0.6 0.6c0.2 0.2 0.6 0.2 0.8 0l7.8-7.8C20.1 8.6 20.1 8.1 19.8 7.9z" />
+             </svg></span><span class="cards-quotes-button-icon-dup" style="color:#2b4991;">
+             <svg class="svg-icon svg-icon-arrow-right" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 20 16.9">
+              <path d="M19.8 7.9L12 0.2c-0.2-0.2-0.6-0.2-0.8 0l-0.6 0.6c-0.2 0.2-0.2 0.6 0 0.8L16 6.9c0.1 0.1 0 0.4-0.2 0.4H0.6C0.2 7.3 0 7.6 0 7.9v0.9c0 0.3 0.2 0.6 0.6 0.6h15.3c0.2 0 0.3 0.2 0.2 0.4l-5.5 5.5c-0.2 0.2-0.2 0.6 0 0.8l0.6 0.6c0.2 0.2 0.6 0.2 0.8 0l7.8-7.8C20.1 8.6 20.1 8.1 19.8 7.9z" />
+             </svg></span></a> 
+          </div> 
+         </div> 
+        </div> 
+        <div class="quote" style=""> 
+         <div class="quote-inner"> 
+          <span class="quote-line"></span> 
+          <div> 
+           <blockquote class="quote-blockquote"> 
+            <p>“In the past, if a website wasn’t meeting its goals, the marketing campaign would be over before the team was able to make any improvements. Now, changes like this happen instantly. It’s a new world for us.”</p>
+            <footer>
+              — 
+             <cite>Ryan Pugatch, HBG</cite>
+            </footer> 
+           </blockquote> 
+           <span class="quote-logo-image"><span class="image-ratio-medium"><img width="600" height="173" src="https://wpvip.com/wp-content/uploads/2018/03/carousel-main-intlwomens-main2.png?w=600" class="attachment-medium_large size-medium_large jetpack-lazy-image" alt="" data-attachment-id="30837" data-permalink="https://wpvip.com/empowering-marketers/carousel-main-intlwomens-main2/" data-orig-file="https://wpvip.com/wp-content/uploads/2018/03/carousel-main-intlwomens-main2.png" data-orig-size="600,173" data-comments-opened="1" data-image-meta="{&quot;aperture&quot;:&quot;0&quot;,&quot;credit&quot;:&quot;&quot;,&quot;camera&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;created_timestamp&quot;:&quot;0&quot;,&quot;copyright&quot;:&quot;&quot;,&quot;focal_length&quot;:&quot;0&quot;,&quot;iso&quot;:&quot;0&quot;,&quot;shutter_speed&quot;:&quot;0&quot;,&quot;title&quot;:&quot;&quot;,&quot;orientation&quot;:&quot;0&quot;}" data-image-title="Hachette logo" data-image-description="" data-medium-file="https://wpvip.com/wp-content/uploads/2018/03/carousel-main-intlwomens-main2.png?w=280" data-large-file="https://wpvip.com/wp-content/uploads/2018/03/carousel-main-intlwomens-main2.png?w=600" data-lazy-srcset="https://wpvip.com/wp-content/uploads/2018/03/carousel-main-intlwomens-main2.png?quality=90&amp;strip=all 600w, https://wpvip.com/wp-content/uploads/2018/03/carousel-main-intlwomens-main2.png?resize=120%2C35&amp;quality=90&amp;strip=all 120w, https://wpvip.com/wp-content/uploads/2018/03/carousel-main-intlwomens-main2.png?resize=280%2C81&amp;quality=90&amp;strip=all 280w" data-lazy-sizes="(max-width: 600px) 100vw, 600px" data-lazy-src="https://wpvip.com/wp-content/uploads/2018/03/carousel-main-intlwomens-main2.png?w=600&amp;is-pending-load=1" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"></span></span> 
+          </div> 
+         </div> 
+        </div> 
+       </div> 
+       <div class="cards-quotes"> 
+        <div class="cards-quotes-with-image clearfix card-has-link"> 
+         <div class="cards-quotes-image"> 
+          <picture> 
+           <img width="900" height="603" src="https://wpvip.com/wp-content/uploads/2017/10/variety_magazine_native-1-full.jpg?quality=90&amp;strip=all&amp;w=900" class="attachment-large size-large jetpack-lazy-image" alt="print cover of Variety magazine" data-attachment-id="30212" data-permalink="https://wpvip.com/case-studies/defining-the-digital-publishing-playbook-across-brands-pmc/variety_magazine_native-1-full/" data-orig-file="https://wpvip.com/wp-content/uploads/2017/10/variety_magazine_native-1-full.jpg?quality=90&amp;strip=all" data-orig-size="1532,1026" data-comments-opened="1" data-image-meta="{&quot;aperture&quot;:&quot;0&quot;,&quot;credit&quot;:&quot;&quot;,&quot;camera&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;created_timestamp&quot;:&quot;0&quot;,&quot;copyright&quot;:&quot;&quot;,&quot;focal_length&quot;:&quot;0&quot;,&quot;iso&quot;:&quot;0&quot;,&quot;shutter_speed&quot;:&quot;0&quot;,&quot;title&quot;:&quot;&quot;,&quot;orientation&quot;:&quot;0&quot;}" data-image-title="Variety Magazine" data-image-description="" data-medium-file="https://wpvip.com/wp-content/uploads/2017/10/variety_magazine_native-1-full.jpg?quality=90&amp;strip=all&amp;w=280" data-large-file="https://wpvip.com/wp-content/uploads/2017/10/variety_magazine_native-1-full.jpg?quality=90&amp;strip=all&amp;w=900" data-lazy-srcset="https://wpvip.com/wp-content/uploads/2017/10/variety_magazine_native-1-full.jpg?quality=90&amp;strip=all 1532w, https://wpvip.com/wp-content/uploads/2017/10/variety_magazine_native-1-full.jpg?resize=120%2C80&amp;quality=90&amp;strip=all 120w, https://wpvip.com/wp-content/uploads/2017/10/variety_magazine_native-1-full.jpg?resize=280%2C188&amp;quality=90&amp;strip=all 280w, https://wpvip.com/wp-content/uploads/2017/10/variety_magazine_native-1-full.jpg?resize=768%2C514&amp;quality=90&amp;strip=all 768w, https://wpvip.com/wp-content/uploads/2017/10/variety_magazine_native-1-full.jpg?resize=1032%2C691&amp;quality=90&amp;strip=all 1032w" data-lazy-sizes="(max-width: 900px) 100vw, 900px" data-lazy-src="https://wpvip.com/wp-content/uploads/2017/10/variety_magazine_native-1-full.jpg?quality=90&amp;strip=all&amp;w=900&amp;is-pending-load=1" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"> 
+          </picture> 
+         </div> 
+         <div class="cards-quotes-content-wrapper" data-ps="" data-ps-start-y="0.3" data-ps-end-y="-0.1" style="background-color:#f3f6f8;color:#000000;"> 
+          <div class="cards-quotes-content"> 
+           <span class="card-logo-image"><span class="image-ratio-large"><img width="214" height="32" src="https://wpvip.com/wp-content/uploads/2017/09/pmc-logo-transparent.png?w=214" class="attachment-medium_large size-medium_large jetpack-lazy-image" alt="" data-attachment-id="29411" data-permalink="https://wpvip.com/case-studies/defining-the-digital-publishing-playbook-across-brands-pmc/pmc-logo-transparent/" data-orig-file="https://wpvip.com/wp-content/uploads/2017/09/pmc-logo-transparent.png" data-orig-size="214,32" data-comments-opened="1" data-image-meta="{&quot;aperture&quot;:&quot;0&quot;,&quot;credit&quot;:&quot;&quot;,&quot;camera&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;created_timestamp&quot;:&quot;0&quot;,&quot;copyright&quot;:&quot;&quot;,&quot;focal_length&quot;:&quot;0&quot;,&quot;iso&quot;:&quot;0&quot;,&quot;shutter_speed&quot;:&quot;0&quot;,&quot;title&quot;:&quot;&quot;,&quot;orientation&quot;:&quot;0&quot;}" data-image-title="PMC Logo" data-image-description="" data-medium-file="https://wpvip.com/wp-content/uploads/2017/09/pmc-logo-transparent.png?w=214" data-large-file="https://wpvip.com/wp-content/uploads/2017/09/pmc-logo-transparent.png?w=214" data-lazy-srcset="https://wpvip.com/wp-content/uploads/2017/09/pmc-logo-transparent.png?quality=90&amp;strip=all 214w, https://wpvip.com/wp-content/uploads/2017/09/pmc-logo-transparent.png?resize=120%2C18&amp;quality=90&amp;strip=all 120w" data-lazy-sizes="(max-width: 214px) 100vw, 214px" data-lazy-src="https://wpvip.com/wp-content/uploads/2017/09/pmc-logo-transparent.png?w=214&amp;is-pending-load=1" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"></span></span>
+           <p>The media powerhouse behind 22 brands including Variety, Deadline, and WWD maximizes code reuse and efficiency on VIP, building an ever-growing code library, tool set, and playbook across their publications.</p>
+           <a href="https://wpvip.com/case-studies/defining-the-digital-publishing-playbook-across-brands-pmc/" class="cards-quotes-button"><span class="cards-quotes-button-icon">
+             <svg class="svg-icon svg-icon-arrow-right" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 20 16.9">
+              <path d="M19.8 7.9L12 0.2c-0.2-0.2-0.6-0.2-0.8 0l-0.6 0.6c-0.2 0.2-0.2 0.6 0 0.8L16 6.9c0.1 0.1 0 0.4-0.2 0.4H0.6C0.2 7.3 0 7.6 0 7.9v0.9c0 0.3 0.2 0.6 0.6 0.6h15.3c0.2 0 0.3 0.2 0.2 0.4l-5.5 5.5c-0.2 0.2-0.2 0.6 0 0.8l0.6 0.6c0.2 0.2 0.6 0.2 0.8 0l7.8-7.8C20.1 8.6 20.1 8.1 19.8 7.9z" />
+             </svg></span><span class="cards-quotes-button-icon-dup" style="color:#f3f6f8;">
+             <svg class="svg-icon svg-icon-arrow-right" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 20 16.9">
+              <path d="M19.8 7.9L12 0.2c-0.2-0.2-0.6-0.2-0.8 0l-0.6 0.6c-0.2 0.2-0.2 0.6 0 0.8L16 6.9c0.1 0.1 0 0.4-0.2 0.4H0.6C0.2 7.3 0 7.6 0 7.9v0.9c0 0.3 0.2 0.6 0.6 0.6h15.3c0.2 0 0.3 0.2 0.2 0.4l-5.5 5.5c-0.2 0.2-0.2 0.6 0 0.8l0.6 0.6c0.2 0.2 0.6 0.2 0.8 0l7.8-7.8C20.1 8.6 20.1 8.1 19.8 7.9z" />
+             </svg></span></a> 
+          </div> 
+         </div> 
+        </div> 
+        <div class="quote" style=""> 
+         <div class="quote-inner"> 
+          <span class="quote-line"></span> 
+          <div> 
+           <blockquote class="quote-blockquote"> 
+            <p>“Working with WordPress.com VIP allows our team to focus on building awesome stuff”</p>
+            <footer>
+              — 
+             <cite>David Parsons, USA Today</cite>
+            </footer> 
+           </blockquote> 
+           <span class="quote-logo-image"><span class="image-ratio-normal"><img width="754" height="392" src="https://wpvip.com/wp-content/uploads/2017/07/usa-today.png?w=754" class="attachment-medium_large size-medium_large jetpack-lazy-image" alt="USA Today logo" data-attachment-id="28449" data-permalink="https://wpvip.com/front-old/usa-today-2/" data-orig-file="https://wpvip.com/wp-content/uploads/2017/07/usa-today.png" data-orig-size="754,392" data-comments-opened="1" data-image-meta="{&quot;aperture&quot;:&quot;0&quot;,&quot;credit&quot;:&quot;&quot;,&quot;camera&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;created_timestamp&quot;:&quot;0&quot;,&quot;copyright&quot;:&quot;&quot;,&quot;focal_length&quot;:&quot;0&quot;,&quot;iso&quot;:&quot;0&quot;,&quot;shutter_speed&quot;:&quot;0&quot;,&quot;title&quot;:&quot;&quot;,&quot;orientation&quot;:&quot;0&quot;}" data-image-title="USA Today" data-image-description="" data-medium-file="https://wpvip.com/wp-content/uploads/2017/07/usa-today.png?w=280" data-large-file="https://wpvip.com/wp-content/uploads/2017/07/usa-today.png?w=754" data-lazy-srcset="https://wpvip.com/wp-content/uploads/2017/07/usa-today.png?quality=90&amp;strip=all 754w, https://wpvip.com/wp-content/uploads/2017/07/usa-today.png?resize=120%2C62&amp;quality=90&amp;strip=all 120w, https://wpvip.com/wp-content/uploads/2017/07/usa-today.png?resize=280%2C146&amp;quality=90&amp;strip=all 280w" data-lazy-sizes="(max-width: 754px) 100vw, 754px" data-lazy-src="https://wpvip.com/wp-content/uploads/2017/07/usa-today.png?w=754&amp;is-pending-load=1" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"></span></span> 
+          </div> 
+         </div> 
+        </div> 
+       </div> 
+       <div class="cards-quotes"> 
+        <div class="cards-quotes-with-image clearfix card-has-link"> 
+         <div class="cards-quotes-image"> 
+          <picture> 
+           <img width="900" height="599" src="https://wpvip.com/wp-content/uploads/2017/07/abril-case-study.jpg?quality=90&amp;strip=all&amp;w=900" class="attachment-large size-large jetpack-lazy-image" alt="" data-attachment-id="28628" data-permalink="https://wpvip.com/abril-case-study/" data-orig-file="https://wpvip.com/wp-content/uploads/2017/07/abril-case-study.jpg?quality=90&amp;strip=all" data-orig-size="1365,908" data-comments-opened="1" data-image-meta="{&quot;aperture&quot;:&quot;0&quot;,&quot;credit&quot;:&quot;&quot;,&quot;camera&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;created_timestamp&quot;:&quot;0&quot;,&quot;copyright&quot;:&quot;&quot;,&quot;focal_length&quot;:&quot;0&quot;,&quot;iso&quot;:&quot;0&quot;,&quot;shutter_speed&quot;:&quot;0&quot;,&quot;title&quot;:&quot;&quot;,&quot;orientation&quot;:&quot;1&quot;}" data-image-title="abril-case-study" data-image-description="" data-medium-file="https://wpvip.com/wp-content/uploads/2017/07/abril-case-study.jpg?quality=90&amp;strip=all&amp;w=280" data-large-file="https://wpvip.com/wp-content/uploads/2017/07/abril-case-study.jpg?quality=90&amp;strip=all&amp;w=900" data-lazy-srcset="https://wpvip.com/wp-content/uploads/2017/07/abril-case-study.jpg?quality=90&amp;strip=all 1365w, https://wpvip.com/wp-content/uploads/2017/07/abril-case-study.jpg?resize=120%2C80&amp;quality=90&amp;strip=all 120w, https://wpvip.com/wp-content/uploads/2017/07/abril-case-study.jpg?resize=280%2C186&amp;quality=90&amp;strip=all 280w, https://wpvip.com/wp-content/uploads/2017/07/abril-case-study.jpg?resize=768%2C511&amp;quality=90&amp;strip=all 768w, https://wpvip.com/wp-content/uploads/2017/07/abril-case-study.jpg?resize=1032%2C686&amp;quality=90&amp;strip=all 1032w" data-lazy-sizes="(max-width: 900px) 100vw, 900px" data-lazy-src="https://wpvip.com/wp-content/uploads/2017/07/abril-case-study.jpg?quality=90&amp;strip=all&amp;w=900&amp;is-pending-load=1" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"> 
+          </picture> 
+         </div> 
+         <div class="cards-quotes-content-wrapper" data-ps="" data-ps-start-y="0.3" data-ps-end-y="-0.1" style="background-color:#005e38;color:#ffffff;"> 
+          <div class="cards-quotes-content"> 
+           <span class="card-logo-image"><span class="image-ratio-medium"><img width="360" height="175" src="https://wpvip.com/wp-content/uploads/2017/07/abril-card.png?w=360" class="attachment-medium_large size-medium_large jetpack-lazy-image" alt="" data-attachment-id="28450" data-permalink="https://wpvip.com/front-old/abril-card/" data-orig-file="https://wpvip.com/wp-content/uploads/2017/07/abril-card.png" data-orig-size="360,175" data-comments-opened="1" data-image-meta="{&quot;aperture&quot;:&quot;0&quot;,&quot;credit&quot;:&quot;&quot;,&quot;camera&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;created_timestamp&quot;:&quot;0&quot;,&quot;copyright&quot;:&quot;&quot;,&quot;focal_length&quot;:&quot;0&quot;,&quot;iso&quot;:&quot;0&quot;,&quot;shutter_speed&quot;:&quot;0&quot;,&quot;title&quot;:&quot;&quot;,&quot;orientation&quot;:&quot;0&quot;}" data-image-title="abril-card" data-image-description="" data-medium-file="https://wpvip.com/wp-content/uploads/2017/07/abril-card.png?w=280" data-large-file="https://wpvip.com/wp-content/uploads/2017/07/abril-card.png?w=360" data-lazy-srcset="https://wpvip.com/wp-content/uploads/2017/07/abril-card.png?quality=90&amp;strip=all 360w, https://wpvip.com/wp-content/uploads/2017/07/abril-card.png?resize=120%2C58&amp;quality=90&amp;strip=all 120w, https://wpvip.com/wp-content/uploads/2017/07/abril-card.png?resize=280%2C136&amp;quality=90&amp;strip=all 280w" data-lazy-sizes="(max-width: 360px) 100vw, 360px" data-lazy-src="https://wpvip.com/wp-content/uploads/2017/07/abril-card.png?w=360&amp;is-pending-load=1" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"></span></span>
+           <p>Abril's digital transformation brought dozens of publishing brands under a common theme and infrastructure with VIP, gaining speed and efficiency and freeing them up to reshape resources company-wide.</p>
+           <a href="https://wpvip.com/case-studies/streamlining-publishing-and-operations-with-grupo-abril/" class="cards-quotes-button"><span class="cards-quotes-button-icon">
+             <svg class="svg-icon svg-icon-arrow-right" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 20 16.9">
+              <path d="M19.8 7.9L12 0.2c-0.2-0.2-0.6-0.2-0.8 0l-0.6 0.6c-0.2 0.2-0.2 0.6 0 0.8L16 6.9c0.1 0.1 0 0.4-0.2 0.4H0.6C0.2 7.3 0 7.6 0 7.9v0.9c0 0.3 0.2 0.6 0.6 0.6h15.3c0.2 0 0.3 0.2 0.2 0.4l-5.5 5.5c-0.2 0.2-0.2 0.6 0 0.8l0.6 0.6c0.2 0.2 0.6 0.2 0.8 0l7.8-7.8C20.1 8.6 20.1 8.1 19.8 7.9z" />
+             </svg></span><span class="cards-quotes-button-icon-dup" style="color:#005e38;">
+             <svg class="svg-icon svg-icon-arrow-right" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 20 16.9">
+              <path d="M19.8 7.9L12 0.2c-0.2-0.2-0.6-0.2-0.8 0l-0.6 0.6c-0.2 0.2-0.2 0.6 0 0.8L16 6.9c0.1 0.1 0 0.4-0.2 0.4H0.6C0.2 7.3 0 7.6 0 7.9v0.9c0 0.3 0.2 0.6 0.6 0.6h15.3c0.2 0 0.3 0.2 0.2 0.4l-5.5 5.5c-0.2 0.2-0.2 0.6 0 0.8l0.6 0.6c0.2 0.2 0.6 0.2 0.8 0l7.8-7.8C20.1 8.6 20.1 8.1 19.8 7.9z" />
+             </svg></span></a> 
+          </div> 
+         </div> 
+        </div> 
+        <div class="quote cards-quotes-see-more"> 
+         <div class="cards-quotes-see-more-inner"> 
+          <a href="https://wpvip.com/case-studies/" class="button"><span class="button-inner">View all case studies</span></a> 
+         </div> 
+        </div> 
+       </div> 
+      </div> 
+      <div class="text global-padding">
+       <h3 style="text-align: center;margin-bottom: .4em">You’re in good company.</h3> 
+       <p style="text-align: center;max-width: 480px;margin: 0 auto">We have the pleasure of working with clients representing the best of the best in media, marketing, and more.</p> 
+      </div> 
+      <div class="global-padding"> 
+       <ul class="logos logos-count-15 logos-align-center"> 
+        <li class="logo is-small"><span class="logo-inner"><span class="screen-reader-text">New York Post</span><img src="https://wpvip.com/wp-content/uploads/2017/07/nypost_standard-small.png?w=456" alt=""></span></li>
+        <li class="logo is-small"><span class="logo-inner"><span class="screen-reader-text">Spotify</span><img src="https://wpvip.com/wp-content/uploads/2017/07/spotify-logo.jpg?quality=90&amp;strip=all&amp;w=456" alt=""></span></li>
+        <li class="logo is-small"><span class="logo-inner"><span class="screen-reader-text">People</span><img src="https://wpvip.com/wp-content/uploads/2017/07/people-logo.jpg?quality=90&amp;strip=all&amp;w=456" alt=""></span></li>
+        <li class="logo is-small"><span class="logo-inner"><span class="screen-reader-text">Capital One logo</span><img src="https://wpvip.com/wp-content/uploads/2018/11/500px-capital_one_logo-svg.png?w=500" alt=""></span></li>
+        <li class="logo is-small"><span class="logo-inner"><span class="screen-reader-text">Quartz</span><img src="https://wpvip.com/wp-content/uploads/2017/07/quartz-logo.jpg?quality=90&amp;strip=all&amp;w=456" alt=""></span></li>
+        <li class="logo is-small"><span class="logo-inner"><span class="screen-reader-text">CNN</span><img src="https://wpvip.com/wp-content/uploads/2017/07/cnn-logo.jpg?quality=90&amp;strip=all&amp;w=456" alt=""></span></li>
+        <li class="logo is-small"><span class="logo-inner"><span class="screen-reader-text">Hachette logo</span><img src="https://wpvip.com/wp-content/uploads/2018/03/carousel-main-intlwomens-main2.png?w=600" alt=""></span></li>
+        <li class="logo is-small"><span class="logo-inner"><span class="screen-reader-text">Variety</span><img src="https://wpvip.com/wp-content/uploads/2017/07/variety-logo.jpg?quality=90&amp;strip=all&amp;w=456" alt=""></span></li>
+        <li class="logo is-small"><span class="logo-inner"><span class="screen-reader-text">Dow Jones</span><img src="https://wpvip.com/wp-content/uploads/2017/07/dow-jones-logo.jpg?quality=90&amp;strip=all&amp;w=456" alt=""></span></li>
+        <li class="logo is-small"><span class="logo-inner"><span class="screen-reader-text">The Sun</span><img src="https://wpvip.com/wp-content/uploads/2017/07/the-sun-logo.jpg?quality=90&amp;strip=all&amp;w=456" alt=""></span></li>
+        <li class="logo is-small"><span class="logo-inner"><span class="screen-reader-text">Microsoft</span><img src="https://wpvip.com/wp-content/uploads/2017/07/microsoft-logo.jpg?quality=90&amp;strip=all&amp;w=456" alt=""></span></li>
+        <li class="logo is-small"><span class="logo-inner"><span class="screen-reader-text">TED</span><img src="https://wpvip.com/wp-content/uploads/2017/07/ted-logo.jpg?quality=90&amp;strip=all&amp;w=456" alt=""></span></li>
+        <li class="logo is-small"><span class="logo-inner"><span class="screen-reader-text">Time</span><img src="https://wpvip.com/wp-content/uploads/2017/07/time-logo.png?w=768" alt=""></span></li>
+        <li class="logo is-small"><span class="logo-inner"><span class="screen-reader-text">Capgemini logo</span><img src="https://wpvip.com/wp-content/uploads/2018/03/800px-capgemini-logo-2017-svg.png?w=800" alt=""></span></li>
+        <li class="logo is-small"><span class="logo-inner"><span class="screen-reader-text">Facebook</span><img src="https://wpvip.com/wp-content/uploads/2017/07/facebook-logo.png?w=456" alt=""></span></li> 
+       </ul> 
+      </div> 
+      <h2 class="headline headline-align-center global-padding reduce-spacing"><span class="headline-inner">A complete solution for digital publishing.</span></h2>
+      <div class="text global-padding">
+       <p style="text-align:center;max-width:500px;margin:0 auto">Top-notch enterprise WordPress hosting, support, and guidance. Ready models, processes, and plugins to deliver your business goals. Deep, extensible capabilities. Diverse technology partnerships. Vast developer ecosystem.</p> 
+      </div>
+      <div class="global-padding clearfix"> 
+       <div class="highlights highlights-count-3 has-shadow"> 
+        <div class="highlight is-single-row"> 
+         <a href="https://wpvip.com/partners/technology-partners/" class="highlight-link">
+          <div class="highlight-inner">
+           <img width="340" height="300" src="https://wpvip.com/wp-content/uploads/2017/07/flags-wp-dark.png?w=340" class="attachment-medium_large size-medium_large wp-post-image jetpack-lazy-image" alt="" data-attachment-id="29021" data-permalink="https://wpvip.com/highlights/flexibility/flags-wp-dark/" data-orig-file="https://wpvip.com/wp-content/uploads/2017/07/flags-wp-dark.png" data-orig-size="340,300" data-comments-opened="1" data-image-meta="{&quot;aperture&quot;:&quot;0&quot;,&quot;credit&quot;:&quot;&quot;,&quot;camera&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;created_timestamp&quot;:&quot;0&quot;,&quot;copyright&quot;:&quot;&quot;,&quot;focal_length&quot;:&quot;0&quot;,&quot;iso&quot;:&quot;0&quot;,&quot;shutter_speed&quot;:&quot;0&quot;,&quot;title&quot;:&quot;&quot;,&quot;orientation&quot;:&quot;0&quot;}" data-image-title="flags-wp-dark" data-image-description="" data-medium-file="https://wpvip.com/wp-content/uploads/2017/07/flags-wp-dark.png?w=280" data-large-file="https://wpvip.com/wp-content/uploads/2017/07/flags-wp-dark.png?w=340" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7">
+           <h3>Ecosystem</h3>
+           <p>Freedom from licensing, huge ecosystem of developers and services, a long history of usage at scale, and much more.</p>
+           <p class="highlight-link-text">View our integrations</p>
+          </div></a> 
+        </div> 
+        <div class="highlight is-single-row"> 
+         <a href="https://wpvip.com/partners/agency-partners/" class="highlight-link">
+          <div class="highlight-inner">
+           <img width="340" height="300" src="https://wpvip.com/wp-content/uploads/2017/07/chat-dark.png?w=340" class="attachment-medium_large size-medium_large wp-post-image jetpack-lazy-image" alt="" data-attachment-id="28758" data-permalink="https://wpvip.com/highlights/partnerships-2/chat-dark/" data-orig-file="https://wpvip.com/wp-content/uploads/2017/07/chat-dark.png" data-orig-size="340,300" data-comments-opened="1" data-image-meta="{&quot;aperture&quot;:&quot;0&quot;,&quot;credit&quot;:&quot;&quot;,&quot;camera&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;created_timestamp&quot;:&quot;0&quot;,&quot;copyright&quot;:&quot;&quot;,&quot;focal_length&quot;:&quot;0&quot;,&quot;iso&quot;:&quot;0&quot;,&quot;shutter_speed&quot;:&quot;0&quot;,&quot;title&quot;:&quot;&quot;,&quot;orientation&quot;:&quot;0&quot;}" data-image-title="chat-dark" data-image-description="" data-medium-file="https://wpvip.com/wp-content/uploads/2017/07/chat-dark.png?w=280" data-large-file="https://wpvip.com/wp-content/uploads/2017/07/chat-dark.png?w=340" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7">
+           <h3>Partners</h3>
+           <p>The best WordPress design and development agencies on the planet, covering a wide range of specialties.</p>
+           <p class="highlight-link-text">See agency partners</p>
+          </div></a> 
+        </div> 
+        <div class="highlight is-single-row"> 
+         <a href="https://wpvip.com/services/" class="highlight-link">
+          <div class="highlight-inner">
+           <img width="340" height="300" src="https://wpvip.com/wp-content/uploads/2017/07/stats-dark.png?w=340" class="attachment-medium_large size-medium_large wp-post-image jetpack-lazy-image" alt="" data-attachment-id="28535" data-permalink="https://wpvip.com/stats-dark/" data-orig-file="https://wpvip.com/wp-content/uploads/2017/07/stats-dark.png" data-orig-size="340,300" data-comments-opened="1" data-image-meta="{&quot;aperture&quot;:&quot;0&quot;,&quot;credit&quot;:&quot;&quot;,&quot;camera&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;created_timestamp&quot;:&quot;0&quot;,&quot;copyright&quot;:&quot;&quot;,&quot;focal_length&quot;:&quot;0&quot;,&quot;iso&quot;:&quot;0&quot;,&quot;shutter_speed&quot;:&quot;0&quot;,&quot;title&quot;:&quot;&quot;,&quot;orientation&quot;:&quot;0&quot;}" data-image-title="stats-dark" data-image-description="" data-medium-file="https://wpvip.com/wp-content/uploads/2017/07/stats-dark.png?w=280" data-large-file="https://wpvip.com/wp-content/uploads/2017/07/stats-dark.png?w=340" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7">
+           <h3>Freedom</h3>
+           <p>Expert code review, managed hosting, proactive advice, and everything you need to focus on your business objectives. </p>
+           <p class="highlight-link-text">Explore our services</p>
+          </div></a> 
+        </div> 
+       </div> 
+      </div> 
+      <div class="global-padding clearfix"> 
+       <div class="callouts"> 
+        <div class="callout"> 
+         <h3 class="callout-title">Highly available and robust APIs</h3> 
+         <p class="callout-desc">Connect WordPress to all kinds of systems and processes, including mobile apps and decoupled front ends. The possibilities are endless.</p> 
+        </div> 
+        <div class="callout"> 
+         <h3 class="callout-title">Backwards compatibility and forward flexibility</h3> 
+         <p class="callout-desc">Free your pipeline from maintenance updates and releases, and never worry again about what version you’re running.</p> 
+        </div> 
+        <div class="callout"> 
+         <h3 class="callout-title">The power of open source</h3> 
+         <p class="callout-desc">Avoid vendor lock-in, enjoy the transparency of a public roadmap, take advantage of the knowledge base in the enterprise user community, and join a massive ecosystem.</p> 
+        </div> 
+        <div class="callout"> 
+         <h3 class="callout-title">Total cost of ownership</h3> 
+         <p class="callout-desc">Savings from licensing fees, flat-rate traffic pricing, included code review, and our managed hosting and support services all reduce CapEx and OpEx burdens when compared with other solutions.</p> 
+        </div> 
+        <div class="callout"> 
+         <h3 class="callout-title">A different kind of partnership</h3> 
+         <p class="callout-desc">Do business at human scale, with a team of people who won’t disappear after the contract is signed, and who are personally invested in your success. We’re proud to be considered pioneers of an open, globally distributed, agile way of working.</p> 
+        </div> 
+        <div class="callout"> 
+         <h3 class="callout-title">Freedom to focus</h3> 
+         <p class="callout-desc">Whether you're seeking end-to-end guidance or just rock-solid WordPress hosting and support, we've got you covered. Put your resources against their highest value efforts. Leave the upgrades, performance, security, and scale to us.</p> 
+        </div> 
+       </div> 
+      </div> 
+     </main>
+     <!-- #main --> 
+    </div>
+    <!-- #primary --> 
+   </div>
+   <!-- #content --> 
+   <div class="contact-form-wrapper reduce-spacing"> 
+    <div class="contact-form-info"> 
+     <div class="contact-form-info-wrapper"> 
+      <div class="contact-form-content"> 
+       <h2 class="contact-form-title"><strong>Ready to get started?</strong></h2> 
+       <h3 class="contact-form-subtitle">Drop us a note.</h3> 
+       <p>No matter where you are in the planning process, we’re happy to help, and we’re actual humans here on the other side of the form. 👋 We’re here to discuss your challenges and plans, evaluate your existing resources or a potential partner, or even make some initial recommendations. And, of course, we’re here to help any time you’re in the market for some robust WordPress awesomeness.</p> 
+      </div> 
+     </div> 
+    </div> 
+    <div class="contact-form-form"> 
+     <div class="contact-form-bg"> 
+      <form action="https://go.pardot.com/l/602321/2018-10-01/d1cv84" method="post" id="contact" class="contact-form"> 
+       <input type="hidden" name="oid" value="00DE0000000YdpT"> 
+       <input type="hidden" name="retURL" value="https://wpvip.com/thanks/"> 
+       <input type="hidden" name="lead_source" value="VIP contact form"> 
+       <input type="hidden" name="utm_source__c" id="utm_source__c"> 
+       <input type="hidden" name="utm_medium__c" id="utm_medium__c"> 
+       <input type="hidden" name="utm_campaign__c" id="utm_campaign__c"> 
+       <input type="hidden" name="utm_term__c" id="utm_term__c"> 
+       <input type="hidden" name="utm_content__c" id="utm_content__c"> 
+       <input type="hidden" name="keyword__c" id="keyword__c"> 
+       <input type="hidden" name="adgroupid__c" id="adgroupid__c"> 
+       <input type="hidden" name="device__c" id="device__c"> 
+       <input type="hidden" name="matchtype__c" id="matchtype__c"> 
+       <input type="hidden" name="creative__c" id="creative__c"> 
+       <input type="hidden" name="gclid__c" id="gclid__c"> 
+       <input type="hidden" name="00NE00000036RnI" value="" id="referrer-url"> 
+       <input type="hidden" name="captcha_settings" value="{&quot;keyname&quot;:&quot;wpvip_lead_form&quot;,&quot;fallback&quot;:&quot;true&quot;,&quot;orgId&quot;:&quot;00DE0000000YdpT&quot;,&quot;ts&quot;:&quot;&quot;}"> 
+       <div class="contact-form-fields"> 
+        <div class="firstname"> 
+         <label for="first_name">First Name *</label> 
+         <span class="contact-form-field"><input id="first_name" maxlength="100" name="first_name" type="text" required></span> 
+        </div> 
+        <div class="lastname"> 
+         <label for="last_name">Last Name *</label> 
+         <span class="contact-form-field"><input id="last_name" maxlength="100" name="last_name" type="text" required></span> 
+        </div> 
+        <div class="email"> 
+         <label for="email">Email Address *</label> 
+         <span class="contact-form-field"><input id="email" name="email" type="email" required></span> 
+        </div> 
+        <div class="phone"> 
+         <label for="phone">Phone Number</label> 
+         <span class="contact-form-field"><input id="phone" name="phone" type="text"></span> 
+        </div> 
+        <div class="jobtitle"> 
+         <label for="title">Title</label> 
+         <span class="contact-form-field"><input id="title" name="title" type="text"></span> 
+        </div> 
+        <div class="company"> 
+         <label for="company">Company</label> 
+         <span class="contact-form-field"><input id="company" name="company" type="text"></span> 
+        </div> 
+        <div class="location"> 
+         <label for="00N44000006TbKL">Location</label> 
+         <span class="contact-form-field"><input id="00N44000006TbKL" name="00N44000006TbKL" type="text"></span> 
+        </div> 
+        <div class="industry"> 
+         <label for="industry">Industry</label> 
+         <span class="contact-form-field"> <select id="industry" name="industry"> <option value="">-- Select --</option> <option value="Consumer Products">Consumer Products</option> <option value="Digital Agency / Web Development">Digital Agency / Web Development</option> <option value="Education">Education</option> <option value="Financial Services">Financial Services</option> <option value="Government">Government</option> <option value="Healthcare / Pharmaceuticals">Healthcare / Pharmaceuticals</option> <option value="Media / Publishing">Media / Publishing</option> <option value="Marketing / Communications / PR">Marketing / Communications / PR</option> <option value="Retail">Retail</option> <option value="Other">Other</option> </select> </span> 
+        </div> 
+        <div class="message"> 
+         <label for="description">Message *</label> 
+         <span class="contact-form-textarea"><textarea id="description" name="description" placeholder="Tell us a bit about your company and the VIP services you’re interested in" required></textarea></span> 
+        </div> 
+       </div> 
+       <div class="contact-form-submit"> 
+        <div class="g-recaptcha" data-sitekey="6LfzPqAUAAAAABLAi2cYLq8152rzTPzf8678DD5T"></div> 
+        <button type="submit" class="button"><span class="button-inner">Send</span></button> 
+       </div> 
+      </form> 
+     </div> 
+    </div> 
+   </div> 
+   <footer id="colophon" class="site-footer global-padding"> 
+    <div class="site-info"> 
+     <div class="site-footer-logo"> 
+      <a href="https://wpvip.com/" rel="home">
+       <svg class="svg-icon svg-icon-vip" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 200 87.7">
+        <path d="M43.8 0C19.7 0 0 19.7 0 43.8 0 68 19.7 87.7 43.8 87.7 68 87.7 87.7 68 87.7 43.8 87.7 19.7 68 0 43.8 0zM4.4 43.8c0-5.7 1.2-11.1 3.4-16l18.8 51.5C13.5 72.9 4.4 59.4 4.4 43.8zm39.4 39.4c-3.9 0-7.6-.6-11.1-1.6l11.8-34.4 12.1 33.2c.1.2.2.4.3.5-4.1 1.5-8.5 2.3-13.1 2.3zm5.5-57.8c2.4-.1 4.5-.4 4.5-.4 2.1-.3 1.9-3.4-.3-3.2 0 0-6.4.5-10.5.5-3.9 0-10.4-.5-10.4-.5-2.1-.1-2.4 3.1-.2 3.2 0 0 2 .2 4.1.4l6.1 16.8L34 68 19.7 25.4c2.4-.1 4.5-.4 4.5-.4 2.1-.3 1.9-3.4-.3-3.2 0 0-6.4.5-10.5.5h-2.5C18 11.5 30.1 4.4 43.8 4.4c10.3 0 19.6 3.9 26.6 10.3h-.5c-3.9 0-6.6 3.4-6.6 7 0 3.2 1.9 6 3.9 9.2 1.5 2.6 3.2 6 3.2 10.9 0 3.4-1 7.6-3 12.7l-3.9 13.1-14.2-42.2zm14.3 52.5l12-34.8c2.2-5.6 3-10.1 3-14.1 0-1.5-.1-2.8-.3-4.1 3.1 5.6 4.8 12.1 4.8 18.9.1 14.6-7.7 27.3-19.5 34.1zM127.3 23.6l-8.9 26.1c-.9 3.2-1.7 6.2-2 9h-.2c-.2-2.8-1-5.9-2-9l-8.9-26.1H93.6l16.8 44.1h12l16.8-44.1h-11.9zM145 23.6l-3.3 8.7v35.3h11.8v-44M195.6 28.8c-2.9-4-7-6-12.2-6-5.5 0-9.3 2.2-12.1 6.5h-.6l-1.7-5.7h-9.6v64.1h11.8V69.2c0-.6-.2-2.7-.6-6.4h.6c2.9 3.8 6.6 5.6 11.8 5.6 3.4 0 6.4-.9 9-2.7 2.5-1.8 4.5-4.5 5.9-7.9 1.4-3.5 2.1-7.6 2.1-12.3 0-7.1-1.5-12.7-4.4-16.7zm-15.5 29.9c-3 0-5.3-1-6.7-3.1-1.4-2-2.1-5.4-2.1-10.2v-1.3c.1-4.2.8-7.2 2.1-9 1.4-1.8 3.5-2.7 6.5-2.7 2.8 0 4.9 1.1 6.2 3.3 1.3 2.2 2 5.4 2 9.8.1 8.7-2.6 13.2-8 13.2z" />
+       </svg></a> 
+     </div> 
+     <nav class="site-footer-menus clearfix"> 
+      <hr class="site-footer-decoration"> 
+      <div class="site-footer-menu">
+       <ul id="menu-footer-1" class="menu">
+        <li id="menu-item-29031" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-29031"><a href="/case-studies/">Case Studies</a></li> 
+        <li id="menu-item-29033" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-29033"><a href="/services/">Services</a></li> 
+        <li id="menu-item-29035" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-29035"><a href="https://wpvip.com/infrastructure/">Infrastructure</a></li> 
+        <li id="menu-item-29273" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-29273"><a href="https://wpvip.com/support/">Support</a></li> 
+        <li id="menu-item-29034" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-29034"><a href="https://wpvip.com/our-approach/">Our Approach</a></li> 
+        <li id="menu-item-29036" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-29036"><a href="https://wpvip.com/capabilities/">Capabilities</a></li> 
+       </ul>
+      </div>
+      <div class="site-footer-menu">
+       <ul id="menu-footer-2" class="menu">
+        <li id="menu-item-29037" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-29037"><a href="https://wpvip.com/partners/">Partners</a></li> 
+        <li id="menu-item-29038" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-29038"><a href="https://wpvip.com/partners/agency-partners/">Agency Partners</a></li> 
+        <li id="menu-item-29039" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-29039"><a href="https://wpvip.com/partners/technology-partners/">Technology Partners</a></li> 
+       </ul>
+      </div>
+      <div class="site-footer-menu">
+       <ul id="menu-footer-3" class="menu">
+        <li id="menu-item-29040" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-29040"><a href="https://wpvip.com/news/">News</a></li> 
+        <li id="menu-item-29041" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-29041"><a href="/events/">Events</a></li> 
+        <li id="menu-item-29042" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-29042"><a href="/documentation/">Documentation</a></li> 
+        <li id="menu-item-29311" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-29311"><a href="https://wpvip.com/careers/">Careers</a></li> 
+        <li id="menu-item-29043" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-29043"><a href="https://wpvip.com/contact/">Contact</a></li> 
+       </ul>
+      </div>
+      <div class="site-footer-menu">
+       <ul id="menu-footer-4" class="menu">
+        <li id="menu-item-29868" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-29868"><a href="https://wpvip.com/security/">Security at VIP</a></li> 
+        <li id="menu-item-29046" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-29046"><a href="https://wpvip.com/privacyshield/">Privacy Shield</a></li> 
+        <li id="menu-item-31288" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-31288"><a href="https://wpvip.com/vip-and-the-gdpr/">GDPR</a></li> 
+        <li id="menu-item-29044" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-29044"><a href="https://automattic.com/privacy/">Privacy</a></li> 
+        <li id="menu-item-29045" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-29045"><a href="https://wordpress.com/tos/">Terms of Service</a></li> 
+       </ul>
+      </div> 
+     </nav> 
+     <div class="site-creator"> 
+      <p> <a href="https://automattic.com/"> An <span class="screen-reader-text">Automattic</span>
+        <svg class="svg-icon svg-icon-automattic" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 200 15.4">
+         <path d="M72.5 15.4c-5.1 0-8.4-3.7-8.4-7.5v-.4c0-3.9 3.3-7.5 8.4-7.5 5.1 0 8.4 3.6 8.4 7.5V8c0 3.8-3.3 7.4-8.4 7.4zm5.7-7.9c0-2.8-2-5.3-5.7-5.3s-5.7 2.5-5.7 5.3v.3c0 2.8 2 5.3 5.7 5.3s5.7-2.5 5.7-5.3v-.3z" fill="#3298CB" />
+         <path d="M15 14.9l-1.9-3.6H4.7l-1.8 3.6H0L7.8.5H10l7.9 14.4H15zM8.8 3.3l-3.1 6h6.4l-3.3-6zm21.4 12.1c-5.2 0-7.6-2.8-7.6-6.5V.5h2.7V9c0 2.7 1.7 4.2 5.1 4.2 3.4 0 4.8-1.6 4.8-4.2V.5h2.7v8.4c0 3.6-2.3 6.5-7.7 6.5zM52.9 2.8v12.1h-2.7V2.8h-6.3V.5h15.3v2.2h-6.3zM105 14.9V3.5l-.7 1.3-6 10.1H97L91 4.8l-.7-1.3v11.4h-2.6V.5h3.7l5.7 9.9.7 1.2.7-1.2 5.6-9.9h3.7v14.4H105zm23.1 0l-1.9-3.6h-8.4l-1.8 3.6h-3L120.8.5h2.2l7.9 14.4h-2.8zm-6.2-11.6l-3.1 6h6.4l-3.3-6zm19.9-.5v12.1h-2.7V2.8h-6.3V.5h15.3v2.2h-6.3zm19.8 0v12.1h-2.7V2.8h-6.3V.5h15.3v2.2h-6.3zm12.9 12.1v-13c1.1 0 1.5-.6 1.5-1.4h1.1v14.4h-2.6zm23.8-10.3c-1.3-1.2-3.2-2.3-5.8-2.3-3.8 0-6 2.6-6 5.4V8c0 2.7 2.2 5.3 6.2 5.3 2.4 0 4.4-1.1 5.6-2.3l1.6 1.7c-1.6 1.6-4.3 2.9-7.4 2.9-5.4 0-8.7-3.5-8.7-7.4v-.6c0-3.9 3.6-7.6 8.9-7.6 3 0 5.8 1.3 7.3 2.9l-1.7 1.7zM74.3 5c.5.3.6 1 .3 1.5l-2.5 3.8c-.3.5-1 .6-1.5.3s-.6-1-.3-1.5l2.5-3.8c.4-.5 1-.6 1.5-.3z" />
+        </svg> Invention </a> </p> 
+     </div>
+     <!-- .site-creator --> 
+    </div>
+    <!-- .site-info --> 
+   </footer>
+   <!-- #colophon --> 
+  </div>
+  <!-- #page --> 
+  <script src="https://s0.wp.com/wp-content/js/devicepx-jetpack.js?ver=201949"></script> 
+  <script type="text/javascript" src="https://wpvip.com/wp-content/themes/wpcomvip-2017/dist/js/commons.js?m=1563282534g"></script> 
+  <script src="https://wpvip.com/wp-includes/js/dist/vendor/wp-polyfill.min.js?ver=7.4.4"></script> 
+  <script>
+( 'fetch' in window ) || document.write( '<script src="https://wpvip.com/wp-includes/js/dist/vendor/wp-polyfill-fetch.min.js?ver=3.0.0"></scr' + 'ipt>' );( document.contains ) || document.write( '<script src="https://wpvip.com/wp-includes/js/dist/vendor/wp-polyfill-node-contains.min.js?ver=3.26.0-0"></scr' + 'ipt>' );( window.FormData && window.FormData.prototype.keys ) || document.write( '<script src="https://wpvip.com/wp-includes/js/dist/vendor/wp-polyfill-formdata.min.js?ver=3.0.12"></scr' + 'ipt>' );( Element.prototype.matches && Element.prototype.closest ) || document.write( '<script src="https://wpvip.com/wp-includes/js/dist/vendor/wp-polyfill-element-closest.min.js?ver=2.0.2"></scr' + 'ipt>' );
+</script> 
+  <script type="text/javascript" src="https://wpvip.com/_static/??/wp-content/plugins/gutenberg/build/i18n/index.js,/wp-content/themes/wpcomvip-2017/dist/js/main.js?m=1568226698j"></script> 
+  <script src="https://www.google.com/recaptcha/api.js"></script> 
+  <script type="text/javascript" src="https://wpvip.com/_static/??-eJyNjtFuwjAMRX9oxnQaqnhA+5QpTaziYidR4qzavp5IsKniBZ7s62sfX1wz+BSNoqGdSanimn3Sb87wvh9GrMWj8ITNFKw4f6GyW+obPrsz0izO+lxTaNKrdyJgCZw3TvFBPjK1QZY2c6y4kOX+95+zcpjJKlZyxZ9x+evgZrxA+uLocWosAW1lMypgrCQcaaf8SpYNQdzvD7C6uUfrWTZyy+r70sJtpUvSicLd/9TTcBg/jsOwHw/LFeC6k4U="></script> 
+  <!-- cookie banner [start] --> 
+  <script type="text/javascript">
+(function() {
+	'use strict';
+	var CACHE_INTERVAL = 7 * 24 * 60 * 60 * 1000;
+	var v = Math.floor( new Date().getTime() / CACHE_INTERVAL );
+	jQuery.ajax({
+		async: true,
+		cache: true,
+		url: 'https://s1.wp.com/wp-content/lib/cookie-banner/cookie-banner-v3.0.js?v=' + v,
+		dataType: "script",
+		success: function() {
+			window.a8cCookieBanner.init( {"text":"Our websites and dashboards use cookies. By continuing, you agree to their use. <a target=\"_blank\" href=\"https:\/\/automattic.com\/cookies\">Learn more<\/a>, including how to control cookies.","buttonText":"Got It!","cookieName":"sensitive_pixel_option","skipBanner":false} );
+		},
+	});
+})();
+</script> 
+  <!-- cookie banner [end] --> 
+  <script>
+	jQuery( window.document ).on( 'a8c-cookie-banner:fire-sensitive-pixels', function() {
+		var cbk = window.a8cCookieBanner.kit;
+
+		if ( cbk.doNotTrack() ) {
+			return;
+		}
+
+		function fireGoogleAnalytics() {
+			cbk.loadGoogleAnalytics();
+			ga('create', 'UA-52447-45', 'auto');
+			ga('send', 'pageview');
+		}
+
+		function fireFacebook() {
+			cbk.loadFacebook();
+			fbq('init', '823166884443641');
+			fbq('track', 'PageView');
+		}
+
+		function fireTwitter() {
+			cbk.loadTwitter();
+			twq('init','nzd6e');
+			twq('track','PageView');
+		}
+
+		function fireQuora() {
+			!function(q,e,v,n,t,s){if(q.qp) return; n=q.qp=function(){n.qp?n.qp.apply(n,arguments):n.queue.push(arguments);}; n.queue=[];t=document.createElement(e);t.async=!0;t.src=v; s=document.getElementsByTagName(e)[0]; s.parentNode.insertBefore(t,s);}(window, 'script', 'https://a.quora.com/qevents.js');
+			qp('init', '8e42680afae64958b1a9eb16902d2b10');
+			qp('track', 'ViewContent');
+		}
+
+		function fireDoubleClick() {
+			var axel = Math.random() + "";
+			var a = axel * 10000000000000;
+			cbk.appendIFrame( 'https://6355556.fls.doubleclick.net/activityi;src=6355556;type=wordp0;cat=negat0;u4=[UserIDLogIn];u5=[UserIDNLogIn];u6=[Pagetitle];u7=[SessionID];dc_lat=;dc_rdid=;tag_for_child_directed_treatment=;ord=' + a + '?' );
+		}
+
+		function firePardot() {
+			piAId = '603321';
+			piCId = '12781';
+			piHostname = 'pi.pardot.com';
+			(function(){
+				var s = document.createElement('script'); s.type = 'text/javascript';
+					s.src = ('https:' == document.location.protocol ? 'https://pi' : 'http://cdn') + '.pardot.com/pd.js';
+					var c = document.getElementsByTagName('script')[0]; c.parentNode.insertBefore(s, c);
+				}
+			)(window, document, 'script');
+		}
+
+		fireGoogleAnalytics();
+		fireFacebook();
+		fireTwitter();
+		fireQuora();
+		fireDoubleClick();
+		firePardot();
+	} );
+	</script> 
+  <script type="text/javascript" src="https://stats.wp.com/e-201949.js" async defer></script> 
+  <script type="text/javascript">
+	_stq = window._stq || [];
+	_stq.push([ 'view', {v:'ext',j:'1:7.9.1',blog:'160028863',post:'28660',tz:'-5',srv:'wpvip.com'} ]);
+	_stq.push([ 'clickTrackerInit', '160028863', '28660' ]);
+</script> 
+  <script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"949ceaf672","applicationID":"199533422","transactionName":"MQZWYhAFXhdYAUBfWwhMdVUWDV8KFhJVUVE=","queueTime":0,"applicationTime":188,"atts":"HUFBFFgfTUgbAxYMTxse","errorBeacon":"bam.nr-data.net","agent":""}</script>  
+ </body>
+</html>

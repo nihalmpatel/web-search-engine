@@ -1,0 +1,1 @@
+award - schema.org Property schema.org Documentation Schemas Home award Thing > Property > award An award won by or for this item. [more...] Canonical URL: http://schema.org/award Leave public feedback on this term 💬 Check for open issues. Values expected to be one of these types Text Used on these types CreativeWork Organization Person Product Service Supersedes awards

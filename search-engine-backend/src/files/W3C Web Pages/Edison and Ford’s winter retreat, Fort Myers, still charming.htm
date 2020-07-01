@@ -1,0 +1,1353 @@
+<!DOCTYPE html>
+<html itemscope itemtype="https://schema.org/NewsArticle" prefix="og: https://ogp.me/ns#" lang="en-CA">
+ <head id="janrain-analytics" data-evt="click" data-evt-typ="signin-reg-module" data-evt-val="{&quot;viewSignRegMod&quot;:&quot;Paywall Limit Reached&quot;}"> 
+  <meta charset="UTF-8"> 
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+  <meta name="robots" content="noarchive"> 
+  <link rel="icon" href="https://s2.wp.com/wp-content/themes/vip/postmedia-theme-sun/images/sun-512x512.png" type="image/x-icon"> 
+  <link rel="shortcut icon" href="https://s2.wp.com/wp-content/themes/vip/postmedia-theme-sun/images/sun-512x512.png" type="image/x-icon"> 
+  <link rel="apple-touch-icon-precomposed" href="https://s2.wp.com/wp-content/themes/vip/postmedia-theme-sun/images/sun-512x512.png" type="image/x-icon"> 
+  <title>
+Edison and Ford’s winter retreat, Fort Myers, still charming | Toronto Sun</title> 
+  <link rel="profile" href="https://gmpg.org/xfn/11"> 
+  <link rel="pingback" href="https://torontosun.com/xmlrpc.php"> 
+  <script type="text/javascript">
+/*! loadCSS. [c]2017 Filament Group, Inc. MIT License */
+/* This file is meant as a standalone workflow for
+- testing support for link[rel=preload]
+- enabling async CSS loading in browsers that do not support rel=preload
+- applying rel preload css once loaded, whether supported or not.
+*/
+(function( w ){
+	"use strict";
+	// rel=preload support test
+	if( !w.loadCSS ){
+		w.loadCSS = function(){};
+	}
+	var rp = loadCSS.relpreload = {};
+	// rel=preload feature support test
+	// runs once and returns a function for compat purposes
+	rp.support = (function(){
+		var ret;
+		try {
+			ret = w.document.createElement( "link" ).relList.supports( "preload" );
+		} catch (e) {
+			ret = false;
+		}
+		return function(){
+			return ret;
+		};
+	})();
+	// if preload isn't supported, get an asynchronous load by using a non-matching media attribute
+	// then change that media back to its intended value on load
+	rp.bindMediaToggle = function( link ){
+		// remember existing media attr for ultimate state, or default to 'all'
+		var finalMedia = link.media || "all";
+
+		function enableStylesheet(){
+			link.media = finalMedia;
+		}
+
+		// bind load handlers to enable media
+		if( link.addEventListener ){
+			link.addEventListener( "load", enableStylesheet );
+		} else if( link.attachEvent ){
+			link.attachEvent( "onload", enableStylesheet );
+		}
+
+		// Set rel and non-applicable media type to start an async request
+		// note: timeout allows this to happen async to let rendering continue in IE
+		setTimeout(function(){
+			link.rel = "stylesheet";
+			link.media = "only x";
+		});
+		// also enable media after 3 seconds,
+		// which will catch very old browsers (android 2.x, old firefox) that don't support onload on link
+		setTimeout( enableStylesheet, 3000 );
+	};
+
+	// loop through link elements in DOM
+	rp.poly = function(){
+		// double check this to prevent external calls from running
+		if( rp.support() ){
+			return;
+		}
+		var links = w.document.getElementsByTagName( "link" );
+		for( var i = 0; i < links.length; i++ ){
+			var link = links[ i ];
+			// qualify links to those with rel=preload and as=style attrs
+			if( link.rel === "preload" && link.getAttribute( "as" ) === "style" && !link.getAttribute( "data-loadcss" ) ){
+				// prevent rerunning on link
+				link.setAttribute( "data-loadcss", true );
+				// bind listeners to toggle media back
+				rp.bindMediaToggle( link );
+			}
+		}
+	};
+	// if unsupported, run the polyfill
+	if( !rp.support() ){
+		// run once at least
+		rp.poly();
+
+		// rerun poly on an interval until onload
+		var run = w.setInterval( rp.poly, 500 );
+		if( w.addEventListener ){
+			w.addEventListener( "load", function(){
+				rp.poly();
+				w.clearInterval( run );
+			} );
+		} else if( w.attachEvent ){
+			w.attachEvent( "onload", function(){
+				rp.poly();
+				w.clearInterval( run );
+			} );
+		}
+	}
+	// commonjs
+	if( typeof exports !== "undefined" ){
+		exports.loadCSS = loadCSS;
+	}
+	else {
+		w.loadCSS = loadCSS;
+	}
+}( typeof global !== "undefined" ? global : this ) );
+
+</script> 
+  <meta name="description" content="FORT MYERS, Fla. &amp;mdash; Legendary inventor Thomas Edison fell in love with this cattle town when it had only 349 residents, most of them ranchers.&amp;ldquo;There&amp;rsquo;s only one Fort Myers in the United States and there are 90 million people who are going to find it out,&amp;rdquo; Edison was quoted as s..."> 
+  <meta name="news_keywords" content="travel usa"> 
+  <script type="application/json" id="page-data">{"ads":{"bidding":[{"account":"3528","client":"amazon"},{"account":"184635-214794100431492","client":"ix"}],"provider":{"account":"3081"},"network":"print","property":"tsun","site":"SMCO_ENUR_TSUN_EN_WEB","vendor":{"krux":"uep0921xz"},"refresh":{"s":20},"verifier":{"account":"928934"}},"analytics":{"brand":"toronto sun","debug":"WP | fem","division":"broadsheet","domain":"torontosun.com","provider":{"account":"cd4afed6a2719d439af431746c942e3c","isDev":false},"vendor":"postmedia vip","tags":{"gtm":["GTM-MKM4ZNQ"]}},"page":{"ancestry":["travel","usa"],"originId":"685311","date":{"pub":"2019-11-30T12:24:41Z","mod":"2019-11-30T12:24:42Z"},"authors":["Sam Pazzano Courts Bureau"],"articleId":"aa1229c1-d25b-40f8-8162-f7fd516fe1c7","title":{"main":"Edison and Ford's winter retreat, Fort Myers, still charming"},"type":"story","kw":[],"paywall":"Metered Content","tags":["travel usa"],"sponsor":"","video":{"ids":[],"inPage":false},"isOrigin":true,"slug":"1201 travelfortmyers","format":"HTML5","wc":1207,"dist":"toronto sun","klangoo":{"categories":[{"name":"General","score":100,"specificCategories":[{"name":"General","score":100}]}],"created":"2019-11-30T17:24:44.656Z","entities":[{"token":"United States","typeID":37,"type":"Countries","subtype":"location","entityID":45068,"score":0.9775,"rank":"VR"},{"token":"Thomas Edison","typeID":18,"type":"People","subtype":"inventor","entityID":58924,"score":0.9775,"rank":"VR"},{"token":"Fort Myers","typeID":12,"type":"Locations & natural formations","subtype":"location","entityID":48300,"score":0.9665,"rank":"VR"},{"token":"Henry Ford","typeID":18,"type":"People","subtype":"person","entityID":2973179777,"score":0.6177,"rank":"R"},{"token":"Garage","typeID":7,"type":"Consumer products","subtype":"clothing product","entityID":83916,"score":0.5658,"rank":"R"},{"token":"Norman Love Confections","typeID":18,"type":"People","subtype":"person name","entityID":3258221901,"score":0.2503,"rank":"SR"},{"token":"Florida","typeID":12,"type":"Locations & natural formations","subtype":"location","entityID":48297,"score":0.2283,"rank":"SR"},{"token":"Caloosahatchee River","typeID":12,"type":"Locations & natural formations","subtype":"object","entityID":49141,"score":0.2116,"rank":"SR"},{"token":"Menlo Park","typeID":12,"type":"Locations & natural formations","subtype":"location","entityID":131674,"score":0.2082,"rank":"SR"},{"token":"River district","typeID":12,"type":"Locations & natural formations","subtype":"location","entityID":192200623,"score":0.2058,"rank":"SR"},{"token":"Harvey Firestone","typeID":18,"type":"People","subtype":"person name","entityID":1136630300,"score":0.2022,"rank":"SR"},{"token":"Edison Botanic Research Corporation","typeID":15,"type":"Organizations","subtype":"group","entityID":1675181249,"score":0.2007,"rank":"SR"},{"token":"Ritz Carlton","typeID":16,"type":"Outlets","subtype":"hotel casino","entityID":137281,"score":0.1996,"rank":"SR"},{"token":"Florida everglades","typeID":12,"type":"Locations & natural formations","subtype":"object","entityID":2385338807,"score":0.1988,"rank":"SR"},{"token":"N.J.","typeID":12,"type":"Locations & natural formations","subtype":"location","entityID":48520,"score":0.1941,"rank":"SR"},{"token":"Edison Theatre","typeID":1,"type":"Artifacts","subtype":"Theatre","entityID":2230368697,"score":0.194,"rank":"SR"},{"token":"Kellogg","typeID":6,"type":"Companies","subtype":"food beverage tobacco company","entityID":120159,"score":0.1891,"rank":"SR"},{"token":"Philadelphia Athletics","typeID":28,"type":"Teams","subtype":"baseball team","entityID":116583,"score":0.1785,"rank":"SR"},{"token":"Model T","typeID":1,"type":"Artifacts","subtype":"artifact","entityID":20618,"score":0.1759,"rank":"SR"},{"token":"Tiffany's","typeID":6,"type":"Companies","subtype":"staples goods company","entityID":179214,"score":0.1759,"rank":"SR"},{"token":"Post Office","typeID":0,"type":"Agencies","subtype":"group","entityID":44027,"score":0.1709,"rank":"SR"},{"token":"Naples","typeID":12,"type":"Locations & natural formations","subtype":"location","entityID":47132,"score":0.1701,"rank":"SR"},{"token":"Babe Ruth","typeID":18,"type":"People","subtype":"baseball player","entityID":60706,"score":0.1694,"rank":"SR"},{"token":"Indigo","typeID":6,"type":"Companies","subtype":"airline","entityID":119682,"score":0.1693,"rank":"SR"},{"token":"Frederic Monti","typeID":18,"type":"People","subtype":"person name","entityID":1580732295,"score":0.163,"rank":"SR"},{"token":"Food Network","typeID":6,"type":"Companies","subtype":"media company","entityID":137903,"score":0.1591,"rank":"SR"},{"token":"Michael Schneider","typeID":18,"type":"People","subtype":"person name","entityID":3123765134,"score":0.1591,"rank":"SR"},{"token":"John Burroughs","typeID":18,"type":"People","subtype":"person","entityID":3143168515,"score":0.1547,"rank":"SR"},{"token":"Casablanca","typeID":12,"type":"Locations & natural formations","subtype":"location","entityID":47837,"score":0.1529,"rank":"SR"}],"keyTopics":[{"text":"Edison's Ford","score":1},{"text":"prodigy Henry Ford","score":0.9659},{"text":"one Fort Myers","score":0.9265},{"text":"Legendary inventor Thomas Edison","score":0.8966},{"text":"Edison's company","score":0.844},{"text":"Ford's Garage","score":0.7778},{"text":"usual US","score":0.7197},{"text":"United States six times","score":0.6594},{"text":"American presidents","score":0.6503},{"text":"Edison's Winter Estate","score":0.6326},{"text":"American industry","score":0.6006},{"text":"Norman Love Confections","score":0.5686},{"text":"chocolate lovers","score":0.5454},{"text":"many other fun restaurants","score":0.5263},{"text":"cheapest form","score":0.5167},{"text":"Veranda restaurant","score":0.498},{"text":"Edison's special day","score":0.4775},{"text":"Fort Myers downtown River district","score":0.475},{"text":"award-winning downtown restaurant","score":0.4506},{"text":"best premium chocolate company","score":0.45},{"text":"culinary event production company","score":0.4423},{"text":"southwestern Florida","score":0.4313},{"text":"Florida everglades","score":0.4241},{"text":"Caloosahatchee River","score":0.4241},{"text":"Edison Theatre","score":0.4204},{"text":"simple outings","score":0.4054},{"text":"users","score":0.3974},{"text":"first excursion","score":0.3965},{"text":"illustrious trio","score":0.3842},{"text":"celebrity inventor","score":0.38},{"text":"chocolates","score":0.3745},{"text":"fun downtown diner","score":0.3734}],"properties":{"lang":"en"},"summary":" Legendary inventor Thomas Edison fell in love with this cattle town when it had only 349 residents, most of them ranchers.  \"There's only one Fort Myers in the United States and there are 90 million people who are going to find it out,\" Edison was quoted as saying.  By the time he landed here, Edison had patented more than 500 inventions, so he was already a celebrity inventor and on his way to becoming America's greatest, especially in electric power generation, mass communication, sound recording and motion pictures. \n\nFord, once chief engineer for Edison's company, took two weeks off every winter to celebrate Edison's special day on Feb. 11 .\n\nFord compromised by upgrading Edison's Ford with the newest features and components every year.\n\nEdison spent 20% of his year in southwestern Florida and built a lab here, which kept functioning until 1936, five years after his death.\n\nSince 2006, Norman Love Confections has been named the best premium chocolate company in the United States six times."}},"identity":{"sso":{"account":"ztcpr5854s8kyh93khrgw44sv9","application":"postmedia.us","client":"ehq8vagzdh4ytxcccfvqbpsfhu9q38hk"},"subscriber":{"account":"KlFb8Hg2nS"}}}</script> 
+  <script>
+							var el = document.createElement('script');
+							el.async = true;
+							el.onload = function () {
+								// disable FEM's Janrain and Piano adapters by indicating existing configs:
+								window.janrain = window.janrain || {};
+								window.tp = window.tp || [];
+								FrontEndModules.initPage(JSON.parse(document.getElementById('page-data').innerHTML));
+							}
+							el.src = 'https://d395dw5zk780j2.cloudfront.net/v3.3/fem.js';
+							document.head.appendChild(el);
+						</script> 
+  <script src="https://r-login.wordpress.com/remote-login.php?action=js&amp;host=torontosun.com&amp;id=126506751&amp;t=1575316440&amp;back=https%3A%2F%2Ftorontosun.com%2Ftravel%2Fusa%2Ffort-myers-edison-fords-winter-retreat-still-charming-a-century-later" type="text/javascript"></script> 
+  <script type="text/javascript">
+		/* <![CDATA[ */
+			if ( 'function' === typeof WPRemoteLogin ) {
+				document.cookie = "wordpress_test_cookie=test; path=/";
+				if ( document.cookie.match( /(;|^)\s*wordpress_test_cookie\=/ ) ) {
+					WPRemoteLogin();
+				}
+			}
+		/* ]]> */
+		</script> 
+  <link rel="dns-prefetch" href="//s2.wp.com"> 
+  <link rel="dns-prefetch" href="//contributor.google.com"> 
+  <link rel="dns-prefetch" href="//s0.wp.com"> 
+  <link rel="dns-prefetch" href="//pymx5.com"> 
+  <link rel="dns-prefetch" href="//s1.wp.com"> 
+  <link rel="dns-prefetch" href="//ak.sail-horizon.com"> 
+  <link rel="dns-prefetch" href="//cdn.mediavoice.com"> 
+  <link rel="dns-prefetch" href="//static.freeskreen.com"> 
+  <link rel="dns-prefetch" href="//postmediatorontosun.wordpress.com"> 
+  <link rel="dns-prefetch" href="//wordpress.com"> 
+  <script type="text/javascript">
+		/* <![CDATA[ */
+		function addLoadEvent(func) {
+			var oldonload = window.onload;
+			if (typeof window.onload != 'function') {
+				window.onload = func;
+			} else {
+				window.onload = function () {
+					oldonload();
+					func();
+				}
+			}
+		}
+		/* ]]> */
+	</script> 
+  <link rel="stylesheet" id="all-css-0-1" href="https://s1.wp.com/_static/??-eJyFj90OgjAMhV/IuhiF4IXxWWA0WFi3hZZM394B0URj8Kbpz/lyekyKYINX9Gp4guimjryYFG1gECaHj69pb0V25jfmaEAxPWqs7QDLtCW3YcS851jrrGBsqUaHnGVbWKK2Q824vHpQvG8jS4KmiSOKQK5ME4PestefD3n+Zo2yGH5sVpSMD0qZlnczH658ORSnY1WW1bnon0GIh7Y=?cssminify=yes" type="text/css" media="all"> 
+  <link rel="stylesheet" id="screen-css-1-1" href="https://s0.wp.com/wp-content/themes/vip/plugins/taxonomy-images/css/style.css?m=1506960102h&amp;cssminify=yes" type="text/css" media="screen"> 
+  <link rel="stylesheet" id="all-css-2-1" href="https://s0.wp.com/_static/??-eJytU9tOwzAM/SHSaLDLE+IXkADtEbmpl5rlUsXpxv6e9EK3qbCxiqfknMTHPnYi95VQ3kV0UcYSLbLcUSUrz9FiQSAqU2tyPGKEwz0bjBGDVMzyCLME7+Q13ZYUXLs22gK5SXF+RwmpREJDTtFokaxAp3sQIimDU2QYyMQy1GJPhcbY8DxFJ6+ZHDInnTAuxNbDRLo8LDegMPd+Kwxt0+ZTcjxcsdArDCU/ZPdt7k4y4zpnFSi/vQ8GmNP58/eZXGMu132hb5EMxcNLeiXkNLcZ64577zP/a75XBPuifEhNgVB0Qxrgpc5q9MJ4BZG8OwNiY4DGD/wkNKkbr9NWt/mO8FZrEW1lILY3CvRd9elxbg+iJf6mN/69yc5g7ThyzuwPH/DEVyPQuZdcQmj89eulKPaKwKT2aX8Ofqu+nEttfA6mufBkH2eL1Xy5WsyWs48v0VvExw==?cssminify=yes" type="text/css" media="all"> 
+  <script type="text/javascript" src="https://s2.wp.com/_static/??-eJyFztEKwjAMBdAfsisyOnwRv6XWOFKXtDbphn69HeiDMBQC9+EeuLFLNshhqhcQG9vdK5THO7ooO/sLGMKxeIWOkD84JFZgXW1OogQifoSNltIZJzBVoDTA2mauacN9v4Q8Iyx/WQTNPtxMAcHnun6i4965Q++GwfXxBTkPW9k="></script> 
+  <script src="https://contributor.google.com/scripts/446a78e82a3d3895/loader.js?ver=5.3"></script> 
+  <script type="text/javascript" src="https://s2.wp.com/_static/??-eJy1jc0OgjAQBl/IusE/4sEYL3jl5tEUutRiu23YIuHtRZTo1Rivs7PfQBdE6SkiRYgXdMhwMwGC5+hQGSmCbbUh/iDWFI1seiitZB78fLrACQvIX/7Re20xa0kZ0lAzEHZCj1BUTzqveQb/6h9I2j6akh/tCt1ZTuCrrKqCkGocCTS8+KvBHwY6lIPdvIf2bpesN8tFsk3TVX0HdhqVew=="></script> 
+  <script src="//ak.sail-horizon.com/spm/spm.v1.min.js?ver=5.3"></script> 
+  <script>
+var tag = {"options":{"customerId":"b9d3df2fccd108b5eff3c44f573b2cd6"}};
+</script> 
+  <script>
+var Postmedia = {"adConfig":{"site":"SMCO_ENUR_TSUN_EN_WEB","msite":"SMCO_ENUR_TSUN_EN_MOBWAP","preroll":"on","networkId":3081,"keys":{"agegate":"true","aid":["aa1229c1-d25b-40f8-8162-f7fd516fe1c7","685311"],"author":"sam-pazzano","ck":"travel","et":"sm","loc":"rail","nk":"print","page":"story","pr":"tsun","sck":"usa"},"async":false,"enablecasale":false,"sticky_ads":{"sticky_ldrb":{"sizes":[["970","90"],["728","90"]],"time":2}},"zone":"travel\/usa\/story"},"Urls":{"home_url":"https:\/\/torontosun.com","stylesheet_directory_uri":"https:\/\/s2.wp.com\/wp-content\/themes\/vip\/postmedia-theme-sun","ajaxurl":"https:\/\/torontosun.com\/wp-admin\/admin-ajax.php"},"Properties":{"domain":"","userAgents":["mozilla","msie","webkit","ipad"],"mobileAgents":["iphone","ipod","android"],"isMobile":false,"isIpad":false,"isModal":false},"Facebook":{"pageId":"189526659635","appId":"1910312429243234","mobileId":"SMCO_ENUR_TSUN_EN_MOBWAP"}};
+</script> 
+  <script type="text/javascript" src="https://s2.wp.com/_static/??-eJydy8EOgyAMANAfsjbOELbD4rc0QKQEkNgyf9/Nu5ddX/LwaOC2qqEqagwlCH64Yct95SooxFnj3mEeH5gEldYxyYA3axMtwTPBhSC9/pLzDrpylv+qJ6XvXMp7MtPTWmvMK52olkKZ"></script> 
+  <script src="https://cdn.mediavoice.com/nativeads/script/postmedia/polarad-sun-tabl-prod.js"></script> 
+  <script>
+var PN_VO = {"appServiceUrl":"https:\/\/api.pddataservices.com"};
+</script> 
+  <script>
+var postmedia_geolocation = {"nonce":"86c27ea222"};
+</script> 
+  <script type="text/javascript" src="https://s1.wp.com/_static/??-eJy9kTEOgzAMRS/UYJHCWPUKTO2cBAtMQ4JiA+L2BVTUqUsHNsv+fk+WYR6Ui0EwCEiLPTJMNMDgx4YCAxvy0qZRXTMNHcNMdYOS8WjZJbKYdXyBH4jI0mNNRh2wb8eTTSYt4LxhXvPVMYEnWqg++QfVGDfrtBUqTpi8Wc5RDqsJ0zkuFnKvRe1X/mlsMProjFAM+5vQrIsp6ymswHt/y8ui0Lkuddm9ATYxu5M="></script> 
+  <link rel="stylesheet" id="all-css-0-2" href="https://s0.wp.com/wp-content/mu-plugins/highlander-comments/style.css?m=1530132353h&amp;cssminify=yes" type="text/css" media="all"> 
+  <!--[if lt IE 8]>
+<link rel='stylesheet' id='highlander-comments-ie7-css'  href='https://s2.wp.com/wp-content/mu-plugins/highlander-comments/style-ie7.css?m=1351637563h&#038;ver=20110606' media='all' />
+<![endif]--> 
+  <link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://postmediatorontosun.wordpress.com/xmlrpc.php?rsd"> 
+  <link rel="wlwmanifest" type="application/wlwmanifest+xml" href="https://s1.wp.com/wp-includes/wlwmanifest.xml"> 
+  <meta name="generator" content="WordPress.com"> 
+  <link rel="canonical" href="https://torontosun.com/travel/usa/fort-myers-edison-fords-winter-retreat-still-charming-a-century-later"> 
+  <link rel="shortlink" href="https://torontosun.com/wcm/aa1229c1-d25b-40f8-8162-f7fd516fe1c7"> 
+  <link rel="alternate" type="application/json+oembed" href="https://public-api.wordpress.com/oembed/?format=json&amp;url=https%3A%2F%2Ftorontosun.com%2Ftravel%2Fusa%2Ffort-myers-edison-fords-winter-retreat-still-charming-a-century-later&amp;for=wpcom-auto-discovery">
+  <link rel="alternate" type="application/xml+oembed" href="https://public-api.wordpress.com/oembed/?format=xml&amp;url=https%3A%2F%2Ftorontosun.com%2Ftravel%2Fusa%2Ffort-myers-edison-fords-winter-retreat-still-charming-a-century-later&amp;for=wpcom-auto-discovery"> 
+  <!-- Jetpack Open Graph Tags --> 
+  <meta property="og:type" content="article"> 
+  <meta property="og:title" content="Edison and Ford’s winter retreat, Fort Myers, still charming"> 
+  <meta property="og:url" content="https://torontosun.com/travel/usa/fort-myers-edison-fords-winter-retreat-still-charming-a-century-later"> 
+  <meta property="og:description" content="FORT MYERS, Fla. — Legendary inventor Thomas Edison fell in love with this cattle town when it had only 349 residents, most of them ranchers.“There’s only one Fort Myers in the Un…"> 
+  <meta property="article:published_time" content="2019-11-30T17:24:41+00:00"> 
+  <meta property="article:modified_time" content="2019-11-30T17:24:42+00:00"> 
+  <meta property="og:site_name" content="Toronto Sun"> 
+  <meta property="og:image" content="https://postmediatorontosun.files.wordpress.com/2019/11/cm-edison-home-1-e1575052024816.jpg"> 
+  <meta property="og:image:width" content="1024"> 
+  <meta property="og:image:height" content="1365"> 
+  <meta property="og:locale" content="en_US"> 
+  <meta name="twitter:site" content="@TheTorontoSun"> 
+  <meta name="twitter:text:title" content="Edison and Ford’s winter retreat, Fort Myers, still charming"> 
+  <meta name="twitter:card" content="summary_large_image"> 
+  <meta property="article:publisher" content="https://www.facebook.com/torontosun"> 
+  <meta name="twitter:title" content="Edison and Ford's winter retreat, Fort Myers, still charming"> 
+  <meta name="twitter:description" content="FORT MYERS, Fla. — Legendary inventor Thomas Edison fell in love with this cattle town when it had only 349 residents, most of them ranchers."> 
+  <meta name="twitter:image" content="https://postmediatorontosun.files.wordpress.com/2019/11/cm-edison-home-1-e1575052024816.jpg"> 
+  <!-- End Jetpack Open Graph Tags --> 
+  <link rel="search" type="application/opensearchdescription+xml" href="https://torontosun.com/osd.xml" title="Toronto Sun"> 
+  <link rel="search" type="application/opensearchdescription+xml" href="https://s1.wp.com/opensearch.xml" title="WordPress.com"> 
+  <meta name="stats-full-init" value="0.016"> 
+  <meta name="stats-postmedia_theme_pre_initialize" value="0.000"> 
+  <meta name="stats-initialize" value="0.015"> 
+  <meta name="stats-postmedia_theme_post_initialize" value="0.000"> 
+  <meta name="stats-vip_load_plugins" value="0.001"> 
+  <meta name="stats-load_plugins" value="0.012"> 
+  <meta name="stats-register_widgets" value="0.001"> 
+  <meta property="fb:pages" content="189526659635"> 
+  <meta property="ia:markup_url" content="https://torontosun.com/travel/usa/fort-myers-edison-fords-winter-retreat-still-charming-a-century-later?ia_markup=1"> 
+  <script type="text/javascript">
+			/* <![CDATA[ */
+			var adSlots = [];
+			/* ]]> */
+		</script> 
+  <script type="text/javascript">
+				/* <![CDATA[ */
+				var pn_Gpt_Weather = JSON.parse( decodeURIComponent('%7B%22wc%22%3A%22light-snow%22%2C%22wt%22%3A%222%22%2C%22ws%22%3A%221%22%7D') );
+				/* ]]> */
+			</script>
+  <meta name="ROBOTS" content="NOARCHIVE">
+  <script type="text/javascript">
+function janrainSignOut() {
+	janrain.capture.ui.endCaptureSession();
+}
+(function() {
+	if ( typeof window.janrain !== 'object' ) {
+		window.janrain = {};
+	}
+	window.janrain.settings = {};
+	window.janrain.settings.capture = {};
+
+	// capture settings
+	janrain.settings.capture.redirectUri = "https://postmediatorontosun.wordpress.com/wp-admin/admin-ajax.php?action=janrain_capture_redirect_uri";
+	janrain.settings.capture.appId = "ztcpr5854s8kyh93khrgw44sv9";
+	janrain.settings.capture.clientId = "ehq8vagzdh4ytxcccfvqbpsfhu9q38hk";
+	janrain.settings.capture.responseType = 'token';
+	janrain.settings.capture.captureServer = "https://postmedia.us.janraincapture.com";
+	janrain.settings.capture.registerFlow = 'socialRegistration';
+	janrain.settings.packages = ["capture","login"];
+
+	janrain.settings.capture.setProfileCookie = true;
+	janrain.settings.capture.keepProfileCookieAfterLogout = true;
+	janrain.settings.capture.setProfileData = 'true';
+	janrain.settings.capture.recaptchaVersion = 2;
+
+	janrain.settings.capture.federateEnableSafari = true;
+
+	// styles
+	janrain.settings.capture.stylesheets = ["https://s1.wp.com/wp-content/themes/vip/postmedia-plugins/postmedia-library/classes/Postmedia/Web/Plugins/JanrainCapture/janrain-capture-screens/stylesheets/styles.css","https://postmediatorontosun.wordpress.com/wp-content/themes/vip/postmedia-theme-sun/janrain-capture-screens/stylesheets/styles.css?m=1547649581h"];
+	janrain.settings.capture.mobileStylesheets = ["https://s2.wp.com/wp-content/themes/vip/postmedia-plugins/postmedia-library/classes/Postmedia/Web/Plugins/JanrainCapture/janrain-capture-screens/stylesheets/mobile-styles.css"];
+	janrain.settings.capture.recaptchaPublicKey = '6LeVKb4SAAAAAGv-hg5i6gtiOV4XrLuCDsJOnYoP';
+		
+		// engage settings
+		janrain.settings.appUrl = "https://login.canada.com";
+		janrain.settings.tokenAction = 'event';
+	
+				
+		// federate settings
+		janrain.settings.capture.federate = 1;
+		janrain.settings.capture.federateServer = "https://postmedia.us.janrainsso.com";
+		janrain.settings.capture.federateXdReceiver = "https://s1.wp.com/wp-content/themes/vip/postmedia-plugins/postmedia-library/classes/Postmedia/Web/Plugins/JanrainCapture/xdcomm.html";
+		janrain.settings.capture.federateLogoutUri = "https://postmediatorontosun.wordpress.com/wp-login.php?loggedout=true";
+	
+	function isReady() {
+		janrain.ready = true;
+	}
+	if (document.addEventListener) {
+		document.addEventListener( 'DOMContentLoaded', isReady, false );
+	} else {
+		window.attachEvent( 'onload', isReady );
+	}
+
+	var e = document.createElement( 'script' );
+	e.type = 'text/javascript';
+	e.id = 'janrainAuthWidget'
+	var url = document.location.protocol === 'https:' ? 'https://' : 'http://';
+	url += "widget-cdn.rpxnow.com/load/login.canada.com";
+	e.src = url;
+	var s = document.getElementsByTagName( 'script' )[0];
+	s.parentNode.insertBefore( e, s );
+})();
+</script> 
+  <!-- BEGIN Sailthru Horizon Meta Information --> 
+  <meta name="sailthru.date" content="2019-11-30 12:24:41"> 
+  <meta name="sailthru.title" content="Edison and Ford’s winter retreat, Fort Myers, still charming"> 
+  <meta name="sailthru.tags" content="brand-torontosun, category-travelusa, Edison's Ford, prodigy Henry Ford, one Fort Myers, Legendary inventor Thomas Edison, Edison's company, Ford's Garage, usual US, United States six times, American presidents, Edison's Winter Estate, American industry, Norman Love Confections, chocolate lovers, many other fun restaurants, cheapest form, Veranda restaurant, Edison's special day, Fort Myers downtown River district, award-winning downtown restaurant, best premium chocolate company, culinary event production company, southwestern Florida, Florida everglades, Caloosahatchee River, Edison Theatre, simple outings, users, first excursion, illustrious trio, celebrity inventor, chocolates, fun downtown diner"> 
+  <meta name="sailthru.description" content="FORT MYERS, Fla. — Legendary inventor Thomas Edison fell in love with this cattle town when it had only 349 residents, most of them ranchers. “There’s only one Fort Myers in the United States and there are 90 million people who are going to find it out,” Edison was quoted as saying. By the time […]"> 
+  <meta name="sailthru.image.full" content="https://postmediatorontosun.files.wordpress.com/2019/11/cm-edison-home-1-e1575052024816.jpg?quality=100&amp;strip=all"> 
+  <meta name="sailthru.image.thumb" content="https://postmediatorontosun.files.wordpress.com/2019/11/cm-edison-home-1-e1575052024816.jpg?quality=100&amp;strip=all"> 
+  <!-- END Sailthru Horizon Meta Information --> 
+  <meta name="google-site-verification" content="kK9JgWClNj_xPmY-xEXJ8C95PgC_s3Ax12Qq6Wkqh88"> 
+  <meta itemprop="genre" content="News"> 
+  <script type="text/javascript">
+			/* <![CDATA[ */
+							var pn_theme_piano_app_id = "KlFb8Hg2nS";
+			
+						/* ]]> */
+		</script> 
+  <meta name="msvalidate.01" content="82AAA33807D8EF7E8A26FD0304CB4F2B"> 
+  <meta property="fb:pages" content="1910312429243234"> 
+  <meta property="fb:app_id" content="1910312429243234"> 
+  <meta property="fb:page_id" content="189526659635"> 
+  <meta property="fb:admins" content="100002625504753"> 
+  <script type="text/javascript">var sailthru_vars = {"ajaxurl":"https:\/\/postmediatorontosun.wordpress.com\/wp-admin\/admin-ajax.php"}</script>
+  <meta name="application-name" content="Toronto Sun">
+  <meta name="msapplication-window" content="width=device-width;height=device-height">
+  <meta name="msapplication-tooltip" content="Toronto News | Latest Headlines &amp; Breaking News">
+  <meta name="msapplication-task" content="name=Subscribe;action-uri=https://torontosun.com/feed;icon-uri=https://postmediatorontosun.files.wordpress.com/2018/05/cropped-sun-512x512.png?w=16">
+  <link rel="amphtml" href="https://torontosun.com/travel/usa/fort-myers-edison-fords-winter-retreat-still-charming-a-century-later/amp">
+  <link rel="icon" href="https://postmediatorontosun.files.wordpress.com/2018/05/cropped-sun-512x512.png?w=32" sizes="32x32"> 
+  <link rel="icon" href="https://postmediatorontosun.files.wordpress.com/2018/05/cropped-sun-512x512.png?w=192" sizes="192x192"> 
+  <link rel="apple-touch-icon-precomposed" href="https://postmediatorontosun.files.wordpress.com/2018/05/cropped-sun-512x512.png?w=180"> 
+  <meta name="msapplication-TileImage" content="https://postmediatorontosun.files.wordpress.com/2018/05/cropped-sun-512x512.png?w=270"> 
+  <!--Invisibly Pixel Code --> 
+  <script>
+						window.ia = window.ia || function() {
+							(window.ia.q = window.ia.q || []).push(arguments);
+						};
+						ia("track", "PAGE_VIEW");
+					</script> 
+  <!-- END Invisibly Pixel Code --> 
+ </head> 
+ <body id="" class="post-template-default single single-post postid-aa1229c1-d25b-40f8-8162-f7fd516fe1c7 single-format-standard site-torontosun customizer-styles-applied highlander-enabled highlander-light" data-evt="page-load" data-evt-typ="view-article"> 
+  <!-- Google Tag Manager --> 
+  <!--Invisibly Pixel Code --> 
+  <noscript> 
+   <img height="1" width="1" style="display:none" src="https://api.pymx5.com/v1/sites/track?event_type=PAGE_VIEW&amp;noscript=1"> 
+  </noscript> 
+  <!-- END Invisibly Pixel Code --> 
+  <div data-evt="page-load" data-evt-typ="page-view"></div> 
+  <div id="fb-root"></div> 
+  <div itemscope itemtype="https://schema.org/Organization"> 
+   <meta itemprop="url" content="https://torontosun.com"> 
+   <meta itemprop="logo" content="https://postmediatorontosun.files.wordpress.com/2017/09/toronto-desktop.png"> 
+   <link itemprop="sameAs" href="https://www.facebook.com/torontosun/"> 
+   <link itemprop="sameAs" href="https://twitter.com/TheTorontoSun"> 
+   <link itemprop="sameAs" href="https://en.wikipedia.org/wiki/Toronto_Sun"> 
+   <link itemprop="sameAs" href="https://play.google.com/store/apps/details?id=com.nurun.torontosun"> 
+   <link itemprop="sameAs" href="https://play.google.com/store/apps/details?id=com.newspaperdirect.torontosun.market"> 
+   <link itemprop="sameAs" href="https://itunes.apple.com/ca/app/toronto-sun/id398520338"> 
+   <link itemprop="sameAs" href="https://itunes.apple.com/ca/app/toronto-sun-eedition/id567830986"> 
+   <link itemprop="sameAs" href="https://www.microsoft.com/en-us/store/p/toronto-sun/9wzdncrdnbf0"> 
+  </div> 
+  <!-- Out of Page ad --> 
+  <div class="out-of-page"> 
+   <div id="gpt-oop" class="pn_dfpads adslot" data-ad="" data-ad-oop="" data-ad-ref="off"> 
+   </div> 
+  </div> 
+  <!-- Wallpaper Ad --> 
+  <div class="wallpaper-container" style="position:absolute"> 
+   <div id="gpt-wallpaper" class="pn_dfpads adslot" data-ad="[4,4]"> 
+   </div> 
+  </div> 
+  <div id="page" class="hfeed site desktop"> 
+   <div class="alerts pmalerts_num_2"> 
+    <div class="pmalerts_num_2 colour-bar"></div> 
+    <div class="l-constrained"> 
+    </div> 
+   </div> 
+   <header class="l-header full-width
+  "> 
+    <div class="header-wrapper"> 
+     <div class="top-bar"> 
+      <div class="l-constrained"> 
+       <span class="title">Hot Topics</span> 
+       <ul class="features"> 
+        <li class="track_event" data-event-tracking="Featured Item"> <a href="/tag/what-made-him-kill">What made him kill</a> </li> 
+        <li class="track_event" data-event-tracking="Featured Item"> <a href="https://torontosun.com/watch">Video</a> </li> 
+        <li class="track_event" data-event-tracking="Featured Item"> <a href="http://classifieds.torontosun.com">Classifieds</a> </li> 
+        <li class="track_event" data-event-tracking="Featured Item"> <a href="http://torontosun.remembering.ca">Obits</a> </li> 
+        <li class="track_event" data-event-tracking="Featured Item"> <a href="https://jobs.torontosun.com/">Jobs</a> </li> 
+        <li class="track_event" data-event-tracking="Featured Item"> <a href="/flyercity">This Week's Flyers</a> </li> 
+       </ul> 
+       <div class="right-block track_event" data-event-tracking="Header Subscription"> 
+        <span class="subscribe-text"> <a class="subscribe-link" id="captureSignInLink" href="javascript:void(0);" onclick="pn_janrain_render_screen('signIn');" data-evt="click" data-evt-typ="signin-reg-module" data-evt-val="{&quot;viewSignRegMod&quot;:&quot;Self-Sign In&quot;}">Sign into your account</a> <a class="subscribe-link" data-evt="click" data-evt-typ="signout" data-evt-val="{&quot;tOf&quot;:&quot;true&quot;}" id="captureSignOutLink" href="javascript:void(0);">Sign out</a> </span> 
+       </div> 
+      </div> 
+     </div> 
+     <div class="nav-wrap"> 
+      <div class="l-constrained"> 
+       <div class="header-logo track_event" itemscope itemtype="https://schema.org/Organization" data-event-tracking="Logo"> 
+        <a class="logo" href="https://torontosun.com"> <img src="https://postmediatorontosun.files.wordpress.com/2017/09/toronto-desktop.png" alt="Toronto SUN"> </a> 
+       </div> 
+       <div class="nav-search-wrapper track_event" data-event-tracking="Main Navigation"> 
+        <nav id="primary-nav" class="navigation">
+         <ul id="menu-primary" class="main-nav no-nav-outfits">
+          <li id="menu-item-410196" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-410196"><a href="/">Home</a></li> 
+          <li id="menu-item-356633" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-has-children menu-item-356633 news"><a href="https://torontosun.com/category/news">News</a> 
+           <div class="subnav"> 
+            <ul class="subnav-menu"> 
+             <li id="menu-item-356703" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-356703 news"><a href="https://torontosun.com/category/news">All News</a></li> 
+             <li id="menu-item-356707" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-356707 local-news"><a href="https://torontosun.com/category/news/local-news">Toronto &amp; GTA</a></li> 
+             <li id="menu-item-356706" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-356706 provincial"><a href="https://torontosun.com/category/news/provincial">Ontario</a></li> 
+             <li id="menu-item-356704" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-356704 national"><a href="https://torontosun.com/category/news/national">Canada</a></li> 
+             <li id="menu-item-356732" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-356732 world"><a href="https://torontosun.com/category/news/world">World</a></li> 
+             <li id="menu-item-356705" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-356705 crime"><a href="https://torontosun.com/category/news/crime">Crime</a></li> 
+             <li id="menu-item-356731" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-356731 weird"><a href="https://torontosun.com/category/news/weird">Weird</a></li> 
+             <li id="menu-item-356702" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-356702 business"><a href="https://torontosun.com/category/business">Money</a></li> 
+             <li id="menu-item-356730" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-has-children menu-item-356730 technology"><a href="https://torontosun.com/category/technology">Technology</a> 
+              <div class="subnav"> 
+               <ul class="subnav-menu"> 
+                <li id="menu-item-356742" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-356742 technology"><a href="https://torontosun.com/category/technology">All Technology</a></li> 
+                <li id="menu-item-356846" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-356846 gaming"><a href="https://torontosun.com/category/technology/gaming">Gaming</a></li> 
+                <li id="menu-item-356845" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-356845 personal-tech"><a href="https://torontosun.com/category/technology/personal-tech">Gadgets</a></li> 
+               </ul> 
+              </div> </li> 
+             <li id="menu-item-356632" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-356632"><a href="https://torontosun.com/weather">Weather</a></li> 
+             <li id="menu-item-356745" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-356745"><a href="https://torontosun.com/traffic">Traffic</a></li> 
+            </ul> 
+           </div> </li> 
+          <li id="menu-item-356713" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-has-children menu-item-356713 sports"><a href="https://torontosun.com/category/sports">Sports</a> 
+           <div class="subnav"> 
+            <ul class="subnav-menu"> 
+             <li id="menu-item-356738" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-356738 sports"><a href="https://torontosun.com/category/sports">All Sports</a></li> 
+             <li id="menu-item-356744" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-356744"><a href="https://torontosun.com/scores">Scores and Stats</a></li> 
+             <li id="menu-item-356720" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-has-children menu-item-356720 hockey"><a href="https://torontosun.com/category/sports/hockey">Hockey</a> 
+              <div class="subnav"> 
+               <ul class="subnav-menu"> 
+                <li id="menu-item-356750" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-356750 hockey"><a href="https://torontosun.com/category/sports/hockey">All Hockey</a></li> 
+                <li id="menu-item-356721" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-356721 toronto-maple-leafs"><a href="https://torontosun.com/category/sports/hockey/nhl/toronto-maple-leafs">Toronto Maple Leafs</a></li> 
+                <li id="menu-item-428491" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-428491 nhl"><a href="https://torontosun.com/category/sports/hockey/nhl">NHL</a></li> 
+               </ul> 
+              </div> </li> 
+             <li id="menu-item-356717" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-has-children menu-item-356717 football"><a href="https://torontosun.com/category/sports/football">Football</a> 
+              <div class="subnav"> 
+               <ul class="subnav-menu"> 
+                <li id="menu-item-356740" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-356740 football"><a href="https://torontosun.com/category/sports/football">All Football</a></li> 
+                <li id="menu-item-356718" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-356718 toronto-argonauts"><a href="https://torontosun.com/category/sports/football/cfl/toronto-argonauts">Toronto Argonauts</a></li> 
+                <li id="menu-item-428487" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-428487 cfl"><a href="https://torontosun.com/category/sports/football/cfl">CFL</a></li> 
+                <li id="menu-item-428488" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-428488 nfl"><a href="https://torontosun.com/category/sports/football/nfl">NFL</a></li> 
+               </ul> 
+              </div> </li> 
+             <li id="menu-item-356714" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-has-children menu-item-356714 baseball"><a href="https://torontosun.com/category/sports/baseball">Baseball</a> 
+              <div class="subnav"> 
+               <ul class="subnav-menu"> 
+                <li id="menu-item-356739" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-356739 baseball"><a href="https://torontosun.com/category/sports/baseball">All Baseball</a></li> 
+                <li id="menu-item-356715" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-356715 toronto-blue-jays"><a href="https://torontosun.com/category/sports/baseball/toronto-blue-jays">Toronto Blue Jays</a></li> 
+                <li id="menu-item-428506" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-428506 mlb"><a href="https://torontosun.com/category/sports/baseball/mlb">MLB</a></li> 
+               </ul> 
+              </div> </li> 
+             <li id="menu-item-356946" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-has-children menu-item-356946 basketball"><a href="https://torontosun.com/category/sports/basketball">Basketball</a> 
+              <div class="subnav"> 
+               <ul class="subnav-menu"> 
+                <li id="menu-item-363071" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-363071 basketball"><a href="https://torontosun.com/category/sports/basketball">All Basketball</a></li> 
+                <li id="menu-item-356947" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-356947 toronto-raptors"><a href="https://torontosun.com/category/sports/basketball/nba/toronto-raptors">Toronto Raptors</a></li> 
+                <li id="menu-item-428490" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-428490 nba"><a href="https://torontosun.com/category/sports/basketball/nba">NBA</a></li> 
+               </ul> 
+              </div> </li> 
+             <li id="menu-item-356723" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-has-children menu-item-356723 lacrosse"><a href="https://torontosun.com/category/sports/lacrosse">Lacrosse</a> 
+              <div class="subnav"> 
+               <ul class="subnav-menu"> 
+                <li id="menu-item-356741" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-356741 lacrosse"><a href="https://torontosun.com/category/sports/lacrosse">All Lacrosse</a></li> 
+                <li id="menu-item-356872" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-356872 toronto-rock"><a href="https://torontosun.com/category/sports/lacrosse/nll/toronto-rock">Toronto Rock</a></li> 
+                <li id="menu-item-428492" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-428492 nll"><a href="https://torontosun.com/category/sports/lacrosse/nll">NLL</a></li> 
+               </ul> 
+              </div> </li> 
+             <li id="menu-item-356728" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-has-children menu-item-356728 soccer"><a href="https://torontosun.com/category/sports/soccer">Soccer</a> 
+              <div class="subnav"> 
+               <ul class="subnav-menu"> 
+                <li id="menu-item-356874" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-356874 soccer"><a href="https://torontosun.com/category/sports/soccer">All Soccer</a></li> 
+                <li id="menu-item-356724" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-356724 toronto-fc"><a href="https://torontosun.com/category/sports/soccer/mls/toronto-fc">Toronto FC</a></li> 
+                <li id="menu-item-428489" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-428489 mls"><a href="https://torontosun.com/category/sports/soccer/mls">MLS</a></li> 
+               </ul> 
+              </div> </li> 
+             <li id="menu-item-356719" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-has-children menu-item-356719 golf"><a href="https://torontosun.com/category/sports/golf">Golf</a> 
+              <div class="subnav"> 
+               <ul class="subnav-menu"> 
+                <li id="menu-item-548711" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-548711 golf"><a href="https://torontosun.com/category/sports/golf">All Golf</a></li> 
+                <li id="menu-item-548712" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-548712"><a href="http://torontosun.sportstonews.com/">Golf Videos</a></li> 
+               </ul> 
+              </div> </li> 
+             <li id="menu-item-409677" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-409677 sports-picks"><a href="https://torontosun.com/category/sports/sports-picks">Sports Picks</a></li> 
+             <li id="menu-item-356795" class="hide-on-breadcrumbs menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-356795"><a>More Sports</a> 
+              <div class="subnav"> 
+               <ul class="subnav-menu"> 
+                <li id="menu-item-439289" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-439289 curling"><a href="https://torontosun.com/category/sports/curling">Curling</a></li> 
+                <li id="menu-item-356722" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-356722 horse-racing"><a href="https://torontosun.com/category/sports/horse-racing">Horse Racing</a></li> 
+                <li id="menu-item-356725" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-356725 mma"><a href="https://torontosun.com/category/sports/mma">MMA</a></li> 
+                <li id="menu-item-356726" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-356726 auto-racing"><a href="https://torontosun.com/category/sports/auto-racing">Motorsports</a></li> 
+                <li id="menu-item-356729" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-356729 tennis"><a href="https://torontosun.com/category/sports/tennis">Tennis</a></li> 
+                <li id="menu-item-356727" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-356727 other-sports"><a href="https://torontosun.com/category/sports/other-sports">Other Sports</a></li> 
+               </ul> 
+              </div> </li> 
+            </ul> 
+           </div> </li> 
+          <li id="menu-item-356708" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-has-children menu-item-356708 opinion"><a href="https://torontosun.com/category/opinion">Opinion</a> 
+           <div class="subnav"> 
+            <ul class="subnav-menu"> 
+             <li id="menu-item-356737" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-356737 opinion"><a href="https://torontosun.com/category/opinion">All Opinion</a></li> 
+             <li id="menu-item-356711" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-356711 editorials"><a href="https://torontosun.com/category/opinion/editorials">Editorials</a></li> 
+             <li id="menu-item-356709" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-356709 columnists"><a href="https://torontosun.com/category/opinion/columnists">Columnists</a></li> 
+             <li id="menu-item-356710" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-356710 cartoons"><a href="https://torontosun.com/category/opinion/cartoons">Editorial Cartoons</a></li> 
+             <li id="menu-item-356712" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-356712 letters"><a href="https://torontosun.com/category/opinion/letters">Letters</a></li> 
+             <li id="menu-item-356743" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-356743"><a href="https://torontosun.com/send-letter">Send Letter to the Editor</a></li> 
+            </ul> 
+           </div> </li> 
+          <li id="menu-item-356686" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-has-children menu-item-356686 entertainment"><a href="https://torontosun.com/category/entertainment">Entertainment</a> 
+           <div class="subnav"> 
+            <ul class="subnav-menu"> 
+             <li id="menu-item-356733" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-356733 entertainment"><a href="https://torontosun.com/category/entertainment">All Entertainment</a></li> 
+             <li id="menu-item-356687" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-356687 books"><a href="https://torontosun.com/category/entertainment/books">Books</a></li> 
+             <li id="menu-item-356688" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-356688 celebrity"><a href="https://torontosun.com/category/entertainment/celebrity">Celebrity</a></li> 
+             <li id="menu-item-356689" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-356689 movies"><a href="https://torontosun.com/category/entertainment/movies">Movies</a></li> 
+             <li id="menu-item-356690" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-356690 music"><a href="https://torontosun.com/category/entertainment/music">Music</a></li> 
+             <li id="menu-item-356691" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-356691 theatre"><a href="https://torontosun.com/category/entertainment/theatre">Stage</a></li> 
+             <li id="menu-item-356873" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-356873 television"><a href="https://torontosun.com/category/entertainment/television">Television</a></li> 
+            </ul> 
+           </div> </li> 
+          <li id="menu-item-356694" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-has-children menu-item-356694 life"><a href="https://torontosun.com/category/life">Life</a> 
+           <div class="subnav"> 
+            <ul class="subnav-menu"> 
+             <li id="menu-item-356735" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-356735 life"><a href="https://torontosun.com/category/life">All Life</a></li> 
+             <li id="menu-item-356695" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-356695 food"><a href="https://torontosun.com/category/life/food">Eat</a></li> 
+             <li id="menu-item-356696" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-356696 fashion-beauty"><a href="https://torontosun.com/category/life/fashion-beauty">Fashion &amp; Beauty</a></li> 
+             <li id="menu-item-415670" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-415670 relationships"><a href="https://torontosun.com/category/life/relationships">Relationships</a></li> 
+             <li id="menu-item-356701" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-356701 sex-files"><a href="https://torontosun.com/category/life/sex-files">Sex Files</a></li> 
+             <li id="menu-item-356692" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-has-children menu-item-356692 health"><a href="https://torontosun.com/category/health">Health</a> 
+              <div class="subnav"> 
+               <ul class="subnav-menu"> 
+                <li id="menu-item-356734" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-356734 health"><a href="https://torontosun.com/category/health">All Health</a></li> 
+                <li id="menu-item-356693" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-356693 diet-fitness"><a href="https://torontosun.com/category/health/diet-fitness">Diet &amp; Fitness</a></li> 
+               </ul> 
+              </div> </li> 
+             <li id="menu-item-356697" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-356697 homes"><a href="https://torontosun.com/category/life/homes">Homes</a></li> 
+             <li id="menu-item-356848" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-has-children menu-item-356848 travel"><a href="https://torontosun.com/category/travel">Travel</a> 
+              <div class="subnav"> 
+               <ul class="subnav-menu"> 
+                <li id="menu-item-356853" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-356853 travel"><a href="https://torontosun.com/category/travel">All Travel</a></li> 
+                <li id="menu-item-356847" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-356847 local-travel"><a href="https://torontosun.com/category/travel/local-travel">Ontario Travel</a></li> 
+                <li id="menu-item-356849" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-356849 travel-canada"><a href="https://torontosun.com/category/travel/travel-canada">Travel Canada</a></li> 
+                <li id="menu-item-356850" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-356850 europe"><a href="https://torontosun.com/category/travel/europe">Travel Europe</a></li> 
+                <li id="menu-item-356851" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-356851 international"><a href="https://torontosun.com/category/travel/international">Travel International</a></li> 
+                <li id="menu-item-356852" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-356852 usa"><a href="https://torontosun.com/category/travel/usa">Travel USA</a></li> 
+               </ul> 
+              </div> </li> 
+            </ul> 
+           </div> </li> 
+          <li id="menu-item-356789" class="menu-item menu-item-type-post_type_archive menu-item-object-sunshine-girl menu-item-has-children menu-item-356789"><a href="https://torontosun.com/sunshine-girl">More</a> 
+           <div class="subnav"> 
+            <ul class="subnav-menu"> 
+             <li id="menu-item-356904" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-has-children menu-item-356904 sunshine-girls"><a href="https://torontosun.com/category/sunshine-girls">Sunshine Girls</a> 
+              <div class="subnav"> 
+               <ul class="subnav-menu"> 
+                <li id="menu-item-356905" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-356905 sunshine-girls"><a href="https://torontosun.com/category/sunshine-girls">Today’s Sunshine Girl</a></li> 
+                <li id="menu-item-356794" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-356794"><a href="https://torontosun.com/become-a-sunshine-girl">Become a Sunshine Girl</a></li> 
+               </ul> 
+              </div> </li> 
+             <li id="menu-item-356776" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-356776"><a href="http://classifieds.torontosun.com">Classifieds</a> 
+              <div class="subnav"> 
+               <ul class="subnav-menu"> 
+                <li id="menu-item-356777" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-356777"><a href="http://classifieds.torontosun.com">All Classifieds</a></li> 
+                <li id="menu-item-377883" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-377883"><a href="https://jobs.torontosun.com/">Jobs</a></li> 
+                <li id="menu-item-356780" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-356780"><a href="http://classifieds.torontosun.com/">Announcements</a></li> 
+                <li id="menu-item-356782" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-356782"><a href="http://torontosun.remembering.ca">Obits</a></li> 
+                <li id="menu-item-356778" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-356778"><a href="http://classifieds.torontosun.com">Browse Listings</a></li> 
+                <li id="menu-item-356781" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-356781"><a href="http://torontosun.adperfect.com/">Place an Ad</a></li> 
+                <li id="menu-item-356779" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-356779"><a href="https://torontosun.com/flyercity">This Week’s Flyers</a></li> 
+               </ul> 
+              </div> </li> 
+             <li id="menu-item-356770" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-356770"><a href="http://driving.ca">Driving</a> 
+              <div class="subnav"> 
+               <ul class="subnav-menu"> 
+                <li id="menu-item-356771" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-356771"><a href="http://driving.ca">All Driving</a></li> 
+                <li id="menu-item-356772" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-356772"><a href="http://driving.ca/category/auto-news">Auto News</a></li> 
+                <li id="menu-item-356773" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-356773"><a href="http://driving.ca/category/reviews">Reviews</a></li> 
+                <li id="menu-item-356774" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-356774"><a href="http://driving.ca/car-comparison">Car Comparison</a></li> 
+                <li id="menu-item-356775" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-356775"><a href="http://driving.ca/buyers-guide/2015">Buyers Guide</a></li> 
+               </ul> 
+              </div> </li> 
+             <li id="menu-item-356685" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-356685 contests"><a href="https://torontosun.com/category/contests">Contests</a></li> 
+             <li id="menu-item-356783" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-356783"><a href="https://torontosun.com/category/special-sections">Special Sections</a></li> 
+             <li id="menu-item-617775" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-617775 homes-sections"><a href="https://torontosun.com/category/homes-sections">Homes Sections</a></li> 
+             <li id="menu-item-356784" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-356784"><a href="http://canoe.com">On Canoe.com</a> 
+              <div class="subnav"> 
+               <ul class="subnav-menu"> 
+                <li id="menu-item-356785" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-356785"><a href="http://lifewise.canoe.com/Puzzles/">Puzzles</a></li> 
+                <li id="menu-item-356786" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-356786"><a href="http://lifewise.canoe.com/Horoscopes/">Horoscopes</a></li> 
+                <li id="menu-item-356787" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-356787"><a href="http://lifewise.canoe.com/Comics/">Comics</a></li> 
+               </ul> 
+              </div> </li> 
+            </ul> 
+           </div> </li> 
+          <li id="menu-item-356746" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-356746"><a href="https://torontosun.com/subscription" data-evt="click" data-evt-typ="subscription-button-click" data-evt-val="{&quot;loc&quot;:&quot;Main Navigation&quot;}">Subscription</a> 
+           <div class="subnav"> 
+            <ul class="subnav-menu"> 
+             <li id="menu-item-356876" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-356876"><a href="https://torontosun.com/subscription" data-evt="click" data-evt-typ="subscription-button-click" data-evt-val="{&quot;loc&quot;:&quot;Main Navigation&quot;}">Subscribe</a></li> 
+             <li id="menu-item-356748" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-356748"><a href="https://torontosun.com/subscription/my-subscription" data-evt="click" data-evt-typ="subscription-button-click" data-evt-val="{&quot;loc&quot;:&quot;Main Navigation&quot;}">My Subscription</a></li> 
+             <li id="menu-item-356749" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-356749"><a href="https://torontosun.com/edit-profile">Edit Profile</a></li> 
+             <li id="menu-item-356747" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-356747"><a href="https://torontosun.com/subscription/subscribe-to-tv-book" data-evt="click" data-evt-typ="subscription-button-click" data-evt-val="{&quot;loc&quot;:&quot;Main Navigation&quot;}">Subscribe to TV Book</a></li> 
+             <li id="menu-item-356875" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-356875"><a href="http://eedition.torontosun.com">Read e-Edition</a></li> 
+            </ul> 
+           </div> </li> 
+         </ul>
+        </nav> 
+        <div class="right-block"> 
+         <span class="social-text">Share</span> 
+         <div class="social-bar"> 
+          <ul class="social-icons"> 
+           <li class="facebook track_event" data-event-tracking="Header Social"> <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Ftorontosun.com%2Ftravel%2Fusa%2Ffort-myers-edison-fords-winter-retreat-still-charming-a-century-later%2F&amp;t=Edison%20and%20Ford%27s%20winter%20retreat%2C%20Fort%20Myers%2C%20still%20charming" title="facebook" target="_blank"></a> </li> 
+           <li class="twitter track_event" data-event-tracking="Header Social"> <a href="https://twitter.com/intent/tweet?url=https%3A%2F%2Ftorontosun.com%2Ftravel%2Fusa%2Ffort-myers-edison-fords-winter-retreat-still-charming-a-century-later%2F&amp;text=Edison%20and%20Ford%27s%20winter%20retreat%2C%20Fort%20Myers%2C%20still%20charming" title="twitter" target="_blank"></a> </li> 
+           <li class="more-social"> <a href="javascript:void();"></a> 
+            <div class="more-social-menu"> 
+             <div class="menu-content"> 
+              <div class="social-menu-title">
+               Share
+              </div> 
+              <h6 class="article-title">Edison and Ford's winter retreat, Fort Myers, still charming</h6> 
+              <div class="social-icons-lists"> 
+               <ul class="social-icons"> 
+                <li class="tumblr track_event" data-event-tracking="Header Social"> <a href="https://tumblr.com/widgets/share/tool?canonicalUrl=https%3A%2F%2Ftorontosun.com%2Ftravel%2Fusa%2Ffort-myers-edison-fords-winter-retreat-still-charming-a-century-later%2F&amp;name=Edison%20and%20Ford%27s%20winter%20retreat%2C%20Fort%20Myers%2C%20still%20charming&amp;description=FORT%20MYERS%2C%20Fla.%20%26mdash%3B%20Legendary%20inventor%20Thomas%20Edison%20fell%20in%20love%20with%20this%20cattle%20town%20when%20it%20had%20only%20349%20residents%2C%20most%20of%20them%20ranchers." title="tumblr" target="_blank" class="share-icon"><span>Tumblr</span></a> </li> 
+                <li class="pinterest track_event" data-event-tracking="Header Social"> <a href="https://pinterest.com/pin/create/button/?url=https%3A%2F%2Ftorontosun.com%2Ftravel%2Fusa%2Ffort-myers-edison-fords-winter-retreat-still-charming-a-century-later%2F&amp;media=https%3A%2F%2Fpostmediatorontosun.files.wordpress.com%2F2019%2F11%2Fcm-edison-home-1-e1575052024816.jpg%3Fquality%3D100%26strip%3Dall&amp;description=Edison%20and%20Ford%27s%20winter%20retreat%2C%20Fort%20Myers%2C%20still%20charming" title="pinterest" target="_blank" class="share-icon"><span>Pinterest</span></a> </li> 
+                <li class="google-plus track_event" data-event-tracking="Header Social"> <a href="https://plus.google.com/share?url=https%3A%2F%2Ftorontosun.com%2Ftravel%2Fusa%2Ffort-myers-edison-fords-winter-retreat-still-charming-a-century-later%2F" title="google plus" target="_blank" class="share-icon"><span>Google Plus</span></a> </li> 
+                <li class="reddit track_event" data-event-tracking="Header Social"> <a href="https://www.reddit.com/submit?url=https%3A%2F%2Ftorontosun.com%2Ftravel%2Fusa%2Ffort-myers-edison-fords-winter-retreat-still-charming-a-century-later%2F&amp;title=Edison%20and%20Ford%27s%20winter%20retreat%2C%20Fort%20Myers%2C%20still%20charming" title="reddit" target="_blank" class="share-icon"><span>Reddit</span></a> </li> 
+                <li class="linkedin track_event" data-event-tracking="Header Social"> <a href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https%3A%2F%2Ftorontosun.com%2Ftravel%2Fusa%2Ffort-myers-edison-fords-winter-retreat-still-charming-a-century-later%2F&amp;title=Edison%20and%20Ford%27s%20winter%20retreat%2C%20Fort%20Myers%2C%20still%20charming&amp;summary=FORT%20MYERS%2C%20Fla.%20%26mdash%3B%20Legendary%20inventor%20Thomas%20Edison%20fell%20in%20love%20with%20this%20cattle%20town%20when%20it%20had%20only%20349%20residents%2C%20most%20of%20them%20ranchers." title="linkedin" target="_blank" class="share-icon"><span>LinkedIn</span></a> </li> 
+                <li class="email track_event" data-event-tracking="Header Social"> <a href="mailto:?subject=Toronto%20Sun%3A%20Edison%20and%20Ford%27s%20winter%20retreat%2C%20Fort%20Myers%2C%20still%20charming&amp;body=I%20wanted%20to%20share%20a%20story%20with%20you%20from%20Toronto%20Sun%3A%0A%0AEdison%20and%20Ford%27s%20winter%20retreat%2C%20Fort%20Myers%2C%20still%20charming%0AFORT%20MYERS%2C%20Fla.%20%26mdash%3B%20Legendary%20inventor%20Thomas%20Edison%20fell%20in%20love%20with%20this%20cattle%20town%20when%20it%20had%20only%20349%20residents%2C%20most%20of%20them%20ranchers.%0Ahttps%3A%2F%2Ftorontosun.com%2Ftravel%2Fusa%2Ffort-myers-edison-fords-winter-retreat-still-charming-a-century-later%0A" title="email" class="share-icon email"><span>Email</span></a> </li> 
+               </ul> 
+              </div> 
+             </div> 
+             <!-- / menu content --> 
+            </div> 
+            <!-- / more-social-menu --> </li> 
+           <!-- / more-social --> 
+          </ul> 
+          <!-- / share-icons --> 
+         </div> 
+         <ul class="header-actions"> 
+          <li class="search"> 
+           <form class="form-search" action="/?" method="get"> 
+            <span class="track_event" data-event-tracking="Header Search Open"> <a href="javascript:void(0);" class="open-search" title="Open Search" alt="Open Search"></a> </span> 
+            <fieldset> 
+             <input type="text" name="s" id="main-searcher" placeholder="Search Toronto SUN" title="Search"> 
+             <input class="start-search" type="submit" alt="Search" value="" title="Search"> 
+             <span class="track_event" data-event-tracking="Header Search Close"> <a href="javascript:void(0);" class="close close-search" alt="Close Search" title="Close Search"></a> </span> 
+            </fieldset> 
+           </form> </li> 
+         </ul> 
+        </div> 
+       </div>
+       <!-- /nav-search-wrapper --> 
+      </div>
+      <!-- /l-constrained--> 
+     </div>
+     <!-- /nav-wrap --> 
+    </div>
+    <!-- /header-wrapper --> 
+   </header> 
+   <!-- / header --> 
+   <div id="content" class="site-content"> 
+    <div class="l-content"> 
+     <section class="l-top-content"> 
+      <div class="adunit"> 
+       <div class="widget-advertisement advertisement pnLeaderboard"> 
+        <div id="pnLeaderBoardStickyBG"> 
+         <div> 
+          <div id="gpt-billboard"></div> 
+          <div id="pn-leaderboard-ad-large"> 
+           <div id="gpt-leaderboard" class="pn_dfpads adslot" data-ad="[[728,90],[970,90],[970,250],[1200,90],[1200,250]]" data-ad-sticky="[[970, 90], [728, 90]]" data-ad-sticky-sec="2"> 
+           </div> 
+          </div> 
+         </div> 
+        </div> 
+       </div> 
+      </div> 
+     </section> 
+     <div class="l-constrained container contentbody"> 
+      <div class="l-main active" id="main"> 
+       <div class="fluid-holder"> 
+        <article id="post-" class="l-article three-col-post post-aa1229c1-d25b-40f8-8162-f7fd516fe1c7 post type-post status-publish format-standard has-post-thumbnail hentry category-usa travel"> 
+         <div itemprop="copyrightHolder" itemscope itemtype="https://schema.org/Organization"> 
+          <meta itemprop="name" content="Toronto Sun"> 
+          <meta itemprop="url" content="https://postmediatorontosun.wordpress.com"> 
+         </div> 
+         <div itemprop="publisher" itemscope itemtype="https://schema.org/Organization"> 
+          <div itemprop="logo" itemscope itemtype="https://schema.org/ImageObject"> 
+           <meta itemprop="url" content="https://postmediatorontosun.files.wordpress.com/2017/09/toronto-desktop.png"> 
+           <meta itemprop="width" content="336"> 
+           <meta itemprop="height" content="336"> 
+          </div> 
+          <meta itemprop="name" content="Toronto Sun"> 
+          <meta itemprop="url" content="https://postmediatorontosun.wordpress.com"> 
+         </div> 
+         <div itemprop="image" itemscope itemtype="https://schema.org/ImageObject"> 
+          <meta itemprop="url" content="https://postmediatorontosun.files.wordpress.com/2019/11/cm-edison-home-1-e1575052024816.jpg"> 
+          <meta itemprop="width" content="1256"> 
+          <meta itemprop="height" content="836"> 
+         </div> 
+         <meta itemprop="mainEntityOfPage" content="https://torontosun.com/travel/usa/fort-myers-edison-fords-winter-retreat-still-charming-a-century-later"> 
+         <header class="entry-header"> 
+          <h1 itemprop="headline" class="entry-title">Edison and Ford's winter retreat, Fort Myers, still charming</h1> 
+         </header>
+         <!-- .entry-header --> 
+         <!-- THREE COL CHANGE GOES HERE --> 
+         <div class="fixed-holder first left"> 
+          <div class="entry-details byline clearfix"> 
+           <div class="story_details"> 
+            <div class="author-wrap"> 
+             <div itemprop="author" itemscope itemtype="https://schema.org/person"> 
+              <meta itemprop="name" content="Sam Pazzano Courts Bureau">
+              <a class="author " itemprop="sameAs" href="https://torontosun.com/author/spazzano"><img itemprop="image" class="avatar" src="https://secure.gravatar.com/avatar/bc5f9efdf20a0ba77441b5e170f15518?s=96&amp;d=identicon&amp;r=g" width="45" alt="Sam Pazzano Courts Bureau"><span class="name">Sam Pazzano Courts Bureau</span><span class="author-more">More from Sam Pazzano Courts Bureau</span></a> 
+             </div> 
+            </div> 
+            <div class="byline-dates"> 
+             <p><strong>Published:</strong> <time itemprop="datePublished" class="entry-date published pubdate" datetime="2019-11-30T12:24:41-05:00">November 30, 2019</time> </p>
+             <p><strong>Updated:</strong> <time itemprop="dateModified" class="updated" datetime="2019-11-30T12:24:42-05:00">November 30, 2019 12:24 PM EST</time> </p>
+             <p class="filed_under"><strong>Filed Under:</strong></p>
+             <div class="breadcrumb-wrap menu-item menu-item-type-taxonomy menu-item-object-category menu-item-has-children life sub"> 
+              <ul class="breadcrumb-list" itemtype="https://schema.org/BreadcrumbList" itemscope> 
+               <li class="track_event" data-event-tracking="Home Breadcrumb"> <a href="https://torontosun.com"><span>Toronto SUN</span></a> </li> 
+               <li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-has-children life sub track_event" data-event-tracking="Parent Breadcrumbs" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"> <a href="https://torontosun.com/category/life" itemprop="url"><span>Life</span>
+                 <meta itemprop="position" content="1"></a> </li> 
+               <li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-has-children travel sub track_event" data-event-tracking="Parent Breadcrumbs" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"> <a href="https://torontosun.com/category/travel" itemprop="url"><span>Travel</span>
+                 <meta itemprop="position" content="2"></a> </li> 
+               <li class="menu-item menu-item-type-taxonomy menu-item-object-category travel-usa sub light current-category track_event" data-event-tracking="Parent Breadcrumbs" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"> <a href="https://torontosun.com/category/travel/usa" itemprop="url"><span>Travel USA</span>
+                 <meta itemprop="position" content="3"></a> </li> 
+              </ul> 
+             </div> 
+            </div> 
+            <div class="social-bar"> 
+             <ul class="social-icons"> 
+              <li class="facebook"> <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Ftorontosun.com%2Ftravel%2Fusa%2Ffort-myers-edison-fords-winter-retreat-still-charming-a-century-later%2F&amp;t=Edison%20and%20Ford%27s%20winter%20retreat%2C%20Fort%20Myers%2C%20still%20charming" title="facebook" target="_blank"></a> </li> 
+              <li class="twitter"> <a href="https://twitter.com/intent/tweet?url=https%3A%2F%2Ftorontosun.com%2Ftravel%2Fusa%2Ffort-myers-edison-fords-winter-retreat-still-charming-a-century-later%2F&amp;text=Edison%20and%20Ford%27s%20winter%20retreat%2C%20Fort%20Myers%2C%20still%20charming" title="twitter" target="_blank"></a> </li> 
+              <li class="more-social"> <a href="javascript:void();"></a> 
+               <div class="more-social-menu"> 
+                <div class="menu-content"> 
+                 <div class="social-menu-title">
+                  Share
+                 </div> 
+                 <h6 class="article-title">Edison and Ford's winter retreat, Fort Myers, still charming</h6> 
+                 <div class="social-icons-lists"> 
+                  <ul class="social-icons"> 
+                   <li class="tumblr"> <a href="https://tumblr.com/widgets/share/tool?canonicalUrl=https%3A%2F%2Ftorontosun.com%2Ftravel%2Fusa%2Ffort-myers-edison-fords-winter-retreat-still-charming-a-century-later%2F&amp;name=Edison%20and%20Ford%27s%20winter%20retreat%2C%20Fort%20Myers%2C%20still%20charming&amp;description=FORT%20MYERS%2C%20Fla.%20%26mdash%3B%20Legendary%20inventor%20Thomas%20Edison%20fell%20in%20love%20with%20this%20cattle%20town%20when%20it%20had%20only%20349%20residents%2C%20most%20of%20them%20ranchers." title="tumblr" target="_blank" class="share-icon"><span>Tumblr</span></a> </li> 
+                   <li class="pinterest"> <a href="https://pinterest.com/pin/create/button/?url=https%3A%2F%2Ftorontosun.com%2Ftravel%2Fusa%2Ffort-myers-edison-fords-winter-retreat-still-charming-a-century-later%2F&amp;media=https%3A%2F%2Fpostmediatorontosun.files.wordpress.com%2F2019%2F11%2Fcm-edison-home-1-e1575052024816.jpg%3Fquality%3D100%26strip%3Dall&amp;description=Edison%20and%20Ford%27s%20winter%20retreat%2C%20Fort%20Myers%2C%20still%20charming" title="pinterest" target="_blank" class="share-icon"><span>Pinterest</span></a> </li> 
+                   <li class="google-plus"> <a href="https://plus.google.com/share?url=https%3A%2F%2Ftorontosun.com%2Ftravel%2Fusa%2Ffort-myers-edison-fords-winter-retreat-still-charming-a-century-later%2F" title="google plus" target="_blank" class="share-icon"><span>Google Plus</span></a> </li> 
+                   <li class="reddit"> <a href="https://www.reddit.com/submit?url=https%3A%2F%2Ftorontosun.com%2Ftravel%2Fusa%2Ffort-myers-edison-fords-winter-retreat-still-charming-a-century-later%2F&amp;title=Edison%20and%20Ford%27s%20winter%20retreat%2C%20Fort%20Myers%2C%20still%20charming" title="reddit" target="_blank" class="share-icon"><span>Reddit</span></a> </li> 
+                   <li class="linkedin"> <a href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https%3A%2F%2Ftorontosun.com%2Ftravel%2Fusa%2Ffort-myers-edison-fords-winter-retreat-still-charming-a-century-later%2F&amp;title=Edison%20and%20Ford%27s%20winter%20retreat%2C%20Fort%20Myers%2C%20still%20charming&amp;summary=FORT%20MYERS%2C%20Fla.%20%26mdash%3B%20Legendary%20inventor%20Thomas%20Edison%20fell%20in%20love%20with%20this%20cattle%20town%20when%20it%20had%20only%20349%20residents%2C%20most%20of%20them%20ranchers." title="linkedin" target="_blank" class="share-icon"><span>LinkedIn</span></a> </li> 
+                   <li class="email"> <a href="mailto:?subject=Toronto%20Sun%3A%20Edison%20and%20Ford%27s%20winter%20retreat%2C%20Fort%20Myers%2C%20still%20charming&amp;body=I%20wanted%20to%20share%20a%20story%20with%20you%20from%20Toronto%20Sun%3A%0A%0AEdison%20and%20Ford%27s%20winter%20retreat%2C%20Fort%20Myers%2C%20still%20charming%0AFORT%20MYERS%2C%20Fla.%20%26mdash%3B%20Legendary%20inventor%20Thomas%20Edison%20fell%20in%20love%20with%20this%20cattle%20town%20when%20it%20had%20only%20349%20residents%2C%20most%20of%20them%20ranchers.%0Ahttps%3A%2F%2Ftorontosun.com%2Ftravel%2Fusa%2Ffort-myers-edison-fords-winter-retreat-still-charming-a-century-later%0A" title="email" class="share-icon email"><span>Email</span></a> </li> 
+                  </ul> 
+                 </div> 
+                </div> 
+                <!-- / menu content --> 
+               </div> 
+               <!-- / more-social-menu --> </li> 
+              <!-- / more-social --> 
+             </ul> 
+             <!-- / share-icons --> 
+            </div> 
+           </div> 
+           <aside id="sidebar" class="l-sidebar"> 
+            <div id="pmlay_lists_widget-251" class="widget-wrap clearfix widget_pmlay_lists_widget widget-sticky " style="height:1500px;">
+             <div class="widget"> 
+              <section class="widget_2 widget-outfit widget-outfit-r2 
+				"> 
+               <header id="section-header" class="section-header"> 
+                <div id="section-label" class="section-label clearfix"> 
+                 <h2 class="cat-head"> <span>Related</span> </h2> 
+                 <div id="section-body"></div> 
+                </div> 
+               </header> 
+               <ul class="posts-list hfeed vertical-list"> 
+                <li> 
+                 <article class="post post-excerpt hentry track_event 
+					 show-look-label					" data-event-tracking="Sidebar Outfit|0||0|1|shar||Dominican Republic's Casa de Campo a 'Caribbean golf paradise'|/travel/dominican-republics-casa-de-campo-a-caribbean-golf-paradise/wcm/8b4e3441-81ad-4b90-b367-ebb0f566e684|Wes Gilbertson|8b4e3441-81ad-4b90-b367-ebb0f566e684|2eac6e23-6f26-4f4b-b183-825a01bbee8e"> 
+                  <figure class="thumbnail "> 
+                   <a id="link-523972" href="https://torontosun.com/travel/dominican-republics-casa-de-campo-a-caribbean-golf-paradise/wcm/8b4e3441-81ad-4b90-b367-ebb0f566e684" target="_self"> <img src="https://postmediacalgarysun.files.wordpress.com/2019/12/cdc-teethofthe-dogmain-e1575295997669.jpeg?w=107&amp;h=80&amp;crop=1&amp;quality=80&amp;strip=all" class="attachment-post-thumbnail wp-post-image " alt="" width="107" height="80" id="img-523972"> </a> 
+                  </figure> 
+                  <header> 
+                   <span class="label"><a href="https://torontosun.com/category/travel" class="travel">Travel</a></span>
+                   <h4 itemprop="name" class="entry-title"><a itemprop="url" href="https://torontosun.com/travel/dominican-republics-casa-de-campo-a-caribbean-golf-paradise/wcm/8b4e3441-81ad-4b90-b367-ebb0f566e684" target="" rel="bookmark" title="">Dominican Republic's Casa de Campo a 'Caribbean golf paradise' </a></h4> 
+                  </header> 
+                 </article> </li> 
+                <li> 
+                 <article class="post post-excerpt hentry track_event 
+					 show-look-label					" data-event-tracking="Sidebar Outfit|0||0|2|shar||Interim Commons tour blends architecture with civic literacy|/travel/local-travel/interim-house-of-commons-tour-blends-architecture-with-civic-literacy|Canadian Press|0775e040-fe2a-49c2-9d2b-5d197bad065b|2eac6e23-6f26-4f4b-b183-825a01bbee8e"> 
+                  <figure class="thumbnail "> 
+                   <a id="link-705801" href="https://torontosun.com/travel/local-travel/interim-house-of-commons-tour-blends-architecture-with-civic-literacy" target="_self"> <img src="https://postmediatorontosun.files.wordpress.com/2019/11/travel-log-parliament-20191125.jpg?quality=80&amp;strip=all&amp;w=107&amp;h=80&amp;crop=1" class="attachment-post-thumbnail wp-post-image " alt="" width="107" height="80" id="img-705801"> </a> 
+                  </figure> 
+                  <header> 
+                   <span class="label"><a href="https://torontosun.com/category/travel" class="travel">Travel</a></span>
+                   <h4 itemprop="name" class="entry-title"><a itemprop="url" href="https://torontosun.com/travel/local-travel/interim-house-of-commons-tour-blends-architecture-with-civic-literacy" target="" rel="bookmark" title="">Interim Commons tour blends architecture with civic literacy </a></h4> 
+                  </header> 
+                 </article> </li> 
+                <li> 
+                 <article class="post post-excerpt hentry track_event 
+					 show-look-label					" data-event-tracking="Sidebar Outfit|0||0|3|shar||NEIL WAUGH OUTDOORS: Shining in the sunlight|/travel/local-travel/neil-waugh-outdoors-shining-in-the-sunlight/wcm/f0bc5d38-e69d-4705-8df0-75ea45ec2bcc|neilwaughoutdoors|f0bc5d38-e69d-4705-8df0-75ea45ec2bcc|2eac6e23-6f26-4f4b-b183-825a01bbee8e"> 
+                  <figure class="thumbnail "> 
+                   <a id="link-465631" href="https://torontosun.com/travel/local-travel/neil-waugh-outdoors-shining-in-the-sunlight/wcm/f0bc5d38-e69d-4705-8df0-75ea45ec2bcc" target="_self"> <img src="https://postmediaedmontonsun.files.wordpress.com/2019/11/75586914-wings2-w.jpg?w=107&amp;h=80&amp;crop=1&amp;quality=80&amp;strip=all" class="attachment-post-thumbnail wp-post-image " alt="" width="107" height="80" id="img-465631"> </a> 
+                  </figure> 
+                  <header> 
+                   <span class="label"><a href="https://torontosun.com/category/travel" class="travel">Travel</a></span>
+                   <h4 itemprop="name" class="entry-title"><a itemprop="url" href="https://torontosun.com/travel/local-travel/neil-waugh-outdoors-shining-in-the-sunlight/wcm/f0bc5d38-e69d-4705-8df0-75ea45ec2bcc" target="" rel="bookmark" title="">NEIL WAUGH OUTDOORS: Shining in the sunlight </a></h4> 
+                  </header> 
+                 </article> </li> 
+                <li> 
+                 <article class="post post-excerpt hentry track_event 
+					 show-look-label					" data-event-tracking="Sidebar Outfit|0||0|4|shar||Embrace winter along B.C.'s Powder Highway|/travel/travel-canada/embrace-winter-along-b-c-s-powder-highway|Ernest Doroszuk|d11b4157-ea7b-4bd7-83bc-5a8f1385cd0a|2eac6e23-6f26-4f4b-b183-825a01bbee8e"> 
+                  <figure class="thumbnail "> 
+                   <a id="link-706494" href="https://torontosun.com/travel/travel-canada/embrace-winter-along-b-c-s-powder-highway" target="_self"> <img src="https://postmediatorontosun.files.wordpress.com/2019/11/powder_highway_70415432-e1574797212424.jpg?quality=80&amp;strip=all&amp;w=107&amp;h=80&amp;crop=1" class="attachment-post-thumbnail wp-post-image " alt="" width="107" height="80" id="img-706494"> </a> 
+                  </figure> 
+                  <header> 
+                   <span class="label"><a href="https://torontosun.com/category/travel/travel-canada" class="travel-canada">Travel Canada</a></span>
+                   <h4 itemprop="name" class="entry-title"><a itemprop="url" href="https://torontosun.com/travel/travel-canada/embrace-winter-along-b-c-s-powder-highway" target="" rel="bookmark" title="">Embrace winter along B.C.'s Powder Highway </a></h4> 
+                  </header> 
+                 </article> </li> 
+               </ul> 
+              </section> 
+             </div>
+            </div>
+           </aside> 
+          </div> 
+         </div> 
+         <!-- THREE COL CHANGE GOES HERE --> 
+         <div class="fixed-fluid-holder right active last"> 
+          <div class="fluid-holder right"> 
+           <div class="entry-featured-media-container below-content"> 
+            <figure class="entry-featured-media align-none wp-caption post-img featured-image" id="post-708288media-708288" itemprop="associatedMedia" itemscope itemid="https://postmediatorontosun.files.wordpress.com/2019/11/cm-edison-home-1-e1575052024816.jpg" itemtype="https://schema.org/ImageObject"> 
+             <img class="wp-post-image" alt="" src="https://postmediatorontosun.files.wordpress.com/2019/11/cm-edison-home-1-e1575052024816.jpg" width="780" height="439"> 
+             <figcaption class="wp-caption-text" itemprop="description"> 
+              <p> <span class="img-caption">The guest house on the Edison estate. Famous guests included Henry Ford, Harvey Firestone, President-elect Herbert Hoover, and many others. Photo courtesy The Beaches of Fort Myers and Sanibel.</span><span class="img-author"></span> </p> 
+             </figcaption> 
+            </figure> 
+           </div> 
+           <div class="entry-content "> 
+            <div itemprop="articleBody"> 
+             <p>FORT MYERS, Fla. — Legendary inventor Thomas Edison fell in love with this cattle town when it had only 349 residents, most of them ranchers.</p>
+             <p>“There’s only one Fort Myers in the United States and there are 90 million people who are going to find it out,” Edison was quoted as saying.</p>
+             <p>By the time he landed here, Edison had patented more than 500 inventions, so he was already a celebrity inventor and on his way to becoming America’s greatest, especially in electric power generation, mass communication, sound recording and motion pictures.</p>
+             <p>He made the town his winter home more than a century ago — and he expected the rest of America to be seduced by the natural charm of Fort Myers, which now has a population of some 80,000.</p>
+             <p>His estate and that of prodigy Henry Ford, which are perched along the Caloosahatchee River with their lush botanical gardens (<a href="http://edisonfordwinterestates.org">edisonfordwinterestates.org</a>), are a main attraction here.</p>
+             <figure id="attachment_" style="width:1259px;" class="wp-caption post-img size_this_image_test align-center" itemprop="associatedMedia" itemscope itemid="photo url" itemtype="https://schema.org/ImageObject">
+              <img src="https://postmediatorontosun.files.wordpress.com/2019/11/1201-thomas-edison-statue1.jpg?quality=60&amp;strip=all&amp;w=640">
+              <figcaption class="wp-caption-text wp-caption"> 
+               <p> <span class="img-caption"> A statue of famed American inventor Thomas Edison at his estate in Fort Myers. (Regalpix Photography for Edison Ford Winter Estates</span> </p> 
+              </figcaption> 
+             </figure>
+             <p>Known as ‘the Wizard of Menlo Park, N.J.,’ Edison purchased the 13-acre property for US$2,750 in 1885. That was 10 times more than the usual US$15- to $20-an-acre price back then. Why did a genius overpay?</p>
+             <p>He saw a surplus of bamboo trees, which he could use as filaments in his light bulbs. Those filaments lasted many hours more than the previous material.</p>
+             <p>Edison entertained many important Americans at his estate, including President-elect Herbert Hoover, the Colgate and Kellogg families, and the Philadelphia Athletics baseball team. Legendary Babe Ruth played a spring training game in Fort Myers and put it on the baseball map.</p>
+             <figure id="attachment_" style="width:1100px;" class="wp-caption post-img size_this_image_test align-center" itemprop="associatedMedia" itemscope itemid="photo url" itemtype="https://schema.org/ImageObject">
+              <img src="https://postmediatorontosun.files.wordpress.com/2019/11/edison-house-areal-view-e1575058003351.jpg?quality=60&amp;strip=all&amp;w=640">
+              <figcaption class="wp-caption-text wp-caption"> 
+               <p> <span class="img-caption"> An aerial view of Thomas Edison’s main house and guest house in Fort Myers. (The Lee County Visitor &amp; Convention Bureau)</span> </p> 
+              </figcaption> 
+             </figure>
+             <p>Edison, Ford — who bought the property next door — and tire magnate Harvey Firestone all planted roots in Fort Myers because of its warm climate and natural beauty.</p>
+             <p>The illustrious trio, along with respected author and naturalist John Burroughs, loved camping in the wilderness. The self-named vagabonds took many trips together. They wore suits when they went camping and on their first excursion, travelled into the Florida Everglades.</p>
+             <figure id="attachment_" style="width:951px;" class="wp-caption post-img size_this_image_test align-center" itemprop="associatedMedia" itemscope itemid="photo url" itemtype="https://schema.org/ImageObject">
+              <img src="https://postmediatorontosun.files.wordpress.com/2019/11/ford-edison-firestone-at-lab-e1575056527451.jpg?quality=60&amp;strip=all&amp;w=640">
+              <figcaption class="wp-caption-text wp-caption"> 
+               <p> <span class="img-caption"> Henry Ford, from left, Thomas Edison and Harvey Firestone at the lab in Fort Myers. Photo courtesy the Lee County Visitor &amp; Convention Bureau</span> </p> 
+              </figcaption> 
+             </figure>
+             <p>Their trips evolved from simple outings into heavily covered media events with visits by American presidents. It probably ushered in the age of recreational motoring, the cheapest form of tourism, for families.</p>
+             <p>These guys relaxed, hunted and fished but also took plant samples to be used for their rubber research.&nbsp;All three entrepreneurs were scouring the United States for a natural source of rubber for American industry. The trio didn’t want America held hostage by a shortage in foreign-made rubber.</p>
+             <p>Ford, once chief engineer for Edison’s company, took two weeks off every winter to celebrate Edison’s special day on Feb. 11. The Model T gift he gave him is on display at Edison’s Winter Estate.</p>
+             <p>Ford wanted to give his mentor a new vehicle every year on his birthday, but Edison thought was too extravagant. Ford compromised by upgrading Edison’s Ford with the newest features and components every year.</p>
+             <p>In 1927, Edison, Ford and Firestone formed the Edison Botanic Research Corporation, which tested more than 17,000 plants until it found the most promising, goldenrod. This type of tree produces a milky sap (latex) that can be used to create rubber.</p>
+             <figure id="attachment_" style="width:1000px;" class="wp-caption post-img size_this_image_test align-center" itemprop="associatedMedia" itemscope itemid="photo url" itemtype="https://schema.org/ImageObject">
+              <img src="https://postmediatorontosun.files.wordpress.com/2019/11/laboratory-at-edison-estates-e1575057272905.jpg?quality=60&amp;strip=all&amp;w=640">
+              <figcaption class="wp-caption-text wp-caption"> 
+               <p> <span class="img-caption"> A laboratory at Edison Estates in Fort Myers (The Lee County Visitor &amp; Convention Bureau)</span> </p> 
+              </figcaption> 
+             </figure>
+             <p>Edison spent 20% of his year in southwestern Florida and built a lab here, which kept functioning until 1936, five years after his death.</p>
+             <p>He also built one of the first cement private pools in Florida, but ironically, never swam in it. He only believed in exercising his mind.</p>
+             <p>Today, a 15,000-square-foot museum showcases his treasure chest of amazing inventions, from the phonograph to enormous urban generators. His phonograph had no volume control, so users had to stuff the megaphone with a rolled-up sock to muffle it — hence the expression “put a sock in it” was born.</p>
+             <figure id="attachment_" style="width:1000px;" class="wp-caption post-img size_this_image_test align-center" itemprop="associatedMedia" itemscope itemid="photo url" itemtype="https://schema.org/ImageObject">
+              <img src="https://postmediatorontosun.files.wordpress.com/2019/11/edison-light-bulb-e1575057848957.jpg?quality=60&amp;strip=all&amp;w=640">
+              <figcaption class="wp-caption-text wp-caption"> 
+               <p> <span class="img-caption"> The Edison light bulb on display in the 15,000-square-foot museum at the Edison and Ford Winter Estates. (The Lee County Visitor &amp; Convention Bureau)</span> </p> 
+              </figcaption> 
+             </figure>
+             <p>The famous trio’s names and legacy are everywhere in Fort Myers, starting with <a href="https://www.fordsgarageusa.com/">Ford’s Garage</a>, a fun downtown diner.</p>
+             <p>The restaurant combines the atmosphere of a 1920s’ service station and a Prohibition bar with its old-style brick, rich wood surfaces and hand-hammered copper bar tops.</p>
+             <figure id="attachment_" style="width:682px;" class="wp-caption post-img size_this_image_test align-center" itemprop="associatedMedia" itemscope itemid="photo url" itemtype="https://schema.org/ImageObject">
+              <img src="https://postmediatorontosun.files.wordpress.com/2019/11/img_0506-1-e1575056858859.jpg?quality=60&amp;strip=all&amp;w=640">
+              <figcaption class="wp-caption-text wp-caption"> 
+               <p> <span class="img-caption"> Ford’s Garage in downtown Fort Myers combines the atmosphere of a 1920s’ service station and a Prohibition bar. (Sam Pazzano photo)</span> </p> 
+              </figcaption> 
+             </figure>
+             <p>The bathroom faucets are gas pump nozzles with tire-rimmed sinks. A huge vintage black Ford is raised on a hoist in the middle of the diner’s ceiling. Ford, of course, invented the assembly line production.</p>
+             <p>But thank heaven there’s no fast-food assembly line here. The onion rings are mounted on large stainless steel spikes and the burgers have “Ford’s Garage” burnished on the buns. The portions are enormous and delicious.</p>
+             <p>There’s also the Edison Theatre, which has been converted into a personal injury lawyers’ office but still retains movie posters from classic films from Casablanca to Breakfast at Tiffany’s, and The Wizard of Oz to Rocky.</p>
+             <p>If you want a classy, French-inspired cuisine for a romantic night out, try <a href="https://verandarestaurant.com/veranda-menus/dinner-menu/">The Veranda restaurant</a>. The service and food are first-rate at this award-winning downtown restaurant.</p>
+             <p>Chocolate lovers shouldn’t miss a local treasure here in Fort Myers, <a href="https://www.normanloveconfections.com/">Norman Love Confections</a>, created by Love, the former corporate executive pastry chef for Ritz-Carlton from 1988 to 2001. The pastry competition from his culinary event production company, along with co-founder Michael Schneider, snared a large audience and became the basis for TV series <em>Food Network Challenge</em>.</p>
+             <p>Since 2006, Norman Love Confections has been named the best premium chocolate company in the United States six times.</p>
+             <figure id="attachment_" style="width:1024px;" class="wp-caption post-img size_this_image_test align-center" itemprop="associatedMedia" itemscope itemid="photo url" itemtype="https://schema.org/ImageObject">
+              <img src="https://postmediatorontosun.files.wordpress.com/2019/11/img_0469-e1575056868310.jpg?quality=60&amp;strip=all&amp;w=640">
+              <figcaption class="wp-caption-text wp-caption"> 
+               <p> <span class="img-caption"> Chef Frederic Monti holds some of the delicious offerings at Norman Love Confections in Fort Myers. (Sam Pazzano photo)</span> </p> 
+              </figcaption> 
+             </figure>
+             <p>Love’s French (despite his Italian name) chef, Frederic Monti, says the company produces up to 40,000 pieces of chocolates, truffles, white-chocolate raspberry, peanut butter cups, tiramisu, and shell-shaped desserts plus home-made gelato.</p>
+             <p>Judge for yourself — the chocolates are irresistible.</p>
+             <p>While there are only four storefronts in Florida (Naples, Estero, and two in Fort Myers), Norman Love Confections can be found in other locations across the country.</p>
+             <p>Only in the U.S., you say? Pity.</p>
+             <p><strong>IF YOU GO</strong></p>
+             <p>If you are looking for a comfortable boutique hotel in the heart of Fort Myers downtown River District, try the <a href="https://www.ihg.com/hotelindigo/hotels/us/en/fort-myers/fmymb/hoteldetail?cm_mmc=GoogleMaps-_-IN-_-US-_-FMYMB">Hotel Indigo</a>.</p>
+             <p>It’s a short stroll from great shopping at the Post Office arcade, the federal courthouse and other landmarks. Ford’s Garage and many other fun restaurants and historic buildings are across the street. A quick walk and you’ll see colourful and sometimes humorously risque, rusty statues such as a man relieving himself against a street pole.</p>
+             <p><a href="mailto:spazzano@postmedia.com">spazzano@postmedia.com</a></p> 
+            </div> 
+            <footer class="entry-meta "> 
+            </footer>
+            <!-- .entry-meta --> 
+            <div class="clearfix"></div> 
+            <div class="sub-section"> 
+             <div class="comment-count"> 
+              <div class="comment-number"> 
+               <span> 
+                <fb:comments-count href="https://torontosun.com/travel/usa/fort-myers-edison-fords-winter-retreat-still-charming-a-century-later"></fb:comments-count> </span> 
+              </div> 
+              <div class="comment-cta"> 
+               <span><b>Comments</b></span> 
+               <span><a href="#comments" class="scroll-to">Share your thoughts</a></span> 
+              </div> 
+             </div> 
+            </div> 
+           </div>
+           <!-- .entry-content --> 
+           <!-- THREE COL CHANGE GOES HERE --> 
+          </div> 
+         </div> 
+         <div class="clearfix"></div> 
+        </article>
+        <!-- #post-## --> 
+       </div> 
+      </div> 
+      <aside id="sidebar" class="l-sidebar"> 
+       <div id="postmedia_layouts_ad-top" class="widget-wrap clearfix widget_postmedia_layouts_ad widget-sticky adsizewrapper " style="height:1200px;">
+        <div class="widget"> 
+         <div id="gpt-bigboxtop" class="pn_dfpads adslot" data-ad="[[300,250],[300,251],[300,600],[300,601],[300,1050]]"> 
+         </div> 
+        </div>
+       </div>
+       <div id="postmedia_layouts_ad-mid" class="widget-wrap clearfix widget_postmedia_layouts_ad widget-sticky adsizewrapper " style="height:500px;">
+        <div class="widget"> 
+         <div id="gpt-bigboxmid" class="pn_dfpads adslot" data-ad="[[300,250],[300,252]]" data-ad-loc="mid"> 
+         </div> 
+        </div>
+       </div>
+       <div id="pn_native_ad_collection-139" class="widget-wrap clearfix widget_pn_native_ad_collection">
+        <div class="widget"> 
+         <section class="rightrail-nativecollection">
+          <div class="nativecollection"></div>
+         </section> 
+        </div>
+       </div>
+       <div id="postmedia_polarmediavoice-111" class="widget-wrap clearfix postmedia_polarmediavoice">
+        <div class="widget"> 
+         <div class="rightrail_native_ad"> 
+          <div class="nativead"> 
+           <div class="adcontent"> 
+           </div> 
+          </div> 
+         </div> 
+        </div>
+       </div>
+       <div id="postmedia_layouts_ad-bot" class="widget-wrap clearfix widget_postmedia_layouts_ad widget-sticky adsizewrapper " style="height:500px;">
+        <div class="widget"> 
+         <div id="gpt-bigboxbot" class="pn_dfpads adslot" data-ad="[[300,250],[300,253]]" data-ad-loc="bot"> 
+         </div> 
+        </div>
+       </div>
+      </aside> 
+     </div> 
+     <!-- / container --> 
+    </div> 
+    <div class="l-content" id="related-posts"> 
+     <div class="l-constrained container contentbody"> 
+      <div class="related-posts seaction-header-wrap outfit"> 
+       <h2 class="section-header"><span>Related Posts</span></h2> 
+       <ul class="posts-list headline fourcol-li"> 
+        <li> 
+         <article class="post post-excerpt hentry track_event
+			 show-look-label			" data-event-tracking="Outfit|0|Related Posts|1|5|Related Posts List|related-posts|Las Vegas' music scene an all-year party|/travel/usa/all-the-right-moves-las-vegas-music-scene-an-all-year-party|Mark Daniell|bcacc9bc-8c2f-41b1-b081-d55f68f43e6f|2eac6e23-6f26-4f4b-b183-825a01bbee8e"> 
+          <figure class="thumbnail "> 
+           <a id="link-709309" href="https://torontosun.com/opinion/columnists/opinion-how-technology-can-empower-people-of-all-abilities" target="_self"> <img src="https://postmediatorontosun.files.wordpress.com/2019/12/gettyimages-935967348-e1575307817505.jpg?quality=80&amp;strip=all&amp;w=365&amp;h=273&amp;crop=1" class="attachment-post-thumbnail wp-post-image " alt="" width="365" height="273" id="img-709309"> </a> 
+          </figure> 
+          <header> 
+           <h4 itemprop="name" class="entry-title"><a itemprop="url" href="https://torontosun.com/opinion/columnists/opinion-how-technology-can-empower-people-of-all-abilities" target="" rel="bookmark" title="">OPINION: How technology can empower people of all abilities </a></h4> 
+          </header> 
+         </article> </li> 
+        <li> 
+         <article class="post post-excerpt hentry track_event
+			 show-watch-label			" data-event-tracking="Outfit|0|Related Posts|1|6|Related Posts List|related-posts|NEIL WAUGH OUTDOORS: Confessions of a reluctant terrorist|/travel/local-travel/neil-waugh-outdoors-confessions-of-a-reluctant-terrorist/wcm/2011ccc6-5ba0-4095-9ec2-29ea88a3bfe9|neilwaughoutdoors|2011ccc6-5ba0-4095-9ec2-29ea88a3bfe9|2eac6e23-6f26-4f4b-b183-825a01bbee8e"> 
+          <figure class="thumbnail "> 
+           <a id="link-709382" href="https://torontosun.com/news/national/goldstein-gripe-trudeau-should-declare-china-is-canadas-adversary" target="_self"> <img src="https://postmediatorontosun.files.wordpress.com/2019/12/0528_ed_letters_71066026-e1575315240862.jpg?quality=80&amp;strip=all&amp;w=365&amp;h=273&amp;crop=1" class="attachment-post-thumbnail wp-post-image " alt="" width="365" height="273" id="img-709382"> </a> 
+          </figure> 
+          <header> 
+           <h4 itemprop="name" class="entry-title"><a itemprop="url" href="https://torontosun.com/news/national/goldstein-gripe-trudeau-should-declare-china-is-canadas-adversary" target="" rel="bookmark" title=""><span class="play-text" aria-hidden="true"></span>GOLDSTEIN GRIPE: Trudeau should declare China is Canada's adversary </a></h4> 
+          </header> 
+         </article> </li> 
+        <li class="last"> 
+         <article class="post post-excerpt hentry track_event
+			 show-look-label			" data-event-tracking="Outfit|0|Related Posts|1|7|Related Posts List|related-posts|Spanish court bans Ryanair's 'abusive' carry-on luggage fee|/travel/international/spanish-court-bans-ryanairs-abusive-carry-on-luggage-fee/wcm/d5b2964d-f5b4-4d02-9e98-182e2b81c121|Reuters|d5b2964d-f5b4-4d02-9e98-182e2b81c121|2eac6e23-6f26-4f4b-b183-825a01bbee8e"> 
+          <figure class="thumbnail "> 
+           <a id="link-709364" href="https://torontosun.com/sports/hockey/nhl/toronto-maple-leafs/maple-leafs-reveal-changes-as-marner-nears-return" target="_self"> <img src="https://postmediatorontosun.files.wordpress.com/2019/12/1180769910_75151626-e1575312953386.jpg?quality=80&amp;strip=all&amp;w=365&amp;h=273&amp;crop=1" class="attachment-post-thumbnail wp-post-image " alt="" width="365" height="273" id="img-709364"> </a> 
+          </figure> 
+          <header> 
+           <h4 itemprop="name" class="entry-title"><a itemprop="url" href="https://torontosun.com/sports/hockey/nhl/toronto-maple-leafs/maple-leafs-reveal-changes-as-marner-nears-return" target="" rel="bookmark" title="">Maple Leafs reveal changes as Marner nears return </a></h4> 
+          </header> 
+         </article> </li> 
+       </ul> 
+      </div> 
+     </div> 
+     <!-- / container --> 
+    </div> 
+    <!-- / l-content --> 
+    <div class="l-content" id="zoned-posts"> 
+     <div class="l-constrained container contentbody"> 
+      <div class="zoned-posts seaction-header-wrap outfit"> 
+       <h2 class="section-header"><span>Top Stories</span></h2> 
+       <div class="clearfix"></div> 
+       <div class="sevencol first"> 
+        <ul class="posts-list fourcol-li"> 
+         <li> 
+          <article class="post post-excerpt hentry track_event
+						" data-event-tracking="Outfit|0|More News|1|8|zone|hp-top-stories|ITHACA IMPRESSES: Small N.Y. college town packs wallop|/travel/usa/ithaca-impresses-small-n-y-college-town-packs-wallop|Brad Hunter|9e18858d-9083-4e58-92b0-ae29e5307535|2eac6e23-6f26-4f4b-b183-825a01bbee8e"> 
+           <figure class="thumbnail "> 
+            <a id="link-709349" href="https://torontosun.com/opinion/columnists/bonokoski-scheer-shuns-conservative-partys-first-openly-gay-mp" target="_self"> <img src="https://postmediatorontosun.files.wordpress.com/2019/12/mp_eric_duncan_74803254-e1575311858350.jpg?quality=80&amp;strip=all&amp;w=205&amp;h=153&amp;crop=1" class="attachment-post-thumbnail wp-post-image " alt="" width="205" height="153" id="img-709349"> </a> 
+           </figure> 
+           <header> 
+            <h4 itemprop="name" class="entry-title"><a itemprop="url" href="https://torontosun.com/opinion/columnists/bonokoski-scheer-shuns-conservative-partys-first-openly-gay-mp" target="" rel="bookmark" title="">BONOKOSKI: Scheer shuns party's first openly-gay MP </a></h4> 
+           </header> 
+          </article> </li> 
+         <li> 
+          <article class="post post-excerpt hentry track_event
+						" data-event-tracking="Outfit|0|More News|1|9|zone|hp-top-stories|EasyJet seeks to 'do right thing' offsetting emissions|/travel/international/easyjet-seeks-to-do-right-thing-offsetting-emissions-critics-say-fly-less/wcm/67652a0e-6a93-4678-b2f6-a0fa4ccd7ce2|Reuters|67652a0e-6a93-4678-b2f6-a0fa4ccd7ce2|2eac6e23-6f26-4f4b-b183-825a01bbee8e"> 
+           <figure class="thumbnail "> 
+            <a id="link-709364" href="https://torontosun.com/sports/hockey/nhl/toronto-maple-leafs/maple-leafs-reveal-changes-as-marner-nears-return" target="_self"> <img src="https://postmediatorontosun.files.wordpress.com/2019/12/1180769910_75151626-e1575312953386.jpg?quality=80&amp;strip=all&amp;w=205&amp;h=153&amp;crop=1" class="attachment-post-thumbnail wp-post-image " alt="" width="205" height="153" id="img-709364"> </a> 
+           </figure> 
+           <header> 
+            <h4 itemprop="name" class="entry-title"><a itemprop="url" href="https://torontosun.com/sports/hockey/nhl/toronto-maple-leafs/maple-leafs-reveal-changes-as-marner-nears-return" target="" rel="bookmark" title="">Maple Leafs reveal changes as Marner nears return </a></h4> 
+           </header> 
+          </article> </li> 
+         <li class="last"> 
+          <article class="post post-excerpt hentry track_event
+						" data-event-tracking="Outfit|0|More News|1|10|zone|hp-top-stories|On The Road with Mike Drew|/news/provincial/mike-drew-deer-me-what-a-wonderful-day/wcm/41b6eb66-31c3-44fa-b779-69aa9a5e8aff|Mike Drew|41b6eb66-31c3-44fa-b779-69aa9a5e8aff|2eac6e23-6f26-4f4b-b183-825a01bbee8e"> 
+           <figure class="thumbnail "> 
+            <a id="link-709226" href="https://torontosun.com/news/provincial/sends-a-clear-message-premiers-kick-off-meeting" target="_self"> <img src="https://postmediatorontosun.files.wordpress.com/2019/12/premiers_75646660-e1575302676861.jpg?quality=80&amp;strip=all&amp;w=205&amp;h=153&amp;crop=1" class="attachment-post-thumbnail wp-post-image " alt="" width="205" height="153" id="img-709226"> </a> 
+           </figure> 
+           <header> 
+            <h4 itemprop="name" class="entry-title"><a itemprop="url" href="https://torontosun.com/news/provincial/sends-a-clear-message-premiers-kick-off-meeting" target="" rel="bookmark" title="">'SENDS A CLEAR MESSAGE': Premiers kick off meeting </a></h4> 
+           </header> 
+          </article> </li> 
+        </ul> 
+       </div> 
+       <div class="fivecol last"> 
+        <ul class="posts-list vertical-list"> 
+         <li> 
+          <article class="post post-excerpt hentry track_event
+						" data-event-tracking="Outfit|0|More News|1|11|zone|hp-top-stories|Go behind-the-scenes in Britain with The Crown|/travel/europe/go-behind-the-scenes-in-britain-with-the-crown|Nelson Branco|085c30d4-428a-4eef-b414-2f49ab3918d9|2eac6e23-6f26-4f4b-b183-825a01bbee8e"> 
+           <header> 
+            <h4 itemprop="name" class="entry-title"><a itemprop="url" href="https://torontosun.com/news/world/ex-sex-slaves-interview-has-huge-ramifications-for-prince-andrew" target="" rel="bookmark" title="">Ex-sex slave's interview has huge 'ramifications' for Prince Andrew </a></h4> 
+           </header> 
+          </article> </li> 
+         <li> 
+          <article class="post post-excerpt hentry track_event
+						" data-event-tracking="Outfit|0|More News|1|12|zone|hp-top-stories|Sudan looks to pyramids to attract tourism and help economy|/travel/international/sudan-looks-to-pyramids-to-attract-tourism-and-help-economy|Reuters|e7493397-5538-41e9-9fb9-861601e19c07|2eac6e23-6f26-4f4b-b183-825a01bbee8e"> 
+           <header> 
+            <h4 itemprop="name" class="entry-title"><a itemprop="url" href="https://torontosun.com/news/provincial/ministry-spending-in-spotlight-energy-up-infrastructure-down" target="" rel="bookmark" title="">MINISTRY SPENDING IN SPOTLIGHT: Energy up, infrastructure down </a></h4> 
+           </header> 
+          </article> </li> 
+         <li> 
+          <article class="post post-excerpt hentry track_event
+						" data-event-tracking="Outfit|0|More News|1|13|zone|hp-top-stories|On The Road with Mike Drew|/news/provincial/mike-drew-my-annual-welcome-to-winter-driving/wcm/2e894e30-99f5-49f6-999c-9aa12a78e9ec|Mike Drew|2e894e30-99f5-49f6-999c-9aa12a78e9ec|2eac6e23-6f26-4f4b-b183-825a01bbee8e"> 
+           <header> 
+            <h4 itemprop="name" class="entry-title"><a itemprop="url" href="https://torontosun.com/news/local-news/snow-freezing-rain-lead-to-hundreds-of-crashes" target="" rel="bookmark" title="">Fire in TTC tunnel, crashes lead to snarled Monday commute </a></h4> 
+           </header> 
+          </article> </li> 
+        </ul> 
+       </div> 
+      </div> 
+     </div> 
+     <!-- / container --> 
+    </div> 
+    <!-- / l-content --> 
+    <div class="l-content" id="comments-area"> 
+     <div class="l-constrained container contentbody"> 
+      <div class="flyercity-ads seaction-header-wrap"> 
+       <h2 class="section-header"><span>This Week's Flyers</span></h2> 
+      </div> 
+      <div id="flyertown_module_14820"></div>
+      <style>.pm_layouts_news_ticker .flyer-ticker{min-height:334px;}.widget_postmediaflyercitywidget{min-height:430px;}@media only screen and (max-width:1024px){.pm_layouts_news_ticker .flyer-ticker{min-height:320px}}@media only screen and (max-width:768px){.pm_layouts_news_ticker .widget.flyer-ticker{min-height:272px}}</style>
+      <script defer src="https://api.flyertown.ca/14820/84facbe6314273e6/flyertown_module.js"></script> 
+      <div id="comments" class="comments-area seaction-header-wrap"> 
+       <h2 class="section-header"><span>Comments</span></h2> 
+       <p class="comment-rules">We encourage all readers to share their views on our articles and blog posts. We are committed to maintaining a lively but civil forum for discussion, so we ask you to avoid personal attacks, and please keep your comments relevant and respectful. If you encounter a comment that is abusive, click the "X" in the upper right corner of the comment box to report spam or abuse. We are using Facebook commenting. <a target="_blank" href="/facebook-commenting-faqs">Visit our FAQ page</a> for more information.</p> 
+       <!-- Facebook Code --> 
+       <div class="fb-comments" data-href="https://torontosun.com/travel/usa/fort-myers-edison-fords-winter-retreat-still-charming-a-century-later" data-num-posts="5"></div> 
+       <!-- / Facebook Code --> 
+      </div>
+      <!-- #comments --> 
+     </div> 
+     <!-- / container --> 
+    </div> 
+    <!-- / l-content --> 
+   </div>
+   <!-- #content --> 
+   <footer class="l-footer"> 
+    <div class="l-constrained"> 
+     <div class="top-footer"> 
+      <div id="analytics-scroll"></div> 
+      <div id="analytics-janrain"></div> 
+      <p class="footer-section">Connect with Toronto SUN</p> 
+      <div class="social-bar track_event" data-event-tracking="Footer - Social"> 
+       <ul class="social-icons"> 
+        <li class="facebook"><a href="https://www.facebook.com/torontosun" title="facebook" target="_blank"></a></li> 
+        <li class="twitter"><a href="https://twitter.com/TheTorontoSun" title="twitter" target="_blank"></a></li> 
+        <li class="youtube"><a href="https://www.youtube.com/channel/UCkjNuLzfw5Ep7EJuMdeFylw/featured" title="youtube" target="_blank"></a></li> 
+        <li class="rss"><a href="/rss" title="rss" target="_blank"></a></li> 
+       </ul> 
+      </div> 
+      <div class="footer-menu track_event" data-event-tracking="Footer - Menu"> 
+       <section>
+        <ul>
+         <li><a href="https://torontosun.com/subscription" data-evt="click" data-evt-typ="subscription-button-click" data-evt-val="{&quot;loc&quot;:&quot;Footer Menu&quot;}">Subscribe</a></li> 
+         <li><a href="https://torontosun.com/edit-profile">Edit Profile</a></li> 
+         <li><a href="https://torontosun.com/ways-to-read">Ways to Read</a></li> 
+         <li><a href="https://torontosun.com/faqs">FAQS</a></li> 
+        </ul>
+       </section>
+       <section>
+        <ul>
+         <li><a href="https://torontosun.com/sitemap">Sitemap</a></li> 
+         <li><a href="http://www.postmediasolutions.com/">Advertise</a></li> 
+         <li><a href="https://torontosun.com/contact-us">Contact Us</a></li> 
+        </ul>
+       </section> 
+      </div> 
+     </div> 
+     <div class="bottom-footer"> 
+      <div class="copyright-block track_event" data-event-tracking="Footer - Copyrights"> 
+       <a href="https://www.postmedia.com" class="postmedia" title="postmedia" target="_blank"></a> 
+       <div class="mice">
+        © 2019 Postmedia Network Inc. All rights reserved. 
+        <span>Unauthorized distribution, transmission or republication strictly prohibited.</span>
+       </div> 
+       <div class="footer-menu"> 
+        <section>
+         <ul>
+          <li id="menu-item-356758" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-356758"><a href="http://www.postmediaadvertising.com/privacy-statement/">Privacy – Updated</a></li> 
+          <li id="menu-item-356759" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-356759"><a href="http://www.canada.com/aboutus/termsofservice.html">Terms</a></li> 
+          <li id="menu-item-356760" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-356760"><a href="http://www.canada.com/aboutus/copyright.html">Copyright &amp; Permissions</a></li> 
+          <li id="menu-item-627571" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-627571"><a href="https://adregistry.postmedia.com/">Digital Ad Registry</a></li> 
+         </ul>
+        </section> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </footer> 
+  </div>
+  <!-- #page --> 
+  <!-- wpcom_wp_footer --> 
+  <input type="hidden" id="dfp_weather_field_id" name="dfp_weather_field_id" value="13a542104d">
+  <input type="hidden" name="_wp_http_referer" value="/travel/usa/fort-myers-edison-fords-winter-retreat-still-charming-a-century-later"> 
+  <script>
+				$ = jQuery.noConflict();
+
+				// dynamically load MG2 script to improve initial page load
+				function openNewsletterModal () {
+					var newsletterScript = document.getElementById('scriptMg2Widget');
+					if ( typeof newsletterScript.src == undefined || newsletterScript.src == '' ) {
+						newsletterScript.src = "";
+						newsletterScript.addEventListener( 'load', function () {
+							mg2WidgetAPI.openNewsletter( { defaultCategoryId: "26" } );
+						});
+					} else {
+						// script is already loaded
+						mg2WidgetAPI.openNewsletter( { defaultCategoryId: "26" } );
+					}
+				}
+			</script> 
+  <script id="scriptMg2Widget"></script> 
+  <div id="mg2Widget-newsletter-container"></div> 
+  <div style="display:none" id="signIn"></div> 
+  <div style="display:none" id="returnSocial"></div> 
+  <div style="display:none" id="returnTraditional"></div> 
+  <script src="//0.gravatar.com/js/gprofiles.js?ver=201949y"></script> 
+  <script>
+var WPGroHo = {"my_hash":""};
+</script> 
+  <script type="text/javascript" src="https://s1.wp.com/wp-content/mu-plugins/gravatar-hovercards/wpgroho.js?m=1380573781h"></script> 
+  <script>
+		//initialize and attach hovercards to all gravatars
+		jQuery( document ).ready( function( $ ) {
+
+			if (typeof Gravatar === "undefined"){
+				return;
+			}
+
+			if ( typeof Gravatar.init !== "function" ) {
+				return;
+			}			
+
+			Gravatar.profile_cb = function( hash, id ) {
+				WPGroHo.syncProfileData( hash, id );
+			};
+			Gravatar.my_hash = WPGroHo.my_hash;
+			Gravatar.init( 'body', '#wp-admin-bar-my-account' );
+		});
+	</script> 
+  <div style="display:none"> 
+  </div> 
+  <script>
+var HighlanderComments = {"loggingInText":"Logging In\u2026","submittingText":"Posting Comment\u2026","postCommentText":"Post Comment","connectingToText":"Connecting to %s","commentingAsText":"%1$s: You are commenting using your %2$s account.","logoutText":"Log Out","loginText":"Log In","connectURL":"https:\/\/postmediatorontosun.wordpress.com\/public.api\/connect\/?action=request&domain=torontosun.com","logoutURL":"https:\/\/postmediatorontosun.wordpress.com\/wp-login.php?action=logout&_wpnonce=cf51b14f84","homeURL":"https:\/\/torontosun.com\/","postID":"354222606306756182","gravDefault":"identicon","enterACommentError":"Please enter a comment","enterEmailError":"Please enter your email address here","invalidEmailError":"Invalid email address","enterAuthorError":"Please enter your name here","gravatarFromEmail":"This picture will show whenever you leave a comment. Click to customize it.","logInToExternalAccount":"Log in to use details from one of these accounts.","change":"Change","changeAccount":"Change Account","comment_registration":"0","userIsLoggedIn":"","isJetpack":"","text_direction":"ltr"};
+</script> 
+  <script type="text/javascript" src="https://s0.wp.com/_static/??/wp-content/js/jquery/jquery.autoresize.js,/wp-content/mu-plugins/highlander-comments/script.js?m=1573483029j"></script> 
+  <link rel="stylesheet" id="all-css-0-3" href="https://s1.wp.com/wp-content/themes/vip/postmedia-theme-sun/classes/Postmedia/Web/Widgets/TvListings/css/tv_listings.css?m=1504039440h&amp;cssminify=yes" type="text/css" media="all"> 
+  <link rel="stylesheet" id="tv_listings_widget_css_external-css" href="https://tvmds.tvpassport.com/tvmds/leader/css/tvmds-primetime.css?ver=5.3" media="all"> 
+  <link rel="stylesheet" id="all-css-2-3" href="https://s2.wp.com/_static/??-eJylj8EKwjAMhl/IGXSOnUTw4lXwsOPoutBV2qw0mXt9a5kgOwm7pd/ffD+BORR6JEESkAE9MrxsgDCyeOytKjIseCLQTjGn/P7NoMEOGtsbFIYr6tHjYyIeLOHNRgeaGbqMW154a1LQznlnn/Id/N8v6INTkn7woKIlkwuWeYOMVDDKOYw2vbLyl2wQLzev5Gv6Kbj486E6VmV9Kuv6+QbhK5o+?cssminify=yes" type="text/css" media="all"> 
+  <script type="text/javascript" src="https://s2.wp.com/_static/??/wp-content/js/devicepx.js,/wp-content/mu-plugins/likes/queuehandler.js?m=1574978559j"></script> 
+  <script src="https://pymx5.com/scripts/load_tags.js?ver=5.3"></script> 
+  <script>
+var comment_like_text = {"loading":"Loading..."};
+</script> 
+  <script>
+var pn_janrain_vars = {"ajaxurl":"https:\/\/postmediatorontosun.wordpress.com\/wp-admin\/admin-ajax.php"};
+</script> 
+  <script>
+var postmedia_piano = {"paywall_exempt_ie":"","endpoint":"\/\/experience.tinypass.com\/xbuilder\/experience\/load","theme":"vip\/postmedia-theme-sun"};
+</script> 
+  <script>
+var ajax_object = {"ajax_url":"https:\/\/torontosun.com\/wp-admin\/admin-ajax.php","navigation_nonce":"8ea99222a0"};
+</script> 
+  <script>
+var PostmediaFB = {"appID":"1910312429243234"};
+</script> 
+  <script>
+var jpfbembed = {"appid":"249643311490","locale":"en_US"};
+</script> 
+  <script>
+var wpcomVipAnalytics = {"is_404":"0","is_home":"0","is_single":"1","is_front_page":"0","is_archive":"0","percentToTrack":"1"};
+</script> 
+  <script type="text/javascript" src="https://s2.wp.com/_static/??-eJzNVMtOwzAQ/CFctzyEOCAO3FCRKvEot2rjbNJN/cJ2WsLXYyd9qICqcGjFzTuZ2ZnYq+Ury4TRAXXgqmZW1iVpz4VRKkJM0gI9rzyXlHG/IouDyp/xnqI94LswzFFF2pIst8YHhTnBtlVeWAZ528RqJiGQLqPSLOhHgIN9dkj8AQeu4UKC95E/2XzhU8z4ZM1/AO2A9D3YUDtM3lWHnNJ1bclEVzMvHGKkFahm/yiOp1IfKclzasKf5sYFYfJumBx6a7SnJTIqHKjjDMLaGUOaOM8fTV7LRCLQ5vWtncd0ZMuPk9pvSGP4bMYG8hSkeq/RNQNvNLiBOu5L9ApklYyVjFXvOC3IfK2TXvUd7D1VAQKzuBkYaQoHtlOFwYJY8BlpsROhyjD/o+nvNzWlvMTg+UsgSaHZXlmMWHfQbNVSDmQ8Z8mzaq0ZaJBNIJE25526HV1dD0cXo5vLYfUFrEwqEg=="></script> 
+  <script type="text/javascript" src="https://static.freeskreen.com/publisher/2800/freeskreen.min.js?ver=5.3" async></script> 
+  <script type="text/javascript" src="https://s1.wp.com/_static/??-eJydzMEOwjAIgOEXsuI0Uy/GZ2Eb2ZiFNYXO17fxYtzJeIM/8MEzhX5RJ3WQElIsI6sBDsIaOswgaE65TmFZKWceyD5tP9sOfhc8Y/+w7ZNPJBVdOUFazIUGxvCOwYqCk6SIXi9MMY0YI2Wu27wJ/7NFbWKlb3obK3+XW9MeD21zvl5O8wvYQXb/"></script> 
+  <script type="text/javascript">
+// <![CDATA[
+(function() {
+try{
+  if ( window.external &&'msIsSiteMode' in window.external) {
+    if (window.external.msIsSiteMode()) {
+      var jl = document.createElement('script');
+      jl.type='text/javascript';
+      jl.async=true;
+      jl.src='/wp-content/plugins/ie-sitemode/custom-jumplist.php';
+      var s = document.getElementsByTagName('script')[0];
+      s.parentNode.insertBefore(jl, s);
+    }
+  }
+}catch(e){}
+})();
+// ]]>
+</script>
+  <script src="//stats.wp.com/w.js?60" type="text/javascript" async defer></script> 
+  <script type="text/javascript">
+_tkq = window._tkq || [];
+_stq = window._stq || [];
+_tkq.push(['storeContext', {'blog_id':'126506751','blog_tz':'-5','user_lang':'en','blog_lang':'en','user_id':'0'}]);
+_stq.push(['view', {'blog':'126506751','v':'wpcom','tz':'-5','user_id':'0','post':'354222606306756182','subd':'postmediatorontosun'}]);
+function st_vt() {var x=document.createElement("img");x.src="https://pixel.wp.com/g.gif?blog=126506751&v=wpcomvt&tz=-5&user_id=0&post=354222606306756182&subd=postmediatorontosun&rand="+Math.random();}
+_stq.push(['extra', {'crypt':'UE40eW5QN0p8M2Y/RE1BNmNJfGhxNCVxUDExYmtib2E/SzdEJm0lUEtbdFU0fFk4cHZvcUFrZT90Tn4yQm1+R3NyNTc/MUhXW11WSmguZHBnMVY9WDQucUFSZy1GV1NuaFRQTmNMbWt4Nm05WVIySVdKSy56UERzZDlGXWtYUXd3c214RU4mRjBOYSVCZnBYQi11W1ZJMUt2eWNGWSYvckkxLl13amx0eVd8aTR2cml8WHFwM1lBOGJ2ZEZ8aXM9dU9ma0FWST8ldXJWfjhQbDA4MWxBaVsuZEV1ek4wL1VxZFJhUit8RzJSQjZbfl1zTGcmLXI1Q3A='}]);
+_stq.push([ 'clickTrackerInit', '126506751', '354222606306756182' ]);
+	</script> 
+  <noscript>
+   <img src="https://pixel.wp.com/b.gif?v=noscript" style="height:0px;width:0px;overflow:hidden" alt="">
+  </noscript> 
+  <!-- Chartbeat Code Begins --> 
+  <script type="text/javascript">
+				var _sf_async_config = {};
+				_sf_async_config.uid = 34988;
+				_sf_async_config.domain = "postmedia.com";
+				_sf_async_config.useCanonical = true;
+				_sf_async_config.sections = "torontosun.com";
+				_sf_async_config.videoPageGroups = true;
+
+				_sf_async_config.authors = "Sam Pazzano Courts Bureau";
+				( function(){
+					function loadChartbeat() {
+						window._sf_endpt=(new Date()).getTime();
+						var e = document.createElement('script');
+						e.setAttribute('language', 'javascript');
+						e.setAttribute('type', 'text/javascript');
+						e.setAttribute('src', '//static.chartbeat.com/js/chartbeat_video.js');
+						document.body.appendChild(e);
+					}
+					var oldonload = window.onload;
+					window.onload = (typeof window.onload != 'function') ? loadChartbeat : function() { oldonload(); loadChartbeat(); };
+				})();
+			</script> 
+  <!-- Chartbeat Code Ends --> 
+  <!-- Google Code for Remarketing Tag --> 
+  <script type="text/javascript">
+			/* <![CDATA[ */
+			var google_conversion_id = 990309138;
+			var google_custom_params = window.google_tag_params;
+			var google_remarketing_only = true;
+			/* ]]> */
+		</script> 
+  <noscript> 
+   <div style="display:inline;"> 
+    <img height="1" width="1" style="border-style:none;" alt="" src="//googleads.g.doubleclick.net/pagead/viewthroughconversion/990309138/?value=0&amp;guid=ON&amp;script=0"> 
+   </div> 
+  </noscript> 
+  <script>
+				document.write('<scr' + 'ipt async type="text/javascript" src="//c.jsrdn.com/s/cs.js?p=22507"><\/sc' + 'ript>');
+			</script> 
+  <div id="ds_default_anchor"></div> 
+  <script>
+if ( 'object' === typeof wpcom_mobile_user_agent_info ) {
+
+	wpcom_mobile_user_agent_info.init();
+	var mobileStatsQueryString = "";
+	
+	if( false !== wpcom_mobile_user_agent_info.matchedPlatformName )
+		mobileStatsQueryString += "&x_" + 'mobile_platforms' + '=' + wpcom_mobile_user_agent_info.matchedPlatformName;
+	
+	if( false !== wpcom_mobile_user_agent_info.matchedUserAgentName )
+		mobileStatsQueryString += "&x_" + 'mobile_devices' + '=' + wpcom_mobile_user_agent_info.matchedUserAgentName;
+	
+	if( wpcom_mobile_user_agent_info.isIPad() )
+		mobileStatsQueryString += "&x_" + 'ipad_views' + '=' + 'views';
+
+	if( "" != mobileStatsQueryString ) {
+		new Image().src = document.location.protocol + '//pixel.wp.com/g.gif?v=wpcom-no-pv' + mobileStatsQueryString + '&baba=' + Math.random();
+	}
+	
+}
+</script>   
+ </body>
+</html>

@@ -1,0 +1,32 @@
+spokenByCharacter - schema.org Property schema.org Documentation Schemas Home spokenByCharacter This term is proposed for full integration into Schema.org, pending implementation feedback and adoption from applications and websites. Thing > Property > spokenByCharacter The (e.g. fictional) character, Person or Organization to whom the quotation is attributed within the containing CreativeWork. [more...] Canonical URL: http://schema.org/spokenByCharacter Leave public feedback on this term 💬 Check for open issues. 'spokenByCharacter' is mentioned in the pending extention. Values expected to be one of these types Organization Person Used on these types Quotation Source https://github.com/schemaorg/schemaorg/issues/271 Examples Example 1 Without Markup Microdata RDFa JSON-LD Example of a quote from fiction.
+ TODO
+ TODO
+ <script type="application/ld+json">
+{
+  "@context": "http://schema.org/",
+  "@type": "Quotation",
+  "spokenByCharacter": {
+    "@type": "Person",
+    "name": "Princess Leia"
+  },
+  "text": "Help me Obi Wan Kenobi, you're my only hope.",
+  "isPartOf": {
+    "@type": "Movie",
+    "name": "Star Wars Episode IV: A New Hope"
+  }
+}
+</script>
+ Example 2 Without Markup Microdata RDFa JSON-LD Example of a quote from a real person.
+ TODO
+ TODO
+ <script type="application/ld+json">
+{
+  "@context": "http://schema.org/",
+  "@type": "Quotation",
+  "creator": {
+    "@type": "Person",
+    "name": "Franklin Delano Roosevelt"
+  },
+  "text": "The only thing we have to fear is fear itself."
+}
+</script>
